@@ -1,0 +1,31 @@
+{
+  "id": "feature:acolyte/languages",
+  "name": "Languages",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Languages: Two of your choice",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "languages",
+            "name": "Languages",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              {
+                "kind": "language"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "feature:druid/multiclass-proficiencies",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Proficiencies Gained: Light armor, medium armor, shields (druids will not wear armor or use shields made of metal)",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor",
+        "group:medium-armor",
+        "group:shield"
+      ]
+    }
+  ]
+}

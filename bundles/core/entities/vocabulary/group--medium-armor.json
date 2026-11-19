@@ -1,0 +1,8 @@
+{
+  "id": "group:medium-armor",
+  "name": "Medium Armor",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:armor"
+}

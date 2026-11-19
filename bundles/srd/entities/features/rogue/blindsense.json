@@ -1,0 +1,18 @@
+{
+  "id": "feature:rogue/blindsense",
+  "name": "Blindsense",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or Invisible creature within 10 feet of you.",
+    "plain": "Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or Invisible creature within 10 feet of you.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "If you can hear, you know the location of any hidden or invisible creature within 10 feet, without necessarily seeing it."
+    }
+  ]
+}

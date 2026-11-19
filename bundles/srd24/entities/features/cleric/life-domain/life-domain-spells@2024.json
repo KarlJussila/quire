@@ -1,0 +1,68 @@
+{
+  "id": "feature:cleric/life-domain/life-domain-spells@2024",
+  "name": "Level 3: Life Domain Spells",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your connection to this divine domain ensures you always have certain spells ready. When you reach a Cleric level specified in the Life Domain Spells table, you thereafter always have the listed spells prepared.",
+    "plain": "Your connection to this divine domain ensures you always have certain spells ready. When you reach a Cleric level specified in the Life Domain Spells table, you thereafter always have the listed spells prepared.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:cleric",
+        "atLeast": 3
+      },
+      "spells": [
+        "spell:aid",
+        "spell:bless",
+        "spell:cure-wounds",
+        "spell:lesser-restoration"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:cleric",
+        "atLeast": 5
+      },
+      "spells": [
+        "spell:mass-healing-word",
+        "spell:revivify"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:cleric",
+        "atLeast": 7
+      },
+      "spells": [
+        "spell:aura-of-life",
+        "spell:death-ward"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:cleric",
+        "atLeast": 9
+      },
+      "spells": [
+        "spell:greater-restoration",
+        "spell:mass-cure-wounds"
+      ],
+      "how": "prepared",
+      "counts": false
+    }
+  ]
+}

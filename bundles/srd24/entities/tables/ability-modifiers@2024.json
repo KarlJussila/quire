@@ -1,0 +1,79 @@
+{
+  "id": "table:ability-modifiers@2024",
+  "name": "Ability Modifiers",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "score",
+      "name": "Score"
+    },
+    {
+      "key": "modifier",
+      "name": "Modifier"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "score": "3",
+        "modifier": "-4"
+      }
+    },
+    {
+      "cells": {
+        "score": "4-5",
+        "modifier": "-3"
+      }
+    },
+    {
+      "cells": {
+        "score": "6-7",
+        "modifier": "-2"
+      }
+    },
+    {
+      "cells": {
+        "score": "8-9",
+        "modifier": "-1"
+      }
+    },
+    {
+      "cells": {
+        "score": "10-11",
+        "modifier": "+0"
+      }
+    },
+    {
+      "cells": {
+        "score": "12-13",
+        "modifier": "+1"
+      }
+    },
+    {
+      "cells": {
+        "score": "14-15",
+        "modifier": "+2"
+      }
+    },
+    {
+      "cells": {
+        "score": "16-17",
+        "modifier": "+3"
+      }
+    },
+    {
+      "cells": {
+        "score": "18-19",
+        "modifier": "+4"
+      }
+    },
+    {
+      "cells": {
+        "score": "20",
+        "modifier": "+5"
+      }
+    }
+  ]
+}

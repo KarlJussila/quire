@@ -1,0 +1,116 @@
+{
+  "id": "creature:phase-spider@2024",
+  "name": "Phase Spider",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:unaligned",
+  "ac": 14,
+  "hp": {
+    "average": 45,
+    "formula": "7d10 + 7"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:climb": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 12,
+    "ability:dex": 16,
+    "ability:int": 6,
+    "ability:str": 15,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:stealth": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 700,
+  "proficiencyBonus": 2,
+  "initiative": 3,
+  "habitat": [
+    "Desert",
+    "Forest",
+    "Grassland",
+    "Hill",
+    "Planar (Ethereal Plane)",
+    "Underdark",
+    "Urban"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 3,
+  "blocks": [
+    {
+      "name": "Ethereal Sight",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The spider can see 60 feet into the Ethereal Plane while on the Material Plane and vice versa.",
+        "plain": "The spider can see 60 feet into the Ethereal Plane while on the Material Plane and vice versa.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spider Climb",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The spider can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+        "plain": "The spider can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Web Walker",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The spider ignores movement restrictions caused by webs, and the spider knows the location of any other creature in contact with the same web.",
+        "plain": "The spider ignores movement restrictions caused by webs, and the spider knows the location of any other creature in contact with the same web.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The spider makes two Bite attacks.",
+        "plain": "The spider makes two Bite attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 8 (1d10 + 3) Piercing damage plus 9 (2d8) Poison damage. If this damage reduces the target to 0 Hit Points, the target becomes Stable, and it has the Poisoned condition for 1 hour. While Poisoned, the target also has the Paralyzed condition.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 8 (1d10 + 3) Piercing damage plus 9 (2d8) Poison damage. If this damage reduces the target to 0 Hit Points, the target becomes Stable, and it has the Poisoned condition for 1 hour. While Poisoned, the target also has the Paralyzed condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ethereal Jaunt",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The spider teleports from the Material Plane to the Ethereal Plane or vice versa.",
+        "plain": "The spider teleports from the Material Plane to the Ethereal Plane or vice versa.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

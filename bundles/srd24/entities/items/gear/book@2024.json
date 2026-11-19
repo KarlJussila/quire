@@ -1,0 +1,18 @@
+{
+  "id": "item:book@2024",
+  "name": "Book",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Book contains fiction or nonfiction. If you consult an accurate nonfiction Book about its topic, you gain a +5 bonus to Intelligence (Arcana, History, Nature, or Religion) checks you make about that topic.",
+    "plain": "A Book contains fiction or nonfiction. If you consult an accurate nonfiction Book about its topic, you gain a +5 bonus to Intelligence (Arcana, History, Nature, or Religion) checks you make about that topic.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 25,
+    "currency": "currency:gp"
+  },
+  "weight": 5.0
+}

@@ -1,0 +1,13 @@
+{
+  "id": "item:figurine-of-wondrous-power-goat-of-terror",
+  "name": "Figurine of Wondrous Power, Goat of Terror",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "This ivory statuette is one of a set of three unique goats. The Goat of Terror becomes a Giant Goat for up to 3 hours. The goat can't attack, but you can remove its horns and use them as weapons. One horn becomes a +1 Lance, and the other becomes a +2 Longsword. Removing a horn requires an action, and the weapons disappear and the horns return when the goat reverts to figurine form. While you ride it, the goat radiates a 30-foot aura of terror (DC 15 Wisdom). Once the figurine has been used, it can't be used again until 15 days have passed.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare"
+}

@@ -1,0 +1,110 @@
+{
+  "id": "creature:pseudodragon",
+  "name": "Pseudodragon",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:neutral-good",
+  "ac": 13,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 7,
+    "formula": "2d4 + 2"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 15
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 13,
+    "ability:dex": 15,
+    "ability:int": 10,
+    "ability:str": 6,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 3,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    },
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 13,
+  "xp": 50,
+  "cr": 0.25,
+  "languages": [
+    {
+      "language": "language:common",
+      "understandsOnly": true
+    },
+    {
+      "language": "language:draconic",
+      "understandsOnly": true
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Keen Senses",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The pseudodragon has advantage on Wisdom (Perception) checks that rely on sight, hearing, or smell.",
+        "plain": "The pseudodragon has advantage on Wisdom (Perception) checks that rely on sight, hearing, or smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The pseudodragon has advantage on saving throws against spells and other magical effects.",
+        "plain": "The pseudodragon has advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Limited Telepathy",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The pseudodragon can magically communicate simple ideas, emotions, and images telepathically with any creature within 100 feet of it that can understand a language.",
+        "plain": "The pseudodragon can magically communicate simple ideas, emotions, and images telepathically with any creature within 100 feet of it that can understand a language.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 4 (1d4 + 2) piercing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one creature. _Hit:_ 4 (1d4 + 2) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or become Poisoned for 1 hour. If the saving throw fails by 5 or more, the target falls Unconscious for the same duration, or until it takes damage or another creature uses an action to shake it awake.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or become Poisoned for 1 hour. If the saving throw fails by 5 or more, the target falls Unconscious for the same duration, or until it takes damage or another creature uses an action to shake it awake.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

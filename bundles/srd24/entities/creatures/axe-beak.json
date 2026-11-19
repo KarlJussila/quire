@@ -1,0 +1,53 @@
+{
+  "id": "creature:axe-beak@2024",
+  "name": "Axe Beak",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:unaligned",
+  "ac": 11,
+  "hp": {
+    "average": 19,
+    "formula": "3d10 + 3"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 12,
+    "ability:dex": 12,
+    "ability:int": 2,
+    "ability:str": 14,
+    "ability:wis": 10
+  },
+  "passivePerception": 10,
+  "xp": 50,
+  "proficiencyBonus": 2,
+  "initiative": 1,
+  "habitat": [
+    "Arctic",
+    "Grassland",
+    "Hill"
+  ],
+  "cr": 0.25,
+  "blocks": [
+    {
+      "name": "Beak",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 6 (1d8 + 2) Slashing damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

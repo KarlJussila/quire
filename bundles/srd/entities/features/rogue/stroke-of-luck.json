@@ -1,0 +1,83 @@
+{
+  "id": "feature:rogue/stroke-of-luck",
+  "name": "Stroke of Luck",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 20th level, you have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the d20 roll as a 20.\n\nOnce you use this feature, you can't use it again until you finish a short or long rest.",
+    "plain": "At 20th level, you have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the d20 roll as a 20.\n\nOnce you use this feature, you can't use it again until you finish a short or long rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "stroke-of-luck",
+      "name": "Stroke of Luck",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "when": {
+          "any": [
+            {
+              "event": "event:roll-resolved",
+              "match": {
+                "roll": "roll:attack",
+                "success": false
+              }
+            },
+            {
+              "event": "event:roll-resolved",
+              "match": {
+                "roll": "roll:check",
+                "success": false
+              }
+            }
+          ]
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:short"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "intercept": {
+            "success": true
+          },
+          "when": {
+            "event": "event:roll-resolved",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack"
+            }
+          }
+        },
+        {
+          "intercept": {
+            "set": {
+              "$replace": 20
+            }
+          },
+          "when": {
+            "event": "event:roll-resolved",
+            "by": "self",
+            "match": {
+              "roll": "roll:check"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

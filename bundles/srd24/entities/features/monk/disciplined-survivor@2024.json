@@ -1,0 +1,51 @@
+{
+  "id": "feature:monk/disciplined-survivor@2024",
+  "name": "Level 14: Disciplined Survivor",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your physical and mental discipline grant you proficiency in all saving throws.\n\nAdditionally, whenever you make a saving throw and fail, you can expend 1 Focus Point to reroll it, and you must use the new roll.",
+    "plain": "Your physical and mental discipline grant you proficiency in all saving throws.\n\nAdditionally, whenever you make a saving throw and fail, you can expend 1 Focus Point to reroll it, and you must use the new roll.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "disciplined-survivor",
+      "name": "Disciplined Survivor",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "success": false
+        }
+      },
+      "cost": [
+        {
+          "resource": "focus-points"
+        }
+      ],
+      "outcomes": [
+        {
+          "intercept": {
+            "reroll": true
+          }
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:str",
+        "ability:dex",
+        "ability:con",
+        "ability:int",
+        "ability:wis",
+        "ability:cha"
+      ]
+    }
+  ]
+}

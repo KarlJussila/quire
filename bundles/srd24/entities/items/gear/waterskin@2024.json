@@ -1,0 +1,18 @@
+{
+  "id": "item:waterskin@2024",
+  "name": "Waterskin",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Waterskin holds up to 4 pints. If you don't drink sufficient water, you risk dehydration (see \"Rules Glossary\").",
+    "plain": "A Waterskin holds up to 4 pints. If you don't drink sufficient water, you risk dehydration (see \"Rules Glossary\").",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:sp"
+  },
+  "weight": 5.0
+}

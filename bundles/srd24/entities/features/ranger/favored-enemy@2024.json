@@ -1,0 +1,63 @@
+{
+  "id": "feature:ranger/favored-enemy@2024",
+  "name": "Level 1: Favored Enemy",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You always have the Hunter's Mark spell prepared. You can cast it twice without expending a spell slot, and you regain all expended uses of this ability when you finish a Long Rest.\n\nThe number of times you can cast the spell without a spell slot increases when you reach certain Ranger levels, as shown in the Favored Enemy column of the Ranger Features table.",
+    "plain": "You always have the Hunter's Mark spell prepared. You can cast it twice without expending a spell slot, and you regain all expended uses of this ability when you finish a Long Rest.\n\nThe number of times you can cast the spell without a spell slot increases when you reach certain Ranger levels, as shown in the Favored Enemy column of the Ranger Features table.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "favored-enemy",
+      "name": "Favored Enemy",
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 1
+      },
+      "uses": {
+        "max": {
+          "byLevel": {
+            "1": 2,
+            "5": 3,
+            "9": 4,
+            "13": 5,
+            "17": 6
+          },
+          "of": "class:ranger"
+        },
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "cast": {
+            "spell": "spell:hunters-mark",
+            "slot": false
+          }
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:hunters-mark"
+      ],
+      "how": "prepared"
+    }
+  ]
+}

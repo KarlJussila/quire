@@ -1,0 +1,82 @@
+{
+  "id": "feature:paladin/oath-of-devotion/sacred-weapon@2024",
+  "name": "Level 3: Sacred Weapon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you take the Attack action, you can expend one use of your Channel Divinity to imbue one Melee weapon that you are holding with positive energy. For 10 minutes or until you use this feature again, you add your Charisma modifier to attack rolls you make with that weapon (minimum bonus of +1), and each time you hit with it, you cause it to deal its normal damage type or Radiant damage.\n\nThe weapon also emits Bright Light in a 20-foot radius and Dim Light 20 feet beyond that.\n\nYou can end this effect early (no action required). This effect also ends if you aren't carrying the weapon.",
+    "plain": "When you take the Attack action, you can expend one use of your Channel Divinity to imbue one Melee weapon that you are holding with positive energy. For 10 minutes or until you use this feature again, you add your Charisma modifier to attack rolls you make with that weapon (minimum bonus of +1), and each time you hit with it, you cause it to deal its normal damage type or Radiant damage.\n\nThe weapon also emits Bright Light in a 20-foot radius and Dim Light 20 feet beyond that.\n\nYou can end this effect early (no action required). This effect also ends if you aren't carrying the weapon.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "sacred-weapon",
+      "name": "Sacred Weapon",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 3
+      },
+      "trigger": {
+        "event": "event:activity-used",
+        "subject": "self",
+        "match": {
+          "action": "action:attack"
+        }
+      },
+      "cost": [
+        {
+          "resource": "channel-divinity"
+        }
+      ],
+      "outcomes": [
+        {
+          "endState": {
+            "state": "state:paladin/oath-of-devotion/sacred-weapon@2024"
+          },
+          "to": {
+            "pool": "object",
+            "where": {
+              "has": "state:paladin/oath-of-devotion/sacred-weapon@2024",
+              "source": "self"
+            }
+          }
+        },
+        {
+          "applyState": {
+            "state": "state:paladin/oath-of-devotion/sacred-weapon@2024",
+            "duration": {
+              "amount": 10,
+              "unit": "minute"
+            }
+          },
+          "to": "target"
+        }
+      ],
+      "target": {
+        "count": 1,
+        "select": "chosen",
+        "who": {
+          "pool": "object",
+          "chosen": true,
+          "where": {
+            "all": [
+              {
+                "group": "group:melee-weapon"
+              },
+              {
+                "creature": "self",
+                "where": {
+                  "has": "candidate",
+                  "match": {
+                    "held": true
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

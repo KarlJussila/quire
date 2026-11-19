@@ -1,0 +1,11 @@
+{
+  "id": "group:simple-melee-weapon",
+  "name": "Simple Melee Weapon",
+  "source": {
+    "book": "core"
+  },
+  "isA": [
+    "group:simple-weapon",
+    "group:melee-weapon"
+  ]
+}

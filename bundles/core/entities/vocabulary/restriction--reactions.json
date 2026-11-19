@@ -1,0 +1,7 @@
+{
+  "id": "restriction:reactions",
+  "name": "Take Reactions",
+  "source": {
+    "book": "core"
+  }
+}

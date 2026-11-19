@@ -1,0 +1,15 @@
+{
+  "id": "event:pool-spent",
+  "name": "Pool Spent",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Units are spent from one of the subject's pools: `pool` is the pool (or its group), `amount` how many."
+  },
+  "payload": [
+    "pool",
+    "amount"
+  ],
+  "emittedBy": "engine"
+}

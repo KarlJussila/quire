@@ -1,0 +1,15 @@
+{
+  "id": "feature:dragonborn/draconic-ancestry/silver@2024",
+  "name": "Silver",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Damage Type: Cold",
+    "wording": "srd"
+  },
+  "group": "group:draconic-ancestry",
+  "values": {
+    "damage-type": "damage-type:cold"
+  }
+}

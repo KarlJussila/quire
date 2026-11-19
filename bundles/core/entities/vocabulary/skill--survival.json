@@ -1,0 +1,11 @@
+{
+  "id": "skill:survival",
+  "name": "Survival",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:wis"
+}

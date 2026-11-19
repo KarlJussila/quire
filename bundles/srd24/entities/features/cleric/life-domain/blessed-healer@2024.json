@@ -1,0 +1,74 @@
+{
+  "id": "feature:cleric/life-domain/blessed-healer@2024",
+  "name": "Level 6: Blessed Healer",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The healing spells you cast on others heal you as well. Immediately after you cast a spell with a spell slot that restores Hit Points to one or more creatures other than yourself, you regain Hit Points equal to 2 plus the spell slot's level.",
+    "plain": "The healing spells you cast on others heal you as well. Immediately after you cast a spell with a spell slot that restores Hit Points to one or more creatures other than yourself, you regain Hit Points equal to 2 plus the spell slot's level.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:healed",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "not": {
+              "is": "self"
+            }
+          }
+        },
+        "match": {
+          "slot": {
+            "atLeast": 1
+          }
+        },
+        "when": {
+          "event": "event:activity-used",
+          "by": "self",
+          "match": {
+            "spell": true
+          }
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "heal": {
+              "amount": {
+                "sum": [
+                  2,
+                  {
+                    "slotLevel": true
+                  }
+                ]
+              }
+            },
+            "to": "self"
+          }
+        ]
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:activity-used",
+              "by": "self",
+              "match": {
+                "spell": true
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "rule:blindsight@2024",
+  "name": "Blindsight",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you have Blindsight, you can see within a specific range without relying on physical sight. Within that range, you can see anything that isn't behind Total Cover even if you have the Blinded condition or are in Darkness. Moreover, in that range, you can see something that has the Invisible condition.",
+    "plain": "If you have Blindsight, you can see within a specific range without relying on physical sight. Within that range, you can see anything that isn't behind Total Cover even if you have the Blinded condition or are in Darkness. Moreover, in that range, you can see something that has the Invisible condition.",
+    "wording": "srd"
+  },
+  "group": "group:exploration",
+  "appliesTo": {
+    "pool": "any",
+    "where": {
+      "match": {
+        "senses": {
+          "sense:blindsight": true
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "type": "see",
+      "range": "senses.sense:blindsight.range",
+      "withoutSight": true,
+      "invisible": true
+    }
+  ]
+}

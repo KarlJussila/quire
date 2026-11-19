@@ -1,0 +1,74 @@
+{
+  "id": "feature:druid/circle-of-the-land/lands-aid@2024",
+  "name": "Level 3: Land’s Aid",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Magic action, you can expend a use of your Wild Shape and choose a point within 60 feet of yourself. Vitality-giving flowers and life-draining thorns appear for a moment in a 10-foot-radius Sphere centered on that point. Each creature of your choice in the Sphere must make a Constitution saving throw against your spell save DC, taking 2d6 Necrotic damage on a failed save or half as much damage on a successful one. One creature of your choice in that area regains 2d6 Hit Points.\n\nThe damage and healing increase by 1d6 when you reach Druid levels 10 (3d6) and 14 (4d6).",
+    "plain": "As a Magic action, you can expend a use of your Wild Shape and choose a point within 60 feet of yourself. Vitality-giving flowers and life-draining thorns appear for a moment in a 10-foot-radius Sphere centered on that point. Each creature of your choice in the Sphere must make a Constitution saving throw against your spell save DC, taking 2d6 Necrotic damage on a failed save or half as much damage on a successful one. One creature of your choice in that area regains 2d6 Hit Points.\n\nThe damage and healing increase by 1d6 when you reach Druid levels 10 (3d6) and 14 (4d6).",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "lands-aid",
+      "name": "Land's Aid",
+      "when": {
+        "compare": "levels.class:druid",
+        "atLeast": 3
+      },
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "wild-shape"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "area": {
+        "shape": "area-shape:sphere",
+        "size": 10,
+        "origin": "point",
+        "affects": {
+          "pool": "any",
+          "chosen": true
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:con",
+          "dc": "spellcasting.class:druid.dc"
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": {
+              "byLevel": {
+                "1": "2d6",
+                "10": "3d6",
+                "14": "4d6"
+              },
+              "of": "class:druid"
+            },
+            "type": "damage-type:necrotic"
+          }
+        },
+        {
+          "prose": {
+            "text": "One creature of your choice in the area regains hit points equal to the same dice as the damage: 2d6, or 3d6 at 10th level, or 4d6 at 14th level.",
+            "gap": {
+              "category": "heal",
+              "name": "regain hit points in the area"
+            }
+          }
+        }
+      ],
+      "otherwise": "half"
+    }
+  ]
+}

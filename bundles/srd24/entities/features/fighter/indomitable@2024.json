@@ -1,0 +1,57 @@
+{
+  "id": "feature:fighter/indomitable@2024",
+  "name": "Level 9: Indomitable",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you fail a saving throw, you can reroll it with a bonus equal to your Fighter level. You must use the new roll, and you can't use this feature again until you finish a Long Rest.\n\nYou can use this feature twice before a Long Rest starting at level 13 and three times before a Long Rest starting at level 17.",
+    "plain": "If you fail a saving throw, you can reroll it with a bonus equal to your Fighter level. You must use the new roll, and you can't use this feature again until you finish a Long Rest.\n\nYou can use this feature twice before a Long Rest starting at level 13 and three times before a Long Rest starting at level 17.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "indomitable",
+      "name": "Indomitable",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "success": false
+        }
+      },
+      "uses": {
+        "max": {
+          "byLevel": {
+            "9": 1,
+            "13": 2,
+            "17": 3
+          }
+        },
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "intercept": {
+            "reroll": true,
+            "set": {
+              "$add": "levels.class:fighter"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

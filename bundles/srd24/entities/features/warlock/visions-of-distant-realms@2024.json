@@ -1,0 +1,29 @@
+{
+  "id": "feature:warlock/visions-of-distant-realms@2024",
+  "name": "Visions of Distant Realms",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 9+ Warlock_\n\nYou can cast Arcane Eye without expending a spell slot.",
+    "plain": "Prerequisite: Level 9+ Warlock\n\nYou can cast Arcane Eye without expending a spell slot.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:arcane-eye"
+      ],
+      "how": "innate",
+      "countsAs": "class:warlock"
+    }
+  ],
+  "activities": [],
+  "gaps": [],
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 9
+  }
+}

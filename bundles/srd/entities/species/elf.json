@@ -1,0 +1,28 @@
+{
+  "id": "species:elf",
+  "name": "Elf",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "## Elf Traits\n\nYour elf character has a variety of natural abilities, the result of thousands of years of elven refinement.\n\n_**Ability Score Increase.**_ Your Dexterity score increases by 2.\n\n_**Age.**_ Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.\n\n_**Alignment.**_ Elves love freedom, variety, and selfexpression, so they lean strongly toward the gentler aspects of chaos. They value and protect others' freedom as well as their own, and they are more often good than not.\n\n_**Size.**_ Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.\n\n_**Speed.**_ Your base walking speed is 30 feet.\n\n_**Darkvision.**_ Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.\n\n_**Keen Senses.**_ You have proficiency in the Perception skill.\n\n_**Fey Ancestry.**_ You have advantage on saving throws against being Charmed, and magic can't put you to sleep.\n\n_**Trance.**_ Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.\n\n_**Languages.**_ You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+    "plain": "## Elf Traits\n\nYour elf character has a variety of natural abilities, the result of thousands of years of elven refinement.\n\nAbility Score Increase. Your Dexterity score increases by 2.\n\nAge. Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.\n\nAlignment. Elves love freedom, variety, and selfexpression, so they lean strongly toward the gentler aspects of chaos. They value and protect others' freedom as well as their own, and they are more often good than not.\n\nSize. Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.\n\nSpeed. Your base walking speed is 30 feet.\n\nDarkvision. Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.\n\nKeen Senses. You have proficiency in the Perception skill.\n\nFey Ancestry. You have advantage on saving throws against being Charmed, and magic can't put you to sleep.\n\nTrance. Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.\n\nLanguages. You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+    "wording": "srd"
+  },
+  "subspeciesRequired": true,
+  "features": [
+    "feature:elf/ability-score-increase",
+    "feature:elf/darkvision",
+    "feature:elf/elven-subrace",
+    "feature:elf/keen-senses",
+    "feature:elf/fey-ancestry",
+    "feature:elf/trance",
+    "feature:elf/languages"
+  ],
+  "size": "size:medium",
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "feature:sorcerer/proficiencies",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Armor: None\nWeapons: Daggers, darts, slings, quarterstaffs, light crossbows\nTools: None\nSaving Throws: Constitution, Charisma\nSkills: Choose two from Arcana, Deception, Insight, Intimidation, Persuasion, and Religion",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:con",
+        "ability:cha"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "item:dagger",
+        "item:dart",
+        "item:sling",
+        "item:quarterstaff",
+        "item:light-crossbow"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              "skill:arcana",
+              "skill:deception",
+              "skill:insight",
+              "skill:intimidation",
+              "skill:persuasion",
+              "skill:religion"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

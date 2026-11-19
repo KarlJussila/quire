@@ -1,0 +1,45 @@
+{
+  "id": "spell:darkvision",
+  "name": "Darkvision",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet.",
+    "plain": "You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:druid",
+    "class:ranger",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "either a pinch of dried carrot or an agate"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 8,
+        "unit": "hour"
+      }
+    }
+  ]
+}

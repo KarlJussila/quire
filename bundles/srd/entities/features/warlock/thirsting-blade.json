@@ -1,0 +1,74 @@
+{
+  "id": "feature:warlock/thirsting-blade",
+  "name": "Thirsting Blade",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite: 5th level, Pact of the Blade feature_\n\nYou can attack with your pact weapon twice, instead of once, whenever you take the Attack action on your turn.",
+    "plain": "Prerequisite: 5th level, Pact of the Blade feature\n\nYou can attack with your pact weapon twice, instead of once, whenever you take the Attack action on your turn.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [],
+  "activities": [
+    {
+      "key": "thirsting-blade-attack",
+      "name": "Thirsting Blade Attack",
+      "action": "action:attack",
+      "when": {
+        "turn": "self"
+      },
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "match": {
+                    "delivery": {
+                      "attack": {
+                        "via": "weapon",
+                        "item": {
+                          "kind": "item",
+                          "where": {
+                            "has": "state:warlock/pact-weapon",
+                            "source": "self"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "times": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "content-dependency",
+      "name": "Pact of the Blade must apply the sourced pact-weapon marker to the actual bonded weapon. The two-attack activity already filters for that marker."
+    }
+  ],
+  "requires": {
+    "all": [
+      {
+        "compare": "levels.class:warlock",
+        "atLeast": 5
+      },
+      {
+        "has": "feature:warlock/pact-of-the-blade"
+      }
+    ]
+  }
+}

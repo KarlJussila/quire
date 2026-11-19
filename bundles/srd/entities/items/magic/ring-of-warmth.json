@@ -1,0 +1,30 @@
+{
+  "id": "item:ring-of-warmth",
+  "name": "Ring of Warmth",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing this ring, you have resistance to cold damage. In addition, you and everything you wear and carry are unharmed by temperatures as low as -50 degrees Fahrenheit.",
+    "plain": "While wearing this ring, you have resistance to cold damage. In addition, you and everything you wear and carry are unharmed by temperatures as low as -50 degrees Fahrenheit.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ]
+}

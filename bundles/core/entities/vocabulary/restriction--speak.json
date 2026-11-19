@@ -1,0 +1,7 @@
+{
+  "id": "restriction:speak",
+  "name": "Speak",
+  "source": {
+    "book": "core"
+  }
+}

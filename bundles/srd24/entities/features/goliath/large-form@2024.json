@@ -1,0 +1,90 @@
+{
+  "id": "feature:goliath/large-form@2024",
+  "name": "Large Form",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Starting at character level 5, you can change your size to Large as a Bonus Action if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required). For that duration, you have Advantage on Strength checks, and your Speed increases by 10 feet. Once you use this trait, you can't use it again until you finish a Long Rest.",
+    "plain": "Starting at character level 5, you can change your size to Large as a Bonus Action if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required). For that duration, you have Advantage on Strength checks, and your Speed increases by 10 feet. Once you use this trait, you can't use it again until you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "large-form",
+      "name": "Large Form",
+      "when": {
+        "compare": "levels.total",
+        "atLeast": 5
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Change your size to Large if you are in a big enough space.",
+            "gap": {
+              "category": "activity",
+              "name": "change size to Large"
+            }
+          }
+        },
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "roll-mod",
+                  "mode": "advantage",
+                  "when": {
+                    "event": "event:roll-made",
+                    "by": "self",
+                    "match": {
+                      "roll": "roll:check",
+                      "ability": "ability:str"
+                    }
+                  }
+                },
+                {
+                  "type": "change",
+                  "set": {
+                    "speeds": {
+                      "movement-mode:walk": {
+                        "speed": {
+                          "$add": 10
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "duration": {
+              "amount": 10,
+              "unit": "minute"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

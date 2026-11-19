@@ -1,0 +1,111 @@
+{
+  "id": "creature:guardian-naga",
+  "name": "Guardian Naga",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:lawful-good",
+  "ac": 18,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 127,
+    "formula": "15d10 + 45"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 18,
+    "ability:con": 16,
+    "ability:dex": 18,
+    "ability:int": 16,
+    "ability:str": 19,
+    "ability:wis": 19
+  },
+  "saves": {
+    "ability:cha": 8,
+    "ability:con": 7,
+    "ability:dex": 8,
+    "ability:int": 7,
+    "ability:wis": 8
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 5900,
+  "cr": 10,
+  "languages": [
+    {
+      "language": "language:celestial"
+    },
+    {
+      "language": "language:common"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Rejuvenation",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a Wish spell can prevent this trait from functioning.",
+        "plain": "If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a Wish spell can prevent this trait from functioning.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The naga is an 11th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following cleric spells prepared:\n\n- Cantrips (at will): Mending, Sacred Flame, Thaumaturgy\n- 1st level (4 slots): Command, Cure Wounds, Shield of Faith\n- 2nd level (3 slots): Calm Emotions, Hold Person\n- 3rd level (3 slots): Bestow Curse, Clairvoyance\n- 4th level (3 slots): Banishment, Freedom of Movement\n- 5th level (2 slots): Flame Strike, Geas\n- 6th level (1 slot): True Seeing",
+        "plain": "The naga is an 11th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following cleric spells prepared:\n\n- Cantrips (at will): Mending, Sacred Flame, Thaumaturgy\n- 1st level (4 slots): Command, Cure Wounds, Shield of Faith\n- 2nd level (3 slots): Calm Emotions, Hold Person\n- 3rd level (3 slots): Bestow Curse, Clairvoyance\n- 4th level (3 slots): Banishment, Freedom of Movement\n- 5th level (2 slots): Flame Strike, Geas\n- 6th level (1 slot): True Seeing",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +8 to hit, reach 10 ft., one creature. _Hit:_ 8 (1d8 + 4) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.",
+        "plain": "Melee Weapon Attack: +8 to hit, reach 10 ft., one creature. Hit: 8 (1d8 + 4) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spit Poison",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +8 to hit, range 15/30 ft., one creature. _Hit:_ The target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.",
+        "plain": "Ranged Weapon Attack: +8 to hit, range 15/30 ft., one creature. Hit: The target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "item:sending-stones@2024",
+  "name": "Sending Stones",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Once Sending is cast using either stone, the stones can't be used again until the next dawn. If one of the stones in a pair is destroyed, the other one becomes nonmagical.",
+    "plain": "Once Sending is cast using either stone, the stones can't be used again until the next dawn. If one of the stones in a pair is destroyed, the other one becomes nonmagical.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon"
+}

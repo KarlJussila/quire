@@ -1,0 +1,21 @@
+{
+  "id": "feature:sorcerer/transmuted-spell@2024",
+  "name": "Transmuted Spell",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Cost: 1 Sorcery Point_\n\nWhen you cast a spell that deals a type of damage from the following list, you can spend 1 Sorcery Point to change that damage type to one of the other listed types: Acid, Cold, Fire, Lightning, Poison, Thunder.",
+    "plain": "Cost: 1 Sorcery Point\n\nWhen you cast a spell that deals a type of damage from the following list, you can spend 1 Sorcery Point to change that damage type to one of the other listed types: Acid, Cold, Fire, Lightning, Poison, Thunder.",
+    "wording": "srd"
+  },
+  "group": "group:metamagic",
+  "effects": [],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "spell-mechanics",
+      "name": "Spend 1 Sorcery Point to replace a listed damage type with one other listed type consistently across the whole casting."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "feature:sorcerer/innate-sorcery@2024",
+  "name": "Level 1: Innate Sorcery",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "An event in your past left an indelible mark on you, infusing you with simmering magic. As a Bonus Action, you can unleash that magic for 1 minute, during which you gain the following benefits:\n\n- The spell save DC of your Sorcerer spells increases by 1.\n- You have Advantage on the attack rolls of Sorcerer spells you cast.\n\nYou can use this feature twice, and you regain all expended uses of it when you finish a Long Rest.",
+    "plain": "An event in your past left an indelible mark on you, infusing you with simmering magic. As a Bonus Action, you can unleash that magic for 1 minute, during which you gain the following benefits:\n\n- The spell save DC of your Sorcerer spells increases by 1.\n- You have Advantage on the attack rolls of Sorcerer spells you cast.\n\nYou can use this feature twice, and you regain all expended uses of it when you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "innate-sorcery",
+      "name": "Innate Sorcery",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "uses": {
+        "max": 2,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "change",
+                  "set": {
+                    "spellcasting": {
+                      "$where": true,
+                      "dc": {
+                        "$add": 1
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "roll-mod",
+                  "mode": "advantage",
+                  "when": {
+                    "event": "event:roll-made",
+                    "by": "self",
+                    "match": {
+                      "roll": [
+                        "roll:attack"
+                      ],
+                      "attack": {
+                        "via": "spell"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "duration": {
+              "amount": 1,
+              "unit": "minute"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

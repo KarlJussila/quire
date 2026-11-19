@@ -1,0 +1,76 @@
+{
+  "id": "feature:cleric/divine-intervention@2024",
+  "name": "Level 10: Divine Intervention",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can call on your deity or pantheon to intervene on your behalf. As a Magic action, choose any Cleric spell of level 5 or lower that doesn't require a Reaction to cast. As part of the same action, you cast that spell without expending a spell slot or needing Material components. You can't use this feature again until you finish a Long Rest.",
+    "plain": "You can call on your deity or pantheon to intervene on your behalf. As a Magic action, choose any Cleric spell of level 5 or lower that doesn't require a Reaction to cast. As part of the same action, you cast that spell without expending a spell slot or needing Material components. You can't use this feature again until you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "divine-intervention",
+      "name": "Divine Intervention",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "cast": {
+            "spell": {
+              "choose": {
+                "key": "divine-intervention-spell",
+                "name": "Cleric Spell",
+                "from": [
+                  {
+                    "kind": "spell",
+                    "where": {
+                      "match": {
+                        "lists": "class:cleric",
+                        "level": {
+                          "atMost": 5
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "slot": false,
+            "set": {
+              "components": {
+                "$replace": {}
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "activity",
+      "name": "Excluding Cleric spells that require a Reaction to cast is not modeled."
+    }
+  ]
+}

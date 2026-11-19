@@ -1,0 +1,67 @@
+{
+  "id": "feature:goliath/storms-thunder-storm-giant@2024",
+  "name": "Storm’s Thunder (Storm Giant)",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature.",
+    "plain": "When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature.",
+    "wording": "srd"
+  },
+  "effects": [],
+  "activities": [
+    {
+      "key": "storms-thunder",
+      "name": "Storm's Thunder",
+      "trigger": {
+        "event": "event:damaged",
+        "by": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "kind": "creature"
+              },
+              {
+                "within": 60,
+                "of": "self"
+              }
+            ]
+          }
+        },
+        "subject": "self"
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "1d8",
+            "type": "damage-type:thunder"
+          },
+          "to": "actor"
+        }
+      ],
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "uses": {
+        "max": "proficiencyBonus",
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": []
+}

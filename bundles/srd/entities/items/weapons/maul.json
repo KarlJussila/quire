@@ -1,0 +1,27 @@
+{
+  "id": "item:maul",
+  "name": "Maul",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:martial-melee-weapon",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 10.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:heavy",
+      "weapon-property:two-handed"
+    ],
+    "damage": {
+      "amount": "2d6",
+      "type": "damage-type:bludgeoning"
+    }
+  }
+}

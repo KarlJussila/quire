@@ -1,0 +1,139 @@
+{
+  "id": "table:the-celtic-pantheon",
+  "name": "The Celtic Pantheon",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "deity",
+      "name": "Deity"
+    },
+    {
+      "key": "alignment",
+      "name": "Alignment"
+    },
+    {
+      "key": "suggested-domains",
+      "name": "Suggested Domains"
+    },
+    {
+      "key": "symbol",
+      "name": "Symbol"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "deity": "The Daghdha, god of weather and crops",
+        "alignment": "CG",
+        "suggested-domains": "Nature, Trickery",
+        "symbol": "Bubbling cauldron or shield"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Arawn, god of life and death",
+        "alignment": "NE",
+        "suggested-domains": "Life, Death",
+        "symbol": "Black star on gray background"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Belenus, god of sun, light, and warmth",
+        "alignment": "NG",
+        "suggested-domains": "Light",
+        "symbol": "Solar disk and standing stones"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Brigantia, goddess of rivers and livestock",
+        "alignment": "NG",
+        "suggested-domains": "Life",
+        "symbol": "Footbridge"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Diancecht, god of medicine and healing",
+        "alignment": "LG",
+        "suggested-domains": "Life",
+        "symbol": "Crossed oak and mistletoe branches"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Dunatis, god of mountains and peaks",
+        "alignment": "N",
+        "suggested-domains": "Nature",
+        "symbol": "Red sun-capped mountain peak"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Goibhniu, god of smiths and healing",
+        "alignment": "NG",
+        "suggested-domains": "Knowledge, Life",
+        "symbol": "Giant mallet over sword"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Lugh, god of arts, travel, and commerce",
+        "alignment": "CN",
+        "suggested-domains": "Knowledge, Life",
+        "symbol": "Pair of long hands"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Manannan mac Lir, god of oceans and sea creatures",
+        "alignment": "LN",
+        "suggested-domains": "Nature, Tempest",
+        "symbol": "Wave of white water on green"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Math Mathonwy, god of magic",
+        "alignment": "NE",
+        "suggested-domains": "Knowledge",
+        "symbol": "Staff"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Morrigan, goddess of battle",
+        "alignment": "CE",
+        "suggested-domains": "War",
+        "symbol": "Two crossed spears"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Nuada, god of war and warriors",
+        "alignment": "N",
+        "suggested-domains": "War",
+        "symbol": "Silver hand on black background"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Oghma, god of speech and writing",
+        "alignment": "NG",
+        "suggested-domains": "Knowledge",
+        "symbol": "Unfurled scroll"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Silvanus, god of nature and forests",
+        "alignment": "N",
+        "suggested-domains": "Nature",
+        "symbol": "Summer oak tree"
+      }
+    }
+  ]
+}

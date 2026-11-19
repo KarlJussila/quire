@@ -1,0 +1,67 @@
+{
+  "id": "creature:giant-goat",
+  "name": "Giant Goat",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 11,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 19,
+    "formula": "3d10 + 3"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 12,
+    "ability:dex": 11,
+    "ability:int": 3,
+    "ability:str": 17,
+    "ability:wis": 12
+  },
+  "passivePerception": 11,
+  "xp": 100,
+  "cr": 0.5,
+  "blocks": [
+    {
+      "name": "Charge",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the goat moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 5 (2d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked Prone.",
+        "plain": "If the goat moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 5 (2d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked Prone.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sure-Footed",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it Prone.",
+        "plain": "The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it Prone.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ram",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 8 (2d4 + 3) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 8 (2d4 + 3) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

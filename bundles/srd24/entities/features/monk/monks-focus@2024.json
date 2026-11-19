@@ -1,0 +1,173 @@
+{
+  "id": "feature:monk/monks-focus@2024",
+  "name": "Level 2: Monk's Focus",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your focus and martial training allow you to harness a well of extraordinary energy within yourself. This energy is represented by Focus Points. Your Monk level determines the number of points you have, as shown in the Focus Points column of the Monk Features table.\n\nYou can expend these points to enhance or fuel certain Monk features. You start knowing three such features: Flurry of Blows, Patient Defense, and Step of the Wind, each of which is detailed below.\n\nWhen you expend a Focus Point, it is unavailable until you finish a Short or Long Rest, at the end of which you regain all your expended points.\n\nSome features that use Focus Points require your target to make a saving throw. The save DC equals 8 plus your Wisdom modifier and Proficiency Bonus.\n\n_**Flurry of Blows.**_ You can expend 1 Focus Point to make two Unarmed Strikes as a Bonus Action.\n\n_**Patient Defense.**_ You can take the Disengage action as a Bonus Action. Alternatively, you can expend 1 Focus Point to take both the Disengage and the Dodge actions as a Bonus Action.\n\n_**Step of the Wind.**_ You can take the Dash action as a Bonus Action. Alternatively, you can expend 1 Focus Point to take both the Disengage and Dash actions as a Bonus Action, and your jump distance is doubled for the turn.",
+    "plain": "Your focus and martial training allow you to harness a well of extraordinary energy within yourself. This energy is represented by Focus Points. Your Monk level determines the number of points you have, as shown in the Focus Points column of the Monk Features table.\n\nYou can expend these points to enhance or fuel certain Monk features. You start knowing three such features: Flurry of Blows, Patient Defense, and Step of the Wind, each of which is detailed below.\n\nWhen you expend a Focus Point, it is unavailable until you finish a Short or Long Rest, at the end of which you regain all your expended points.\n\nSome features that use Focus Points require your target to make a saving throw. The save DC equals 8 plus your Wisdom modifier and Proficiency Bonus.\n\nFlurry of Blows. You can expend 1 Focus Point to make two Unarmed Strikes as a Bonus Action.\n\nPatient Defense. You can take the Disengage action as a Bonus Action. Alternatively, you can expend 1 Focus Point to take both the Disengage and the Dodge actions as a Bonus Action.\n\nStep of the Wind. You can take the Dash action as a Bonus Action. Alternatively, you can expend 1 Focus Point to take both the Disengage and Dash actions as a Bonus Action, and your jump distance is doubled for the turn.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "flurry-of-blows",
+      "name": "Flurry of Blows",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "focus-points"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "match": {
+                    "delivery": {
+                      "attack": {
+                        "via": "unarmed"
+                      }
+                    }
+                  }
+                }
+              },
+              "times": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "patient-defense",
+      "name": "Patient Defense",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": "rule:disengage",
+              "times": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "patient-defense-focus",
+      "name": "Patient Defense",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "focus-points"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": "rule:disengage",
+              "times": 1
+            },
+            {
+              "activity": "rule:dodge",
+              "times": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "step-of-the-wind",
+      "name": "Step of the Wind",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": "rule:dash",
+              "times": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "step-of-the-wind-focus",
+      "name": "Step of the Wind",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "focus-points"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": "rule:disengage",
+              "times": 1
+            },
+            {
+              "activity": "rule:dash",
+              "times": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "resource",
+      "key": "focus-points",
+      "max": "levels.class:monk",
+      "dc": {
+        "sum": [
+          8,
+          "modifiers.ability:wis",
+          "proficiencyBonus"
+        ]
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "subject": "self",
+            "match": {
+              "rest": "rest:short"
+            }
+          },
+          "amount": "all"
+        },
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "subject": "self",
+            "match": {
+              "rest": "rest:long"
+            }
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ]
+}

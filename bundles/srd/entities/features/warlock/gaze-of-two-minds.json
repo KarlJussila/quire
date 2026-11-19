@@ -1,0 +1,77 @@
+{
+  "id": "feature:warlock/gaze-of-two-minds",
+  "name": "Gaze of Two Minds",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can use your action to touch a willing humanoid and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can use your action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. While perceiving through the other creature's senses, you benefit from any special senses possessed by that creature, and you are Blinded and Deafened to your own surroundings.",
+    "plain": "You can use your action to touch a willing humanoid and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can use your action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. While perceiving through the other creature's senses, you benefit from any special senses possessed by that creature, and you are Blinded and Deafened to your own surroundings.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Copy the linked creature's special senses to yourself."
+    },
+    {
+      "category": "feature-mechanics",
+      "name": "Allow maintaining the link on later turns only while you and the linked creature are on the same plane."
+    },
+    {
+      "category": "feature-mechanics",
+      "name": "Apply Blinded and Deafened only to your own surroundings without suppressing perception through the linked creature."
+    },
+    {
+      "category": "feature-mechanics",
+      "name": "The initial link is recorded, but remote renewal on later turns is withheld until its same-plane condition can be tested."
+    },
+    {
+      "category": "feature-mechanics",
+      "name": "Perception through the linked creature’s ordinary senses is not yet granted; the state currently records the relationship only."
+    }
+  ],
+  "activities": [
+    {
+      "key": "gaze-of-two-minds",
+      "name": "Connect to a Willing Humanoid",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "target": {
+        "who": {
+          "pool": "any",
+          "chosen": true,
+          "where": {
+            "all": [
+              {
+                "match": {
+                  "creatureType": "creature-type:humanoid"
+                }
+              },
+              {
+                "willing": true
+              }
+            ]
+          }
+        },
+        "count": 1
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "state:warlock/gaze-of-two-minds@2014",
+            "source": "target"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "creature:black-dragon-wyrmling@2024",
+  "name": "Black Dragon Wyrmling",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 17,
+  "hp": {
+    "average": 33,
+    "formula": "6d8 + 6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    },
+    "movement-mode:swim": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 13,
+    "ability:con": 13,
+    "ability:dex": 14,
+    "ability:int": 10,
+    "ability:str": 15,
+    "ability:wis": 11
+  },
+  "saves": {
+    "ability:dex": 4,
+    "ability:wis": 2
+  },
+  "skills": {
+    "skill:perception": 4,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    },
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 450,
+  "proficiencyBonus": 2,
+  "initiative": 4,
+  "habitat": [
+    "Swamp"
+  ],
+  "treasure": [
+    "Relics"
+  ],
+  "cr": 2,
+  "languages": [
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:acid"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The dragon can breathe air and water.",
+        "plain": "The dragon can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes two Rend attacks.",
+        "plain": "The dragon makes two Rend attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 5 (1d6 + 2) Slashing damage plus 2 (1d4) Acid damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Slashing damage plus 2 (1d4) Acid damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Acid Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 11, each creature in a 15-foot-long, 5-footwide Line. _Failure:_ 22 (5d8) Acid damage. _Success:_ Half damage.",
+        "plain": "Dexterity Saving Throw: DC 11, each creature in a 15-foot-long, 5-footwide Line. Failure: 22 (5d8) Acid damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

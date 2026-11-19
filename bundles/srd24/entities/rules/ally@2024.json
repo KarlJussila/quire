@@ -1,0 +1,18 @@
+{
+  "id": "rule:ally@2024",
+  "name": "Ally",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A creature is your ally if it is a member of your adventuring party, your friend, on your side in combat, or a creature that the rules or the GM designates as your ally.",
+    "plain": "A creature is your ally if it is a member of your adventuring party, your friend, on your side in combat, or a creature that the rules or the GM designates as your ally.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

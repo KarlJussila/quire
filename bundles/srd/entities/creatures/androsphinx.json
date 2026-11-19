@@ -1,0 +1,187 @@
+{
+  "id": "creature:androsphinx",
+  "name": "Androsphinx",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:lawful-neutral",
+  "ac": 17,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 199,
+    "formula": "19d10 + 95"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 23,
+    "ability:con": 20,
+    "ability:dex": 10,
+    "ability:int": 16,
+    "ability:str": 22,
+    "ability:wis": 18
+  },
+  "saves": {
+    "ability:con": 11,
+    "ability:dex": 6,
+    "ability:int": 9,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:arcana": 9,
+    "skill:perception": 10,
+    "skill:religion": 15
+  },
+  "senses": {
+    "sense:truesight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 20,
+  "xp": 18000,
+  "cr": 17,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:sphinx"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:psychic"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened"
+      ]
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Inscrutable",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.",
+        "plain": "The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Weapons",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sphinx's weapon attacks are magical.",
+        "plain": "The sphinx's weapon attacks are magical.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sphinx is a 12th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 18, +10 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following cleric spells prepared:\n\n- Cantrips (at will): Sacred Flame, Spare the Dying, Thaumaturgy\n- 1st level (4 slots): Command, Detect Evil and Good, Detect Magic\n- 2nd level (3 slots): Lesser Restoration, Zone of Truth\n- 3rd level (3 slots): Dispel Magic, Tongues\n- 4th level (3 slots): Banishment, Freedom of Movement\n- 5th level (2 slots): Flame Strike, Greater Restoration\n- 6th level (1 slot): Heroes' Feast",
+        "plain": "The sphinx is a 12th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 18, +10 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following cleric spells prepared:\n\n- Cantrips (at will): Sacred Flame, Spare the Dying, Thaumaturgy\n- 1st level (4 slots): Command, Detect Evil and Good, Detect Magic\n- 2nd level (3 slots): Lesser Restoration, Zone of Truth\n- 3rd level (3 slots): Dispel Magic, Tongues\n- 4th level (3 slots): Banishment, Freedom of Movement\n- 5th level (2 slots): Flame Strike, Greater Restoration\n- 6th level (1 slot): Heroes' Feast",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The sphinx makes two claw attacks.",
+        "plain": "The sphinx makes two claw attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +12 to hit, reach 5 ft., one target. _Hit:_ 17 (2d10 + 6) slashing damage.",
+        "plain": "Melee Weapon Attack: +12 to hit, reach 5 ft., one target. Hit: 17 (2d10 + 6) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Roar",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The sphinx emits a magical roar. Each time it roars before finishing a long rest, the roar is louder and the effect is different, as detailed below. Each creature within 500 feet of the sphinx and able to hear the roar must make a saving throw.\n\n- **First Roar.** Each creature that fails a DC 18 Wisdom saving throw is Frightened for 1 minute. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n- **Second Roar.** Each creature that fails a DC 18 Wisdom saving throw is Deafened and Frightened for 1 minute. A frightened creature is Paralyzed and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n- **Third Roar.** Each creature makes a DC 18 Constitution saving throw. On a failed save, a creature takes 44 (8d10) thunder damage and is knocked Prone. On a successful save, the creature takes half as much damage and isn't knocked prone.",
+        "plain": "The sphinx emits a magical roar. Each time it roars before finishing a long rest, the roar is louder and the effect is different, as detailed below. Each creature within 500 feet of the sphinx and able to hear the roar must make a saving throw.\n\n- First Roar. Each creature that fails a DC 18 Wisdom saving throw is Frightened for 1 minute. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n- Second Roar. Each creature that fails a DC 18 Wisdom saving throw is Deafened and Frightened for 1 minute. A frightened creature is Paralyzed and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n- Third Roar. Each creature makes a DC 18 Constitution saving throw. On a failed save, a creature takes 44 (8d10) thunder damage and is knocked Prone. On a successful save, the creature takes half as much damage and isn't knocked prone.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw Attack",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The sphinx makes one claw attack.",
+        "plain": "The sphinx makes one claw attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Teleport",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.",
+        "plain": "The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Cast a Spell",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The sphinx casts a spell from its list of prepared spells, using a spell slot as normal.",
+        "plain": "The sphinx casts a spell from its list of prepared spells, using a spell slot as normal.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

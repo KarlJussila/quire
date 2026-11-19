@@ -1,0 +1,18 @@
+{
+  "id": "rule:round-down@2024",
+  "name": "Round Down",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Whenever you divide or multiply a number in the game, round down if you end up with a fraction, even if the fraction is one-half or greater. Some rules make an exception and tell you to round up.",
+    "plain": "Whenever you divide or multiply a number in the game, round down if you end up with a fraction, even if the fraction is one-half or greater. Some rules make an exception and tell you to round up.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

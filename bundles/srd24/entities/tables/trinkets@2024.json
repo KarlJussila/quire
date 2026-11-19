@@ -1,0 +1,916 @@
+{
+  "id": "table:trinkets@2024",
+  "name": "Trinkets",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "trinket",
+      "name": "Trinket"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "trinket": "A mummified goblin hand"
+      },
+      "range": [
+        1,
+        1
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A crystal that faintly glows in moonlight"
+      },
+      "range": [
+        2,
+        2
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A gold coin minted in an unknown land"
+      },
+      "range": [
+        3,
+        3
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A diary written in a language you don't know"
+      },
+      "range": [
+        4,
+        4
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A brass ring that never tarnishes"
+      },
+      "range": [
+        5,
+        5
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An old chess piece made from glass"
+      },
+      "range": [
+        6,
+        6
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A pair of knucklebone dice, each with a skull symbol on the side that would normally show six pips"
+      },
+      "range": [
+        7,
+        7
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A small idol depicting a nightmarish creature that gives you unsettling dreams when you sleep near it"
+      },
+      "range": [
+        8,
+        8
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A lock of someone's hair"
+      },
+      "range": [
+        9,
+        9
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "The deed for a parcel of land in a realm un known to you"
+      },
+      "range": [
+        10,
+        10
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A 1-ounce block made from an unknown material"
+      },
+      "range": [
+        11,
+        11
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A small cloth doll skewered with needles"
+      },
+      "range": [
+        12,
+        12
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A tooth from an unknown beast"
+      },
+      "range": [
+        13,
+        13
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An enormous scale, perhaps from a dragon"
+      },
+      "range": [
+        14,
+        14
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A bright-green feather"
+      },
+      "range": [
+        15,
+        15
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An old divination card bearing your likeness"
+      },
+      "range": [
+        16,
+        16
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A glass orb filled with moving smoke"
+      },
+      "range": [
+        17,
+        17
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A 1-pound egg with a bright-red shell"
+      },
+      "range": [
+        18,
+        18
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A pipe that blows bubbles"
+      },
+      "range": [
+        19,
+        19
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A glass jar containing a bit of flesh floating in pickling fluid"
+      },
+      "range": [
+        20,
+        20
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A gnome-crafted music box that plays a song you dimly remember from your childhood"
+      },
+      "range": [
+        21,
+        21
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A wooden statuette of a smug halfling"
+      },
+      "range": [
+        22,
+        22
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A brass orb etched with strange runes"
+      },
+      "range": [
+        23,
+        23
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A multicolored stone disk"
+      },
+      "range": [
+        24,
+        24
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A silver icon of a raven"
+      },
+      "range": [
+        25,
+        25
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A bag containing forty-seven teeth, one of which is rotten"
+      },
+      "range": [
+        26,
+        26
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A shard of obsidian that always feels warm to the touch"
+      },
+      "range": [
+        27,
+        27
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A dragon's talon strung on a leather necklace"
+      },
+      "range": [
+        28,
+        28
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A pair of old socks"
+      },
+      "range": [
+        29,
+        29
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A blank book whose pages refuse to hold ink, chalk, graphite, or any other marking"
+      },
+      "range": [
+        30,
+        30
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A silver badge that is a five-pointed star"
+      },
+      "range": [
+        31,
+        31
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A knife that belonged to a relative"
+      },
+      "range": [
+        32,
+        32
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A glass vial filled with nail clippings"
+      },
+      "range": [
+        33,
+        33
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A rectangular metal device with two tiny metal cups on one end that throws sparks when wet"
+      },
+      "range": [
+        34,
+        34
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A white, sequined glove sized for a human"
+      },
+      "range": [
+        35,
+        35
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A vest with one hundred tiny pockets"
+      },
+      "range": [
+        36,
+        36
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A weightless stone"
+      },
+      "range": [
+        37,
+        37
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A sketch of a goblin"
+      },
+      "range": [
+        38,
+        38
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An empty glass vial that smells of perfume"
+      },
+      "range": [
+        39,
+        39
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A gemstone that looks like a lump of coal when examined by anyone but you"
+      },
+      "range": [
+        40,
+        40
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A scrap of cloth from an old banner"
+      },
+      "range": [
+        41,
+        41
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A rank insignia from a lost legionnaire"
+      },
+      "range": [
+        42,
+        42
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A silver bell without a clapper"
+      },
+      "range": [
+        43,
+        43
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A mechanical canary inside a lamp"
+      },
+      "range": [
+        44,
+        44
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A miniature chest carved to look like it has nu merous feet on the bottom"
+      },
+      "range": [
+        45,
+        45
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A dead sprite inside a clear glass bottle"
+      },
+      "range": [
+        46,
+        46
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A metal can that has no opening but sounds as if it is filled with liquid, sand, spiders, or broken glass (your choice)"
+      },
+      "range": [
+        47,
+        47
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A glass orb filled with water, in which swims a clockwork goldfish"
+      },
+      "range": [
+        48,
+        48
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A silver spoon with an M engraved on the handle"
+      },
+      "range": [
+        49,
+        49
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A whistle made from gold-colored wood"
+      },
+      "range": [
+        50,
+        50
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A dead scarab beetle the size of your hand"
+      },
+      "range": [
+        51,
+        51
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "Two toy soldiers, one missing a head"
+      },
+      "range": [
+        52,
+        52
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A small box filled with different-sized buttons"
+      },
+      "range": [
+        53,
+        53
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A candle that can't be lit"
+      },
+      "range": [
+        54,
+        54
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A miniature cage with no door"
+      },
+      "range": [
+        55,
+        55
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An old key"
+      },
+      "range": [
+        56,
+        56
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An indecipherable treasure map"
+      },
+      "range": [
+        57,
+        57
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A hilt from a broken sword"
+      },
+      "range": [
+        58,
+        58
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A rabbit's foot"
+      },
+      "range": [
+        59,
+        59
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A glass eye"
+      },
+      "range": [
+        60,
+        60
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A cameo of a hideous person"
+      },
+      "range": [
+        61,
+        61
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A silver skull the size of a coin"
+      },
+      "range": [
+        62,
+        62
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An alabaster mask"
+      },
+      "range": [
+        63,
+        63
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A cone of sticky black incense that stinks"
+      },
+      "range": [
+        64,
+        64
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A nightcap that gives you pleasant dreams when you wear it"
+      },
+      "range": [
+        65,
+        65
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A single caltrop made from bone"
+      },
+      "range": [
+        66,
+        66
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A gold monocle frame without the lens"
+      },
+      "range": [
+        67,
+        67
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A 1-inch cube, each side a different color"
+      },
+      "range": [
+        68,
+        68
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A crystal doorknob"
+      },
+      "range": [
+        69,
+        69
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A packet filled with pink dust"
+      },
+      "range": [
+        70,
+        70
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A fragment of a beautiful song, written as mu sical notes on two pieces of parchment"
+      },
+      "range": [
+        71,
+        71
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A silver teardrop earring containing a real teardrop"
+      },
+      "range": [
+        72,
+        72
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An eggshell painted with scenes of misery in disturbing detail"
+      },
+      "range": [
+        73,
+        73
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A fan that, when unfolded, shows a sleepy cat"
+      },
+      "range": [
+        74,
+        74
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A set of bone pipes"
+      },
+      "range": [
+        75,
+        75
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A four-leaf clover pressed inside a book discussing manners and etiquette"
+      },
+      "range": [
+        76,
+        76
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A sheet of parchment upon which is drawn a mechanical contraption"
+      },
+      "range": [
+        77,
+        77
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An ornate scabbard that fits no blade you have found"
+      },
+      "range": [
+        78,
+        78
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An invitation to a party where a murder happened"
+      },
+      "range": [
+        79,
+        79
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A bronze pentacle with an etching of a rat's head in its center"
+      },
+      "range": [
+        80,
+        80
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A purple handkerchief embroidered with the name of an archmage"
+      },
+      "range": [
+        81,
+        81
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "Half a floor plan for a temple, a castle, or another structure"
+      },
+      "range": [
+        82,
+        82
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A bit of folded cloth that, when unfolded, turns into a stylish cap"
+      },
+      "range": [
+        83,
+        83
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A receipt of deposit at a bank in a far-off city"
+      },
+      "range": [
+        84,
+        84
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A diary with seven missing pages"
+      },
+      "range": [
+        85,
+        85
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An empty silver snuffbox bearing the inscription \"dreams\" on its lid"
+      },
+      "range": [
+        86,
+        86
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An iron holy symbol devoted to an unknown god"
+      },
+      "range": [
+        87,
+        87
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A book about a legendary hero's rise and fall, with the last chapter missing"
+      },
+      "range": [
+        88,
+        88
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A vial of dragon blood"
+      },
+      "range": [
+        89,
+        89
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An ancient arrow of elven design"
+      },
+      "range": [
+        90,
+        90
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A needle that never bends"
+      },
+      "range": [
+        91,
+        91
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An ornate brooch of dwarven design"
+      },
+      "range": [
+        92,
+        92
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "An empty wine bottle bearing a pretty label that says, \"The Wizard of Wines Winery, Red Dragon Crush, 331422-W\""
+      },
+      "range": [
+        93,
+        93
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A mosaic tile with a multicolored, glazed surface"
+      },
+      "range": [
+        94,
+        94
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A petrified mouse"
+      },
+      "range": [
+        95,
+        95
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A black pirate flag adorned with a dragon's skull and crossbones"
+      },
+      "range": [
+        96,
+        96
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A tiny mechanical crab or spider that moves about when it's not being observed"
+      },
+      "range": [
+        97,
+        97
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A glass jar containing lard with a label that reads, \"Griffon Grease\""
+      },
+      "range": [
+        98,
+        98
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A wooden box with a ceramic bottom that holds a living worm with a head on each end of its body"
+      },
+      "range": [
+        99,
+        99
+      ]
+    },
+    {
+      "cells": {
+        "trinket": "A metal urn containing the ashes of a hero"
+      },
+      "range": [
+        100,
+        100
+      ]
+    }
+  ],
+  "dice": "d100"
+}

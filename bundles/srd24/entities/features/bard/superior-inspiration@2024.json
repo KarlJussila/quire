@@ -1,0 +1,47 @@
+{
+  "id": "feature:bard/superior-inspiration@2024",
+  "name": "Level 18: Superior Inspiration",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you roll Initiative, you regain expended uses of Bardic Inspiration until you have two if you have fewer than that.",
+    "plain": "When you roll Initiative, you regain expended uses of Bardic Inspiration until you have two if you have fewer than that.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "superior-inspiration",
+      "name": "Superior Inspiration",
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:initiative"
+        }
+      },
+      "outcomes": [
+        {
+          "pool": {
+            "resource": "bardic-inspiration",
+            "add": {
+              "max": [
+                0,
+                {
+                  "sum": [
+                    2,
+                    {
+                      "times": "pools.bardic-inspiration.current",
+                      "by": -1
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "damage-type:bludgeoning",
+  "name": "Bludgeoning",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

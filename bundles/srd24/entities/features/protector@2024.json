@@ -1,0 +1,12 @@
+{
+  "id": "feature:protector@2024",
+  "name": "Protector",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Trained for battle, you gain proficiency with Martial weapons and training with Heavy armor.",
+    "plain": "Trained for battle, you gain proficiency with Martial weapons and training with Heavy armor.",
+    "wording": "srd"
+  }
+}

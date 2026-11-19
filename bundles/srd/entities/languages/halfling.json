@@ -1,0 +1,15 @@
+{
+  "id": "language:halfling",
+  "name": "Halfling",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A standard language, typically spoken by halflings, written in the Common script.",
+    "plain": "A standard language, typically spoken by halflings, written in the Common script.",
+    "wording": "original"
+  },
+  "group": "group:standard-language",
+  "script": "Common",
+  "speakers": "Halflings"
+}

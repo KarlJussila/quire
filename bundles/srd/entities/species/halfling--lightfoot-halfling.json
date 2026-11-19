@@ -1,0 +1,17 @@
+{
+  "id": "species:halfling/lightfoot-halfling",
+  "name": "Lightfoot",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You're inclined to be affable and get along well with others.\n\nLightfoots are more Prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.\n\n_**Ability Score Increase.**_ Your Charisma score increases by 1.\n\n_**Naturally Stealthy.**_ You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you.",
+    "plain": "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You're inclined to be affable and get along well with others.\n\nLightfoots are more Prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.\n\nAbility Score Increase. Your Charisma score increases by 1.\n\nNaturally Stealthy. You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you.",
+    "wording": "srd"
+  },
+  "parent": "species:halfling",
+  "features": [
+    "feature:halfling/lightfoot-halfling/ability-score-increase",
+    "feature:halfling/lightfoot-halfling/naturally-stealthy"
+  ]
+}

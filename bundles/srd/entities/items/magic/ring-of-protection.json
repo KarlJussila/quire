@@ -1,0 +1,59 @@
+{
+  "id": "item:ring-of-protection",
+  "name": "Ring of Protection",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You gain a +1 bonus to AC and saving throws while wearing this ring.",
+    "plain": "You gain a +1 bonus to AC and saving throws while wearing this ring.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:save"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

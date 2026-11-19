@@ -1,0 +1,48 @@
+{
+  "id": "spell:arcane-lock",
+  "name": "Arcane Lock",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting Knock on the object suppresses _Arcane Lock_ for 10 minutes.\n\nWhile affected by this spell, the object is more difficult to break or force open; the DC to break it or pick any locks on it increases by 10.",
+    "plain": "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting Knock on the object suppresses Arcane Lock for 10 minutes.\n\nWhile affected by this spell, the object is more difficult to break or force open; the DC to break it or pick any locks on it increases by 10.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "gold dust worth at least 25 gp, which the spell consumes",
+      "parts": [
+        {
+          "worth": {
+            "amount": 25,
+            "currency": "currency:gp"
+          },
+          "consumed": true
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": "until-dispelled"
+    }
+  ]
+}

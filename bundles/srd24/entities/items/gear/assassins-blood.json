@@ -1,0 +1,18 @@
+{
+  "id": "item:assassins-blood",
+  "name": "Assassin's Blood",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 150 GP\n\n_Ingested Poison_\n\nA creature subjected to Assassin's Blood makes a DC 10 Constitution saving throw. On a failed save, the creature takes 6 (1d12) Poison damage and has the Poisoned condition for 24 hours. On a successful save, the creature takes half as much damage only.",
+    "plain": "Cost: 150 GP\n\nIngested Poison\n\nA creature subjected to Assassin's Blood makes a DC 10 Constitution saving throw. On a failed save, the creature takes 6 (1d12) Poison damage and has the Poisoned condition for 24 hours. On a successful save, the creature takes half as much damage only.",
+    "wording": "srd"
+  },
+  "group": "group:poison",
+  "cost": {
+    "amount": 150,
+    "currency": "currency:gp"
+  },
+  "weight": 0.5
+}

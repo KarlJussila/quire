@@ -1,0 +1,48 @@
+{
+  "id": "feat:boon-of-spell-recall@2024",
+  "name": "Boon of Spell Recall",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain the following benefits.\n\n_**Ability Score Increase.**_ Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.\n\n_**Free Casting.**_ Whenever you cast a spell with a level 1-4 spell slot, roll 1d4. If the number you roll is the same as the slot's level, the slot isn't expended.",
+    "plain": "You gain the following benefits.\n\nAbility Score Increase. Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.\n\nFree Casting. Whenever you cast a spell with a level 1-4 spell slot, roll 1d4. If the number you roll is the same as the slot's level, the slot isn't expended.",
+    "wording": "srd"
+  },
+  "group": "group:epic-boon",
+  "requires": {
+    "all": [
+      {
+        "compare": "levels.total",
+        "atLeast": 19
+      },
+      {
+        "has": "group:spellcasting-feature"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "$at": {
+            "choose": {
+              "key": "ability",
+              "name": "Ability Score Increase",
+              "from": [
+                "ability:int",
+                "ability:wis",
+                "ability:cha"
+              ]
+            }
+          },
+          "$add": {
+            "amount": 1,
+            "upTo": 30
+          }
+        }
+      }
+    }
+  ]
+}

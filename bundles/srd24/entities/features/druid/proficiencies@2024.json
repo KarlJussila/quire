@@ -1,0 +1,62 @@
+{
+  "id": "feature:druid/proficiencies@2024",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Saving Throw Proficiencies: Intelligence and Wisdom\nSkill Proficiencies: Choose 2: Animal Handling, Arcana, Insight, Medicine, Nature, Perception, Religion, or Survival\nWeapon Proficiencies: Simple weapons\nTool Proficiencies: Herbalism Kit\nArmor Training: Light armor and Shields",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:int",
+        "ability:wis"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor",
+        "group:shield"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "item:herbalism-kit"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              "skill:arcana",
+              "skill:animal-handling",
+              "skill:insight",
+              "skill:medicine",
+              "skill:nature",
+              "skill:perception",
+              "skill:religion",
+              "skill:survival"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

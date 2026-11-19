@@ -1,0 +1,33 @@
+{
+  "id": "condition:incapacitated",
+  "name": "Incapacitated",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- An Incapacitated creature can't take actions or reactions.",
+    "plain": "An Incapacitated creature can't take actions or reactions.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:actions",
+        "restriction:bonus-actions",
+        "restriction:reactions"
+      ]
+    },
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:contest"
+        }
+      }
+    }
+  ]
+}

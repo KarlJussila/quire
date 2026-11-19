@@ -1,0 +1,65 @@
+{
+  "id": "table:hit-dice-by-size",
+  "name": "Hit Dice by Size",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "monster-size",
+      "name": "Monster Size"
+    },
+    {
+      "key": "hit-die",
+      "name": "Hit Die"
+    },
+    {
+      "key": "average-hp-per-die",
+      "name": "Average HP per Die"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "monster-size": "Tiny",
+        "hit-die": "d4",
+        "average-hp-per-die": "2 1/2"
+      }
+    },
+    {
+      "cells": {
+        "monster-size": "Small",
+        "hit-die": "d6",
+        "average-hp-per-die": "3 1/2"
+      }
+    },
+    {
+      "cells": {
+        "monster-size": "Medium",
+        "hit-die": "d8",
+        "average-hp-per-die": "4 1/2"
+      }
+    },
+    {
+      "cells": {
+        "monster-size": "Large",
+        "hit-die": "d10",
+        "average-hp-per-die": "5 1/2"
+      }
+    },
+    {
+      "cells": {
+        "monster-size": "Huge",
+        "hit-die": "d12",
+        "average-hp-per-die": "6 1/2"
+      }
+    },
+    {
+      "cells": {
+        "monster-size": "Gargantuan",
+        "hit-die": "d20",
+        "average-hp-per-die": "10 1/2"
+      }
+    }
+  ]
+}

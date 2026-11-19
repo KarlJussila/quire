@@ -1,0 +1,7 @@
+{
+ "id": "roll:save",
+ "name": "Saving Throw",
+ "source": {
+  "book": "core"
+ }
+}

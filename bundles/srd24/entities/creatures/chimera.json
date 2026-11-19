@@ -1,0 +1,109 @@
+{
+  "id": "creature:chimera@2024",
+  "name": "Chimera",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 14,
+  "hp": {
+    "average": 114,
+    "formula": "12d10 + 48"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 19,
+    "ability:dex": 11,
+    "ability:int": 3,
+    "ability:str": 19,
+    "ability:wis": 14
+  },
+  "skills": {
+    "skill:perception": 8
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 18,
+  "xp": 2300,
+  "proficiencyBonus": 3,
+  "initiative": 0,
+  "habitat": [
+    "Grassland",
+    "Hill",
+    "Mountain"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 6,
+  "languages": [
+    {
+      "language": "language:draconic",
+      "understandsOnly": true
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The chimera makes one Ram attack, one Bite attack, and one Claw attack. It can replace the Claw attack with a use of Fire Breath if available.",
+        "plain": "The chimera makes one Ram attack, one Bite attack, and one Claw attack. It can replace the Claw attack with a use of Fire Breath if available.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 5 ft. _Hit:_ 11 (2d6 + 4) Piercing damage, or 18 (4d6 + 4) Piercing damage if the chimera had Advantage on the attack roll.",
+        "plain": "Melee Attack Roll: +7, reach 5 ft. Hit: 11 (2d6 + 4) Piercing damage, or 18 (4d6 + 4) Piercing damage if the chimera had Advantage on the attack roll.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 5 ft. _Hit:_ 7 (1d6 + 4) Slashing damage.",
+        "plain": "Melee Attack Roll: +7, reach 5 ft. Hit: 7 (1d6 + 4) Slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ram",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 5 ft. _Hit:_ 10 (1d12 + 4) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Prone condition.",
+        "plain": "Melee Attack Roll: +7, reach 5 ft. Hit: 10 (1d12 + 4) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Prone condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fire Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 15, each creature in a 15-foot Cone. _Failure:_ 31 (7d8) Fire damage. _Success:_ Half damage.",
+        "plain": "Dexterity Saving Throw: DC 15, each creature in a 15-foot Cone. Failure: 31 (7d8) Fire damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

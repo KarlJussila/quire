@@ -1,0 +1,74 @@
+{
+  "id": "feature:fighter/studied-attacks@2024",
+  "name": "Level 13: Studied Attacks",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You study your opponents and learn from each attack you make. If you make an attack roll against a creature and miss, you have Advantage on your next attack roll against that creature before the end of your next turn.",
+    "plain": "You study your opponents and learn from each attack you make. If you make an attack roll against a creature and miss, you have Advantage on your next attack roll against that creature before the end of your next turn.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": false
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "applyState": {
+              "state": {
+                "sourceName": "attacker",
+                "effects": [
+                  {
+                    "type": "roll-mod",
+                    "to": "source",
+                    "mode": "advantage",
+                    "when": {
+                      "event": "event:roll-made",
+                      "by": "source",
+                      "subject": "self",
+                      "match": {
+                        "roll": "roll:attack"
+                      }
+                    }
+                  }
+                ],
+                "ends": [
+                  {
+                    "event": "event:roll-resolved",
+                    "by": "source",
+                    "subject": "self",
+                    "match": {
+                      "roll": "roll:attack"
+                    }
+                  },
+                  {
+                    "event": "event:turn-end",
+                    "subject": "source",
+                    "next": true
+                  }
+                ]
+              }
+            },
+            "to": "subject"
+          }
+        ]
+      }
+    }
+  ]
+}

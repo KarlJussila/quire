@@ -1,0 +1,38 @@
+{
+  "id": "feature:elf/high-elf/cantrip",
+  "name": "Cantrip",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.",
+    "plain": "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "cantrip",
+            "name": "Cantrip",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:wizard",
+                    "level": 0
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": "ability:int"
+    }
+  ]
+}

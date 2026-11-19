@@ -1,0 +1,107 @@
+{
+  "id": "rule:carrying-capacity@2024",
+  "name": "Carrying Capacity",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your size and Strength score determine the maximum weight in pounds that you can carry, as shown in the table. The table also shows the maximum weight you can drag, lift, or push.\n\nWhile dragging, lifting, or pushing weight in excess of the maximum weight you can carry, your Speed can be no more than 5 feet.\n\n| Creature Size   | Carry          | Drag/Lift/Push   |\n|-----------------|----------------|------------------|\n| Tiny            | Str. × 7.5 lb. | Str. × 15 lb.    |\n| Small/Medium    | Str. × 15 lb.  | Str. × 30 lb.    |\n| Large           | Str. × 30 lb.  | Str. × 60 lb.    |\n| Huge            | Str. × 60 lb.  | Str. × 120 lb.   |\n| Gargantuan      | Str. × 120 lb. | Str. × 240 lb.   |",
+    "plain": "Your size and Strength score determine the maximum weight in pounds that you can carry, as shown in the table. The table also shows the maximum weight you can drag, lift, or push.\n\nWhile dragging, lifting, or pushing weight in excess of the maximum weight you can carry, your Speed can be no more than 5 feet.\n\nCreature Size\tCarry\tDrag/Lift/Push\nTiny\tStr. × 7.5 lb.\tStr. × 15 lb.\nSmall/Medium\tStr. × 15 lb.\tStr. × 30 lb.\nLarge\tStr. × 30 lb.\tStr. × 60 lb.\nHuge\tStr. × 60 lb.\tStr. × 120 lb.\nGargantuan\tStr. × 120 lb.\tStr. × 240 lb.",
+    "wording": "srd"
+  },
+  "group": "group:adventure",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "values": {
+    "push-drag-lift": {
+      "times": 2,
+      "by": "carryingCapacity"
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "carryingCapacity": {
+          "$base": {
+            "times": 15,
+            "by": "abilities.ability:str"
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "carryingCapacity": {
+          "$multiply": 0.5
+        }
+      },
+      "when": {
+        "match": {
+          "size": "size:tiny"
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "carryingCapacity": {
+          "$multiply": 2
+        }
+      },
+      "when": {
+        "match": {
+          "size": "size:large"
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "carryingCapacity": {
+          "$multiply": 4
+        }
+      },
+      "when": {
+        "match": {
+          "size": "size:huge"
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "carryingCapacity": {
+          "$multiply": 8
+        }
+      },
+      "when": {
+        "match": {
+          "size": "size:gargantuan"
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "$where": true,
+          "speed": {
+            "$atMost": 5
+          }
+        }
+      },
+      "when": {
+        "prose": {
+          "text": "moving weight over capacity",
+          "gap": {
+            "category": "test",
+            "name": "moving-weight-over-capacity"
+          }
+        }
+      }
+    }
+  ]
+}

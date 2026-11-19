@@ -1,0 +1,96 @@
+{
+  "id": "class:monk",
+  "name": "Monk",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a monk, you gain the following class features.",
+    "plain": "As a monk, you gain the following class features.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d8",
+  "multiclass": {
+    "requires": {
+      "all": [
+        {
+          "compare": "abilities.ability:dex",
+          "atLeast": 13
+        },
+        {
+          "compare": "abilities.ability:wis",
+          "atLeast": 13
+        }
+      ]
+    },
+    "features": [
+      "feature:monk/multiclass-proficiencies"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:monk/martial-arts",
+      "feature:monk/unarmored-defense"
+    ],
+    "10": [
+      "feature:monk/purity-of-body"
+    ],
+    "12": [
+      "feature:ability-score-improvement"
+    ],
+    "13": [
+      "feature:monk/tongue-of-the-sun-and-moon"
+    ],
+    "14": [
+      "feature:monk/diamond-soul"
+    ],
+    "15": [
+      "feature:monk/timeless-body"
+    ],
+    "16": [
+      "feature:ability-score-improvement"
+    ],
+    "18": [
+      "feature:monk/empty-body"
+    ],
+    "19": [
+      "feature:ability-score-improvement"
+    ],
+    "2": [
+      "feature:monk/ki",
+      "feature:monk/unarmored-movement"
+    ],
+    "20": [
+      "feature:monk/perfect-self"
+    ],
+    "3": [
+      "feature:monk/deflect-missiles",
+      "feature:monk/monastic-tradition"
+    ],
+    "4": [
+      "feature:ability-score-improvement",
+      "feature:monk/slow-fall"
+    ],
+    "5": [
+      "feature:monk/extra-attack",
+      "feature:monk/stunning-strike"
+    ],
+    "6": [
+      "feature:monk/ki-empowered-strikes"
+    ],
+    "7": [
+      "feature:monk/evasion",
+      "feature:monk/stillness-of-mind"
+    ],
+    "8": [
+      "feature:ability-score-improvement"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Monastic Tradition"
+  },
+  "firstClass": [
+    "feature:monk/proficiencies"
+  ]
+}

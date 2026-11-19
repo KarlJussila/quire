@@ -1,0 +1,75 @@
+{
+  "id": "creature:hippopotamus@2024",
+  "name": "Hippopotamus",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 14,
+  "hp": {
+    "average": 82,
+    "formula": "11d10 + 22"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:swim": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 4,
+    "ability:con": 15,
+    "ability:dex": 7,
+    "ability:int": 2,
+    "ability:str": 21,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:str": 7
+  },
+  "skills": {
+    "skill:perception": 3
+  },
+  "passivePerception": 13,
+  "xp": 1100,
+  "proficiencyBonus": 2,
+  "initiative": -2,
+  "cr": 4,
+  "blocks": [
+    {
+      "name": "Hold Breath",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hippopotamus can hold its breath for 10 minutes.",
+        "plain": "The hippopotamus can hold its breath for 10 minutes.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The hippopotamus makes two Bite attacks.",
+        "plain": "The hippopotamus makes two Bite attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 5 ft. _Hit:_ 16 (2d10 + 5) Piercing damage.",
+        "plain": "Melee Attack Roll: +7, reach 5 ft. Hit: 16 (2d10 + 5) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

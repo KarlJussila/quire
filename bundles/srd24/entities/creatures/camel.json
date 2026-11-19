@@ -1,0 +1,56 @@
+{
+  "id": "creature:camel@2024",
+  "name": "Camel",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 10,
+  "hp": {
+    "average": 17,
+    "formula": "2d10 + 6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 17,
+    "ability:dex": 8,
+    "ability:int": 2,
+    "ability:str": 15,
+    "ability:wis": 11
+  },
+  "saves": {
+    "ability:con": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 25,
+  "proficiencyBonus": 2,
+  "initiative": -1,
+  "cr": 0.125,
+  "blocks": [
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 4 (1d4 + 2) Bludgeoning damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

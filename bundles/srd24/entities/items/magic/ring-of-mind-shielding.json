@@ -1,0 +1,117 @@
+{
+  "id": "item:ring-of-mind-shielding@2024",
+  "name": "Ring of Mind Shielding",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this ring, you are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, know your alignment, or know your creature type. Creatures can telepathically communicate with you only if you allow it.\n\nYou can take a Magic action to cause the ring to become imperceptible until you take another Magic action to make it perceptible, until you remove the ring, or until you die.\n\nIf you die while wearing the ring, your soul enters it, unless it already houses a soul. You can remain in the ring or depart for the afterlife. As long as your soul is in the ring, you can telepathically communicate with any creature wearing it. A wearer can't prevent this telepathic communication.",
+    "plain": "While wearing this ring, you are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, know your alignment, or know your creature type. Creatures can telepathically communicate with you only if you allow it.\n\nYou can take a Magic action to cause the ring to become imperceptible until you take another Magic action to make it perceptible, until you remove the ring, or until you die.\n\nIf you die while wearing the ring, your soul enters it, unless it already houses a soul. You can remain in the ring or depart for the afterlife. As long as your soul is in the ring, you can telepathically communicate with any creature wearing it. A wearer can't prevent this telepathic communication.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "source-type:thought-reading",
+        "source-type:lie-detection",
+        "source-type:alignment-detection",
+        "source-type:creature-type-detection"
+      ],
+      "when": {
+        "all": [
+          {
+            "event": "event:taking-damage",
+            "subject": "self",
+            "match": {
+              "against": {
+                "sourceType": "source-type:magic"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "make-imperceptible",
+      "name": "Make Ring Imperceptible",
+      "action": "action:magic",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "state:ring-of-mind-shielding/imperceptible",
+            "source": "self"
+          },
+          "to": "this"
+        }
+      ]
+    },
+    {
+      "key": "make-perceptible",
+      "name": "Make Ring Perceptible",
+      "action": "action:magic",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "endState": {
+            "state": "state:ring-of-mind-shielding/imperceptible"
+          },
+          "to": "this"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "The schema has no operation for wearer-controlled telepathic communication."
+    },
+    {
+      "category": "item-state",
+      "name": "The ring cannot track whether it already houses a soul or a soul entering, remaining, communicating through, or departing from it."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "The 2024 term “imperceptible” is represented by the Invisible condition; the schema does not say whether nonvisual detection is also blocked."
+    },
+    {
+      "category": "content-dependency",
+      "name": "Other detection activities must declare the matching source types; the detection spell outcomes themselves remain unencoded."
+    }
+  ]
+}

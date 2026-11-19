@@ -1,0 +1,47 @@
+{
+  "id": "feature:sorcerer/proficiencies@2024",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Saving Throw Proficiencies: Constitution and Charisma\nSkill Proficiencies: Choose 2: Arcana, Deception, Insight, Intimidation, Persuasion, or Religion\nWeapon Proficiencies: Simple weapons\nArmor Training: None",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:con",
+        "ability:cha"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              "skill:arcana",
+              "skill:deception",
+              "skill:insight",
+              "skill:intimidation",
+              "skill:persuasion",
+              "skill:religion"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

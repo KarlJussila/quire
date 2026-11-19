@@ -1,0 +1,46 @@
+{
+  "id": "spell:stinking-cloud@2024",
+  "name": "Stinking Cloud",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You create a 20-foot-radius Sphere of yellow, nauseating gas centered on a point within range. The cloud is Heavily Obscured. The cloud lingers in the air for the duration or until a strong wind (such as the one created by Gust of Wind) disperses it.\n\nEach creature that starts its turn in the Sphere must succeed on a Constitution saving throw or have the Poisoned condition until the end of the current turn. While Poisoned in this way, the creature can't take an action or a Bonus Action.",
+    "plain": "You create a 20-foot-radius Sphere of yellow, nauseating gas centered on a point within range. The cloud is Heavily Obscured. The cloud lingers in the air for the duration or until a strong wind (such as the one created by Gust of Wind) disperses it.\n\nEach creature that starts its turn in the Sphere must succeed on a Constitution saving throw or have the Poisoned condition until the end of the current turn. While Poisoned in this way, the creature can't take an action or a Bonus Action.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:conjuration",
+  "lists": [
+    "class:bard",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a rotten egg"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 90
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

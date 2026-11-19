@@ -1,0 +1,147 @@
+{
+  "id": "item:javelin-of-lightning@2024",
+  "name": "Javelin of Lightning",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Each time you make an attack roll with this magic weapon and hit, you can have it deal Lightning damage instead of Piercing damage.\n\n_**Lightning Bolt.**_ When you throw this weapon at a target no farther than 120 feet from you, you can forgo making a ranged attack roll and instead turn the weapon into a bolt of lightning. This bolt forms a 5-foot-wide Line between you and the target. The target and each other creature in the Line (excluding you) makes a DC 13 Dexterity saving throw, taking 4d6 Lightning damage on a failed save or half as much damage on a successful one. Immediately after dealing this damage, the weapon reappears in your hand. This property can't be used again until the next dawn.",
+    "plain": "Each time you make an attack roll with this magic weapon and hit, you can have it deal Lightning damage instead of Piercing damage.\n\nLightning Bolt. When you throw this weapon at a target no farther than 120 feet from you, you can forgo making a ranged attack roll and instead turn the weapon into a bolt of lightning. This bolt forms a 5-foot-wide Line between you and the target. The target and each other creature in the Line (excluding you) makes a DC 13 Dexterity saving throw, taking 4d6 Lightning damage on a failed save or half as much damage on a successful one. Immediately after dealing this damage, the weapon reappears in your hand. This property can't be used again until the next dawn.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:uncommon",
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "attack": {
+                "item": "this",
+                "via": "weapon"
+              }
+            }
+          }
+        }
+      },
+      "variant": "lightning-damage",
+      "set": {
+        "outcomes": {
+          "$where": {
+            "damage": {
+              "type": "damage-type:piercing"
+            }
+          },
+          "damage": {
+            "type": "damage-type:lightning"
+          }
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "lightning-bolt",
+      "name": "Lightning Bolt",
+      "standalone": false,
+      "when": {
+        "event": "event:activity-used",
+        "by": "self",
+        "match": {
+          "attack": {
+            "item": "this",
+            "range": "ranged"
+          }
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:dawn"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "range": {
+        "distance": 120
+      },
+      "target": {
+        "count": 1
+      },
+      "outcomes": [
+        {
+          "then": {
+            "area": {
+              "shape": "area-shape:line",
+              "size": {
+                "prose": {
+                  "text": "the distance from you to the selected target, no farther than 120 feet",
+                  "gap": {
+                    "category": "movement",
+                    "name": "The line length is the distance between the wielder and the selected target, which no Value reads."
+                  }
+                }
+              },
+              "width": 5,
+              "origin": "self",
+              "affects": {
+                "prose": {
+                  "text": "the selected target and every other creature in the line, excluding you",
+                  "gap": {
+                    "category": "test",
+                    "name": "This line combines its selected target, which can be an object, with the other creatures along it."
+                  }
+                }
+              }
+            },
+            "delivery": {
+              "save": {
+                "ability": "ability:dex",
+                "dc": 13
+              }
+            },
+            "outcomes": [
+              {
+                "damage": {
+                  "amount": "4d6",
+                  "type": "damage-type:lightning"
+                }
+              }
+            ],
+            "otherwise": "half"
+          }
+        },
+        {
+          "prose": {
+            "text": "Immediately after dealing this damage, the javelin reappears in your hand.",
+            "gap": {
+              "category": "item-mechanics",
+              "name": "No outcome makes a thrown item held again."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "movement",
+      "name": "The line length is the distance between the wielder and the selected target, which no Value reads."
+    },
+    {
+      "category": "test",
+      "name": "The line combines the selected target with its other creature recipients."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "The javelin reappears in your hand immediately after the line deals its damage."
+    }
+  ],
+  "base": "item:javelin"
+}

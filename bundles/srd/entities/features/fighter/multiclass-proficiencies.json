@@ -1,0 +1,23 @@
+{
+  "id": "feature:fighter/multiclass-proficiencies",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Proficiencies Gained: Light armor, medium armor, shields, simple weapons, martial weapons",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor",
+        "group:medium-armor",
+        "group:shield",
+        "group:simple-weapon",
+        "group:martial-weapon"
+      ]
+    }
+  ]
+}

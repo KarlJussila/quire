@@ -1,0 +1,43 @@
+{
+  "id": "feature:archery",
+  "name": "Archery",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You gain a +2 bonus to attack rolls you make with ranged weapons.",
+    "plain": "You gain a +2 bonus to attack rolls you make with ranged weapons.",
+    "wording": "srd"
+  },
+  "group": "group:fighting-style",
+  "availableTo": [
+    "class:fighter",
+    "class:ranger"
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": {
+              "kind": "item",
+              "where": {
+                "group": "group:ranged-weapon"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

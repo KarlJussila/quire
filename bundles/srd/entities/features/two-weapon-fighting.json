@@ -1,0 +1,40 @@
+{
+  "id": "feature:two-weapon-fighting",
+  "name": "Two-Weapon Fighting",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.",
+    "plain": "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.",
+    "wording": "srd"
+  },
+  "group": "group:fighting-style",
+  "availableTo": [
+    "class:fighter",
+    "class:ranger"
+  ],
+  "gaps": [],
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "rule",
+        "where": {
+          "is": "rule:two-weapon-fighting"
+        }
+      },
+      "set": {
+        "activities": {
+          "extra-attack": {
+            "effects": {
+              "$remove": {
+                "key": "omit-positive-ability"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

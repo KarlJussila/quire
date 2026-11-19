@@ -1,0 +1,71 @@
+{
+  "id": "creature:owlbear@2024",
+  "name": "Owlbear",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "hp": {
+    "average": 59,
+    "formula": "7d10 + 21"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:climb": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 17,
+    "ability:dex": 12,
+    "ability:int": 3,
+    "ability:str": 20,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 15,
+  "xp": 700,
+  "proficiencyBonus": 2,
+  "initiative": 1,
+  "habitat": [
+    "Forest"
+  ],
+  "cr": 3,
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The owlbear makes two Rend attacks.",
+        "plain": "The owlbear makes two Rend attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 5 ft. _Hit:_ 14 (2d8 + 5) Slashing damage.",
+        "plain": "Melee Attack Roll: +7, reach 5 ft. Hit: 14 (2d8 + 5) Slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "state:raging@2024",
+  "name": "Raging",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "While active, your Rage follows the rules below.\n\nDamage Resistance. You have Resistance to Bludgeoning, Piercing, and Slashing damage.\n\nRage Damage. When you make an attack using Strength — with either a weapon or an Unarmed Strike — and deal damage to the target, you gain a bonus to the damage that increases as you gain levels as a Barbarian, as shown in the Rage Damage column of the Barbarian Features table.\n\nStrength Advantage. You have Advantage on Strength checks and Strength saving throws.\n\nNo Concentration or Spells. You can't maintain Concentration, and you can't cast spells.\n\nDuration. The Rage lasts until the end of your next turn, and it ends early if you don Heavy armor or have the Incapacitated condition. If your Rage is still active on your next turn, you can extend the Rage for another round by doing one of the following:\n\n- Make an attack roll against an enemy.\n- Force an enemy to make a saving throw.\n- Take a Bonus Action to extend your Rage.\n\nEach time the Rage is extended, it lasts until the end of your next turn. You can maintain a Rage for up to 10 minutes.",
+    "formatted": "While active, your Rage follows the rules below.\n\n_**Damage Resistance.**_ You have Resistance to Bludgeoning, Piercing, and Slashing damage.\n\n_**Rage Damage.**_ When you make an attack using Strength — with either a weapon or an Unarmed Strike — and deal damage to the target, you gain a bonus to the damage that increases as you gain levels as a Barbarian, as shown in the Rage Damage column of the Barbarian Features table.\n\n_**Strength Advantage.**_ You have Advantage on Strength checks and Strength saving throws.\n\n_**No Concentration or Spells.**_ You can't maintain Concentration, and you can't cast spells.\n\n_**Duration.**_ The Rage lasts until the end of your next turn, and it ends early if you don Heavy armor or have the Incapacitated condition. If your Rage is still active on your next turn, you can extend the Rage for another round by doing one of the following:\n\n- Make an attack roll against an enemy.\n- Force an enemy to make a saving throw.\n- Take a Bonus Action to extend your Rage.\n\nEach time the Rage is extended, it lasts until the end of your next turn. You can maintain a Rage for up to 10 minutes.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ]
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": {
+            "byLevel": {
+              "1": 2,
+              "9": 3,
+              "16": 4
+            },
+            "of": "class:barbarian"
+          }
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage",
+          "attack": {
+            "ability": "ability:str"
+          }
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": [
+            "roll:check",
+            "roll:save"
+          ],
+          "ability": "ability:str"
+        }
+      }
+    },
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:cast-spells",
+        "restriction:concentrate"
+      ]
+    }
+  ],
+  "duration": {
+    "amount": 10,
+    "unit": "minute"
+  },
+  "ends": [
+    {
+      "event": "event:state-applied",
+      "subject": "self",
+      "match": {
+        "state": "condition:incapacitated"
+      }
+    },
+    {
+      "event": "event:item-equipped",
+      "subject": "self",
+      "match": {
+        "item": "group:heavy-armor"
+      }
+    }
+  ],
+  "stacks": "no",
+  "activities": [
+    {
+      "key": "extend-rage",
+      "name": "Extend Rage",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Extend your Rage until the end of your next turn. It also extends if you make an attack roll against an enemy or force an enemy to make a saving throw on your turn; otherwise it ends at the end of your turn. It also ends if you don Heavy armor.",
+            "gap": {
+              "category": "state",
+              "name": "rage extension"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

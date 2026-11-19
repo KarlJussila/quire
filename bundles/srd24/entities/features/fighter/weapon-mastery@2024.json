@@ -1,0 +1,86 @@
+{
+  "id": "feature:fighter/weapon-mastery@2024",
+  "name": "Level 1: Weapon Mastery",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your training with weapons allows you to use the mastery properties of three kinds of Simple or Martial weapons of your choice. Whenever you finish a Long Rest, you can practice weapon drills and change one of those weapon choices.\n\nWhen you reach certain Fighter levels, you gain the ability to use the mastery properties of more kinds of weapons, as shown in the Weapon Mastery column of the Fighter Features table.",
+    "plain": "Your training with weapons allows you to use the mastery properties of three kinds of Simple or Martial weapons of your choice. Whenever you finish a Long Rest, you can practice weapon drills and change one of those weapon choices.\n\nWhen you reach certain Fighter levels, you gain the ability to use the mastery properties of more kinds of weapons, as shown in the Weapon Mastery column of the Fighter Features table.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "masteries": {
+          "$at": {
+            "choose": {
+              "key": "mastery",
+              "name": "Weapon Mastery",
+              "count": {
+                "byLevel": {
+                  "1": 3,
+                  "4": 4,
+                  "10": 5,
+                  "16": 6
+                },
+                "of": "class:fighter"
+              },
+              "distinct": true,
+              "from": [
+                {
+                  "kind": "item",
+                  "where": {
+                    "all": [
+                      {
+                        "match": {
+                          "weapon": {
+                            "mastery": true
+                          }
+                        }
+                      },
+                      {
+                        "group": [
+                          "group:simple-weapon",
+                          "group:martial-weapon"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "$replace": true
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-mastery",
+      "name": "Change a Mastered Weapon",
+      "trigger": {
+        "event": "event:rest-finished",
+        "match": {
+          "rest": "rest:long"
+        },
+        "subject": "self"
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "mastery"
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "What each mastery property does in play is still text on the property."
+    }
+  ]
+}

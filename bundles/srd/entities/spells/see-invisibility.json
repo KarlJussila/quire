@@ -1,0 +1,44 @@
+{
+  "id": "spell:see-invisibility",
+  "name": "See Invisibility",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "For the duration, you see Invisible creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.",
+    "plain": "For the duration, you see Invisible creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:bard",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "A pinch of Talc and a small sprinkling of powdered silver"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour"
+      }
+    }
+  ]
+}

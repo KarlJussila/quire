@@ -1,0 +1,127 @@
+{
+  "id": "creature:wraith@2024",
+  "name": "Wraith",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:neutral-evil",
+  "ac": 13,
+  "hp": {
+    "average": 67,
+    "formula": "9d8 + 27"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 5
+    },
+    "movement-mode:fly": {
+      "speed": 60,
+      "hover": true
+    }
+  },
+  "abilities": {
+    "ability:cha": 15,
+    "ability:con": 16,
+    "ability:dex": 16,
+    "ability:int": 12,
+    "ability:str": 6,
+    "ability:wis": 14
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 12,
+  "xp": 1800,
+  "proficiencyBonus": 3,
+  "initiative": 3,
+  "habitat": [
+    "Planar (Shadowfell)",
+    "Underdark"
+  ],
+  "cr": 5,
+  "languages": [
+    {
+      "text": "Common plus two other languages"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:necrotic",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:acid",
+        "damage-type:bludgeoning",
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:exhaustion",
+        "condition:grappled",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:poisoned",
+        "condition:prone",
+        "condition:restrained",
+        "condition:unconscious"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Incorporeal Movement",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The wraith can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.",
+        "plain": "The wraith can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sunlight Sensitivity",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While in sunlight, the wraith has Disadvantage on ability checks and attack rolls.",
+        "plain": "While in sunlight, the wraith has Disadvantage on ability checks and attack rolls.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Life Drain",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 5 ft. _Hit:_ 21 (4d8 + 3) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken.",
+        "plain": "Melee Attack Roll: +6, reach 5 ft. Hit: 21 (4d8 + 3) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Create Specter",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The wraith targets a Humanoid corpse within 10 feet of itself that has been dead for no longer than 1 minute. The target's spirit rises as a **Specter** in the space of its corpse or in the nearest unoccupied space. The specter is under the wraith's control. The wraith can have no more than seven specters under its control at a time.",
+        "plain": "The wraith targets a Humanoid corpse within 10 feet of itself that has been dead for no longer than 1 minute. The target's spirit rises as a Specter in the space of its corpse or in the nearest unoccupied space. The specter is under the wraith's control. The wraith can have no more than seven specters under its control at a time.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

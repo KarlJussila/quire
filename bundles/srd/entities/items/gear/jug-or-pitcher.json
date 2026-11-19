@@ -1,0 +1,17 @@
+{
+  "id": "item:jug-or-pitcher",
+  "name": "Jug or Pitcher",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:cp"
+  },
+  "weight": 4.0
+}

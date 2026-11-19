@@ -1,0 +1,11 @@
+{
+  "id": "feature:favored-terrain/desert",
+  "name": "Desert",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "You have Desert as a favored terrain. While traveling in it you gain the benefits described under your Natural Explorer feature.",
+    "wording": "original"
+  }
+}

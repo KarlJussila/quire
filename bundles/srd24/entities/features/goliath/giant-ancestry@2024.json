@@ -1,0 +1,29 @@
+{
+  "id": "feature:goliath/giant-ancestry@2024",
+  "name": "Giant Ancestry",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You are descended from Giants. Choose one of the following benefits — a supernatural boon from your ancestry; you can use the chosen benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest:",
+    "plain": "You are descended from Giants. Choose one of the following benefits — a supernatural boon from your ancestry; you can use the chosen benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest:",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "ancestry",
+        "name": "Giant Ancestry",
+        "count": 1,
+        "from": [
+          "feature:goliath/clouds-jaunt-cloud-giant@2024",
+          "feature:goliath/fires-burn-fire-giant@2024",
+          "feature:goliath/frosts-chill-frost-giant@2024",
+          "feature:goliath/hills-tumble-hill-giant@2024",
+          "feature:goliath/stones-endurance-stone-giant@2024",
+          "feature:goliath/storms-thunder-storm-giant@2024"
+        ]
+      }
+    }
+  ]
+}

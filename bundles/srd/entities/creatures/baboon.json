@@ -1,0 +1,58 @@
+{
+  "id": "creature:baboon",
+  "name": "Baboon",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "hp": {
+    "average": 3,
+    "formula": "1d6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:climb": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 11,
+    "ability:dex": 14,
+    "ability:int": 4,
+    "ability:str": 8,
+    "ability:wis": 12
+  },
+  "passivePerception": 11,
+  "xp": 10,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Pack Tactics",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The baboon has advantage on an attack roll against a creature if at least one of the baboon's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "plain": "The baboon has advantage on an attack roll against a creature if at least one of the baboon's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +1 to hit, reach 5 ft., one target. _Hit:_ 1 (1d4 - 1) piercing damage.",
+        "plain": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

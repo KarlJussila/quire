@@ -1,0 +1,36 @@
+{
+  "id": "spell:counterspell@2024",
+  "name": "Counterspell",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You attempt to interrupt a creature in the process of casting a spell. The creature makes a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended.",
+    "plain": "You attempt to interrupt a creature in the process of casting a spell. The creature makes a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

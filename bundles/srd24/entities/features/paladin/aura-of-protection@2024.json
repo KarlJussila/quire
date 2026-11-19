@@ -1,0 +1,62 @@
+{
+  "id": "feature:paladin/aura-of-protection@2024",
+  "name": "Level 6: Aura of Protection",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You radiate a protective, unseeable aura in a 10-foot Emanation that originates from you. The aura is inactive while you have the Incapacitated condition.\n\nYou and your allies in the aura gain a bonus to saving throws equal to your Charisma modifier (minimum bonus of +1).\n\nIf another Paladin is present, a creature can benefit from only one Aura of Protection at a time; the creature chooses which aura while in them.",
+    "plain": "You radiate a protective, unseeable aura in a 10-foot Emanation that originates from you. The aura is inactive while you have the Incapacitated condition.\n\nYou and your allies in the aura gain a bonus to saving throws equal to your Charisma modifier (minimum bonus of +1).\n\nIf another Paladin is present, a creature can benefit from only one Aura of Protection at a time; the creature chooses which aura while in them.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "zone",
+      "zone": {
+        "anchor": "self",
+        "area": {
+          "shape": "area-shape:emanation",
+          "size": {
+            "byLevel": {
+              "6": 10,
+              "18": 30
+            },
+            "of": "class:paladin"
+          }
+        },
+        "affects": {
+          "pool": "ally",
+          "includeSelf": true
+        },
+        "effects": [
+          {
+            "type": "change",
+            "of": "event",
+            "set": {
+              "total": {
+                "$add": {
+                  "max": [
+                    1,
+                    "source.modifiers.ability:cha"
+                  ]
+                }
+              }
+            },
+            "when": {
+              "event": "event:roll-made",
+              "by": "self",
+              "match": {
+                "roll": "roll:save"
+              }
+            }
+          }
+        ]
+      },
+      "when": {
+        "not": {
+          "has": "condition:incapacitated"
+        }
+      }
+    }
+  ]
+}

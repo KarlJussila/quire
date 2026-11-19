@@ -1,0 +1,19 @@
+{
+  "id": "feature:warlock/eyes-of-the-rune-keeper",
+  "name": "Eyes of the Rune Keeper",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can read all writing.",
+    "plain": "You can read all writing.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "gaps": [
+    {
+      "category": "language",
+      "name": "Read all writing without granting the ability to speak or understand every language."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "feature:ranger/hunter/hunters-prey",
+  "name": "Hunter’s Prey",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 3rd level, you gain one of the following features of your choice.\n\n_**Colossus Slayer.**_ Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it's below its hit point maximum. You can deal this extra damage only once per turn.\n\n_**Giant Killer.**_ When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.\n\n_**Horde Breaker.**_ Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon.",
+    "plain": "At 3rd level, you gain one of the following features of your choice.\n\nColossus Slayer. Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it's below its hit point maximum. You can deal this extra damage only once per turn.\n\nGiant Killer. When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.\n\nHorde Breaker. Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "giant-killer",
+      "name": "Giant Killer",
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 3
+      },
+      "trigger": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "within": 5,
+                "of": "self"
+              },
+              {
+                "match": {
+                  "size": {
+                    "atLeast": "size:large"
+                  }
+                }
+              },
+              {
+                "perceives": {
+                  "sense": "sight",
+                  "of": "self"
+                }
+              }
+            ]
+          }
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      },
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Immediately after its attack, make one attack with your weapon against that creature.",
+            "gap": {
+              "category": "attack",
+              "name": "attack right after the Large creature's attack"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "horde-breaker",
+      "name": "Horde Breaker",
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 3
+      },
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "via": "weapon"
+          }
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Make another attack with the same weapon against a different creature within 5 feet of the original target and within your weapon's range.",
+            "gap": {
+              "category": "attack",
+              "name": "second attack on a different creature"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

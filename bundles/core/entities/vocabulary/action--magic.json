@@ -1,0 +1,7 @@
+{
+  "id": "action:magic",
+  "name": "Magic",
+  "source": {
+    "book": "core"
+  }
+}

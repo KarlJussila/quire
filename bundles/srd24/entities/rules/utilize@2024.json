@@ -1,0 +1,36 @@
+{
+  "id": "rule:utilize@2024",
+  "name": "Utilize",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You normally interact with an object while doing something else, such as when you draw a sword as part of the Attack action. When an object requires an action for its use, you take the Utilize action.",
+    "plain": "You normally interact with an object while doing something else, such as when you draw a sword as part of the Attack action. When an object requires an action for its use, you take the Utilize action.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "second-interaction",
+      "action": "action:utilize",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "pool": {
+            "resource": "object-interaction",
+            "add": 1
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

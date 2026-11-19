@@ -1,0 +1,18 @@
+{
+  "id": "item:potion-of-healing@2024",
+  "name": "Potion of Healing",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 50 GP\n\nThis potion is a magic item. As a Bonus Action, you can drink it or administer it to another creature within 5 feet of yourself. The creature that drinks the magical red fluid in this vial regains 2d4 + 2 Hit Points.",
+    "plain": "Cost: 50 GP\n\nThis potion is a magic item. As a Bonus Action, you can drink it or administer it to another creature within 5 feet of yourself. The creature that drinks the magical red fluid in this vial regains 2d4 + 2 Hit Points.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 50,
+    "currency": "currency:gp"
+  },
+  "weight": 0.5
+}

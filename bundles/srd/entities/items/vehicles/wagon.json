@@ -1,0 +1,17 @@
+{
+  "id": "item:wagon",
+  "name": "Wagon",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:vehicle",
+  "cost": {
+    "amount": 35,
+    "currency": "currency:gp"
+  },
+  "weight": 400.0
+}

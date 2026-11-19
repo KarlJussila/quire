@@ -1,0 +1,40 @@
+{
+  "id": "spell:lightning-bolt@2024",
+  "name": "Lightning Bolt",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A stroke of lightning forming a 100-foot-long, 5-foot-wide Line blasts out from you in a direction you choose. Each creature in the Line makes a Dexterity saving throw, taking 8d6 Lightning damage on a failed save or half as much damage on a successful one.\n\n_**Using a Higher-Level Spell Slot.**_ The damage increases by 1d6 for each spell slot level above 3.",
+    "plain": "A stroke of lightning forming a 100-foot-long, 5-foot-wide Line blasts out from you in a direction you choose. Each creature in the Line makes a Dexterity saving throw, taking 8d6 Lightning damage on a failed save or half as much damage on a successful one.\n\nUsing a Higher-Level Spell Slot. The damage increases by 1d6 for each spell slot level above 3.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:evocation",
+  "lists": [
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a bit of fur and a crystal rod"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

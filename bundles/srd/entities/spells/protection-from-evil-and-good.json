@@ -1,0 +1,47 @@
+{
+  "id": "spell:protection-from-evil-and-good",
+  "name": "Protection from Evil and Good",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead.\n\nThe protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can't be Charmed, Frightened, or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect.",
+    "plain": "Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead.\n\nThe protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can't be Charmed, Frightened, or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:cleric",
+    "class:paladin",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "holy water or powdered silver and iron, which the spell consumes"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 10,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

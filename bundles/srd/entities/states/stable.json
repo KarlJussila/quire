@@ -1,0 +1,49 @@
+{
+  "id": "state:stable",
+  "name": "Stable",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A **stable** creature doesn't make death saving throws, even though it has 0 hit points, but it does remain Unconscious. The creature stops being stable, and must start making death saving throws again, if it takes any damage. A stable creature that isn't healed regains 1 hit point after 1d4 hours.",
+    "plain": "A stable creature doesn't make death saving throws, even though it has 0 hit points, but it does remain Unconscious. The creature stops being stable, and must start making death saving throws again, if it takes any damage. A stable creature that isn't healed regains 1 hit point after 1d4 hours.",
+    "wording": "srd"
+  },
+  "ends": [
+    {
+      "event": "event:damaged",
+      "subject": "self"
+    }
+  ],
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:time-elapsed",
+          "subject": "self",
+          "every": {
+            "amount": "1d4",
+            "unit": "hour"
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "heal": {
+              "amount": 1
+            },
+            "to": "self"
+          },
+          {
+            "endState": {
+              "state": "state:stable"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

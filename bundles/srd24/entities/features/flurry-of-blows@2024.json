@@ -1,0 +1,12 @@
+{
+  "id": "feature:flurry-of-blows@2024",
+  "name": "Flurry of Blows",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can expend 1 Focus Point to make two Unarmed Strikes as a Bonus Action.",
+    "plain": "You can expend 1 Focus Point to make two Unarmed Strikes as a Bonus Action.",
+    "wording": "srd"
+  }
+}

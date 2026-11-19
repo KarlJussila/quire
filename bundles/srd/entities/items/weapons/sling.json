@@ -1,0 +1,30 @@
+{
+  "id": "item:sling",
+  "name": "Sling",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:simple-ranged-weapon",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:sp"
+  },
+  "weight": 0.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:ammunition"
+    ],
+    "damage": {
+      "amount": "1d4",
+      "type": "damage-type:bludgeoning"
+    },
+    "range": {
+      "long": 120,
+      "normal": 30
+    }
+  }
+}

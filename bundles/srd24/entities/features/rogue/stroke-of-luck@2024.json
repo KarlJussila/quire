@@ -1,0 +1,50 @@
+{
+  "id": "feature:rogue/stroke-of-luck@2024",
+  "name": "Level 20: Stroke of Luck",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have a marvelous knack for succeeding when you need to. If you fail a D20 Test, you can turn the roll into a 20.\n\nOnce you use this feature, you can't use it again until you finish a Short or Long Rest.",
+    "plain": "You have a marvelous knack for succeeding when you need to. If you fail a D20 Test, you can turn the roll into a 20.\n\nOnce you use this feature, you can't use it again until you finish a Short or Long Rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "stroke-of-luck",
+      "name": "Stroke of Luck",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:d20-test",
+          "success": false
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:short"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "intercept": {
+            "set": {
+              "$replace": 20
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

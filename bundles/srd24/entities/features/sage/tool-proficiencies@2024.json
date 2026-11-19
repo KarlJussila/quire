@@ -1,0 +1,19 @@
+{
+  "id": "feature:sage/tool-proficiencies@2024",
+  "name": "Tool Proficiency",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Tool Proficiency: Calligrapher's Supplies",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "item:calligraphers-supplies"
+      ]
+    }
+  ]
+}

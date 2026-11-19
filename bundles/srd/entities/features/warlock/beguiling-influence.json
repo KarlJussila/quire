@@ -1,0 +1,22 @@
+{
+  "id": "feature:warlock/beguiling-influence",
+  "name": "Beguiling Influence",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You gain proficiency in the Deception and Persuasion skills.",
+    "plain": "You gain proficiency in the Deception and Persuasion skills.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "skill:deception",
+        "skill:persuasion"
+      ]
+    }
+  ]
+}

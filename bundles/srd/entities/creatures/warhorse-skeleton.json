@@ -1,0 +1,75 @@
+{
+  "id": "creature:warhorse-skeleton",
+  "name": "Warhorse Skeleton",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:lawful-evil",
+  "ac": 13,
+  "acFrom": [
+    "barding scraps"
+  ],
+  "hp": {
+    "average": 22,
+    "formula": "3d10 + 6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 15,
+    "ability:dex": 12,
+    "ability:int": 2,
+    "ability:str": 18,
+    "ability:wis": 8
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 9,
+  "xp": 100,
+  "cr": 0.5,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "vulnerable": [
+        "damage-type:bludgeoning"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:exhaustion",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Hooves",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 11 (2d6 + 4) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

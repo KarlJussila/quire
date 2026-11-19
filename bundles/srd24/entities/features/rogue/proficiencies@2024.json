@@ -1,0 +1,83 @@
+{
+  "id": "feature:rogue/proficiencies@2024",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Saving Throw Proficiencies: Dexterity and Intelligence\nSkill Proficiencies: Choose 4: Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight of Hand, or Stealth\nWeapon Proficiencies: Simple weapons and Martial weapons that have the Finesse or Light property\nTool Proficiencies: Thieves' Tools\nArmor Training: Light armor",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:dex",
+        "ability:int"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon",
+        {
+          "kind": "item",
+          "where": {
+            "all": [
+              {
+                "group": "group:martial-weapon"
+              },
+              {
+                "match": {
+                  "weapon": {
+                    "properties": [
+                      "weapon-property:finesse",
+                      "weapon-property:light"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "item:thieves-tools"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 4,
+            "distinct": true,
+            "from": [
+              "skill:acrobatics",
+              "skill:athletics",
+              "skill:deception",
+              "skill:insight",
+              "skill:intimidation",
+              "skill:investigation",
+              "skill:perception",
+              "skill:persuasion",
+              "skill:sleight-of-hand",
+              "skill:stealth"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

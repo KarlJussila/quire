@@ -1,0 +1,127 @@
+{
+  "id": "creature:rakshasa@2024",
+  "name": "Rakshasa",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 17,
+  "hp": {
+    "average": 221,
+    "formula": "26d8 + 104"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 20,
+    "ability:con": 18,
+    "ability:dex": 17,
+    "ability:int": 13,
+    "ability:str": 14,
+    "ability:wis": 16
+  },
+  "skills": {
+    "skill:deception": 10,
+    "skill:insight": 8,
+    "skill:perception": 8
+  },
+  "senses": {
+    "sense:truesight": {
+      "range": 60
+    }
+  },
+  "passivePerception": 18,
+  "xp": 10000,
+  "proficiencyBonus": 5,
+  "initiative": 8,
+  "habitat": [
+    "Planar (Nine Hells)",
+    "Urban"
+  ],
+  "treasure": [
+    "Relics"
+  ],
+  "cr": 13,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Greater Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The rakshasa automatically succeeds on saving throws against spells and other magical effects, and the attack rolls of spells automatically miss it. Without the rakshasa's permission, no spell can observe the rakshasa remotely or detect its thoughts, creature type, or alignment.",
+        "plain": "The rakshasa automatically succeeds on saving throws against spells and other magical effects, and the attack rolls of spells automatically miss it. Without the rakshasa's permission, no spell can observe the rakshasa remotely or detect its thoughts, creature type, or alignment.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fiendish Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the rakshasa dies outside the Nine Hells, its body turns to ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+        "plain": "If the rakshasa dies outside the Nine Hells, its body turns to ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The rakshasa makes three Cursed Touch attacks.",
+        "plain": "The rakshasa makes three Cursed Touch attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Cursed Touch",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +10, reach 5 ft. _Hit:_ 12 (2d6 + 5) Slashing damage plus 19 (3d12) Necrotic damage. If the target is a creature, it is cursed. While cursed, the target gains no benefit from finishing a Short or Long Rest.",
+        "plain": "Melee Attack Roll: +10, reach 5 ft. Hit: 12 (2d6 + 5) Slashing damage plus 19 (3d12) Necrotic damage. If the target is a creature, it is cursed. While cursed, the target gains no benefit from finishing a Short or Long Rest.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Baleful Command",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Wisdom Saving Throw:_ DC 18, each enemy in a 30-foot Emanation originating from the rakshasa. _Failure:_ 28 (8d6) Psychic damage, and the target has the Frightened and Incapacitated conditions until the start of the rakshasa's next turn.",
+        "plain": "Wisdom Saving Throw: DC 18, each enemy in a 30-foot Emanation originating from the rakshasa. Failure: 28 (8d6) Psychic damage, and the target has the Frightened and Incapacitated conditions until the start of the rakshasa's next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The rakshasa casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 18):\n\n- **At Will:** Detect Magic, Detect Thoughts, Disguise Self, Mage Hand, Minor Illusion\n- **1/Day Each:** Fly, Invisibility, Major Image, Plane Shift",
+        "plain": "The rakshasa casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 18):\n\n- At Will: Detect Magic, Detect Thoughts, Disguise Self, Mage Hand, Minor Illusion\n- 1/Day Each: Fly, Invisibility, Major Image, Plane Shift",
+        "wording": "srd"
+      }
+    }
+  ]
+}

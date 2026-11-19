@@ -1,0 +1,11 @@
+{
+  "id": "feature:humans",
+  "name": "Humans",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

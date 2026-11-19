@@ -1,0 +1,58 @@
+{
+  "id": "feature:ranger/proficiencies",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Armor: Light armor, medium armor, shields\nWeapons: Simple weapons, martial weapons\nTools: None\nSaving Throws: Strength, Dexterity\nSkills: Choose three from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, and Survival",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:str",
+        "ability:dex"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor",
+        "group:medium-armor",
+        "group:shield"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon",
+        "group:martial-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 3,
+            "distinct": true,
+            "from": [
+              "skill:animal-handling",
+              "skill:athletics",
+              "skill:insight",
+              "skill:investigation",
+              "skill:nature",
+              "skill:perception",
+              "skill:stealth",
+              "skill:survival"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

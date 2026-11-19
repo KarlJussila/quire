@@ -1,0 +1,60 @@
+{
+  "abilities": {
+    "ability:str": 19,
+    "ability:dex": 15,
+    "ability:con": 13,
+    "ability:int": 8,
+    "ability:wis": 12,
+    "ability:cha": 10
+  },
+  "proficiencyBonus": 3,
+  "hp.max": 39,
+  "ac": 19,
+  "saves": {
+    "ability:str": 7,
+    "ability:dex": 2,
+    "ability:con": 4,
+    "ability:int": -1,
+    "ability:wis": 1,
+    "ability:cha": 0
+  },
+  "skills": {
+    "skill:acrobatics": 5,
+    "skill:animal-handling": 1,
+    "skill:arcana": -1,
+    "skill:athletics": 7,
+    "skill:deception": 0,
+    "skill:history": -1,
+    "skill:insight": 1,
+    "skill:intimidation": 3,
+    "skill:investigation": -1,
+    "skill:medicine": 1,
+    "skill:nature": -1,
+    "skill:perception": 4,
+    "skill:performance": 0,
+    "skill:persuasion": 0,
+    "skill:religion": -1,
+    "skill:sleight-of-hand": 2,
+    "skill:stealth": 2,
+    "skill:survival": 1
+  },
+  "initiative": 2,
+  "pools": {
+    "second-wind": 3,
+    "action-surge": 1
+  },
+  "attacks": {
+    "Longsword: Attack": "+7, 1d8+4 slashing",
+    "Longsword: Attack (Versatile)": "+7, 1d10+4 slashing",
+    "Unarmed Strike: Damage": "+7, 1+4 bludgeoning"
+  },
+  "why": [
+    "Final abilities: Standard Array (PHB ch. 2, Standard Array), Soldier increases Strength by 2 and Dexterity by 1 (ch. 4, Soldier), and the level 4 Ability Score Improvement increases Strength by 2 (ch. 3, Fighter level 4 and ch. 5, Ability Score Improvement).",
+    "Proficiency bonus +3 and Second Wind's 3 uses at level 5: Fighter Features table (ch. 3). Action Surge has one use, recovering on a Short or Long Rest (ch. 3, Fighter level 2).",
+    "HP 39: Fighter Hit Die is d10; first level gives 10, later levels use fixed 6 each, and Constitution modifier +1 applies at all five levels (ch. 3, Fighter Core Traits; ch. 2, Hit Points).",
+    "AC 19: Chain Mail AC 16, trained Shield +2, and Defense fighting style +1 while wearing armor (ch. 6, Armor and Shields; ch. 5, Defense).",
+    "Saving throws use Strength and Constitution proficiency (Fighter Core Traits, ch. 3); skill bonuses use the abilities, +3 proficiency, Soldier's Athletics and Intimidation, and Fighter-selected Acrobatics and Perception (ch. 3, Fighter Core Traits; ch. 4, Soldier).",
+    "Initiative equals Dexterity modifier +2 (ch. 1, Initiative).",
+    "Attacks: the ability modifier (Strength for melee, Dexterity for ranged, either for Finesse) plus the Proficiency Bonus with a weapon the class is trained in; damage adds the same modifier. Checked by hand against the weapon table and each class's weapon training."
+  ]
+}

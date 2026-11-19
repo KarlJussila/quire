@@ -1,0 +1,82 @@
+{
+  "id": "feature:paladin/channel-divinity@2024",
+  "name": "Level 3: Channel Divinity",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can channel divine energy directly from the Outer Planes, using it to fuel magical effects. You start with one such effect: Divine Sense, which is described below. Other Paladin features give additional Channel Divinity effect options. Each time you use this class's Channel Divinity, you choose which effect from this class to create.\n\nYou can use this class's Channel Divinity twice. You regain one of its expended uses when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest. You gain an additional use when you reach Paladin level 11.\n\nIf a Channel Divinity effect requires a saving throw, the DC equals the spell save DC from this class's Spellcasting feature.\n\n_**Divine Sense.**_ As a Bonus Action, you can open your awareness to detect Celestials, Fiends, and Undead. For the next 10 minutes or until you have the Incapacitated condition, you know the location of any creature of those types within 60 feet of yourself, and you know its creature type. Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the Hallow spell.",
+    "plain": "You can channel divine energy directly from the Outer Planes, using it to fuel magical effects. You start with one such effect: Divine Sense, which is described below. Other Paladin features give additional Channel Divinity effect options. Each time you use this class's Channel Divinity, you choose which effect from this class to create.\n\nYou can use this class's Channel Divinity twice. You regain one of its expended uses when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest. You gain an additional use when you reach Paladin level 11.\n\nIf a Channel Divinity effect requires a saving throw, the DC equals the spell save DC from this class's Spellcasting feature.\n\nDivine Sense. As a Bonus Action, you can open your awareness to detect Celestials, Fiends, and Undead. For the next 10 minutes or until you have the Incapacitated condition, you know the location of any creature of those types within 60 feet of yourself, and you know its creature type. Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the Hallow spell.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "divine-sense",
+      "name": "Divine Sense",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 3
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "channel-divinity"
+        }
+      ],
+      "duration": {
+        "amount": 10,
+        "unit": "minute"
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Until you have the Incapacitated condition, you know the location and creature type of any Celestial, Fiend, or Undead within 60 feet of you, and you detect any place or object consecrated or desecrated within the same radius.",
+            "gap": {
+              "category": "state",
+              "name": "sense Celestials, Fiends, and Undead"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "resource",
+      "key": "channel-divinity",
+      "max": {
+        "byLevel": {
+          "3": 2,
+          "11": 3
+        },
+        "of": "class:paladin"
+      },
+      "dc": "spellcasting.class:paladin.dc",
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:short"
+            },
+            "subject": "self"
+          },
+          "amount": 1
+        },
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ]
+}

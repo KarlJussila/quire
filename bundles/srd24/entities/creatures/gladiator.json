@@ -1,0 +1,102 @@
+{
+  "id": "creature:gladiator@2024",
+  "name": "Gladiator",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 16,
+  "hp": {
+    "average": 112,
+    "formula": "15d8 + 45"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 15,
+    "ability:con": 16,
+    "ability:dex": 15,
+    "ability:int": 10,
+    "ability:str": 18,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:con": 6,
+    "ability:dex": 5,
+    "ability:str": 7,
+    "ability:wis": 4
+  },
+  "skills": {
+    "skill:athletics": 10,
+    "skill:performance": 5
+  },
+  "passivePerception": 11,
+  "xp": 1800,
+  "proficiencyBonus": 3,
+  "initiative": 5,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Armaments",
+    "Individual"
+  ],
+  "gear": [
+    "Shield",
+    "Spears (3)",
+    "Studded Leather Armor"
+  ],
+  "cr": 5,
+  "languages": [
+    {
+      "language": "language:common"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The gladiator makes three Spear attacks. It can replace one attack with a use of Shield Bash.",
+        "plain": "The gladiator makes three Spear attacks. It can replace one attack with a use of Shield Bash.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spear",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +7, reach 5 ft. or range 20/60 ft. _Hit:_ 11 (2d6 + 4) Piercing damage.",
+        "plain": "Melee or Ranged Attack Roll: +7, reach 5 ft. or range 20/60 ft. Hit: 11 (2d6 + 4) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shield Bash",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Strength Saving Throw:_ DC 15, one creature within 5 feet that the gladiator can see. _Failure:_ 9 (2d4 + 4) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Prone condition.",
+        "plain": "Strength Saving Throw: DC 15, one creature within 5 feet that the gladiator can see. Failure: 9 (2d4 + 4) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Prone condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Parry",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "_Trigger:_ The gladiator is hit by a melee attack roll while holding a weapon. _Response:_ The gladiator adds 3 to its AC against that attack, possibly causing it to miss.",
+        "plain": "Trigger: The gladiator is hit by a melee attack roll while holding a weapon. Response: The gladiator adds 3 to its AC against that attack, possibly causing it to miss.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

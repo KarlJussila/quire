@@ -1,0 +1,36 @@
+{
+  "id": "spell:harm@2024",
+  "name": "Harm",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You unleash virulent magic on a creature you can see within range. The target makes a Constitution saving throw. On a failed save, it takes 14d6 Necrotic damage, and its Hit Point maximum is reduced by an amount equal to the Necrotic damage it took. On a successful save, it takes half as much damage only. This spell can't reduce a target's Hit Point maximum below 1.",
+    "plain": "You unleash virulent magic on a creature you can see within range. The target makes a Constitution saving throw. On a failed save, it takes 14d6 Necrotic damage, and its Hit Point maximum is reduced by an amount equal to the Necrotic damage it took. On a successful save, it takes half as much damage only. This spell can't reduce a target's Hit Point maximum below 1.",
+    "wording": "srd"
+  },
+  "level": 6,
+  "school": "spell-school:necromancy",
+  "lists": [
+    "class:cleric"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "table:acolyte/ideal",
+  "name": "Ideal",
+  "source": {
+    "book": "srd"
+  },
+  "dice": "d6",
+  "columns": [
+    {
+      "key": "entry",
+      "name": "Ideal"
+    }
+  ],
+  "rows": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "cells": {
+        "entry": "Tradition. The ancient traditions of worship and sacrifice must be preserved and upheld. (Lawful)"
+      }
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "cells": {
+        "entry": "Charity. I always try to help those in need, no matter what the personal cost. (Good)"
+      }
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "cells": {
+        "entry": "Change. We must help bring about the changes the gods are constantly working in the world. (Chaotic)"
+      }
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "cells": {
+        "entry": "Power. I hope to one day rise to the top of my faith’s religious hierarchy. (Lawful)"
+      }
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "cells": {
+        "entry": "Faith. I trust that my deity will guide my actions. I have faith that if I work hard, things will go well. (Lawful)"
+      }
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "cells": {
+        "entry": "Aspiration. I seek to prove myself worthy of my god’s favor by matching my actions against his or her teachings. (Any)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "state:paladin/oath-of-devotion/holy-nimbus@2024",
+  "name": "Holy Nimbus",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Bonus Action, you can imbue your Aura of Protection with holy power, granting the benefits below for 10 minutes or until you end them (no action required). Once you use this feature, you can't use it again until you finish a Long Rest. You can also restore your use of it by expending a level 5 spell slot (no action required).\n\n_**Holy Ward.**_ You have Advantage on any saving throw you are forced to make by a Fiend or an Undead.\n\n_**Radiant Damage.**_ Whenever an enemy starts its turn in the aura, that creature takes Radiant damage equal to your Charisma modifier plus your Proficiency Bonus.\n\n_**Sunlight.**_ The aura is filled with Bright Light that is sunlight.",
+    "plain": "As a Bonus Action, you can imbue your Aura of Protection with holy power, granting the benefits below for 10 minutes or until you end them (no action required). Once you use this feature, you can't use it again until you finish a Long Rest. You can also restore your use of it by expending a level 5 spell slot (no action required).\n\nHoly Ward. You have Advantage on any saving throw you are forced to make by a Fiend or an Undead.\n\nRadiant Damage. Whenever an enemy starts its turn in the aura, that creature takes Radiant damage equal to your Charisma modifier plus your Proficiency Bonus.\n\nSunlight. The aura is filled with Bright Light that is sunlight.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "against": {
+            "creatureType": [
+              "creature-type:fiend",
+              "creature-type:undead"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "light",
+      "bright": {
+        "byLevel": {
+          "6": 10,
+          "18": 30
+        },
+        "of": "class:paladin"
+      },
+      "dim": 0
+    },
+    {
+      "type": "zone",
+      "zone": {
+        "area": {
+          "shape": "area-shape:emanation",
+          "size": {
+            "byLevel": {
+              "6": 10,
+              "18": 30
+            },
+            "of": "class:paladin"
+          }
+        },
+        "anchor": "self",
+        "on": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": {
+                "pool": "enemy"
+              }
+            },
+            "step": {
+              "outcomes": [
+                {
+                  "damage": {
+                    "amount": {
+                      "sum": [
+                        "source.modifiers.ability:cha",
+                        "source.proficiencyBonus"
+                      ]
+                    },
+                    "type": "damage-type:radiant"
+                  },
+                  "to": "subject"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "duration": {
+    "amount": 10,
+    "unit": "minute"
+  },
+  "activities": [
+    {
+      "key": "end-holy-nimbus",
+      "name": "End Holy Nimbus",
+      "outcomes": [
+        {
+          "endState": {
+            "state": "state:paladin/oath-of-devotion/holy-nimbus"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

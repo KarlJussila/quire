@@ -1,0 +1,179 @@
+{
+  "id": "table:the-greek-pantheon",
+  "name": "The Greek Pantheon",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "deity",
+      "name": "Deity"
+    },
+    {
+      "key": "alignment",
+      "name": "Alignment"
+    },
+    {
+      "key": "suggested-domains",
+      "name": "Suggested Domains"
+    },
+    {
+      "key": "symbol",
+      "name": "Symbol"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "deity": "Zeus, god of the sky, ruler of the gods",
+        "alignment": "N",
+        "suggested-domains": "Tempest",
+        "symbol": "Fist full of lightning bolts"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Aphrodite, goddess of love and beauty",
+        "alignment": "CG",
+        "suggested-domains": "Light",
+        "symbol": "Sea shell"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Apollo, god of light, music, and healing",
+        "alignment": "CG",
+        "suggested-domains": "Knowledge, Life, Light",
+        "symbol": "Lyre"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Ares, god of war and strife",
+        "alignment": "CE",
+        "suggested-domains": "War",
+        "symbol": "Spear"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Artemis, goddess of hunting and childbirth",
+        "alignment": "NG",
+        "suggested-domains": "Life, Nature",
+        "symbol": "Bow and arrow on lunar disk"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Athena, goddess of wisdom and civilization",
+        "alignment": "LG",
+        "suggested-domains": "Knowledge, War",
+        "symbol": "Owl"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Demeter, goddess of agriculture",
+        "alignment": "NG",
+        "suggested-domains": "Life",
+        "symbol": "Mare's head"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Dionysus, god of mirth and wine",
+        "alignment": "CN",
+        "suggested-domains": "Life",
+        "symbol": "Thyrsus (staff tipped with pine cone)"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Hades, god of the underworld",
+        "alignment": "LE",
+        "suggested-domains": "Death",
+        "symbol": "Black ram"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Hecate, goddess of magic and the moon",
+        "alignment": "CE",
+        "suggested-domains": "Knowledge, Trickery",
+        "symbol": "Setting moon"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Hephaestus, god of smithing and craft",
+        "alignment": "NG",
+        "suggested-domains": "Knowledge",
+        "symbol": "Hammer and anvil"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Hera, goddess of marriage and intrigue",
+        "alignment": "CN",
+        "suggested-domains": "Trickery",
+        "symbol": "Fan of peacock feathers"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Hercules, god of strength and adventure",
+        "alignment": "CG",
+        "suggested-domains": "Tempest, War",
+        "symbol": "Lion's head"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Hermes, god of travel and commerce",
+        "alignment": "CG",
+        "suggested-domains": "Trickery",
+        "symbol": "Caduceus (winged staff and serpents)"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Hestia, goddess of home and family",
+        "alignment": "NG",
+        "suggested-domains": "Life",
+        "symbol": "Hearth"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Nike, goddess of victory",
+        "alignment": "LN",
+        "suggested-domains": "War",
+        "symbol": "Winged woman"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Pan, god of nature",
+        "alignment": "CN",
+        "suggested-domains": "Nature",
+        "symbol": "Syrinx (pan pipes)"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Poseidon, god of the sea and earthquakes",
+        "alignment": "CN",
+        "suggested-domains": "Tempest",
+        "symbol": "Trident"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Tyche, goddess of good fortune",
+        "alignment": "N",
+        "suggested-domains": "Trickery",
+        "symbol": "Red pentagram"
+      }
+    }
+  ]
+}

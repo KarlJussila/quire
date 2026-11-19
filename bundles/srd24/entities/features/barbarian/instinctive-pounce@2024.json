@@ -1,0 +1,38 @@
+{
+  "id": "feature:barbarian/instinctive-pounce@2024",
+  "name": "Level 7: Instinctive Pounce",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As part of the Bonus Action you take to enter your Rage, you can move up to half your Speed.",
+    "plain": "As part of the Bonus Action you take to enter your Rage, you can move up to half your Speed.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "pounce",
+      "name": "Instinctive Pounce",
+      "trigger": {
+        "event": "event:state-applied",
+        "match": {
+          "state": "state:raging"
+        },
+        "subject": "self"
+      },
+      "outcomes": [
+        {
+          "move": {
+            "kind": "move",
+            "distance": {
+              "divide": "speeds.movement-mode:walk.speed",
+              "by": 2,
+              "round": "down"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

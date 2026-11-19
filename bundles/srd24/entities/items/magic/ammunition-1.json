@@ -1,0 +1,74 @@
+{
+  "id": "item:ammunition-1",
+  "name": "Ammunition, +1",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have a bonus to attack rolls and damage rolls made with this piece of magic ammunition. The bonus is determined by the rarity of the ammunition. Once it hits a target, the ammunition is no longer magical.\n\nThis ammunition is typically found or sold in quantities of ten or twenty pieces. Ten pieces of this ammunition are equivalent in value to a potion of the same rarity.",
+    "plain": "You have a bonus to attack rolls and damage rolls made with this piece of magic ammunition. The bonus is determined by the rarity of the ammunition. Once it hits a target, the ammunition is no longer magical.\n\nThis ammunition is typically found or sold in quantities of ten or twenty pieces. Ten pieces of this ammunition are equivalent in value to a potion of the same rarity.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:uncommon",
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Ammunition",
+      "from": [
+        {
+          "kind": "item",
+          "where": {
+            "group": "group:ammunition"
+          }
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-value",
+      "name": "The typical quantity of ten or twenty pieces, and ten pieces' value as equal to a potion of the same rarity, are not encoded."
+    }
+  ]
+}

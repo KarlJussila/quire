@@ -1,0 +1,32 @@
+{
+  "id": "item:dagger",
+  "name": "Dagger",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:simple-melee-weapon",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:gp"
+  },
+  "weight": 1.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:finesse",
+      "weapon-property:light",
+      "weapon-property:thrown"
+    ],
+    "damage": {
+      "amount": "1d4",
+      "type": "damage-type:piercing"
+    },
+    "range": {
+      "long": 60,
+      "normal": 20
+    }
+  }
+}

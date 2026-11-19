@@ -1,0 +1,11 @@
+{
+  "id": "feature:dwarf/dwarven-subrace",
+  "name": "Dwarven Subrace",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

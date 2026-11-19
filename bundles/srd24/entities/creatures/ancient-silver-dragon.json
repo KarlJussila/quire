@@ -1,0 +1,166 @@
+{
+  "id": "creature:ancient-silver-dragon@2024",
+  "name": "Ancient Silver Dragon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:gargantuan",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:lawful-good",
+  "ac": 22,
+  "hp": {
+    "average": 468,
+    "formula": "24d20 + 216"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    }
+  },
+  "abilities": {
+    "ability:cha": 26,
+    "ability:con": 29,
+    "ability:dex": 10,
+    "ability:int": 18,
+    "ability:str": 30,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:dex": 7,
+    "ability:wis": 9
+  },
+  "skills": {
+    "skill:history": 11,
+    "skill:perception": 16,
+    "skill:stealth": 7
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    },
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 26,
+  "xp": 50000,
+  "proficiencyBonus": 7,
+  "initiative": 14,
+  "habitat": [
+    "Mountain",
+    "Urban"
+  ],
+  "treasure": [
+    "Arcana"
+  ],
+  "cr": 23,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:cold"
+      ]
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Legendary Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "plain": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes three Rend attacks. It can replace one attack with a use of (A) Paralyzing Breath or (B) Spellcasting to cast Ice Knife (level 2 version).",
+        "plain": "The dragon makes three Rend attacks. It can replace one attack with a use of (A) Paralyzing Breath or (B) Spellcasting to cast Ice Knife (level 2 version).",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +17, reach 15 ft. _Hit:_ 19 (2d8 + 10) Slashing damage plus 9 (2d8) Cold damage.",
+        "plain": "Melee Attack Roll: +17, reach 15 ft. Hit: 19 (2d8 + 10) Slashing damage plus 9 (2d8) Cold damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Cold Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 24, each creature in a 90-foot Cone. _Failure:_ 67 (15d8) Cold damage. _Success:_ Half damage.",
+        "plain": "Constitution Saving Throw: DC 24, each creature in a 90-foot Cone. Failure: 67 (15d8) Cold damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Paralyzing Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 24, each creature in a 90-foot Cone. _First Failure:_ The target has the Incapacitated condition until the end of its next turn, when it repeats the save. _Second Failure:_ The target has the Paralyzed condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+        "plain": "Constitution Saving Throw: DC 24, each creature in a 90-foot Cone. First Failure: The target has the Incapacitated condition until the end of its next turn, when it repeats the save. Second Failure: The target has the Paralyzed condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 23, +15 to hit with spell attacks):\n\n- **At Will:** Detect Magic, Hold Monster, Ice Knife (level 2 version), Shapechange (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)\n- **1/Day Each:** Control Weather, Ice Storm (level 7 version), Teleport, Zone of Truth",
+        "plain": "The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 23, +15 to hit with spell attacks):\n\n- At Will: Detect Magic, Hold Monster, Ice Knife (level 2 version), Shapechange (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)\n- 1/Day Each: Control Weather, Ice Storm (level 7 version), Teleport, Zone of Truth",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Chill",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon uses Spellcasting to cast Hold Monster. The dragon can't take this action again until the start of its next turn.",
+        "plain": "The dragon uses Spellcasting to cast Hold Monster. The dragon can't take this action again until the start of its next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Cold Gale",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 23, each creature in a 60-foot-long, 10-foot-wide Line. _Failure:_ 14 (4d6) Cold damage, and the target is pushed up to 30 feet straight away from the dragon. _Success:_ Half damage only. _Failure or Success:_ The dragon can't take this action again until the start of its next turn.",
+        "plain": "Dexterity Saving Throw: DC 23, each creature in a 60-foot-long, 10-foot-wide Line. Failure: 14 (4d6) Cold damage, and the target is pushed up to 30 feet straight away from the dragon. Success: Half damage only. Failure or Success: The dragon can't take this action again until the start of its next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pounce",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon moves up to half its Speed, and it makes one Rend attack.",
+        "plain": "The dragon moves up to half its Speed, and it makes one Rend attack.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "feature:lizardfolk",
+  "name": "Lizardfolk",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

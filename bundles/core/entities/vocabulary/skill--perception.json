@@ -1,0 +1,11 @@
+{
+  "id": "skill:perception",
+  "name": "Perception",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:wis"
+}

@@ -1,0 +1,58 @@
+{
+  "id": "rule:rolling-20-or-1@2024",
+  "name": "Rolling 20 or 1",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you roll a 20 on the d20 (called a \"natural 20\") for an attack roll, the attack hits regardless of any modifiers or the target's AC. This is called a Critical Hit (see \"Combat\" later in \"Playing the Game\").\n\nIf you roll a 1 on the d20 (a \"natural 1\") for an attack roll, the attack misses regardless of any modifiers or the target's AC.",
+    "plain": "If you roll a 20 on the d20 (called a \"natural 20\") for an attack roll, the attack hits regardless of any modifiers or the target's AC. This is called a Critical Hit (see \"Combat\" later in \"Playing the Game\").\n\nIf you roll a 1 on the d20 (a \"natural 1\") for an attack roll, the attack misses regardless of any modifiers or the target's AC.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "criticalMinimum": {
+          "$atMost": 20
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "forced-result",
+      "success": true,
+      "when": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "crit": true
+        }
+      }
+    },
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "natural": 1
+        }
+      }
+    }
+  ]
+}

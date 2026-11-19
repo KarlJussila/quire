@@ -1,0 +1,46 @@
+{
+  "id": "rule:falling-unconscious@2024",
+  "name": "Falling Unconscious",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you reach 0 Hit Points and don't die instantly, you have the Unconscious condition (see \"Rules Glossary\") until you regain any Hit Points, and you now face making Death Saving Throws (see below).",
+    "plain": "If you reach 0 Hit Points and don't die instantly, you have the Unconscious condition (see \"Rules Glossary\") until you regain any Hit Points, and you now face making Death Saving Throws (see below).",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "becomes": {
+            "compare": "hp.current",
+            "atMost": 0
+          },
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "applyState": {
+              "state": "condition:unconscious",
+              "ends": [
+                {
+                  "event": "event:healed",
+                  "subject": "self"
+                }
+              ]
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "feature:warlock/eldritch-master@2024",
+  "name": "Level 20: Eldritch Master",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you use your Magical Cunning feature, you regain all your expended Pact Magic spell slots.",
+    "plain": "When you use your Magical Cunning feature, you regain all your expended Pact Magic spell slots.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "feature:warlock/magical-cunning"
+            },
+            {
+              "match": {
+                "key": "magical-cunning"
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "outcomes": {
+          "$replace": [
+            {
+              "pool": {
+                "add": "pools.pact-magic.max",
+                "resource": "pact-magic"
+              },
+              "to": "self"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

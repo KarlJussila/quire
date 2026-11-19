@@ -1,0 +1,15 @@
+{
+  "id": "language:sylvan",
+  "name": "Sylvan",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "An exotic language, typically spoken by fey creatures, written in the Elvish script.",
+    "plain": "An exotic language, typically spoken by fey creatures, written in the Elvish script.",
+    "wording": "original"
+  },
+  "group": "group:exotic-language",
+  "script": "Elvish",
+  "speakers": "Fey creatures"
+}

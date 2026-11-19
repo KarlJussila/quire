@@ -1,0 +1,15 @@
+{
+  "id": "feature:sorcerer/draconic-bloodline/dragon-ancestor/silver",
+  "name": "Silver",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Damage Type: Cold",
+    "wording": "srd"
+  },
+  "group": "group:dragon-ancestor",
+  "values": {
+    "damage-type": "damage-type:cold"
+  }
+}

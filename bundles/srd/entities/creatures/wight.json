@@ -1,0 +1,142 @@
+{
+  "id": "creature:wight",
+  "name": "Wight",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:neutral-evil",
+  "ac": 14,
+  "acFrom": [
+    "studded leather"
+  ],
+  "hp": {
+    "average": 45,
+    "formula": "6d8 + 18"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 15,
+    "ability:con": 16,
+    "ability:dex": 14,
+    "ability:int": 10,
+    "ability:str": 15,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:perception": 3,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 13,
+  "xp": 700,
+  "cr": 3,
+  "languages": [
+    {
+      "text": "the languages it knew in life"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:necrotic"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical",
+                "damage-qualifier:silvered"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:exhaustion",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Sunlight Sensitivity",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While in sunlight, the wight has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+        "plain": "While in sunlight, the wight has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The wight makes two longsword attacks or two longbow attacks. It can use its Life Drain in place of one longsword attack.",
+        "plain": "The wight makes two longsword attacks or two longbow attacks. It can use its Life Drain in place of one longsword attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Life Drain",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one creature. _Hit:_ 5 (1d6 + 2) necrotic damage. The target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.\n\nA humanoid slain by this attack rises 24 hours later as a zombie under the wight's control, unless the humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at one time.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 5 (1d6 + 2) necrotic damage. The target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.\n\nA humanoid slain by this attack rises 24 hours later as a zombie under the wight's control, unless the humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at one time.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Longsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 6 (1d8 + 2) slashing damage, or 7 (1d10 + 2) slashing damage if used with two hands.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) slashing damage, or 7 (1d10 + 2) slashing damage if used with two hands.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Longbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +4 to hit, range 150/600 ft., one target. _Hit:_ 6 (1d8 + 2) piercing damage.",
+        "plain": "Ranged Weapon Attack: +4 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "feature:druid/primal-order@2024",
+  "name": "Level 1: Primal Order",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have dedicated yourself to one of the following sacred roles of your choice.\n\n_**Magician.**_ You know one extra cantrip from the Druid spell list. In addition, your mystical connection to nature gives you a bonus to your Intelligence (Arcana or Nature) checks. The bonus equals your Wisdom modifier (minimum bonus of +1).\n\n_**Warden.**_ Trained for battle, you gain proficiency with Martial weapons and training with Medium armor.",
+    "plain": "You have dedicated yourself to one of the following sacred roles of your choice.\n\nMagician. You know one extra cantrip from the Druid spell list. In addition, your mystical connection to nature gives you a bonus to your Intelligence (Arcana or Nature) checks. The bonus equals your Wisdom modifier (minimum bonus of +1).\n\nWarden. Trained for battle, you gain proficiency with Martial weapons and training with Medium armor.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "choose": {
+        "key": "primal-order",
+        "name": "Primal Order",
+        "from": [
+          {
+            "name": "Magician",
+            "of": [
+              {
+                "type": "spell-access",
+                "spells": [
+                  {
+                    "choose": {
+                      "key": "primal-order-cantrip",
+                      "name": "Druid Cantrip",
+                      "from": [
+                        {
+                          "kind": "spell",
+                          "where": {
+                            "match": {
+                              "lists": "class:druid",
+                              "level": 0
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "how": "known",
+                "counts": false
+              },
+              {
+                "type": "change",
+                "of": "event",
+                "set": {
+                  "total": {
+                    "$add": {
+                      "max": [
+                        1,
+                        "modifiers.ability:wis"
+                      ]
+                    }
+                  }
+                },
+                "when": {
+                  "event": "event:roll-made",
+                  "by": "self",
+                  "match": {
+                    "roll": "roll:check",
+                    "ability": "ability:int",
+                    "skill": [
+                      "skill:arcana",
+                      "skill:nature"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "Warden",
+            "of": [
+              {
+                "type": "proficiency",
+                "in": [
+                  "group:martial-weapon",
+                  "group:medium-armor"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

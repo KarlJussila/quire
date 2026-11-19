@@ -1,0 +1,12 @@
+{
+  "id": "feature:halfling/naturally-stealthy@2024",
+  "name": "Naturally Stealthy",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you.",
+    "plain": "You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you.",
+    "wording": "srd"
+  }
+}

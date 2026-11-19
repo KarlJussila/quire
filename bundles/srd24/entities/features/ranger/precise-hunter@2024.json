@@ -1,0 +1,37 @@
+{
+  "id": "feature:ranger/precise-hunter@2024",
+  "name": "Level 17: Precise Hunter",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have Advantage on attack rolls against the creature currently marked by your Hunter's Mark.",
+    "plain": "You have Advantage on attack rolls against the creature currently marked by your Hunter's Mark.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "prose": {
+              "text": "marked by hunters mark",
+              "gap": {
+                "category": "test",
+                "name": "marked-by-hunters-mark"
+              }
+            }
+          }
+        },
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    }
+  ]
+}

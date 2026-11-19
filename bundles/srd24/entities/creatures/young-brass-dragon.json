@@ -1,0 +1,120 @@
+{
+  "id": "creature:young-brass-dragon@2024",
+  "name": "Young Brass Dragon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:chaotic-good",
+  "ac": 17,
+  "hp": {
+    "average": 110,
+    "formula": "13d10 + 39"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:burrow": {
+      "speed": 20
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    }
+  },
+  "abilities": {
+    "ability:cha": 15,
+    "ability:con": 17,
+    "ability:dex": 10,
+    "ability:int": 12,
+    "ability:str": 19,
+    "ability:wis": 11
+  },
+  "saves": {
+    "ability:dex": 3,
+    "ability:wis": 3
+  },
+  "skills": {
+    "skill:perception": 6,
+    "skill:persuasion": 5,
+    "skill:stealth": 3
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    },
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 16,
+  "xp": 2300,
+  "proficiencyBonus": 3,
+  "initiative": 3,
+  "habitat": [
+    "Desert"
+  ],
+  "treasure": [
+    "Arcana"
+  ],
+  "cr": 6,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes three Rend attacks. It can replace two attacks with a use of Sleep Breath.",
+        "plain": "The dragon makes three Rend attacks. It can replace two attacks with a use of Sleep Breath.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 10 ft. _Hit:_ 15 (2d10 + 4) Slashing damage.",
+        "plain": "Melee Attack Roll: +7, reach 10 ft. Hit: 15 (2d10 + 4) Slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fire Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 14, each creature in a 40-foot-long, 5-footwide Line. _Failure:_ 38 (11d6) Fire damage. _Success:_ Half damage.",
+        "plain": "Dexterity Saving Throw: DC 14, each creature in a 40-foot-long, 5-footwide Line. Failure: 38 (11d6) Fire damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sleep Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 14, each creature in a 30-foot Cone. _Failure:_ The target has the Incapacitated condition until the end of its next turn, at which point it repeats the save. _Second Failure:_ The target has the Unconscious condition for 1 minute. This effect ends for the target if it takes damage or a creature within 5 feet of it takes an action to wake it.",
+        "plain": "Constitution Saving Throw: DC 14, each creature in a 30-foot Cone. Failure: The target has the Incapacitated condition until the end of its next turn, at which point it repeats the save. Second Failure: The target has the Unconscious condition for 1 minute. This effect ends for the target if it takes damage or a creature within 5 feet of it takes an action to wake it.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

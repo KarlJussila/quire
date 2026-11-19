@@ -1,0 +1,68 @@
+{
+  "id": "feature:warlock/gaze-of-two-minds@2024",
+  "name": "Gaze of Two Minds",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 5+ Warlock_\n\nYou can use a Bonus Action to touch a willing creature and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can take a Bonus Action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. The connection ends if you don't maintain it in this way.\n\nWhile perceiving through the other creature's senses, you benefit from any special senses possessed by that creature, and you can cast spells as if you were in your space or the other creature's space if the two of you are within 60 feet of each other.",
+    "plain": "Prerequisite: Level 5+ Warlock\n\nYou can use a Bonus Action to touch a willing creature and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can take a Bonus Action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. The connection ends if you don't maintain it in this way.\n\nWhile perceiving through the other creature's senses, you benefit from any special senses possessed by that creature, and you can cast spells as if you were in your space or the other creature's space if the two of you are within 60 feet of each other.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 5
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Copy the linked creature's special senses to yourself."
+    },
+    {
+      "category": "feature-mechanics",
+      "name": "Allow maintaining the link on later turns only while you and the linked creature are on the same plane."
+    },
+    {
+      "category": "feature-mechanics",
+      "name": "The initial link is recorded, but remote renewal on later turns is withheld until its same-plane condition can be tested."
+    },
+    {
+      "category": "feature-mechanics",
+      "name": "Perception through the linked creature’s ordinary senses is not yet granted; the state records the relationship and supplies the alternative casting origin."
+    }
+  ],
+  "activities": [
+    {
+      "key": "gaze-of-two-minds",
+      "name": "Connect to a Willing Creature",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "target": {
+        "who": {
+          "pool": "any",
+          "chosen": true,
+          "where": {
+            "willing": true
+          }
+        },
+        "count": 1
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "state:warlock/gaze-of-two-minds@2024",
+            "source": "target"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

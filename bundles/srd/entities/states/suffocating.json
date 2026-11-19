@@ -1,0 +1,65 @@
+{
+  "id": "state:suffocating",
+  "name": "Suffocating",
+  "source": {
+    "book": "core"
+  },
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:regain-hit-points",
+        "restriction:be-stabilized"
+      ]
+    },
+    {
+      "type": "resource",
+      "key": "suffocation-rounds",
+      "max": {
+        "max": [
+          1,
+          "modifiers.ability:con"
+        ]
+      },
+      "recover": []
+    },
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:turn-start",
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "setHp": 0,
+            "to": "self",
+            "when": {
+              "compare": "pools.suffocation-rounds.current",
+              "atMost": 0
+            }
+          },
+          {
+            "pool": {
+              "resource": "suffocation-rounds",
+              "spend": 1
+            },
+            "to": "self",
+            "when": {
+              "compare": "pools.suffocation-rounds.current",
+              "atLeast": 1
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "ends": [
+    {
+      "event": "event:breathes",
+      "subject": "self"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "event:leaves-reach",
+  "name": "Leaves Reach",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A creature (the actor) moves out of another creature's reach (the subject) using its own movement, action, bonus action, or reaction. Teleporting and being moved by something else don't count."
+  },
+  "emittedBy": "engine"
+}

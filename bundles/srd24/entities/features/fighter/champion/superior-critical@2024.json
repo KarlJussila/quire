@@ -1,0 +1,47 @@
+{
+  "id": "feature:fighter/champion/superior-critical@2024",
+  "name": "Level 15: Superior Critical",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your attack rolls with weapons and Unarmed Strikes can now score a Critical Hit on a roll of 18-20 on the d20.",
+    "plain": "Your attack rolls with weapons and Unarmed Strikes can now score a Critical Hit on a roll of 18-20 on the d20.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "criticalMinimum": {
+          "$atMost": 18
+        }
+      },
+      "when": {
+        "any": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "via": "weapon"
+              }
+            }
+          },
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "via": "unarmed"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

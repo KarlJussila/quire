@@ -1,0 +1,119 @@
+{
+  "id": "creature:dragon-turtle@2024",
+  "name": "Dragon Turtle",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:gargantuan",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:neutral",
+  "ac": 20,
+  "hp": {
+    "average": 356,
+    "formula": "23d20 + 115"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:swim": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 12,
+    "ability:con": 20,
+    "ability:dex": 10,
+    "ability:int": 10,
+    "ability:str": 25,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:con": 11,
+    "ability:wis": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 11,
+  "xp": 18000,
+  "proficiencyBonus": 6,
+  "initiative": 6,
+  "habitat": [
+    "Coastal",
+    "Underwater"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 17,
+  "languages": [
+    {
+      "language": "language:draconic"
+    },
+    {
+      "text": "Primordial (Aquan)"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The dragon can breathe air and water.",
+        "plain": "The dragon can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes three Bite attacks. It can replace one attack with a Tail attack.",
+        "plain": "The dragon makes three Bite attacks. It can replace one attack with a Tail attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +13, reach 15 ft. _Hit:_ 23 (3d10 + 7) Piercing damage plus 7 (2d6) Fire damage. Being underwater doesn't grant Resistance to this Fire damage.",
+        "plain": "Melee Attack Roll: +13, reach 15 ft. Hit: 23 (3d10 + 7) Piercing damage plus 7 (2d6) Fire damage. Being underwater doesn't grant Resistance to this Fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +13, reach 15 ft. _Hit:_ 18 (2d10 + 7) Bludgeoning damage. If the target is a Huge or smaller creature, it has the Prone condition.",
+        "plain": "Melee Attack Roll: +13, reach 15 ft. Hit: 18 (2d10 + 7) Bludgeoning damage. If the target is a Huge or smaller creature, it has the Prone condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Steam Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 19, each creature in a 60-foot Cone. _Failure:_ 56 (16d6) Fire damage. _Success:_ Half damage. _Failure or Success:_ Being underwater doesn't grant Resistance to this Fire damage.",
+        "plain": "Constitution Saving Throw: DC 19, each creature in a 60-foot Cone. Failure: 56 (16d6) Fire damage. Success: Half damage. Failure or Success: Being underwater doesn't grant Resistance to this Fire damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

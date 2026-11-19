@@ -1,0 +1,78 @@
+{
+  "id": "feature:barbarian/persistent-rage@2024",
+  "name": "Level 15: Persistent Rage",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you roll Initiative, you can regain all expended uses of Rage. After you regain uses of Rage in this way, you can't do so again until you finish a Long Rest.\n\nIn addition, your Rage is so fierce that it now lasts for 10 minutes without you needing to do anything to extend it from round to round. Your Rage ends early if you have the Unconscious condition (not just the Incapacitated condition) or don Heavy armor.",
+    "plain": "When you roll Initiative, you can regain all expended uses of Rage. After you regain uses of Rage in this way, you can't do so again until you finish a Long Rest.\n\nIn addition, your Rage is so fierce that it now lasts for 10 minutes without you needing to do anything to extend it from round to round. Your Rage ends early if you have the Unconscious condition (not just the Incapacitated condition) or don Heavy armor.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "persistent-rage",
+      "name": "Persistent Rage",
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:initiative"
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "pool": {
+            "resource": "rage",
+            "add": "spent.rage"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": "state:raging",
+      "set": {
+        "ends": {
+          "$replace": [
+            {
+              "event": "event:state-applied",
+              "match": {
+                "state": "condition:unconscious"
+              },
+              "subject": "self"
+            },
+            {
+              "event": "event:item-equipped",
+              "subject": "self",
+              "match": {
+                "item": "group:heavy-armor"
+              }
+            }
+          ]
+        },
+        "activities": {
+          "$replace": []
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "feature:sorcerer/draconic-sorcery/elemental-affinity@2024",
+  "name": "Level 6: Elemental Affinity",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your draconic magic has an affinity with a damage type associated with dragons. Choose one of those types: Acid, Cold, Fire, Lightning, or Poison.\n\nYou have Resistance to that damage type, and when you cast a spell that deals damage of that type, you can add your Charisma modifier to one damage roll of that spell.",
+    "plain": "Your draconic magic has an affinity with a damage type associated with dragons. Choose one of those types: Acid, Cold, Fire, Lightning, or Poison.\n\nYou have Resistance to that damage type, and when you cast a spell that deals damage of that type, you can add your Charisma modifier to one damage roll of that spell.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        {
+          "choose": {
+            "key": "damage-type",
+            "name": "Elemental Affinity",
+            "from": [
+              "damage-type:acid",
+              "damage-type:cold",
+              "damage-type:fire",
+              "damage-type:lightning",
+              "damage-type:poison"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "key": "elemental-affinity",
+      "name": "Elemental Affinity",
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage"
+        },
+        "when": {
+          "all": [
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "dealsDamage": {
+                "chosen": "damage-type"
+              }
+            }
+          ]
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:activity-used",
+              "by": "self",
+              "match": {
+                "spell": true
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "intercept": {
+            "set": {
+              "$add": "modifiers.ability:cha"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

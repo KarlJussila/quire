@@ -1,0 +1,12 @@
+{
+  "id": "item:wooden-shield",
+  "name": "Wooden Shield",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "A shield of wood, granting +2 AC. Druids carry wooden (not metal) shields by tradition.",
+    "wording": "original"
+  },
+  "group": "group:shield"
+}

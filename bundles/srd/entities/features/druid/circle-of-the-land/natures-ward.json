@@ -1,0 +1,40 @@
+{
+  "id": "feature:druid/circle-of-the-land/natures-ward",
+  "name": "Nature’s Ward",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you reach 10th level, you can't be Charmed or Frightened by elementals or fey, and you are immune to poison and disease.",
+    "plain": "When you reach 10th level, you can't be Charmed or Frightened by elementals or fey, and you are immune to poison and disease.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened"
+      ],
+      "when": {
+        "event": "event:taking-damage",
+        "subject": "self",
+        "match": {
+          "against": {
+            "creatureType": [
+              "creature-type:elemental",
+              "creature-type:fey"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison",
+        "condition:poisoned"
+      ]
+    }
+  ]
+}

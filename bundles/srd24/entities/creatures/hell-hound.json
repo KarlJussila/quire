@@ -1,0 +1,102 @@
+{
+  "id": "creature:hell-hound@2024",
+  "name": "Hell Hound",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 15,
+  "hp": {
+    "average": 58,
+    "formula": "9d8 + 18"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 14,
+    "ability:dex": 12,
+    "ability:int": 6,
+    "ability:str": 17,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:perception": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 15,
+  "xp": 700,
+  "proficiencyBonus": 2,
+  "initiative": 1,
+  "habitat": [
+    "Mountain",
+    "Planar (Lower Planes)",
+    "Underdark"
+  ],
+  "cr": 3,
+  "languages": [
+    {
+      "language": "language:infernal",
+      "understandsOnly": true
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Pack Tactics",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hound has Advantage on an attack roll against a creature if at least one of the hound's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+        "plain": "The hound has Advantage on an attack roll against a creature if at least one of the hound's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The hound makes two Bite attacks.",
+        "plain": "The hound makes two Bite attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 7 (1d8 + 3) Piercing damage plus 3 (1d6) Fire damage.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage plus 3 (1d6) Fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fire Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 12, each creature in a 15-foot Cone. _Failure:_ 17 (5d6) Fire damage. _Success:_ Half damage.",
+        "plain": "Dexterity Saving Throw: DC 12, each creature in a 15-foot Cone. Failure: 17 (5d6) Fire damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

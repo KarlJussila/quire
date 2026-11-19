@@ -1,0 +1,14 @@
+{
+  "id": "item:cape-of-the-mountebank@2024",
+  "name": "Cape of the Mountebank",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This cape smells faintly of brimstone. While wearing it, you can use it to cast Dimension Door as a Magic action. This property can't be used again until the next dawn.\n\nWhen you teleport with that spell, you leave behind a cloud of smoke. The space you left is Lightly Obscured by that smoke until the end of your next turn.",
+    "plain": "This cape smells faintly of brimstone. While wearing it, you can use it to cast Dimension Door as a Magic action. This property can't be used again until the next dawn.\n\nWhen you teleport with that spell, you leave behind a cloud of smoke. The space you left is Lightly Obscured by that smoke until the end of your next turn.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare"
+}

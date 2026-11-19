@@ -1,0 +1,27 @@
+{
+  "id": "feature:paladin/multiclass-proficiencies@2024",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Gain the following traits from the Core Paladin Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:martial-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor",
+        "group:medium-armor",
+        "group:shield"
+      ]
+    }
+  ]
+}

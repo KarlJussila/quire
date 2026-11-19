@@ -1,0 +1,11 @@
+{
+  "id": "feature:merfolk",
+  "name": "Merfolk",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

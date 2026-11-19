@@ -1,0 +1,40 @@
+{
+  "id": "feature:monk/extra-attack@2024",
+  "name": "Level 5: Extra Attack",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can attack twice instead of once whenever you take the Attack action on your turn.",
+    "plain": "You can attack twice instead of once whenever you take the Attack action on your turn.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "action": "action:attack"
+          }
+        }
+      },
+      "set": {
+        "outcomes": {
+          "$where": {
+            "runs": true
+          },
+          "runs": {
+            "$where": {
+              "times": true
+            },
+            "times": {
+              "$atLeast": 2
+            }
+          }
+        }
+      }
+    }
+  ]
+}

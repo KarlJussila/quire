@@ -1,0 +1,81 @@
+{
+  "id": "item:periapt-of-health@2024",
+  "name": "Periapt of Health",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this pendant, you can take a Magic action to regain 2d4 + 2 Hit Points. Once used, this property can't be used again until the next dawn.\n\nIn addition, you have Advantage on saving throws to avoid or end the Poisoned condition while you wear this pendant.",
+    "plain": "While wearing this pendant, you can take a Magic action to regain 2d4 + 2 Hit Points. Once used, this property can't be used again until the next dawn.\n\nIn addition, you have Advantage on saving throws to avoid or end the Poisoned condition while you wear this pendant.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:save",
+              "against": {
+                "condition": "condition:poisoned"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "restore-health",
+      "name": "Restore Health",
+      "action": "action:magic",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:dawn"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "heal": {
+            "amount": "2d4+2"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

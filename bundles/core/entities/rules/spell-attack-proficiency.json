@@ -1,0 +1,35 @@
+{
+  "id": "rule:spell-attack-proficiency",
+  "name": "Spell Attack Proficiency",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A creature adds its proficiency bonus to a spell attack roll."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": "proficiencyBonus"
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "via": "spell"
+          }
+        }
+      }
+    }
+  ]
+}

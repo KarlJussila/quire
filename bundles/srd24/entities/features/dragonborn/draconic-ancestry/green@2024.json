@@ -1,0 +1,15 @@
+{
+  "id": "feature:dragonborn/draconic-ancestry/green@2024",
+  "name": "Green",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Damage Type: Poison",
+    "wording": "srd"
+  },
+  "group": "group:draconic-ancestry",
+  "values": {
+    "damage-type": "damage-type:poison"
+  }
+}

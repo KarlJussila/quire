@@ -1,0 +1,42 @@
+{
+  "id": "feature:sorcerer/metamagic",
+  "name": "Metamagic",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 3rd level, you gain the ability to twist your spells to suit your needs. You gain two of the following Metamagic options of your choice. You gain another one at 10th and 17th level.\n\nYou can use only one Metamagic option on a spell when you cast it, unless otherwise noted.",
+    "plain": "At 3rd level, you gain the ability to twist your spells to suit your needs. You gain two of the following Metamagic options of your choice. You gain another one at 10th and 17th level.\n\nYou can use only one Metamagic option on a spell when you cast it, unless otherwise noted.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "metamagic",
+        "name": "Metamagic",
+        "count": {
+          "byLevel": {
+            "3": 2,
+            "10": 3,
+            "17": 4
+          },
+          "of": "class:sorcerer"
+        },
+        "from": [
+          {
+            "kind": "feature",
+            "where": {
+              "group": "group:metamagic"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "spell-mechanics",
+      "name": "Only one Metamagic option can modify each casting, except the Empowered and Seeking Spell exceptions; shared cast-use tracking remains undefined."
+    }
+  ]
+}

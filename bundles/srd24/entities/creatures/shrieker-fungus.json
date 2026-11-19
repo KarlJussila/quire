@@ -1,0 +1,67 @@
+{
+  "id": "creature:shrieker-fungus@2024",
+  "name": "Shrieker Fungus",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:plant",
+  "alignment": "alignment:unaligned",
+  "ac": 5,
+  "hp": {
+    "average": 13,
+    "formula": "3d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 5
+    }
+  },
+  "abilities": {
+    "ability:cha": 1,
+    "ability:con": 10,
+    "ability:dex": 1,
+    "ability:int": 1,
+    "ability:str": 1,
+    "ability:wis": 3
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    }
+  },
+  "passivePerception": 6,
+  "xp": 0,
+  "proficiencyBonus": 2,
+  "initiative": -5,
+  "habitat": [
+    "Underdark"
+  ],
+  "cr": 0,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:blinded",
+        "condition:charmed",
+        "condition:deafened",
+        "condition:frightened"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Shriek",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "_Trigger:_ A creature or a source of Bright Light moves within 30 feet of the shrieker. _Response:_ The shrieker emits a shriek audible within 300 feet of itself for 1 minute or until the shrieker dies.",
+        "plain": "Trigger: A creature or a source of Bright Light moves within 30 feet of the shrieker. Response: The shrieker emits a shriek audible within 300 feet of itself for 1 minute or until the shrieker dies.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

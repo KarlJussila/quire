@@ -1,0 +1,20 @@
+{
+  "id": "state:encumbered",
+  "name": "Encumbered",
+  "source": {
+    "book": "core"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "$where": true,
+          "speed": {
+            "$add": -10
+          }
+        }
+      }
+    }
+  ]
+}

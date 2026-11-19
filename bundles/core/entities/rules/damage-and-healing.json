@@ -1,0 +1,230 @@
+{
+  "id": "rule:damage-and-healing",
+  "name": "Damage and Healing",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Damage rolls its dice, can be changed as it is about to be dealt, and then reduces hit points; healing rolls its dice and restores them. A creature can be killed, and some magic brings it back."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "emits": [
+    {
+      "event": "event:roll-made",
+      "for": {
+        "kind": "outcome",
+        "where": {
+          "match": {
+            "damage": true
+          }
+        }
+      },
+      "at": "rolled",
+      "fields": {
+        "roll": "roll:damage",
+        "attack": {
+          "settled": "attack"
+        },
+        "success": {
+          "settled": "success"
+        },
+        "crit": {
+          "settled": "crit"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        }
+      }
+    },
+    {
+      "event": "event:taking-damage",
+      "for": {
+        "kind": "outcome",
+        "where": {
+          "match": {
+            "damage": true
+          }
+        }
+      },
+      "at": "applying",
+      "fields": {
+        "amount": {
+          "settled": "amount"
+        },
+        "damageType": {
+          "stored": "damage.type"
+        },
+        "attack": {
+          "settled": "attack"
+        },
+        "success": {
+          "settled": "success"
+        },
+        "crit": {
+          "settled": "crit"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "against": {
+          "settled": "against"
+        },
+        "excess": {
+          "settled": "excess"
+        },
+        "remaining": {
+          "settled": "remaining"
+        }
+      }
+    },
+    {
+      "event": "event:damaged",
+      "for": {
+        "kind": "outcome",
+        "where": {
+          "match": {
+            "damage": true
+          }
+        }
+      },
+      "at": "applied",
+      "fields": {
+        "amount": {
+          "settled": "amount"
+        },
+        "damageType": {
+          "stored": "damage.type"
+        },
+        "attack": {
+          "settled": "attack"
+        },
+        "success": {
+          "settled": "success"
+        },
+        "crit": {
+          "settled": "crit"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "against": {
+          "settled": "against"
+        },
+        "excess": {
+          "settled": "excess"
+        },
+        "remaining": {
+          "settled": "remaining"
+        }
+      }
+    },
+    {
+      "event": "event:roll-made",
+      "for": {
+        "kind": "outcome",
+        "where": {
+          "match": {
+            "heal": true
+          }
+        }
+      },
+      "at": "rolled",
+      "fields": {
+        "roll": "roll:healing",
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "total": {
+          "settled": "total"
+        }
+      }
+    },
+    {
+      "event": "event:healed",
+      "for": {
+        "kind": "outcome",
+        "where": {
+          "match": {
+            "heal": true
+          }
+        }
+      },
+      "at": "applied",
+      "fields": {
+        "amount": {
+          "settled": "amount"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        }
+      }
+    },
+    {
+      "event": "event:died",
+      "for": {
+        "kind": "outcome",
+        "where": {
+          "match": {
+            "kill": true
+          }
+        }
+      },
+      "at": "applied"
+    },
+    {
+      "event": "event:revived",
+      "for": {
+        "kind": "outcome",
+        "where": {
+          "match": {
+            "revive": true
+          }
+        }
+      },
+      "at": "applied"
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": "modifiers.{ability}"
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage",
+          "ability": true
+        }
+      }
+    }
+  ]
+}

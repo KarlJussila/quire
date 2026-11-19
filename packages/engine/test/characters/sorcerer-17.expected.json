@@ -1,0 +1,81 @@
+{
+  "abilities": {
+    "ability:str": 8,
+    "ability:dex": 15,
+    "ability:con": 17,
+    "ability:int": 10,
+    "ability:wis": 13,
+    "ability:cha": 20
+  },
+  "proficiencyBonus": 6,
+  "hp.max": 138,
+  "ac": 17,
+  "saves": {
+    "ability:str": -1,
+    "ability:dex": 2,
+    "ability:con": 9,
+    "ability:int": 0,
+    "ability:wis": 1,
+    "ability:cha": 11
+  },
+  "skills": {
+    "skill:acrobatics": 2,
+    "skill:animal-handling": 1,
+    "skill:arcana": 6,
+    "skill:athletics": -1,
+    "skill:deception": 11,
+    "skill:history": 0,
+    "skill:insight": 7,
+    "skill:intimidation": 5,
+    "skill:investigation": 0,
+    "skill:medicine": 1,
+    "skill:nature": 0,
+    "skill:perception": 1,
+    "skill:performance": 5,
+    "skill:persuasion": 5,
+    "skill:religion": 6,
+    "skill:sleight-of-hand": 2,
+    "skill:stealth": 2,
+    "skill:survival": 1
+  },
+  "initiative": 2,
+  "pools": {
+    "sorcery-points": 17,
+    "innate-sorcery": 2,
+    "sorcerous-restoration": 1,
+    "elemental-affinity": 1,
+    "dragon-wings": 1
+  },
+  "attacks": {
+    "Dagger: Attack": "+8, 1d4+2 piercing",
+    "Unarmed Strike: Damage": "+5, 1-1 bludgeoning"
+  },
+  "why": [
+    "Abilities: apply the recorded background increases {\"ability:cha\": 2, \"ability:wis\": 1}, then the ASIs at levels 4, 8, 12, 16, capping each score at 20. Modifiers are floor((score \u2212 10)/2). Proficiency bonus is +6 at level 17 (PHB ch. 2, Determine Ability Scores and Character Advancement; ch. 4, the chosen background; ch. 5, Ability Score Improvement).",
+    "HP: 6 + 16\u00d74 + 17\u00d73 + 17 (Draconic Resilience) = 138. Constitution increases apply to every attained level (PHB ch. 2, Level Advancement and Fixed Hit Points by Class; ch. 3, class features; ch. 4, species; ch. 5, Tough when present).",
+    "AC and initiative: Draconic Resilience 10 + Dexterity 2 + Charisma 5 = 17; initiative +2 (PHB ch. 1, Armor Class and Initiative; ch. 3, class features; ch. 5, Alert when present; ch. 6, Armor).",
+    "Saves add proficiency +6 in Constitution and Charisma; otherwise use the ability modifier. Skill proficiencies: Insight and Religion (Acolyte), and Arcana and Deception (Sorcerer). Add the usual ability modifier and proficiency +6, or use the modifier alone (PHB ch. 2, Fill In Numbers; ch. 3, Core Traits; ch. 4, origins; ch. 5, Skilled when present).",
+    "Spellcasting: DC 19 = 8 + proficiency 6 + casting modifier 5; attack +11 = 6 + 5. The level 17 class table gives 19 class preparations and 6 class cantrips and slots [4, 3, 3, 3, 2, 1, 1, 1, 1]. Always-prepared feature spells are additional (PHB ch. 3, class Features table and Spellcasting or Pact Magic).",
+    "Sorcery Points 17; Innate Sorcery 2; Sorcerous Restoration 1 per Long Rest; Elemental Affinity can add Charisma to one damage roll per spell; Dragon Wings 1 per Long Rest before spending Sorcery Points (Sorcerer and Draconic Sorcery). Sources: PHB ch. 3 and ch. 4, the named features.",
+    "Weapon attacks add the permitted ability modifier and proficiency +6 to hit, and the same ability modifier to weapon damage. Finesse permits Dexterity; ranged weapons use Dexterity. The normal Unarmed Strike deals 1 + Strength, with proficiency on its attack. Optional, conditional, and two-handed alternatives require their own conditions (PHB ch. 1, Making an Attack; ch. 6, Weapons; Rules Glossary, Unarmed Strike)."
+  ],
+  "spellcasting": {
+    "class:sorcerer": {
+      "dc": 19,
+      "attack": 11,
+      "prepared": 19,
+      "cantrips": 6
+    }
+  },
+  "spell-slots": [
+    4,
+    3,
+    3,
+    3,
+    2,
+    1,
+    1,
+    1,
+    1
+  ]
+}

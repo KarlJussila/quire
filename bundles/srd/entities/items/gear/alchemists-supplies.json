@@ -1,0 +1,18 @@
+{
+  "id": "item:alchemists-supplies",
+  "name": "Alchemist’s Supplies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Alchemist’s supplies enable a character to produce useful concoctions, such as acid or alchemist’s fire.\n\n***Components.*** Alchemist’s supplies include two glass beakers, a metal frame to hold a beaker in place over an open flame, a glass stirring rod, a small mortar and pestle, and a pouch of common alchemical ingredients, including salt, powdered iron, and purified water.\n\n***Arcana.*** Proficiency with alchemist’s supplies allows you to unlock more information on Arcana checks involving potions and similar materials.\n\n***Investigation.***When you inspect an area for clues, proficiency with alchemist’s supplies grants additional insight into any chemicals or other substances that might have been used in the area.\n\n***Alchemical Crafting.***You can use this tool proficiency to create alchemical items. A character can spend money to collect raw materials, which weigh 1 pound for every 50 gp spent. The DM can allow a character to make a check using the indicated skill with advantage. As part of a long rest, you can use alchemist’s supplies to make one dose of acid, alchemist’s fire, antitoxin, oil, perfume, or soap. Subtract half the value of the created item from the total gp worth of raw materials you are carrying.\n\n##### ALCHEMIST’S SUPPLIES\n\n| Activity | DC |\n|---|---|\n| Create a puff of thick smoke | 10 |\n| Identify a poison | 10 |\n| Identify a substance | 15 |\n| Start a fire | 15 |\n| Neutralize acid | 20 |",
+    "plain": "Alchemist’s supplies enable a character to produce useful concoctions, such as acid or alchemist’s fire.\n\nComponents. Alchemist’s supplies include two glass beakers, a metal frame to hold a beaker in place over an open flame, a glass stirring rod, a small mortar and pestle, and a pouch of common alchemical ingredients, including salt, powdered iron, and purified water.\n\nArcana. Proficiency with alchemist’s supplies allows you to unlock more information on Arcana checks involving potions and similar materials.\n\nInvestigation.When you inspect an area for clues, proficiency with alchemist’s supplies grants additional insight into any chemicals or other substances that might have been used in the area.\n\nAlchemical Crafting.You can use this tool proficiency to create alchemical items. A character can spend money to collect raw materials, which weigh 1 pound for every 50 gp spent. The DM can allow a character to make a check using the indicated skill with advantage. As part of a long rest, you can use alchemist’s supplies to make one dose of acid, alchemist’s fire, antitoxin, oil, perfume, or soap. Subtract half the value of the created item from the total gp worth of raw materials you are carrying.\n\nALCHEMIST’S SUPPLIES\n\nActivity\tDC\n\nCreate a puff of thick smoke\t10\n\nIdentify a poison\t10\n\nIdentify a substance\t15\n\nStart a fire\t15\n\nNeutralize acid\t20",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 50,
+    "currency": "currency:gp"
+  },
+  "weight": 8.0
+}

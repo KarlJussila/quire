@@ -1,0 +1,18 @@
+{
+  "id": "item:costume@2024",
+  "name": "Costume",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing a Costume, you have Advantage on any ability check you make to impersonate the person or type of person it represents.",
+    "plain": "While wearing a Costume, you have Advantage on any ability check you make to impersonate the person or type of person it represents.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:gp"
+  },
+  "weight": 4.0
+}

@@ -1,0 +1,115 @@
+{
+  "id": "feature:barbarian/reckless-attack",
+  "name": "Reckless Attack",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.",
+    "plain": "Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.",
+    "wording": "srd"
+  },
+  "effects": [],
+  "activities": [
+    {
+      "key": "reckless-attack",
+      "name": "Reckless Attack",
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self",
+        "subject": {
+          "pool": "any"
+        },
+        "match": {
+          "roll": "roll:attack"
+        },
+        "when": {
+          "not": {
+            "happened": {
+              "event": "event:roll-made",
+              "by": "self",
+              "match": {
+                "roll": "roll:attack"
+              },
+              "since": "turn-start"
+            }
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "intercept": {
+            "mode": "advantage"
+          },
+          "when": {
+            "event": "event:roll-made",
+            "match": {
+              "attack": {
+                "range": "melee",
+                "via": "weapon",
+                "ability": "ability:str"
+              }
+            }
+          }
+        },
+        {
+          "applyState": {
+            "state": {
+              "ends": [
+                {
+                  "event": "event:turn-start",
+                  "subject": "self",
+                  "next": true
+                }
+              ],
+              "effects": [
+                {
+                  "type": "roll-mod",
+                  "mode": "advantage",
+                  "when": {
+                    "all": [
+                      {
+                        "event": "event:roll-made",
+                        "by": "self",
+                        "match": {
+                          "roll": "roll:attack",
+                          "attack": {
+                            "range": "melee",
+                            "via": "weapon",
+                            "ability": "ability:str"
+                          }
+                        }
+                      },
+                      {
+                        "turn": "self"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "roll-mod",
+                  "mode": "advantage",
+                  "when": {
+                    "event": "event:roll-made",
+                    "by": {
+                      "pool": "any"
+                    },
+                    "subject": "self",
+                    "match": {
+                      "roll": "roll:attack"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "to": "self"
+        }
+      ],
+      "when": {
+        "turn": "self"
+      }
+    }
+  ],
+  "gaps": []
+}

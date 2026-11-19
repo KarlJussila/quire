@@ -1,0 +1,10 @@
+{
+ "id": "feature:b",
+ "name": "B",
+ "source": {
+  "book": "ext"
+ },
+ "requires": {
+  "has": "feat:old-name"
+ }
+}

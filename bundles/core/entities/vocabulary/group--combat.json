@@ -1,0 +1,7 @@
+{
+  "id": "group:combat",
+  "name": "Combat",
+  "source": {
+    "book": "core"
+  }
+}

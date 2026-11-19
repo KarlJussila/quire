@@ -1,0 +1,42 @@
+{
+  "id": "creature:giant-fly",
+  "name": "Giant Fly",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Large beast, unaligned_\n\n- **Armor Class** 11\n- **Hit Points** 19 (3d10 + 3)\n- **Speed** 30 ft., fly 60 ft.\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| **Score**        |     14 |     13 |     13 |      2 |     10 |      3 |\n| **Modifier**     |     +2 |     +1 |     +1 |     -4 |     +0 |     -4 |\n| **Saving Throw** |     +2 |     +1 |     +1 |     -4 |     +0 |     -4 |\n\n- **Senses** darkvision 60 ft., passive Perception 10\n- **Languages** —",
+    "plain": "Large beast, unaligned\n\n- Armor Class 11\n- Hit Points 19 (3d10 + 3)\n- Speed 30 ft., fly 60 ft.\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| Score        |     14 |     13 |     13 |      2 |     10 |      3 |\n| Modifier     |     +2 |     +1 |     +1 |     -4 |     +0 |     -4 |\n| Saving Throw |     +2 |     +1 |     +1 |     -4 |     +0 |     -4 |\n\n- Senses darkvision 60 ft., passive Perception 10\n- Languages —",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 11,
+  "hp": {
+    "average": 19,
+    "formula": "3d10 + 3"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:str": 14,
+    "ability:dex": 13,
+    "ability:con": 13,
+    "ability:int": 2,
+    "ability:wis": 10,
+    "ability:cha": 3
+  },
+  "passivePerception": 10,
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  }
+}

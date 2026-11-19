@@ -1,0 +1,26 @@
+{
+  "id": "event:roll-resolved",
+  "name": "Roll Resolved",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A roll's result is fixed: `success` is whether it worked (an attack hits, a save or check succeeds), `crit` whether an attack roll scored a critical hit (a critical hit is also a success), and `margin` how much it beat or missed by. Its other fields are those of event:roll-made."
+  },
+  "payload": [
+    "roll",
+    "ability",
+    "skill",
+    "natural",
+    "total",
+    "mode",
+    "success",
+    "crit",
+    "margin",
+    "attack",
+    "spell",
+    "slot",
+    "against"
+  ],
+  "emittedBy": "engine"
+}

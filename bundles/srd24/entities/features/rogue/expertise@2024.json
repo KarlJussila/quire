@@ -1,0 +1,41 @@
+{
+  "id": "feature:rogue/expertise@2024",
+  "name": "Level 1: Expertise",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain Expertise in two of your skill proficiencies of your choice. Sleight of Hand and Stealth are recommended if you have proficiency in them.\n\nAt Rogue level 6, you gain Expertise in two more of your skill proficiencies of your choice.",
+    "plain": "You gain Expertise in two of your skill proficiencies of your choice. Sleight of Hand and Stealth are recommended if you have proficiency in them.\n\nAt Rogue level 6, you gain Expertise in two more of your skill proficiencies of your choice.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "level": "expertise",
+      "in": [
+        {
+          "choose": {
+            "key": "expertise",
+            "name": "Expertise",
+            "count": {
+              "byLevel": {
+                "1": 2,
+                "6": 4
+              },
+              "of": "class:rogue"
+            },
+            "from": [
+              {
+                "kind": "skill",
+                "where": {
+                  "proficient": "candidate"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

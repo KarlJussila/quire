@@ -1,0 +1,93 @@
+{
+  "id": "creature:dretch@2024",
+  "name": "Dretch",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 11,
+  "hp": {
+    "average": 18,
+    "formula": "4d6 + 4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 3,
+    "ability:con": 12,
+    "ability:dex": 11,
+    "ability:int": 5,
+    "ability:str": 12,
+    "ability:wis": 8
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 9,
+  "telepathy": 60,
+  "xp": 50,
+  "proficiencyBonus": 2,
+  "initiative": 0,
+  "habitat": [
+    "Planar (Abyss)"
+  ],
+  "cr": 0.25,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:lightning"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +3, reach 5 ft. _Hit:_ 4 (1d6 + 1) Slashing damage.",
+        "plain": "Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fetid Cloud",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 11, each creature in a 10-foot Emanation originating from the dretch. _Failure:_ The target has the Poisoned condition until the end of its next turn. While Poisoned, the creature can take either an action or a Bonus Action on its turn, not both, and it can't take Reactions.",
+        "plain": "Constitution Saving Throw: DC 11, each creature in a 10-foot Emanation originating from the dretch. Failure: The target has the Poisoned condition until the end of its next turn. While Poisoned, the creature can take either an action or a Bonus Action on its turn, not both, and it can't take Reactions.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

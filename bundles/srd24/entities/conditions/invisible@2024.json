@@ -1,0 +1,69 @@
+{
+  "id": "condition:invisible@2024",
+  "name": "Invisible",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you have the Invisible condition, you experience the following effects.\n\n_**Surprise.**_ If you're Invisible when you roll Initiative, you have Advantage on the roll.\n\n_**Concealed.**_ You aren't affected by any effect that requires its target to be seen unless the effect's creator can somehow see you. Any equipment you are wearing or carrying is also concealed.\n\n_**Attacks Affected.**_ Attack rolls against you have Disadvantage, and your attack rolls have Advantage. If a creature can somehow see you, you don't gain this benefit against that creature.",
+    "plain": "While you have the Invisible condition, you experience the following effects.\n\nSurprise. If you're Invisible when you roll Initiative, you have Advantage on the roll.\n\nConcealed. You aren't affected by any effect that requires its target to be seen unless the effect's creator can somehow see you. Any equipment you are wearing or carrying is also concealed.\n\nAttacks Affected. Attack rolls against you have Disadvantage, and your attack rolls have Advantage. If a creature can somehow see you, you don't gain this benefit against that creature.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any",
+          "where": {
+            "not": {
+              "perceives": {
+                "sense": "sight",
+                "of": "self"
+              }
+            }
+          }
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "not": {
+              "perceives": {
+                "sense": "sight",
+                "of": "self"
+              }
+            }
+          }
+        },
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:initiative"
+        }
+      }
+    }
+  ]
+}

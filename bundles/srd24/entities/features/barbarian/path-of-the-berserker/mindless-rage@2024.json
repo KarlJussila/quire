@@ -1,0 +1,52 @@
+{
+  "id": "feature:barbarian/path-of-the-berserker/mindless-rage@2024",
+  "name": "Level 6: Mindless Rage",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have Immunity to the Charmed and Frightened conditions while your Rage is active. If you're Charmed or Frightened when you enter your Rage, the condition ends on you.",
+    "plain": "You have Immunity to the Charmed and Frightened conditions while your Rage is active. If you're Charmed or Frightened when you enter your Rage, the condition ends on you.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened"
+      ],
+      "when": {
+        "has": "state:raging"
+      }
+    },
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:state-applied",
+          "match": {
+            "state": "state:raging"
+          },
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "endState": {
+              "state": "condition:charmed"
+            },
+            "to": "self"
+          },
+          {
+            "endState": {
+              "state": "condition:frightened"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

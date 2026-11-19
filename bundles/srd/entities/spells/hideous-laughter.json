@@ -1,0 +1,45 @@
+{
+  "id": "spell:hideous-laughter",
+  "name": "Hideous Laughter",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a Wisdom saving throw or fall Prone, becoming Incapacitated and unable to stand up for the duration. A creature with an Intelligence score of 4 or less isn't affected.\n\nAt the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the spell ends.",
+    "plain": "A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a Wisdom saving throw or fall Prone, becoming Incapacitated and unable to stand up for the duration. A creature with an Intelligence score of 4 or less isn't affected.\n\nAt the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the spell ends.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:enchantment",
+  "lists": [
+    "class:bard",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "tiny tarts and a feather that is waved in the air"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

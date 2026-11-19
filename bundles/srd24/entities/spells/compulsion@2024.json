@@ -1,0 +1,41 @@
+{
+  "id": "spell:compulsion@2024",
+  "name": "Compulsion",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Each creature of your choice that you can see within range must succeed on a Wisdom saving throw or have the Charmed condition until the spell ends.\n\nFor the duration, you can take a Bonus Action to designate a direction that is horizontal to you. Each Charmed target must use as much of its movement as possible to move in that direction on its next turn, taking the safest route. After moving in this way, a target repeats the save, ending the spell on itself on a success.",
+    "plain": "Each creature of your choice that you can see within range must succeed on a Wisdom saving throw or have the Charmed condition until the spell ends.\n\nFor the duration, you can take a Bonus Action to designate a direction that is horizontal to you. Each Charmed target must use as much of its movement as possible to move in that direction on its next turn, taking the safest route. After moving in this way, a target repeats the save, ending the spell on itself on a success.",
+    "wording": "srd"
+  },
+  "level": 4,
+  "school": "spell-school:enchantment",
+  "lists": [
+    "class:bard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "creature:white-dragon-wyrmling",
+  "name": "White Dragon Wyrmling",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 16,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 32,
+    "formula": "5d8 + 10"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:burrow": {
+      "speed": 15
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    },
+    "movement-mode:swim": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 14,
+    "ability:dex": 10,
+    "ability:int": 5,
+    "ability:str": 14,
+    "ability:wis": 10
+  },
+  "saves": {
+    "ability:cha": 2,
+    "ability:con": 4,
+    "ability:dex": 2,
+    "ability:wis": 2
+  },
+  "skills": {
+    "skill:perception": 4,
+    "skill:stealth": 2
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    },
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 450,
+  "cr": 2,
+  "languages": [
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:cold"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 7 (1d10 + 2) piercing damage plus 2 (1d4) cold damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2) piercing damage plus 2 (1d4) cold damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Cold Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon exhales an icy blast of hail in a 15-foot cone. Each creature in that area must make a DC 12 Constitution saving throw, taking 22 (5d8) cold damage on a failed save, or half as much damage on a successful one.",
+        "plain": "The dragon exhales an icy blast of hail in a 15-foot cone. Each creature in that area must make a DC 12 Constitution saving throw, taking 22 (5d8) cold damage on a failed save, or half as much damage on a successful one.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

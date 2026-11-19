@@ -1,0 +1,12 @@
+{
+  "id": "ability:dex",
+  "name": "Dexterity",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "abbreviation": "Dex",
+  "order": 2
+}

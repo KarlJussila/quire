@@ -1,0 +1,7 @@
+{
+  "id": "environment:bright-light",
+  "name": "Bright Light",
+  "source": {
+    "book": "core"
+  }
+}

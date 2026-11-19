@@ -1,0 +1,59 @@
+{
+  "id": "feature:barbarian/primal-knowledge@2024",
+  "name": "Level 3: Primal Knowledge",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain proficiency in another skill of your choice from the skill list available to Barbarians at level 1.\n\nIn addition, while your Rage is active, you can channel primal power when you attempt certain tasks; whenever you make an ability check using one of the following skills, you can make it as a Strength check even if it normally uses a different ability: Acrobatics, Intimidation, Perception, Stealth, or Survival. When you use this ability, your Strength represents primal power coursing through you, honing your agility, bearing, and senses.",
+    "plain": "You gain proficiency in another skill of your choice from the skill list available to Barbarians at level 1.\n\nIn addition, while your Rage is active, you can channel primal power when you attempt certain tasks; whenever you make an ability check using one of the following skills, you can make it as a Strength check even if it normally uses a different ability: Acrobatics, Intimidation, Perception, Stealth, or Survival. When you use this ability, your Strength represents primal power coursing through you, honing your agility, bearing, and senses.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skill",
+            "name": "Skill Proficiency",
+            "from": [
+              "skill:animal-handling",
+              "skill:athletics",
+              "skill:intimidation",
+              "skill:nature",
+              "skill:perception",
+              "skill:survival"
+            ],
+            "where": {
+              "not": {
+                "proficient": "candidate"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ability-substitute",
+      "for": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:check",
+          "skill": [
+            "skill:acrobatics",
+            "skill:intimidation",
+            "skill:perception",
+            "skill:stealth",
+            "skill:survival"
+          ]
+        }
+      },
+      "use": "ability:str",
+      "when": {
+        "has": "state:raging"
+      }
+    }
+  ]
+}

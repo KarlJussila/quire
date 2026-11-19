@@ -1,0 +1,123 @@
+{
+  "id": "creature:young-white-dragon@2024",
+  "name": "Young White Dragon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 17,
+  "hp": {
+    "average": 123,
+    "formula": "13d10 + 52"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:burrow": {
+      "speed": 20
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 12,
+    "ability:con": 18,
+    "ability:dex": 10,
+    "ability:int": 6,
+    "ability:str": 18,
+    "ability:wis": 11
+  },
+  "saves": {
+    "ability:dex": 3,
+    "ability:int": 2,
+    "ability:wis": 3
+  },
+  "skills": {
+    "skill:perception": 6,
+    "skill:stealth": 3
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    },
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 16,
+  "xp": 2300,
+  "proficiencyBonus": 3,
+  "initiative": 3,
+  "habitat": [
+    "Arctic"
+  ],
+  "treasure": [
+    "Arcana"
+  ],
+  "cr": 6,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:cold"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Ice Walk",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, Difficult Terrain composed of ice or snow doesn't cost it extra movement.",
+        "plain": "The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, Difficult Terrain composed of ice or snow doesn't cost it extra movement.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes three Rend attacks.",
+        "plain": "The dragon makes three Rend attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 10 ft. _Hit:_ 9 (2d4 + 4) Slashing damage plus 2 (1d4) Cold damage.",
+        "plain": "Melee Attack Roll: +7, reach 10 ft. Hit: 9 (2d4 + 4) Slashing damage plus 2 (1d4) Cold damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Cold Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 15, each creature in a 30-foot Cone. _Failure:_ 40 (9d8) Cold damage. _Success:_ Half damage.",
+        "plain": "Constitution Saving Throw: DC 15, each creature in a 30-foot Cone. Failure: 40 (9d8) Cold damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "creature:eagle",
+  "name": "Eagle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "hp": {
+    "average": 3,
+    "formula": "1d6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 10,
+    "ability:dex": 15,
+    "ability:int": 2,
+    "ability:str": 6,
+    "ability:wis": 14
+  },
+  "skills": {
+    "skill:perception": 4
+  },
+  "passivePerception": 14,
+  "xp": 10,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Keen Sight",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The eagle has advantage on Wisdom (Perception) checks that rely on sight.",
+        "plain": "The eagle has advantage on Wisdom (Perception) checks that rely on sight.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Talons",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 4 (1d4 + 2) slashing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

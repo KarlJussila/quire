@@ -1,0 +1,102 @@
+{
+  "id": "creature:drow",
+  "name": "Drow",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral-evil",
+  "ac": 15,
+  "acFrom": [
+    "chain shirt"
+  ],
+  "hp": {
+    "average": 13,
+    "formula": "3d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 12,
+    "ability:con": 10,
+    "ability:dex": 14,
+    "ability:int": 11,
+    "ability:str": 10,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:perception": 2,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 12,
+  "xp": 50,
+  "cr": 0.25,
+  "languages": [
+    {
+      "language": "language:elvish"
+    },
+    {
+      "language": "language:undercommon"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Fey Ancestry",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The drow has advantage on saving throws against being Charmed, and magic can't put the drow to sleep.",
+        "plain": "The drow has advantage on saving throws against being Charmed, and magic can't put the drow to sleep.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Innate Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The drow's spellcasting ability is Charisma (spell save DC 11). It can innately cast the following spells, requiring no material components:\n\n- At will: Dancing Lights\n- 1/day each: Darkness, Faerie Fire",
+        "plain": "The drow's spellcasting ability is Charisma (spell save DC 11). It can innately cast the following spells, requiring no material components:\n\n- At will: Dancing Lights\n- 1/day each: Darkness, Faerie Fire",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sunlight Sensitivity",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+        "plain": "While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shortsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 5 (1d6 + 2) piercing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hand Crossbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +4 to hit, range 30/120 ft., one target. _Hit:_ 5 (1d6 + 2) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be Poisoned for 1 hour. If the saving throw fails by 5 or more, the target is also Unconscious while poisoned in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake.",
+        "plain": "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be Poisoned for 1 hour. If the saving throw fails by 5 or more, the target is also Unconscious while poisoned in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

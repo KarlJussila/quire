@@ -1,0 +1,38 @@
+{
+  "id": "feature:withdraw-cost-1d6@2024",
+  "name": "Withdraw (Cost: 1d6)",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Immediately after the attack, you move up to half your Speed without provoking Opportunity Attacks.",
+    "plain": "Immediately after the attack, you move up to half your Speed without provoking Opportunity Attacks.",
+    "wording": "srd"
+  },
+  "values": {
+    "die-cost": 1
+  },
+  "activities": [
+    {
+      "key": "cunning-strike-withdraw",
+      "standalone": false,
+      "outcomes": [
+        {
+          "move": {
+            "kind": "move",
+            "distance": {
+              "divide": {
+                "speed": "in-use"
+              },
+              "by": 2,
+              "round": "down"
+            },
+            "provokes": false
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

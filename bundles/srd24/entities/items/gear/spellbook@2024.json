@@ -1,0 +1,19 @@
+{
+  "id": "item:spellbook@2024",
+  "name": "Spellbook",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "A Tiny 3-pound book of 100 pages holding a Wizard's spells, usable as a Spellcasting Focus for Wizard spells.",
+    "wording": "original"
+  },
+  "group": "group:adventuring-gear",
+  "effects": [
+    {
+      "type": "resource",
+      "key": "spellbook",
+      "recover": []
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "ability:cha",
+  "name": "Charisma",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "abbreviation": "Cha",
+  "order": 6
+}

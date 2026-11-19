@@ -1,0 +1,95 @@
+{
+  "id": "creature:copper-dragon-wyrmling",
+  "name": "Copper Dragon Wyrmling",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:chaotic-good",
+  "ac": 16,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 22,
+    "formula": "4d8 + 4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:climb": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 13,
+    "ability:con": 13,
+    "ability:dex": 12,
+    "ability:int": 14,
+    "ability:str": 15,
+    "ability:wis": 11
+  },
+  "saves": {
+    "ability:cha": 3,
+    "ability:con": 3,
+    "ability:dex": 3,
+    "ability:wis": 2
+  },
+  "skills": {
+    "skill:perception": 4,
+    "skill:stealth": 3
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    },
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 200,
+  "cr": 1,
+  "languages": [
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:acid"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 7 (1d10 + 2) piercing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Breath Weapons",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon uses one of the following breath weapons.\n\n- **Acid Breath.** The dragon exhales acid in an 20-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 18 (4d8) acid damage on a failed save, or half as much damage on a successful one.\n- **Slowing Breath.** The dragon exhales gas in a 15-foot cone. Each creature in that area must succeed on a DC 11 Constitution saving throw. On a failed save, the creature can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save.",
+        "plain": "The dragon uses one of the following breath weapons.\n\n- Acid Breath. The dragon exhales acid in an 20-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 18 (4d8) acid damage on a failed save, or half as much damage on a successful one.\n- Slowing Breath. The dragon exhales gas in a 15-foot cone. Each creature in that area must succeed on a DC 11 Constitution saving throw. On a failed save, the creature can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "weapon-property:heavy",
+  "name": "Heavy",
+  "source": {
+    "book": "core"
+  }
+}

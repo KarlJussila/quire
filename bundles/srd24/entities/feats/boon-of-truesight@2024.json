@@ -1,0 +1,46 @@
+{
+  "id": "feat:boon-of-truesight@2024",
+  "name": "Boon of Truesight",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain the following benefits.\n\n_**Ability Score Increase.**_ Increase one ability score of your choice by 1, to a maximum of 30.\n\n_**Truesight.**_ You have Truesight with a range of 60 feet.",
+    "plain": "You gain the following benefits.\n\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\n\nTruesight. You have Truesight with a range of 60 feet.",
+    "wording": "srd"
+  },
+  "group": "group:epic-boon",
+  "requires": {
+    "compare": "levels.total",
+    "atLeast": 19
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "$at": {
+            "choose": {
+              "key": "ability",
+              "name": "Ability Score Increase",
+              "from": [
+                {
+                  "kind": "ability"
+                }
+              ]
+            }
+          },
+          "$add": {
+            "amount": 1,
+            "upTo": 30
+          }
+        }
+      }
+    },
+    {
+      "type": "sense",
+      "sense": "sense:truesight",
+      "range": 60
+    }
+  ]
+}

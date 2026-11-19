@@ -1,0 +1,24 @@
+{
+  "id": "feature:halfling/lightfoot-halfling/ability-score-increase",
+  "name": "Ability Score Increase",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Your Charisma score increases by 1.",
+    "plain": "Your Charisma score increases by 1.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:cha": {
+            "$add": 1
+          }
+        }
+      }
+    }
+  ]
+}

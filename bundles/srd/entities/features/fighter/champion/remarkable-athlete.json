@@ -1,0 +1,37 @@
+{
+  "id": "feature:fighter/champion/remarkable-athlete",
+  "name": "Remarkable Athlete",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 7th level, you can add half your proficiency bonus (round up) to any Strength, Dexterity, or Constitution check you make that doesn't already use your proficiency bonus.\n\nIn addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength modifier.",
+    "plain": "Starting at 7th level, you can add half your proficiency bonus (round up) to any Strength, Dexterity, or Constitution check you make that doesn't already use your proficiency bonus.\n\nIn addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength modifier.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "jump": {
+          "$add": "modifiers.ability:str"
+        }
+      },
+      "when": {
+        "prose": {
+          "text": "running long jump",
+          "gap": {
+            "category": "test",
+            "name": "running-long-jump"
+          }
+        }
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Half proficiency rounded up on unproficient Strength, Dexterity, and Constitution checks needs a rounding-aware proficiency rule."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "restriction:end-attunement",
+  "name": "End Attunement",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Voluntarily end attunement to the item responsible for this curse."
+  }
+}

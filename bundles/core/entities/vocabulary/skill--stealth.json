@@ -1,0 +1,11 @@
+{
+  "id": "skill:stealth",
+  "name": "Stealth",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:dex"
+}

@@ -1,0 +1,122 @@
+{
+  "id": "feature:warlock/repelling-blast@2024",
+  "name": "Repelling Blast",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 2+ Warlock, a Warlock Cantrip That Deals Damage via an Attack Roll_\n\nChoose one of your known Warlock cantrips that requires an attack roll. When you hit a Large or smaller creature with that cantrip, you can push the creature up to 10 feet straight away from you.\n\n_**Repeatable.**_ You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+    "plain": "Prerequisite: Level 2+ Warlock, a Warlock Cantrip That Deals Damage via an Attack Roll\n\nChoose one of your known Warlock cantrips that requires an attack roll. When you hit a Large or smaller creature with that cantrip, you can push the creature up to 10 feet straight away from you.\n\nRepeatable. You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "record",
+      "pick": {
+        "choose": {
+          "key": "cantrip",
+          "name": "Cantrip",
+          "from": [
+            {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "level": 0,
+                      "lists": "class:warlock"
+                    }
+                  },
+                  {
+                    "has": "candidate"
+                  },
+                  {
+                    "activity": {
+                      "kind": "activity",
+                      "where": {
+                        "match": {
+                          "delivery": {
+                            "attack": true
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "dealsDamage": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "repelling-blast",
+      "name": "Repelling Blast",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true
+        },
+        "when": {
+          "all": [
+            {
+              "spell": {
+                "kind": "spell",
+                "where": {
+                  "is": {
+                    "chosen": "cantrip"
+                  }
+                }
+              }
+            },
+            {
+              "creature": "subject",
+              "where": {
+                "match": {
+                  "size": {
+                    "atMost": "size:large"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "outcomes": [
+        {
+          "move": {
+            "kind": "push",
+            "distance": 10,
+            "toward": {
+              "awayFrom": "self"
+            }
+          },
+          "to": "subject"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "choice",
+      "name": "Each repeat of Repelling Blast must choose a different eligible cantrip."
+    },
+    {
+      "category": "content-dependency",
+      "name": "The eligible cantrip filter needs typed attack and damage outcomes on the Warlock cantrips."
+    }
+  ],
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 2
+  },
+  "repeatable": true
+}

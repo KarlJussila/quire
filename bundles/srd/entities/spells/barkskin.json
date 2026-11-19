@@ -1,0 +1,45 @@
+{
+  "id": "spell:barkskin",
+  "name": "Barkskin",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You touch a willing creature. Until the spell ends, the target's skin has a rough, bark-like appearance, and the target's AC can't be less than 16, regardless of what kind of armor it is wearing.",
+    "plain": "You touch a willing creature. Until the spell ends, the target's skin has a rough, bark-like appearance, and the target's AC can't be less than 16, regardless of what kind of armor it is wearing.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:druid",
+    "class:ranger"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a handful of oak bark"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

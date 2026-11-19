@@ -1,0 +1,55 @@
+{
+  "id": "creature:warhorse",
+  "name": "Warhorse",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 11,
+  "hp": {
+    "average": 19,
+    "formula": "3d10 + 3"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 13,
+    "ability:dex": 12,
+    "ability:int": 2,
+    "ability:str": 18,
+    "ability:wis": 12
+  },
+  "passivePerception": 11,
+  "xp": 100,
+  "cr": 0.5,
+  "blocks": [
+    {
+      "name": "Trampling Charge",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the horse moves at least 20 feet straight toward a creature and then hits it with a hooves attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked Prone. If the target is prone, the horse can make another attack with its hooves against it as a bonus action.",
+        "plain": "If the horse moves at least 20 feet straight toward a creature and then hits it with a hooves attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked Prone. If the target is prone, the horse can make another attack with its hooves against it as a bonus action.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hooves",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 11 (2d6 + 4) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

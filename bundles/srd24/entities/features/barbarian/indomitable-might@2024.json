@@ -1,0 +1,34 @@
+{
+  "id": "feature:barbarian/indomitable-might@2024",
+  "name": "Level 18: Indomitable Might",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If your total for a Strength check or Strength saving throw is less than your Strength score, you can use that score in place of the total.",
+    "plain": "If your total for a Strength check or Strength saving throw is less than your Strength score, you can use that score in place of the total.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$atLeast": "abilities.ability:str"
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": [
+            "roll:check",
+            "roll:save"
+          ],
+          "ability": "ability:str"
+        }
+      }
+    }
+  ]
+}

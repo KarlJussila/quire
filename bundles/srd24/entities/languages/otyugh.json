@@ -1,0 +1,12 @@
+{
+  "id": "language:otyugh",
+  "name": "Otyugh",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "- **Languages** Otyugh; telepathy 120 ft. (doesn't allow the receiving creature to respond telepathically)",
+    "plain": "- Languages Otyugh; telepathy 120 ft. (doesn't allow the receiving creature to respond telepathically)",
+    "wording": "srd"
+  }
+}

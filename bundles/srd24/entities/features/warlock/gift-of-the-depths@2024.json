@@ -1,0 +1,52 @@
+{
+  "id": "feature:warlock/gift-of-the-depths@2024",
+  "name": "Gift of the Depths",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 5+ Warlock_\n\nYou can breathe underwater, and you gain a Swim Speed equal to your Speed.\n\nYou can also cast Water Breathing once without expending a spell slot. You regain the ability to cast it in this way again when you finish a Long Rest.",
+    "plain": "Prerequisite: Level 5+ Warlock\n\nYou can breathe underwater, and you gain a Swim Speed equal to your Speed.\n\nYou can also cast Water Breathing once without expending a spell slot. You regain the ability to cast it in this way again when you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 5
+  },
+  "effects": [
+    {
+      "type": "speed",
+      "mode": "movement-mode:swim",
+      "speed": "speeds.movement-mode:walk.speed"
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:water-breathing"
+      ],
+      "how": "innate",
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "character-state",
+      "name": "Can breathe air and water"
+    }
+  ]
+}

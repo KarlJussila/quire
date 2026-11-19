@@ -1,0 +1,68 @@
+{
+  "id": "creature:guard@2024",
+  "name": "Guard",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 16,
+  "hp": {
+    "average": 11,
+    "formula": "2d8 + 2"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 12,
+    "ability:dex": 12,
+    "ability:int": 10,
+    "ability:str": 13,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:perception": 2
+  },
+  "passivePerception": 12,
+  "xp": 25,
+  "proficiencyBonus": 2,
+  "initiative": 1,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Armaments",
+    "Individual"
+  ],
+  "gear": [
+    "Chain Shirt",
+    "Shield",
+    "Spear"
+  ],
+  "cr": 0.125,
+  "languages": [
+    {
+      "language": "language:common"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Spear",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +3, reach 5 ft. or range 20/60 ft. _Hit:_ 4 (1d6 + 1) Piercing damage.",
+        "plain": "Melee or Ranged Attack Roll: +3, reach 5 ft. or range 20/60 ft. Hit: 4 (1d6 + 1) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

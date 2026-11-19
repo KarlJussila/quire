@@ -1,0 +1,28 @@
+{
+  "id": "feature:human/versatile@2024",
+  "name": "Versatile",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain an Origin feat of your choice (see \"Feats\"). Skilled is recommended.",
+    "plain": "You gain an Origin feat of your choice (see \"Feats\"). Skilled is recommended.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "feat",
+        "name": "Origin Feat",
+        "from": [
+          {
+            "kind": "feat",
+            "where": {
+              "group": "group:origin"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

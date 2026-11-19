@@ -1,0 +1,31 @@
+{
+  "id": "feature:human/skillful@2024",
+  "name": "Skillful",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain proficiency in one skill of your choice.",
+    "plain": "You gain proficiency in one skill of your choice.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skill",
+            "name": "Skill Proficiency",
+            "from": [
+              {
+                "kind": "skill"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

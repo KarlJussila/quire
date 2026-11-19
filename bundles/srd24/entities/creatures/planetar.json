@@ -1,0 +1,157 @@
+{
+  "id": "creature:planetar@2024",
+  "name": "Planetar",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:celestial",
+  "alignment": "alignment:lawful-good",
+  "ac": 19,
+  "hp": {
+    "average": 262,
+    "formula": "21d10 + 147"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 120,
+      "hover": true
+    }
+  },
+  "abilities": {
+    "ability:cha": 25,
+    "ability:con": 24,
+    "ability:dex": 20,
+    "ability:int": 19,
+    "ability:str": 24,
+    "ability:wis": 22
+  },
+  "saves": {
+    "ability:cha": 12,
+    "ability:con": 12,
+    "ability:str": 12,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:perception": 11
+  },
+  "senses": {
+    "sense:truesight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 21,
+  "telepathy": 120,
+  "xp": 15000,
+  "proficiencyBonus": 5,
+  "initiative": 10,
+  "habitat": [
+    "Planar (Upper Planes)"
+  ],
+  "treasure": [
+    "Relics"
+  ],
+  "cr": 16,
+  "languages": [
+    {
+      "text": "All"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:radiant"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:exhaustion",
+        "condition:frightened"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Divine Awareness",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The planetar knows if it hears a lie.",
+        "plain": "The planetar knows if it hears a lie.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Exalted Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the planetar dies outside Mount Celestia, its body disappears, and it gains a new body instantly, reviving with all its Hit Points somewhere in Mount Celestia.",
+        "plain": "If the planetar dies outside Mount Celestia, its body disappears, and it gains a new body instantly, reviving with all its Hit Points somewhere in Mount Celestia.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The planetar has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The planetar has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The planetar makes three Radiant Sword attacks or uses Holy Burst twice.",
+        "plain": "The planetar makes three Radiant Sword attacks or uses Holy Burst twice.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Radiant Sword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +12, reach 10 ft. _Hit:_ 14 (2d6 + 7) Slashing damage plus 18 (4d8) Radiant damage.",
+        "plain": "Melee Attack Roll: +12, reach 10 ft. Hit: 14 (2d6 + 7) Slashing damage plus 18 (4d8) Radiant damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Holy Burst",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 20, each enemy in a 20-foot-radius Sphere centered on a point the planetar can see within 120 feet. _Failure:_ 24 (7d6) Radiant damage. _Success:_ Half damage.",
+        "plain": "Dexterity Saving Throw: DC 20, each enemy in a 20-foot-radius Sphere centered on a point the planetar can see within 120 feet. Failure: 24 (7d6) Radiant damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The planetar casts one of the following spells, requiring no Material components and using Charisma as spellcasting ability (spell save DC 20):\n\n- **At Will:** Detect Evil and Good\n- **1/Day Each:** Commune, Control Weather, Dispel Evil and Good, Raise Dead",
+        "plain": "The planetar casts one of the following spells, requiring no Material components and using Charisma as spellcasting ability (spell save DC 20):\n\n- At Will: Detect Evil and Good\n- 1/Day Each: Commune, Control Weather, Dispel Evil and Good, Raise Dead",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Divine Aid",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The planetar casts Cure Wounds, Invisibility, Lesser Restoration, or Remove Curse, using the same spellcasting ability as Spellcasting.",
+        "plain": "The planetar casts Cure Wounds, Invisibility, Lesser Restoration, or Remove Curse, using the same spellcasting ability as Spellcasting.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

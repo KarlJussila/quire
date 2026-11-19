@@ -1,0 +1,7 @@
+{
+  "id": "group:disease",
+  "name": "Disease",
+  "source": {
+    "book": "core"
+  }
+}

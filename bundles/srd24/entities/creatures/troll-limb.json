@@ -1,0 +1,79 @@
+{
+  "id": "creature:troll-limb@2024",
+  "name": "Troll Limb",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:giant",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 13,
+  "hp": {
+    "average": 14,
+    "formula": "4d6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 1,
+    "ability:con": 10,
+    "ability:dex": 12,
+    "ability:int": 1,
+    "ability:str": 18,
+    "ability:wis": 9
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 9,
+  "xp": 100,
+  "proficiencyBonus": 2,
+  "initiative": 1,
+  "habitat": [
+    "Arctic",
+    "Forest",
+    "Hill",
+    "Mountain",
+    "Swamp",
+    "Underdark"
+  ],
+  "cr": 0.5,
+  "blocks": [
+    {
+      "name": "Regeneration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The limb regains 5 Hit Points at the start of each of its turns. If the limb takes Acid or Fire damage, this trait doesn't function on the limb's next turn. The limb dies only if it starts its turn with 0 Hit Points and doesn't regenerate.",
+        "plain": "The limb regains 5 Hit Points at the start of each of its turns. If the limb takes Acid or Fire damage, this trait doesn't function on the limb's next turn. The limb dies only if it starts its turn with 0 Hit Points and doesn't regenerate.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Troll Spawn",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The limb uncannily has the same senses as a whole troll. If the limb isn't destroyed within 24 hours, roll 1d12. On a 12, the limb turns into a **Troll**. Otherwise, the limb withers away.",
+        "plain": "The limb uncannily has the same senses as a whole troll. If the limb isn't destroyed within 24 hours, roll 1d12. On a 12, the limb turns into a Troll. Otherwise, the limb withers away.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 5 ft. _Hit:_ 9 (2d4 + 4) Slashing damage.",
+        "plain": "Melee Attack Roll: +6, reach 5 ft. Hit: 9 (2d4 + 4) Slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

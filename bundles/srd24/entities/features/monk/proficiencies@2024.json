@@ -1,0 +1,86 @@
+{
+  "id": "feature:monk/proficiencies@2024",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Saving Throw Proficiencies: Strength and Dexterity\nSkill Proficiencies: Choose 2: Acrobatics, Athletics, History, Insight, Religion, or Stealth\nWeapon Proficiencies: Simple weapons and Martial weapons that have the Light property\nTool Proficiencies: Choose one type of Artisan's Tools or Musical Instrument (see \"Equipment\")\nArmor Training: None",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:str",
+        "ability:dex"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon",
+        {
+          "kind": "item",
+          "where": {
+            "all": [
+              {
+                "group": "group:martial-weapon"
+              },
+              {
+                "match": {
+                  "weapon": {
+                    "properties": "weapon-property:light"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              "skill:acrobatics",
+              "skill:athletics",
+              "skill:history",
+              "skill:insight",
+              "skill:religion",
+              "skill:stealth"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "tools",
+            "name": "Tool Proficiencies",
+            "from": [
+              {
+                "kind": "item",
+                "where": {
+                  "group": [
+                    "group:artisan-tools",
+                    "group:musical-instrument"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

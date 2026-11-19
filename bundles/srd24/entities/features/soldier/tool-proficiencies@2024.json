@@ -1,0 +1,32 @@
+{
+  "id": "feature:soldier/tool-proficiencies@2024",
+  "name": "Tool Proficiency",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Tool Proficiency: _Choose one kind of Gaming Set_ (see \"Equipment\")",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "tool",
+            "name": "Tool Proficiency",
+            "from": [
+              {
+                "kind": "item",
+                "where": {
+                  "group": "group:gaming-set"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

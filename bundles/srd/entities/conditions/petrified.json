@@ -1,0 +1,77 @@
+{
+  "id": "condition:petrified",
+  "name": "Petrified",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- A Petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance (usually stone). Its weight increases by a factor of ten, and it ceases aging.\n- The creature is Incapacitated (see the condition), can't move or speak, and is unaware of its surroundings.\n- Attack rolls against the creature have advantage.\n- The creature automatically fails Strength and Dexterity saving throws.\n- The creature has resistance to all damage.\n- The creature is immune to poison and disease, although a poison or disease already in its system is suspended, not neutralized.",
+    "plain": "A Petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance (usually stone). Its weight increases by a factor of ten, and it ceases aging.\nThe creature is Incapacitated (see the condition), can't move or speak, and is unaware of its surroundings.\nAttack rolls against the creature have advantage.\nThe creature automatically fails Strength and Dexterity saving throws.\nThe creature has resistance to all damage.\nThe creature is immune to poison and disease, although a poison or disease already in its system is suspended, not neutralized.",
+    "wording": "srd"
+  },
+  "implies": [
+    "condition:incapacitated"
+  ],
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:move",
+        "restriction:speak",
+        "restriction:see",
+        "restriction:hear"
+      ]
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any"
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": [
+            "ability:str",
+            "ability:dex"
+          ]
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "resist": {
+        "all": true
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "weight": {
+          "$multiply": 10
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison",
+        "condition:poisoned",
+        "source-type:disease"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "spell:hold-person",
+  "name": "Hold Person",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Choose a humanoid that you can see within range. The target must succeed on a Wisdom saving throw or be Paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.\n\n_**At Higher Levels.**_ When you cast this spell using a spell slot of 3rd level or higher, you can target one additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them.",
+    "plain": "Choose a humanoid that you can see within range. The target must succeed on a Wisdom saving throw or be Paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.\n\nAt Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:enchantment",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:druid",
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a small, straight piece of iron"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

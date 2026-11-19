@@ -1,0 +1,8 @@
+{
+  "id": "group:artisan-tools",
+  "name": "Artisan's Tools",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:tools"
+}

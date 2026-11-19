@@ -1,0 +1,71 @@
+{
+  "id": "feature:warlock/one-with-shadows",
+  "name": "One with Shadows",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite: 5th level_\n\nWhen you are in an area of dim light or darkness, you can use your action to become Invisible until you move or take an action or a reaction.",
+    "plain": "Prerequisite: 5th level\n\nWhen you are in an area of dim light or darkness, you can use your action to become Invisible until you move or take an action or a reaction.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 5
+  },
+  "effects": [],
+  "activities": [
+    {
+      "key": "one-with-shadows",
+      "name": "Become Invisible",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "when": {
+        "environment": [
+          "environment:dim-light",
+          "environment:darkness"
+        ]
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:invisible",
+            "ends": [
+              {
+                "event": "event:moved",
+                "subject": "self"
+              },
+              {
+                "event": "event:activity-used",
+                "by": "self",
+                "when": {
+                  "any": [
+                    {
+                      "event": "event:activity-used",
+                      "match": {
+                        "spent": "action"
+                      }
+                    },
+                    {
+                      "event": "event:activity-used",
+                      "match": {
+                        "spent": "reaction"
+                      }
+                    }
+                  ]
+                },
+                "next": true
+              }
+            ]
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,104 @@
+{
+  "id": "creature:wereboar@2024",
+  "name": "Wereboar",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:neutral-evil",
+  "ac": 15,
+  "hp": {
+    "average": 97,
+    "formula": "15d8 + 30"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30,
+      "note": "40 ft. boar form only"
+    }
+  },
+  "abilities": {
+    "ability:cha": 8,
+    "ability:con": 15,
+    "ability:dex": 10,
+    "ability:int": 10,
+    "ability:str": 17,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:perception": 2
+  },
+  "passivePerception": 12,
+  "xp": 1100,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Forest",
+    "Grassland",
+    "Hill"
+  ],
+  "treasure": [
+    "Individual"
+  ],
+  "gear": [
+    "Javelins (6)"
+  ],
+  "cr": 4,
+  "languages": [
+    {
+      "text": "Common (can't speak in boar form)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The wereboar makes two attacks, using Javelin or Tusk in any combination. It can replace one attack with a Gore attack.",
+        "plain": "The wereboar makes two attacks, using Javelin or Tusk in any combination. It can replace one attack with a Gore attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Gore (Boar or Hybrid Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_  +5, reach 5 ft. _Hit:_ 12 (2d8 + 3) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. _Constitution Saving Throw:_ DC 12. _Failure:_ The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a **Wereboar** under the GM's control and has 10 Hit Points. _Success:_ The target is immune to this wereboar's curse for 24 hours.",
+        "plain": "Melee Attack Roll:  +5, reach 5 ft. Hit: 12 (2d8 + 3) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. Constitution Saving Throw: DC 12. Failure: The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a Wereboar under the GM's control and has 10 Hit Points. Success: The target is immune to this wereboar's curse for 24 hours.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Javelin (Humanoid or Hybrid Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +5, reach 5 ft. or range 30/120 ft. _Hit:_ 13 (3d6 + 3) Piercing damage.",
+        "plain": "Melee or Ranged Attack Roll: +5, reach 5 ft. or range 30/120 ft. Hit: 13 (3d6 + 3) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tusk (Boar or Hybrid Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 10 (2d6 + 3) Piercing damage. If the target is a Medium or smaller creature and the wereboar moved 20+ feet straight toward it immediately before the hit, the target takes an extra 7 (2d6) Piercing damage and has the Prone condition.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 10 (2d6 + 3) Piercing damage. If the target is a Medium or smaller creature and the wereboar moved 20+ feet straight toward it immediately before the hit, the target takes an extra 7 (2d6) Piercing damage and has the Prone condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shape-Shift",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The wereboar shape-shifts into a Medium boar-humanoid hybrid or a Small boar, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed.",
+        "plain": "The wereboar shape-shifts into a Medium boar-humanoid hybrid or a Small boar, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "feature:elf/elven-lineage/high-elf@2024",
+  "name": "High Elf",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Level 1: You know the Prestidigitation cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list. Level 3: Detect Magic. Level 5: Misty Step.",
+    "wording": "srd"
+  },
+  "group": "group:elven-lineage",
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:prestidigitation"
+      ],
+      "how": "known",
+      "ability": {
+        "chosen": "spellcasting-ability",
+        "from": "feature:elf/elven-lineage@2024"
+      }
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.total",
+        "atLeast": 3
+      },
+      "spells": [
+        "spell:detect-magic"
+      ],
+      "how": "prepared",
+      "ability": {
+        "chosen": "spellcasting-ability",
+        "from": "feature:elf/elven-lineage@2024"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.total",
+        "atLeast": 5
+      },
+      "spells": [
+        "spell:misty-step"
+      ],
+      "how": "prepared",
+      "ability": {
+        "chosen": "spellcasting-ability",
+        "from": "feature:elf/elven-lineage@2024"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "choice",
+      "name": "High Elf: whenever you finish a Long Rest, you can replace Prestidigitation with a different Wizard cantrip"
+    }
+  ]
+}

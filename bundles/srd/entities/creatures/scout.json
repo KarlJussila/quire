@@ -1,0 +1,87 @@
+{
+  "id": "creature:scout",
+  "name": "Scout",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any",
+  "ac": 13,
+  "acFrom": [
+    "leather armor"
+  ],
+  "hp": {
+    "average": 16,
+    "formula": "3d8 + 3"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 12,
+    "ability:dex": 14,
+    "ability:int": 11,
+    "ability:str": 11,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:nature": 4,
+    "skill:perception": 5,
+    "skill:stealth": 6,
+    "skill:survival": 5
+  },
+  "passivePerception": 15,
+  "xp": 100,
+  "cr": 0.5,
+  "languages": [
+    {
+      "text": "any one language (usually Common)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Keen Hearing and Sight",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The scout has advantage on Wisdom (Perception) checks that rely on hearing or sight.",
+        "plain": "The scout has advantage on Wisdom (Perception) checks that rely on hearing or sight.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The scout makes two melee attacks or two ranged attacks.",
+        "plain": "The scout makes two melee attacks or two ranged attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shortsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 5 (1d6 + 2) piercing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Longbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +4 to hit, ranged 150/600 ft., one target. _Hit:_ 6 (1d8 + 2) piercing damage.",
+        "plain": "Ranged Weapon Attack: +4 to hit, ranged 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "spell:arcane-eye@2024",
+  "name": "Arcane Eye",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You create an Invisible, invulnerable eye within range that hovers for the duration. You mentally receive visual information from the eye, which can see in every direction. It also has Darkvision with a range of 30 feet.\n\nAs a Bonus Action, you can move the eye up to 30 feet in any direction. A solid barrier blocks the eye's movement, but the eye can pass through an opening as small as 1 inch in diameter.",
+    "plain": "You create an Invisible, invulnerable eye within range that hovers for the duration. You mentally receive visual information from the eye, which can see in every direction. It also has Darkvision with a range of 30 feet.\n\nAs a Bonus Action, you can move the eye up to 30 feet in any direction. A solid barrier blocks the eye's movement, but the eye can pass through an opening as small as 1 inch in diameter.",
+    "wording": "srd"
+  },
+  "level": 4,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a bit of bat fur"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

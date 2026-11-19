@@ -1,0 +1,7 @@
+{
+  "id": "restriction:cast-spells",
+  "name": "Cast Spells",
+  "source": {
+    "book": "core"
+  }
+}

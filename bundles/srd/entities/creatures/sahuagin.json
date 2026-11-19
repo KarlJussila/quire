@@ -1,0 +1,119 @@
+{
+  "id": "creature:sahuagin",
+  "name": "Sahuagin",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:lawful-evil",
+  "ac": 12,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 22,
+    "formula": "4d8 + 4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 9,
+    "ability:con": 12,
+    "ability:dex": 11,
+    "ability:int": 12,
+    "ability:str": 13,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:perception": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 15,
+  "xp": 100,
+  "cr": 0.5,
+  "languages": [
+    {
+      "language": "language:sahuagin"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Blood Frenzy",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sahuagin has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
+        "plain": "The sahuagin has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Limited Amphibiousness",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sahuagin can breathe air and water, but it needs to be submerged at least once every 4 hours to avoid suffocating.",
+        "plain": "The sahuagin can breathe air and water, but it needs to be submerged at least once every 4 hours to avoid suffocating.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shark Telepathy",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sahuagin can magically command any shark within 120 feet of it, using a limited telepathy.",
+        "plain": "The sahuagin can magically command any shark within 120 feet of it, using a limited telepathy.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The sahuagin makes two melee attacks: one with its bite and one with its claws or spear.",
+        "plain": "The sahuagin makes two melee attacks: one with its bite and one with its claws or spear.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one target. _Hit:_ 3 (1d4 + 1) piercing damage.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 3 (1d4 + 1) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claws",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one target. _Hit:_ 3 (1d4 + 1) slashing damage.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 3 (1d4 + 1) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spear",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Weapon Attack:_ +3 to hit, reach 5 ft. or range 20/60 ft., one target. _Hit:_ 4 (1d6 + 1) piercing damage, or 5 (1d8 + 1) piercing damage if used with two hands to make a melee attack.",
+        "plain": "Melee or Ranged Weapon Attack: +3 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d6 + 1) piercing damage, or 5 (1d8 + 1) piercing damage if used with two hands to make a melee attack.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

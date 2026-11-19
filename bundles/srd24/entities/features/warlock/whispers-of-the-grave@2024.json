@@ -1,0 +1,29 @@
+{
+  "id": "feature:warlock/whispers-of-the-grave@2024",
+  "name": "Whispers of the Grave",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 7+ Warlock_\n\nYou can cast Speak with Dead without expending a spell slot.",
+    "plain": "Prerequisite: Level 7+ Warlock\n\nYou can cast Speak with Dead without expending a spell slot.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:speak-with-dead"
+      ],
+      "how": "innate",
+      "countsAs": "class:warlock"
+    }
+  ],
+  "activities": [],
+  "gaps": [],
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 7
+  }
+}

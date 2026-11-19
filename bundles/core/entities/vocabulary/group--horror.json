@@ -1,0 +1,7 @@
+{
+  "id": "group:horror",
+  "name": "Horror",
+  "source": {
+    "book": "core"
+  }
+}

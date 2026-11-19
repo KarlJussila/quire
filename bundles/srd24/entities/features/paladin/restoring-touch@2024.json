@@ -1,0 +1,48 @@
+{
+  "id": "feature:paladin/restoring-touch@2024",
+  "name": "Level 14: Restoring Touch",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you use Lay On Hands on a creature, you can also remove one or more of the following conditions from the creature: Blinded, Charmed, Deafened, Frightened, Paralyzed, or Stunned. You must expend 5 Hit Points from the healing pool of Lay On Hands for each of these conditions you remove; those points don't also restore Hit Points to the creature.",
+    "plain": "When you use Lay On Hands on a creature, you can also remove one or more of the following conditions from the creature: Blinded, Charmed, Deafened, Frightened, Paralyzed, or Stunned. You must expend 5 Hit Points from the healing pool of Lay On Hands for each of these conditions you remove; those points don't also restore Hit Points to the creature.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "restoring-touch",
+      "name": "Restoring Touch",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 14
+      },
+      "cost": [
+        {
+          "resource": "lay-on-hands",
+          "amount": 5
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any"
+        }
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Remove one or more of these conditions from the creature: Blinded, Charmed, Deafened, Frightened, Paralyzed, or Stunned. Each one costs 5 hit points from the pool, and those points do not restore hit points.",
+            "gap": {
+              "category": "resource",
+              "name": "remove conditions for 5 hit points each"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

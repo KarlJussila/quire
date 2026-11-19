@@ -1,0 +1,8 @@
+{
+  "id": "stat-block-section:action",
+  "name": "Action",
+  "source": {
+    "book": "core"
+  },
+  "order": 2
+}

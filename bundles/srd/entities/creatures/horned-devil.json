@@ -1,0 +1,157 @@
+{
+  "id": "creature:horned-devil",
+  "name": "Horned Devil",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 18,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 178,
+    "formula": "17d10 + 85"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 17,
+    "ability:con": 21,
+    "ability:dex": 17,
+    "ability:int": 12,
+    "ability:str": 22,
+    "ability:wis": 16
+  },
+  "saves": {
+    "ability:cha": 7,
+    "ability:dex": 7,
+    "ability:str": 10,
+    "ability:wis": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 13,
+  "telepathy": 120,
+  "xp": 7200,
+  "cr": 11,
+  "languages": [
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical",
+                "damage-qualifier:silvered"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Devil's Sight",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "Magical darkness doesn't impede the devil's darkvision.",
+        "plain": "Magical darkness doesn't impede the devil's darkvision.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The devil has advantage on saving throws against spells and other magical effects.",
+        "plain": "The devil has advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The devil makes three melee attacks: two with its fork and one with its tail. It can use Hurl Flame in place of any melee attack.",
+        "plain": "The devil makes three melee attacks: two with its fork and one with its tail. It can use Hurl Flame in place of any melee attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fork",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +10 to hit, reach 10 ft., one target. _Hit:_ 15 (2d8 + 6) piercing damage.",
+        "plain": "Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit: 15 (2d8 + 6) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +10 to hit, reach 10 ft., one target. _Hit:_ 10 (1d8 + 6) piercing damage. If the target is a creature other than an undead or a construct, it must succeed on a DC 17 Constitution saving throw or lose 10 (3d6) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 10 (3d6). Any creature can take an action to stanch the wound with a successful DC 12 Wisdom (Medicine) check. The wound also closes if the target receives magical healing.",
+        "plain": "Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit: 10 (1d8 + 6) piercing damage. If the target is a creature other than an undead or a construct, it must succeed on a DC 17 Constitution saving throw or lose 10 (3d6) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 10 (3d6). Any creature can take an action to stanch the wound with a successful DC 12 Wisdom (Medicine) check. The wound also closes if the target receives magical healing.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hurl Flame",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "Ranged Spell Attack:_ +7 to hit, range 150 ft., one target. _Hit:_ 14 (4d6) fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire.",
+        "plain": "Ranged Spell Attack: +7 to hit, range 150 ft., one target. Hit:_ 14 (4d6) fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,536 @@
+{
+  "id": "rule:spell-slots",
+  "name": "Spell Slots",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A creature that casts spells through one class has that class's spell slots for its level in the class. One that casts through several adds up what each class counts toward spell slots and has the multiclass spellcaster's slots for that total. All its expended spell slots return when it finishes a long rest. The highest level of spell a source of spellcasting can prepare is the highest level it has slots for on its own."
+  },
+  "group": "group:character",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "$where": {
+            "slots": true
+          },
+          "slot-1": {
+            "$base": {
+              "table": "spellcasting.{at}.slots",
+              "column": "slot-1",
+              "by": "levels.{at}"
+            }
+          },
+          "slot-2": {
+            "$base": {
+              "table": "spellcasting.{at}.slots",
+              "column": "slot-2",
+              "by": "levels.{at}"
+            }
+          },
+          "slot-3": {
+            "$base": {
+              "table": "spellcasting.{at}.slots",
+              "column": "slot-3",
+              "by": "levels.{at}"
+            }
+          },
+          "slot-4": {
+            "$base": {
+              "table": "spellcasting.{at}.slots",
+              "column": "slot-4",
+              "by": "levels.{at}"
+            }
+          },
+          "slot-5": {
+            "$base": {
+              "table": "spellcasting.{at}.slots",
+              "column": "slot-5",
+              "by": "levels.{at}"
+            }
+          },
+          "slot-6": {
+            "$base": {
+              "table": "spellcasting.{at}.slots",
+              "column": "slot-6",
+              "by": "levels.{at}"
+            }
+          },
+          "slot-7": {
+            "$base": {
+              "table": "spellcasting.{at}.slots",
+              "column": "slot-7",
+              "by": "levels.{at}"
+            }
+          },
+          "slot-8": {
+            "$base": {
+              "table": "spellcasting.{at}.slots",
+              "column": "slot-8",
+              "by": "levels.{at}"
+            }
+          },
+          "slot-9": {
+            "$base": {
+              "table": "spellcasting.{at}.slots",
+              "column": "slot-9",
+              "by": "levels.{at}"
+            }
+          },
+          "spellLevel": {
+            "$base": {
+              "sum": [
+                {
+                  "min": [
+                    1,
+                    "spellcasting.{at}.slot-1"
+                  ]
+                },
+                {
+                  "min": [
+                    1,
+                    "spellcasting.{at}.slot-2"
+                  ]
+                },
+                {
+                  "min": [
+                    1,
+                    "spellcasting.{at}.slot-3"
+                  ]
+                },
+                {
+                  "min": [
+                    1,
+                    "spellcasting.{at}.slot-4"
+                  ]
+                },
+                {
+                  "min": [
+                    1,
+                    "spellcasting.{at}.slot-5"
+                  ]
+                },
+                {
+                  "min": [
+                    1,
+                    "spellcasting.{at}.slot-6"
+                  ]
+                },
+                {
+                  "min": [
+                    1,
+                    "spellcasting.{at}.slot-7"
+                  ]
+                },
+                {
+                  "min": [
+                    1,
+                    "spellcasting.{at}.slot-8"
+                  ]
+                },
+                {
+                  "min": [
+                    1,
+                    "spellcasting.{at}.slot-9"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "resource",
+      "key": "spell-slot-1",
+      "group": "spell-slots",
+      "values": {
+        "level": 1
+      },
+      "max": {
+        "if": {
+          "compare": {
+            "sum": {
+              "min": [
+                1,
+                "spellcasting.*.casterLevel"
+              ]
+            }
+          },
+          "atMost": 1
+        },
+        "then": {
+          "sum": "spellcasting.*.slot-1"
+        },
+        "else": {
+          "table": "table:multiclass-slots",
+          "column": "slot-1",
+          "by": {
+            "sum": "spellcasting.*.casterLevel"
+          }
+        }
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "resource",
+      "key": "spell-slot-2",
+      "group": "spell-slots",
+      "values": {
+        "level": 2
+      },
+      "max": {
+        "if": {
+          "compare": {
+            "sum": {
+              "min": [
+                1,
+                "spellcasting.*.casterLevel"
+              ]
+            }
+          },
+          "atMost": 1
+        },
+        "then": {
+          "sum": "spellcasting.*.slot-2"
+        },
+        "else": {
+          "table": "table:multiclass-slots",
+          "column": "slot-2",
+          "by": {
+            "sum": "spellcasting.*.casterLevel"
+          }
+        }
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "resource",
+      "key": "spell-slot-3",
+      "group": "spell-slots",
+      "values": {
+        "level": 3
+      },
+      "max": {
+        "if": {
+          "compare": {
+            "sum": {
+              "min": [
+                1,
+                "spellcasting.*.casterLevel"
+              ]
+            }
+          },
+          "atMost": 1
+        },
+        "then": {
+          "sum": "spellcasting.*.slot-3"
+        },
+        "else": {
+          "table": "table:multiclass-slots",
+          "column": "slot-3",
+          "by": {
+            "sum": "spellcasting.*.casterLevel"
+          }
+        }
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "resource",
+      "key": "spell-slot-4",
+      "group": "spell-slots",
+      "values": {
+        "level": 4
+      },
+      "max": {
+        "if": {
+          "compare": {
+            "sum": {
+              "min": [
+                1,
+                "spellcasting.*.casterLevel"
+              ]
+            }
+          },
+          "atMost": 1
+        },
+        "then": {
+          "sum": "spellcasting.*.slot-4"
+        },
+        "else": {
+          "table": "table:multiclass-slots",
+          "column": "slot-4",
+          "by": {
+            "sum": "spellcasting.*.casterLevel"
+          }
+        }
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "resource",
+      "key": "spell-slot-5",
+      "group": "spell-slots",
+      "values": {
+        "level": 5
+      },
+      "max": {
+        "if": {
+          "compare": {
+            "sum": {
+              "min": [
+                1,
+                "spellcasting.*.casterLevel"
+              ]
+            }
+          },
+          "atMost": 1
+        },
+        "then": {
+          "sum": "spellcasting.*.slot-5"
+        },
+        "else": {
+          "table": "table:multiclass-slots",
+          "column": "slot-5",
+          "by": {
+            "sum": "spellcasting.*.casterLevel"
+          }
+        }
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "resource",
+      "key": "spell-slot-6",
+      "group": "spell-slots",
+      "values": {
+        "level": 6
+      },
+      "max": {
+        "if": {
+          "compare": {
+            "sum": {
+              "min": [
+                1,
+                "spellcasting.*.casterLevel"
+              ]
+            }
+          },
+          "atMost": 1
+        },
+        "then": {
+          "sum": "spellcasting.*.slot-6"
+        },
+        "else": {
+          "table": "table:multiclass-slots",
+          "column": "slot-6",
+          "by": {
+            "sum": "spellcasting.*.casterLevel"
+          }
+        }
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "resource",
+      "key": "spell-slot-7",
+      "group": "spell-slots",
+      "values": {
+        "level": 7
+      },
+      "max": {
+        "if": {
+          "compare": {
+            "sum": {
+              "min": [
+                1,
+                "spellcasting.*.casterLevel"
+              ]
+            }
+          },
+          "atMost": 1
+        },
+        "then": {
+          "sum": "spellcasting.*.slot-7"
+        },
+        "else": {
+          "table": "table:multiclass-slots",
+          "column": "slot-7",
+          "by": {
+            "sum": "spellcasting.*.casterLevel"
+          }
+        }
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "resource",
+      "key": "spell-slot-8",
+      "group": "spell-slots",
+      "values": {
+        "level": 8
+      },
+      "max": {
+        "if": {
+          "compare": {
+            "sum": {
+              "min": [
+                1,
+                "spellcasting.*.casterLevel"
+              ]
+            }
+          },
+          "atMost": 1
+        },
+        "then": {
+          "sum": "spellcasting.*.slot-8"
+        },
+        "else": {
+          "table": "table:multiclass-slots",
+          "column": "slot-8",
+          "by": {
+            "sum": "spellcasting.*.casterLevel"
+          }
+        }
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "resource",
+      "key": "spell-slot-9",
+      "group": "spell-slots",
+      "values": {
+        "level": 9
+      },
+      "max": {
+        "if": {
+          "compare": {
+            "sum": {
+              "min": [
+                1,
+                "spellcasting.*.casterLevel"
+              ]
+            }
+          },
+          "atMost": 1
+        },
+        "then": {
+          "sum": "spellcasting.*.slot-9"
+        },
+        "else": {
+          "table": "table:multiclass-slots",
+          "column": "slot-9",
+          "by": {
+            "sum": "spellcasting.*.casterLevel"
+          }
+        }
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ]
+}

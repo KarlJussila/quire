@@ -1,0 +1,81 @@
+{
+  "id": "feature:paladin/cleansing-touch",
+  "name": "Cleansing Touch",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch.\n\nYou can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest.",
+    "plain": "Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch.\n\nYou can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "cleansing-touch",
+      "name": "Cleansing Touch",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 14
+      },
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any",
+          "where": {
+            "willing": true
+          }
+        }
+      },
+      "uses": {
+        "max": {
+          "max": [
+            "modifiers.ability:cha",
+            1
+          ]
+        },
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "endState": {
+            "state": {
+              "choose": {
+                "key": "spell",
+                "name": "Spell to End",
+                "from": [
+                  {
+                    "kind": "state",
+                    "where": {
+                      "spell": {
+                        "kind": "spell"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

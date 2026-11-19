@@ -1,0 +1,30 @@
+{
+  "id": "subclass:fighter/champion",
+  "name": "Champion",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.",
+    "plain": "The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.",
+    "wording": "srd"
+  },
+  "class": "class:fighter",
+  "levels": {
+    "10": [
+      "feature:fighter/champion/additional-fighting-style"
+    ],
+    "15": [
+      "feature:fighter/champion/superior-critical"
+    ],
+    "18": [
+      "feature:fighter/champion/survivor"
+    ],
+    "3": [
+      "feature:fighter/champion/improved-critical"
+    ],
+    "7": [
+      "feature:fighter/champion/remarkable-athlete"
+    ]
+  }
+}

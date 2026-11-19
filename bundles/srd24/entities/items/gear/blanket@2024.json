@@ -1,0 +1,18 @@
+{
+  "id": "item:blanket@2024",
+  "name": "Blanket",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wrapped in a blanket, you have Advantage on saving throws against extreme cold (see \"Gameplay Toolbox\").",
+    "plain": "While wrapped in a blanket, you have Advantage on saving throws against extreme cold (see \"Gameplay Toolbox\").",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:sp"
+  },
+  "weight": 3.0
+}

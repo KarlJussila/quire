@@ -1,0 +1,58 @@
+{
+  "id": "feature:dwarf/stonecunning@2024",
+  "name": "Stonecunning",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.",
+    "plain": "As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "stonecunning",
+      "name": "Stonecunning",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "uses": {
+        "max": "proficiencyBonus",
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "sense",
+                  "sense": "sense:tremorsense",
+                  "range": 60
+                }
+              ]
+            },
+            "duration": {
+              "amount": 10,
+              "unit": "minute"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

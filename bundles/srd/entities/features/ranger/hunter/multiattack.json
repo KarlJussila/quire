@@ -1,0 +1,82 @@
+{
+  "id": "feature:ranger/hunter/multiattack",
+  "name": "Multiattack",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 11th level, you gain one of the following features of your choice.\n\n_**Volley.**_ You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon's range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.\n\n_**Whirlwind Attack.**_ You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target.",
+    "plain": "At 11th level, you gain one of the following features of your choice.\n\nVolley. You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon's range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.\n\nWhirlwind Attack. You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "volley",
+      "name": "Volley",
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 11
+      },
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon's range. You need ammunition for each target, and you make a separate attack roll for each.",
+            "gap": {
+              "category": "attack",
+              "name": "volley against several creatures"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "whirlwind-attack",
+      "name": "Whirlwind Attack",
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 11
+      },
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "target": {
+        "count": {
+          "atLeast": 0
+        },
+        "who": {
+          "pool": "any",
+          "chosen": true,
+          "where": {
+            "within": 5,
+            "of": "self"
+          }
+        }
+      },
+      "delivery": {
+        "attack": {
+          "range": "melee",
+          "via": "weapon"
+        }
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Each attack that hits deals the weapon's damage.",
+            "gap": {
+              "category": "attack",
+              "name": "weapon damage on each hit"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

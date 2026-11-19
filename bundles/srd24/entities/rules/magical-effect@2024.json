@@ -1,0 +1,18 @@
+{
+  "id": "rule:magical-effect@2024",
+  "name": "Magical Effect",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "An effect is magical if it is created by a spell, a magic item, or a phenomenon that a rule labels as magical.",
+    "plain": "An effect is magical if it is created by a spell, a magic item, or a phenomenon that a rule labels as magical.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

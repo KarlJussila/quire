@@ -1,0 +1,46 @@
+{
+  "id": "spell:suggestion@2024",
+  "name": "Suggestion",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You suggest a course of activity — described in no more than 25 words — to one creature you can see within range that can hear and understand you. The suggestion must sound achievable and not involve anything that would obviously deal damage to the target or its allies. For example, you could say, \"Fetch the key to the cult's treasure vault, and give the key to me.\" Or you could say, \"Stop fighting, leave this library peacefully, and don't return.\"\n\nThe target must succeed on a Wisdom saving throw or have the Charmed condition for the duration or until you or your allies deal damage to the target. The Charmed target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for the target upon completing it.",
+    "plain": "You suggest a course of activity — described in no more than 25 words — to one creature you can see within range that can hear and understand you. The suggestion must sound achievable and not involve anything that would obviously deal damage to the target or its allies. For example, you could say, \"Fetch the key to the cult's treasure vault, and give the key to me.\" Or you could say, \"Stop fighting, leave this library peacefully, and don't return.\"\n\nThe target must succeed on a Wisdom saving throw or have the Charmed condition for the duration or until you or your allies deal damage to the target. The Charmed target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for the target upon completing it.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:enchantment",
+  "lists": [
+    "class:bard",
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "material": {
+      "text": "a drop of honey"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "duration": {
+        "amount": 8,
+        "unit": "hour",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

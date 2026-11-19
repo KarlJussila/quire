@@ -1,0 +1,18 @@
+{
+  "id": "item:paper@2024",
+  "name": "Paper",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 2 SP\n\nOne sheet of Paper can hold about 250 handwritten words.",
+    "plain": "Cost: 2 SP\n\nOne sheet of Paper can hold about 250 handwritten words.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:sp"
+  },
+  "weight": 0.0
+}

@@ -1,0 +1,113 @@
+{
+  "id": "creature:doppelganger@2024",
+  "name": "Doppelganger",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:neutral",
+  "ac": 14,
+  "hp": {
+    "average": 52,
+    "formula": "8d8 + 16"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 14,
+    "ability:con": 14,
+    "ability:dex": 18,
+    "ability:int": 11,
+    "ability:str": 11,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:deception": 6,
+    "skill:insight": 3
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 11,
+  "xp": 700,
+  "proficiencyBonus": 2,
+  "initiative": 4,
+  "habitat": [
+    "Underdark",
+    "Urban"
+  ],
+  "treasure": [
+    "Individual"
+  ],
+  "cr": 3,
+  "languages": [
+    {
+      "text": "Common plus three other languages"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The doppelganger makes two Slam attacks and uses Unsettling Visage if available.",
+        "plain": "The doppelganger makes two Slam attacks and uses Unsettling Visage if available.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Slam",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6 (with Advantage during the first round of each combat), reach 5 ft. _Hit:_ 11 (2d6 + 4) Bludgeoning damage.",
+        "plain": "Melee Attack Roll: +6 (with Advantage during the first round of each combat), reach 5 ft. Hit: 11 (2d6 + 4) Bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Read Thoughts",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The doppelganger casts Detect Thoughts, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 12).",
+        "plain": "The doppelganger casts Detect Thoughts, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 12).",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Unsettling Visage",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Wisdom Saving Throw:_ DC 12, each creature in a 15-foot Emanation originating from the doppelganger that can see the doppelganger. _Failure:_ The target has the Frightened condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+        "plain": "Wisdom Saving Throw: DC 12, each creature in a 15-foot Emanation originating from the doppelganger that can see the doppelganger. Failure: The target has the Frightened condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shape-Shift",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The doppelganger shape-shifts into a Medium or Small Humanoid, or it returns to its true form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed.",
+        "plain": "The doppelganger shape-shifts into a Medium or Small Humanoid, or it returns to its true form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

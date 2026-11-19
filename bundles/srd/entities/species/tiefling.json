@@ -1,0 +1,25 @@
+{
+  "id": "species:tiefling",
+  "name": "Tiefling",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "## Tiefling Traits\n\nTieflings share certain racial traits as a result of their infernal descent.\n\n_**Ability Score Increase.**_ Your Intelligence score increases by 1, and your Charisma score increases by 2.\n\n_**Age.**_ Tieflings mature at the same rate as humans but live a few years longer.\n\n_**Alignment.**_ Tieflings might not have an innate tendency toward evil, but many of them end up there. Evil or not, an independent nature inclines many tieflings toward a chaotic alignment.\n\n_**Size.**_ Tieflings are about the same size and build as humans. Your size is Medium.\n\n_**Speed.**_ Your base walking speed is 30 feet.\n\n_**Darkvision.**_ Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.\n\n_**Hellish Resistance.**_ You have resistance to fire damage.\n\n_**Infernal Legacy.**_ You know the Thaumaturgy cantrip. When you reach 3rd level, you can cast the Hellish Rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the Darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.\n\n_**Languages.**_ You can speak, read, and write Common and Infernal.",
+    "plain": "## Tiefling Traits\n\nTieflings share certain racial traits as a result of their infernal descent.\n\nAbility Score Increase. Your Intelligence score increases by 1, and your Charisma score increases by 2.\n\nAge. Tieflings mature at the same rate as humans but live a few years longer.\n\nAlignment. Tieflings might not have an innate tendency toward evil, but many of them end up there. Evil or not, an independent nature inclines many tieflings toward a chaotic alignment.\n\nSize. Tieflings are about the same size and build as humans. Your size is Medium.\n\nSpeed. Your base walking speed is 30 feet.\n\nDarkvision. Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.\n\nHellish Resistance. You have resistance to fire damage.\n\nInfernal Legacy. You know the Thaumaturgy cantrip. When you reach 3rd level, you can cast the Hellish Rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the Darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.\n\nLanguages. You can speak, read, and write Common and Infernal.",
+    "wording": "srd"
+  },
+  "features": [
+    "feature:tiefling/darkvision",
+    "feature:tiefling/ability-score-increase",
+    "feature:tiefling/hellish-resistance",
+    "feature:tiefling/infernal-legacy",
+    "feature:tiefling/languages"
+  ],
+  "size": "size:medium",
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  }
+}

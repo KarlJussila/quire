@@ -1,0 +1,17 @@
+{
+  "id": "species:dwarf/hill-dwarf",
+  "name": "Hill Dwarf",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.\n\n_**Ability Score Increase.**_ Your Wisdom score increases by 1.\n\n_**Dwarven Toughness.**_ Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.",
+    "plain": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.\n\nAbility Score Increase. Your Wisdom score increases by 1.\n\nDwarven Toughness. Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.",
+    "wording": "srd"
+  },
+  "parent": "species:dwarf",
+  "features": [
+    "feature:dwarf/hill-dwarf/ability-score-increase",
+    "feature:dwarf/hill-dwarf/dwarven-toughness"
+  ]
+}

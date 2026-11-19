@@ -1,0 +1,70 @@
+{
+  "id": "feature:monk/proficiencies",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Armor: None\nWeapons: Simple weapons, shortswords\nTools: Choose one type of artisan's tools or one musical instrument\nSaving Throws: Strength, Dexterity\nSkills: Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:str",
+        "ability:dex"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon",
+        "item:shortsword"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              "skill:acrobatics",
+              "skill:athletics",
+              "skill:history",
+              "skill:insight",
+              "skill:religion",
+              "skill:stealth"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "tools",
+            "name": "Tool Proficiencies",
+            "from": [
+              {
+                "kind": "item",
+                "where": {
+                  "group": [
+                    "group:artisan-tools",
+                    "group:musical-instrument"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "feature:paladin/radiant-strikes@2024",
+  "name": "Level 11: Radiant Strikes",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your strikes now carry supernatural power. When you hit a target with an attack roll using a Melee weapon or an Unarmed Strike, the target takes an extra 1d8 Radiant damage.",
+    "plain": "Your strikes now carry supernatural power. When you hit a target with an attack roll using a Melee weapon or an Unarmed Strike, the target takes an extra 1d8 Radiant damage.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "damage-bonus",
+      "amount": "1d8",
+      "damageType": "damage-type:radiant",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage",
+          "attack": {
+            "range": "melee",
+            "via": "weapon"
+          }
+        }
+      }
+    },
+    {
+      "type": "damage-bonus",
+      "amount": "1d8",
+      "damageType": "damage-type:radiant",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage",
+          "attack": {
+            "via": "unarmed"
+          }
+        }
+      }
+    }
+  ]
+}

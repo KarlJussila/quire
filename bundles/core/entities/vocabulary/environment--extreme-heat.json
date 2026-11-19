@@ -1,0 +1,10 @@
+{
+  "id": "environment:extreme-heat",
+  "name": "Extreme Heat",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "An exposed creature is in this environment when the temperature is 100 degrees Fahrenheit or higher."
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "feature:goliath/fires-burn-fire-giant@2024",
+  "name": "Fire’s Burn (Fire Giant)",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target.",
+    "plain": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "fires-burn",
+      "name": "Fire's Burn",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true
+        },
+        "when": {
+          "dealsDamage": true
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "1d10",
+            "type": "damage-type:fire"
+          },
+          "to": "subject"
+        }
+      ],
+      "uses": {
+        "max": "proficiencyBonus",
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": []
+}

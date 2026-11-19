@@ -1,0 +1,25 @@
+{
+  "id": "species:dwarf@2024",
+  "name": "Dwarf",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Dwarf, you have these special traits.\n\n_**Darkvision.**_ You have Darkvision with a range of 120 feet.\n\n_**Dwarven Resilience.**_ You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.\n\n_**Dwarven Toughness.**_ Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.\n\n_**Stonecunning.**_ As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.\n\nYou can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+    "plain": "As a Dwarf, you have these special traits.\n\nDarkvision. You have Darkvision with a range of 120 feet.\n\nDwarven Resilience. You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.\n\nDwarven Toughness. Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.\n\nStonecunning. As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.\n\nYou can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "features": [
+    "feature:dwarf/darkvision@2024",
+    "feature:dwarf/dwarven-resilience@2024",
+    "feature:dwarf/dwarven-toughness@2024",
+    "feature:dwarf/stonecunning@2024"
+  ],
+  "creatureType": "creature-type:humanoid",
+  "size": "size:medium",
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  }
+}

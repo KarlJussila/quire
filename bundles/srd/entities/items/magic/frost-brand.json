@@ -1,0 +1,160 @@
+{
+  "id": "item:frost-brand",
+  "name": "Frost Brand",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you hit with an attack using this magic sword, the target takes an extra 1d6 cold damage. In addition, while you hold the sword, you have resistance to fire damage.\n\nIn freezing temperatures, the blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet.\n\nWhen you draw this weapon, you can extinguish all nonmagical flames within 30 feet of you. This property can be used no more than once per hour.",
+    "plain": "When you hit with an attack using this magic sword, the target takes an extra 1d6 cold damage. In addition, while you hold the sword, you have resistance to fire damage.\n\nIn freezing temperatures, the blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet.\n\nWhen you draw this weapon, you can extinguish all nonmagical flames within 30 feet of you. This property can be used no more than once per hour.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:very-rare",
+  "attunement": true,
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Sword",
+      "from": [
+        {
+          "kind": "item",
+          "where": {
+            "group": "group:sword"
+          }
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "damage-bonus",
+      "amount": "1d6",
+      "damageType": "damage-type:cold",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage",
+              "attack": {
+                "item": "this"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:fire"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "held": true
+        }
+      }
+    },
+    {
+      "type": "light",
+      "bright": 10,
+      "dim": 10,
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          },
+          {
+            "prose": {
+              "text": "in freezing temperatures",
+              "gap": {
+                "category": "test",
+                "name": "the temperatures around the blade are freezing"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "extinguish-flames",
+      "name": "Extinguish Flames",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "held": true
+        }
+      },
+      "trigger": {
+        "event": "event:item-equipped",
+        "subject": "self",
+        "match": {
+          "item": "this"
+        },
+        "when": {
+          "prose": {
+            "text": "you draw it",
+            "gap": {
+              "category": "test",
+              "name": "drawing a weapon, rather than picking it up"
+            }
+          }
+        }
+      },
+      "area": {
+        "shape": "area-shape:emanation",
+        "size": 30,
+        "origin": "self"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "after": {
+              "amount": 1,
+              "unit": "hour"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "you extinguish all nonmagical flames within 30 feet of you",
+            "gap": {
+              "category": "item-mechanics",
+              "name": "no operation ends every nonmagical flame source in an area"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "Extinguishing all nonmagical flames within 30 feet of the wielder has no operation that ends flame sources in an area."
+    },
+    {
+      "category": "test",
+      "name": "The blade sheds its light only in freezing temperatures; environment:extreme-cold means 0 degrees Fahrenheit or lower, which is narrower."
+    }
+  ]
+}

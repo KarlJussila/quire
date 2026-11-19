@@ -1,0 +1,34 @@
+{
+  "id": "state:three-quarters-cover@2024",
+  "name": "Three-Quarters Cover",
+  "source": {
+    "book": "core"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 5
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 5
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": "ability:dex"
+        }
+      }
+    }
+  ]
+}

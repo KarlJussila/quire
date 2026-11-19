@@ -1,0 +1,77 @@
+{
+  "id": "creature:spider@2024",
+  "name": "Spider",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "hp": {
+    "average": 1,
+    "formula": "1d4 - 1"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:climb": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 2,
+    "ability:con": 8,
+    "ability:dex": 14,
+    "ability:int": 1,
+    "ability:str": 2,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 30
+    }
+  },
+  "passivePerception": 10,
+  "xp": 10,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Spider Climb",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The spider can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+        "plain": "The spider can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Web Walker",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The spider ignores movement restrictions caused by webs, and the spider knows the location of any other creature in contact with the same web.",
+        "plain": "The spider ignores movement restrictions caused by webs, and the spider knows the location of any other creature in contact with the same web.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 1 Piercing damage plus 2 (1d4) Poison damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 1 Piercing damage plus 2 (1d4) Poison damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

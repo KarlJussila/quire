@@ -1,0 +1,57 @@
+{
+  "id": "feature:warlock/fiend-patron/dark-ones-own-luck@2024",
+  "name": "Level 6: Dark One’s Own Luck",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can call on your fiendish patron to alter fate in your favor. When you make an ability check or a saving throw, you can use this feature to add 1d10 to your roll. You can do so after seeing the roll but before any of the roll's effects occur.\n\nYou can use this feature a number of times equal to your Charisma modifier (minimum of once), but you can use it no more than once per roll. You regain all expended uses when you finish a Long Rest.",
+    "plain": "You can call on your fiendish patron to alter fate in your favor. When you make an ability check or a saving throw, you can use this feature to add 1d10 to your roll. You can do so after seeing the roll but before any of the roll's effects occur.\n\nYou can use this feature a number of times equal to your Charisma modifier (minimum of once), but you can use it no more than once per roll. You regain all expended uses when you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "dark-ones-own-luck",
+      "name": "Dark One's Own Luck",
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": [
+            "roll:check",
+            "roll:save"
+          ]
+        }
+      },
+      "uses": {
+        "max": {
+          "max": [
+            1,
+            "modifiers.ability:cha"
+          ]
+        },
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "intercept": {
+            "set": {
+              "$add": "1d10"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

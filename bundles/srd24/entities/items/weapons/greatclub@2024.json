@@ -1,0 +1,27 @@
+{
+  "id": "item:greatclub@2024",
+  "name": "Greatclub",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:simple-melee-weapon",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:sp"
+  },
+  "weight": 10.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:two-handed"
+    ],
+    "damage": {
+      "amount": "1d8",
+      "type": "damage-type:bludgeoning"
+    },
+    "mastery": "weapon-mastery:push"
+  }
+}

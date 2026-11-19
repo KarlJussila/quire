@@ -1,0 +1,11 @@
+{
+  "id": "feature:weretigers",
+  "name": "Weretigers",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

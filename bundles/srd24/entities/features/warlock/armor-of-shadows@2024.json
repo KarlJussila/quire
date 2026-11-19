@@ -1,0 +1,35 @@
+{
+  "id": "feature:warlock/armor-of-shadows@2024",
+  "name": "Armor of Shadows",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can cast Mage Armor on yourself without expending a spell slot.",
+    "plain": "You can cast Mage Armor on yourself without expending a spell slot.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:mage-armor"
+      ],
+      "how": "innate",
+      "set": {
+        "activities": {
+          "cast": {
+            "target": {
+              "$replace": {
+                "who": "self",
+                "count": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "gaps": []
+}

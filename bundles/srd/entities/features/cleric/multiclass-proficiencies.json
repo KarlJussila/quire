@@ -1,0 +1,21 @@
+{
+  "id": "feature:cleric/multiclass-proficiencies",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Proficiencies Gained: Light armor, medium armor, shields",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor",
+        "group:medium-armor",
+        "group:shield"
+      ]
+    }
+  ]
+}

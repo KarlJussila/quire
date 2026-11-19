@@ -1,0 +1,49 @@
+{
+  "id": "feature:sorcerer/sorcery-incarnate@2024",
+  "name": "Level 7: Sorcery Incarnate",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you have no uses of Innate Sorcery left, you can use it if you spend 2 Sorcery Points when you take the Bonus Action to activate it.\n\nIn addition, while your Innate Sorcery feature is active, you can use up to two of your Metamagic options on each spell you cast.",
+    "plain": "If you have no uses of Innate Sorcery left, you can use it if you spend 2 Sorcery Points when you take the Bonus Action to activate it.\n\nIn addition, while your Innate Sorcery feature is active, you can use up to two of your Metamagic options on each spell you cast.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "feature:sorcerer/innate-sorcery",
+      "variant": "sorcery-incarnate-reactivation",
+      "set": {
+        "activities": {
+          "innate-sorcery": {
+            "when": {
+              "compare": "pools.innate-sorcery.current",
+              "atMost": 0
+            },
+            "uses": {
+              "$delete": true
+            },
+            "cost": {
+              "$replace": [
+                {
+                  "resource": "bonus-action"
+                },
+                {
+                  "resource": "sorcery-points",
+                  "amount": 2
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Metamagic options are not typed, so the two-option spellcasting limit is not modeled."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rule:burrow-speed@2024",
+  "name": "Burrow Speed",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A creature that has a Burrow Speed can use that speed to move through sand, earth, mud, or ice. The creature can't burrow through solid rock unless the creature has a trait that allows it to do so. _See also_ \"Speed.\"",
+    "plain": "A creature that has a Burrow Speed can use that speed to move through sand, earth, mud, or ice. The creature can't burrow through solid rock unless the creature has a trait that allows it to do so. See also \"Speed.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

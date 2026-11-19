@@ -1,0 +1,2009 @@
+[
+        {
+                "id": "feature:barbarian/rage",
+                "name": "Rage",
+                "source": {
+                        "book": "srd"
+                },
+                "effects": [
+                        {
+                                "type": "resource",
+                                "key": "rage",
+                                "max": {
+                                        "byLevel": {
+                                                "1": 2,
+                                                "3": 3,
+                                                "6": 4,
+                                                "12": 5,
+                                                "17": 6,
+                                                "20": "unlimited"
+                                        },
+                                        "of": "class:barbarian"
+                                },
+                                "recover": [
+                                        {
+                                                "on": {
+                                                        "event": "event:rest-finished",
+                                                        "match": {
+                                                                "rest": "rest:long"
+                                                        }
+                                                },
+                                                "amount": "all"
+                                        }
+                                ]
+                        }
+                ],
+                "activities": [
+                        {
+                                "key": "rage",
+                                "cost": [
+                                        {
+                                                "resource": "bonus-action"
+                                        },
+                                        {
+                                                "resource": "rage",
+                                                "amount": 1
+                                        }
+                                ],
+                                "outcomes": [
+                                        {
+                                                "applyState": {
+                                                        "state": "state:barbarian/raging",
+                                                        "duration": {
+                                                                "amount": 1,
+                                                                "unit": "minute"
+                                                        }
+                                                },
+                                                "to": "self"
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "state:barbarian/raging",
+                "name": "Raging",
+                "source": {
+                        "book": "srd"
+                },
+                "when": {
+                        "not": {
+                                "has": "group:heavy-armor",
+                                "match": {
+                                        "worn": true
+                                }
+                        }
+                },
+                "effects": [
+                        {
+                                "type": "roll-mod",
+                                "mode": "advantage",
+                                "when": {
+                                        "event": "event:roll-made",
+                                        "by": "self",
+                                        "match": {
+                                                "roll": "roll:check",
+                                                "ability": "ability:str"
+                                        }
+                                }
+                        },
+                        {
+                                "type": "roll-mod",
+                                "mode": "advantage",
+                                "when": {
+                                        "event": "event:roll-made",
+                                        "by": "self",
+                                        "match": {
+                                                "roll": "roll:save",
+                                                "ability": "ability:str"
+                                        }
+                                }
+                        },
+                        {
+                                "type": "change",
+                                "of": "event",
+                                "set": {
+                                        "total": {
+                                                "$add": {
+                                                        "byLevel": {
+                                                                "1": 2,
+                                                                "9": 3,
+                                                                "16": 4
+                                                        },
+                                                        "of": "class:barbarian"
+                                                }
+                                        }
+                                },
+                                "when": {
+                                        "event": "event:roll-made",
+                                        "by": "self",
+                                        "match": {
+                                                "roll": "roll:damage",
+                                                "attack": {
+                                                        "range": "melee",
+                                                        "via": "weapon",
+                                                        "ability": "ability:str"
+                                                }
+                                        }
+                                }
+                        },
+                        {
+                                "type": "defense",
+                                "resist": [
+                                        "damage-type:bludgeoning",
+                                        "damage-type:piercing",
+                                        "damage-type:slashing"
+                                ]
+                        },
+                        {
+                                "type": "forbid",
+                                "restriction": [
+                                        "restriction:cast-spells",
+                                        "restriction:concentrate"
+                                ]
+                        }
+                ],
+                "ends": [
+                        {
+                                "event": "event:turn-end",
+                                "subject": "self",
+                                "when": {
+                                        "not": {
+                                                "any": [
+                                                        {
+                                                                "happened": {
+                                                                        "event": "event:roll-made",
+                                                                        "by": "self",
+                                                                        "subject": {
+                                                                                "pool": "enemy"
+                                                                        },
+                                                                        "match": {
+                                                                                "roll": "roll:attack"
+                                                                        },
+                                                                        "since": "last-turn"
+                                                                }
+                                                        },
+                                                        {
+                                                                "happened": {
+                                                                        "event": "event:damaged",
+                                                                        "subject": "self",
+                                                                        "since": "last-turn"
+                                                                }
+                                                        }
+                                                ]
+                                        }
+                                }
+                        },
+                        {
+                                "event": "event:state-applied",
+                                "subject": "self",
+                                "match": {
+                                        "state": "condition:unconscious"
+                                }
+                        }
+                ]
+        },
+        {
+                "id": "state:barbarian/raging@2024",
+                "name": "Raging",
+                "source": {
+                        "book": "srd24"
+                },
+                "duration": {
+                        "amount": 10,
+                        "unit": "minute"
+                },
+                "effects": [
+                        {
+                                "type": "defense",
+                                "resist": [
+                                        "damage-type:bludgeoning",
+                                        "damage-type:piercing",
+                                        "damage-type:slashing"
+                                ]
+                        }
+                ],
+                "ends": [
+                        {
+                                "event": "event:turn-end",
+                                "subject": "self",
+                                "when": {
+                                        "not": {
+                                                "any": [
+                                                        {
+                                                                "happened": {
+                                                                        "event": "event:state-applied",
+                                                                        "subject": "self",
+                                                                        "match": {
+                                                                                "state": "state:barbarian/raging@2024"
+                                                                        },
+                                                                        "since": "turn-start"
+                                                                }
+                                                        },
+                                                        {
+                                                                "happened": {
+                                                                        "event": "event:roll-made",
+                                                                        "by": "self",
+                                                                        "subject": {
+                                                                                "pool": "enemy"
+                                                                        },
+                                                                        "match": {
+                                                                                "roll": "roll:attack"
+                                                                        },
+                                                                        "since": "turn-start"
+                                                                }
+                                                        },
+                                                        {
+                                                                "happened": {
+                                                                        "event": "event:save-forced",
+                                                                        "by": "self",
+                                                                        "subject": {
+                                                                                "pool": "enemy"
+                                                                        },
+                                                                        "since": "turn-start"
+                                                                }
+                                                        },
+                                                        {
+                                                                "happened": {
+                                                                        "event": "event:activity-used",
+                                                                        "by": "self",
+                                                                        "when": {
+                                                                                "activity": "extend"
+                                                                        },
+                                                                        "since": "turn-start"
+                                                                }
+                                                        }
+                                                ]
+                                        }
+                                }
+                        },
+                        {
+                                "event": "event:item-donned",
+                                "subject": "self",
+                                "when": {
+                                        "has": "group:heavy-armor",
+                                        "match": {
+                                                "worn": true
+                                        }
+                                }
+                        },
+                        {
+                                "event": "event:state-applied",
+                                "subject": "self",
+                                "match": {
+                                        "state": "condition:incapacitated"
+                                }
+                        }
+                ],
+                "activities": [
+                        {
+                                "key": "extend",
+                                "cost": [
+                                        {
+                                                "resource": "bonus-action"
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "feature:fighter/champion/improved-critical",
+                "name": "Improved Critical",
+                "source": {
+                        "book": "srd"
+                },
+                "effects": [
+                        {
+                                "type": "change",
+                                "of": "event",
+                                "set": {
+                                        "criticalMinimum": {
+                                                "$atMost": 19
+                                        }
+                                },
+                                "when": {
+                                        "event": "event:roll-made",
+                                        "by": "self",
+                                        "match": {
+                                                "roll": "roll:attack",
+                                                "attack": {
+                                                        "via": "weapon"
+                                                }
+                                        }
+                                }
+                        }
+                ]
+        },
+        {
+                "id": "feature:dwarf/dwarven-resilience",
+                "name": "Dwarven Resilience",
+                "source": {
+                        "book": "srd"
+                },
+                "effects": [
+                        {
+                                "type": "roll-mod",
+                                "mode": "advantage",
+                                "when": {
+                                        "event": "event:roll-made",
+                                        "by": "self",
+                                        "match": {
+                                                "roll": "roll:save",
+                                                "against": {
+                                                        "sourceType": "source-type:poison"
+                                                }
+                                        }
+                                }
+                        },
+                        {
+                                "type": "defense",
+                                "resist": [
+                                        "damage-type:poison"
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "item:wand-of-paralysis",
+                "name": "Wand of Paralysis",
+                "source": {
+                        "book": "srd"
+                },
+                "group": "group:wand",
+                "rarity": "rarity:rare",
+                "attunement": {
+                        "by": {
+                                "class": "class:wizard"
+                        }
+                },
+                "effects": [
+                        {
+                                "type": "resource",
+                                "key": "charges",
+                                "max": 7,
+                                "recover": [
+                                        {
+                                                "on": {
+                                                        "event": "event:dawn"
+                                                },
+                                                "amount": "1d6+1"
+                                        }
+                                ]
+                        },
+                        {
+                                "type": "triggered",
+                                "on": {
+                                        "event": "event:pool-emptied",
+                                        "when": {
+                                                "compare": "pools.charges.current",
+                                                "atMost": 0
+                                        }
+                                },
+                                "step": {
+                                        "outcomes": [
+                                                {
+                                                        "random": {
+                                                                "dice": "1d20",
+                                                                "results": [
+                                                                        {
+                                                                                "range": [
+                                                                                        1,
+                                                                                        1
+                                                                                ],
+                                                                                "outcomes": [
+                                                                                        {
+                                                                                                "destroy": {},
+                                                                                                "to": "this"
+                                                                                        }
+                                                                                ]
+                                                                        }
+                                                                ]
+                                                        }
+                                                }
+                                        ]
+                                }
+                        }
+                ],
+                "activities": [
+                        {
+                                "key": "ray",
+                                "when": {
+                                        "has": "this",
+                                        "match": {
+                                                "held": true
+                                        }
+                                },
+                                "cost": [
+                                        {
+                                                "resource": "action"
+                                        },
+                                        {
+                                                "resource": "charges",
+                                                "amount": 1
+                                        }
+                                ],
+                                "range": {
+                                        "distance": 60
+                                },
+                                "target": {
+                                        "count": 1,
+                                        "who": {
+                                                "pool": "any",
+                                                "where": {
+                                                        "perceived": "sight"
+                                                }
+                                        }
+                                },
+                                "delivery": {
+                                        "save": {
+                                                "ability": "ability:con",
+                                                "dc": 15
+                                        }
+                                },
+                                "outcomes": [
+                                        {
+                                                "applyState": {
+                                                        "state": "condition:paralyzed",
+                                                        "duration": {
+                                                                "amount": 1,
+                                                                "unit": "minute"
+                                                        },
+                                                        "repeatSave": {}
+                                                }
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "feature:paladin/divine-smite",
+                "name": "Divine Smite",
+                "source": {
+                        "book": "srd"
+                },
+                "activities": [
+                        {
+                                "key": "smite",
+                                "trigger": {
+                                        "event": "event:hit",
+                                        "by": "self",
+                                        "match": {
+                                                "attack": {
+                                                        "range": "melee",
+                                                        "via": "weapon"
+                                                }
+                                        }
+                                },
+                                "cost": [
+                                        {
+                                                "resource": "spell-slots"
+                                        }
+                                ],
+                                "outcomes": [
+                                        {
+                                                "damage": {
+                                                        "type": "damage-type:radiant",
+                                                        "amount": {
+                                                                "dice": {
+                                                                        "count": {
+                                                                                "min": [
+                                                                                        5,
+                                                                                        {
+                                                                                                "sum": [
+                                                                                                        1,
+                                                                                                        {
+                                                                                                                "slotLevel": true
+                                                                                                        }
+                                                                                                ]
+                                                                                        }
+                                                                                ]
+                                                                        },
+                                                                        "die": 8
+                                                                }
+                                                        }
+                                                }
+                                        },
+                                        {
+                                                "damage": {
+                                                        "amount": "1d8",
+                                                        "type": "damage-type:radiant"
+                                                },
+                                                "when": {
+                                                        "any": [
+                                                                {
+                                                                        "match": {
+                                                                                "creatureType": "creature-type:undead"
+                                                                        }
+                                                                },
+                                                                {
+                                                                        "match": {
+                                                                                "creatureType": "creature-type:fiend"
+                                                                        }
+                                                                }
+                                                        ]
+                                                }
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "spell:spirit-guardians",
+                "name": "Spirit Guardians",
+                "source": {
+                        "book": "srd"
+                },
+                "level": 3,
+                "school": "spell-school:conjuration",
+                "lists": [
+                        "class:cleric"
+                ],
+                "components": {
+                        "verbal": true,
+                        "somatic": true,
+                        "material": {
+                                "text": "a holy symbol"
+                        }
+                },
+                "activities": [
+                        {
+                                "key": "cast",
+                                "action": "action:cast-a-spell",
+                                "cost": [
+                                        {
+                                                "resource": "action"
+                                        }
+                                ],
+                                "range": {
+                                        "self": true
+                                },
+                                "concentration": true,
+                                "duration": {
+                                        "amount": 10,
+                                        "unit": "minute",
+                                        "upTo": true
+                                },
+                                "outcomes": [
+                                        {
+                                                "to": "self",
+                                                "zone": {
+                                                        "anchor": "self",
+                                                        "area": {
+                                                                "shape": "area-shape:emanation",
+                                                                "size": 15
+                                                        },
+                                                        "affects": {
+                                                                "pool": "any",
+                                                                "chosen": "except"
+                                                        },
+                                                        "effects": [
+                                                                {
+                                                                        "type": "change",
+                                                                        "set": {
+                                                                                "speeds": {
+                                                                                        "$where": true,
+                                                                                        "speed": {
+                                                                                                "$multiply": 0.5
+                                                                                        }
+                                                                                }
+                                                                        }
+                                                                }
+                                                        ],
+                                                        "on": [
+                                                                {
+                                                                        "on": [
+                                                                                {
+                                                                                        "event": "event:zone-entered"
+                                                                                },
+                                                                                {
+                                                                                        "event": "event:turn-start"
+                                                                                }
+                                                                        ],
+                                                                        "uses": {
+                                                                                "max": 1,
+                                                                                "recover": [
+                                                                                        {
+                                                                                                "on": {
+                                                                                                        "event": "event:turn-start"
+                                                                                                },
+                                                                                                "amount": "all"
+                                                                                        }
+                                                                                ]
+                                                                        },
+                                                                        "step": {
+                                                                                "delivery": {
+                                                                                        "save": {
+                                                                                                "ability": "ability:wis",
+                                                                                                "dc": "spellcasting.dc"
+                                                                                        }
+                                                                                },
+                                                                                "outcomes": [
+                                                                                        {
+                                                                                                "damage": {
+                                                                                                        "amount": {
+                                                                                                                "dice": {
+                                                                                                                        "count": {
+                                                                                                                                "slotLevel": true
+                                                                                                                        },
+                                                                                                                        "die": 8
+                                                                                                                }
+                                                                                                        },
+                                                                                                        "type": "damage-type:radiant"
+                                                                                                },
+                                                                                                "when": {
+                                                                                                        "not": {
+                                                                                                                "creature": "source",
+                                                                                                                "where": {
+                                                                                                                        "match": {
+                                                                                                                                "alignment": "alignment:evil"
+                                                                                                                        }
+                                                                                                                }
+                                                                                                        }
+                                                                                                }
+                                                                                        },
+                                                                                        {
+                                                                                                "damage": {
+                                                                                                        "amount": {
+                                                                                                                "dice": {
+                                                                                                                        "count": {
+                                                                                                                                "slotLevel": true
+                                                                                                                        },
+                                                                                                                        "die": 8
+                                                                                                                }
+                                                                                                        },
+                                                                                                        "type": "damage-type:necrotic"
+                                                                                                },
+                                                                                                "when": {
+                                                                                                        "creature": "source",
+                                                                                                        "where": {
+                                                                                                                "match": {
+                                                                                                                        "alignment": "alignment:evil"
+                                                                                                                }
+                                                                                                        }
+                                                                                                }
+                                                                                        }
+                                                                                ],
+                                                                                "otherwise": "half"
+                                                                        }
+                                                                }
+                                                        ]
+                                                }
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "creature:adult-red-dragon",
+                "name": "Adult Red Dragon",
+                "source": {
+                        "book": "srd"
+                },
+                "size": "size:huge",
+                "creatureType": "creature-type:dragon",
+                "alignment": "alignment:chaotic-evil",
+                "ac": 19,
+                "acFrom": [
+                        "natural armor"
+                ],
+                "hp": {
+                        "average": 256,
+                        "formula": "19d12+133"
+                },
+                "speeds": {
+                        "movement-mode:walk": {
+                                "speed": 40
+                        },
+                        "movement-mode:climb": {
+                                "speed": 40
+                        },
+                        "movement-mode:fly": {
+                                "speed": 80
+                        }
+                },
+                "abilities": {
+                        "ability:str": 27,
+                        "ability:dex": 10,
+                        "ability:con": 25,
+                        "ability:int": 16,
+                        "ability:wis": 13,
+                        "ability:cha": 21
+                },
+                "saves": {
+                        "ability:dex": 6,
+                        "ability:con": 13,
+                        "ability:wis": 7,
+                        "ability:cha": 11
+                },
+                "skills": {
+                        "skill:perception": 13,
+                        "skill:stealth": 6
+                },
+                "senses": {
+                        "sense:blindsight": {
+                                "range": 60
+                        },
+                        "sense:darkvision": {
+                                "range": 120
+                        }
+                },
+                "passivePerception": 23,
+                "languages": [
+                        {
+                                "language": "language:common"
+                        },
+                        {
+                                "language": "language:draconic"
+                        }
+                ],
+                "cr": 17,
+                "xp": 18000,
+                "effects": [
+                        {
+                                "type": "defense",
+                                "immune": [
+                                        "damage-type:fire"
+                                ]
+                        }
+                ],
+                "legendary": {
+                        "actions": 3
+                },
+                "blocks": [
+                        {
+                                "name": "Legendary Resistance (3/Day)",
+                                "section": "stat-block-section:trait",
+                                "text": {
+                                        "plain": "If the dragon fails a saving throw, it can choose to succeed instead."
+                                },
+                                "activity": {
+                                        "key": "legendary-resistance",
+                                        "trigger": {
+                                                "event": "event:save-failed",
+                                                "subject": "self"
+                                        },
+                                        "uses": {
+                                                "max": 3,
+                                                "recover": [
+                                                        {
+                                                                "on": {
+                                                                        "event": "event:dawn"
+                                                                },
+                                                                "amount": "all"
+                                                        }
+                                                ]
+                                        },
+                                        "outcomes": [
+                                                {
+                                                        "intercept": {
+                                                                "success": true
+                                                        }
+                                                }
+                                        ]
+                                }
+                        },
+                        {
+                                "name": "Multiattack",
+                                "section": "stat-block-section:action",
+                                "text": {
+                                        "plain": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws."
+                                },
+                                "activity": {
+                                        "key": "multiattack",
+                                        "cost": [
+                                                {
+                                                        "resource": "action"
+                                                }
+                                        ],
+                                        "outcomes": [
+                                                {
+                                                        "runs": [
+                                                                {
+                                                                        "activity": "frightful-presence"
+                                                                },
+                                                                {
+                                                                        "activity": "bite"
+                                                                },
+                                                                {
+                                                                        "activity": "claw",
+                                                                        "times": 2
+                                                                }
+                                                        ]
+                                                }
+                                        ]
+                                }
+                        },
+                        {
+                                "name": "Bite",
+                                "section": "stat-block-section:action",
+                                "text": {
+                                        "plain": "Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 19 (2d10 + 8) piercing damage plus 7 (2d6) fire damage."
+                                },
+                                "activity": {
+                                        "key": "bite",
+                                        "cost": [
+                                                {
+                                                        "resource": "action"
+                                                }
+                                        ],
+                                        "target": {
+                                                "count": 1
+                                        },
+                                        "delivery": {
+                                                "attack": {
+                                                        "range": "melee",
+                                                        "via": "weapon",
+                                                        "bonus": 14,
+                                                        "reach": 10
+                                                }
+                                        },
+                                        "outcomes": [
+                                                {
+                                                        "damage": {
+                                                                "amount": "2d10+8",
+                                                                "type": "damage-type:piercing"
+                                                        }
+                                                },
+                                                {
+                                                        "damage": {
+                                                                "amount": "2d6",
+                                                                "type": "damage-type:fire"
+                                                        }
+                                                }
+                                        ]
+                                }
+                        },
+                        {
+                                "name": "Fire Breath (Recharge 5–6)",
+                                "section": "stat-block-section:action",
+                                "text": {
+                                        "plain": "The dragon exhales fire in a 60-foot cone. Each creature in that area must make a DC 21 Dexterity saving throw, taking 63 (18d6) fire damage on a failed save, or half as much damage on a successful one."
+                                },
+                                "activity": {
+                                        "key": "fire-breath",
+                                        "cost": [
+                                                {
+                                                        "resource": "action"
+                                                }
+                                        ],
+                                        "uses": {
+                                                "max": 1,
+                                                "recover": [
+                                                        {
+                                                                "on": {
+                                                                        "event": "event:turn-start",
+                                                                        "subject": "self"
+                                                                },
+                                                                "amount": "all",
+                                                                "roll": {
+                                                                        "die": 6,
+                                                                        "min": 5
+                                                                }
+                                                        }
+                                                ]
+                                        },
+                                        "area": {
+                                                "shape": "area-shape:cone",
+                                                "size": 60
+                                        },
+                                        "delivery": {
+                                                "save": {
+                                                        "ability": "ability:dex",
+                                                        "dc": 21
+                                                }
+                                        },
+                                        "outcomes": [
+                                                {
+                                                        "damage": {
+                                                                "amount": "18d6",
+                                                                "type": "damage-type:fire"
+                                                        }
+                                                }
+                                        ],
+                                        "otherwise": "half"
+                                }
+                        },
+                        {
+                                "name": "Wing Attack (Costs 2 Actions)",
+                                "section": "stat-block-section:legendary-action",
+                                "text": {
+                                        "plain": "The dragon beats its wings. Each creature within 10 feet of the dragon must succeed on a DC 22 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed."
+                                },
+                                "activity": {
+                                        "key": "wing-attack",
+                                        "cost": [
+                                                {
+                                                        "resource": "legendary",
+                                                        "amount": 2
+                                                }
+                                        ],
+                                        "area": {
+                                                "shape": "area-shape:emanation",
+                                                "size": 10
+                                        },
+                                        "delivery": {
+                                                "save": {
+                                                        "ability": "ability:dex",
+                                                        "dc": 22
+                                                }
+                                        },
+                                        "outcomes": [
+                                                {
+                                                        "damage": {
+                                                                "amount": "2d6+8",
+                                                                "type": "damage-type:bludgeoning"
+                                                        }
+                                                },
+                                                {
+                                                        "applyState": {
+                                                                "state": "condition:prone"
+                                                        }
+                                                },
+                                                {
+                                                        "grant": {
+                                                                "movement": {
+                                                                        "divide": "speeds.movement-mode:fly.speed",
+                                                                        "by": 2,
+                                                                        "round": "down"
+                                                                }
+                                                        },
+                                                        "to": "self"
+                                                }
+                                        ]
+                                }
+                        },
+                        {
+                                "name": "Lair Actions",
+                                "section": "stat-block-section:legendary-action",
+                                "text": {
+                                        "plain": "On initiative count 20 (losing initiative ties), the dragon takes a lair action."
+                                },
+                                "activity": {
+                                        "key": "magma-eruption",
+                                        "trigger": {
+                                                "event": "event:initiative-count",
+                                                "match": {
+                                                        "count": 20
+                                                }
+                                        },
+                                        "area": {
+                                                "shape": "area-shape:sphere",
+                                                "size": 20
+                                        },
+                                        "delivery": {
+                                                "save": {
+                                                        "ability": "ability:dex",
+                                                        "dc": 15
+                                                }
+                                        },
+                                        "outcomes": [
+                                                {
+                                                        "damage": {
+                                                                "amount": "6d6",
+                                                                "type": "damage-type:fire"
+                                                        }
+                                                }
+                                        ],
+                                        "otherwise": "half"
+                                }
+                        }
+                ]
+        },
+        {
+                "id": "item:tome-of-clear-thought",
+                "name": "Tome of Clear Thought",
+                "source": {
+                        "book": "srd"
+                },
+                "group": "group:wondrous-item",
+                "rarity": "rarity:very-rare",
+                "activities": [
+                        {
+                                "key": "study",
+                                "time": {
+                                        "amount": 48,
+                                        "unit": "hour"
+                                },
+                                "outcomes": [
+                                        {
+                                                "applyState": {
+                                                        "state": "state:tome-of-clear-thought",
+                                                        "duration": "permanent"
+                                                },
+                                                "to": "self"
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "state:tome-of-clear-thought",
+                "name": "Tome of Clear Thought",
+                "source": {
+                        "book": "srd"
+                },
+                "effects": [
+                        {
+                                "type": "change",
+                                "set": {
+                                        "abilities": {
+                                                "ability:int": {
+                                                        "$add": 2
+                                                }
+                                        }
+                                }
+                        },
+                        {
+                                "type": "change",
+                                "set": {
+                                        "abilityMaximums": {
+                                                "ability:int": {
+                                                        "$add": 2
+                                                }
+                                        }
+                                }
+                        }
+                ]
+        },
+        {
+                "id": "condition:poisoned",
+                "name": "Poisoned",
+                "source": {
+                        "book": "srd"
+                },
+                "effects": [
+                        {
+                                "type": "roll-mod",
+                                "mode": "disadvantage",
+                                "when": {
+                                        "event": "event:roll-made",
+                                        "by": "self",
+                                        "match": {
+                                                "roll": "roll:attack"
+                                        }
+                                }
+                        },
+                        {
+                                "type": "roll-mod",
+                                "mode": "disadvantage",
+                                "when": {
+                                        "event": "event:roll-made",
+                                        "by": "self",
+                                        "match": {
+                                                "roll": "roll:check"
+                                        }
+                                }
+                        }
+                ]
+        },
+        {
+                "id": "item:boots-and-ladders",
+                "name": "Boots and Ladders",
+                "source": {
+                        "book": "homebrew"
+                },
+                "group": "group:wondrous-item",
+                "rarity": "rarity:rare",
+                "effects": [
+                        {
+                                "type": "speed",
+                                "mode": "movement-mode:fly",
+                                "speed": {
+                                        "max": [
+                                                0,
+                                                {
+                                                        "times": "modifiers.ability:int",
+                                                        "by": 5
+                                                }
+                                        ]
+                                },
+                                "when": {
+                                        "any": [
+                                                {
+                                                        "has": "this",
+                                                        "match": {
+                                                                "worn": true
+                                                        }
+                                                },
+                                                {
+                                                        "has": "this",
+                                                        "match": {
+                                                                "held": true
+                                                        }
+                                                }
+                                        ]
+                                }
+                        }
+                ]
+        },
+        {
+                "id": "standing:favor/the-harbor-guild",
+                "name": "Favor (The Harbor Guild)",
+                "source": {
+                        "book": "homebrew"
+                },
+                "ranks": [
+                        {
+                                "at": 3,
+                                "name": "Guild Friend",
+                                "grants": [
+                                        "feature:harbor-guild/friend"
+                                ]
+                        },
+                        {
+                                "at": 10,
+                                "name": "Guild Partner",
+                                "grants": [
+                                        "feature:harbor-guild/partner"
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "feature:harbor-guild/friend",
+                "name": "Guild Friend",
+                "source": {
+                        "book": "homebrew"
+                },
+                "requires": {
+                        "compare": "standings.standing:favor/the-harbor-guild",
+                        "atLeast": 3
+                },
+                "activities": [
+                        {
+                                "key": "gentle-repose",
+                                "cost": [
+                                        {
+                                                "resource": "action"
+                                        }
+                                ],
+                                "uses": {
+                                        "max": {
+                                                "max": [
+                                                        1,
+                                                        "modifiers.ability:wis"
+                                                ]
+                                        },
+                                        "recover": [
+                                                {
+                                                        "on": {
+                                                                "event": "event:rest-finished",
+                                                                "match": {
+                                                                        "rest": "rest:long"
+                                                                }
+                                                        },
+                                                        "amount": "all"
+                                                }
+                                        ]
+                                },
+                                "outcomes": [
+                                        {
+                                                "cast": {
+                                                        "spell": "spell:gentle-repose",
+                                                        "slot": false,
+                                                        "stats": {
+                                                                "ability": "ability:wis"
+                                                        },
+                                                        "set": {
+                                                                "components": {
+                                                                        "$replace": {
+                                                                                "verbal": true
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "weapon-mastery:topple",
+                "name": "Topple",
+                "source": {
+                        "book": "srd24"
+                },
+                "activities": [
+                        {
+                                "key": "topple",
+                                "trigger": {
+                                        "event": "event:hit",
+                                        "by": "self",
+                                        "match": {
+                                                "attack": {
+                                                        "item": "this"
+                                                }
+                                        }
+                                },
+                                "delivery": {
+                                        "save": {
+                                                "ability": "ability:con",
+                                                "dc": {
+                                                        "sum": [
+                                                                8,
+                                                                "proficiencyBonus",
+                                                                "modifiers.ability:str"
+                                                        ]
+                                                }
+                                        }
+                                },
+                                "outcomes": [
+                                        {
+                                                "applyState": {
+                                                        "state": "condition:prone"
+                                                }
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "item:maul@2024",
+                "name": "Maul",
+                "source": {
+                        "book": "srd24"
+                },
+                "group": "group:martial-melee-weapon",
+                "cost": {
+                        "amount": 10,
+                        "currency": "currency:gp"
+                },
+                "weight": 10,
+                "weapon": {
+                        "damage": {
+                                "amount": "2d6",
+                                "type": "damage-type:bludgeoning"
+                        },
+                        "properties": [
+                                "weapon-property:heavy",
+                                "weapon-property:two-handed"
+                        ],
+                        "mastery": "weapon-mastery:topple"
+                }
+        },
+        {
+                "id": "item:berserker-axe",
+                "name": "Berserker Axe",
+                "source": {
+                        "book": "srd"
+                },
+                "group": "group:martial-melee-weapon",
+                "rarity": "rarity:rare",
+                "attunement": true,
+                "effects": [
+                        {
+                                "type": "change",
+                                "of": "event",
+                                "set": {
+                                        "total": {
+                                                "$add": 1
+                                        }
+                                },
+                                "when": {
+                                        "event": "event:roll-made",
+                                        "by": "self",
+                                        "match": {
+                                                "roll": "roll:attack",
+                                                "attack": {
+                                                        "item": "this"
+                                                }
+                                        }
+                                }
+                        },
+                        {
+                                "type": "triggered",
+                                "on": {
+                                        "event": "event:attuned",
+                                        "subject": "self"
+                                },
+                                "step": {
+                                        "outcomes": [
+                                                {
+                                                        "applyState": {
+                                                                "state": "state:curse/berserker-axe",
+                                                                "duration": "permanent"
+                                                        },
+                                                        "to": "self"
+                                                }
+                                        ]
+                                }
+                        }
+                ]
+        },
+        {
+                "id": "state:curse/berserker-axe",
+                "name": "Berserker Axe Curse",
+                "source": {
+                        "book": "srd"
+                },
+                "isA": "state:curse",
+                "effects": [
+                        {
+                                "type": "forbid",
+                                "restriction": [
+                                        "restriction:end-attunement"
+                                ]
+                        },
+                        {
+                                "type": "roll-mod",
+                                "mode": "disadvantage",
+                                "when": {
+                                        "all": [
+                                                {
+                                                        "event": "event:roll-made",
+                                                        "by": "self",
+                                                        "match": {
+                                                                "roll": "roll:attack",
+                                                                "attack": {
+                                                                        "via": "weapon"
+                                                                }
+                                                        }
+                                                },
+                                                {
+                                                        "not": {
+                                                                "event": "event:roll-made",
+                                                                "by": "self",
+                                                                "match": {
+                                                                        "attack": {
+                                                                                "item": "item:berserker-axe"
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                        ]
+                                }
+                        }
+                ]
+        },
+        {
+                "id": "ability:str",
+                "name": "Strength",
+                "source": {
+                        "book": "srd"
+                },
+                "abbreviation": "Str",
+                "order": 1
+        },
+        {
+                "id": "action:magic",
+                "name": "Magic",
+                "source": {
+                        "book": "srd24"
+                }
+        },
+        {
+                "id": "event:hit",
+                "name": "Hit",
+                "source": {
+                        "book": "srd"
+                },
+                "payload": [
+                        "attack",
+                        "damage",
+                        "crit"
+                ]
+        },
+        {
+                "id": "table:barbarian/rages",
+                "name": "Barbarian",
+                "source": {
+                        "book": "srd"
+                },
+                "axis": "class-level",
+                "columns": [
+                        {
+                                "key": "rages",
+                                "name": "Rages"
+                        },
+                        {
+                                "key": "rage-damage",
+                                "name": "Rage Damage"
+                        }
+                ],
+                "rows": [
+                        {
+                                "level": 1,
+                                "cells": {
+                                        "rages": 2,
+                                        "rage-damage": "+2"
+                                }
+                        },
+                        {
+                                "level": 20,
+                                "cells": {
+                                        "rages": "Unlimited",
+                                        "rage-damage": "+4"
+                                }
+                        }
+                ]
+        },
+        {
+                "id": "class:barbarian",
+                "name": "Barbarian",
+                "source": {
+                        "book": "srd"
+                },
+                "hitDie": "hit-die:d12",
+                "levels": {
+                        "1": [
+                                "feature:barbarian/rage",
+                                "feature:barbarian/unarmored-defense"
+                        ]
+                },
+                "subclass": {
+                        "level": 3,
+                        "title": "Primal Path"
+                },
+                "startingEquipment": [
+                        {
+                                "choose": {
+                                        "key": "weapon",
+                                        "name": "Weapon",
+                                        "from": [
+                                                {
+                                                        "item": "item:greataxe"
+                                                },
+                                                {
+                                                        "kind": "item",
+                                                        "where": {
+                                                                "group": "group:martial-melee-weapon"
+                                                        }
+                                                }
+                                        ]
+                                }
+                        }
+                ],
+                "firstClass": [
+                        "feature:barbarian/proficiencies"
+                ]
+        },
+        {
+                "id": "feature:barbarian/proficiencies",
+                "name": "Proficiencies",
+                "source": {
+                        "book": "srd"
+                },
+                "effects": [
+                        {
+                                "type": "proficiency",
+                                "in": [
+                                        "ability:str",
+                                        "ability:con"
+                                ]
+                        },
+                        {
+                                "type": "proficiency",
+                                "in": [
+                                        {
+                                                "choose": {
+                                                        "key": "skills",
+                                                        "name": "Skills",
+                                                        "count": 2,
+                                                        "from": [
+                                                                "skill:animal-handling",
+                                                                "skill:athletics",
+                                                                "skill:intimidation",
+                                                                "skill:nature",
+                                                                "skill:perception",
+                                                                "skill:survival"
+                                                        ]
+                                                }
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "feat:ability-score-improvement",
+                "name": "Ability Score Improvement",
+                "source": {
+                        "book": "srd"
+                },
+                "repeatable": true,
+                "effects": [
+                        {
+                                "choose": {
+                                        "key": "asi",
+                                        "name": "Asi",
+                                        "from": [
+                                                {
+                                                        "name": "Plus two",
+                                                        "of": [
+                                                                {
+                                                                        "type": "change",
+                                                                        "set": {
+                                                                                "abilities": {
+                                                                                        "$at": {
+                                                                                                "choose": {
+                                                                                                        "key": "ability",
+                                                                                                        "name": "Ability",
+                                                                                                        "from": [
+                                                                                                                {
+                                                                                                                        "kind": "ability"
+                                                                                                                }
+                                                                                                        ]
+                                                                                                }
+                                                                                        },
+                                                                                        "$add": {
+                                                                                                "amount": 2,
+                                                                                                "upTo": "maximum"
+                                                                                        }
+                                                                                }
+                                                                        }
+                                                                }
+                                                        ]
+                                                },
+                                                {
+                                                        "name": "Plus one twice",
+                                                        "of": [
+                                                                {
+                                                                        "type": "change",
+                                                                        "set": {
+                                                                                "abilities": {
+                                                                                        "$at": {
+                                                                                                "choose": {
+                                                                                                        "key": "abilities",
+                                                                                                        "name": "Abilities",
+                                                                                                        "count": 2,
+                                                                                                        "distinct": true,
+                                                                                                        "from": [
+                                                                                                                {
+                                                                                                                        "kind": "ability"
+                                                                                                                }
+                                                                                                        ]
+                                                                                                }
+                                                                                        },
+                                                                                        "$add": {
+                                                                                                "amount": 1,
+                                                                                                "upTo": "maximum"
+                                                                                        }
+                                                                                }
+                                                                        }
+                                                                }
+                                                        ]
+                                                }
+                                        ]
+                                }
+                        }
+                ]
+        },
+        {
+                "id": "feature:captain/directed-strike",
+                "name": "Directed Strike",
+                "source": {
+                        "book": "homebrew"
+                },
+                "activities": [
+                        {
+                                "key": "strike",
+                                "cost": [
+                                        {
+                                                "forgo": "attack"
+                                        },
+                                        {
+                                                "resource": "superiority-dice",
+                                                "amount": 1
+                                        }
+                                ],
+                                "target": {
+                                        "count": 1,
+                                        "who": {
+                                                "pool": "ally",
+                                                "where": {
+                                                        "perceived": "any"
+                                                }
+                                        }
+                                },
+                                "outcomes": [
+                                        {
+                                                "grant": {
+                                                        "activity": {
+                                                                "kind": "activity",
+                                                                "where": {
+                                                                        "match": {
+                                                                                "delivery": {
+                                                                                        "attack": {
+                                                                                                "via": "weapon"
+                                                                                        }
+                                                                                }
+                                                                        }
+                                                                }
+                                                        },
+                                                        "cost": [
+                                                                {
+                                                                        "resource": "reaction"
+                                                                }
+                                                        ]
+                                                },
+                                                "to": "target"
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "spell:dissonant-whispers",
+                "name": "Dissonant Whispers",
+                "source": {
+                        "book": "srd"
+                },
+                "level": 1,
+                "school": "spell-school:enchantment",
+                "components": {
+                        "verbal": true
+                },
+                "activities": [
+                        {
+                                "key": "cast",
+                                "action": "action:cast-a-spell",
+                                "cost": [
+                                        {
+                                                "resource": "action"
+                                        }
+                                ],
+                                "range": {
+                                        "distance": 60
+                                },
+                                "target": {
+                                        "count": 1
+                                },
+                                "delivery": {
+                                        "save": {
+                                                "ability": "ability:wis",
+                                                "dc": "spellcasting.dc"
+                                        }
+                                },
+                                "outcomes": [
+                                        {
+                                                "damage": {
+                                                        "amount": {
+                                                                "dice": {
+                                                                        "count": {
+                                                                                "sum": [
+                                                                                        2,
+                                                                                        {
+                                                                                                "slotLevel": true
+                                                                                        }
+                                                                                ]
+                                                                        },
+                                                                        "die": 6
+                                                                }
+                                                        },
+                                                        "type": "damage-type:psychic"
+                                                }
+                                        },
+                                        {
+                                                "move": {
+                                                        "kind": "move",
+                                                        "distance": "target.speeds.movement-mode:walk.speed",
+                                                        "toward": {
+                                                                "awayFrom": "self"
+                                                        },
+                                                        "cost": [
+                                                                {
+                                                                        "resource": "reaction"
+                                                                }
+                                                        ]
+                                                }
+                                        }
+                                ],
+                                "otherwise": "half"
+                        }
+                ]
+        },
+        {
+                "id": "feature:cleric/life-domain/supreme-healing",
+                "name": "Supreme Healing",
+                "source": {
+                        "book": "srd"
+                },
+                "effects": [
+                        {
+                                "type": "die-mod",
+                                "maximize": true,
+                                "when": {
+                                        "event": "event:roll-made",
+                                        "by": "self",
+                                        "match": {
+                                                "roll": "roll:healing"
+                                        }
+                                }
+                        }
+                ]
+        },
+        {
+                "id": "feature:fighter/action-surge-test",
+                "name": "Action Surge",
+                "source": {
+                        "book": "srd"
+                },
+                "activities": [
+                        {
+                                "key": "surge",
+                                "when": {
+                                        "turn": "self"
+                                },
+                                "uses": {
+                                        "max": 1,
+                                        "recover": [
+                                                {
+                                                        "on": {
+                                                                "event": "event:rest-finished",
+                                                                "match": {
+                                                                        "rest": "rest:short"
+                                                                }
+                                                        },
+                                                        "amount": "all"
+                                                }
+                                        ]
+                                },
+                                "outcomes": [
+                                        {
+                                                "pool": {
+                                                        "resource": "action",
+                                                        "add": 1
+                                                },
+                                                "to": "self"
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "state:hasted-test",
+                "name": "Hasted (extra action)",
+                "source": {
+                        "book": "srd"
+                },
+                "activities": [
+                        {
+                                "key": "hasted-action",
+                                "when": {
+                                        "turn": "self"
+                                },
+                                "uses": {
+                                        "max": 1,
+                                        "recover": [
+                                                {
+                                                        "on": {
+                                                                "event": "event:turn-start",
+                                                                "subject": "self"
+                                                        },
+                                                        "amount": "all"
+                                                }
+                                        ]
+                                },
+                                "outcomes": [
+                                        {
+                                                "choose": {
+                                                        "key": "action",
+                                                        "name": "Haste Action",
+                                                        "from": [
+                                                                {
+                                                                        "name": "Attack (one weapon attack)",
+                                                                        "of": [
+                                                                                {
+                                                                                        "runs": [
+                                                                                                {
+                                                                                                        "activity": {
+                                                                                                                "kind": "activity",
+                                                                                                                "where": {
+                                                                                                                        "match": {
+                                                                                                                                "delivery": {
+                                                                                                                                        "attack": {
+                                                                                                                                                "via": "weapon"
+                                                                                                                                        }
+                                                                                                                                }
+                                                                                                                        }
+                                                                                                                }
+                                                                                                        },
+                                                                                                        "times": 1
+                                                                                                }
+                                                                                        ]
+                                                                                }
+                                                                        ]
+                                                                },
+                                                                {
+                                                                        "name": "Dash",
+                                                                        "of": [
+                                                                                {
+                                                                                        "runs": [
+                                                                                                {
+                                                                                                        "activity": {
+                                                                                                                "kind": "activity",
+                                                                                                                "where": {
+                                                                                                                        "match": {
+                                                                                                                                "action": "action:dash"
+                                                                                                                        }
+                                                                                                                }
+                                                                                                        }
+                                                                                                }
+                                                                                        ]
+                                                                                }
+                                                                        ]
+                                                                },
+                                                                {
+                                                                        "name": "Disengage",
+                                                                        "of": [
+                                                                                {
+                                                                                        "runs": [
+                                                                                                {
+                                                                                                        "activity": {
+                                                                                                                "kind": "activity",
+                                                                                                                "where": {
+                                                                                                                        "match": {
+                                                                                                                                "action": "action:disengage"
+                                                                                                                        }
+                                                                                                                }
+                                                                                                        }
+                                                                                                }
+                                                                                        ]
+                                                                                }
+                                                                        ]
+                                                                },
+                                                                {
+                                                                        "name": "Hide",
+                                                                        "of": [
+                                                                                {
+                                                                                        "runs": [
+                                                                                                {
+                                                                                                        "activity": {
+                                                                                                                "kind": "activity",
+                                                                                                                "where": {
+                                                                                                                        "match": {
+                                                                                                                                "action": "action:hide"
+                                                                                                                        }
+                                                                                                                }
+                                                                                                        }
+                                                                                                }
+                                                                                        ]
+                                                                                }
+                                                                        ]
+                                                                },
+                                                                {
+                                                                        "name": "Utilize",
+                                                                        "of": [
+                                                                                {
+                                                                                        "runs": [
+                                                                                                {
+                                                                                                        "activity": {
+                                                                                                                "kind": "activity",
+                                                                                                                "where": {
+                                                                                                                        "match": {
+                                                                                                                                "action": "action:use-an-object"
+                                                                                                                        }
+                                                                                                                }
+                                                                                                        }
+                                                                                                }
+                                                                                        ]
+                                                                                }
+                                                                        ]
+                                                                }
+                                                        ]
+                                                }
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "feature:quickened-spell-test",
+                "name": "Quickened Spell",
+                "source": {
+                        "book": "srd"
+                },
+                "effects": [
+                        {
+                                "type": "change",
+                                "of": {
+                                        "kind": "activity",
+                                        "where": {
+                                                "match": {
+                                                        "cost": {
+                                                                "resource": "action"
+                                                        }
+                                                }
+                                        }
+                                },
+                                "set": {
+                                        "cost": {
+                                                "$where": {
+                                                        "resource": "action"
+                                                },
+                                                "resource": "bonus-action"
+                                        }
+                                }
+                        }
+                ]
+        },
+        {
+                "id": "rule:standing-up-test",
+                "name": "Standing Up",
+                "source": {
+                        "book": "srd"
+                },
+                "activities": [
+                        {
+                                "key": "stand",
+                                "cost": [
+                                        {
+                                                "resource": "movement",
+                                                "amount": {
+                                                        "divide": "speeds.movement-mode:walk.speed",
+                                                        "by": 2,
+                                                        "round": "down"
+                                                }
+                                        }
+                                ],
+                                "outcomes": [
+                                        {
+                                                "endState": {
+                                                        "state": "condition:prone"
+                                                },
+                                                "to": "self"
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "id": "item:named-vorpal-longsword-test",
+                "name": "Edge of the Last Word",
+                "source": {
+                        "book": "homebrew"
+                },
+                "rarity": "rarity:artifact",
+                "attunement": true,
+                "base": {
+                        "item": "item:vorpal-sword",
+                        "chosen": {
+                                "base": "item:longsword"
+                        }
+                }
+        },
+        {
+                "id": "item:crown-of-dread-test",
+                "name": "Crown of Dread",
+                "source": {
+                        "book": "homebrew"
+                },
+                "rarity": "rarity:rare",
+                "attunement": true,
+                "activities": [
+                        {
+                                "key": "invoke-the-rune",
+                                "cost": [
+                                        {
+                                                "resource": "action"
+                                        }
+                                ],
+                                "outcomes": [
+                                        {
+                                                "cast": {
+                                                        "spell": "spell:fear",
+                                                        "slot": false,
+                                                        "stats": {
+                                                                "dc": 15
+                                                        },
+                                                        "set": {
+                                                                "activities": {
+                                                                        "cast": {
+                                                                                "duration": {
+                                                                                        "$replace": {
+                                                                                                "amount": 1,
+                                                                                                "unit": "minute"
+                                                                                        }
+                                                                                },
+                                                                                "concentration": {
+                                                                                        "$delete": true
+                                                                                }
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                ]
+                        }
+                ]
+        }
+]

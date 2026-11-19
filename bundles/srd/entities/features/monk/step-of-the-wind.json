@@ -1,0 +1,68 @@
+{
+  "id": "feature:monk/step-of-the-wind",
+  "name": "Step of the Wind",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can spend 1 ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn.",
+    "plain": "You can spend 1 ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "step-of-the-wind",
+      "name": "Step of the Wind",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "ki"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "choose": {
+                  "key": "dash-or-disengage",
+                  "name": "Dash or Disengage",
+                  "from": [
+                    "rule:disengage",
+                    "rule:dash"
+                  ]
+                }
+              },
+              "times": 1
+            }
+          ]
+        },
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "change",
+                  "set": {
+                    "jump": {
+                      "$multiply": 2
+                    }
+                  }
+                }
+              ]
+            },
+            "ends": [
+              {
+                "event": "event:turn-end",
+                "subject": "self"
+              }
+            ]
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

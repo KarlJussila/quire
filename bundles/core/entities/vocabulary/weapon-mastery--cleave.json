@@ -1,0 +1,18 @@
+{
+  "id": "weapon-mastery:cleave",
+  "name": "Cleave",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon's damage, but don't add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.",
+    "plain": "If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon's damage, but don't add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "The second melee attack must retain this hit’s particular weapon, choose a different creature within 5 feet of the first and within reach, and omit only its positive ability modifier. A term-level activity has no weapon instance parameter; this cannot be an unrestricted extra melee attack."
+    }
+  ]
+}

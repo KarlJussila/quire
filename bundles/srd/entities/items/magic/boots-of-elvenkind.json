@@ -1,0 +1,27 @@
+{
+  "id": "item:boots-of-elvenkind",
+  "name": "Boots of Elvenkind",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have advantage on Dexterity (Stealth) checks that rely on moving silently.",
+    "plain": "While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have advantage on Dexterity (Stealth) checks that rely on moving silently.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "weight": 0,
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "The boots’ steps make no sound, but the schema has no sound-emission or sound-suppression rule."
+    },
+    {
+      "category": "qualified-roll",
+      "name": "The advantage applies only to Dexterity (Stealth) checks that rely on moving silently, a check context the schema cannot identify."
+    }
+  ],
+  "effects": [],
+  "activities": []
+}

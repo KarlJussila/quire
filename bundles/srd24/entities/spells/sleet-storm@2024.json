@@ -1,0 +1,46 @@
+{
+  "id": "spell:sleet-storm@2024",
+  "name": "Sleet Storm",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Until the spell ends, sleet falls in a 40-foot-tall, 20-foot-radius Cylinder centered on a point you choose within range. The area is Heavily Obscured, and exposed flames in the area are doused.\n\nGround in the Cylinder is Difficult Terrain. When a creature enters the Cylinder for the first time on a turn or starts its turn there, it must succeed on a\n\nDexterity saving throw or have the Prone condition and lose Concentration.",
+    "plain": "Until the spell ends, sleet falls in a 40-foot-tall, 20-foot-radius Cylinder centered on a point you choose within range. The area is Heavily Obscured, and exposed flames in the area are doused.\n\nGround in the Cylinder is Difficult Terrain. When a creature enters the Cylinder for the first time on a turn or starts its turn there, it must succeed on a\n\nDexterity saving throw or have the Prone condition and lose Concentration.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:conjuration",
+  "lists": [
+    "class:druid",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a miniature umbrella"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 150
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

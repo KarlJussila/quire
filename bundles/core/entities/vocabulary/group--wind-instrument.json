@@ -1,0 +1,8 @@
+{
+  "id": "group:wind-instrument",
+  "name": "Wind Instrument",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:musical-instrument"
+}

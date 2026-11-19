@@ -1,0 +1,7 @@
+{
+  "id": "group:adventure-rule",
+  "name": "Adventure Rule",
+  "source": {
+    "book": "core"
+  }
+}

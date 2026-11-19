@@ -1,0 +1,7 @@
+{
+  "id": "group:firearm",
+  "name": "Firearm",
+  "source": {
+    "book": "core"
+  }
+}

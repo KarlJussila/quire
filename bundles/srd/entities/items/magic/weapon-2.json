@@ -1,0 +1,68 @@
+{
+  "id": "item:weapon-2",
+  "name": "Weapon, +2",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have a bonus to attack and damage rolls made with this magic weapon. The bonus is determined by the weapon's rarity.",
+    "plain": "You have a bonus to attack and damage rolls made with this magic weapon. The bonus is determined by the weapon's rarity.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:rare",
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Weapon",
+      "from": [
+        {
+          "kind": "item",
+          "where": {
+            "group": "group:weapon"
+          }
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    }
+  ]
+}

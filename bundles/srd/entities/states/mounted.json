@@ -1,0 +1,141 @@
+{
+  "id": "state:mounted",
+  "name": "Mounted",
+  "source": {
+    "book": "core"
+  },
+  "sourceName": "your mount",
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:forced-move",
+          "subject": "source"
+        },
+        {
+          "event": "event:state-applied",
+          "match": {
+            "state": "condition:prone"
+          },
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "target": {
+          "who": "self"
+        },
+        "delivery": {
+          "save": {
+            "ability": "ability:dex",
+            "dc": 10,
+            "by": "self"
+          }
+        },
+        "otherwise": [
+          {
+            "move": {
+              "kind": "move",
+              "where": {
+                "within": 5,
+                "of": "source"
+              },
+              "provokes": false
+            },
+            "to": "self"
+          },
+          {
+            "applyState": {
+              "state": "condition:prone"
+            },
+            "to": "self"
+          },
+          {
+            "endState": {
+              "state": "state:mounted"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    },
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:state-applied",
+          "match": {
+            "state": "condition:prone"
+          },
+          "subject": "source"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "choose": {
+              "key": "fall",
+              "name": "Falling Off",
+              "from": [
+                {
+                  "name": "Land on your feet (reaction)",
+                  "of": [
+                    {
+                      "move": {
+                        "kind": "move",
+                        "where": {
+                          "within": 5,
+                          "of": "source"
+                        },
+                        "cost": [
+                          {
+                            "resource": "reaction"
+                          }
+                        ]
+                      },
+                      "to": "self"
+                    },
+                    {
+                      "endState": {
+                        "state": "state:mounted"
+                      },
+                      "to": "self"
+                    }
+                  ]
+                },
+                {
+                  "name": "Fall prone",
+                  "of": [
+                    {
+                      "move": {
+                        "kind": "move",
+                        "where": {
+                          "within": 5,
+                          "of": "source"
+                        },
+                        "provokes": false
+                      },
+                      "to": "self"
+                    },
+                    {
+                      "applyState": {
+                        "state": "condition:prone"
+                      },
+                      "to": "self"
+                    },
+                    {
+                      "endState": {
+                        "state": "state:mounted"
+                      },
+                      "to": "self"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

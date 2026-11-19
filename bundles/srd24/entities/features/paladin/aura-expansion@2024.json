@@ -1,0 +1,12 @@
+{
+  "id": "feature:paladin/aura-expansion@2024",
+  "name": "Level 18: Aura Expansion",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your Aura of Protection is now a 30-foot Emanation.",
+    "plain": "Your Aura of Protection is now a 30-foot Emanation.",
+    "wording": "srd"
+  }
+}

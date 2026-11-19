@@ -1,0 +1,40 @@
+{
+  "id": "spell:chain-lightning@2024",
+  "name": "Chain Lightning",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You launch a lightning bolt toward a target you can see within range. Three bolts then leap from that target to as many as three other targets of your choice, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts.\n\nEach target makes a Dexterity saving throw, taking 10d8 Lightning damage on a failed save or half as much damage on a successful one.\n\n_**Using a Higher-Level Spell Slot.**_ One additional bolt leaps from the first target to another target for each spell slot level above 6.",
+    "plain": "You launch a lightning bolt toward a target you can see within range. Three bolts then leap from that target to as many as three other targets of your choice, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts.\n\nEach target makes a Dexterity saving throw, taking 10d8 Lightning damage on a failed save or half as much damage on a successful one.\n\nUsing a Higher-Level Spell Slot. One additional bolt leaps from the first target to another target for each spell slot level above 6.",
+    "wording": "srd"
+  },
+  "level": 6,
+  "school": "spell-school:evocation",
+  "lists": [
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "three silver pins"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 150
+      },
+      "duration": "instant"
+    }
+  ]
+}

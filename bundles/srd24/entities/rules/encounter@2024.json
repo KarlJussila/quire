@@ -1,0 +1,18 @@
+{
+  "id": "rule:encounter@2024",
+  "name": "Encounter",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "An encounter is a scene in an adventure that is part of at least one of the game's three pillars: social interaction, exploration, or combat. _See also_ \"Playing the Game\" (\"Social Interaction,\" \"Exploration,\" and \"Combat\").",
+    "plain": "An encounter is a scene in an adventure that is part of at least one of the game's three pillars: social interaction, exploration, or combat. See also \"Playing the Game\" (\"Social Interaction,\" \"Exploration,\" and \"Combat\").",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

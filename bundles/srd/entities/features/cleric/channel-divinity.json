@@ -1,0 +1,42 @@
+{
+  "id": "feature:cleric/channel-divinity",
+  "name": "Channel Divinity",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.\n\nWhen you use your Channel Divinity, you choose which effect to create. You must then finish a short or long rest to use your Channel Divinity again.\n\nSome Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your cleric spell save DC.\n\nBeginning at 6th level, you can use your Channel Divinity twice between rests, and beginning at 18th level, you can use it three times between rests. When you finish a short or long rest, you regain your expended uses.",
+    "plain": "At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.\n\nWhen you use your Channel Divinity, you choose which effect to create. You must then finish a short or long rest to use your Channel Divinity again.\n\nSome Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your cleric spell save DC.\n\nBeginning at 6th level, you can use your Channel Divinity twice between rests, and beginning at 18th level, you can use it three times between rests. When you finish a short or long rest, you regain your expended uses.",
+    "wording": "srd"
+  },
+  "features": [
+    "feature:cleric/channel-divinity-turn-undead"
+  ],
+  "effects": [
+    {
+      "type": "resource",
+      "key": "channel-divinity",
+      "max": {
+        "byLevel": {
+          "2": 1,
+          "6": 2,
+          "18": 3
+        },
+        "of": "class:cleric"
+      },
+      "dc": "spellcasting.class:cleric.dc",
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:short"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ]
+}

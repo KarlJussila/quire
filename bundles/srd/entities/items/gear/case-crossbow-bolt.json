@@ -1,0 +1,18 @@
+{
+  "id": "item:case-crossbow-bolt",
+  "name": "Case, Crossbow Bolt",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This wooden case can hold up to twenty crossbow bolts.",
+    "plain": "This wooden case can hold up to twenty crossbow bolts.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:gp"
+  },
+  "weight": 1.0
+}

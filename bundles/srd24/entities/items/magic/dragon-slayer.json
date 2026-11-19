@@ -1,0 +1,103 @@
+{
+  "id": "item:dragon-slayer@2024",
+  "name": "Dragon Slayer",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.\n\nThe weapon deals an extra 3d6 damage of the weapon's type if the target is a Dragon.",
+    "plain": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.\n\nThe weapon deals an extra 3d6 damage of the weapon's type if the target is a Dragon.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:rare",
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Weapon",
+      "from": [
+        {
+          "kind": "item",
+          "where": {
+            "group": "group:weapon"
+          }
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    },
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "match": {
+              "creatureType": "creature-type:dragon"
+            }
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "this"
+          },
+          "success": true
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "damage": {
+              "amount": "3d6",
+              "type": {
+                "of": "weapon"
+              }
+            },
+            "to": "subject"
+          }
+        ]
+      }
+    }
+  ]
+}

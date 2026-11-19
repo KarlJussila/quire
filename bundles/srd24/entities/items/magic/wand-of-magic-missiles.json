@@ -1,0 +1,198 @@
+{
+  "id": "item:wand-of-magic-missiles@2024",
+  "name": "Wand of Magic Missiles",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This wand has 7 charges. While holding it, you can expend no more than 3 charges to cast Magic Missile from it. For 1 charge, you cast the level 1 version of the spell. You can increase the spell's level by 1 for each additional charge you expend.\n\n_**Regaining Charges.**_ The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+    "plain": "This wand has 7 charges. While holding it, you can expend no more than 3 charges to cast Magic Missile from it. For 1 charge, you cast the level 1 version of the spell. You can increase the spell's level by 1 for each additional charge you expend.\n\nRegaining Charges. The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+    "wording": "srd"
+  },
+  "group": "group:wand",
+  "rarity": "rarity:uncommon",
+  "effects": [
+    {
+      "type": "resource",
+      "key": "charges",
+      "max": 7,
+      "recover": [
+        {
+          "on": {
+            "event": "event:dawn"
+          },
+          "amount": "1d6+1"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "key": "charge-1",
+      "action": "action:magic",
+      "when": {
+        "has": "this",
+        "match": {
+          "held": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "charges"
+        }
+      ],
+      "outcomes": [
+        {
+          "cast": {
+            "spell": "spell:magic-missile",
+            "castAt": 1,
+            "slot": false,
+            "set": {
+              "components": {
+                "$replace": {}
+              }
+            }
+          }
+        },
+        {
+          "random": {
+            "dice": "1d20",
+            "results": [
+              {
+                "range": [
+                  1,
+                  1
+                ],
+                "outcomes": [
+                  {
+                    "destroy": {},
+                    "to": "this"
+                  }
+                ]
+              }
+            ]
+          },
+          "when": {
+            "compare": "this.pools.charges.current",
+            "atMost": 0
+          }
+        }
+      ]
+    },
+    {
+      "key": "charge-2",
+      "action": "action:magic",
+      "when": {
+        "has": "this",
+        "match": {
+          "held": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "charges",
+          "amount": 2
+        }
+      ],
+      "outcomes": [
+        {
+          "cast": {
+            "spell": "spell:magic-missile",
+            "castAt": 2,
+            "slot": false,
+            "set": {
+              "components": {
+                "$replace": {}
+              }
+            }
+          }
+        },
+        {
+          "random": {
+            "dice": "1d20",
+            "results": [
+              {
+                "range": [
+                  1,
+                  1
+                ],
+                "outcomes": [
+                  {
+                    "destroy": {},
+                    "to": "this"
+                  }
+                ]
+              }
+            ]
+          },
+          "when": {
+            "compare": "this.pools.charges.current",
+            "atMost": 0
+          }
+        }
+      ]
+    },
+    {
+      "key": "charge-3",
+      "action": "action:magic",
+      "when": {
+        "has": "this",
+        "match": {
+          "held": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "charges",
+          "amount": 3
+        }
+      ],
+      "outcomes": [
+        {
+          "cast": {
+            "spell": "spell:magic-missile",
+            "castAt": 3,
+            "slot": false,
+            "set": {
+              "components": {
+                "$replace": {}
+              }
+            }
+          }
+        },
+        {
+          "random": {
+            "dice": "1d20",
+            "results": [
+              {
+                "range": [
+                  1,
+                  1
+                ],
+                "outcomes": [
+                  {
+                    "destroy": {},
+                    "to": "this"
+                  }
+                ]
+              }
+            ]
+          },
+          "when": {
+            "compare": "this.pools.charges.current",
+            "atMost": 0
+          }
+        }
+      ]
+    }
+  ]
+}

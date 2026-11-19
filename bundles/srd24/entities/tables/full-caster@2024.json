@@ -1,0 +1,290 @@
+{
+  "id": "table:full-caster@2024",
+  "name": "Full Caster Spell Slots",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Spell slots per spell level for full casters (Bard, Cleric, Druid, Sorcerer, Wizard).",
+    "wording": "original"
+  },
+  "axis": "class-level",
+  "columns": [
+    {
+      "key": "slot-1",
+      "name": "Slot 1"
+    },
+    {
+      "key": "slot-2",
+      "name": "Slot 2"
+    },
+    {
+      "key": "slot-3",
+      "name": "Slot 3"
+    },
+    {
+      "key": "slot-4",
+      "name": "Slot 4"
+    },
+    {
+      "key": "slot-5",
+      "name": "Slot 5"
+    },
+    {
+      "key": "slot-6",
+      "name": "Slot 6"
+    },
+    {
+      "key": "slot-7",
+      "name": "Slot 7"
+    },
+    {
+      "key": "slot-8",
+      "name": "Slot 8"
+    },
+    {
+      "key": "slot-9",
+      "name": "Slot 9"
+    }
+  ],
+  "rows": [
+    {
+      "level": 1,
+      "cells": {
+        "slot-1": 2,
+        "slot-2": 0,
+        "slot-3": 0,
+        "slot-4": 0,
+        "slot-5": 0,
+        "slot-6": 0,
+        "slot-7": 0,
+        "slot-8": 0,
+        "slot-9": 0
+      }
+    },
+    {
+      "level": 2,
+      "cells": {
+        "slot-1": 3,
+        "slot-2": 0,
+        "slot-3": 0,
+        "slot-4": 0,
+        "slot-5": 0,
+        "slot-6": 0,
+        "slot-7": 0,
+        "slot-8": 0,
+        "slot-9": 0
+      }
+    },
+    {
+      "level": 3,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 2,
+        "slot-3": 0,
+        "slot-4": 0,
+        "slot-5": 0,
+        "slot-6": 0,
+        "slot-7": 0,
+        "slot-8": 0,
+        "slot-9": 0
+      }
+    },
+    {
+      "level": 4,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 0,
+        "slot-4": 0,
+        "slot-5": 0,
+        "slot-6": 0,
+        "slot-7": 0,
+        "slot-8": 0,
+        "slot-9": 0
+      }
+    },
+    {
+      "level": 5,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 2,
+        "slot-4": 0,
+        "slot-5": 0,
+        "slot-6": 0,
+        "slot-7": 0,
+        "slot-8": 0,
+        "slot-9": 0
+      }
+    },
+    {
+      "level": 6,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 3,
+        "slot-4": 0,
+        "slot-5": 0,
+        "slot-6": 0,
+        "slot-7": 0,
+        "slot-8": 0,
+        "slot-9": 0
+      }
+    },
+    {
+      "level": 7,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 3,
+        "slot-4": 1,
+        "slot-5": 0,
+        "slot-6": 0,
+        "slot-7": 0,
+        "slot-8": 0,
+        "slot-9": 0
+      }
+    },
+    {
+      "level": 8,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 3,
+        "slot-4": 2,
+        "slot-5": 0,
+        "slot-6": 0,
+        "slot-7": 0,
+        "slot-8": 0,
+        "slot-9": 0
+      }
+    },
+    {
+      "level": 9,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 3,
+        "slot-4": 3,
+        "slot-5": 1,
+        "slot-6": 0,
+        "slot-7": 0,
+        "slot-8": 0,
+        "slot-9": 0
+      }
+    },
+    {
+      "level": 10,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 3,
+        "slot-4": 3,
+        "slot-5": 2,
+        "slot-6": 0,
+        "slot-7": 0,
+        "slot-8": 0,
+        "slot-9": 0
+      }
+    },
+    {
+      "level": 11,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 3,
+        "slot-4": 3,
+        "slot-5": 2,
+        "slot-6": 1,
+        "slot-7": 0,
+        "slot-8": 0,
+        "slot-9": 0
+      }
+    },
+    {
+      "level": 13,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 3,
+        "slot-4": 3,
+        "slot-5": 2,
+        "slot-6": 1,
+        "slot-7": 1,
+        "slot-8": 0,
+        "slot-9": 0
+      }
+    },
+    {
+      "level": 15,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 3,
+        "slot-4": 3,
+        "slot-5": 2,
+        "slot-6": 1,
+        "slot-7": 1,
+        "slot-8": 1,
+        "slot-9": 0
+      }
+    },
+    {
+      "level": 17,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 3,
+        "slot-4": 3,
+        "slot-5": 2,
+        "slot-6": 1,
+        "slot-7": 1,
+        "slot-8": 1,
+        "slot-9": 1
+      }
+    },
+    {
+      "level": 18,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 3,
+        "slot-4": 3,
+        "slot-5": 3,
+        "slot-6": 1,
+        "slot-7": 1,
+        "slot-8": 1,
+        "slot-9": 1
+      }
+    },
+    {
+      "level": 19,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 3,
+        "slot-4": 3,
+        "slot-5": 3,
+        "slot-6": 2,
+        "slot-7": 1,
+        "slot-8": 1,
+        "slot-9": 1
+      }
+    },
+    {
+      "level": 20,
+      "cells": {
+        "slot-1": 4,
+        "slot-2": 3,
+        "slot-3": 3,
+        "slot-4": 3,
+        "slot-5": 3,
+        "slot-6": 2,
+        "slot-7": 2,
+        "slot-8": 1,
+        "slot-9": 1
+      }
+    }
+  ]
+}

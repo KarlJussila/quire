@@ -1,0 +1,44 @@
+{
+  "id": "spell:telepathic-bond",
+  "name": "Telepathic Bond",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures with Intelligence scores of 2 or less aren't affected by this spell.\n\nUntil the spell ends, the targets can communicate telepathically through the bond whether or not they have a common language. The communication is possible over any distance, though it can't extend to other planes of existence.",
+    "plain": "You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures with Intelligence scores of 2 or less aren't affected by this spell.\n\nUntil the spell ends, the targets can communicate telepathically through the bond whether or not they have a common language. The communication is possible over any distance, though it can't extend to other planes of existence.",
+    "wording": "srd"
+  },
+  "level": 5,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:wizard"
+  ],
+  "ritual": true,
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "pieces of eggshell from two different kinds of creatures"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour"
+      },
+      "ritual": true
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "condition:prone",
+  "name": "Prone",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- A Prone creature's only movement option is to crawl, unless it stands up and thereby ends the condition.\n- The creature has disadvantage on attack rolls.\n- An attack roll against the creature has advantage if the attacker is within 5 feet of the creature. Otherwise, the attack roll has disadvantage.",
+    "plain": "A Prone creature's only movement option is to crawl, unless it stands up and thereby ends the condition.\nThe creature has disadvantage on attack rolls.\nAn attack roll against the creature has advantage if the attacker is within 5 feet of the creature. Otherwise, the attack roll has disadvantage.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any",
+          "where": {
+            "within": 5
+          }
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any",
+          "where": {
+            "not": {
+              "within": 5
+            }
+          }
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "movementCosts": {
+          "movement-mode:walk": {
+            "$add": 1
+          }
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "stand-up",
+      "when": {
+        "match": {
+          "speeds": {
+            "movement-mode:walk": true
+          }
+        }
+      },
+      "cost": [
+        {
+          "resource": "movement",
+          "amount": {
+            "divide": "speeds.movement-mode:walk.speed",
+            "by": 2,
+            "round": "down"
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "endState": {
+            "state": "condition:prone"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

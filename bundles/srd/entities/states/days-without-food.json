@@ -1,0 +1,8 @@
+{
+  "id": "state:days-without-food",
+  "name": "Days Without Food",
+  "source": {
+    "book": "core"
+  },
+  "stacks": "levels"
+}

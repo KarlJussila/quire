@@ -1,0 +1,10 @@
+{
+  "id": "state:curse",
+  "name": "Curse",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Parent state for named curses; each named curse defines its own effects and ending conditions."
+  }
+}

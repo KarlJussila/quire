@@ -1,0 +1,7 @@
+{
+  "id": "action:search",
+  "name": "Search",
+  "source": {
+    "book": "core"
+  }
+}

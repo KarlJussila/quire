@@ -1,0 +1,11 @@
+{
+ "id": "srd-copy",
+ "name": "SRD copy",
+ "version": "1.0.0",
+ "releaseDate": "2023-01-26",
+ "requires": [
+  {
+   "bundle": "core"
+  }
+ ]
+}

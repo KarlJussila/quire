@@ -1,0 +1,51 @@
+{
+  "id": "feature:wizard/proficiencies",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Armor: None\nWeapons: Daggers, darts, slings, quarterstaffs, light crossbows\nTools: None\nSaving Throws: Intelligence, Wisdom\nSkills: Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:int",
+        "ability:wis"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "item:dagger",
+        "item:dart",
+        "item:sling",
+        "item:quarterstaff",
+        "item:light-crossbow"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              "skill:arcana",
+              "skill:history",
+              "skill:insight",
+              "skill:investigation",
+              "skill:medicine",
+              "skill:religion"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

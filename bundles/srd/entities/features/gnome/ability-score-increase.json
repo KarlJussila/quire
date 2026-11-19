@@ -1,0 +1,23 @@
+{
+  "id": "feature:gnome/ability-score-increase",
+  "name": "Ability Score Increase",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Ability Score Increase. Your Intelligence score increases by 2.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:int": {
+            "$add": 2
+          }
+        }
+      }
+    }
+  ]
+}

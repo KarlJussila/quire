@@ -1,0 +1,20 @@
+{
+  "id": "feature:tiefling/languages",
+  "name": "Languages",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Languages. You can speak, read, and write Common and Infernal.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "language:common",
+        "language:infernal"
+      ]
+    }
+  ]
+}

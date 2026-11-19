@@ -1,0 +1,137 @@
+{
+  "id": "creature:invisible-stalker@2024",
+  "name": "Invisible Stalker",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:elemental",
+  "alignment": "alignment:neutral",
+  "ac": 14,
+  "hp": {
+    "average": 97,
+    "formula": "13d10 + 26"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    },
+    "movement-mode:fly": {
+      "speed": 50,
+      "hover": true
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 14,
+    "ability:dex": 19,
+    "ability:int": 10,
+    "ability:str": 16,
+    "ability:wis": 15
+  },
+  "skills": {
+    "skill:perception": 8,
+    "skill:stealth": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 18,
+  "xp": 2300,
+  "proficiencyBonus": 3,
+  "initiative": 7,
+  "habitat": [
+    "Urban"
+  ],
+  "cr": 6,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "text": "Primordial (Auran)"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:exhaustion",
+        "condition:grappled",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:poisoned",
+        "condition:prone",
+        "condition:restrained",
+        "condition:unconscious"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Air Form",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The stalker can enter an enemy's space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so.",
+        "plain": "The stalker can enter an enemy's space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Invisibility",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The stalker has the Invisible condition.",
+        "plain": "The stalker has the Invisible condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The stalker makes three Wind Swipe attacks. It can replace one attack with a use of Vortex.",
+        "plain": "The stalker makes three Wind Swipe attacks. It can replace one attack with a use of Vortex.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Wind Swipe",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 5 ft. _Hit:_ 11 (2d6 + 4) Force damage.",
+        "plain": "Melee Attack Roll: +7, reach 5 ft. Hit: 11 (2d6 + 4) Force damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Vortex",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 14, one Large or smaller creature in the stalker's space. _Failure:_ 7 (1d8 + 3) Thunder damage, and the target has the Grappled condition (escape DC 13). Until the grapple ends, the target can't cast spells with a Verbal component and takes 7 (2d6) Thunder damage at the start of each of the stalker's turns.",
+        "plain": "Constitution Saving Throw: DC 14, one Large or smaller creature in the stalker's space. Failure: 7 (1d8 + 3) Thunder damage, and the target has the Grappled condition (escape DC 13). Until the grapple ends, the target can't cast spells with a Verbal component and takes 7 (2d6) Thunder damage at the start of each of the stalker's turns.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

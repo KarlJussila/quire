@@ -1,0 +1,44 @@
+{
+  "id": "spell:shield-of-faith",
+  "name": "Shield of Faith",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.",
+    "plain": "A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:cleric",
+    "class:paladin"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a small parchment with a bit of holy text written on it"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": {
+        "amount": 10,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

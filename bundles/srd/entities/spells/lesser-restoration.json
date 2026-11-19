@@ -1,0 +1,40 @@
+{
+  "id": "spell:lesser-restoration",
+  "name": "Lesser Restoration",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You touch a creature and can end either one disease or one condition afflicting it. The condition can be Blinded, Deafened, Paralyzed, or Poisoned.",
+    "plain": "You touch a creature and can end either one disease or one condition afflicting it. The condition can be Blinded, Deafened, Paralyzed, or Poisoned.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:druid",
+    "class:paladin",
+    "class:ranger"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "event:state-ended",
+  "name": "State Ended",
+  "source": {
+    "book": "core"
+  },
+  "payload": [
+    "state"
+  ],
+  "emittedBy": "engine"
+}

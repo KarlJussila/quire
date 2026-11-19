@@ -1,0 +1,40 @@
+{
+  "id": "feature:half-elf/fey-ancestry",
+  "name": "Fey Ancestry",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have advantage on saving throws against being Charmed, and magic can't put you to sleep.",
+    "plain": "You have advantage on saving throws against being Charmed, and magic can't put you to sleep.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "against": {
+            "condition": "condition:charmed"
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "state:magically-asleep"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "content-dependency",
+      "name": "Sleep, Eyebite, Symbol, and Imprisonment must apply state:magically-asleep for this immunity to match."
+    }
+  ]
+}

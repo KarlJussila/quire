@@ -1,0 +1,52 @@
+{
+  "id": "rule:dehydration@2024",
+  "name": "Dehydration",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A creature requires an amount of water per day based on its size, as shown in the table. A creature that drinks less than half the required water for a day gains 1 Exhaustion level at the day's end. Exhaustion caused by dehydration can't be removed until the creature drinks the full amount of water required for a day. _See also_ \"Exhaustion.\"\n\n| Size       | Water      |\n|------------|------------|\n| Tiny       | 1/4 gallon |\n| Small      | 1 gallon   |\n| Medium     | 1 gallon   |\n| Large      | 4 gallons  |\n| Huge       | 16 gallons |\n| Gargantuan | 64 gallons |",
+    "plain": "A creature requires an amount of water per day based on its size, as shown in the table. A creature that drinks less than half the required water for a day gains 1 Exhaustion level at the day's end. Exhaustion caused by dehydration can't be removed until the creature drinks the full amount of water required for a day. _See also_ \"Exhaustion.\"\n\nSize\tWater\nTiny\t1/4 gallon\nSmall\t1 gallon\nMedium\t1 gallon\nLarge\t4 gallons\nHuge\t16 gallons\nGargantuan\t64 gallons",
+    "wording": "srd"
+  },
+  "group": "group:hazard",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:day-ended",
+          "subject": "self",
+          "when": {
+            "prose": {
+              "text": "drank less than half water",
+              "gap": {
+                "category": "test",
+                "name": "drank-less-than-half-water"
+              }
+            }
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "applyState": {
+              "state": "condition:exhaustion"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "survival",
+      "name": "Exhaustion from dehydration can't be removed until the creature drinks the full amount"
+    }
+  ]
+}

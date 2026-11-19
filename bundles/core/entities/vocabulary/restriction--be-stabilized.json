@@ -1,0 +1,7 @@
+{
+  "id": "restriction:be-stabilized",
+  "name": "Be Stabilized",
+  "source": {
+    "book": "core"
+  }
+}

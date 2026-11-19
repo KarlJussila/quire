@@ -1,0 +1,12 @@
+{
+ "id": "event:roll-made",
+ "name": "Roll Made",
+ "source": {
+  "book": "core"
+ },
+ "payload": [
+  "roll",
+  "against"
+ ],
+ "emittedBy": "engine"
+}

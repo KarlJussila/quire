@@ -1,0 +1,42 @@
+{
+  "id": "feature:bard/expertise",
+  "name": "Expertise",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 3rd level, choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.\n\nAt 10th level, you can choose another two skill proficiencies to gain this benefit.",
+    "plain": "At 3rd level, choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.\n\nAt 10th level, you can choose another two skill proficiencies to gain this benefit.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "level": "expertise",
+      "in": [
+        {
+          "choose": {
+            "key": "expertise",
+            "name": "Expertise",
+            "count": {
+              "byLevel": {
+                "3": 2,
+                "10": 4
+              },
+              "of": "class:bard"
+            },
+            "distinct": true,
+            "from": [
+              {
+                "kind": "skill",
+                "where": {
+                  "proficient": "candidate"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

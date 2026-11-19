@@ -1,0 +1,8 @@
+{
+  "id": "roll:save",
+  "name": "Saving Throw",
+  "source": {
+    "book": "core"
+  },
+  "isA": "roll:d20-test"
+}

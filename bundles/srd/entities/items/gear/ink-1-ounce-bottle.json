@@ -1,0 +1,17 @@
+{
+  "id": "item:ink-1-ounce-bottle",
+  "name": "Ink (1 ounce bottle)",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 0.0
+}

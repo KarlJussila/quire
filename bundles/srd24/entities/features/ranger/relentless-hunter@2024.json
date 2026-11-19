@@ -1,0 +1,32 @@
+{
+  "id": "feature:ranger/relentless-hunter@2024",
+  "name": "Level 13: Relentless Hunter",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Taking damage can't break your Concentration on Hunter's Mark.",
+    "plain": "Taking damage can't break your Concentration on Hunter's Mark.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "forced-result",
+      "success": true,
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:concentration"
+            }
+          },
+          {
+            "spell": "spell:hunters-mark"
+          }
+        ]
+      }
+    }
+  ]
+}

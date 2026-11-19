@@ -1,0 +1,18 @@
+{
+  "id": "item:ram-portable@2024",
+  "name": "Ram, Portable",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 4 GP\n\nYou can use a Portable Ram to break down doors. When doing so, you gain a +4 bonus to the Strength check. One other character can help you use the ram, giving you Advantage on this check.",
+    "plain": "Cost: 4 GP\n\nYou can use a Portable Ram to break down doors. When doing so, you gain a +4 bonus to the Strength check. One other character can help you use the ram, giving you Advantage on this check.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 4,
+    "currency": "currency:gp"
+  },
+  "weight": 35.0
+}

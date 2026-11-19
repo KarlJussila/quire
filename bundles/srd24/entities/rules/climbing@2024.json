@@ -1,0 +1,37 @@
+{
+  "id": "rule:climbing@2024",
+  "name": "Climbing",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you're climbing, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain). You ignore this extra cost if you have a Climb Speed and use it to climb.\n\nAt the GM's option, climbing a slippery surface or one with few handholds might require a successful DC 15 Strength (Athletics) check.",
+    "plain": "While you're climbing, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain). You ignore this extra cost if you have a Climb Speed and use it to climb.\n\nAt the GM's option, climbing a slippery surface or one with few handholds might require a successful DC 15 Strength (Athletics) check.",
+    "wording": "srd"
+  },
+  "group": "group:exploration",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "movementCosts": {
+          "movement-mode:climb": {
+            "$add": 1
+          }
+        }
+      },
+      "when": {
+        "not": {
+          "match": {
+            "speeds": {
+              "movement-mode:climb": true
+            }
+          }
+        }
+      }
+    }
+  ]
+}

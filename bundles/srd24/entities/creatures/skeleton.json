@@ -1,0 +1,97 @@
+{
+  "id": "creature:skeleton@2024",
+  "name": "Skeleton",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:lawful-evil",
+  "ac": 14,
+  "hp": {
+    "average": 13,
+    "formula": "2d8 + 4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 15,
+    "ability:dex": 16,
+    "ability:int": 6,
+    "ability:str": 10,
+    "ability:wis": 8
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 9,
+  "xp": 50,
+  "proficiencyBonus": 2,
+  "initiative": 3,
+  "habitat": [
+    "Planar (Shadowfell)",
+    "Underdark",
+    "Urban"
+  ],
+  "gear": [
+    "Shortbow",
+    "Shortsword"
+  ],
+  "cr": 0.25,
+  "languages": [
+    {
+      "text": "Understands Common plus one other language but can't speak"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "vulnerable": [
+        "damage-type:bludgeoning"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:exhaustion",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Shortsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 6 (1d6 + 3) Piercing damage.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shortbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +5, range 80/320 ft. _Hit:_ 6 (1d6 + 3) Piercing damage.",
+        "plain": "Ranged Attack Roll: +5, range 80/320 ft. Hit: 6 (1d6 + 3) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

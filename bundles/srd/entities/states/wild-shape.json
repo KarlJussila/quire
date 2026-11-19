@@ -1,0 +1,161 @@
+{
+  "id": "state:wild-shape",
+  "name": "Wild Shape",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.\n\nYour druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.",
+    "plain": "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.\n\nYour druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "shapeshift",
+      "form": {
+        "all": [
+          {
+            "match": {
+              "creatureType": "creature-type:beast"
+            }
+          },
+          {
+            "any": [
+              {
+                "all": [
+                  {
+                    "compare": "levels.class:druid",
+                    "atLeast": 2,
+                    "atMost": 3
+                  },
+                  {
+                    "compare": "cr",
+                    "atMost": 0.25
+                  },
+                  {
+                    "not": {
+                      "any": [
+                        {
+                          "match": {
+                            "speeds": {
+                              "movement-mode:fly": true
+                            }
+                          }
+                        },
+                        {
+                          "match": {
+                            "speeds": {
+                              "movement-mode:swim": true
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "compare": "levels.class:druid",
+                    "atLeast": 4,
+                    "atMost": 7
+                  },
+                  {
+                    "compare": "cr",
+                    "atMost": 0.5
+                  },
+                  {
+                    "not": {
+                      "match": {
+                        "speeds": {
+                          "movement-mode:fly": true
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "compare": "levels.class:druid",
+                    "atLeast": 8
+                  },
+                  {
+                    "compare": "cr",
+                    "atMost": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "keep": [
+        "alignment",
+        "personality",
+        "mental-scores",
+        "proficiencies",
+        "features"
+      ],
+      "hp": "form"
+    },
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:cast-spells"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "key": "revert-wild-shape",
+      "name": "Revert from Wild Shape",
+      "when": {
+        "turn": "self"
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "endState": {
+            "state": "state:wild-shape"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "duration": {
+    "amount": {
+      "divide": "levels.class:druid",
+      "by": 2,
+      "round": "down"
+    },
+    "unit": "hour"
+  },
+  "ends": [
+    {
+      "event": "event:state-applied",
+      "subject": "self",
+      "match": {
+        "state": "condition:unconscious"
+      }
+    },
+    {
+      "becomes": {
+        "compare": "hp.current",
+        "atMost": 0
+      },
+      "subject": "self"
+    },
+    {
+      "event": "event:died",
+      "subject": "self"
+    }
+  ]
+}

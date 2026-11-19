@@ -1,0 +1,60 @@
+{
+  "id": "item:robe-of-eyes",
+  "name": "Robe of Eyes",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This robe is adorned with eyelike patterns. While you wear the robe, you gain the following benefits:\n\n- The robe lets you see in all directions, and you have advantage on Wisdom (Perception) checks that rely on sight.\n- You have darkvision out to a range of 120 feet.\n- You can see Invisible creatures and objects, as well as see into the Ethereal Plane, out to a range of 120 feet.\n\nThe eyes on the robe can't be closed or averted. Although you can close or avert your own eyes, you are never considered to be doing so while wearing this robe.\n\nA Light spell cast on the robe or a Daylight spell cast within 5 feet of the robe causes you to be Blinded for 1 minute. At the end of each of your turns, you can make a Constitution saving throw (DC 11 for Light or DC 15 for Daylight), ending the blindness on a success.",
+    "plain": "This robe is adorned with eyelike patterns. While you wear the robe, you gain the following benefits:\n\n- The robe lets you see in all directions, and you have advantage on Wisdom (Perception) checks that rely on sight.\n- You have darkvision out to a range of 120 feet.\n- You can see Invisible creatures and objects, as well as see into the Ethereal Plane, out to a range of 120 feet.\n\nThe eyes on the robe can't be closed or averted. Although you can close or avert your own eyes, you are never considered to be doing so while wearing this robe.\n\nA Light spell cast on the robe or a Daylight spell cast within 5 feet of the robe causes you to be Blinded for 1 minute. At the end of each of your turns, you can make a Constitution saving throw (DC 11 for Light or DC 15 for Daylight), ending the blindness on a success.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "weight": 4,
+  "effects": [
+    {
+      "type": "sense",
+      "sense": "sense:darkvision",
+      "range": 120,
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    },
+    {
+      "type": "see",
+      "range": 120,
+      "invisible": true,
+      "planes": [
+        "plane:ethereal"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "The schema has no perception field for seeing in all directions or for never being considered to close or avert the robe’s eyes."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "The spell-cast event has no typed target or area-distance field to match Light cast on the robe or Daylight cast within 5 feet, so the Blinded condition and repeat save are omitted."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "The schema cannot identify Wisdom (Perception) checks that rely on sight, so the advantage is omitted."
+    }
+  ]
+}

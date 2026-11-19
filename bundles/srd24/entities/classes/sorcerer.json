@@ -1,0 +1,63 @@
+{
+  "id": "class:sorcerer@2024",
+  "name": "Sorcerer",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Sorcerer, you gain the following class features when you reach the specified Sorcerer levels.",
+    "plain": "As a Sorcerer, you gain the following class features when you reach the specified Sorcerer levels.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d6",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:cha",
+      "atLeast": 13
+    }
+  },
+  "levels": {
+    "1": [
+      "feature:sorcerer/innate-sorcery@2024",
+      "feature:sorcerer/spellcasting@2024"
+    ],
+    "2": [
+      "feature:sorcerer/font-of-magic@2024",
+      "feature:sorcerer/metamagic@2024"
+    ],
+    "3": [
+      "feature:sorcerer/sorcerer-subclass@2024"
+    ],
+    "4": [
+      "feature:sorcerer/ability-score-improvement@2024"
+    ],
+    "5": [
+      "feature:sorcerer/sorcerous-restoration@2024"
+    ],
+    "7": [
+      "feature:sorcerer/sorcery-incarnate@2024"
+    ],
+    "8": [
+      "feature:sorcerer/ability-score-improvement@2024"
+    ],
+    "12": [
+      "feature:sorcerer/ability-score-improvement@2024"
+    ],
+    "16": [
+      "feature:sorcerer/ability-score-improvement@2024"
+    ],
+    "19": [
+      "feature:sorcerer/epic-boon@2024"
+    ],
+    "20": [
+      "feature:sorcerer/arcane-apotheosis@2024"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Sorcerous Origin||Sorcerer Subclass"
+  },
+  "firstClass": [
+    "feature:sorcerer/proficiencies@2024"
+  ]
+}

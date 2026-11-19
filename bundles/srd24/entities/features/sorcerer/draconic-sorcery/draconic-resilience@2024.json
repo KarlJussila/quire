@@ -1,0 +1,46 @@
+{
+  "id": "feature:sorcerer/draconic-sorcery/draconic-resilience@2024",
+  "name": "Level 3: Draconic Resilience",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The magic in your body manifests physical traits of your draconic gift. Your Hit Point maximum increases by 3, and it increases by 1 whenever you gain another Sorcerer level.\n\nParts of you are also covered by dragon-like scales. While you aren't wearing armor, your base Armor Class equals 10 plus your Dexterity and Charisma modifiers.",
+    "plain": "The magic in your body manifests physical traits of your draconic gift. Your Hit Point maximum increases by 3, and it increases by 1 whenever you gain another Sorcerer level.\n\nParts of you are also covered by dragon-like scales. While you aren't wearing armor, your base Armor Class equals 10 plus your Dexterity and Charisma modifiers.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "hp": {
+          "max": {
+            "$add": "levels.class:sorcerer"
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$base": {
+            "sum": [
+              10,
+              "modifiers.ability:dex",
+              "modifiers.ability:cha"
+            ]
+          }
+        }
+      },
+      "when": {
+        "not": {
+          "has": "group:armor",
+          "match": {
+            "worn": true
+          }
+        }
+      }
+    }
+  ]
+}

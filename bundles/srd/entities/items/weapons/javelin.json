@@ -1,0 +1,30 @@
+{
+  "id": "item:javelin",
+  "name": "Javelin",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:simple-melee-weapon",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:sp"
+  },
+  "weight": 2.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:thrown"
+    ],
+    "damage": {
+      "amount": "1d6",
+      "type": "damage-type:piercing"
+    },
+    "range": {
+      "long": 120,
+      "normal": 30
+    }
+  }
+}

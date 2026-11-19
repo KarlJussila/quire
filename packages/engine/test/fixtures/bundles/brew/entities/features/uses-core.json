@@ -1,0 +1,19 @@
+{
+ "id": "feature:uses-core",
+ "name": "Uses Core",
+ "source": {
+  "book": "brew"
+ },
+ "activities": [
+  {
+   "key": "x",
+   "outcomes": [
+    {
+     "cast": {
+      "spell": "spell:fire-bolt"
+     }
+    }
+   ]
+  }
+ ]
+}

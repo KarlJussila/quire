@@ -1,0 +1,11 @@
+{
+  "id": "alignment:chaotic-neutral",
+  "name": "Chaotic Neutral",
+  "source": {
+    "book": "core"
+  },
+  "components": [
+    "alignment:chaotic",
+    "alignment:neutral"
+  ]
+}

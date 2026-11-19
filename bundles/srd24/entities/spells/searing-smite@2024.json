@@ -1,0 +1,37 @@
+{
+  "id": "spell:searing-smite@2024",
+  "name": "Searing Smite",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As you hit the target, it takes an extra 1d6 Fire damage from the attack. At the start of each of its turns until the spell ends, the target takes 1d6 Fire damage and then makes a Constitution saving throw. On a failed save, the spell continues. On a successful save, the spell ends.\n\n_**Using a Higher-Level Spell Slot.**_ All the damage increases by 1d6 for each spell slot level above 1.",
+    "plain": "As you hit the target, it takes an extra 1d6 Fire damage from the attack. At the start of each of its turns until the spell ends, the target takes 1d6 Fire damage and then makes a Constitution saving throw. On a failed save, the spell continues. On a successful save, the spell ends.\n\nUsing a Higher-Level Spell Slot. All the damage increases by 1d6 for each spell slot level above 1.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:evocation",
+  "lists": [
+    "class:paladin"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute"
+      }
+    }
+  ]
+}

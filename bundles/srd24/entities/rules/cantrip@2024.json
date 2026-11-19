@@ -1,0 +1,16 @@
+{
+  "id": "rule:cantrip@2024",
+  "name": "Cantrip",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A cantrip is a level 0 spell, which is cast without a spell slot. _See also_ \"Spells.\"",
+    "plain": "A cantrip is a level 0 spell, which is cast without a spell slot. _See also_ \"Spells.\"",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting",
+  "appliesTo": {
+    "pool": "any"
+  }
+}

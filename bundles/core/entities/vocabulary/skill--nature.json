@@ -1,0 +1,11 @@
+{
+  "id": "skill:nature",
+  "name": "Nature",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:int"
+}

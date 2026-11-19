@@ -1,0 +1,18 @@
+{
+  "id": "item:alchemists-fire@2024",
+  "name": "Alchemist's Fire",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 50 GP\n\nWhen you take the Attack action, you can replace one of your attacks with throwing a flask of Alchemist's Fire. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 1d4 Fire damage and start burning (see \"Rules Glossary\").",
+    "plain": "Cost: 50 GP\n\nWhen you take the Attack action, you can replace one of your attacks with throwing a flask of Alchemist's Fire. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 1d4 Fire damage and start burning (see \"Rules Glossary\").",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 50,
+    "currency": "currency:gp"
+  },
+  "weight": 1.0
+}

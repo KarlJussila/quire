@@ -1,0 +1,52 @@
+{
+  "id": "item:boots-of-striding-and-springing",
+  "name": "Boots of Striding and Springing",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While you wear these boots, your walking speed becomes 30 feet, unless your walking speed is higher, and your speed isn't reduced if you are encumbered or wearing heavy armor. In addition, you can jump three times the normal distance, though you can't jump farther than your remaining movement would allow.",
+    "plain": "While you wear these boots, your walking speed becomes 30 feet, unless your walking speed is higher, and your speed isn't reduced if you are encumbered or wearing heavy armor. In addition, you can jump three times the normal distance, though you can't jump farther than your remaining movement would allow.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "weight": 0,
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "movement-mode:walk": {
+            "speed": {
+              "$atLeast": 30
+            }
+          }
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "jump": {
+          "$multiply": 3
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ]
+}

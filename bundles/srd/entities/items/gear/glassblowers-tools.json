@@ -1,0 +1,18 @@
+{
+  "id": "item:glassblowers-tools",
+  "name": "Glassblower’s Tools",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Someone who is proficient with glassblower’s tools has not only the ability to shape glass, but also specialized knowledge of the methods used to produce glass objects.\n\n***Components.*** The tools include a blowpipe, a small marver, blocks, and tweezers. You need a source of heat to work glass.\n\n***Arcana, History.*** Your knowledge of glassmaking techniques aids you when you examine glass objects, such as potion bottles or glass items found in a treasure hoard. For instance, you can study how a glass potion bottle has been changed by its contents to help determine a potion’s effects. (A potion might leave behind a residue, deform the glass, or stain it.)\n\n***Investigation.*** When you study an area, your knowL edge can aid you if the clues include broken glass or glass objects.\n\n***Identify Weakness.*** With 1 minute of study, you can identify the weak points in a glass object. Any damage dealt to the Object by striking a weak spot is doubled.\n\n##### GLASSBLOWER’S TOOLS\n\n| Activity | DC |\n|---|---|\n| Identify source of glass | 10 |\n| Determine what a glass object once held | 20 |",
+    "plain": "Someone who is proficient with glassblower’s tools has not only the ability to shape glass, but also specialized knowledge of the methods used to produce glass objects.\n\nComponents. The tools include a blowpipe, a small marver, blocks, and tweezers. You need a source of heat to work glass.\n\nArcana, History. Your knowledge of glassmaking techniques aids you when you examine glass objects, such as potion bottles or glass items found in a treasure hoard. For instance, you can study how a glass potion bottle has been changed by its contents to help determine a potion’s effects. (A potion might leave behind a residue, deform the glass, or stain it.)\n\nInvestigation. When you study an area, your knowL edge can aid you if the clues include broken glass or glass objects.\n\nIdentify Weakness. With 1 minute of study, you can identify the weak points in a glass object. Any damage dealt to the Object by striking a weak spot is doubled.\n\nGLASSBLOWER’S TOOLS\n\nActivity\tDC\n\nIdentify source of glass\t10\n\nDetermine what a glass object once held\t20",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 30,
+    "currency": "currency:gp"
+  },
+  "weight": 5.0
+}

@@ -1,0 +1,100 @@
+{
+  "id": "feature:warlock/chains-of-carceri",
+  "name": "Chains of Carceri",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite: 15th level, Pact of the Chain feature_\n\nYou can cast Hold Monster at will — targeting a celestial, fiend, or elemental — without expending a spell slot or material components. You must finish a long rest before you can use this invocation on the same creature again.",
+    "plain": "Prerequisite: 15th level, Pact of the Chain feature\n\nYou can cast Hold Monster at will — targeting a celestial, fiend, or elemental — without expending a spell slot or material components. You must finish a long rest before you can use this invocation on the same creature again.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "all": [
+      {
+        "compare": "levels.class:warlock",
+        "atLeast": 15
+      },
+      {
+        "has": "feature:warlock/pact-of-the-chain"
+      }
+    ]
+  },
+  "gaps": [
+    {
+      "category": "content-dependency",
+      "name": "Hold Monster needs its ordinary Wisdom save and Paralyzed outcome. The cooldown marker is patched into both save branches."
+    }
+  ],
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:hold-monster"
+      ],
+      "how": "innate",
+      "set": {
+        "components": {
+          "material": {
+            "$delete": true
+          }
+        },
+        "activities": {
+          "cast": {
+            "target": {
+              "$replace": {
+                "who": {
+                  "pool": "any",
+                  "chosen": true,
+                  "where": {
+                    "all": [
+                      {
+                        "match": {
+                          "creatureType": [
+                            "creature-type:celestial",
+                            "creature-type:fiend",
+                            "creature-type:elemental"
+                          ]
+                        }
+                      },
+                      {
+                        "not": {
+                          "has": "state:warlock/chains-of-carceri-used",
+                          "source": "self"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "count": 1
+              }
+            },
+            "outcomes": {
+              "$append": [
+                {
+                  "applyState": {
+                    "state": "state:warlock/chains-of-carceri-used",
+                    "source": "self"
+                  },
+                  "to": "target"
+                }
+              ]
+            },
+            "otherwise": {
+              "$append": [
+                {
+                  "applyState": {
+                    "state": "state:warlock/chains-of-carceri-used",
+                    "source": "self"
+                  },
+                  "to": "target"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

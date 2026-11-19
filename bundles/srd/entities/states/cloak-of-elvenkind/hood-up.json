@@ -1,0 +1,50 @@
+{
+  "id": "state:cloak-of-elvenkind/hood-up",
+  "name": "Cloak of Elvenkind: Hood Up",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While you wear this cloak with its hood up, Wisdom (Perception) checks made to see you have disadvantage, and you have advantage on Dexterity (Stealth) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action.",
+    "plain": "While you wear this cloak with its hood up, Wisdom (Perception) checks made to see you have disadvantage, and you have advantage on Dexterity (Stealth) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action.",
+    "wording": "upstream"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check",
+              "ability": "ability:dex",
+              "skill": "skill:stealth"
+            }
+          },
+          {
+            "activity": "rule:hide"
+          }
+        ]
+      }
+    }
+  ],
+  "ends": [
+    {
+      "event": "event:item-unequipped",
+      "subject": "self",
+      "match": {
+        "item": "item:cloak-of-elvenkind"
+      }
+    }
+  ],
+  "when": {
+    "has": "item:cloak-of-elvenkind",
+    "match": {
+      "attuned": true,
+      "worn": true
+    }
+  }
+}

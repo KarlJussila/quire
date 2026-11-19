@@ -1,0 +1,56 @@
+{
+  "id": "spell:stoneskin",
+  "name": "Stoneskin",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This spell turns the flesh of a willing creature you touch as hard as stone. Until the spell ends, the target has resistance to nonmagical bludgeoning, piercing, and slashing damage.",
+    "plain": "This spell turns the flesh of a willing creature you touch as hard as stone. Until the spell ends, the target has resistance to nonmagical bludgeoning, piercing, and slashing damage.",
+    "wording": "srd"
+  },
+  "level": 4,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:druid",
+    "class:ranger",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "diamond dust worth 100 gp, which the spell consumes",
+      "parts": [
+        {
+          "worth": {
+            "amount": 100,
+            "currency": "currency:gp"
+          },
+          "consumed": true
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

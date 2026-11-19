@@ -1,0 +1,89 @@
+{
+  "id": "feature:paladin/spellcasting",
+  "name": "Spellcasting",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "By 2nd level, you have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does.",
+    "plain": "By 2nd level, you have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does.",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting-feature",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "class:paladin": {
+            "ability": "ability:cha",
+            "slots": "table:half-caster",
+            "prepared": {
+              "$base": {
+                "max": [
+                  1,
+                  {
+                    "sum": [
+                      "modifiers.ability:cha",
+                      {
+                        "divide": "levels.class:paladin",
+                        "by": 2,
+                        "round": "down"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "casterLevel": {
+              "$base": {
+                "divide": "levels.class:paladin",
+                "by": 2,
+                "round": "down"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "prepared",
+            "name": "Prepared Paladin Spells",
+            "count": "spellcasting.class:paladin.prepared",
+            "distinct": true,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:paladin",
+                    "level": {
+                      "atLeast": 1,
+                      "atMost": "spellcasting.class:paladin.spellLevel"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "prepared",
+      "ability": "ability:cha"
+    }
+  ],
+  "gaps": [
+    {
+      "category": "effect-model",
+      "name": "Preparation time needs the sum of the levels of all selected prepared spells."
+    },
+    {
+      "category": "spellcasting",
+      "name": "The allowed focus is tied to this Paladin casting source, but its exact scope on a cast that can have multiple sources is unresolved."
+    }
+  ]
+}

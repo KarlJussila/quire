@@ -1,0 +1,7 @@
+{
+  "id": "creature-tag:demon",
+  "name": "Demon",
+  "source": {
+    "book": "core"
+  }
+}

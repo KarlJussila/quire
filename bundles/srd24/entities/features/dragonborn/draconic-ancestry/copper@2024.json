@@ -1,0 +1,15 @@
+{
+  "id": "feature:dragonborn/draconic-ancestry/copper@2024",
+  "name": "Copper",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Damage Type: Acid",
+    "wording": "srd"
+  },
+  "group": "group:draconic-ancestry",
+  "values": {
+    "damage-type": "damage-type:acid"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "creature:homunculus",
+  "name": "Homunculus",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:construct",
+  "alignment": "alignment:neutral",
+  "ac": 13,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 5,
+    "formula": "2d4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:fly": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 11,
+    "ability:dex": 15,
+    "ability:int": 10,
+    "ability:str": 4,
+    "ability:wis": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 10,
+  "cr": 0,
+  "languages": [
+    {
+      "text": "understands the languages of its creator but can't speak"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Telepathic Bond",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the homunculus is on the same plane of existence as its master, it can magically convey what it senses to its master, and the two can communicate telepathically.",
+        "plain": "While the homunculus is on the same plane of existence as its master, it can magically convey what it senses to its master, and the two can communicate telepathically.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one creature. _Hit:_ 1 piercing damage, and the target must succeed on a DC 10 Constitution saving throw or be Poisoned for 1 minute. If the saving throw fails by 5 or more, the target is instead poisoned for 5 (1d10) minutes and Unconscious while poisoned in this way.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 1 piercing damage, and the target must succeed on a DC 10 Constitution saving throw or be Poisoned for 1 minute. If the saving throw fails by 5 or more, the target is instead poisoned for 5 (1d10) minutes and Unconscious while poisoned in this way.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

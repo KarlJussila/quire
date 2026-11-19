@@ -1,0 +1,84 @@
+{
+  "id": "creature:thug",
+  "name": "Thug",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any-non-good",
+  "ac": 11,
+  "acFrom": [
+    "leather armor"
+  ],
+  "hp": {
+    "average": 32,
+    "formula": "5d8 + 10"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 14,
+    "ability:dex": 11,
+    "ability:int": 10,
+    "ability:str": 15,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:intimidation": 2
+  },
+  "passivePerception": 10,
+  "xp": 100,
+  "cr": 0.5,
+  "languages": [
+    {
+      "text": "any one language (usually Common)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Pack Tactics",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The thug has advantage on an attack roll against a creature if at least one of the thug's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "plain": "The thug has advantage on an attack roll against a creature if at least one of the thug's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The thug makes two melee attacks.",
+        "plain": "The thug makes two melee attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Mace",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one creature. _Hit:_ 5 (1d6 + 2) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 5 (1d6 + 2) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Heavy Crossbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +2 to hit, range 100/400 ft., one target. _Hit:_ 5 (1d10) piercing damage.",
+        "plain": "Ranged Weapon Attack: +2 to hit, range 100/400 ft., one target. Hit: 5 (1d10) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

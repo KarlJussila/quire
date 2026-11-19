@@ -1,0 +1,15 @@
+{
+  "id": "item:ring-of-telekinesis",
+  "name": "Ring of Telekinesis",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing this ring, you can cast the Telekinesis spell at will, but you can target only objects that aren't being worn or carried.",
+    "plain": "While wearing this ring, you can cast the Telekinesis spell at will, but you can target only objects that aren't being worn or carried.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:very-rare",
+  "attunement": true
+}

@@ -1,0 +1,27 @@
+{
+  "id": "species:human@2024",
+  "name": "Human",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Human, you have these special traits.\n\n_**Resourceful.**_ You gain Heroic Inspiration whenever you finish a Long Rest.\n\n_**Skillful.**_ You gain proficiency in one skill of your choice.\n\n_**Versatile.**_ You gain an Origin feat of your choice (see \"Feats\"). Skilled is recommended.",
+    "plain": "As a Human, you have these special traits.\n\nResourceful. You gain Heroic Inspiration whenever you finish a Long Rest.\n\nSkillful. You gain proficiency in one skill of your choice.\n\nVersatile. You gain an Origin feat of your choice (see \"Feats\"). Skilled is recommended.",
+    "wording": "srd"
+  },
+  "features": [
+    "feature:human/resourceful@2024",
+    "feature:human/skillful@2024",
+    "feature:human/versatile@2024"
+  ],
+  "creatureType": "creature-type:humanoid",
+  "size": [
+    "size:medium",
+    "size:small"
+  ],
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  }
+}

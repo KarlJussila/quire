@@ -1,0 +1,45 @@
+{
+  "id": "item:boots-of-elvenkind@2024",
+  "name": "Boots of Elvenkind",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have Advantage on Dexterity (Stealth) checks.",
+    "plain": "While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have Advantage on Dexterity (Stealth) checks.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check",
+              "ability": "ability:dex",
+              "skill": "skill:stealth"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "worn": true
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "Silent footsteps have no matching sound-producing rule."
+    }
+  ]
+}

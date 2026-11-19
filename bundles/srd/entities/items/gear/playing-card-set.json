@@ -1,0 +1,18 @@
+{
+  "id": "item:playing-card-set",
+  "name": "Playing Card Set",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "If you are proficient with the Playing Card Set, you can add your proficiency bonus to ability checks you make to play a game.",
+    "plain": "If you are proficient with the Playing Card Set, you can add your proficiency bonus to ability checks you make to play a game.",
+    "wording": "srd"
+  },
+  "group": "group:gaming-set",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:sp"
+  },
+  "weight": 0.0
+}

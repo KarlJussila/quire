@@ -1,0 +1,44 @@
+{
+  "id": "item:gloves-of-thievery@2024",
+  "name": "Gloves of Thievery",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "These gloves are imperceptible while worn. While wearing them, you gain a +5 bonus to Dexterity (Sleight of Hand) checks.",
+    "plain": "These gloves are imperceptible while worn. While wearing them, you gain a +5 bonus to Dexterity (Sleight of Hand) checks.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 5
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check",
+              "ability": "ability:dex",
+              "skill": "skill:sleight-of-hand"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "worn": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

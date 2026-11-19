@@ -1,0 +1,7 @@
+{
+  "id": "source-type:poison",
+  "name": "Poison",
+  "source": {
+    "book": "core"
+  }
+}

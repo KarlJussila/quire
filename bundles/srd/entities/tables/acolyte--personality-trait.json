@@ -1,0 +1,88 @@
+{
+  "id": "table:acolyte/personality-trait",
+  "name": "Personality Trait",
+  "source": {
+    "book": "srd"
+  },
+  "dice": "d8",
+  "columns": [
+    {
+      "key": "entry",
+      "name": "Personality Trait"
+    }
+  ],
+  "rows": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "cells": {
+        "entry": "I idolize a particular hero of my faith, and constantly refer to that person’s deeds and example."
+      }
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "cells": {
+        "entry": "I can find common ground between the fiercest enemies, empathizing with them and always working toward peace."
+      }
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "cells": {
+        "entry": "I see omens in every event and action. The gods try to speak to us, we just need to listen"
+      }
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "cells": {
+        "entry": "Nothing can shake my optimistic attitude."
+      }
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "cells": {
+        "entry": "I quote (or misquote) sacred texts and proverbs in almost every situation."
+      }
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "cells": {
+        "entry": "I am tolerant (or intolerant) of other faiths and respect (or condemn) the worship of other gods."
+      }
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "cells": {
+        "entry": "I’ve enjoyed fine food, drink, and high society among my temple’s elite. Rough living grates on me."
+      }
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "cells": {
+        "entry": "I’ve spent so long in the temple that I have little practical experience dealing with people in the outside world."
+      }
+    }
+  ]
+}

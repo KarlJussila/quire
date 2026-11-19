@@ -1,0 +1,40 @@
+{
+  "id": "item:boots-of-the-winterlands@2024",
+  "name": "Boots of the Winterlands",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "These furred boots are snug and feel warm. While wearing them, you gain the following benefits.\n\n_**Cold Resistance.**_ You have Resistance to Cold damage and can tolerate temperatures of 0 degrees Fahrenheit or lower without any additional protection.\n\n_**Winter Strider.**_ You ignore Difficult Terrain created by ice or snow.",
+    "plain": "These furred boots are snug and feel warm. While wearing them, you gain the following benefits.\n\nCold Resistance. You have Resistance to Cold damage and can tolerate temperatures of 0 degrees Fahrenheit or lower without any additional protection.\n\nWinter Strider. You ignore Difficult Terrain created by ice or snow.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "Ignoring difficult terrain only from ice or snow needs terrain-specific context."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "Tolerating temperatures of 0 degrees Fahrenheit or lower needs a temperature rule."
+    }
+  ]
+}

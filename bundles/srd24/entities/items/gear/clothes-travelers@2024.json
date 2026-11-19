@@ -1,0 +1,18 @@
+{
+  "id": "item:clothes-travelers@2024",
+  "name": "Clothes, Traveler's",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Traveler's Clothes are resilient garments designed for travel in various environments.",
+    "plain": "Traveler's Clothes are resilient garments designed for travel in various environments.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:gp"
+  },
+  "weight": 4.0
+}

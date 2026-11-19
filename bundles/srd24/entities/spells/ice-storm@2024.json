@@ -1,0 +1,41 @@
+{
+  "id": "spell:ice-storm@2024",
+  "name": "Ice Storm",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Hail falls in a 20-foot-radius, 40-foot-high Cylinder centered on a point within range. Each creature in the Cylinder makes a Dexterity saving throw. A creature takes 2d10 Bludgeoning damage and 4d6 Cold damage on a failed save or half as much damage on a successful one.\n\nHailstones turn ground in the Cylinder into Difficult Terrain until the end of your next turn.\n\n_**Using a Higher-Level Spell Slot.**_ The Bludgeoning damage increases by 1d10 for each spell slot level above 4.",
+    "plain": "Hail falls in a 20-foot-radius, 40-foot-high Cylinder centered on a point within range. Each creature in the Cylinder makes a Dexterity saving throw. A creature takes 2d10 Bludgeoning damage and 4d6 Cold damage on a failed save or half as much damage on a successful one.\n\nHailstones turn ground in the Cylinder into Difficult Terrain until the end of your next turn.\n\nUsing a Higher-Level Spell Slot. The Bludgeoning damage increases by 1d10 for each spell slot level above 4.",
+    "wording": "srd"
+  },
+  "level": 4,
+  "school": "spell-school:evocation",
+  "lists": [
+    "class:druid",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a mitten"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 300
+      },
+      "duration": "instant"
+    }
+  ]
+}

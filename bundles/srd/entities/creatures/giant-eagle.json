@@ -1,0 +1,92 @@
+{
+  "id": "creature:giant-eagle",
+  "name": "Giant Eagle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:neutral-good",
+  "ac": 13,
+  "hp": {
+    "average": 26,
+    "formula": "4d10 + 4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 13,
+    "ability:dex": 17,
+    "ability:int": 8,
+    "ability:str": 16,
+    "ability:wis": 14
+  },
+  "skills": {
+    "skill:perception": 4
+  },
+  "passivePerception": 14,
+  "xp": 200,
+  "cr": 1,
+  "languages": [
+    {
+      "language": "language:giant-eagle"
+    },
+    {
+      "language": "language:common",
+      "understandsOnly": true
+    },
+    {
+      "language": "language:auran",
+      "understandsOnly": true
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Keen Sight",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The eagle has advantage on Wisdom (Perception) checks that rely on sight.",
+        "plain": "The eagle has advantage on Wisdom (Perception) checks that rely on sight.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The eagle makes two attacks: one with its beak and one with its talons.",
+        "plain": "The eagle makes two attacks: one with its beak and one with its talons.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Beak",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 6 (1d6 + 3) piercing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Talons",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 10 (2d6 + 3) slashing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

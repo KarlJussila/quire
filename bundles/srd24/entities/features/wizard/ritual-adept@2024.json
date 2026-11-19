@@ -1,0 +1,69 @@
+{
+  "id": "feature:wizard/ritual-adept@2024",
+  "name": "Level 1: Ritual Adept",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can cast any spell as a Ritual if that spell has the Ritual tag and the spell is in your spellbook. You needn't have the spell prepared, but you must read from the book to cast a spell in this way.",
+    "plain": "You can cast any spell as a Ritual if that spell has the Ritual tag and the spell is in your spellbook. You needn't have the spell prepared, but you must read from the book to cast a spell in this way.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "test",
+      "name": "Reading from the book during the Ritual remains a live prose prerequisite."
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "spell": {
+            "kind": "spell",
+            "where": {
+              "all": [
+                {
+                  "match": {
+                    "ritual": true
+                  }
+                },
+                {
+                  "is": {
+                    "chosen": "spellbook",
+                    "from": "feature:wizard/spellcasting"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "set": {
+        "time": {
+          "$add": {
+            "amount": 10,
+            "unit": "minute"
+          }
+        },
+        "cost": {
+          "$remove": {
+            "resource": "spell-slots"
+          }
+        }
+      },
+      "variant": "ritual",
+      "when": {
+        "prose": {
+          "text": "Read from your spellbook to cast this Ritual.",
+          "gap": {
+            "category": "test",
+            "name": "Reading from the spellbook while casting this Ritual."
+          }
+        }
+      }
+    }
+  ]
+}

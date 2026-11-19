@@ -1,0 +1,12 @@
+{
+  "id": "ability:wis",
+  "name": "Wisdom",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "abbreviation": "Wis",
+  "order": 5
+}

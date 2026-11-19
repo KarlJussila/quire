@@ -1,0 +1,147 @@
+{
+  "id": "feature:rogue/cunning-strike@2024",
+  "name": "Level 5: Cunning Strike",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You've developed cunning ways to use your Sneak Attack. When you deal Sneak Attack damage, you can add one of the following Cunning Strike effects. Each effect has a die cost, which is the number of Sneak Attack damage dice you must forgo to add the effect. You remove the die before rolling, and the effect occurs immediately after the attack's damage is dealt. For example, if you add the Poison effect, remove 1d6 from the Sneak Attack's damage before rolling.\n\nIf a Cunning Strike effect requires a saving throw, the DC equals 8 plus your Dexterity modifier and Proficiency Bonus.\n\n_**Poison (Cost: 1d6).**_ You add a toxin to your strike, forcing the target to make a Constitution saving throw. On a failed save, the target has the Poisoned condition for 1 minute. At the end of each of its turns, the Poisoned target repeats the save, ending the effect on itself on a success.\n\nTo use this effect, you must have a Poisoner's Kit on your person.\n\n_**Trip (Cost: 1d6).**_ If the target is Large or smaller, it must succeed on a Dexterity saving throw or have the Prone condition.\n\n_**Withdraw (Cost: 1d6).**_ Immediately after the attack, you move up to half your Speed without provoking Opportunity Attacks.",
+    "plain": "You've developed cunning ways to use your Sneak Attack. When you deal Sneak Attack damage, you can add one of the following Cunning Strike effects. Each effect has a die cost, which is the number of Sneak Attack damage dice you must forgo to add the effect. You remove the die before rolling, and the effect occurs immediately after the attack's damage is dealt. For example, if you add the Poison effect, remove 1d6 from the Sneak Attack's damage before rolling.\n\nIf a Cunning Strike effect requires a saving throw, the DC equals 8 plus your Dexterity modifier and Proficiency Bonus.\n\nPoison (Cost: 1d6). You add a toxin to your strike, forcing the target to make a Constitution saving throw. On a failed save, the target has the Poisoned condition for 1 minute. At the end of each of its turns, the Poisoned target repeats the save, ending the effect on itself on a success.\n\nTo use this effect, you must have a Poisoner's Kit on your person.\n\nTrip (Cost: 1d6). If the target is Large or smaller, it must succeed on a Dexterity saving throw or have the Prone condition.\n\nWithdraw (Cost: 1d6). Immediately after the attack, you move up to half your Speed without provoking Opportunity Attacks.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "activity": "feature:rogue/sneak-attack"
+        }
+      },
+      "variant": "cunning-strike",
+      "set": {
+        "effects": {
+          "$append": [
+            {
+              "type": "record",
+              "pick": {
+                "choose": {
+                  "key": "cunning-options",
+                  "name": "Cunning Strike Options",
+                  "count": {
+                    "atLeast": 0,
+                    "atMost": 1
+                  },
+                  "distinct": true,
+                  "from": [
+                    {
+                      "kind": "feature",
+                      "where": {
+                        "any": [
+                          {
+                            "is": "feature:poison-cost-1d6/2"
+                          },
+                          {
+                            "is": "feature:trip-cost-1d6"
+                          },
+                          {
+                            "is": "feature:withdraw-cost-1d6"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "where": {
+                    "all": [
+                      {
+                        "compare": {
+                          "sum": {
+                            "chosen": "cunning-options",
+                            "value": "die-cost"
+                          }
+                        },
+                        "atMost": {
+                          "divide": "levels.class:rogue",
+                          "by": 2,
+                          "round": "up"
+                        }
+                      },
+                      {
+                        "any": [
+                          {
+                            "not": {
+                              "is": "feature:poison-cost-1d6/2"
+                            }
+                          },
+                          {
+                            "has": "item:poisoners-kit"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "outcomes": {
+          "$replace": [
+            {
+              "damage": {
+                "amount": {
+                  "dice": {
+                    "count": {
+                      "sum": [
+                        {
+                          "divide": "levels.class:rogue",
+                          "by": 2,
+                          "round": "up"
+                        },
+                        {
+                          "times": {
+                            "sum": {
+                              "chosen": "cunning-options",
+                              "value": "die-cost"
+                            }
+                          },
+                          "by": -1
+                        }
+                      ]
+                    },
+                    "die": 6
+                  }
+                },
+                "type": {
+                  "of": "weapon"
+                }
+              },
+              "to": "subject"
+            },
+            {
+              "runs": [
+                {
+                  "activity": {
+                    "chosen": "cunning-options"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "uses": {
+          "$delete": true
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sneak-attack"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": []
+}

@@ -1,0 +1,365 @@
+{
+  "id": "item:energy-bow@2024",
+  "name": "Energy Bow",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon, which has no string. Each time you pull your arm back in a firing motion, a magical arrow made of golden energy appears nocked and ready to fire. An arrow produced by this weapon deals Force damage instead of Piercing damage on a hit, and it disappears after it hits or misses its target. Until it disappears, the arrow emits Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.\n\nThis weapon has the following additional properties.\n\n_**Arrow of Restraint.**_ Whenever you use this weapon to make a ranged attack against a creature, you can try to restrain the target instead of dealing damage to it. If the arrow hits, the target must succeed on a DC 15 Strength saving throw or have the Restrained condition for 1 minute. As an action, a creature Restrained by an arrow can make a DC 20 Strength (Athletics) check to try to break the restraint, ending the effect on itself on a successful check.\n\n_**Arrow of Transport.**_ As a Magic action, you can fire one energy arrow from this weapon at a target you can see within 60 feet of yourself. The target can be either a willing Medium or smaller creature or an object that isn't being worn or carried, provided the object is small enough to fit inside a 5-foot Cube. The arrow teleports the target to an unoccupied space you can see within 10 feet of you.\n\n_**Energy Ladder.**_ As a Magic action, you can loose a flurry of energy arrows from this weapon at a wall up to 60 feet away from yourself. The arrows become glowing rungs that stick out of the wall, forming a magical ladder up to 60 feet long on the wall. This ladder lasts for 1 minute before disappearing.",
+    "plain": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon, which has no string. Each time you pull your arm back in a firing motion, a magical arrow made of golden energy appears nocked and ready to fire. An arrow produced by this weapon deals Force damage instead of Piercing damage on a hit, and it disappears after it hits or misses its target. Until it disappears, the arrow emits Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.\n\nThis weapon has the following additional properties.\n\nArrow of Restraint. Whenever you use this weapon to make a ranged attack against a creature, you can try to restrain the target instead of dealing damage to it. If the arrow hits, the target must succeed on a DC 15 Strength saving throw or have the Restrained condition for 1 minute. As an action, a creature Restrained by an arrow can make a DC 20 Strength (Athletics) check to try to break the restraint, ending the effect on itself on a successful check.\n\nArrow of Transport. As a Magic action, you can fire one energy arrow from this weapon at a target you can see within 60 feet of yourself. The target can be either a willing Medium or smaller creature or an object that isn't being worn or carried, provided the object is small enough to fit inside a 5-foot Cube. The arrow teleports the target to an unoccupied space you can see within 10 feet of you.\n\nEnergy Ladder. As a Magic action, you can loose a flurry of energy arrows from this weapon at a wall up to 60 feet away from yourself. The arrows become glowing rungs that stick out of the wall, forming a magical ladder up to 60 feet long on the wall. This ladder lasts for 1 minute before disappearing.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:very-rare",
+  "attunement": true,
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Bow",
+      "from": [
+        "item:longbow",
+        "item:shortbow"
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          },
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "item": "this"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          },
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage",
+              "attack": {
+                "item": "this"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "of": "this",
+      "set": {
+        "weapon": {
+          "damage": {
+            "type": "damage-type:force"
+          }
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "arrow-of-restraint",
+      "name": "Arrow of Restraint",
+      "standalone": false,
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true
+        }
+      },
+      "range": {
+        "distance": "this.weapon.range.normal",
+        "long": "this.weapon.range.long"
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        }
+      },
+      "delivery": {
+        "attack": {
+          "range": "ranged",
+          "via": "weapon",
+          "item": "this",
+          "ability": "ability:dex"
+        }
+      },
+      "outcomes": [
+        {
+          "then": {
+            "delivery": {
+              "save": {
+                "ability": "ability:str",
+                "dc": 15
+              }
+            },
+            "outcomes": [
+              {
+                "applyState": {
+                  "state": "condition:restrained",
+                  "duration": {
+                    "amount": 1,
+                    "unit": "minute"
+                  },
+                  "escape": {
+                    "dc": 20,
+                    "check": {
+                      "ability": "ability:str",
+                      "skill": "skill:athletics"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "key": "arrow-of-transport",
+      "name": "Arrow of Transport",
+      "action": "action:magic",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "held": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "target": {
+        "count": 1,
+        "select": "chosen",
+        "who": {
+          "choose": {
+            "key": "transport-target-kind",
+            "name": "Target Kind",
+            "from": [
+              {
+                "name": "Creature",
+                "of": [
+                  {
+                    "pool": "any",
+                    "where": {
+                      "all": [
+                        {
+                          "kind": "creature"
+                        },
+                        {
+                          "willing": true
+                        },
+                        {
+                          "match": {
+                            "size": {
+                              "atMost": "size:medium"
+                            }
+                          }
+                        },
+                        {
+                          "perceived": "sight",
+                          "by": "self"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Object",
+                "of": [
+                  {
+                    "pool": "object",
+                    "where": {
+                      "all": [
+                        {
+                          "perceived": "sight",
+                          "by": "self"
+                        },
+                        {
+                          "prose": {
+                            "text": "the object is neither worn nor carried and fits entirely inside a 5-foot Cube",
+                            "gap": {
+                              "category": "test",
+                              "name": "Objects have no worn/carried ownership test or exact three-dimensional bounds."
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "move": {
+            "kind": "teleport",
+            "where": {
+              "all": [
+                {
+                  "within": 10,
+                  "of": "self"
+                },
+                {
+                  "perceived": "sight",
+                  "by": "self"
+                },
+                {
+                  "prose": {
+                    "text": "the destination space is unoccupied",
+                    "gap": {
+                      "category": "movement",
+                      "name": "The predicate grammar has no unoccupied-space atom."
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "energy-ladder",
+      "name": "Energy Ladder",
+      "action": "action:magic",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "held": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "object",
+          "where": {
+            "prose": {
+              "text": "the selected object is a wall",
+              "gap": {
+                "category": "test",
+                "name": "The object grammar has no wall classification."
+              }
+            }
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "create": {
+            "object": {
+              "name": "Energy Ladder",
+              "effects": [
+                {
+                  "prose": {
+                    "text": "Glowing arrow rungs stick out of the selected wall, forming a magical ladder up to 60 feet long along that wall.",
+                    "gap": {
+                      "category": "effect-model",
+                      "name": "Inline objects have no length, wall attachment, or climbable-ladder field."
+                    }
+                  }
+                }
+              ]
+            },
+            "duration": {
+              "amount": 1,
+              "unit": "minute"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "The stringless bow automatically creates its own magical Force arrow on every firing motion, which disappears immediately after hitting or missing."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "The generated arrow emits Bright Light for 20 feet and Dim Light for another 20 feet until it disappears."
+    },
+    {
+      "category": "test",
+      "name": "Transport object targets must be neither worn nor carried and fit inside a 5-foot Cube."
+    },
+    {
+      "category": "movement",
+      "name": "Arrow of Transport must arrive in an unoccupied space."
+    },
+    {
+      "category": "test",
+      "name": "Energy Ladder targets a wall."
+    },
+    {
+      "category": "effect-model",
+      "name": "Energy Ladder needs up-to-60-foot geometry, attachment to its wall, and climbable rungs."
+    }
+  ]
+}

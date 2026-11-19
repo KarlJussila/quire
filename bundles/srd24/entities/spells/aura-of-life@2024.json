@@ -1,0 +1,41 @@
+{
+  "id": "spell:aura-of-life@2024",
+  "name": "Aura of Life",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "An aura radiates from you in a 30-foot Emanation for the duration. While in the aura, you and your allies have Resistance to Necrotic damage, and your Hit Point maximums can't be reduced. If an ally with 0 Hit Points starts its turn in the aura, that ally regains 1 Hit Point.",
+    "plain": "An aura radiates from you in a 30-foot Emanation for the duration. While in the aura, you and your allies have Resistance to Necrotic damage, and your Hit Point maximums can't be reduced. If an ally with 0 Hit Points starts its turn in the aura, that ally regains 1 Hit Point.",
+    "wording": "srd"
+  },
+  "level": 4,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:cleric",
+    "class:paladin"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": {
+        "amount": 10,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

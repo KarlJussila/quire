@@ -1,0 +1,11 @@
+{
+  "id": "feature:gnomes",
+  "name": "Gnomes",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

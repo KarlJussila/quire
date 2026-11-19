@@ -1,0 +1,8 @@
+{
+ "id": "ability:str",
+ "name": "Strength",
+ "source": {
+  "book": "core"
+ },
+ "abbreviation": "Str"
+}

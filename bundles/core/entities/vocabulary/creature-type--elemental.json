@@ -1,0 +1,7 @@
+{
+  "id": "creature-type:elemental",
+  "name": "Elemental",
+  "source": {
+    "book": "core"
+  }
+}

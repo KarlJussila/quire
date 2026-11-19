@@ -1,0 +1,12 @@
+{
+  "id": "feature:halfling/halfling-nimbleness",
+  "name": "Halfling Nimbleness",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can move through the space of any creature that is of a size larger than yours.",
+    "plain": "You can move through the space of any creature that is of a size larger than yours.",
+    "wording": "srd"
+  }
+}

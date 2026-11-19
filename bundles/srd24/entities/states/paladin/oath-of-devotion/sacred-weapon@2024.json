@@ -1,0 +1,78 @@
+{
+  "id": "state:paladin/oath-of-devotion/sacred-weapon@2024",
+  "name": "Sacred Weapon",
+  "source": {
+    "book": "srd24"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": {
+            "max": [
+              1,
+              "source.modifiers.ability:cha"
+            ]
+          }
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    },
+    {
+      "type": "light",
+      "bright": 20,
+      "dim": 20
+    }
+  ],
+  "activities": [
+    {
+      "key": "end-sacred-weapon",
+      "name": "End Sacred Weapon",
+      "outcomes": [
+        {
+          "endState": {
+            "state": "state:paladin/oath-of-devotion/sacred-weapon@2024"
+          },
+          "to": "this"
+        }
+      ]
+    }
+  ],
+  "ends": [
+    {
+      "becomes": {
+        "not": {
+          "any": [
+            {
+              "has": "this",
+              "match": {
+                "held": true
+              }
+            },
+            {
+              "has": "this"
+            }
+          ]
+        }
+      },
+      "subject": "source"
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "Each hit with the weapon can deal Radiant damage instead of its normal damage type: nothing changes the damage type of attacks made with one item."
+    }
+  ]
+}

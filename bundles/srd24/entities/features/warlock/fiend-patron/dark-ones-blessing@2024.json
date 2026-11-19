@@ -1,0 +1,74 @@
+{
+  "id": "feature:warlock/fiend-patron/dark-ones-blessing@2024",
+  "name": "Level 3: Dark One’s Blessing",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you reduce an enemy to 0 Hit Points, you gain Temporary Hit Points equal to your Charisma modifier plus your Warlock level (minimum of 1 Temporary Hit Point). You also gain this benefit if someone else reduces an enemy within 10 feet of you to 0 Hit Points.",
+    "plain": "When you reduce an enemy to 0 Hit Points, you gain Temporary Hit Points equal to your Charisma modifier plus your Warlock level (minimum of 1 Temporary Hit Point). You also gain this benefit if someone else reduces an enemy within 10 feet of you to 0 Hit Points.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:damaged",
+          "by": "self",
+          "subject": {
+            "pool": "enemy"
+          },
+          "match": {
+            "remaining": 0
+          }
+        },
+        {
+          "event": "event:damaged",
+          "by": {
+            "pool": "any",
+            "where": {
+              "all": [
+                {
+                  "within": 10,
+                  "of": "self"
+                },
+                {
+                  "not": {
+                    "is": "self"
+                  }
+                }
+              ]
+            }
+          },
+          "subject": {
+            "pool": "enemy"
+          },
+          "match": {
+            "remaining": 0
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "tempHp": {
+              "amount": {
+                "max": [
+                  1,
+                  {
+                    "sum": [
+                      "modifiers.ability:cha",
+                      "levels.class:warlock"
+                    ]
+                  }
+                ]
+              }
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

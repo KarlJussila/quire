@@ -1,0 +1,84 @@
+{
+  "id": "feature:bard/college-of-lore/cutting-words@2024",
+  "name": "Level 3: Cutting Words",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You learn to use your wit to supernaturally distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of yourself makes a damage roll or succeeds on an ability check or attack roll, you can take a Reaction to expend one use of your Bardic Inspiration; roll your Bardic Inspiration die, and subtract the number rolled from the creature's roll, reducing the damage or potentially turning the success into a failure.",
+    "plain": "You learn to use your wit to supernaturally distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of yourself makes a damage roll or succeeds on an ability check or attack roll, you can take a Reaction to expend one use of your Bardic Inspiration; roll your Bardic Inspiration die, and subtract the number rolled from the creature's roll, reducing the damage or potentially turning the success into a failure.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "cutting-words",
+      "name": "Cutting Words",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "not": {
+                  "is": "self"
+                }
+              },
+              {
+                "within": 60,
+                "of": "self"
+              },
+              {
+                "perceived": "sight",
+                "by": "self"
+              }
+            ]
+          }
+        },
+        "when": {
+          "any": [
+            {
+              "event": "event:roll-resolved",
+              "match": {
+                "roll": "roll:damage"
+              }
+            },
+            {
+              "event": "event:roll-resolved",
+              "match": {
+                "roll": "roll:attack",
+                "success": true
+              }
+            },
+            {
+              "event": "event:roll-resolved",
+              "match": {
+                "roll": "roll:check",
+                "success": true
+              }
+            }
+          ]
+        }
+      },
+      "cost": [
+        {
+          "resource": "reaction"
+        },
+        {
+          "resource": "bardic-inspiration"
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Roll your Bardic Inspiration die and subtract the number rolled from the creature's roll, reducing the damage or turning a success into a failure.",
+            "gap": {
+              "category": "roll",
+              "name": "subtract Bardic Inspiration die from a roll"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

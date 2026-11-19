@@ -1,0 +1,46 @@
+{
+  "id": "spell:spider-climb",
+  "name": "Spider Climb",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving its hands free. The target also gains a climbing speed equal to its walking speed.",
+    "plain": "Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving its hands free. The target also gains a climbing speed equal to its walking speed.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a drop of bitumen and a spider"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

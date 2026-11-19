@@ -1,0 +1,86 @@
+{
+  "id": "creature:gnoll",
+  "name": "Gnoll",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 15,
+  "acFrom": [
+    "hide armor, shield"
+  ],
+  "hp": {
+    "average": 22,
+    "formula": "5d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 11,
+    "ability:dex": 12,
+    "ability:int": 6,
+    "ability:str": 14,
+    "ability:wis": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 100,
+  "cr": 0.5,
+  "languages": [
+    {
+      "language": "language:gnoll"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Rampage",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack.",
+        "plain": "When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one creature. _Hit:_ 4 (1d4 + 2) piercing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spear",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Weapon Attack:_ +4 to hit, reach 5 ft. or range 20/60 ft., one target. _Hit:_ 5 (1d6 + 2) piercing damage, or 6 (1d8 + 2) piercing damage if used with two hands to make a melee attack.",
+        "plain": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d6 + 2) piercing damage, or 6 (1d8 + 2) piercing damage if used with two hands to make a melee attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Longbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +3 to hit, range 150/600 ft., one target. _Hit:_ 5 (1d8 + 1) piercing damage.",
+        "plain": "Ranged Weapon Attack: +3 to hit, range 150/600 ft., one target. Hit: 5 (1d8 + 1) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

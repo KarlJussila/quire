@@ -1,0 +1,13 @@
+{
+  "id": "item:figurine-of-wondrous-power-onyx-dog@2024",
+  "name": "Figurine of Wondrous Power, Onyx Dog",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "A Figurine of Wondrous Power is a pocket-sized statuette that becomes its specified living creature when thrown to the ground with a Magic action. This onyx statuette of a dog can become a Mastiff for up to 6 hours. The mastiff has Intelligence 8, speaks Common, and has Blindsight with a range of 60 feet. Once it has been used, it can't be used again until 7 days have passed.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare"
+}

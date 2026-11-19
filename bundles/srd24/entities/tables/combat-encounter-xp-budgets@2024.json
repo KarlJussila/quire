@@ -1,0 +1,187 @@
+{
+  "id": "table:combat-encounter-xp-budgets@2024",
+  "name": "Combat Encounter XP Budgets",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "party-s-level",
+      "name": "Party's Level"
+    },
+    {
+      "key": "low-difficulty",
+      "name": "Low Difficulty"
+    },
+    {
+      "key": "moderate-difficulty",
+      "name": "Moderate Difficulty"
+    },
+    {
+      "key": "high-difficulty",
+      "name": "High Difficulty"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "party-s-level": "1",
+        "low-difficulty": "50",
+        "moderate-difficulty": "75",
+        "high-difficulty": "100"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "2",
+        "low-difficulty": "100",
+        "moderate-difficulty": "150",
+        "high-difficulty": "200"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "3",
+        "low-difficulty": "150",
+        "moderate-difficulty": "225",
+        "high-difficulty": "400"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "4",
+        "low-difficulty": "250",
+        "moderate-difficulty": "375",
+        "high-difficulty": "500"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "5",
+        "low-difficulty": "500",
+        "moderate-difficulty": "750",
+        "high-difficulty": "1,100"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "6",
+        "low-difficulty": "600",
+        "moderate-difficulty": "1,000",
+        "high-difficulty": "1,400"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "7",
+        "low-difficulty": "750",
+        "moderate-difficulty": "1,300",
+        "high-difficulty": "1,700"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "8",
+        "low-difficulty": "1,000",
+        "moderate-difficulty": "1,700",
+        "high-difficulty": "2,100"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "9",
+        "low-difficulty": "1,300",
+        "moderate-difficulty": "2,000",
+        "high-difficulty": "2,600"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "10",
+        "low-difficulty": "1,600",
+        "moderate-difficulty": "2,300",
+        "high-difficulty": "3,100"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "11",
+        "low-difficulty": "1,900",
+        "moderate-difficulty": "2,900",
+        "high-difficulty": "4,100"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "12",
+        "low-difficulty": "2,200",
+        "moderate-difficulty": "3,700",
+        "high-difficulty": "4,700"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "13",
+        "low-difficulty": "2,600",
+        "moderate-difficulty": "4,200",
+        "high-difficulty": "5,400"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "14",
+        "low-difficulty": "2,900",
+        "moderate-difficulty": "4,900",
+        "high-difficulty": "6,200"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "15",
+        "low-difficulty": "3,300",
+        "moderate-difficulty": "5,400",
+        "high-difficulty": "7,800"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "16",
+        "low-difficulty": "3,800",
+        "moderate-difficulty": "6,100",
+        "high-difficulty": "9,800"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "17",
+        "low-difficulty": "4,500",
+        "moderate-difficulty": "7,200",
+        "high-difficulty": "11,700"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "18",
+        "low-difficulty": "5,000",
+        "moderate-difficulty": "8,700",
+        "high-difficulty": "14,200"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "19",
+        "low-difficulty": "5,500",
+        "moderate-difficulty": "10,700",
+        "high-difficulty": "17,200"
+      }
+    },
+    {
+      "cells": {
+        "party-s-level": "20",
+        "low-difficulty": "6,400",
+        "moderate-difficulty": "13,200",
+        "high-difficulty": "22,000"
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "feature:paladin/lay-on-hands@2024",
+  "name": "Level 1: Lay On Hands",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you finish a Long Rest. With that pool, you can restore a total number of Hit Points equal to five times your Paladin level.\n\nAs a Bonus Action, you can touch a creature (which could be yourself) and draw power from the pool of healing to restore a number of Hit Points to that creature, up to the maximum amount remaining in the pool.\n\nYou can also expend 5 Hit Points from the pool of healing power to remove the Poisoned condition from the creature; those points don't also restore Hit Points to the creature.",
+    "plain": "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you finish a Long Rest. With that pool, you can restore a total number of Hit Points equal to five times your Paladin level.\n\nAs a Bonus Action, you can touch a creature (which could be yourself) and draw power from the pool of healing to restore a number of Hit Points to that creature, up to the maximum amount remaining in the pool.\n\nYou can also expend 5 Hit Points from the pool of healing power to remove the Poisoned condition from the creature; those points don't also restore Hit Points to the creature.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "lay-on-hands",
+      "name": "Lay On Hands",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "lay-on-hands",
+          "amount": {
+            "choose": {
+              "key": "hit-points",
+              "name": "Hit Points to Restore",
+              "from": [
+                {
+                  "atLeast": 1
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any"
+        }
+      },
+      "outcomes": [
+        {
+          "heal": {
+            "amount": {
+              "chosen": "hit-points"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "lay-on-hands-poison",
+      "name": "Lay On Hands",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "lay-on-hands",
+          "amount": 5
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any"
+        }
+      },
+      "outcomes": [
+        {
+          "endState": {
+            "state": "condition:poisoned"
+          }
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "resource",
+      "key": "lay-on-hands",
+      "max": {
+        "times": "levels.class:paladin",
+        "by": 5
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ]
+}

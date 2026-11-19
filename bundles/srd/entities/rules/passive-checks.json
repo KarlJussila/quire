@@ -1,0 +1,45 @@
+{
+  "id": "rule:passive-checks",
+  "name": "Passive Checks",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A passive check is a special kind of ability check that doesn't involve any die rolls. Such a check can represent the average result for a task done repeatedly, such as searching for secret doors over and over again, or can be used when the GM wants to secretly determine whether the characters succeed at something without rolling dice, such as noticing a hidden monster.\n\nHere's how to determine a character's total for a passive check:\n\n- 10 + all modifiers that normally apply to the check\n\nIf the character has advantage on the check, add 5. For disadvantage, subtract 5. The game refers to a passive check total as a **score**.\n\nFor example, if a 1st-level character has a Wisdom of 15 and proficiency in Perception, he or she has a passive Wisdom (Perception) score of 14.\n\nThe rules on hiding in the \"Dexterity\" section below rely on passive checks, as do the exploration rules.",
+    "plain": "A passive check is a special kind of ability check that doesn't involve any die rolls. Such a check can represent the average result for a task done repeatedly, such as searching for secret doors over and over again, or can be used when the GM wants to secretly determine whether the characters succeed at something without rolling dice, such as noticing a hidden monster.\n\nHere's how to determine a character's total for a passive check:\n\n- 10 + all modifiers that normally apply to the check\n\nIf the character has advantage on the check, add 5. For disadvantage, subtract 5. The game refers to a passive check total as a score.\n\nFor example, if a 1st-level character has a Wisdom of 15 and proficiency in Perception, he or she has a passive Wisdom (Perception) score of 14.\n\nThe rules on hiding in the \"Dexterity\" section below rely on passive checks, as do the exploration rules.",
+    "wording": "srd"
+  },
+  "group": "group:ability-checks",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "passives": {
+          "$at": {
+            "kind": "skill"
+          },
+          "$base": {
+            "sum": [
+              10,
+              {
+                "bonus": {
+                  "roll": "roll:check",
+                  "skill": "{at}"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "rule",
+      "name": "Advantage on the check adds 5 to the score and disadvantage takes 5 away."
+    }
+  ]
+}

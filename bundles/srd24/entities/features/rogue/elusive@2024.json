@@ -1,0 +1,44 @@
+{
+  "id": "feature:rogue/elusive@2024",
+  "name": "Level 18: Elusive",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You're so evasive that attackers rarely gain the upper hand against you. No attack roll can have Advantage against you unless you have the Incapacitated condition.",
+    "plain": "You're so evasive that attackers rarely gain the upper hand against you. No attack roll can have Advantage against you unless you have the Incapacitated condition.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "mode": {
+          "$delete": true
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": {
+              "pool": "any"
+            },
+            "subject": "self",
+            "match": {
+              "roll": "roll:attack",
+              "mode": "advantage"
+            }
+          },
+          {
+            "not": {
+              "has": "condition:incapacitated"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

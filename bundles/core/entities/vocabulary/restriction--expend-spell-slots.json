@@ -1,0 +1,7 @@
+{
+  "id": "restriction:expend-spell-slots",
+  "name": "Expend Spell Slots",
+  "source": {
+    "book": "core"
+  }
+}

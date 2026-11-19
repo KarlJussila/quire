@@ -1,0 +1,18 @@
+{
+  "id": "item:signal-whistle@2024",
+  "name": "Signal Whistle",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 5 CP\n\nWhen blown as a Utilize action, a Signal Whistle produces a sound that can be heard up to 600 feet away.",
+    "plain": "Cost: 5 CP\n\nWhen blown as a Utilize action, a Signal Whistle produces a sound that can be heard up to 600 feet away.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:cp"
+  },
+  "weight": 0.0
+}

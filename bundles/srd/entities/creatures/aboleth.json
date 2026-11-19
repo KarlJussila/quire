@@ -1,0 +1,156 @@
+{
+  "id": "creature:aboleth",
+  "name": "Aboleth",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:aberration",
+  "alignment": "alignment:lawful-evil",
+  "ac": 17,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 135,
+    "formula": "18d10 + 36"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 18,
+    "ability:con": 15,
+    "ability:dex": 9,
+    "ability:int": 18,
+    "ability:str": 21,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:con": 6,
+    "ability:int": 8,
+    "ability:wis": 6
+  },
+  "skills": {
+    "skill:history": 12,
+    "skill:perception": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 20,
+  "telepathy": 120,
+  "xp": 5900,
+  "cr": 10,
+  "languages": [
+    {
+      "language": "language:deep-speech"
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The aboleth can breathe air and water.",
+        "plain": "The aboleth can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Mucous Cloud",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While underwater, the aboleth is surrounded by transformative mucus. A creature that touches the aboleth or that hits it with a melee attack while within 5 feet of it must make a DC 14 Constitution saving throw. On a failure, the creature is diseased for 1d4 hours. The diseased creature can breathe only underwater.",
+        "plain": "While underwater, the aboleth is surrounded by transformative mucus. A creature that touches the aboleth or that hits it with a melee attack while within 5 feet of it must make a DC 14 Constitution saving throw. On a failure, the creature is diseased for 1d4 hours. The diseased creature can breathe only underwater.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Probing Telepathy",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If a creature communicates telepathically with the aboleth, the aboleth learns the creature's greatest desires if the aboleth can see the creature.",
+        "plain": "If a creature communicates telepathically with the aboleth, the aboleth learns the creature's greatest desires if the aboleth can see the creature.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The aboleth makes three tentacle attacks.",
+        "plain": "The aboleth makes three tentacle attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tentacle",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +9 to hit, reach 10 ft., one target. _Hit:_ 12 (2d6 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 14 Constitution saving throw or become diseased. The disease has no effect for 1 minute and can be removed by any magic that cures disease. After 1 minute, the diseased creature's skin becomes translucent and slimy, the creature can't regain hit points unless it is underwater, and the disease can be removed only by Heal or another disease-curing spell of 6th level or higher. When the creature is outside a body of water, it takes 6 (1d12) acid damage every 10 minutes unless moisture is applied to the skin before 10 minutes have passed.",
+        "plain": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 12 (2d6 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 14 Constitution saving throw or become diseased. The disease has no effect for 1 minute and can be removed by any magic that cures disease. After 1 minute, the diseased creature's skin becomes translucent and slimy, the creature can't regain hit points unless it is underwater, and the disease can be removed only by Heal or another disease-curing spell of 6th level or higher. When the creature is outside a body of water, it takes 6 (1d12) acid damage every 10 minutes unless moisture is applied to the skin before 10 minutes have passed.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +9 to hit, reach 10 ft. one target. _Hit:_ 15 (3d6 + 5) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +9 to hit, reach 10 ft. one target. Hit: 15 (3d6 + 5) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Enslave",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The aboleth targets one creature it can see within 30 feet of it. The target must succeed on a DC 14 Wisdom saving throw or be magically Charmed by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The charmed target is under the aboleth's control and can't take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.\n\nWhenever the Charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the aboleth.",
+        "plain": "The aboleth targets one creature it can see within 30 feet of it. The target must succeed on a DC 14 Wisdom saving throw or be magically Charmed by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The charmed target is under the aboleth's control and can't take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.\n\nWhenever the Charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the aboleth.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Detect",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The aboleth makes a Wisdom (Perception) check.",
+        "plain": "The aboleth makes a Wisdom (Perception) check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail Swipe",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The aboleth makes one tail attack.",
+        "plain": "The aboleth makes one tail attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Psychic Drain",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "One creature Charmed by the aboleth takes 10 (3d6) psychic damage, and the aboleth regains hit points equal to the damage the creature takes.",
+        "plain": "One creature Charmed by the aboleth takes 10 (3d6) psychic damage, and the aboleth regains hit points equal to the damage the creature takes.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

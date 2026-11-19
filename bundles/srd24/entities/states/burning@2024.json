@@ -1,0 +1,59 @@
+{
+  "id": "state:burning@2024",
+  "name": "Burning",
+  "source": {
+    "book": "core"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:turn-start",
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "damage": {
+              "amount": "1d4",
+              "type": "damage-type:fire"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "extinguish",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:prone"
+          },
+          "to": "self"
+        },
+        {
+          "endState": {
+            "state": "state:burning"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "ends": [
+    {
+      "event": "event:extinguished",
+      "subject": "self"
+    }
+  ]
+}

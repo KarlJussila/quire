@@ -1,0 +1,31 @@
+{
+  "id": "item:sling@2024",
+  "name": "Sling",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:simple-ranged-weapon",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:sp"
+  },
+  "weight": 0.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:ammunition"
+    ],
+    "damage": {
+      "amount": "1d4",
+      "type": "damage-type:bludgeoning"
+    },
+    "mastery": "weapon-mastery:slow",
+    "range": {
+      "long": 120,
+      "normal": 30
+    }
+  }
+}

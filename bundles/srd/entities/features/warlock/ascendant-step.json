@@ -1,0 +1,44 @@
+{
+  "id": "feature:warlock/ascendant-step",
+  "name": "Ascendant Step",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite: 9th level_\n\nYou can cast Levitate on yourself at will, without expending a spell slot or material components.",
+    "plain": "Prerequisite: 9th level\n\nYou can cast Levitate on yourself at will, without expending a spell slot or material components.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 9
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:levitate"
+      ],
+      "how": "innate",
+      "set": {
+        "components": {
+          "material": {
+            "$delete": true
+          }
+        },
+        "activities": {
+          "cast": {
+            "target": {
+              "$replace": {
+                "who": "self",
+                "count": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "gaps": []
+}

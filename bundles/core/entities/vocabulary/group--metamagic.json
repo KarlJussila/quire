@@ -1,0 +1,7 @@
+{
+  "id": "group:metamagic",
+  "name": "Metamagic Option",
+  "source": {
+    "book": "core"
+  }
+}

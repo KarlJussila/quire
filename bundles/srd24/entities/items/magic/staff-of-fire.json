@@ -1,0 +1,33 @@
+{
+  "id": "item:staff-of-fire@2024",
+  "name": "Staff of Fire",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have Resistance to Fire damage while you hold this staff.\n\n_**Spells.**_ The staff has 10 charges. While holding the staff, you can cast one of the spells on the table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell.\n\n| Spell             |   Charge Cost |\n|-------------------|---------------|\n| Burning Hands |             1 |\n| Fireball      |             3 |\n| Wall of Fire  |             4 |\n\n_**Regaining Charges.**_ The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff crumbles into cinders and is destroyed.",
+    "plain": "You have Resistance to Fire damage while you hold this staff.\n\nSpells. The staff has 10 charges. While holding the staff, you can cast one of the spells on the table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell.\n\n| Spell             |   Charge Cost |\n|-------------------|---------------|\n| Burning Hands |             1 |\n| Fireball      |             3 |\n| Wall of Fire  |             4 |\n\nRegaining Charges. The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff crumbles into cinders and is destroyed.",
+    "wording": "srd"
+  },
+  "group": "group:staff",
+  "rarity": "rarity:very-rare",
+  "attunement": {
+    "by": {
+      "any": [
+        {
+          "class": "class:druid"
+        },
+        {
+          "class": "class:sorcerer"
+        },
+        {
+          "class": "class:warlock"
+        },
+        {
+          "class": "class:wizard"
+        }
+      ]
+    },
+    "text": "Requires Attunement by a Druid, Sorcerer, Warlock, or Wizard"
+  }
+}

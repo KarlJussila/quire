@@ -1,0 +1,65 @@
+{
+  "id": "feature:bard/font-of-inspiration",
+  "name": "Font of Inspiration",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest.",
+    "plain": "Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "feature:bard/bardic-inspiration",
+      "set": {
+        "activities": {
+          "$where": {
+            "key": "bardic-inspiration"
+          },
+          "uses": {
+            "recover": {
+              "$replace": [
+                {
+                  "on": {
+                    "event": "event:rest-finished",
+                    "match": {
+                      "rest": "rest:short"
+                    },
+                    "subject": "self"
+                  },
+                  "amount": "all"
+                }
+              ]
+            }
+          }
+        },
+        "effects": {
+          "$where": {
+            "type": "resource",
+            "key": "bardic-inspiration"
+          },
+          "recover": {
+            "$replace": [
+              {
+                "on": {
+                  "event": "event:rest-finished",
+                  "match": {
+                    "rest": "rest:short"
+                  },
+                  "subject": "self"
+                },
+                "amount": "all"
+              }
+            ]
+          }
+        }
+      },
+      "when": {
+        "compare": "levels.class:bard",
+        "atLeast": 5
+      }
+    }
+  ]
+}

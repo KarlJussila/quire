@@ -1,0 +1,31 @@
+{
+  "id": "rule:encumbrance",
+  "name": "Variant: Encumbrance",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "The rules for lifting and carrying are intentionally simple. Here is a variant if you are looking for more detailed rules for determining how a character is hindered by the weight of equipment. When you use this variant, ignore the Strength column of the Armor table.\n\nIf you carry weight in excess of 5 times your Strength score, you are **encumbered**, which means your speed drops by 10 feet.\n\nIf you carry weight in excess of 10 times your Strength score, up to your maximum carrying capacity, you are instead **heavily encumbered**, which means your speed drops by 20 feet and you have disadvantage on ability checks, attack rolls, and saving throws that use Strength, Dexterity, or Constitution.",
+    "plain": "The rules for lifting and carrying are intentionally simple. Here is a variant if you are looking for more detailed rules for determining how a character is hindered by the weight of equipment. When you use this variant, ignore the Strength column of the Armor table.\n\nIf you carry weight in excess of 5 times your Strength score, you are encumbered, which means your speed drops by 10 feet.\n\nIf you carry weight in excess of 10 times your Strength score, up to your maximum carrying capacity, you are instead heavily encumbered, which means your speed drops by 20 feet and you have disadvantage on ability checks, attack rolls, and saving throws that use Strength, Dexterity, or Constitution.",
+    "wording": "srd"
+  },
+  "group": "group:adventure",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "optional": true,
+  "values": {
+    "encumbered-over": {
+      "times": 5,
+      "by": "abilities.ability:str"
+    },
+    "heavily-encumbered-over": {
+      "times": 10,
+      "by": "abilities.ability:str"
+    }
+  },
+  "defines": [
+    "state:encumbered",
+    "state:heavily-encumbered"
+  ]
+}

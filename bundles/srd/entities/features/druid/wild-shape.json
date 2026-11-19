@@ -1,0 +1,57 @@
+{
+  "id": "feature:druid/wild-shape",
+  "name": "Wild Shape",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.\n\nYour druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.",
+    "plain": "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.\n\nYour druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "wild-shape",
+      "name": "Wild Shape",
+      "when": {
+        "compare": "levels.class:druid",
+        "atLeast": 2
+      },
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "wild-shape"
+        }
+      ],
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "state:wild-shape@2014"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "resource",
+      "key": "wild-shape",
+      "max": 2,
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:short"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ]
+}

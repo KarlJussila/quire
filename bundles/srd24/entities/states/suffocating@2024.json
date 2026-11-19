@@ -1,0 +1,41 @@
+{
+  "id": "state:suffocating@2024",
+  "name": "Suffocating",
+  "source": {
+    "book": "core"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:turn-end",
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "applyState": {
+              "state": "condition:exhaustion"
+            },
+            "to": "self"
+          },
+          {
+            "pool": {
+              "resource": "suffocation-exhaustion",
+              "add": 1
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ],
+  "ends": [
+    {
+      "event": "event:breathes",
+      "subject": "self"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "item:shield",
+  "name": "Shield",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A shield is made from wood or metal and is carried in one hand. Wielding a shield increases your Armor Class by 2. You can benefit from only one shield at a time.",
+    "plain": "A shield is made from wood or metal and is carried in one hand. Wielding a shield increases your Armor Class by 2. You can benefit from only one shield at a time.",
+    "wording": "srd"
+  },
+  "group": "group:shield",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 6.0,
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "held": true
+        }
+      }
+    }
+  ]
+}

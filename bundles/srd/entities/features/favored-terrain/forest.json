@@ -1,0 +1,11 @@
+{
+  "id": "feature:favored-terrain/forest",
+  "name": "Forest",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "You have Forest as a favored terrain. While traveling in it you gain the benefits described under your Natural Explorer feature.",
+    "wording": "original"
+  }
+}

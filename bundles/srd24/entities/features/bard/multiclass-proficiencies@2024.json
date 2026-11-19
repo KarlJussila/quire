@@ -1,0 +1,54 @@
+{
+  "id": "feature:bard/multiclass-proficiencies@2024",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Gain the following traits from the Core Bard Traits table: Hit Point Die, proficiency in one skill of your choice, proficiency with one Musical Instrument of your choice, and training with Light armor.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skill",
+            "name": "Skill Proficiency",
+            "from": [
+              {
+                "kind": "skill"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "instrument",
+            "name": "Musical Instrument",
+            "from": [
+              {
+                "kind": "item",
+                "where": {
+                  "group": "group:musical-instrument"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

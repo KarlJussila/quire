@@ -1,0 +1,12 @@
+{
+  "id": "size:huge",
+  "name": "Huge",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "rank": 4,
+  "space": 15
+}

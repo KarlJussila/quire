@@ -1,0 +1,91 @@
+{
+  "id": "feature:druid/circle-of-the-land/natural-recovery@2024",
+  "name": "Level 6: Natural Recovery",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can cast one of the level 1+ spells that you have prepared from your Circle Spells feature without expending a spell slot, and you must finish a Long Rest before you do so again.\n\nIn addition, when you finish a Short Rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your Druid level (round up), and none of them can be level 6+. For example, if you're a level 6 Druid, you can recover up to three levels' worth of spell slots. You can recover a level 3 spell slot, a level 2 and a level 1 spell slot, or three level 1 spell slots. Once you recover spell slots with this feature, you can't do so again until you finish a Long Rest.",
+    "plain": "You can cast one of the level 1+ spells that you have prepared from your Circle Spells feature without expending a spell slot, and you must finish a Long Rest before you do so again.\n\nIn addition, when you finish a Short Rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your Druid level (round up), and none of them can be level 6+. For example, if you're a level 6 Druid, you can recover up to three levels' worth of spell slots. You can recover a level 3 spell slot, a level 2 and a level 1 spell slot, or three level 1 spell slots. Once you recover spell slots with this feature, you can't do so again until you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "free-circle-spell",
+      "name": "Natural Recovery",
+      "when": {
+        "compare": "levels.class:druid",
+        "atLeast": 6
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Cast one of your prepared Circle Spells of level 1 or higher without expending a spell slot.",
+            "gap": {
+              "category": "spell",
+              "name": "cast a prepared Circle Spell without a slot"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "natural-recovery",
+      "name": "Natural Recovery",
+      "when": {
+        "compare": "levels.class:druid",
+        "atLeast": 6
+      },
+      "trigger": {
+        "event": "event:rest-finished",
+        "match": {
+          "rest": "rest:short"
+        },
+        "subject": "self"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Recover expended spell slots with a combined level no higher than half your druid level, rounded up. None of the slots can be 6th level or higher.",
+            "gap": {
+              "category": "resource",
+              "name": "recover spell slots by combined level"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

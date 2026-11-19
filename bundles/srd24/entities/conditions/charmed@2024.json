@@ -1,0 +1,48 @@
+{
+  "id": "condition:charmed@2024",
+  "name": "Charmed",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you have the Charmed condition, you experience the following effects.\n\n_**Can't Harm the Charmer.**_ You can't attack the charmer or target the charmer with damaging abilities or magical effects.\n\n_**Social Advantage.**_ The charmer has Advantage on any ability check to interact with you socially.",
+    "plain": "While you have the Charmed condition, you experience the following effects.\n\nCan't Harm the Charmer. You can't attack the charmer or target the charmer with damaging abilities or magical effects.\n\nSocial Advantage. The charmer has Advantage on any ability check to interact with you socially.",
+    "wording": "srd"
+  },
+  "sourceName": "the charmer",
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:attack",
+        "restriction:target-damaging"
+      ],
+      "target": "source"
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "source",
+            "subject": "self",
+            "match": {
+              "roll": "roll:check"
+            }
+          },
+          {
+            "prose": {
+              "text": "social interaction",
+              "gap": {
+                "category": "test",
+                "name": "social-interaction"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

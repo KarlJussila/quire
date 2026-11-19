@@ -1,0 +1,57 @@
+{
+  "id": "item:eyes-of-minute-seeing@2024",
+  "name": "Eyes of Minute Seeing",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "These crystal lenses fit over the eyes. While wearing them, your vision improves significantly out to a range of 1 foot, granting you Darkvision within that range and Advantage on Intelligence (Investigation) checks made to examine something within that range.",
+    "plain": "These crystal lenses fit over the eyes. While wearing them, your vision improves significantly out to a range of 1 foot, granting you Darkvision within that range and Advantage on Intelligence (Investigation) checks made to examine something within that range.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "effects": [
+    {
+      "type": "sense",
+      "sense": "sense:darkvision",
+      "range": 1,
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "subject": {
+              "pool": "object",
+              "where": {
+                "within": 1,
+                "of": "self"
+              }
+            },
+            "match": {
+              "roll": "roll:check",
+              "ability": "ability:int",
+              "skill": "skill:investigation"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "worn": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

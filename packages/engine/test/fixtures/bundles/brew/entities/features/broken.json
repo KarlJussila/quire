@@ -1,0 +1,17 @@
+{
+ "id": "feature:broken",
+ "name": "Broken",
+ "source": {
+  "book": "brew"
+ },
+ "effects": [
+  {
+   "type": "change",
+   "set": {
+    "ac": {
+     "$add": true
+    }
+   }
+  }
+ ]
+}

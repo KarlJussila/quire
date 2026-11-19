@@ -1,0 +1,61 @@
+{
+  "id": "feat:druidic-warrior@2024",
+  "name": "Druidic Warrior",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You learn two Druid cantrips of your choice (see the Druid class's section for a list of Druid spells). Guidance and Starry Wisp are recommended. The chosen cantrips count as Ranger spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a Ranger level, you can replace one of these cantrips with another Druid cantrip.",
+    "plain": "You learn two Druid cantrips of your choice (see the Druid class's section for a list of Druid spells). Guidance and Starry Wisp are recommended. The chosen cantrips count as Ranger spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a Ranger level, you can replace one of these cantrips with another Druid cantrip.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "cantrips",
+            "name": "Two Druid Cantrips",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:druid",
+                    "level": 0
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": "ability:wis",
+      "countsAs": "class:ranger"
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-cantrips",
+      "name": "Replace Two Druid Cantrips",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self",
+        "match": {
+          "class": "class:ranger"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "cantrips"
+          }
+        }
+      ]
+    }
+  ]
+}

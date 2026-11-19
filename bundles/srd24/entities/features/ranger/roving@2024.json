@@ -1,0 +1,44 @@
+{
+  "id": "feature:ranger/roving@2024",
+  "name": "Level 6: Roving",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your Speed increases by 10 feet while you aren't wearing Heavy armor. You also have a Climb Speed and a Swim Speed equal to your Speed.",
+    "plain": "Your Speed increases by 10 feet while you aren't wearing Heavy armor. You also have a Climb Speed and a Swim Speed equal to your Speed.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "movement-mode:walk": {
+            "speed": {
+              "$add": 10
+            }
+          }
+        }
+      },
+      "when": {
+        "not": {
+          "has": "group:heavy-armor",
+          "match": {
+            "worn": true
+          }
+        }
+      }
+    },
+    {
+      "type": "speed",
+      "mode": "movement-mode:climb",
+      "speed": "speeds.movement-mode:walk.speed"
+    },
+    {
+      "type": "speed",
+      "mode": "movement-mode:swim",
+      "speed": "speeds.movement-mode:walk.speed"
+    }
+  ]
+}

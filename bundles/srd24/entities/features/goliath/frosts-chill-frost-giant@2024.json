@@ -1,0 +1,65 @@
+{
+  "id": "feature:goliath/frosts-chill-frost-giant@2024",
+  "name": "Frost’s Chill (Frost Giant)",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn.",
+    "plain": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "frosts-chill",
+      "name": "Frost's Chill",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true
+        },
+        "when": {
+          "dealsDamage": true
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "1d6",
+            "type": "damage-type:cold"
+          },
+          "to": "subject"
+        }
+      ],
+      "uses": {
+        "max": "proficiencyBonus",
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "The target’s Speed reduction of 10 feet until the start of your next turn is not encoded."
+    }
+  ]
+}

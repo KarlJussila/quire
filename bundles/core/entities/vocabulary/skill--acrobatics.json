@@ -1,0 +1,11 @@
+{
+  "id": "skill:acrobatics",
+  "name": "Acrobatics",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:dex"
+}

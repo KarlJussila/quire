@@ -1,0 +1,101 @@
+{
+  "id": "creature:ettin",
+  "name": "Ettin",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:giant",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 12,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 85,
+    "formula": "10d10 + 30"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 8,
+    "ability:con": 17,
+    "ability:dex": 8,
+    "ability:int": 6,
+    "ability:str": 21,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 1100,
+  "cr": 4,
+  "languages": [
+    {
+      "language": "language:giant"
+    },
+    {
+      "language": "language:orc"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Two Heads",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The ettin has advantage on Wisdom (Perception) checks and on saving throws against being Blinded, Charmed, Deafened, Frightened, Stunned, and knocked Unconscious.",
+        "plain": "The ettin has advantage on Wisdom (Perception) checks and on saving throws against being Blinded, Charmed, Deafened, Frightened, Stunned, and knocked Unconscious.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Wakeful",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "When one of the ettin's heads is asleep, its other head is awake.",
+        "plain": "When one of the ettin's heads is asleep, its other head is awake.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The ettin makes two attacks: one with its battleaxe and one with its morningstar.",
+        "plain": "The ettin makes two attacks: one with its battleaxe and one with its morningstar.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Battleaxe",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +7 to hit, reach 5 ft., one target. _Hit:_ 14 (2d8 + 5) slashing damage.",
+        "plain": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Morningstar",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +7 to hit, reach 5 ft., one target. _Hit:_ 14 (2d8 + 5) piercing damage.",
+        "plain": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

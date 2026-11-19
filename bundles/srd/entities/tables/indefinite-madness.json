@@ -1,0 +1,124 @@
+{
+  "id": "table:indefinite-madness",
+  "name": "Indefinite Madness",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "flaw-lasts-until-cured",
+      "name": "Flaw (lasts until cured)"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "flaw-lasts-until-cured": "\"Being drunk keeps me sane.\""
+      },
+      "range": [
+        1,
+        15
+      ]
+    },
+    {
+      "cells": {
+        "flaw-lasts-until-cured": "\"I keep whatever I find.\""
+      },
+      "range": [
+        16,
+        25
+      ]
+    },
+    {
+      "cells": {
+        "flaw-lasts-until-cured": "\"I try to become more like someone else I know — adopting his or her style of dress, mannerisms, and name.\""
+      },
+      "range": [
+        26,
+        30
+      ]
+    },
+    {
+      "cells": {
+        "flaw-lasts-until-cured": "\"I must bend the truth, exaggerate, or outright lie to be interesting to other people.\""
+      },
+      "range": [
+        31,
+        35
+      ]
+    },
+    {
+      "cells": {
+        "flaw-lasts-until-cured": "\"Achieving my goal is the only thing of interest to me, and I'll ignore everything else to pursue it.\""
+      },
+      "range": [
+        36,
+        45
+      ]
+    },
+    {
+      "cells": {
+        "flaw-lasts-until-cured": "\"I find it hard to care about anything that goes on around me.\""
+      },
+      "range": [
+        46,
+        50
+      ]
+    },
+    {
+      "cells": {
+        "flaw-lasts-until-cured": "\"I don't like the way people judge me all the time.\""
+      },
+      "range": [
+        51,
+        55
+      ]
+    },
+    {
+      "cells": {
+        "flaw-lasts-until-cured": "\"I am the smartest, wisest, strongest, fastest, and most beautiful person I know.\""
+      },
+      "range": [
+        56,
+        70
+      ]
+    },
+    {
+      "cells": {
+        "flaw-lasts-until-cured": "\"I am convinced that powerful enemies are hunting me, and their agents are everywhere I go. I am sure they're watching me all the time.\""
+      },
+      "range": [
+        71,
+        80
+      ]
+    },
+    {
+      "cells": {
+        "flaw-lasts-until-cured": "\"There's only one person I can trust. And only I can see this special friend.\""
+      },
+      "range": [
+        81,
+        85
+      ]
+    },
+    {
+      "cells": {
+        "flaw-lasts-until-cured": "\"I can't take anything seriously. The more serious the situation, the funnier I find it.\""
+      },
+      "range": [
+        86,
+        95
+      ]
+    },
+    {
+      "cells": {
+        "flaw-lasts-until-cured": "\"I've discovered that I really like killing people.\""
+      },
+      "range": [
+        96,
+        100
+      ]
+    }
+  ],
+  "dice": "d100"
+}

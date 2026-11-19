@@ -1,0 +1,18 @@
+{
+  "id": "item:lamp@2024",
+  "name": "Lamp",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Lamp burns Oil as fuel to cast Bright Light in a 15 foot radius and Dim Light for an additional 30 feet.",
+    "plain": "A Lamp burns Oil as fuel to cast Bright Light in a 15 foot radius and Dim Light for an additional 30 feet.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:sp"
+  },
+  "weight": 1.0
+}

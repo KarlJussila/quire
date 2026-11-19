@@ -1,0 +1,46 @@
+{
+  "id": "creature:deer",
+  "name": "Deer",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "hp": {
+    "average": 4,
+    "formula": "1d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 11,
+    "ability:dex": 16,
+    "ability:int": 2,
+    "ability:str": 11,
+    "ability:wis": 14
+  },
+  "passivePerception": 12,
+  "xp": 10,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +2 to hit, reach 5 ft., one target. _Hit:_ 2 (1d4) piercing damage.",
+        "plain": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

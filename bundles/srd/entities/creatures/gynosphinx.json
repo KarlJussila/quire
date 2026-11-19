@@ -1,0 +1,173 @@
+{
+  "id": "creature:gynosphinx",
+  "name": "Gynosphinx",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:lawful-neutral",
+  "ac": 17,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 136,
+    "formula": "16d10 + 48"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 18,
+    "ability:con": 16,
+    "ability:dex": 15,
+    "ability:int": 18,
+    "ability:str": 18,
+    "ability:wis": 18
+  },
+  "skills": {
+    "skill:arcana": 12,
+    "skill:history": 12,
+    "skill:perception": 8,
+    "skill:religion": 8
+  },
+  "senses": {
+    "sense:truesight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 18,
+  "xp": 7200,
+  "cr": 11,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:sphinx"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:psychic"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened"
+      ]
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Inscrutable",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.",
+        "plain": "The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Weapons",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sphinx's weapon attacks are magical.",
+        "plain": "The sphinx's weapon attacks are magical.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sphinx is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 16, +8 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following wizard spells prepared:\n\n- Cantrips (at will): Mage Hand, Minor Illusion, Prestidigitation\n- 1st level (4 slots): Detect Magic, Identify, Shield\n- 2nd level (3 slots): Darkness, Locate Object, Suggestion\n- 3rd level (3 slots): Dispel Magic, Remove Curse, Tongues\n- 4th level (3 slots): Banishment, Greater Invisibility\n- 5th level (1 slot): Legend Lore",
+        "plain": "The sphinx is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 16, +8 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following wizard spells prepared:\n\n- Cantrips (at will): Mage Hand, Minor Illusion, Prestidigitation\n- 1st level (4 slots): Detect Magic, Identify, Shield\n- 2nd level (3 slots): Darkness, Locate Object, Suggestion\n- 3rd level (3 slots): Dispel Magic, Remove Curse, Tongues\n- 4th level (3 slots): Banishment, Greater Invisibility\n- 5th level (1 slot): Legend Lore",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The sphinx makes two claw attacks.",
+        "plain": "The sphinx makes two claw attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +8 to hit, reach 5 ft., one target. _Hit:_ 13 (2d8 + 4) slashing damage.",
+        "plain": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw Attack",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The sphinx makes one claw attack.",
+        "plain": "The sphinx makes one claw attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Teleport",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.",
+        "plain": "The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Cast a Spell",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The sphinx casts a spell from its list of prepared spells, using a spell slot as normal.",
+        "plain": "The sphinx casts a spell from its list of prepared spells, using a spell slot as normal.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

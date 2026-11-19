@@ -1,0 +1,74 @@
+{
+  "id": "creature:awakened-shrub",
+  "name": "Awakened Shrub",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:plant",
+  "alignment": "alignment:unaligned",
+  "ac": 9,
+  "hp": {
+    "average": 10,
+    "formula": "3d6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 11,
+    "ability:dex": 8,
+    "ability:int": 10,
+    "ability:str": 3,
+    "ability:wis": 10
+  },
+  "passivePerception": 10,
+  "xp": 10,
+  "cr": 0,
+  "languages": [
+    {
+      "text": "one language known by its creator"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:piercing"
+      ]
+    },
+    {
+      "type": "defense",
+      "vulnerable": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "False Appearance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the shrub remains motionless, it is indistinguishable from a normal shrub.",
+        "plain": "While the shrub remains motionless, it is indistinguishable from a normal shrub.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rake",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +1 to hit, reach 5 ft., one target. _Hit:_ 1 (1d4 - 1) slashing damage.",
+        "plain": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

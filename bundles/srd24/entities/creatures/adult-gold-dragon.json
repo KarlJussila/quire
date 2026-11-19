@@ -1,0 +1,179 @@
+{
+  "id": "creature:adult-gold-dragon@2024",
+  "name": "Adult Gold Dragon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:lawful-good",
+  "ac": 19,
+  "hp": {
+    "average": 243,
+    "formula": "18d12 + 126"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 24,
+    "ability:con": 25,
+    "ability:dex": 14,
+    "ability:int": 16,
+    "ability:str": 27,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:dex": 8,
+    "ability:wis": 8
+  },
+  "skills": {
+    "skill:insight": 8,
+    "skill:perception": 14,
+    "skill:persuasion": 13,
+    "skill:stealth": 8
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    },
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 24,
+  "xp": 18000,
+  "proficiencyBonus": 6,
+  "initiative": 14,
+  "habitat": [
+    "Forest",
+    "Grassland"
+  ],
+  "treasure": [
+    "Arcana"
+  ],
+  "cr": 17,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The dragon can breathe air and water.",
+        "plain": "The dragon can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Legendary Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "plain": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes three Rend attacks. It can replace one attack with a use of (A) Spellcasting to cast Guiding Bolt (level 2 version) or (B) Weakening Breath.",
+        "plain": "The dragon makes three Rend attacks. It can replace one attack with a use of (A) Spellcasting to cast Guiding Bolt (level 2 version) or (B) Weakening Breath.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +14, reach 10 ft. _Hit:_ 17 (2d8 + 8) Slashing damage plus 4 (1d8) Fire damage.",
+        "plain": "Melee Attack Roll: +14, reach 10 ft. Hit: 17 (2d8 + 8) Slashing damage plus 4 (1d8) Fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fire Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 21, each creature in a 60-foot Cone. _Failure:_ 66 (12d10) Fire damage. _Success:_ Half damage.",
+        "plain": "Dexterity Saving Throw: DC 21, each creature in a 60-foot Cone. Failure: 66 (12d10) Fire damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 21, +13 to hit with spell attacks):\n\n- **At Will:** Detect Magic, Guiding Bolt (level 2 version), Shapechange (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)\n- **1/Day Each:** Flame Strike, Zone of Truth",
+        "plain": "The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 21, +13 to hit with spell attacks):\n\n- At Will: Detect Magic, Guiding Bolt (level 2 version), Shapechange (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)\n- 1/Day Each: Flame Strike, Zone of Truth",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Weakening Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Strength Saving Throw:_ DC 21, each creature that isn't currently affected by this breath in a 60-foot Cone. _Failure:_ The target has Disadvantage on Strength-based D20 Tests and subtracts 3 (1d6) from its damage rolls. It repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+        "plain": "Strength Saving Throw: DC 21, each creature that isn't currently affected by this breath in a 60-foot Cone. Failure: The target has Disadvantage on Strength-based D20 Tests and subtracts 3 (1d6) from its damage rolls. It repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Banish",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "_Charisma Saving Throw:_ DC 21, one creature the dragon can see within 120 feet. _Failure:_ 10 (3d6) Force damage, and the target has the Incapacitated condition and is transported to a harmless demiplane until the start of the dragon's next turn, at which point it reappears in an unoccupied space of the dragon's choice within 120 feet of the dragon. _Failure or Success:_ The dragon can't take this action again until the start of its next turn.",
+        "plain": "Charisma Saving Throw: DC 21, one creature the dragon can see within 120 feet. Failure: 10 (3d6) Force damage, and the target has the Incapacitated condition and is transported to a harmless demiplane until the start of the dragon's next turn, at which point it reappears in an unoccupied space of the dragon's choice within 120 feet of the dragon. Failure or Success: The dragon can't take this action again until the start of its next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Guiding Light",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon uses Spellcasting to cast Guiding Bolt (level 2 version).",
+        "plain": "The dragon uses Spellcasting to cast Guiding Bolt (level 2 version).",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pounce",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon moves up to half its Speed, and it makes one Rend attack.",
+        "plain": "The dragon moves up to half its Speed, and it makes one Rend attack.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

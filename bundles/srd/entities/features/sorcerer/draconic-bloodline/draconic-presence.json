@@ -1,0 +1,100 @@
+{
+  "id": "feature:sorcerer/draconic-bloodline/draconic-presence",
+  "name": "Draconic Presence",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 18th level, you can channel the dread presence of your dragon ancestor, causing those around you to become awestruck or Frightened. As an action, you can spend 5 sorcery points to draw on this power and exude an aura of awe or fear (your choice) to a distance of 60 feet. For 1 minute or until you lose your concentration (as if you were casting a concentration spell), each hostile creature that starts its turn in this aura must succeed on a Wisdom saving throw or be Charmed (if you chose awe) or frightened (if you chose fear) until the aura ends. A creature that succeeds on this saving throw is immune to your aura for 24 hours.",
+    "plain": "Beginning at 18th level, you can channel the dread presence of your dragon ancestor, causing those around you to become awestruck or Frightened. As an action, you can spend 5 sorcery points to draw on this power and exude an aura of awe or fear (your choice) to a distance of 60 feet. For 1 minute or until you lose your concentration (as if you were casting a concentration spell), each hostile creature that starts its turn in this aura must succeed on a Wisdom saving throw or be Charmed (if you chose awe) or frightened (if you chose fear) until the aura ends. A creature that succeeds on this saving throw is immune to your aura for 24 hours.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "draconic-presence",
+      "name": "Draconic Presence",
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "sorcery-points",
+          "amount": 5
+        }
+      ],
+      "concentration": true,
+      "outcomes": [
+        {
+          "zone": {
+            "area": {
+              "shape": "area-shape:emanation",
+              "size": 60
+            },
+            "anchor": "self",
+            "affects": {
+              "pool": "enemy"
+            },
+            "duration": {
+              "amount": 1,
+              "unit": "minute"
+            },
+            "on": [
+              {
+                "on": {
+                  "event": "event:turn-start",
+                  "subject": {
+                    "pool": "enemy",
+                    "where": {
+                      "within": 60,
+                      "of": "self"
+                    }
+                  }
+                },
+                "step": {
+                  "delivery": {
+                    "save": {
+                      "ability": "ability:wis",
+                      "dc": "spellcasting.class:sorcerer.dc"
+                    }
+                  },
+                  "outcomes": [
+                    {
+                      "applyState": {
+                        "state": {
+                          "choose": {
+                            "key": "aura",
+                            "name": "Aura",
+                            "from": [
+                              "condition:charmed",
+                              "condition:frightened"
+                            ]
+                          }
+                        },
+                        "duration": {
+                          "amount": 1,
+                          "unit": "minute"
+                        }
+                      },
+                      "to": "subject"
+                    }
+                  ],
+                  "otherwise": [
+                    {
+                      "prose": {
+                        "text": "A creature that succeeds is immune to this aura for 24 hours.",
+                        "gap": {
+                          "category": "state",
+                          "name": "aura immunity"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

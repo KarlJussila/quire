@@ -1,0 +1,68 @@
+{
+  "id": "feature:sorcerer/draconic-sorcery/draconic-spells@2024",
+  "name": "Level 3: Draconic Spells",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you reach a Sorcerer level specified in the table, you thereafter always have the listed spells prepared.\n\n|   Sorcerer Level | Spells                                                              |\n|------------------|---------------------------------------------------------------------|\n|                3 | Alter Self, Chromatic Orb, Command, Dragon's Breath |\n|                5 | Fear, Fly                                                   |\n|                7 | Arcane Eye, Charm Monster                                   |\n|                9 | Legend Lore, Summon Dragon                                  |",
+    "plain": "When you reach a Sorcerer level specified in the table, you thereafter always have the listed spells prepared.\n\n|   Sorcerer Level | Spells                                                              |\n|------------------|---------------------------------------------------------------------|\n|                3 | Alter Self, Chromatic Orb, Command, Dragon's Breath |\n|                5 | Fear, Fly                                                   |\n|                7 | Arcane Eye, Charm Monster                                   |\n|                9 | Legend Lore, Summon Dragon                                  |",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:sorcerer",
+        "atLeast": 3
+      },
+      "spells": [
+        "spell:alter-self",
+        "spell:chromatic-orb",
+        "spell:command",
+        "spell:dragons-breath"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:sorcerer",
+        "atLeast": 5
+      },
+      "spells": [
+        "spell:fear",
+        "spell:fly"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:sorcerer",
+        "atLeast": 7
+      },
+      "spells": [
+        "spell:arcane-eye",
+        "spell:charm-monster"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:sorcerer",
+        "atLeast": 9
+      },
+      "spells": [
+        "spell:legend-lore",
+        "spell:summon-dragon"
+      ],
+      "how": "prepared",
+      "counts": false
+    }
+  ]
+}

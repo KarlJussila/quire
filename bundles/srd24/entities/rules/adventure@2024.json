@@ -1,0 +1,18 @@
+{
+  "id": "rule:adventure@2024",
+  "name": "Adventure",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "An adventure is a series of encounters. A story emerges through playing them. _See also_ \"Encounter.\"",
+    "plain": "An adventure is a series of encounters. A story emerges through playing them. See also \"Encounter.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rule:half-dragon-template",
+  "name": "Half-Dragon Template",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A beast, humanoid, giant, or monstrosity can become a half-dragon. It keeps its statistics, except as follows.\n\n_**Challenge.**_ To avoid recalculating the creature's challenge rating, apply the template only to a creature that meets the optional prerequisite in the Breath Weapon table below. Otherwise, recalculate the rating after you apply the template.\n\n_**Senses.**_ The half-dragon gains blindsight with a radius of 10 feet and darkvision with a radius of 60 feet.\n\n_**Resistances.**_ The half-dragon gains resistance to a type of damage based on its color.\n\n| Color               | Damage Resistance   |\n|---------------------|---------------------|\n| Black or copper     | Acid                |\n| Blue or bronze      | Lightning           |\n| Brass, gold, or red | Fire                |\n| Green               | Poison              |\n| Silver or white     | Cold                |\n\n_**Languages.**_ The half-dragon speaks Draconic in addition to any other languages it knows.\n\n_**New Action: Breath Weapon.**_ The half-dragon has the breath weapon of its dragon half. The halfdragon's size determines how this action functions.\n\n| Size             | Breath Weapon      | Optional Prerequisite   |\n|------------------|--------------------|-------------------------|\n| Large or smaller | As a wyrmling      | Challenge 2 or higher   |\n| Huge             | As a young dragon  | Challenge 7 or higher   |\n| Gargantuan       | As an adult dragon | Challenge 8 or higher   |",
+    "plain": "A beast, humanoid, giant, or monstrosity can become a half-dragon. It keeps its statistics, except as follows.\n\nChallenge. To avoid recalculating the creature's challenge rating, apply the template only to a creature that meets the optional prerequisite in the Breath Weapon table below. Otherwise, recalculate the rating after you apply the template.\n\nSenses. The half-dragon gains blindsight with a radius of 10 feet and darkvision with a radius of 60 feet.\n\nResistances. The half-dragon gains resistance to a type of damage based on its color.\n\n| Color               | Damage Resistance   |\n|---------------------|---------------------|\n| Black or copper     | Acid                |\n| Blue or bronze      | Lightning           |\n| Brass, gold, or red | Fire                |\n| Green               | Poison              |\n| Silver or white     | Cold                |\n\nLanguages. The half-dragon speaks Draconic in addition to any other languages it knows.\n\nNew Action: Breath Weapon. The half-dragon has the breath weapon of its dragon half. The halfdragon's size determines how this action functions.\n\n| Size             | Breath Weapon      | Optional Prerequisite   |\n|------------------|--------------------|-------------------------|\n| Large or smaller | As a wyrmling      | Challenge 2 or higher   |\n| Huge             | As a young dragon  | Challenge 7 or higher   |\n| Gargantuan       | As an adult dragon | Challenge 8 or higher   |",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

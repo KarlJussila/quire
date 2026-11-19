@@ -1,0 +1,54 @@
+{
+  "id": "feature:warlock/proficiencies",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Armor: Light armor\nWeapons: Simple weapons\nTools: None\nSaving Throws: Wisdom, Charisma\nSkills: Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:wis",
+        "ability:cha"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              "skill:arcana",
+              "skill:deception",
+              "skill:history",
+              "skill:intimidation",
+              "skill:investigation",
+              "skill:nature",
+              "skill:religion"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

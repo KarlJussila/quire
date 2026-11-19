@@ -1,0 +1,18 @@
+{
+  "id": "item:string@2024",
+  "name": "String",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "String is 10 feet long. You can tie a knot in it as a Utilize action.",
+    "plain": "String is 10 feet long. You can tie a knot in it as a Utilize action.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:sp"
+  },
+  "weight": 0.0
+}

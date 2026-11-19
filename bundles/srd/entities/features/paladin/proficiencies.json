@@ -1,0 +1,55 @@
+{
+  "id": "feature:paladin/proficiencies",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Armor: All armor, shields\nWeapons: Simple weapons, martial weapons\nTools: None\nSaving Throws: Wisdom, Charisma\nSkills: Choose two from Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:wis",
+        "ability:cha"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:armor",
+        "group:shield"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon",
+        "group:martial-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              "skill:athletics",
+              "skill:insight",
+              "skill:intimidation",
+              "skill:medicine",
+              "skill:persuasion",
+              "skill:religion"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "class:ranger",
+  "name": "Ranger",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a ranger, you gain the following class features.",
+    "plain": "As a ranger, you gain the following class features.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d10",
+  "multiclass": {
+    "requires": {
+      "all": [
+        {
+          "compare": "abilities.ability:dex",
+          "atLeast": 13
+        },
+        {
+          "compare": "abilities.ability:wis",
+          "atLeast": 13
+        }
+      ]
+    },
+    "features": [
+      "feature:ranger/multiclass-proficiencies"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:ranger/favored-enemy",
+      "feature:ranger/natural-explorer"
+    ],
+    "10": [
+      "feature:ranger/hide-in-plain-sight"
+    ],
+    "12": [
+      "feature:ability-score-improvement"
+    ],
+    "14": [
+      "feature:ranger/vanish"
+    ],
+    "16": [
+      "feature:ability-score-improvement"
+    ],
+    "18": [
+      "feature:ranger/feral-senses"
+    ],
+    "19": [
+      "feature:ability-score-improvement"
+    ],
+    "2": [
+      "feature:ranger/fighting-style",
+      "feature:ranger/spellcasting"
+    ],
+    "20": [
+      "feature:ranger/foe-slayer"
+    ],
+    "3": [
+      "feature:ranger/primeval-awareness",
+      "feature:ranger/ranger-archetype"
+    ],
+    "4": [
+      "feature:ability-score-improvement"
+    ],
+    "5": [
+      "feature:ranger/extra-attack"
+    ],
+    "8": [
+      "feature:ability-score-improvement",
+      "feature:ranger/lands-stride"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Ranger Archetype"
+  },
+  "firstClass": [
+    "feature:ranger/proficiencies"
+  ]
+}

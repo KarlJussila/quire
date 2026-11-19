@@ -1,0 +1,113 @@
+{
+  "id": "creature:werebear@2024",
+  "name": "Werebear",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:neutral-good",
+  "ac": 15,
+  "hp": {
+    "average": 135,
+    "formula": "18d8 + 54"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30,
+      "note": "40 ft. bear form only"
+    },
+    "movement-mode:climb": {
+      "speed": 30,
+      "note": "bear form only"
+    }
+  },
+  "abilities": {
+    "ability:cha": 12,
+    "ability:con": 17,
+    "ability:dex": 10,
+    "ability:int": 11,
+    "ability:str": 19,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 17,
+  "xp": 1800,
+  "proficiencyBonus": 3,
+  "initiative": 3,
+  "habitat": [
+    "Arctic",
+    "Forest",
+    "Hill"
+  ],
+  "treasure": [
+    "Relics"
+  ],
+  "gear": [
+    "Handaxes (4)"
+  ],
+  "cr": 5,
+  "languages": [
+    {
+      "text": "Common (can't speak in bear form)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The werebear makes two attacks, using Handaxe or Rend in any combination. It can replace one attack with a Bite attack.",
+        "plain": "The werebear makes two attacks, using Handaxe or Rend in any combination. It can replace one attack with a Bite attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite (Bear or Hybrid Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 5 ft. _Hit:_ 17 (2d12 + 4) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. _Constitution Saving Throw:_ DC 14. _Failure:_ The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a **Werebear** under the GM's control and has 10 Hit Points. _Success:_ The target is immune to this werebear's curse for 24 hours.",
+        "plain": "Melee Attack Roll: +7, reach 5 ft. Hit: 17 (2d12 + 4) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. Constitution Saving Throw: DC 14. Failure: The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a Werebear under the GM's control and has 10 Hit Points. Success: The target is immune to this werebear's curse for 24 hours.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Handaxe (Humanoid or Hybrid Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +7, reach 5 ft or range 20/60 ft. _Hit:_ 14 (3d6 + 4) Slashing damage.",
+        "plain": "Melee or Ranged Attack Roll: +7, reach 5 ft or range 20/60 ft. Hit: 14 (3d6 + 4) Slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend (Bear or Hybrid Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 5 ft. _Hit:_ 13 (2d8 + 4) Slashing damage.",
+        "plain": "Melee Attack Roll: +7, reach 5 ft. Hit: 13 (2d8 + 4) Slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shape-Shift",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The werebear shape-shifts into a Large bear-humanoid hybrid form or a Large bear, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed.",
+        "plain": "The werebear shape-shifts into a Large bear-humanoid hybrid form or a Large bear, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

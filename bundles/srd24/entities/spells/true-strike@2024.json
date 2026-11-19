@@ -1,0 +1,49 @@
+{
+  "id": "spell:true-strike@2024",
+  "name": "True Strike",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Guided by a flash of magical insight, you make one attack with the weapon used in the spell's casting. The attack uses your spellcasting ability for the attack and damage rolls instead of using Strength or Dexterity. If the attack deals damage, it can be Radiant damage or the weapon's normal damage type (your choice).\n\n_**Cantrip Upgrade.**_ Whether you deal Radiant damage or the weapon's normal damage type, the attack deals extra Radiant damage when you reach levels 5 (1d6), 11 (2d6), and 17 (3d6).",
+    "plain": "Guided by a flash of magical insight, you make one attack with the weapon used in the spell's casting. The attack uses your spellcasting ability for the attack and damage rolls instead of using Strength or Dexterity. If the attack deals damage, it can be Radiant damage or the weapon's normal damage type (your choice).\n\nCantrip Upgrade. Whether you deal Radiant damage or the weapon's normal damage type, the attack deals extra Radiant damage when you reach levels 5 (1d6), 11 (2d6), and 17 (3d6).",
+    "wording": "srd"
+  },
+  "level": 0,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:bard",
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "somatic": true,
+    "material": {
+      "text": "a weapon with which you have proficiency and that is worth 1+ CP",
+      "parts": [
+        {
+          "worth": {
+            "amount": 1,
+            "currency": "currency:cp"
+          }
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

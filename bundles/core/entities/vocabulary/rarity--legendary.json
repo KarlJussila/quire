@@ -1,0 +1,8 @@
+{
+  "id": "rarity:legendary",
+  "name": "Legendary",
+  "source": {
+    "book": "core"
+  },
+  "order": 5
+}

@@ -1,0 +1,85 @@
+{
+  "id": "creature:veteran",
+  "name": "Veteran",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any",
+  "ac": 17,
+  "acFrom": [
+    "splint"
+  ],
+  "hp": {
+    "average": 58,
+    "formula": "9d8 + 18"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 14,
+    "ability:dex": 13,
+    "ability:int": 10,
+    "ability:str": 16,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:athletics": 5,
+    "skill:perception": 2
+  },
+  "passivePerception": 12,
+  "xp": 700,
+  "cr": 3,
+  "languages": [
+    {
+      "text": "any one language (usually Common)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The veteran makes two longsword attacks. If it has a shortsword drawn, it can also make a shortsword attack.",
+        "plain": "The veteran makes two longsword attacks. If it has a shortsword drawn, it can also make a shortsword attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Longsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shortsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 6 (1d6 + 3) piercing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Heavy Crossbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +3 to hit, range 100/400 ft., one target. _Hit:_ 6 (1d10 + 1) piercing damage.",
+        "plain": "Ranged Weapon Attack: +3 to hit, range 100/400 ft., one target. Hit: 6 (1d10 + 1) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

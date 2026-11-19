@@ -1,0 +1,60 @@
+{
+  "id": "feature:monk/body-and-mind@2024",
+  "name": "Level 20: Body and Mind",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have developed your body and mind to new heights. Your Dexterity and Wisdom scores increase by 4, to a maximum of 25.",
+    "plain": "You have developed your body and mind to new heights. Your Dexterity and Wisdom scores increase by 4, to a maximum of 25.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:dex": {
+            "$add": {
+              "amount": 4,
+              "upTo": 25
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilityMaximums": {
+          "ability:dex": {
+            "$atLeast": 25
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:wis": {
+            "$add": {
+              "amount": 4,
+              "upTo": 25
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilityMaximums": {
+          "ability:wis": {
+            "$atLeast": 25
+          }
+        }
+      }
+    }
+  ]
+}

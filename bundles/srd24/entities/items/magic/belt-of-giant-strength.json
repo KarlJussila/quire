@@ -1,0 +1,15 @@
+{
+  "id": "item:belt-of-giant-strength@2024",
+  "name": "Belt of Giant Strength",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this belt, your Strength changes to a score granted by the belt. The type of giant determines the score (see the table below). The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score.\n\n| Belt                                    |   Str. | Rarity    |\n|-----------------------------------------|--------|-----------|\n| Belt of Giant Strength (hill)           |     21 | Rare      |\n| Belt of Giant Strength (frost or stone) |     23 | Very Rare |\n| Belt of Giant Strength (fire)           |     25 | Very Rare |\n| Belt of Giant Strength (cloud)          |     27 | Legendary |\n| Belt of Giant Strength (storm)          |     29 | Legendary |",
+    "plain": "While wearing this belt, your Strength changes to a score granted by the belt. The type of giant determines the score (see the table below). The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score.\n\n| Belt                                    |   Str. | Rarity    |\n|-----------------------------------------|--------|-----------|\n| Belt of Giant Strength (hill)           |     21 | Rare      |\n| Belt of Giant Strength (frost or stone) |     23 | Very Rare |\n| Belt of Giant Strength (fire)           |     25 | Very Rare |\n| Belt of Giant Strength (cloud)          |     27 | Legendary |\n| Belt of Giant Strength (storm)          |     29 | Legendary |",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true
+}

@@ -1,0 +1,129 @@
+{
+  "id": "feature:ranger/hunter/defensive-tactics",
+  "name": "Defensive Tactics",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 7th level, you gain one of the following features of your choice.\n\n_**Escape the Horde.**_ Opportunity attacks against you are made with disadvantage.\n\n_**Multiattack Defense.**_ When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn.\n\n_**Steel Will.**_ You have advantage on saving throws against being Frightened.",
+    "plain": "At 7th level, you gain one of the following features of your choice.\n\nEscape the Horde. Opportunity attacks against you are made with disadvantage.\n\nMultiattack Defense. When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn.\n\nSteel Will. You have advantage on saving throws against being Frightened.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "choose": {
+        "key": "defensive-tactics",
+        "name": "Defensive Tactics",
+        "count": 1,
+        "from": [
+          {
+            "name": "Escape the Horde",
+            "of": [
+              {
+                "type": "roll-mod",
+                "mode": "disadvantage",
+                "when": {
+                  "all": [
+                    {
+                      "event": "event:roll-made",
+                      "by": {
+                        "pool": "any"
+                      },
+                      "subject": "self",
+                      "match": {
+                        "roll": "roll:attack"
+                      }
+                    },
+                    {
+                      "prose": {
+                        "text": "opportunity attack",
+                        "gap": {
+                          "category": "test",
+                          "name": "opportunity-attack"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "name": "Multiattack Defense",
+            "of": [
+              {
+                "type": "triggered",
+                "on": {
+                  "event": "event:roll-resolved",
+                  "by": {
+                    "pool": "any"
+                  },
+                  "subject": "self",
+                  "match": {
+                    "roll": "roll:attack",
+                    "success": true
+                  }
+                },
+                "step": {
+                  "outcomes": [
+                    {
+                      "applyState": {
+                        "state": {
+                          "effects": [
+                            {
+                              "type": "change",
+                              "set": {
+                                "ac": {
+                                  "$add": 4
+                                }
+                              },
+                              "when": {
+                                "event": "event:roll-made",
+                                "by": "source",
+                                "subject": "self",
+                                "match": {
+                                  "roll": "roll:attack"
+                                }
+                              }
+                            }
+                          ],
+                          "ends": [
+                            {
+                              "event": "event:turn-end",
+                              "subject": "source"
+                            }
+                          ]
+                        },
+                        "source": "actor"
+                      },
+                      "to": "self"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "name": "Steel Will",
+            "of": [
+              {
+                "type": "roll-mod",
+                "mode": "advantage",
+                "when": {
+                  "event": "event:roll-made",
+                  "by": "self",
+                  "match": {
+                    "roll": "roll:save",
+                    "against": {
+                      "condition": "condition:frightened"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "sense:darkvision",
+  "name": "Darkvision",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

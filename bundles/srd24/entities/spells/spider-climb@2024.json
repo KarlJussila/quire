@@ -1,0 +1,46 @@
+{
+  "id": "spell:spider-climb@2024",
+  "name": "Spider Climb",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and along ceilings, while leaving its hands free. The target also gains a Climb Speed equal to its Speed.\n\n_**Using a Higher-Level Spell Slot.**_ You can target one additional creature for each spell slot level above 2.",
+    "plain": "Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and along ceilings, while leaving its hands free. The target also gains a Climb Speed equal to its Speed.\n\nUsing a Higher-Level Spell Slot. You can target one additional creature for each spell slot level above 2.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a drop of bitumen and a spider"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "class:rogue@2024",
+  "name": "Rogue",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Rogue, you gain the following class features when you reach the specified Rogue levels.",
+    "plain": "As a Rogue, you gain the following class features when you reach the specified Rogue levels.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d8",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:dex",
+      "atLeast": 13
+    },
+    "features": [
+      "feature:rogue/multiclass-proficiencies@2024"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:rogue/expertise@2024",
+      "feature:rogue/sneak-attack@2024",
+      "feature:rogue/thieves-cant@2024",
+      "feature:rogue/weapon-mastery@2024"
+    ],
+    "2": [
+      "feature:rogue/cunning-action@2024"
+    ],
+    "3": [
+      "feature:rogue/roguish-archetype@2024",
+      "feature:rogue/steady-aim@2024"
+    ],
+    "4": [
+      "feature:rogue/ability-score-improvement@2024"
+    ],
+    "5": [
+      "feature:rogue/cunning-strike@2024",
+      "feature:rogue/uncanny-dodge@2024"
+    ],
+    "7": [
+      "feature:rogue/evasion@2024",
+      "feature:rogue/reliable-talent@2024"
+    ],
+    "8": [
+      "feature:rogue/ability-score-improvement@2024"
+    ],
+    "10": [
+      "feature:rogue/ability-score-improvement@2024"
+    ],
+    "11": [
+      "feature:rogue/improved-cunning-strike@2024"
+    ],
+    "12": [
+      "feature:rogue/ability-score-improvement@2024"
+    ],
+    "14": [
+      "feature:rogue/devious-strikes@2024"
+    ],
+    "15": [
+      "feature:rogue/slippery-mind@2024"
+    ],
+    "16": [
+      "feature:rogue/ability-score-improvement@2024"
+    ],
+    "18": [
+      "feature:rogue/elusive@2024"
+    ],
+    "19": [
+      "feature:rogue/epic-boon@2024"
+    ],
+    "20": [
+      "feature:rogue/stroke-of-luck@2024"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Roguish Archetype||Rogue Subclass"
+  },
+  "firstClass": [
+    "feature:rogue/proficiencies@2024"
+  ]
+}

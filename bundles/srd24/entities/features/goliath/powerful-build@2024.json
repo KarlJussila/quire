@@ -1,0 +1,51 @@
+{
+  "id": "feature:goliath/powerful-build@2024",
+  "name": "Powerful Build",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity.",
+    "plain": "You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check",
+              "against": {
+                "condition": "condition:grappled"
+              }
+            }
+          },
+          {
+            "has": "condition:grappled"
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "carryingCapacity": {
+          "$multiply": 2
+        }
+      },
+      "when": {
+        "not": {
+          "match": {
+            "size": "size:small"
+          }
+        }
+      }
+    }
+  ],
+  "gaps": []
+}

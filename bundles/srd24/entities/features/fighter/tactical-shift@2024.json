@@ -1,0 +1,54 @@
+{
+  "id": "feature:fighter/tactical-shift@2024",
+  "name": "Level 5: Tactical Shift",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Whenever you activate your Second Wind with a Bonus Action, you can move up to half your Speed without provoking Opportunity Attacks.",
+    "plain": "Whenever you activate your Second Wind with a Bonus Action, you can move up to half your Speed without provoking Opportunity Attacks.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "second-wind"
+            },
+            {
+              "match": {
+                "cost": {
+                  "resource": "bonus-action"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "outcomes": {
+          "$append": [
+            {
+              "move": {
+                "kind": "move",
+                "distance": {
+                  "divide": {
+                    "speed": "in-use"
+                  },
+                  "by": 2,
+                  "round": "down"
+                },
+                "provokes": false
+              },
+              "to": "self"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

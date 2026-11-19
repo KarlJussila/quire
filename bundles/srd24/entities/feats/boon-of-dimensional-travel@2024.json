@@ -1,0 +1,69 @@
+{
+  "id": "feat:boon-of-dimensional-travel@2024",
+  "name": "Boon of Dimensional Travel",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain the following benefits.\n\n_**Ability Score Increase.**_ Increase one ability score of your choice by 1, to a maximum of 30.\n\n_**Blink Steps.**_ Immediately after you take the Attack action or the Magic action, you can teleport up to 30 feet to an unoccupied space you can see.",
+    "plain": "You gain the following benefits.\n\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\n\nBlink Steps. Immediately after you take the Attack action or the Magic action, you can teleport up to 30 feet to an unoccupied space you can see.",
+    "wording": "srd"
+  },
+  "group": "group:epic-boon",
+  "requires": {
+    "compare": "levels.total",
+    "atLeast": 19
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "$at": {
+            "choose": {
+              "key": "ability",
+              "name": "Ability Score Increase",
+              "from": [
+                {
+                  "kind": "ability"
+                }
+              ]
+            }
+          },
+          "$add": {
+            "amount": 1,
+            "upTo": 30
+          }
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "blink-steps",
+      "name": "Blink Steps",
+      "trigger": {
+        "event": "event:activity-used",
+        "by": "self",
+        "match": {
+          "action": "action:attack"
+        }
+      },
+      "range": {
+        "distance": 30
+      },
+      "outcomes": [
+        {
+          "move": {
+            "kind": "teleport",
+            "distance": 30,
+            "where": {
+              "perceived": "sight",
+              "by": "self"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

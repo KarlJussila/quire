@@ -1,0 +1,31 @@
+{
+  "id": "item:dart",
+  "name": "Dart",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:simple-ranged-weapon",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:cp"
+  },
+  "weight": 0.25,
+  "weapon": {
+    "properties": [
+      "weapon-property:finesse",
+      "weapon-property:thrown"
+    ],
+    "damage": {
+      "amount": "1d4",
+      "type": "damage-type:piercing"
+    },
+    "range": {
+      "long": 60,
+      "normal": 20
+    }
+  }
+}

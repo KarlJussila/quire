@@ -1,0 +1,18 @@
+{
+  "id": "rule:healing@2024",
+  "name": "Healing",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Healing is how you regain Hit Points. _See also_ \"Playing the Game\" (\"Damage and Healing\").",
+    "plain": "Healing is how you regain Hit Points. See also \"Playing the Game\" (\"Damage and Healing\").",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

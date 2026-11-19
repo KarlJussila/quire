@@ -1,0 +1,25 @@
+{
+  "id": "feature:dwarf/dwarven-toughness@2024",
+  "name": "Dwarven Toughness",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.",
+    "plain": "Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "hp": {
+          "max": {
+            "$add": "levels.total"
+          }
+        }
+      }
+    }
+  ],
+  "gaps": []
+}

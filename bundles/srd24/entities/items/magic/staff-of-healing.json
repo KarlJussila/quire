@@ -1,0 +1,30 @@
+{
+  "id": "item:staff-of-healing@2024",
+  "name": "Staff of Healing",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This staff has 10 charges. While holding the staff, you can cast one of the spells on the table from it, using your spellcasting ability modifier. The table indicates how many charges you must expend to cast the spell.\n\n| Spell                  | Charge Cost                                              |\n|------------------------|----------------------------------------------------------|\n| Cure Wounds        | 1 charge per spell level (maximum 4 for a level 4 spell) |\n| Lesser Restoration | 2                                                        |\n| Mass Cure Wounds   | 5                                                        |\n\n_**Regaining Charges.**_ The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff vanishes in a flash of light, lost forever.",
+    "plain": "This staff has 10 charges. While holding the staff, you can cast one of the spells on the table from it, using your spellcasting ability modifier. The table indicates how many charges you must expend to cast the spell.\n\n| Spell                  | Charge Cost                                              |\n|------------------------|----------------------------------------------------------|\n| Cure Wounds        | 1 charge per spell level (maximum 4 for a level 4 spell) |\n| Lesser Restoration | 2                                                        |\n| Mass Cure Wounds   | 5                                                        |\n\nRegaining Charges. The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff vanishes in a flash of light, lost forever.",
+    "wording": "srd"
+  },
+  "group": "group:staff",
+  "rarity": "rarity:rare",
+  "attunement": {
+    "by": {
+      "any": [
+        {
+          "class": "class:bard"
+        },
+        {
+          "class": "class:cleric"
+        },
+        {
+          "class": "class:druid"
+        }
+      ]
+    },
+    "text": "Requires Attunement by a Bard, Cleric, or Druid"
+  }
+}

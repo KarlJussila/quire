@@ -1,0 +1,74 @@
+{
+  "id": "feature:human/ability-score-increase",
+  "name": "Ability Score Increase",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Ability Score Increase. Your ability scores each increase by 1.",
+    "plain": "Ability Score Increase. Your ability scores each increase by 1.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:str": {
+            "$add": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:dex": {
+            "$add": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:con": {
+            "$add": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:int": {
+            "$add": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:wis": {
+            "$add": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:cha": {
+            "$add": 1
+          }
+        }
+      }
+    }
+  ]
+}

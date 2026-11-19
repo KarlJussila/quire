@@ -1,0 +1,18 @@
+{
+  "id": "item:basket@2024",
+  "name": "Basket",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 4 SP\n\nA Basket holds up to 40 pounds within 2 cubic feet.",
+    "plain": "Cost: 4 SP\n\nA Basket holds up to 40 pounds within 2 cubic feet.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 4,
+    "currency": "currency:sp"
+  },
+  "weight": 2.0
+}

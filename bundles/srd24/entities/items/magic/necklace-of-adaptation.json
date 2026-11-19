@@ -1,0 +1,42 @@
+{
+  "id": "item:necklace-of-adaptation@2024",
+  "name": "Necklace of Adaptation",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this necklace, you can breathe normally in any environment, and you have Advantage on saving throws made to avoid or end the Poisoned condition.",
+    "plain": "While wearing this necklace, you can breathe normally in any environment, and you have Advantage on saving throws made to avoid or end the Poisoned condition.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:save",
+              "against": {
+                "condition": "condition:poisoned"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

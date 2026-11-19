@@ -1,0 +1,18 @@
+{
+  "id": "rule:healing",
+  "name": "Healing",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Unless it results in death, damage isn't permanent. Even death is reversible through powerful magic. Rest can restore a creature's hit points, and magical methods such as a Cure Wounds spell or a Potion of Healing can remove damage in an instant.\n\nWhen a creature receives healing of any kind, hit points regained are added to its current hit points. A creature's hit points can't exceed its hit point maximum, so any hit points regained in excess of this number are lost. For example, a druid grants a ranger 8 hit points of healing. If the ranger has 14 current hit points and has a hit point maximum of 20, the ranger regains 6 hit points from the druid, not 8.\n\nA creature that has died can't regain hit points until magic such as the Revivify spell has restored it to life.",
+    "plain": "Unless it results in death, damage isn't permanent. Even death is reversible through powerful magic. Rest can restore a creature's hit points, and magical methods such as a Cure Wounds spell or a Potion of Healing can remove damage in an instant.\n\nWhen a creature receives healing of any kind, hit points regained are added to its current hit points. A creature's hit points can't exceed its hit point maximum, so any hit points regained in excess of this number are lost. For example, a druid grants a ranger 8 hit points of healing. If the ranger has 14 current hit points and has a hit point maximum of 20, the ranger regains 6 hit points from the druid, not 8.\n\nA creature that has died can't regain hit points until magic such as the Revivify spell has restored it to life.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "feature:warlock/eldritch-spear@2024",
+  "name": "Eldritch Spear",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 2+ Warlock, a Warlock Cantrip That Deals Damage_\n\nChoose one of your known Warlock cantrips that deals damage and has a range of 10+ feet. When you cast that spell, its range increases by a number of feet equal to 30 times your Warlock level.\n\n_**Repeatable.**_ You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+    "plain": "Prerequisite: Level 2+ Warlock, a Warlock Cantrip That Deals Damage\n\nChoose one of your known Warlock cantrips that deals damage and has a range of 10+ feet. When you cast that spell, its range increases by a number of feet equal to 30 times your Warlock level.\n\nRepeatable. You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 2
+  },
+  "repeatable": true,
+  "effects": [
+    {
+      "type": "record",
+      "pick": {
+        "choose": {
+          "key": "cantrip",
+          "name": "Warlock Cantrip",
+          "from": [
+            {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "level": 0,
+                      "lists": "class:warlock",
+                      "activities": {
+                        "key": "cast",
+                        "range": {
+                          "distance": {
+                            "atLeast": 10
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "has": "candidate"
+                  },
+                  {
+                    "dealsDamage": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "spell": {
+                "kind": "spell",
+                "where": {
+                  "is": {
+                    "chosen": "cantrip"
+                  }
+                }
+              }
+            },
+            {
+              "match": {
+                "range": {
+                  "distance": {
+                    "atLeast": 10
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "range": {
+          "distance": {
+            "$add": {
+              "times": 30,
+              "by": "levels.class:warlock"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "content-dependency",
+      "name": "The damaging-cantrip selector depends on the Warlock cantrips’ damage outcomes, which are not transcribed yet."
+    }
+  ]
+}

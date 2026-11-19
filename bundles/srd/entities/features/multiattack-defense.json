@@ -1,0 +1,12 @@
+{
+  "id": "feature:multiattack-defense",
+  "name": "Multiattack Defense",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn.",
+    "plain": "When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn.",
+    "wording": "srd"
+  }
+}

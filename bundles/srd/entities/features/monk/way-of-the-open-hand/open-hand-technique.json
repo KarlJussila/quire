@@ -1,0 +1,136 @@
+{
+  "id": "feature:monk/way-of-the-open-hand/open-hand-technique",
+  "name": "Open Hand Technique",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting when you choose this tradition at 3rd level, you can manipulate your enemy's ki when you harness your own. Whenever you hit a creature with one of the attacks granted by your Flurry of Blows, you can impose one of the following effects on that target:\n\n- It must succeed on a Dexterity saving throw or be knocked Prone.\n- It must make a Strength saving throw. If it fails, you can push it up to 15 feet away from you.\n- It can't take reactions until the end of your next turn.",
+    "plain": "Starting when you choose this tradition at 3rd level, you can manipulate your enemy's ki when you harness your own. Whenever you hit a creature with one of the attacks granted by your Flurry of Blows, you can impose one of the following effects on that target:\n\n- It must succeed on a Dexterity saving throw or be knocked Prone.\n- It must make a Strength saving throw. If it fails, you can push it up to 15 feet away from you.\n- It can't take reactions until the end of your next turn.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "open-hand-prone",
+      "name": "Open Hand Technique",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "unarmed"
+          }
+        },
+        "when": {
+          "activity": "feature:monk/flurry-of-blows"
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:dex",
+          "dc": {
+            "sum": [
+              8,
+              "proficiencyBonus",
+              "modifiers.ability:wis"
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:prone"
+          },
+          "to": "subject"
+        }
+      ]
+    },
+    {
+      "key": "open-hand-push",
+      "name": "Open Hand Technique",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "unarmed"
+          }
+        },
+        "when": {
+          "activity": "feature:monk/flurry-of-blows"
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:str",
+          "dc": {
+            "sum": [
+              8,
+              "proficiencyBonus",
+              "modifiers.ability:wis"
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "move": {
+            "kind": "push",
+            "distance": 15,
+            "toward": {
+              "awayFrom": "self"
+            }
+          },
+          "to": "subject"
+        }
+      ]
+    },
+    {
+      "key": "open-hand-no-reactions",
+      "name": "Open Hand Technique",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "unarmed"
+          }
+        },
+        "when": {
+          "activity": "feature:monk/flurry-of-blows"
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "forbid",
+                  "restriction": [
+                    "restriction:reactions"
+                  ]
+                }
+              ]
+            },
+            "ends": [
+              {
+                "event": "event:turn-end",
+                "subject": "source",
+                "next": true
+              }
+            ]
+          },
+          "to": "subject"
+        }
+      ]
+    }
+  ]
+}

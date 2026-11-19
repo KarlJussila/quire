@@ -1,0 +1,7 @@
+{
+  "id": "restriction:attack",
+  "name": "Attack",
+  "source": {
+    "book": "core"
+  }
+}

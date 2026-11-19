@@ -1,0 +1,235 @@
+{
+  "id": "feat:grappler@2024",
+  "name": "Grappler",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain the following benefits.\n\n_**Ability Score Increase.**_ Increase your Strength or Dexterity score by 1, to a maximum of 20.\n\n_**Punch and Grab.**_ When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can use both the Damage and the Grapple option. You can use this benefit only once per turn.\n\n_**Attack Advantage.**_ You have Advantage on attack rolls against a creature Grappled by you.\n\n_**Fast Wrestler.**_ You don't have to spend extra movement to move a creature Grappled by you if the creature is your size or smaller.",
+    "plain": "You gain the following benefits.\n\nAbility Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.\n\nPunch and Grab. When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can use both the Damage and the Grapple option. You can use this benefit only once per turn.\n\nAttack Advantage. You have Advantage on attack rolls against a creature Grappled by you.\n\nFast Wrestler. You don't have to spend extra movement to move a creature Grappled by you if the creature is your size or smaller.",
+    "wording": "srd"
+  },
+  "group": "group:general",
+  "requires": {
+    "all": [
+      {
+        "compare": "levels.total",
+        "atLeast": 4
+      },
+      {
+        "any": [
+          {
+            "compare": "abilities.ability:str",
+            "atLeast": 13
+          },
+          {
+            "compare": "abilities.ability:dex",
+            "atLeast": 13
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "$at": {
+            "choose": {
+              "key": "ability",
+              "name": "Ability Score Increase",
+              "from": [
+                "ability:str",
+                "ability:dex"
+              ]
+            }
+          },
+          "$add": {
+            "amount": 1,
+            "upTo": 20
+          }
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "has": "condition:grappled",
+            "source": "self"
+          }
+        },
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "suppress",
+      "state": [
+        "condition:grappled"
+      ],
+      "effects": [
+        "extra-movement"
+      ],
+      "to": {
+        "pool": "any",
+        "where": {
+          "all": [
+            {
+              "has": "condition:grappled",
+              "source": "self"
+            },
+            {
+              "match": {
+                "size": {
+                  "atMost": {
+                    "of": "self",
+                    "steps": 0
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "punch-and-grab",
+      "name": "Punch and Grab",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "unarmed"
+          }
+        },
+        "when": {
+          "activity": {
+            "kind": "activity",
+            "where": {
+              "match": {
+                "action": "action:attack"
+              }
+            }
+          }
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": {
+                "pool": "any"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "when": {
+        "all": [
+          {
+            "prose": {
+              "text": "free hand",
+              "gap": {
+                "category": "test",
+                "name": "free-hand"
+              }
+            }
+          },
+          {
+            "creature": "subject",
+            "where": {
+              "all": [
+                {
+                  "kind": "creature"
+                },
+                {
+                  "match": {
+                    "size": {
+                      "atMost": {
+                        "of": "source",
+                        "steps": 1
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "target": {
+        "who": "subject"
+      },
+      "delivery": {
+        "save": {
+          "ability": [
+            "ability:str",
+            "ability:dex"
+          ],
+          "dc": {
+            "sum": [
+              8,
+              "modifiers.ability:str",
+              "proficiencyBonus"
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:grappled",
+            "escape": {
+              "dc": {
+                "sum": [
+                  8,
+                  "modifiers.ability:str",
+                  "proficiencyBonus"
+                ]
+              },
+              "check": {
+                "choose": {
+                  "key": "check",
+                  "name": "Which Check",
+                  "from": [
+                    {
+                      "ability": "ability:str",
+                      "skill": "skill:athletics"
+                    },
+                    {
+                      "ability": "ability:dex",
+                      "skill": "skill:acrobatics"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "to": "subject"
+        }
+      ]
+    }
+  ]
+}

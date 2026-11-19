@@ -1,0 +1,62 @@
+{
+  "id": "feature:warlock/minions-of-chaos",
+  "name": "Minions of Chaos",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite: 9th level_\n\nYou can cast Conjure Elemental once using a warlock spell slot. You can't do so again until you finish a long rest.",
+    "plain": "Prerequisite: 9th level\n\nYou can cast Conjure Elemental once using a warlock spell slot. You can't do so again until you finish a long rest.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 9
+  },
+  "effects": [],
+  "activities": [
+    {
+      "key": "cast-conjure-elemental",
+      "name": "Cast Conjure Elemental",
+      "when": {
+        "compare": "levels.class:warlock",
+        "atLeast": 9
+      },
+      "cost": [
+        {
+          "resource": "pact-magic"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "cast": {
+            "spell": "spell:conjure-elemental",
+            "castAt": "spellcasting.class:warlock.spellLevel",
+            "slot": false
+          }
+        }
+      ],
+      "time": {
+        "amount": 1,
+        "unit": "minute"
+      }
+    }
+  ],
+  "gaps": []
+}

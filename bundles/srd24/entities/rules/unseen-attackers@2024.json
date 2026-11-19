@@ -1,0 +1,67 @@
+{
+  "id": "rule:unseen-attackers@2024",
+  "name": "Unseen Attackers and Targets",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you make an attack roll against a target you can't see, you have Disadvantage on the roll. This is true whether you're guessing the target's location or targeting a creature you can hear but not see. If the target isn't in the location you targeted, you miss.\n\nWhen a creature can't see you, you have Advantage on attack rolls against it.\n\nIf you are hidden when you make an attack roll, you give away your location when the attack hits or misses.",
+    "plain": "When you make an attack roll against a target you can't see, you have Disadvantage on the roll. This is true whether you're guessing the target's location or targeting a creature you can hear but not see. If the target isn't in the location you targeted, you miss.\n\nWhen a creature can't see you, you have Advantage on attack rolls against it.\n\nIf you are hidden when you make an attack roll, you give away your location when the attack hits or misses.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "not": {
+              "perceived": "sight"
+            }
+          }
+        },
+        "match": {
+          "roll": "roll:attack"
+        }
+      },
+      "key": "unseen-target"
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "not": {
+              "perceives": {
+                "sense": "sight",
+                "of": "self"
+              }
+            }
+          }
+        },
+        "match": {
+          "roll": "roll:attack"
+        }
+      },
+      "key": "unseen-attacker"
+    }
+  ],
+  "gaps": [
+    {
+      "category": "hidden",
+      "name": "Attacking the wrong location misses; a hidden attacker gives away its location"
+    }
+  ]
+}

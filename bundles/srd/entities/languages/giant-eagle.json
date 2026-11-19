@@ -1,0 +1,12 @@
+{
+  "id": "language:giant-eagle",
+  "name": "Giant Eagle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- **Languages** Giant Eagle, understands Common and Auran but can't speak them",
+    "plain": "- Languages Giant Eagle, understands Common and Auran but can't speak them",
+    "wording": "srd"
+  }
+}

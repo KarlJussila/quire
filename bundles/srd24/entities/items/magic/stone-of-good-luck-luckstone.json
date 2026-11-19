@@ -1,0 +1,49 @@
+{
+  "id": "item:stone-of-good-luck-luckstone@2024",
+  "name": "Stone of Good Luck (Luckstone)",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While this polished agate is on your person, you gain a +1 bonus to ability checks and saving throws.",
+    "plain": "While this polished agate is on your person, you gain a +1 bonus to ability checks and saving throws.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": [
+                "roll:check",
+                "roll:save"
+              ]
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          },
+          {
+            "has": "this"
+          }
+        ]
+      }
+    }
+  ]
+}

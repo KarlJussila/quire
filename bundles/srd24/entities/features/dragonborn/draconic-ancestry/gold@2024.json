@@ -1,0 +1,15 @@
+{
+  "id": "feature:dragonborn/draconic-ancestry/gold@2024",
+  "name": "Gold",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Damage Type: Fire",
+    "wording": "srd"
+  },
+  "group": "group:draconic-ancestry",
+  "values": {
+    "damage-type": "damage-type:fire"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rule:occupied-space@2024",
+  "name": "Occupied Space",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A space is occupied if a creature is in it or if it is completely filled by objects.",
+    "plain": "A space is occupied if a creature is in it or if it is completely filled by objects.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

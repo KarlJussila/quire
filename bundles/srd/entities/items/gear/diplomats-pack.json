@@ -1,0 +1,64 @@
+{
+  "id": "item:diplomats-pack",
+  "name": "Diplomat’s Pack",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Includes a chest, 2 cases for maps and scrolls, a set of fine clothes, a bottle of ink, an ink pen, a lamp, 2 flasks of oil, 5 sheets of paper, a vial of perfume, sealing wax, and soap.",
+    "plain": "Includes a chest, 2 cases for maps and scrolls, a set of fine clothes, a bottle of ink, an ink pen, a lamp, 2 flasks of oil, 5 sheets of paper, a vial of perfume, sealing wax, and soap.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 39,
+    "currency": "currency:gp"
+  },
+  "weight": 10.0,
+  "contents": [
+    {
+      "item": "item:chest",
+      "quantity": 1
+    },
+    {
+      "item": "item:case-map-or-scroll",
+      "quantity": 2
+    },
+    {
+      "item": "item:clothes-fine",
+      "quantity": 1
+    },
+    {
+      "item": "item:ink-1-ounce-bottle",
+      "quantity": 1
+    },
+    {
+      "item": "item:ink-pen",
+      "quantity": 1
+    },
+    {
+      "item": "item:lamp",
+      "quantity": 1
+    },
+    {
+      "item": "item:oil-flask",
+      "quantity": 2
+    },
+    {
+      "item": "item:paper-one-sheet",
+      "quantity": 5
+    },
+    {
+      "item": "item:perfume-vial",
+      "quantity": 1
+    },
+    {
+      "item": "item:sealing-wax",
+      "quantity": 1
+    },
+    {
+      "item": "item:soap",
+      "quantity": 1
+    }
+  ]
+}

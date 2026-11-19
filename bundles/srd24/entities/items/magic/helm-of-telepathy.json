@@ -1,0 +1,15 @@
+{
+  "id": "item:helm-of-telepathy@2024",
+  "name": "Helm of Telepathy",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this helm, you have telepathy with a range of 30 feet, and you can cast Detect Thoughts or Suggestion (save DC 13) from the helm. Once either spell is cast from the helm, that spell can't be cast from it again until the next dawn.",
+    "plain": "While wearing this helm, you have telepathy with a range of 30 feet, and you can cast Detect Thoughts or Suggestion (save DC 13) from the helm. Once either spell is cast from the helm, that spell can't be cast from it again until the next dawn.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true
+}

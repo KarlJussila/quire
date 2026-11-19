@@ -1,0 +1,30 @@
+{
+  "id": "rule:tremorsense@2024",
+  "name": "Tremorsense",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A creature with Tremorsense can pinpoint the location of creatures and moving objects within a specific range, provided that the creature with Tremorsense and anything it is detecting are both in contact with the same surface (such as the ground, a wall, or a ceiling) or the same liquid.\n\nTremorsense can't detect creatures or objects in the air, and it doesn't count as a form of sight.",
+    "plain": "A creature with Tremorsense can pinpoint the location of creatures and moving objects within a specific range, provided that the creature with Tremorsense and anything it is detecting are both in contact with the same surface (such as the ground, a wall, or a ceiling) or the same liquid.\n\nTremorsense can't detect creatures or objects in the air, and it doesn't count as a form of sight.",
+    "wording": "srd"
+  },
+  "group": "group:exploration",
+  "appliesTo": {
+    "pool": "any",
+    "where": {
+      "match": {
+        "senses": {
+          "sense:tremorsense": true
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "type": "see",
+      "range": "senses.sense:tremorsense.range",
+      "tremor": true
+    }
+  ]
+}

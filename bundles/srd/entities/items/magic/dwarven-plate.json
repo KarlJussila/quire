@@ -1,0 +1,76 @@
+{
+  "id": "item:dwarven-plate",
+  "name": "Dwarven Plate",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing this armor, you gain a +2 bonus to AC. In addition, if an effect moves you against your will along the ground, you can use your reaction to reduce the distance you are moved by up to 10 feet.",
+    "plain": "While wearing this armor, you gain a +2 bonus to AC. In addition, if an effect moves you against your will along the ground, you can use your reaction to reduce the distance you are moved by up to 10 feet.",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:very-rare",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "reduce-forced-movement",
+      "name": "Dwarven Plate",
+      "trigger": {
+        "event": "event:forced-move",
+        "subject": "self",
+        "when": {
+          "grounded": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "outcomes": [
+        {
+          "intercept": {
+            "set": {
+              "$subtract": {
+                "choose": {
+                  "key": "movement-reduction",
+                  "name": "Distance to Reduce",
+                  "from": [
+                    {
+                      "atLeast": 0,
+                      "atMost": 10
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true
+        }
+      }
+    }
+  ],
+  "gaps": [],
+  "base": "item:plate"
+}

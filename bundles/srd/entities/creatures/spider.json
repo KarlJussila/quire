@@ -1,0 +1,84 @@
+{
+  "id": "creature:spider",
+  "name": "Spider",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "hp": {
+    "average": 1,
+    "formula": "1d4 - 1"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:climb": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 2,
+    "ability:con": 8,
+    "ability:dex": 14,
+    "ability:int": 1,
+    "ability:str": 2,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 30
+    }
+  },
+  "passivePerception": 10,
+  "xp": 10,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Spider Climb",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+        "plain": "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Web Sense",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.",
+        "plain": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Web Walker",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The spider ignores movement restrictions caused by webbing.",
+        "plain": "The spider ignores movement restrictions caused by webbing.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one creature. _Hit:_ 1 piercing damage, and the target must succeed on a DC 9 Constitution saving throw or take 2 (1d4) poison damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 1 piercing damage, and the target must succeed on a DC 9 Constitution saving throw or take 2 (1d4) poison damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

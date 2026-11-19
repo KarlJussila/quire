@@ -1,0 +1,13 @@
+{
+  "id": "item:figurine-of-wondrous-power-goat-of-terror@2024",
+  "name": "Figurine of Wondrous Power, Goat of Terror",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "A Figurine of Wondrous Power is a pocket-sized statuette that becomes its specified living creature when thrown to the ground with a Magic action. This figurine can become a Giant Goat for up to 3 hours. The goat can't attack, but its horns can become a +1 Lance and a +2 Longsword. While you ride it, hostile creatures in its 30-foot Emanation face its DC 15 Wisdom saving throw against the Frightened condition. Once used, it can't be used again until 15 days have passed.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare"
+}

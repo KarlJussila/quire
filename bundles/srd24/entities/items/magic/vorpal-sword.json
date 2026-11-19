@@ -1,0 +1,165 @@
+{
+  "id": "item:vorpal-sword@2024",
+  "name": "Vorpal Sword",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. In addition, the weapon ignores Resistance to Slashing damage.\n\nWhen you use this weapon to attack a creature that has at least one head and roll a 20 on the d20 for the attack roll, you cut off one of the creature's heads. The creature dies if it can't survive without the lost head. A creature is immune to this effect if it has Immunity to Slashing damage, if it doesn't have or need a head, or if the GM decides that the creature is too big for its head to be cut off with this weapon. Such a creature instead takes an extra 30 Slashing damage from the hit. If the creature has Legendary Resistance, it can expend one daily use of that trait to avoid losing its head, taking the extra damage instead.",
+    "plain": "You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. In addition, the weapon ignores Resistance to Slashing damage.\n\nWhen you use this weapon to attack a creature that has at least one head and roll a 20 on the d20 for the attack roll, you cut off one of the creature's heads. The creature dies if it can't survive without the lost head. A creature is immune to this effect if it has Immunity to Slashing damage, if it doesn't have or need a head, or if the GM decides that the creature is too big for its head to be cut off with this weapon. Such a creature instead takes an extra 30 Slashing damage from the hit. If the creature has Legendary Resistance, it can expend one daily use of that trait to avoid losing its head, taking the extra damage instead.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:legendary",
+  "attunement": true,
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Sword",
+      "from": [
+        {
+          "kind": "item",
+          "where": {
+            "group": "group:sword"
+          }
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 3
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "item": "this"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 3
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage",
+              "attack": {
+                "item": "this"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "bypass",
+      "resistance": [
+        "damage-type:slashing"
+      ],
+      "when": {
+        "all": [
+          {
+            "event": "event:taking-damage",
+            "by": "self",
+            "match": {
+              "attack": {
+                "item": "this"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "triggered",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true
+        }
+      },
+      "on": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "natural": 20,
+          "attack": {
+            "item": "this"
+          }
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "damage": {
+              "amount": 30,
+              "type": "damage-type:slashing"
+            },
+            "when": {
+              "creature": "subject",
+              "where": {
+                "defense": {
+                  "immune": "damage-type:slashing"
+                }
+              }
+            },
+            "to": "subject"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "Decapitation and fallback damage for creatures without a head or too big depend on unmodeled anatomy and DM judgment; Legendary Resistance is not a typed choice."
+    }
+  ]
+}

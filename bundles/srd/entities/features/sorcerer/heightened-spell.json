@@ -1,0 +1,21 @@
+{
+  "id": "feature:sorcerer/heightened-spell",
+  "name": "Heightened Spell",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you cast a spell that forces a creature to make a saving throw to resist its effects, you can spend 3 sorcery points to give one target of the spell disadvantage on its first saving throw made against the spell.",
+    "plain": "When you cast a spell that forces a creature to make a saving throw to resist its effects, you can spend 3 sorcery points to give one target of the spell disadvantage on its first saving throw made against the spell.",
+    "wording": "srd"
+  },
+  "group": "group:metamagic",
+  "effects": [],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "roll",
+      "name": "Spend 3 Sorcery Points to give one original spell target Disadvantage on its first save against that spell."
+    }
+  ]
+}

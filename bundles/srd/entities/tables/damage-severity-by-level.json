@@ -1,0 +1,59 @@
+{
+  "id": "table:damage-severity-by-level",
+  "name": "Damage Severity by Level",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "character-level",
+      "name": "Character Level"
+    },
+    {
+      "key": "setback",
+      "name": "Setback"
+    },
+    {
+      "key": "dangerous",
+      "name": "Dangerous"
+    },
+    {
+      "key": "deadly",
+      "name": "Deadly"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "character-level": "1st-4th",
+        "setback": "1d10",
+        "dangerous": "2d10",
+        "deadly": "4d10"
+      }
+    },
+    {
+      "cells": {
+        "character-level": "5th-10th",
+        "setback": "2d10",
+        "dangerous": "4d10",
+        "deadly": "10d10"
+      }
+    },
+    {
+      "cells": {
+        "character-level": "11th-16th",
+        "setback": "4d10",
+        "dangerous": "10d10",
+        "deadly": "18d10"
+      }
+    },
+    {
+      "cells": {
+        "character-level": "17th-20th",
+        "setback": "10d10",
+        "dangerous": "18d10",
+        "deadly": "24d10"
+      }
+    }
+  ]
+}

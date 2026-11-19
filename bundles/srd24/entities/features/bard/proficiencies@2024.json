@@ -1,0 +1,71 @@
+{
+  "id": "feature:bard/proficiencies@2024",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Saving Throw Proficiencies: Dexterity and Charisma\nSkill Proficiencies: Choose any 3 skills (see \"Playing the Game\")\nWeapon Proficiencies: Simple weapons\nTool Proficiencies: Choose 3 Musical Instruments (see \"Equipment\")\nArmor Training: Light armor",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:dex",
+        "ability:cha"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 3,
+            "distinct": true,
+            "from": [
+              {
+                "kind": "skill"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "instruments",
+            "name": "Musical Instruments",
+            "count": 3,
+            "distinct": true,
+            "from": [
+              {
+                "kind": "item",
+                "where": {
+                  "group": "group:musical-instrument"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

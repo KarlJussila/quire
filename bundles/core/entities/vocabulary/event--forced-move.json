@@ -1,0 +1,9 @@
+{
+  "id": "event:forced-move",
+  "name": "Moved Against Its Will",
+  "source": {
+    "book": "core"
+  },
+  "isA": "event:moved",
+  "emittedBy": "engine"
+}

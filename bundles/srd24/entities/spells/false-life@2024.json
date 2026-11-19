@@ -1,0 +1,40 @@
+{
+  "id": "spell:false-life@2024",
+  "name": "False Life",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain 2d4 + 4 Temporary Hit Points.\n\n_**Using a Higher-Level Spell Slot.**_ You gain 5 additional Temporary Hit Points for each spell slot level above 1.",
+    "plain": "You gain 2d4 + 4 Temporary Hit Points.\n\nUsing a Higher-Level Spell Slot. You gain 5 additional Temporary Hit Points for each spell slot level above 1.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:necromancy",
+  "lists": [
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a drop of alcohol"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

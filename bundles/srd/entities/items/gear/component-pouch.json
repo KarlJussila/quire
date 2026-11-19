@@ -1,0 +1,18 @@
+{
+  "id": "item:component-pouch",
+  "name": "Component Pouch",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A component pouch is a small, watertight leather belt pouch that has compartments to hold all the material components and other special items you need to cast your spells, except for those components that have a specific cost (as indicated in a spell's description).",
+    "plain": "A component pouch is a small, watertight leather belt pouch that has compartments to hold all the material components and other special items you need to cast your spells, except for those components that have a specific cost (as indicated in a spell's description).",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 25,
+    "currency": "currency:gp"
+  },
+  "weight": 2.0
+}

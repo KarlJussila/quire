@@ -1,0 +1,11 @@
+{
+  "id": "feature:cantrip@2024",
+  "name": "Cantrip",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

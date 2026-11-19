@@ -1,0 +1,16 @@
+{
+  "id": "rule:crawling@2024",
+  "name": "Crawling",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you're crawling, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain). _See also_ \"Speed.\"",
+    "plain": "While you're crawling, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain). _See also_ \"Speed.\"",
+    "wording": "srd"
+  },
+  "group": "group:exploration",
+  "appliesTo": {
+    "pool": "any"
+  }
+}

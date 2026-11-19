@@ -1,0 +1,105 @@
+{
+  "id": "creature:hydra",
+  "name": "Hydra",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:unaligned",
+  "ac": 15,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 172,
+    "formula": "15d12 + 75"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:swim": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 20,
+    "ability:dex": 12,
+    "ability:int": 2,
+    "ability:str": 20,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 6
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 16,
+  "xp": 3900,
+  "cr": 8,
+  "blocks": [
+    {
+      "name": "Hold Breath",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hydra can hold its breath for 1 hour.",
+        "plain": "The hydra can hold its breath for 1 hour.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiple Heads",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hydra has five heads. While it has more than one head, the hydra has advantage on saving throws against being Blinded, Charmed, Deafened, Frightened, Stunned, and knocked Unconscious.\n\nWhenever the hydra takes 25 or more damage in a single turn, one of its heads dies. If all its heads die, the hydra dies.\n\nAt the end of its turn, it grows two heads for each of its heads that died since its last turn, unless it has taken fire damage since its last turn. The hydra regains 10 hit points for each head regrown in this way.",
+        "plain": "The hydra has five heads. While it has more than one head, the hydra has advantage on saving throws against being Blinded, Charmed, Deafened, Frightened, Stunned, and knocked Unconscious.\n\nWhenever the hydra takes 25 or more damage in a single turn, one of its heads dies. If all its heads die, the hydra dies.\n\nAt the end of its turn, it grows two heads for each of its heads that died since its last turn, unless it has taken fire damage since its last turn. The hydra regains 10 hit points for each head regrown in this way.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Reactive Heads",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "For each head the hydra has beyond one, it gets an extra reaction that can be used only for opportunity attacks.",
+        "plain": "For each head the hydra has beyond one, it gets an extra reaction that can be used only for opportunity attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Wakeful",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the hydra sleeps, at least one of its heads is awake.",
+        "plain": "While the hydra sleeps, at least one of its heads is awake.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The hydra makes as many bite attacks as it has heads.",
+        "plain": "The hydra makes as many bite attacks as it has heads.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +8 to hit, reach 10 ft., one target. _Hit:_ 10 (1d10 + 5) piercing damage.",
+        "plain": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 10 (1d10 + 5) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

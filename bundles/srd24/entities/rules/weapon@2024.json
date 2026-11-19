@@ -1,0 +1,18 @@
+{
+  "id": "rule:weapon@2024",
+  "name": "Weapon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A weapon is an object that is in the Simple or Martial weapon category. _See also_ \"Equipment\" (\"Weapons\").",
+    "plain": "A weapon is an object that is in the Simple or Martial weapon category. See also \"Equipment\" (\"Weapons\").",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

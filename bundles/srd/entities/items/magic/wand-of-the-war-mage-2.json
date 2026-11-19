@@ -1,0 +1,81 @@
+{
+  "id": "item:wand-of-the-war-mage-2",
+  "name": "Wand of the War Mage +2",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While holding this wand, you gain a bonus to spell attack rolls determined by the wand's rarity. In addition, you ignore half cover when making a spell attack.",
+    "plain": "While holding this wand, you gain a bonus to spell attack rolls determined by the wand's rarity. In addition, you ignore half cover when making a spell attack.",
+    "wording": "srd"
+  },
+  "group": "group:wand",
+  "rarity": "rarity:rare",
+  "attunement": {
+    "by": {
+      "spellcaster": true
+    },
+    "text": "requires attunement by a spellcaster"
+  },
+  "weight": 1,
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "via": "spell"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "held": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "suppress",
+      "state": [
+        "state:half-cover"
+      ],
+      "to": "target",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "via": "spell"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "held": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

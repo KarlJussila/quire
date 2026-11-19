@@ -1,0 +1,135 @@
+{
+  "id": "item:mace-of-smiting@2024",
+  "name": "Mace of Smiting",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. The bonus increases to +3 when you use the weapon to attack a Construct.\n\nWhen you roll a 20 on an attack roll made with this weapon, the target takes an extra 7 Bludgeoning damage, or 14 Bludgeoning damage if it's a Construct. If a Construct has 25 Hit Points or fewer after taking this damage, it is destroyed.",
+    "plain": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. The bonus increases to +3 when you use the weapon to attack a Construct.\n\nWhen you roll a 20 on an attack roll made with this weapon, the target takes an extra 7 Bludgeoning damage, or 14 Bludgeoning damage if it's a Construct. If a Construct has 25 Hit Points or fewer after taking this damage, it is destroyed.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:rare",
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": {
+            "if": {
+              "creature": "subject",
+              "where": {
+                "match": {
+                  "creatureType": "creature-type:construct"
+                }
+              }
+            },
+            "then": 3,
+            "else": 1
+          }
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": {
+            "if": {
+              "creature": "subject",
+              "where": {
+                "match": {
+                  "creatureType": "creature-type:construct"
+                }
+              }
+            },
+            "then": 3,
+            "else": 1
+          }
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    },
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "this"
+          },
+          "natural": 20
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "damage": {
+              "amount": {
+                "if": {
+                  "creature": "subject",
+                  "where": {
+                    "match": {
+                      "creatureType": "creature-type:construct"
+                    }
+                  }
+                },
+                "then": 14,
+                "else": 7
+              },
+              "type": "damage-type:bludgeoning"
+            },
+            "to": "subject"
+          },
+          {
+            "kill": {},
+            "to": "subject",
+            "when": {
+              "creature": "subject",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "creatureType": "creature-type:construct"
+                    }
+                  },
+                  {
+                    "compare": "hp.current",
+                    "atMost": 25
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": [],
+  "base": "item:mace"
+}

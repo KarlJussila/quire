@@ -1,0 +1,15 @@
+{
+  "id": "item:trident-of-fish-command@2024",
+  "name": "Trident of Fish Command",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This magic weapon has 3 charges, and it regains 1d3 expended charges daily at dawn. While you carry it, you can expend 1 charge to cast Dominate Beast (save DC 15) from it on a Beast that has a Swim Speed.",
+    "plain": "This magic weapon has 3 charges, and it regains 1d3 expended charges daily at dawn. While you carry it, you can expend 1 charge to cast Dominate Beast (save DC 15) from it on a Beast that has a Swim Speed.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:uncommon",
+  "attunement": true
+}

@@ -1,0 +1,88 @@
+{
+  "id": "feature:whirlwind-attack",
+  "name": "Whirlwind Attack",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target.",
+    "plain": "You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target.",
+    "wording": "srd"
+  },
+  "effects": [],
+  "activities": [
+    {
+      "key": "whirlwind-attack",
+      "name": "Whirlwind Attack",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "target": {
+        "count": {
+          "atLeast": 0
+        },
+        "select": "chosen",
+        "who": {
+          "pool": "any",
+          "chosen": true,
+          "where": {
+            "all": [
+              {
+                "kind": "creature"
+              },
+              {
+                "within": 5,
+                "of": "self"
+              }
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "any": [
+                    {
+                      "match": {
+                        "delivery": {
+                          "attack": {
+                            "range": [
+                              "melee",
+                              "melee-or-ranged"
+                            ],
+                            "via": "weapon"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "match": {
+                        "delivery": {
+                          "attack": {
+                            "range": [
+                              "melee",
+                              "melee-or-ranged"
+                            ],
+                            "via": "unarmed"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "times": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

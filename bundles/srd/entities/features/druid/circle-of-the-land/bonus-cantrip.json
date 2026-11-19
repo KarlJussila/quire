@@ -1,0 +1,38 @@
+{
+  "id": "feature:druid/circle-of-the-land/bonus-cantrip",
+  "name": "Bonus Cantrip",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you choose this circle at 2nd level, you learn one additional druid cantrip of your choice.",
+    "plain": "When you choose this circle at 2nd level, you learn one additional druid cantrip of your choice.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "bonus-cantrip",
+            "name": "Bonus Druid Cantrip",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:druid",
+                    "level": 0
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "counts": false
+    }
+  ]
+}

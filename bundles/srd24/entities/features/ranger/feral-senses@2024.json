@@ -1,0 +1,24 @@
+{
+  "id": "feature:ranger/feral-senses@2024",
+  "name": "Level 18: Feral Senses",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your connection to the forces of nature grants you Blindsight with a range of 30 feet.",
+    "plain": "Your connection to the forces of nature grants you Blindsight with a range of 30 feet.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "sense",
+      "sense": "sense:blindsight",
+      "range": 30
+    },
+    {
+      "type": "see",
+      "range": 30,
+      "withoutSight": true
+    }
+  ]
+}

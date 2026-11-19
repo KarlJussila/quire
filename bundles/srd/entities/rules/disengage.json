@@ -1,0 +1,41 @@
+{
+  "id": "rule:disengage",
+  "name": "Disengage",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "If you take the Disengage action, your movement doesn't provoke opportunity attacks for the rest of the turn.",
+    "plain": "If you take the Disengage action, your movement doesn't provoke opportunity attacks for the rest of the turn.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "disengage",
+      "action": "action:disengage",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "state:disengaged",
+            "ends": [
+              {
+                "event": "event:turn-end",
+                "subject": "self"
+              }
+            ]
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

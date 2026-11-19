@@ -1,0 +1,79 @@
+{
+  "id": "class:barbarian",
+  "name": "Barbarian",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a barbarian, you gain the following class features.",
+    "plain": "As a barbarian, you gain the following class features.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d12",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:str",
+      "atLeast": 13
+    },
+    "features": [
+      "feature:barbarian/multiclass-proficiencies"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:barbarian/rage",
+      "feature:barbarian/unarmored-defense"
+    ],
+    "11": [
+      "feature:barbarian/relentless-rage"
+    ],
+    "12": [
+      "feature:ability-score-improvement"
+    ],
+    "15": [
+      "feature:barbarian/persistant-rage"
+    ],
+    "16": [
+      "feature:ability-score-improvement"
+    ],
+    "18": [
+      "feature:barbarian/indomitable-might"
+    ],
+    "19": [
+      "feature:ability-score-improvement"
+    ],
+    "2": [
+      "feature:barbarian/danger-sense",
+      "feature:barbarian/reckless-attack"
+    ],
+    "20": [
+      "feature:barbarian/primal-champion"
+    ],
+    "3": [
+      "feature:barbarian/primal-path"
+    ],
+    "4": [
+      "feature:ability-score-improvement"
+    ],
+    "5": [
+      "feature:barbarian/extra-attack",
+      "feature:barbarian/fast-movement"
+    ],
+    "7": [
+      "feature:barbarian/feral-instinct"
+    ],
+    "8": [
+      "feature:ability-score-improvement"
+    ],
+    "9": [
+      "feature:barbarian/brutal-critical"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Primal Path"
+  },
+  "firstClass": [
+    "feature:barbarian/proficiencies"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "currency:ep",
+  "name": "Electrum Piece",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "cp": 50,
+  "symbol": "ep"
+}

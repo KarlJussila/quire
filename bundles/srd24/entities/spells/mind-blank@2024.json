@@ -1,0 +1,40 @@
+{
+  "id": "spell:mind-blank@2024",
+  "name": "Mind Blank",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Until the spell ends, one willing creature you touch has Immunity to Psychic damage and the Charmed condition. The target is also unaffected by anything that would sense its emotions or alignment, read its thoughts, or magically detect its location, and no spell — not even Wish — can gather information about the target, observe it remotely, or control its mind.",
+    "plain": "Until the spell ends, one willing creature you touch has Immunity to Psychic damage and the Charmed condition. The target is also unaffected by anything that would sense its emotions or alignment, read its thoughts, or magically detect its location, and no spell — not even Wish — can gather information about the target, observe it remotely, or control its mind.",
+    "wording": "srd"
+  },
+  "level": 8,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:bard",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 24,
+        "unit": "hour"
+      }
+    }
+  ]
+}

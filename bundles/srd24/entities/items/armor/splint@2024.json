@@ -1,0 +1,21 @@
+{
+  "id": "item:splint@2024",
+  "name": "Splint",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:heavy-armor",
+  "cost": {
+    "amount": 200,
+    "currency": "currency:gp"
+  },
+  "weight": 60.0,
+  "armor": {
+    "ac": 17,
+    "strength": 15
+  }
+}

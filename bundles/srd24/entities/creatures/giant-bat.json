@@ -1,0 +1,56 @@
+{
+  "id": "creature:giant-bat@2024",
+  "name": "Giant Bat",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "hp": {
+    "average": 22,
+    "formula": "4d10"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 11,
+    "ability:dex": 16,
+    "ability:int": 2,
+    "ability:str": 15,
+    "ability:wis": 12
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 11,
+  "xp": 50,
+  "proficiencyBonus": 2,
+  "initiative": 3,
+  "cr": 0.25,
+  "blocks": [
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 6 (1d6 + 3) Piercing damage.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

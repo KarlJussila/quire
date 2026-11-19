@@ -1,0 +1,116 @@
+{
+  "id": "feature:druid/spellcasting",
+  "name": "Spellcasting",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will.",
+    "plain": "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will.",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting-feature",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "class:druid": {
+            "ability": "ability:wis",
+            "slots": "table:full-caster",
+            "prepared": {
+              "$base": {
+                "max": [
+                  1,
+                  {
+                    "sum": [
+                      "modifiers.ability:wis",
+                      "levels.class:druid"
+                    ]
+                  }
+                ]
+              }
+            },
+            "cantrips": {
+              "$base": {
+                "byLevel": {
+                  "1": 2,
+                  "4": 3,
+                  "10": 4
+                },
+                "of": "class:druid"
+              }
+            },
+            "casterLevel": {
+              "$base": "levels.class:druid"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "cantrips",
+            "name": "Druid Cantrips",
+            "count": "spellcasting.class:druid.cantrips",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "level": 0,
+                    "lists": "class:druid"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": "ability:wis"
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "prepared",
+            "name": "Prepared Druid Spells",
+            "count": "spellcasting.class:druid.prepared",
+            "distinct": true,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:druid",
+                    "level": {
+                      "atLeast": 1,
+                      "atMost": "spellcasting.class:druid.spellLevel"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "prepared",
+      "ability": "ability:wis"
+    }
+  ],
+  "gaps": [
+    {
+      "category": "effect-model",
+      "name": "Preparation time needs the sum of the levels of all selected prepared spells."
+    },
+    {
+      "category": "spellcasting",
+      "name": "The allowed focus is tied to this Druid casting source, but its exact scope on a cast that can have multiple sources is unresolved."
+    }
+  ]
+}

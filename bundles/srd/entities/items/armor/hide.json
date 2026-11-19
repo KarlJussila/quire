@@ -1,0 +1,31 @@
+{
+  "id": "item:hide",
+  "name": "Hide",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This crude armor consists of thick furs and pelts. It is commonly worn by barbarian tribes, evil humanoids, and other folk who lack access to the tools and materials needed to create better armor.",
+    "plain": "This crude armor consists of thick furs and pelts. It is commonly worn by barbarian tribes, evil humanoids, and other folk who lack access to the tools and materials needed to create better armor.",
+    "wording": "srd"
+  },
+  "group": "group:medium-armor",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 12.0,
+  "armor": {
+    "ac": {
+      "sum": [
+        12,
+        {
+          "min": [
+            2,
+            "modifiers.ability:dex"
+          ]
+        }
+      ]
+    }
+  }
+}

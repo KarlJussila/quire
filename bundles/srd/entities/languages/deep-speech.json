@@ -1,0 +1,14 @@
+{
+  "id": "language:deep-speech",
+  "name": "Deep Speech",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "An exotic language, typically spoken by aboleths and cloakers. It has no written form.",
+    "plain": "An exotic language, typically spoken by aboleths and cloakers. It has no written form.",
+    "wording": "srd"
+  },
+  "group": "group:exotic-language",
+  "speakers": "Aboleths, cloakers"
+}

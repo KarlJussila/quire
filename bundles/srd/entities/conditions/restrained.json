@@ -1,0 +1,62 @@
+{
+  "id": "condition:restrained",
+  "name": "Restrained",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- A Restrained creature's speed becomes 0, and it can't benefit from any bonus to its speed.\n- Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.\n- The creature has disadvantage on Dexterity saving throws.",
+    "plain": "A Restrained creature's speed becomes 0, and it can't benefit from any bonus to its speed.\nAttack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.\nThe creature has disadvantage on Dexterity saving throws.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "$where": true,
+          "speed": {
+            "$replace": 0
+          }
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any"
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": "ability:dex"
+        }
+      }
+    }
+  ]
+}

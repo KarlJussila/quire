@@ -1,0 +1,78 @@
+{
+  "id": "creature:hunter-shark",
+  "name": "Hunter Shark",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 45,
+    "formula": "6d10 + 12"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 0
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 4,
+    "ability:con": 15,
+    "ability:dex": 13,
+    "ability:int": 1,
+    "ability:str": 18,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 2
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    }
+  },
+  "passivePerception": 12,
+  "xp": 450,
+  "cr": 2,
+  "blocks": [
+    {
+      "name": "Blood Frenzy",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The shark has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
+        "plain": "The shark has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Water Breathing",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The shark can breathe only underwater.",
+        "plain": "The shark can breathe only underwater.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 13 (2d8 + 4) piercing damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

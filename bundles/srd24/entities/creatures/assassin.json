@@ -1,0 +1,231 @@
+{
+  "id": "creature:assassin@2024",
+  "name": "Assassin",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 16,
+  "hp": {
+    "average": 97,
+    "formula": "15d8 + 30"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 14,
+    "ability:dex": 18,
+    "ability:int": 16,
+    "ability:str": 11,
+    "ability:wis": 11
+  },
+  "saves": {
+    "ability:dex": 7,
+    "ability:int": 6
+  },
+  "skills": {
+    "skill:acrobatics": 7,
+    "skill:perception": 6,
+    "skill:stealth": 10
+  },
+  "passivePerception": 16,
+  "xp": 3900,
+  "proficiencyBonus": 3,
+  "initiative": 10,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Implements",
+    "Individual"
+  ],
+  "gear": [
+    "Light Crossbow",
+    "Shortsword",
+    "Studded Leather Armor"
+  ],
+  "cr": 8,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:thieves-cant"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:poison"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Evasion",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the assassin is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the assassin instead takes no damage if it succeeds on the save and only half damage if it fails. It can’t use this trait if it has the Incapacitated condition.",
+        "plain": "If the assassin is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the assassin instead takes no damage if it succeeds on the save and only half damage if it fails. It can’t use this trait if it has the Incapacitated condition.",
+        "wording": "upstream"
+      },
+      "effects": [
+        {
+          "type": "triggered",
+          "on": {
+            "event": "event:taking-damage",
+            "subject": "self",
+            "when": {
+              "all": [
+                {
+                  "event": "event:roll-resolved",
+                  "by": "self",
+                  "match": {
+                    "roll": "roll:save",
+                    "success": true,
+                    "ability": "ability:dex"
+                  }
+                },
+                {
+                  "activity": {
+                    "kind": "activity",
+                    "where": {
+                      "match": {
+                        "delivery": {
+                          "save": {
+                            "ability": "ability:dex"
+                          }
+                        },
+                        "otherwise": "half"
+                      }
+                    }
+                  }
+                },
+                {
+                  "not": {
+                    "has": "condition:incapacitated"
+                  }
+                }
+              ]
+            }
+          },
+          "step": {
+            "outcomes": [
+              {
+                "intercept": {
+                  "set": {
+                    "$replace": 0
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "triggered",
+          "on": {
+            "event": "event:taking-damage",
+            "subject": "self",
+            "when": {
+              "all": [
+                {
+                  "event": "event:roll-resolved",
+                  "by": "self",
+                  "match": {
+                    "roll": "roll:save",
+                    "success": false,
+                    "ability": "ability:dex"
+                  }
+                },
+                {
+                  "activity": {
+                    "kind": "activity",
+                    "where": {
+                      "match": {
+                        "delivery": {
+                          "save": {
+                            "ability": "ability:dex"
+                          }
+                        },
+                        "otherwise": "half"
+                      }
+                    }
+                  }
+                },
+                {
+                  "not": {
+                    "has": "condition:incapacitated"
+                  }
+                }
+              ]
+            }
+          },
+          "step": {
+            "outcomes": [
+              {
+                "intercept": {
+                  "set": {
+                    "$replace": {
+                      "divide": {
+                        "event": "amount"
+                      },
+                      "by": 2,
+                      "round": "down"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The assassin makes three attacks, using Shortsword or Light Crossbow in any combination.",
+        "plain": "The assassin makes three attacks, using Shortsword or Light Crossbow in any combination.",
+        "wording": "upstream"
+      }
+    },
+    {
+      "name": "Shortsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "*Melee Attack Roll:* +7, reach 5 ft. *Hit:* 7 (1d6 + 4) Piercing damage plus 17 (5d6) Poison damage, and the target has the Poisoned condition until the start of the assassin’s next turn.",
+        "plain": "Melee Attack Roll: +7, reach 5 ft. Hit: 7 (1d6 + 4) Piercing damage plus 17 (5d6) Poison damage, and the target has the Poisoned condition until the start of the assassin’s next turn.",
+        "wording": "upstream"
+      }
+    },
+    {
+      "name": "Light Crossbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "*Ranged Attack Roll:* +7, range 80/320 ft. *Hit:* 8 (1d8 + 4) Piercing damage plus 21 (6d6) Poison damage.",
+        "plain": "Ranged Attack Roll: +7, range 80/320 ft. Hit: 8 (1d8 + 4) Piercing damage plus 21 (6d6) Poison damage.",
+        "wording": "upstream"
+      }
+    },
+    {
+      "name": "Cunning Action",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The assassin takes the Dash, Disengage, or Hide action.",
+        "plain": "The assassin takes the Dash, Disengage, or Hide action.",
+        "wording": "upstream"
+      }
+    }
+  ]
+}

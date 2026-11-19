@@ -1,0 +1,8 @@
+{
+  "id": "group:gaming-set",
+  "name": "Gaming Set",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:tools"
+}

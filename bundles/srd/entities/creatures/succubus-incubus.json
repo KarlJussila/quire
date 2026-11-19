@@ -1,0 +1,153 @@
+{
+  "id": "creature:succubus-incubus",
+  "name": "Succubus / Incubus",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:neutral-evil",
+  "ac": 15,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 66,
+    "formula": "12d8 + 12"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 20,
+    "ability:con": 13,
+    "ability:dex": 17,
+    "ability:int": 15,
+    "ability:str": 8,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:deception": 9,
+    "skill:insight": 5,
+    "skill:perception": 5,
+    "skill:persuasion": 9,
+    "skill:stealth": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 15,
+  "telepathy": 60,
+  "xp": 1100,
+  "cr": 4,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    },
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:lightning",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Telepathic Bond",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The fiend ignores the range restriction on its telepathy when communicating with a creature it has Charmed. The two don't even need to be on the same plane of existence.",
+        "plain": "The fiend ignores the range restriction on its telepathy when communicating with a creature it has Charmed. The two don't even need to be on the same plane of existence.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shapechanger",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The fiend can use its action to polymorph into a Small or Medium humanoid, or back into its true form. Without wings, the fiend loses its flying speed. Other than its size and speed, its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+        "plain": "The fiend can use its action to polymorph into a Small or Medium humanoid, or back into its true form. Without wings, the fiend loses its flying speed. Other than its size and speed, its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw (Fiend Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 6 (1d6 + 3) slashing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Charm",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "One humanoid the fiend can see within 30 feet of it must succeed on a DC 15 Wisdom saving throw or be magically Charmed for 1 day. The charmed target obeys the fiend's verbal or telepathic commands. If the target suffers any harm or receives a suicidal command, it can repeat the saving throw, ending the effect on a success. If the target successfully saves against the effect, or if the effect on it ends, the target is immune to this fiend's Charm for the next 24 hours.\n\nThe fiend can have only one target Charmed at a time. If it charms another, the effect on the previous target ends.",
+        "plain": "One humanoid the fiend can see within 30 feet of it must succeed on a DC 15 Wisdom saving throw or be magically Charmed for 1 day. The charmed target obeys the fiend's verbal or telepathic commands. If the target suffers any harm or receives a suicidal command, it can repeat the saving throw, ending the effect on a success. If the target successfully saves against the effect, or if the effect on it ends, the target is immune to this fiend's Charm for the next 24 hours.\n\nThe fiend can have only one target Charmed at a time. If it charms another, the effect on the previous target ends.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Draining Kiss",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The fiend kisses a creature Charmed by it or a willing creature. The target must make a DC 15 Constitution saving throw against this magic, taking 32 (5d10 + 5) psychic damage on a failed save, or half as much damage on a successful one. The target's hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.",
+        "plain": "The fiend kisses a creature Charmed by it or a willing creature. The target must make a DC 15 Constitution saving throw against this magic, taking 32 (5d10 + 5) psychic damage on a failed save, or half as much damage on a successful one. The target's hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Etherealness",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The fiend magically enters the Ethereal Plane from the Material Plane, or vice versa.",
+        "plain": "The fiend magically enters the Ethereal Plane from the Material Plane, or vice versa.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

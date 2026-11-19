@@ -1,0 +1,60 @@
+{
+  "id": "feature:warlock/lifedrinker",
+  "name": "Lifedrinker",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite: 12th level, Pact of the Blade feature_\n\nWhen you hit a creature with your pact weapon, the creature takes extra necrotic damage equal to your Charisma modifier (minimum 1).",
+    "plain": "Prerequisite: 12th level, Pact of the Blade feature\n\nWhen you hit a creature with your pact weapon, the creature takes extra necrotic damage equal to your Charisma modifier (minimum 1).",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "all": [
+      {
+        "compare": "levels.class:warlock",
+        "atLeast": 12
+      },
+      {
+        "has": "feature:warlock/pact-of-the-blade"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "type": "damage-bonus",
+      "amount": {
+        "max": [
+          1,
+          "modifiers.ability:cha"
+        ]
+      },
+      "damageType": "damage-type:necrotic",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage",
+          "attack": {
+            "via": "weapon",
+            "item": {
+              "kind": "item",
+              "where": {
+                "has": "state:warlock/pact-weapon",
+                "source": "self"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Pact of the Blade must apply state:warlock/pact-weapon to the bonded weapon."
+    }
+  ]
+}

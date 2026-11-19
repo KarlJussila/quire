@@ -1,0 +1,101 @@
+{
+  "id": "creature:merrow",
+  "name": "Merrow",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 13,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 45,
+    "formula": "6d10 + 12"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 9,
+    "ability:con": 15,
+    "ability:dex": 10,
+    "ability:int": 8,
+    "ability:str": 18,
+    "ability:wis": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 450,
+  "cr": 2,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    },
+    {
+      "language": "language:aquan"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The merrow can breathe air and water.",
+        "plain": "The merrow can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The merrow makes two attacks: one with its bite and one with its claws or harpoon.",
+        "plain": "The merrow makes two attacks: one with its bite and one with its claws or harpoon.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 8 (1d8 + 4) piercing damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claws",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 9 (2d4 + 4) slashing damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 9 (2d4 + 4) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Harpoon",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Weapon Attack:_ +6 to hit, reach 5 ft. or range 20/60 ft., one target. _Hit:_ 11 (2d6 + 4) piercing damage. If the target is a Huge or smaller creature, it must succeed on a Strength contest against the merrow or be pulled up to 20 feet toward the merrow.",
+        "plain": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 11 (2d6 + 4) piercing damage. If the target is a Huge or smaller creature, it must succeed on a Strength contest against the merrow or be pulled up to 20 feet toward the merrow.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

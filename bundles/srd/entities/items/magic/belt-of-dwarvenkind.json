@@ -1,0 +1,163 @@
+{
+  "id": "item:belt-of-dwarvenkind",
+  "name": "Belt of Dwarvenkind",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing this belt, you gain the following benefits:\n\n- Your Constitution score increases by 2, to a maximum of 20.\n- You have advantage on Charisma (Persuasion) checks made to interact with dwarves.\n\nIn addition, while attuned to the belt, you have a 50 percent chance each day at dawn of growing a full beard if you're capable of growing one, or a visibly thicker beard if you already have one.\n\nIf you aren't a dwarf, you gain the following additional benefits while wearing the belt:\n\n- You have advantage on saving throws against poison, and you have resistance against poison damage.\n- You have darkvision out to a range of 60 feet.\n- You can speak, read, and write Dwarvish.",
+    "plain": "While wearing this belt, you gain the following benefits:\n\n- Your Constitution score increases by 2, to a maximum of 20.\n- You have advantage on Charisma (Persuasion) checks made to interact with dwarves.\n\nIn addition, while attuned to the belt, you have a 50 percent chance each day at dawn of growing a full beard if you're capable of growing one, or a visibly thicker beard if you already have one.\n\nIf you aren't a dwarf, you gain the following additional benefits while wearing the belt:\n\n- You have advantage on saving throws against poison, and you have resistance against poison damage.\n- You have darkvision out to a range of 60 feet.\n- You can speak, read, and write Dwarvish.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "weight": 0,
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:con": {
+            "$add": {
+              "amount": 2,
+              "upTo": 20
+            }
+          }
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check",
+              "ability": "ability:cha",
+              "skill": "skill:persuasion"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "creature": "target",
+            "where": {
+              "has": "species:dwarf"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:save",
+              "against": {
+                "sourceType": "source-type:poison"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "not": {
+              "has": "species:dwarf"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:poison"
+      ],
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "not": {
+              "has": "species:dwarf"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "sense",
+      "sense": "sense:darkvision",
+      "range": 60,
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "not": {
+              "has": "species:dwarf"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "language:dwarvish"
+      ],
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "not": {
+              "has": "species:dwarf"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

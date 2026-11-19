@@ -1,0 +1,52 @@
+{
+  "id": "table:sentient-magic-items/senses@2024",
+  "name": "Senses",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "senses",
+      "name": "Senses"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "senses": "Hearing and standard vision out to 30 feet"
+      },
+      "range": [
+        1,
+        1
+      ]
+    },
+    {
+      "cells": {
+        "senses": "Hearing and standard vision out to 60 feet"
+      },
+      "range": [
+        2,
+        2
+      ]
+    },
+    {
+      "cells": {
+        "senses": "Hearing and standard vision out to 120 feet"
+      },
+      "range": [
+        3,
+        3
+      ]
+    },
+    {
+      "cells": {
+        "senses": "Hearing and Darkvision out to 120 feet"
+      },
+      "range": [
+        4,
+        4
+      ]
+    }
+  ],
+  "dice": "d4"
+}

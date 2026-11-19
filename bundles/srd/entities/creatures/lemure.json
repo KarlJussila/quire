@@ -1,0 +1,98 @@
+{
+  "id": "creature:lemure",
+  "name": "Lemure",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 7,
+  "hp": {
+    "average": 13,
+    "formula": "3d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 15
+    }
+  },
+  "abilities": {
+    "ability:cha": 3,
+    "ability:con": 11,
+    "ability:dex": 5,
+    "ability:int": 1,
+    "ability:str": 10,
+    "ability:wis": 11
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 10,
+  "xp": 10,
+  "cr": 0,
+  "languages": [
+    {
+      "language": "language:infernal",
+      "understandsOnly": true
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Devil's Sight",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "Magical darkness doesn't impede the lemure's darkvision.",
+        "plain": "Magical darkness doesn't impede the lemure's darkvision.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hellish Rejuvenation",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "A lemure that dies in the Nine Hells comes back to life with all its hit points in 1d10 days unless it is killed by a good-aligned creature with a Bless spell cast on that creature or its remains are sprinkled with holy water.",
+        "plain": "A lemure that dies in the Nine Hells comes back to life with all its hit points in 1d10 days unless it is killed by a good-aligned creature with a Bless spell cast on that creature or its remains are sprinkled with holy water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fist",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one target. _Hit:_ 2 (1d4) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

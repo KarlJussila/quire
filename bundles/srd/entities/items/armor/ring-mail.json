@@ -1,0 +1,21 @@
+{
+  "id": "item:ring-mail",
+  "name": "Ring Mail",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This armor is leather armor with heavy rings sewn into it. The rings help reinforce the armor against blows from swords and axes. Ring mail is inferior to chain mail, and it's usually worn only by those who can't afford better armor.",
+    "plain": "This armor is leather armor with heavy rings sewn into it. The rings help reinforce the armor against blows from swords and axes. Ring mail is inferior to chain mail, and it's usually worn only by those who can't afford better armor.",
+    "wording": "srd"
+  },
+  "group": "group:heavy-armor",
+  "cost": {
+    "amount": 30,
+    "currency": "currency:gp"
+  },
+  "weight": 40.0,
+  "armor": {
+    "ac": 14
+  }
+}

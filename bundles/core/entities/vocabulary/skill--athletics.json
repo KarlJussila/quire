@@ -1,0 +1,11 @@
+{
+  "id": "skill:athletics",
+  "name": "Athletics",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:str"
+}

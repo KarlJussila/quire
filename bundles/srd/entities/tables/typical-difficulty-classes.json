@@ -1,0 +1,55 @@
+{
+  "id": "table:typical-difficulty-classes",
+  "name": "Typical Difficulty Classes",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "task-difficulty",
+      "name": "Task Difficulty"
+    },
+    {
+      "key": "dc",
+      "name": "DC"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "task-difficulty": "Very easy",
+        "dc": "5"
+      }
+    },
+    {
+      "cells": {
+        "task-difficulty": "Easy",
+        "dc": "10"
+      }
+    },
+    {
+      "cells": {
+        "task-difficulty": "Medium",
+        "dc": "15"
+      }
+    },
+    {
+      "cells": {
+        "task-difficulty": "Hard",
+        "dc": "20"
+      }
+    },
+    {
+      "cells": {
+        "task-difficulty": "Very hard",
+        "dc": "25"
+      }
+    },
+    {
+      "cells": {
+        "task-difficulty": "Nearly impossible",
+        "dc": "30"
+      }
+    }
+  ]
+}

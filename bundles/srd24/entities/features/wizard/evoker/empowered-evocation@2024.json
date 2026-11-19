@@ -1,0 +1,48 @@
+{
+  "id": "feature:wizard/evoker/empowered-evocation@2024",
+  "name": "Level 10: Empowered Evocation",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Whenever you cast a Wizard spell from the Evocation school, you can add your Intelligence modifier to one damage roll of that spell.",
+    "plain": "Whenever you cast a Wizard spell from the Evocation school, you can add your Intelligence modifier to one damage roll of that spell.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": "modifiers.ability:int"
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage"
+            }
+          },
+          {
+            "spell": {
+              "kind": "spell",
+              "where": {
+                "match": {
+                  "lists": "class:wizard",
+                  "school": "spell-school:evocation"
+                }
+              }
+            }
+          },
+          {
+            "dealsDamage": true
+          }
+        ]
+      }
+    }
+  ]
+}

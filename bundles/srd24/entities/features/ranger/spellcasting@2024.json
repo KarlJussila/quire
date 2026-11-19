@@ -1,0 +1,241 @@
+{
+  "id": "feature:ranger/spellcasting@2024",
+  "name": "Level 1: Spellcasting",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have learned to channel the magical essence of nature to cast spells. See \"Spells\" for the rules on spellcasting. The information below details how you use those rules with Ranger spells, which appear in the Ranger spell list later in the class's description.\n\n_**Spell Slots.**_ The Ranger Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest.\n\n_Prepared Spells of Level 1+_. You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose two level 1 Ranger spells. Cure Wounds and Ensnaring Strike are recommended.\n\nThe number of spells on your list increases as you gain Ranger levels, as shown in the Prepared Spells column of the Ranger Features table. Whenever that number increases, choose additional Ranger spells until the number of spells on your list matches the number in the Ranger Features table. The chosen spells must be of a level for which you have spell slots. For example, if you're a level 5 Ranger, your list of prepared spells can include six Ranger spells of level 1 or 2 in any combination.\n\nIf another Ranger feature gives you spells that you always have prepared, those spells don't count against the number of spells you can prepare with this feature, but those spells otherwise count as Ranger spells for you.\n\n_**Changing Your Prepared Spells.**_ Whenever you finish a Long Rest, you can replace one spell on your list with another Ranger spell for which you have spell slots.\n\n_**Spellcasting Ability.**_ Wisdom is your spellcasting ability for your Ranger spells.\n\n_**Spellcasting Focus.**_ You can use a Druidic Focus as a Spellcasting Focus for your Ranger spells.",
+    "plain": "You have learned to channel the magical essence of nature to cast spells. See \"Spells\" for the rules on spellcasting. The information below details how you use those rules with Ranger spells, which appear in the Ranger spell list later in the class's description.\n\nSpell Slots. The Ranger Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest.\n\nPrepared Spells of Level 1+. You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose two level 1 Ranger spells. Cure Wounds and Ensnaring Strike are recommended.\n\nThe number of spells on your list increases as you gain Ranger levels, as shown in the Prepared Spells column of the Ranger Features table. Whenever that number increases, choose additional Ranger spells until the number of spells on your list matches the number in the Ranger Features table. The chosen spells must be of a level for which you have spell slots. For example, if you're a level 5 Ranger, your list of prepared spells can include six Ranger spells of level 1 or 2 in any combination.\n\nIf another Ranger feature gives you spells that you always have prepared, those spells don't count against the number of spells you can prepare with this feature, but those spells otherwise count as Ranger spells for you.\n\nChanging Your Prepared Spells. Whenever you finish a Long Rest, you can replace one spell on your list with another Ranger spell for which you have spell slots.\n\nSpellcasting Ability. Wisdom is your spellcasting ability for your Ranger spells.\n\nSpellcasting Focus. You can use a Druidic Focus as a Spellcasting Focus for your Ranger spells.",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting-feature",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "class:ranger": {
+            "ability": "ability:wis",
+            "slots": "table:half-caster",
+            "prepared": {
+              "$base": {
+                "byLevel": {
+                  "1": 2,
+                  "2": 3,
+                  "3": 4,
+                  "4": 5,
+                  "5": 6,
+                  "7": 7,
+                  "9": 9,
+                  "11": 10,
+                  "13": 11,
+                  "15": 12,
+                  "17": 14,
+                  "19": 15
+                },
+                "of": "class:ranger"
+              }
+            },
+            "casterLevel": {
+              "$base": {
+                "divide": "levels.class:ranger",
+                "by": 2,
+                "round": "up"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "prepared",
+            "name": "Prepared Ranger Spells",
+            "count": "spellcasting.class:ranger.prepared",
+            "distinct": true,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:ranger",
+                    "level": {
+                      "atLeast": 1,
+                      "atMost": "spellcasting.class:ranger.spellLevel"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "prepared",
+      "ability": "ability:wis"
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-spell",
+      "name": "Replace Prepared Spell",
+      "trigger": {
+        "event": "event:rest-finished",
+        "subject": "self",
+        "match": {
+          "rest": "rest:long"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "what": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "level": {
+                        "atLeast": 1
+                      }
+                    }
+                  },
+                  {
+                    "grantedBy": "feature:ranger/spellcasting"
+                  }
+                ]
+              }
+            },
+            "with": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "lists": "class:ranger",
+                      "level": {
+                        "atLeast": 1
+                      }
+                    }
+                  },
+                  {
+                    "any": [
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:ranger",
+                              "atLeast": 1,
+                              "atMost": 4
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 1
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:ranger",
+                              "atLeast": 5,
+                              "atMost": 8
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 2
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:ranger",
+                              "atLeast": 9,
+                              "atMost": 12
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 3
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:ranger",
+                              "atLeast": 13,
+                              "atMost": 16
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 4
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:ranger",
+                              "atLeast": 17
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 5
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "spellcasting",
+      "name": "The allowed focus is tied to this Ranger casting source, but its exact scope on a cast that can have multiple sources is unresolved."
+    }
+  ]
+}

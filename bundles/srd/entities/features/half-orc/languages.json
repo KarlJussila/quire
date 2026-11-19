@@ -1,0 +1,21 @@
+{
+  "id": "feature:half-orc/languages",
+  "name": "Languages",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Languages. You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.",
+    "plain": "Languages. You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "language:common",
+        "language:orc"
+      ]
+    }
+  ]
+}

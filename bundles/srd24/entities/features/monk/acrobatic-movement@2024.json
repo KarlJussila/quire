@@ -1,0 +1,18 @@
+{
+  "id": "feature:monk/acrobatic-movement@2024",
+  "name": "Level 9: Acrobatic Movement",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you aren't wearing armor or wielding a Shield, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the movement.",
+    "plain": "While you aren't wearing armor or wielding a Shield, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the movement.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Moving across vertical surfaces and liquids without falling is not modeled."
+    }
+  ]
+}

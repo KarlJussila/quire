@@ -1,0 +1,12 @@
+{
+  "id": "language:giant-elk",
+  "name": "Giant Elk",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- **Languages** Giant Elk, understands Common, Elvish, and Sylvan but can't speak them",
+    "plain": "- Languages Giant Elk, understands Common, Elvish, and Sylvan but can't speak them",
+    "wording": "srd"
+  }
+}

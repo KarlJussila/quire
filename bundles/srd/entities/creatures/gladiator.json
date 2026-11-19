@@ -1,0 +1,108 @@
+{
+  "id": "creature:gladiator",
+  "name": "Gladiator",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any",
+  "ac": 16,
+  "acFrom": [
+    "studded leather, shield"
+  ],
+  "hp": {
+    "average": 112,
+    "formula": "15d8 + 45"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 15,
+    "ability:con": 16,
+    "ability:dex": 15,
+    "ability:int": 10,
+    "ability:str": 18,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:con": 6,
+    "ability:dex": 5,
+    "ability:str": 7
+  },
+  "skills": {
+    "skill:athletics": 10,
+    "skill:intimidation": 5
+  },
+  "passivePerception": 11,
+  "xp": 1800,
+  "cr": 5,
+  "languages": [
+    {
+      "text": "any one language (usually Common)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Brave",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The gladiator has advantage on saving throws against being Frightened.",
+        "plain": "The gladiator has advantage on saving throws against being Frightened.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Brute",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "A melee weapon deals one extra die of its damage when the gladiator hits with it (included in the attack).",
+        "plain": "A melee weapon deals one extra die of its damage when the gladiator hits with it (included in the attack).",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The gladiator makes three melee attacks or two ranged attacks.",
+        "plain": "The gladiator makes three melee attacks or two ranged attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spear",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Weapon Attack:_ +7 to hit, reach 5 ft. and range 20/60 ft., one target. _Hit:_ 11 (2d6 + 4) piercing damage, or 13 (2d8 + 4) piercing damage if used with two hands to make a melee attack.",
+        "plain": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. and range 20/60 ft., one target. Hit: 11 (2d6 + 4) piercing damage, or 13 (2d8 + 4) piercing damage if used with two hands to make a melee attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shield Bash",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +7 to hit, reach 5 ft., one creature. _Hit:_ 9 (2d4 + 4) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a DC 15 Strength saving throw or be knocked Prone.",
+        "plain": "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 9 (2d4 + 4) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a DC 15 Strength saving throw or be knocked Prone.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Parry",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon.",
+        "plain": "The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

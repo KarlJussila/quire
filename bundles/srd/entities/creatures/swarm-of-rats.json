@@ -1,0 +1,93 @@
+{
+  "id": "creature:swarm-of-rats",
+  "name": "Swarm of Rats",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "swarm": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 10,
+  "hp": {
+    "average": 24,
+    "formula": "7d8 - 7"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 3,
+    "ability:con": 9,
+    "ability:dex": 11,
+    "ability:int": 2,
+    "ability:str": 9,
+    "ability:wis": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 30
+    }
+  },
+  "passivePerception": 10,
+  "xp": 50,
+  "cr": 0.25,
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened",
+        "condition:grappled",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:prone",
+        "condition:restrained",
+        "condition:stunned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Keen Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The swarm has advantage on Wisdom (Perception) checks that rely on smell.",
+        "plain": "The swarm has advantage on Wisdom (Perception) checks that rely on smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Swarm",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny rat. The swarm can't regain hit points or gain temporary hit points.",
+        "plain": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny rat. The swarm can't regain hit points or gain temporary hit points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bites",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +2 to hit, reach 0 ft., one target in the swarm's space. _Hit:_ 7 (2d6) piercing damage, or 3 (1d6) piercing damage if the swarm has half of its hit points or fewer.",
+        "plain": "Melee Weapon Attack: +2 to hit, reach 0 ft., one target in the swarm's space. Hit: 7 (2d6) piercing damage, or 3 (1d6) piercing damage if the swarm has half of its hit points or fewer.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

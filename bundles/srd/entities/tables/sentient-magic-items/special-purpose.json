@@ -1,0 +1,106 @@
+{
+  "id": "table:sentient-magic-items/special-purpose",
+  "name": "Special Purpose",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "purpose",
+      "name": "Purpose"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "purpose": "_Aligned:_ The item seeks to defeat or destroy those of a diametrically opposed alignment. (Such an item is never neutral.)"
+      },
+      "range": [
+        1,
+        1
+      ]
+    },
+    {
+      "cells": {
+        "purpose": "Bane: The item seeks to defeat or destroy creatures of a particular kind, such as fiends, shapechangers, trolls, or wizards."
+      },
+      "range": [
+        2,
+        2
+      ]
+    },
+    {
+      "cells": {
+        "purpose": "_Protector:_ The item seeks to defend a particular race or kind of creature, such as elves or druids."
+      },
+      "range": [
+        3,
+        3
+      ]
+    },
+    {
+      "cells": {
+        "purpose": "_Crusader:_ The item seeks to defeat, weaken, or destroy the servants of a particular deity."
+      },
+      "range": [
+        4,
+        4
+      ]
+    },
+    {
+      "cells": {
+        "purpose": "Templar: The item seeks to defend the servants and interests of a particular deity."
+      },
+      "range": [
+        5,
+        5
+      ]
+    },
+    {
+      "cells": {
+        "purpose": "_Destroyer:_ The item craves destruction and goads its user to fight arbitrarily."
+      },
+      "range": [
+        6,
+        6
+      ]
+    },
+    {
+      "cells": {
+        "purpose": "_Glory Seeker:_ The item seeks renown as the greatest magic item in the world, by establishing its user as a famous or notorious figure."
+      },
+      "range": [
+        7,
+        7
+      ]
+    },
+    {
+      "cells": {
+        "purpose": "_Lore Seeker:_ The item craves knowledge or is determined to solve a mystery, learn a secret, or unravel a cryptic prophecy."
+      },
+      "range": [
+        8,
+        8
+      ]
+    },
+    {
+      "cells": {
+        "purpose": "_Destiny Seeker:_ The item is convinced that it and its wielder have key roles to play in future events."
+      },
+      "range": [
+        9,
+        9
+      ]
+    },
+    {
+      "cells": {
+        "purpose": "_Creator Seeker:_ The item seeks its creator and wants to understand why it was created."
+      },
+      "range": [
+        10,
+        10
+      ]
+    }
+  ],
+  "dice": "d10"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "item:painters-supplies",
+  "name": "Painter’s Supplies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Proficiency with painter’s supplies represents your ability to paint and draw. You also acquire an understanding of art history, which can aid you in examining works of art.\n\n***Components.*** Painter’s supplies include an easel, canvas, paints, brushes, charcoal sticks. and a palette.\n\n***Arcana, History, Religion.*** Your expertise aids you in uncovering lore of any sort that is attached to a work of art, such as the magical properties of a painting or the origins of a strange mural found in a dungeon.\n\n***Investigation, Perception.*** When you inspect a painting or a similar work of visual art, your knowledge of the practices behind creating it can grant you additional insight.\n\n***Painting and Drawing.*** As part of a short or long rest, you can produce a simple work of art. Although your work might lack precision, you can capture an image or a scene, or make. a quick copy of a piece of art you saw.\n\n##### PAINTER’S SUPPLIES\n\n| Activity | DC |\n|---|---|\n| Paint an accurate portrait | 10 |\n| Create a painting with a hidden message | 20 |",
+    "plain": "Proficiency with painter’s supplies represents your ability to paint and draw. You also acquire an understanding of art history, which can aid you in examining works of art.\n\nComponents. Painter’s supplies include an easel, canvas, paints, brushes, charcoal sticks. and a palette.\n\nArcana, History, Religion. Your expertise aids you in uncovering lore of any sort that is attached to a work of art, such as the magical properties of a painting or the origins of a strange mural found in a dungeon.\n\nInvestigation, Perception. When you inspect a painting or a similar work of visual art, your knowledge of the practices behind creating it can grant you additional insight.\n\nPainting and Drawing. As part of a short or long rest, you can produce a simple work of art. Although your work might lack precision, you can capture an image or a scene, or make. a quick copy of a piece of art you saw.\n\nPAINTER’S SUPPLIES\n\nActivity\tDC\n\nPaint an accurate portrait\t10\n\nCreate a painting with a hidden message\t20",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 5.0
+}

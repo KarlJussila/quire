@@ -1,0 +1,73 @@
+{
+  "id": "creature:giant-fire-beetle@2024",
+  "name": "Giant Fire Beetle",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "hp": {
+    "average": 4,
+    "formula": "1d6 + 1"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:climb": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 3,
+    "ability:con": 12,
+    "ability:dex": 10,
+    "ability:int": 1,
+    "ability:str": 8,
+    "ability:wis": 7
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    }
+  },
+  "passivePerception": 8,
+  "xp": 10,
+  "proficiencyBonus": 2,
+  "initiative": 0,
+  "cr": 0,
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Illumination",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The beetle sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.",
+        "plain": "The beetle sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +1, reach 5 ft. _Hit:_ 1 Fire damage.",
+        "plain": "Melee Attack Roll: +1, reach 5 ft. Hit: 1 Fire damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

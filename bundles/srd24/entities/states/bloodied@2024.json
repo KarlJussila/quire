@@ -1,0 +1,21 @@
+{
+  "id": "state:bloodied@2024",
+  "name": "Bloodied",
+  "source": {
+    "book": "core"
+  },
+  "ends": [
+    {
+      "becomes": {
+        "not": {
+          "compare": "hp.current",
+          "atMost": {
+            "times": "hp.max",
+            "by": 0.5
+          }
+        }
+      },
+      "subject": "self"
+    }
+  ]
+}

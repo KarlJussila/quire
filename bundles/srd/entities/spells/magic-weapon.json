@@ -1,0 +1,41 @@
+{
+  "id": "spell:magic-weapon",
+  "name": "Magic Weapon",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to attack rolls and damage rolls.\n\n_**At Higher Levels.**_ When you cast this spell using a spell slot of 4th level or higher, the bonus increases to +2. When you use a spell slot of 6th level or higher, the bonus increases to +3.",
+    "plain": "You touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to attack rolls and damage rolls.\n\nAt Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the bonus increases to +2. When you use a spell slot of 6th level or higher, the bonus increases to +3.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:paladin",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

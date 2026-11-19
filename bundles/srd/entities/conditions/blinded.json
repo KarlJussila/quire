@@ -1,0 +1,69 @@
+{
+  "id": "condition:blinded",
+  "name": "Blinded",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- A Blinded creature can't see and automatically fails any ability check that requires sight.\n- Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.",
+    "plain": "A Blinded creature can't see and automatically fails any ability check that requires sight.\nAttack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:see"
+      ]
+    },
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check"
+            }
+          },
+          {
+            "prose": {
+              "text": "requires sight",
+              "gap": {
+                "category": "test",
+                "name": "requires-sight"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any"
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    }
+  ]
+}

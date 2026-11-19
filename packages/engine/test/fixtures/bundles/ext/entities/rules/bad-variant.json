@@ -1,0 +1,16 @@
+{
+ "id": "rule:bad-variant",
+ "name": "Bad Variant",
+ "source": {
+  "book": "core"
+ },
+ "optional": true,
+ "overrides": [
+  {
+   "target": "feature:a",
+   "set": {
+    "effects": 5
+   }
+  }
+ ]
+}

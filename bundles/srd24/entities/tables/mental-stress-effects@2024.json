@@ -1,0 +1,44 @@
+{
+  "id": "table:mental-stress-effects@2024",
+  "name": "Mental Stress Effects",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "example",
+      "name": "Example"
+    },
+    {
+      "key": "save-dc",
+      "name": "Save DC"
+    },
+    {
+      "key": "psychic-damage",
+      "name": "Psychic Damage"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "example": "A character ingests a hallucinogenic substance that distorts the character's perception of reality.",
+        "save-dc": "10",
+        "psychic-damage": "1d6"
+      }
+    },
+    {
+      "cells": {
+        "example": "A character touches a fiendish idol that tears at the character's mind, threatening to shatter it.",
+        "save-dc": "15",
+        "psychic-damage": "3d6"
+      }
+    },
+    {
+      "cells": {
+        "example": "A magical trap flings a character into the Far Realm until the end of that character's next turn.",
+        "save-dc": "20",
+        "psychic-damage": "9d6"
+      }
+    }
+  ]
+}

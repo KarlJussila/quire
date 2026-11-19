@@ -1,0 +1,51 @@
+{
+  "id": "feature:fighter/champion/survivor",
+  "name": "Survivor",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don't gain this benefit if you have 0 hit points.",
+    "plain": "At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don't gain this benefit if you have 0 hit points.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:turn-start",
+        "subject": "self",
+        "when": {
+          "all": [
+            {
+              "compare": "hp.current",
+              "atMost": {
+                "times": "hp.max",
+                "by": 0.5
+              }
+            },
+            {
+              "compare": "hp.current",
+              "atLeast": 1
+            }
+          ]
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "heal": {
+              "amount": {
+                "sum": [
+                  5,
+                  "modifiers.ability:con"
+                ]
+              }
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

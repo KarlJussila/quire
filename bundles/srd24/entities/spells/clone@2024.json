@@ -1,0 +1,52 @@
+{
+  "id": "spell:clone@2024",
+  "name": "Clone",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You touch a creature or at least 1 cubic inch of its flesh. An inert duplicate of that creature forms inside the vessel used in the spell's casting and finishes growing after 120 days; you choose whether the finished clone is the same age as the creature or younger. The clone remains inert and endures indefinitely while its vessel remains undisturbed.\n\nIf the original creature dies after the clone finishes forming, the creature's soul transfers to the clone if the soul is free and willing to return. The clone is physically identical to the original and has the same personality, memories, and abilities, but none of the original's equipment. The creature's original remains, if any, become inert and can't be revived, since the creature's soul is elsewhere.",
+    "plain": "You touch a creature or at least 1 cubic inch of its flesh. An inert duplicate of that creature forms inside the vessel used in the spell's casting and finishes growing after 120 days; you choose whether the finished clone is the same age as the creature or younger. The clone remains inert and endures indefinitely while its vessel remains undisturbed.\n\nIf the original creature dies after the clone finishes forming, the creature's soul transfers to the clone if the soul is free and willing to return. The clone is physically identical to the original and has the same personality, memories, and abilities, but none of the original's equipment. The creature's original remains, if any, become inert and can't be revived, since the creature's soul is elsewhere.",
+    "wording": "srd"
+  },
+  "level": 8,
+  "school": "spell-school:necromancy",
+  "lists": [
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a diamond worth 1,000+ GP, which the spell consumes, and a sealable vessel worth 2,000+ GP that is large enough to hold the creature being cloned",
+      "parts": [
+        {
+          "worth": {
+            "amount": 1000,
+            "currency": "currency:gp"
+          },
+          "consumed": true
+        },
+        {
+          "worth": {
+            "amount": 2000,
+            "currency": "currency:gp"
+          }
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "time": {
+        "amount": 1,
+        "unit": "hour"
+      },
+      "range": {
+        "touch": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

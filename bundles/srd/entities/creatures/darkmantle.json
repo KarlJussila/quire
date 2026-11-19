@@ -1,0 +1,84 @@
+{
+  "id": "creature:darkmantle",
+  "name": "Darkmantle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:unaligned",
+  "ac": 11,
+  "hp": {
+    "average": 22,
+    "formula": "5d6 + 5"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:fly": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 13,
+    "ability:dex": 12,
+    "ability:int": 2,
+    "ability:str": 16,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:stealth": 3
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 100,
+  "cr": 0.5,
+  "blocks": [
+    {
+      "name": "Echolocation",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The darkmantle can't use its blindsight while Deafened.",
+        "plain": "The darkmantle can't use its blindsight while Deafened.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "False Appearance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the darkmantle remains motionless, it is indistinguishable from a cave formation such as a stalactite or stalagmite.",
+        "plain": "While the darkmantle remains motionless, it is indistinguishable from a cave formation such as a stalactite or stalagmite.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Crush",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one creature. _Hit:_ 6 (1d6 + 3) bludgeoning damage, and the darkmantle attaches to the target. If the target is Medium or smaller and the darkmantle has advantage on the attack roll, it attaches by engulfing the target's head, and the target is also Blinded and unable to breathe while the darkmantle is attached in this way.\n\nWhile attached to the target, the darkmantle can attack no other creature except the target but has advantage on its attack rolls. The darkmantle's speed also becomes 0, it can't benefit from any bonus to its speed, and it moves with the target.\n\nA creature can detach the darkmantle by making a successful DC 13 Strength check as an action. On its turn, the darkmantle can detach itself from the target by using 5 feet of movement.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 6 (1d6 + 3) bludgeoning damage, and the darkmantle attaches to the target. If the target is Medium or smaller and the darkmantle has advantage on the attack roll, it attaches by engulfing the target's head, and the target is also Blinded and unable to breathe while the darkmantle is attached in this way.\n\nWhile attached to the target, the darkmantle can attack no other creature except the target but has advantage on its attack rolls. The darkmantle's speed also becomes 0, it can't benefit from any bonus to its speed, and it moves with the target.\n\nA creature can detach the darkmantle by making a successful DC 13 Strength check as an action. On its turn, the darkmantle can detach itself from the target by using 5 feet of movement.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Darkness Aura",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "A 15-foot radius of magical darkness extends out from the darkmantle, moves with it, and spreads around corners. The darkness lasts as long as the darkmantle maintains concentration, up to 10 minutes (as if concentrating on a spell). Darkvision can't penetrate this darkness, and no natural light can illuminate it. If any of the darkness overlaps with an area of light created by a spell of 2nd level or lower, the spell creating the light is dispelled.",
+        "plain": "A 15-foot radius of magical darkness extends out from the darkmantle, moves with it, and spreads around corners. The darkness lasts as long as the darkmantle maintains concentration, up to 10 minutes (as if concentrating on a spell). Darkvision can't penetrate this darkness, and no natural light can illuminate it. If any of the darkness overlaps with an area of light created by a spell of 2nd level or lower, the spell creating the light is dispelled.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

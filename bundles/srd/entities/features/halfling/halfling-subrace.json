@@ -1,0 +1,11 @@
+{
+  "id": "feature:halfling/halfling-subrace",
+  "name": "Halfling Subrace",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

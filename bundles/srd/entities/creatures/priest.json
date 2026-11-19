@@ -1,0 +1,77 @@
+{
+  "id": "creature:priest",
+  "name": "Priest",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any",
+  "ac": 13,
+  "acFrom": [
+    "chain shirt"
+  ],
+  "hp": {
+    "average": 27,
+    "formula": "5d8 + 5"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 13,
+    "ability:con": 12,
+    "ability:dex": 10,
+    "ability:int": 13,
+    "ability:str": 10,
+    "ability:wis": 16
+  },
+  "skills": {
+    "skill:medicine": 7,
+    "skill:persuasion": 3,
+    "skill:religion": 5
+  },
+  "passivePerception": 13,
+  "xp": 450,
+  "cr": 2,
+  "languages": [
+    {
+      "text": "any two languages"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Divine Eminence",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "As a bonus action, the priest can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 (3d6) radiant damage to a target on a hit. This benefit lasts until the end of the turn. If the priest expends a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each level above 1st.",
+        "plain": "As a bonus action, the priest can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 (3d6) radiant damage to a target on a hit. This benefit lasts until the end of the turn. If the priest expends a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each level above 1st.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The priest is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). The priest has the following cleric spells prepared:\n\n- Cantrips (at will): Light, Sacred Flame, Thaumaturgy\n- 1st level (4 slots): Cure Wounds, Guiding Bolt, Sanctuary\n- 2nd level (3 slots): Lesser Restoration, Spiritual Weapon\n- 3rd level (2 slots): Dispel Magic, Spirit Guardians",
+        "plain": "The priest is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). The priest has the following cleric spells prepared:\n\n- Cantrips (at will): Light, Sacred Flame, Thaumaturgy\n- 1st level (4 slots): Cure Wounds, Guiding Bolt, Sanctuary\n- 2nd level (3 slots): Lesser Restoration, Spiritual Weapon\n- 3rd level (2 slots): Dispel Magic, Spirit Guardians",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Mace",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +2 to hit, reach 5 ft., one target. _Hit:_ 3 (1d6) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 3 (1d6) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

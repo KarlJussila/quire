@@ -1,0 +1,41 @@
+{
+  "id": "spell:blur",
+  "name": "Blur",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight.",
+    "plain": "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:illusion",
+  "lists": [
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "id": "feature:barbarian/improved-brutal-strike-13@2024",
+  "name": "Level 13: Improved Brutal Strike",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have honed new ways to attack furiously. The following effects are now among your Brutal Strike options.\n\n_**Staggering Blow.**_ The target has Disadvantage on the next saving throw it makes, and it can't make Opportunity Attacks until the start of your next turn.\n\n_**Sundering Blow.**_ Before the start of your next turn, the next attack roll made by another creature against the target gains a +5 bonus to the roll. An attack roll can gain only one Sundering Blow bonus.",
+    "plain": "You have honed new ways to attack furiously. The following effects are now among your Brutal Strike options.\n\nStaggering Blow. The target has Disadvantage on the next saving throw it makes, and it can't make Opportunity Attacks until the start of your next turn.\n\nSundering Blow. Before the start of your next turn, the next attack roll made by another creature against the target gains a +5 bonus to the roll. An attack roll can gain only one Sundering Blow bonus.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "key": "brutal-strike-hit"
+          }
+        }
+      },
+      "set": {
+        "outcomes": {
+          "$where": {
+            "choose": true
+          },
+          "choose": {
+            "from": {
+              "$append": [
+                {
+                  "name": "Staggering Blow",
+                  "of": [
+                    {
+                      "applyState": {
+                        "state": {
+                          "sourceName": "Staggering Blow",
+                          "effects": [
+                            {
+                              "type": "roll-mod",
+                              "mode": "disadvantage",
+                              "when": {
+                                "event": "event:roll-made",
+                                "by": "self",
+                                "match": {
+                                  "roll": "roll:save"
+                                }
+                              }
+                            }
+                          ],
+                          "ends": [
+                            {
+                              "event": "event:roll-resolved",
+                              "by": "self",
+                              "match": {
+                                "roll": "roll:save"
+                              }
+                            }
+                          ]
+                        },
+                        "source": "self"
+                      },
+                      "to": "subject"
+                    },
+                    {
+                      "applyState": {
+                        "state": {
+                          "sourceName": "Staggering Blow",
+                          "effects": [
+                            {
+                              "type": "forbid",
+                              "restriction": [
+                                "restriction:reactions"
+                              ],
+                              "activity": "rule:opportunity-attacks"
+                            }
+                          ],
+                          "ends": [
+                            {
+                              "event": "event:turn-start",
+                              "subject": "source",
+                              "next": true
+                            }
+                          ]
+                        },
+                        "source": "self"
+                      },
+                      "to": "subject"
+                    }
+                  ]
+                },
+                {
+                  "name": "Sundering Blow",
+                  "of": [
+                    {
+                      "applyState": {
+                        "state": {
+                          "sourceName": "Sundering Blow",
+                          "stacks": "no",
+                          "effects": [
+                            {
+                              "type": "change",
+                              "of": "event",
+                              "set": {
+                                "total": {
+                                  "$add": 5
+                                }
+                              },
+                              "when": {
+                                "event": "event:roll-made",
+                                "by": {
+                                  "pool": "any",
+                                  "where": {
+                                    "not": {
+                                      "is": "source"
+                                    }
+                                  }
+                                },
+                                "subject": "self",
+                                "match": {
+                                  "roll": "roll:attack"
+                                }
+                              }
+                            }
+                          ],
+                          "ends": [
+                            {
+                              "event": "event:roll-resolved",
+                              "by": {
+                                "pool": "any",
+                                "where": {
+                                  "not": {
+                                    "is": "source"
+                                  }
+                                }
+                              },
+                              "subject": "self",
+                              "match": {
+                                "roll": "roll:attack"
+                              }
+                            },
+                            {
+                              "event": "event:turn-start",
+                              "subject": "source",
+                              "next": true
+                            }
+                          ]
+                        },
+                        "source": "self"
+                      },
+                      "to": "subject"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "table:size-categories",
+  "name": "Size Categories",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "size",
+      "name": "Size"
+    },
+    {
+      "key": "space",
+      "name": "Space"
+    },
+    {
+      "key": "examples",
+      "name": "Examples"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "size": "Tiny",
+        "space": "2 1/2 by 2 1/2 ft.",
+        "examples": "Imp, sprite"
+      }
+    },
+    {
+      "cells": {
+        "size": "Small",
+        "space": "5 by 5 ft.",
+        "examples": "Giant rat, goblin"
+      }
+    },
+    {
+      "cells": {
+        "size": "Medium",
+        "space": "5 by 5 ft.",
+        "examples": "Orc, werewolf"
+      }
+    },
+    {
+      "cells": {
+        "size": "Large",
+        "space": "10 by 10 ft.",
+        "examples": "Hippogriff, ogre"
+      }
+    },
+    {
+      "cells": {
+        "size": "Huge",
+        "space": "15 by 15 ft.",
+        "examples": "Fire giant, treant"
+      }
+    },
+    {
+      "cells": {
+        "size": "Gargantuan",
+        "space": "20 by 20 ft. or larger",
+        "examples": "Kraken, purple worm"
+      }
+    }
+  ]
+}

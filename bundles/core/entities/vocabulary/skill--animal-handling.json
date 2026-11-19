@@ -1,0 +1,11 @@
+{
+  "id": "skill:animal-handling",
+  "name": "Animal Handling",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:wis"
+}

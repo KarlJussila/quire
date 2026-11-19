@@ -1,0 +1,57 @@
+{
+  "id": "creature:guard",
+  "name": "Guard",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any",
+  "ac": 16,
+  "acFrom": [
+    "chain shirt, shield"
+  ],
+  "hp": {
+    "average": 11,
+    "formula": "2d8 + 2"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 12,
+    "ability:dex": 12,
+    "ability:int": 10,
+    "ability:str": 13,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:perception": 2
+  },
+  "passivePerception": 12,
+  "xp": 25,
+  "cr": 0.125,
+  "languages": [
+    {
+      "text": "any one language (usually Common)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Spear",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Weapon Attack:_ +3 to hit, reach 5 ft. or range 20/60 ft., one target. _Hit:_ 4 (1d6 + 1) piercing damage, or 5 (1d8 + 1) piercing damage if used with two hands to make a melee attack.",
+        "plain": "Melee or Ranged Weapon Attack: +3 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d6 + 1) piercing damage, or 5 (1d8 + 1) piercing damage if used with two hands to make a melee attack.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

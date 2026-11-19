@@ -1,0 +1,27 @@
+{
+  "id": "item:ring-of-swimming",
+  "name": "Ring of Swimming",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have a swimming speed of 40 feet while wearing this ring.",
+    "plain": "You have a swimming speed of 40 feet while wearing this ring.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:uncommon",
+  "effects": [
+    {
+      "type": "speed",
+      "mode": "movement-mode:swim",
+      "speed": 40,
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true
+        }
+      }
+    }
+  ]
+}

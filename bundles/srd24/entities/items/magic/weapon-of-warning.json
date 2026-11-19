@@ -1,0 +1,46 @@
+{
+  "id": "item:weapon-of-warning@2024",
+  "name": "Weapon of Warning",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As long as this weapon is within your reach and you are attuned to it, you and allies within 30 feet of you gain the following benefits.\n\n_**Alarm.**_ The weapon magically awakens each subject who is sleeping naturally when combat begins. This benefit doesn't wake a subject from magically induced sleep.\n\n_**Supernatural Readiness.**_ Each subject has Advantage on its Initiative rolls.",
+    "plain": "As long as this weapon is within your reach and you are attuned to it, you and allies within 30 feet of you gain the following benefits.\n\nAlarm. The weapon magically awakens each subject who is sleeping naturally when combat begins. This benefit doesn't wake a subject from magically induced sleep.\n\nSupernatural Readiness. Each subject has Advantage on its Initiative rolls.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "to": {
+        "pool": "ally",
+        "includeSelf": true,
+        "where": {
+          "within": 30,
+          "of": "self"
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:initiative"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

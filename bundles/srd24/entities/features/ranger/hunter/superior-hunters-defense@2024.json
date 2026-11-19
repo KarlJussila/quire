@@ -1,0 +1,43 @@
+{
+  "id": "feature:ranger/hunter/superior-hunters-defense@2024",
+  "name": "Level 15: Superior Hunter's Defense",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you take damage, you can take a Reaction to give yourself Resistance to that damage and any other damage of the same type until the end of the current turn.",
+    "plain": "When you take damage, you can take a Reaction to give yourself Resistance to that damage and any other damage of the same type until the end of the current turn.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "superior-hunters-defense",
+      "name": "Superior Hunter's Defense",
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 15
+      },
+      "trigger": {
+        "event": "event:damaged",
+        "subject": "self"
+      },
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Gain Resistance to that damage and to any other damage of the same type until the end of the current turn.",
+            "gap": {
+              "category": "state",
+              "name": "resistance to that damage type this turn"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

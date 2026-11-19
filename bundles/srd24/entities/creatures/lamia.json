@@ -1,0 +1,108 @@
+{
+  "id": "creature:lamia@2024",
+  "name": "Lamia",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 13,
+  "hp": {
+    "average": 97,
+    "formula": "13d10 + 26"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 16,
+    "ability:con": 15,
+    "ability:dex": 13,
+    "ability:int": 14,
+    "ability:str": 16,
+    "ability:wis": 15
+  },
+  "skills": {
+    "skill:deception": 7,
+    "skill:insight": 4,
+    "skill:stealth": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 12,
+  "xp": 1100,
+  "proficiencyBonus": 2,
+  "initiative": 1,
+  "habitat": [
+    "Desert"
+  ],
+  "treasure": [
+    "Arcana"
+  ],
+  "cr": 4,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    },
+    {
+      "language": "language:common"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The lamia makes two Claw attacks. It can replace one attack with a use of Corrupting Touch.",
+        "plain": "The lamia makes two Claw attacks. It can replace one attack with a use of Corrupting Touch.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 7 (1d8 + 3) Slashing damage plus 7 (2d6) Psychic damage.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage plus 7 (2d6) Psychic damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Corrupting Touch",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Wisdom Saving Throw:_ DC 13, one creature the lamia can see within 5 feet. _Failure:_ 13 (3d8) Psychic damage, and the target is cursed for 1 hour. Until the curse ends, the target has the Charmed and Poisoned conditions.",
+        "plain": "Wisdom Saving Throw: DC 13, one creature the lamia can see within 5 feet. Failure: 13 (3d8) Psychic damage, and the target is cursed for 1 hour. Until the curse ends, the target has the Charmed and Poisoned conditions.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The lamia casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 13):\n\n- **At Will:** Disguise Self (can appear as a Large or Medium biped), Minor Illusion\n- **1/Day Each:** Geas, Major Image, Scrying",
+        "plain": "The lamia casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 13):\n\n- At Will: Disguise Self (can appear as a Large or Medium biped), Minor Illusion\n- 1/Day Each: Geas, Major Image, Scrying",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Leap",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The lamia jumps up to 30 feet by spending 10 feet of movement.",
+        "plain": "The lamia jumps up to 30 feet by spending 10 feet of movement.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

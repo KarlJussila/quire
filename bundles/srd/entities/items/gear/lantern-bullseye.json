@@ -1,0 +1,18 @@
+{
+  "id": "item:lantern-bullseye",
+  "name": "Lantern, Bullseye",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.",
+    "plain": "A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 2.0
+}

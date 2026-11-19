@@ -1,0 +1,48 @@
+{
+  "id": "state:warlock/investment-of-the-chain-master-fly",
+  "name": "Investment of the Chain Master: Fly",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "The familiar gains a flying speed of 40 feet and the shared save-DC adjustment from Investment of the Chain Master."
+  },
+  "ends": [
+    {
+      "event": "event:state-ended",
+      "subject": "self",
+      "match": {
+        "state": "state:familiar"
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "speed",
+      "mode": "movement-mode:fly",
+      "speed": 40
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "save": true
+            }
+          }
+        }
+      },
+      "set": {
+        "delivery": {
+          "save": {
+            "dc": {
+              "$replace": "source.spellcasting.class:warlock.dc"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

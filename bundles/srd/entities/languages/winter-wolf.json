@@ -1,0 +1,12 @@
+{
+  "id": "language:winter-wolf",
+  "name": "Winter Wolf",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- **Languages** Common, Giant, Winter Wolf",
+    "plain": "- Languages Common, Giant, Winter Wolf",
+    "wording": "srd"
+  }
+}

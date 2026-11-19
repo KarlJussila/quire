@@ -1,0 +1,64 @@
+{
+  "id": "creature:mule",
+  "name": "Mule",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 10,
+  "hp": {
+    "average": 11,
+    "formula": "2d8 + 2"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 13,
+    "ability:dex": 10,
+    "ability:int": 2,
+    "ability:str": 14,
+    "ability:wis": 10
+  },
+  "passivePerception": 10,
+  "xp": 25,
+  "cr": 0.125,
+  "blocks": [
+    {
+      "name": "Beast of Burden",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The mule is considered to be a Large animal for the purpose of determining its carrying capacity.",
+        "plain": "The mule is considered to be a Large animal for the purpose of determining its carrying capacity.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sure-Footed",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The mule has advantage on Strength and Dexterity saving throws made against effects that would knock it Prone.",
+        "plain": "The mule has advantage on Strength and Dexterity saving throws made against effects that would knock it Prone.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hooves",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +2 to hit, reach 5 ft., one target. _Hit:_ 4 (1d4 + 2) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

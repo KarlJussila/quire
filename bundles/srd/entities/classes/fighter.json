@@ -1,0 +1,76 @@
+{
+  "id": "class:fighter",
+  "name": "Fighter",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a fighter, you gain the following class features.",
+    "plain": "As a fighter, you gain the following class features.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d10",
+  "multiclass": {
+    "requires": {
+      "any": [
+        {
+          "compare": "abilities.ability:str",
+          "atLeast": 13
+        },
+        {
+          "compare": "abilities.ability:dex",
+          "atLeast": 13
+        }
+      ]
+    },
+    "features": [
+      "feature:fighter/multiclass-proficiencies"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:fighter/fighting-style",
+      "feature:fighter/second-wind"
+    ],
+    "12": [
+      "feature:ability-score-improvement"
+    ],
+    "14": [
+      "feature:ability-score-improvement"
+    ],
+    "16": [
+      "feature:ability-score-improvement"
+    ],
+    "19": [
+      "feature:ability-score-improvement"
+    ],
+    "2": [
+      "feature:fighter/action-surge"
+    ],
+    "3": [
+      "feature:fighter/martial-archetype"
+    ],
+    "4": [
+      "feature:ability-score-improvement"
+    ],
+    "5": [
+      "feature:fighter/extra-attack"
+    ],
+    "6": [
+      "feature:ability-score-improvement"
+    ],
+    "8": [
+      "feature:ability-score-improvement"
+    ],
+    "9": [
+      "feature:fighter/indomitable"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Martial Archetype"
+  },
+  "firstClass": [
+    "feature:fighter/proficiencies"
+  ]
+}

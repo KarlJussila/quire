@@ -1,0 +1,7 @@
+{
+  "id": "group:magic",
+  "name": "Magic",
+  "source": {
+    "book": "core"
+  }
+}

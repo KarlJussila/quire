@@ -1,0 +1,26 @@
+{
+  "id": "item:leather",
+  "name": "Leather",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "The breastplate and shoulder protectors of this armor are made of leather that has been stiffened by being boiled in oil. The rest of the armor is made of softer and more flexible materials.",
+    "plain": "The breastplate and shoulder protectors of this armor are made of leather that has been stiffened by being boiled in oil. The rest of the armor is made of softer and more flexible materials.",
+    "wording": "srd"
+  },
+  "group": "group:light-armor",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 10.0,
+  "armor": {
+    "ac": {
+      "sum": [
+        11,
+        "modifiers.ability:dex"
+      ]
+    }
+  }
+}

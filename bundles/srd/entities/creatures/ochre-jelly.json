@@ -1,0 +1,108 @@
+{
+  "id": "creature:ochre-jelly",
+  "name": "Ochre Jelly",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:ooze",
+  "alignment": "alignment:unaligned",
+  "ac": 8,
+  "hp": {
+    "average": 45,
+    "formula": "6d10 + 12"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:climb": {
+      "speed": 10
+    }
+  },
+  "abilities": {
+    "ability:cha": 1,
+    "ability:con": 14,
+    "ability:dex": 6,
+    "ability:int": 2,
+    "ability:str": 15,
+    "ability:wis": 6
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60,
+      "blindBeyond": true
+    }
+  },
+  "passivePerception": 8,
+  "xp": 450,
+  "cr": 2,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:lightning",
+        "damage-type:slashing"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:acid"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:blinded",
+        "condition:charmed",
+        "condition:deafened",
+        "condition:exhaustion",
+        "condition:frightened",
+        "condition:prone"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Amorphous",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The jelly can move through a space as narrow as 1 inch wide without squeezing.",
+        "plain": "The jelly can move through a space as narrow as 1 inch wide without squeezing.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spider Climb",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The jelly can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+        "plain": "The jelly can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pseudopod",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 9 (2d6 + 2) bludgeoning damage plus 3 (1d6) acid damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage plus 3 (1d6) acid damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Split",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "When a jelly that is Medium or larger is subjected to lightning or slashing damage, it splits into two new jellies if it has at least 10 hit points. Each new jelly has hit points equal to half the original jelly's, rounded down. New jellies are one size smaller than the original jelly.",
+        "plain": "When a jelly that is Medium or larger is subjected to lightning or slashing damage, it splits into two new jellies if it has at least 10 hit points. Each new jelly has hit points equal to half the original jelly's, rounded down. New jellies are one size smaller than the original jelly.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

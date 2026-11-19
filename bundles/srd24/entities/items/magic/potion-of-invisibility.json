@@ -1,0 +1,14 @@
+{
+  "id": "item:potion-of-invisibility@2024",
+  "name": "Potion of Invisibility",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This potion's container looks empty but feels as though it holds liquid. When you drink the potion, you have the Invisible condition for 1 hour. The effect ends early if you make an attack roll, deal damage, or cast a spell.",
+    "plain": "This potion's container looks empty but feels as though it holds liquid. When you drink the potion, you have the Invisible condition for 1 hour. The effect ends early if you make an attack roll, deal damage, or cast a spell.",
+    "wording": "srd"
+  },
+  "group": "group:potion",
+  "rarity": "rarity:rare"
+}

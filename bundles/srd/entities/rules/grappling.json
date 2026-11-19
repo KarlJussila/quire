@@ -1,0 +1,104 @@
+{
+  "id": "rule:grappling",
+  "name": "Grappling",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you want to grab a creature or wrestle with it, you can use the Attack action to make a special melee attack, a grapple. If you're able to make multiple attacks with the Attack action, this attack replaces one of them.\n\nThe target of your grapple must be no more than one size larger than you and must be within your reach. Using at least one free hand, you try to seize the target by making a grapple check instead of an attack roll: a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check (the target chooses the ability to use). If you succeed, you subject the target to the Grappled condition (see appendix PH-A). The condition specifies the things that end it, and you can release the target whenever you like (no action required).\n\n_**Escaping a Grapple.**_ A Grappled creature can use its action to escape. To do so, it must succeed on a Strength (Athletics) or Dexterity (Acrobatics) check contested by your Strength (Athletics) check.\n\n_**Moving a Grappled Creature.**_ When you move, you can drag or carry the Grappled creature with you, but your speed is halved, unless the creature is two or more sizes smaller than you.",
+    "plain": "When you want to grab a creature or wrestle with it, you can use the Attack action to make a special melee attack, a grapple. If you're able to make multiple attacks with the Attack action, this attack replaces one of them.\n\nThe target of your grapple must be no more than one size larger than you and must be within your reach. Using at least one free hand, you try to seize the target by making a grapple check instead of an attack roll: a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check (the target chooses the ability to use). If you succeed, you subject the target to the Grappled condition (see appendix PH-A). The condition specifies the things that end it, and you can release the target whenever you like (no action required).\n\n_Escaping a Grapple._ A Grappled creature can use its action to escape. To do so, it must succeed on a Strength (Athletics) or Dexterity (Acrobatics) check contested by your Strength (Athletics) check.\n\n_Moving a Grappled Creature._ When you move, you can drag or carry the Grappled creature with you, but your speed is halved, unless the creature is two or more sizes smaller than you.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "grapple",
+      "standalone": false,
+      "when": {
+        "prose": {
+          "text": "free hand",
+          "gap": {
+            "category": "test",
+            "name": "free-hand"
+          }
+        }
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "match": {
+                  "size": {
+                    "atMost": {
+                      "of": "self",
+                      "steps": 1
+                    }
+                  }
+                }
+              },
+              {
+                "within": "self.reach"
+              }
+            ]
+          }
+        }
+      },
+      "delivery": {
+        "contest": {
+          "self": {
+            "ability": "ability:str",
+            "skill": "skill:athletics"
+          },
+          "target": {
+            "choose": {
+              "key": "check",
+              "name": "Which Check",
+              "from": [
+                {
+                  "ability": "ability:str",
+                  "skill": "skill:athletics"
+                },
+                {
+                  "ability": "ability:dex",
+                  "skill": "skill:acrobatics"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:grappled"
+          }
+        }
+      ]
+    },
+    {
+      "key": "release",
+      "target": {
+        "who": {
+          "pool": "any",
+          "where": {
+            "has": "condition:grappled",
+            "source": "self"
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "endState": {
+            "state": "condition:grappled"
+          }
+        }
+      ]
+    }
+  ]
+}

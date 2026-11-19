@@ -1,0 +1,75 @@
+{
+  "id": "creature:merfolk-skirmisher@2024",
+  "name": "Merfolk Skirmisher",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:elemental",
+  "alignment": "alignment:neutral",
+  "ac": 11,
+  "hp": {
+    "average": 11,
+    "formula": "2d8 + 2"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 12,
+    "ability:con": 12,
+    "ability:dex": 13,
+    "ability:int": 11,
+    "ability:str": 10,
+    "ability:wis": 14
+  },
+  "passivePerception": 12,
+  "xp": 25,
+  "proficiencyBonus": 2,
+  "initiative": 1,
+  "habitat": [
+    "Coastal",
+    "Underwater"
+  ],
+  "treasure": [
+    "Individual"
+  ],
+  "cr": 0.125,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "text": "Primordial (Aquan)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The merfolk can breathe air and water.",
+        "plain": "The merfolk can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ocean Spear",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +2, reach 5 ft. or range 20/60 ft. _Hit:_ 3 (1d6) Piercing damage plus 2 (1d4) Cold damage. If the target is a creature, its Speed decreases by 10 feet until the end of its next turn. _Hit or Miss:_ The spear magically returns to the merfolk's hand immediately after a ranged attack.",
+        "plain": "Melee or Ranged Attack Roll: +2, reach 5 ft. or range 20/60 ft. Hit: 3 (1d6) Piercing damage plus 2 (1d4) Cold damage. If the target is a creature, its Speed decreases by 10 feet until the end of its next turn. Hit or Miss: The spear magically returns to the merfolk's hand immediately after a ranged attack.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

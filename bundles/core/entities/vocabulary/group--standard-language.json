@@ -1,0 +1,10 @@
+{
+  "id": "group:standard-language",
+  "name": "Standard Language",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A language the 2014 rules list as standard."
+  }
+}

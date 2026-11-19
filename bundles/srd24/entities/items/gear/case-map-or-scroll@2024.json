@@ -1,0 +1,18 @@
+{
+  "id": "item:case-map-or-scroll@2024",
+  "name": "Case, Map or Scroll",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 1 GP\n\nA Map or Scroll Case holds up to 10 sheets of paper or 5 sheets of parchment.",
+    "plain": "Cost: 1 GP\n\nA Map or Scroll Case holds up to 10 sheets of paper or 5 sheets of parchment.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:gp"
+  },
+  "weight": 1.0
+}

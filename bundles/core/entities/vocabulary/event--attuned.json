@@ -1,0 +1,14 @@
+{
+  "id": "event:attuned",
+  "name": "Attuned",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "The subject finishes attuning to the item identified in the trigger’s item field."
+  },
+  "payload": [
+    "item"
+  ],
+  "emittedBy": "engine"
+}

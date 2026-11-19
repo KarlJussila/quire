@@ -1,0 +1,21 @@
+{
+  "id": "state:concentrating@2024",
+  "name": "Concentrating",
+  "source": {
+    "book": "core"
+  },
+  "stacks": "no",
+  "activities": [
+    {
+      "key": "end-concentration",
+      "outcomes": [
+        {
+          "endState": {
+            "state": "state:concentrating"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

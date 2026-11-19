@@ -1,0 +1,34 @@
+{
+  "id": "rule:search@2024",
+  "name": "Search",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you take the Search action, you make a Wisdom check to discern something that isn't obvious. The table suggests which skills are applicable when you take this action, depending on what you're trying to detect.\n\n| Skill      | Thing to Detect                      |\n|------------|--------------------------------------|\n| Insight    | Creature's state of mind             |\n| Medicine   | Creature's ailment or cause of death |\n| Perception | Concealed creature or object         |\n| Survival   | Tracks or food                       |",
+    "plain": "When you take the Search action, you make a Wisdom check to discern something that isn't obvious. The table suggests which skills are applicable when you take this action, depending on what you're trying to detect.\n\nSkill\tThing to Detect\nInsight\tCreature's state of mind\nMedicine\tCreature's ailment or cause of death\nPerception\tConcealed creature or object\nSurvival\tTracks or food",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "search",
+      "action": "action:search",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Make a Wisdom check: Insight, Medicine, Perception, or Survival, by what you look for."
+          }
+        }
+      ]
+    }
+  ]
+}

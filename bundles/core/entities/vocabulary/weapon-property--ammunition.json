@@ -1,0 +1,7 @@
+{
+  "id": "weapon-property:ammunition",
+  "name": "Ammunition",
+  "source": {
+    "book": "core"
+  }
+}

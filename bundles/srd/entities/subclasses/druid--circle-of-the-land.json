@@ -1,0 +1,31 @@
+{
+  "id": "subclass:druid/circle-of-the-land",
+  "name": "Circle of the Land",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites.",
+    "plain": "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites.",
+    "wording": "srd"
+  },
+  "class": "class:druid",
+  "levels": {
+    "10": [
+      "feature:druid/circle-of-the-land/natures-ward"
+    ],
+    "14": [
+      "feature:druid/circle-of-the-land/natures-sanctuary"
+    ],
+    "2": [
+      "feature:druid/circle-of-the-land/bonus-cantrip",
+      "feature:druid/circle-of-the-land/natural-recovery"
+    ],
+    "3": [
+      "feature:druid/circle-of-the-land/circle-spells"
+    ],
+    "6": [
+      "feature:druid/circle-of-the-land/lands-stride"
+    ]
+  }
+}

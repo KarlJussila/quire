@@ -1,0 +1,79 @@
+{
+  "id": "feature:cleric/life-domain/domain-spells",
+  "name": "Domain Spells",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "##### Life Domain Spells\n\n| Cleric Level | Spells |\n|---|---|\n| 1st | bless, cure wounds |\n| 3rd | lesser restoration, spiritual weapon |\n| 5th | beacon of hope, revivify |\n| 7th | death ward, guardian of faith |\n| 9th | mass cure wounds, raise dead |",
+    "plain": "Life Domain Spells\n\nCleric Level\tSpells\n\n1st\tbless, cure wounds\n\n3rd\tlesser restoration, spiritual weapon\n\n5th\tbeacon of hope, revivify\n\n7th\tdeath ward, guardian of faith\n\n9th\tmass cure wounds, raise dead",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:cleric",
+        "atLeast": 1
+      },
+      "spells": [
+        "spell:bless",
+        "spell:cure-wounds"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:cleric",
+        "atLeast": 3
+      },
+      "spells": [
+        "spell:lesser-restoration",
+        "spell:spiritual-weapon"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:cleric",
+        "atLeast": 5
+      },
+      "spells": [
+        "spell:beacon-of-hope",
+        "spell:revivify"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:cleric",
+        "atLeast": 7
+      },
+      "spells": [
+        "spell:death-ward",
+        "spell:guardian-of-faith"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:cleric",
+        "atLeast": 9
+      },
+      "spells": [
+        "spell:mass-cure-wounds",
+        "spell:raise-dead"
+      ],
+      "how": "prepared",
+      "counts": false
+    }
+  ]
+}

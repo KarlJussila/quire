@@ -1,0 +1,52 @@
+{
+  "id": "feature:goliath/clouds-jaunt-cloud-giant@2024",
+  "name": "Cloud’s Jaunt (Cloud Giant)",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see.",
+    "plain": "As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "clouds-jaunt",
+      "name": "Cloud's Jaunt",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "move": {
+            "kind": "teleport",
+            "distance": 30,
+            "where": {
+              "perceived": "sight",
+              "by": "self"
+            }
+          },
+          "to": "self"
+        }
+      ],
+      "uses": {
+        "max": "proficiencyBonus",
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": []
+}

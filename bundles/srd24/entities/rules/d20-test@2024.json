@@ -1,0 +1,18 @@
+{
+  "id": "rule:d20-test@2024",
+  "name": "D20 Test",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "D20 Tests encompass the three main d20 rolls of the game: ability checks, attack rolls, and saving throws. If something in the game affects D20 Tests, it affects all three of these rolls. The GM determines whether a D20 Test is warranted in a given circumstance. _See also_ \"Playing the Game\" (\"D20 Tests\").",
+    "plain": "D20 Tests encompass the three main d20 rolls of the game: ability checks, attack rolls, and saving throws. If something in the game affects D20 Tests, it affects all three of these rolls. The GM determines whether a D20 Test is warranted in a given circumstance. See also \"Playing the Game\" (\"D20 Tests\").",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

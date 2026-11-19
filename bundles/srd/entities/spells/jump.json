@@ -1,0 +1,45 @@
+{
+  "id": "spell:jump",
+  "name": "Jump",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You touch a creature. The creature's jump distance is tripled until the spell ends.",
+    "plain": "You touch a creature. The creature's jump distance is tripled until the spell ends.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:druid",
+    "class:ranger",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a grasshopper’s hind leg"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute"
+      }
+    }
+  ]
+}

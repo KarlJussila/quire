@@ -1,0 +1,18 @@
+{
+  "id": "item:chest@2024",
+  "name": "Chest",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 5 GP\n\nA Chest holds up to 12 cubic feet of contents.",
+    "plain": "Cost: 5 GP\n\nA Chest holds up to 12 cubic feet of contents.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:gp"
+  },
+  "weight": 25.0
+}

@@ -1,0 +1,65 @@
+{
+  "id": "feature:poison-cost-1d6/2@2024",
+  "name": "Poison (Cost: 1d6)",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You add a toxin to your strike, forcing the target to make a Constitution saving throw. On a failed save, the target has the Poisoned condition for 1 minute. At the end of each of its turns, the Poisoned target repeats the save, ending the effect on itself on a success.",
+    "plain": "You add a toxin to your strike, forcing the target to make a Constitution saving throw. On a failed save, the target has the Poisoned condition for 1 minute. At the end of each of its turns, the Poisoned target repeats the save, ending the effect on itself on a success.",
+    "wording": "srd"
+  },
+  "values": {
+    "die-cost": 1
+  },
+  "activities": [
+    {
+      "key": "cunning-strike-poison",
+      "standalone": false,
+      "outcomes": [
+        {
+          "then": {
+            "target": {
+              "who": "subject"
+            },
+            "delivery": {
+              "save": {
+                "ability": "ability:con",
+                "dc": {
+                  "sum": [
+                    8,
+                    "modifiers.ability:dex",
+                    "proficiencyBonus"
+                  ]
+                }
+              }
+            },
+            "outcomes": [
+              {
+                "applyState": {
+                  "state": "condition:poisoned",
+                  "duration": {
+                    "amount": 1,
+                    "unit": "minute"
+                  },
+                  "repeatSave": {
+                    "on": {
+                      "event": "event:turn-end",
+                      "subject": "self"
+                    }
+                  },
+                  "source": "self"
+                },
+                "to": "target"
+              }
+            ]
+          }
+        }
+      ],
+      "when": {
+        "has": "item:poisoners-kit"
+      }
+    }
+  ],
+  "gaps": []
+}

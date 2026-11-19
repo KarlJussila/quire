@@ -1,0 +1,66 @@
+{
+  "id": "feature:knock-out-cost-6d6@2024",
+  "name": "Knock Out (Cost: 6d6)",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The target must succeed on a Constitution saving throw, or it has the Unconscious condition for 1 minute or until it takes any damage. The Unconscious target repeats the save at the end of each of its turns, ending the effect on itself on a success.",
+    "plain": "The target must succeed on a Constitution saving throw, or it has the Unconscious condition for 1 minute or until it takes any damage. The Unconscious target repeats the save at the end of each of its turns, ending the effect on itself on a success.",
+    "wording": "srd"
+  },
+  "values": {
+    "die-cost": 6
+  },
+  "activities": [
+    {
+      "key": "cunning-strike-knock-out",
+      "standalone": false,
+      "outcomes": [
+        {
+          "then": {
+            "target": {
+              "who": "subject"
+            },
+            "delivery": {
+              "save": {
+                "ability": "ability:con",
+                "dc": {
+                  "sum": [
+                    8,
+                    "modifiers.ability:dex",
+                    "proficiencyBonus"
+                  ]
+                }
+              }
+            },
+            "outcomes": [
+              {
+                "applyState": {
+                  "state": "condition:unconscious",
+                  "duration": {
+                    "amount": 1,
+                    "unit": "minute"
+                  },
+                  "ends": [
+                    {
+                      "event": "event:damaged",
+                      "subject": "self"
+                    }
+                  ],
+                  "repeatSave": {
+                    "on": {
+                      "event": "event:turn-end",
+                      "subject": "self"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

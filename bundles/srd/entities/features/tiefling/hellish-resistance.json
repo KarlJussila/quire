@@ -1,0 +1,21 @@
+{
+  "id": "feature:tiefling/hellish-resistance",
+  "name": "Hellish Resistance",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have resistance to fire damage.",
+    "plain": "You have resistance to fire damage.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "gaps": []
+}

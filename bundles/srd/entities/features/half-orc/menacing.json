@@ -1,0 +1,21 @@
+{
+  "id": "feature:half-orc/menacing",
+  "name": "Menacing",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You gain proficiency in the Intimidation skill.",
+    "plain": "You gain proficiency in the Intimidation skill.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "skill:intimidation"
+      ]
+    }
+  ],
+  "gaps": []
+}

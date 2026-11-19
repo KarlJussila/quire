@@ -1,0 +1,73 @@
+{
+  "id": "creature:berserker@2024",
+  "name": "Berserker",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 13,
+  "hp": {
+    "average": 67,
+    "formula": "9d8 + 27"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 9,
+    "ability:con": 17,
+    "ability:dex": 12,
+    "ability:int": 9,
+    "ability:str": 16,
+    "ability:wis": 11
+  },
+  "passivePerception": 10,
+  "xp": 450,
+  "proficiencyBonus": 2,
+  "initiative": 1,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Armaments",
+    "Individual"
+  ],
+  "gear": [
+    "Greataxe",
+    "Hide Armor"
+  ],
+  "cr": 2,
+  "languages": [
+    {
+      "language": "language:common"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Bloodied Frenzy",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While Bloodied, the berserker has Advantage on attack rolls and saving throws.",
+        "plain": "While Bloodied, the berserker has Advantage on attack rolls and saving throws.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Greataxe",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 9 (1d12 + 3) Slashing damage.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 9 (1d12 + 3) Slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

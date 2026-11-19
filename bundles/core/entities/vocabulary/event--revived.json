@@ -1,0 +1,7 @@
+{
+  "id": "event:revived",
+  "name": "Revived",
+  "source": {
+    "book": "core"
+  }
+}

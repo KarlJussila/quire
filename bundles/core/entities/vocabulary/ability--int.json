@@ -1,0 +1,12 @@
+{
+  "id": "ability:int",
+  "name": "Intelligence",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "abbreviation": "Int",
+  "order": 4
+}

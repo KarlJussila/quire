@@ -1,0 +1,13 @@
+{
+  "id": "area-shape:circle",
+  "name": "Circle",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A circular area on a surface, measured by its radius from the point of impact."
+  },
+  "dimensions": [
+    "size"
+  ]
+}

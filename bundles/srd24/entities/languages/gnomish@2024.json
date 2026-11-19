@@ -1,0 +1,13 @@
+{
+  "id": "language:gnomish@2024",
+  "name": "Gnomish",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A standard language, widespread in the setting.",
+    "plain": "A standard language, widespread in the setting.",
+    "wording": "srd"
+  },
+  "group": "group:standard-language"
+}

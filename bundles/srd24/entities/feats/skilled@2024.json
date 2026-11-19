@@ -1,0 +1,39 @@
+{
+  "id": "feat:skilled@2024",
+  "name": "Skilled",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain proficiency in any combination of three skills or tools of your choice.\n\n_**Repeatable.**_ You can take this feat more than once.",
+    "plain": "You gain proficiency in any combination of three skills or tools of your choice.\n\nRepeatable. You can take this feat more than once.",
+    "wording": "srd"
+  },
+  "repeatable": true,
+  "group": "group:origin",
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "proficiencies",
+            "name": "Skills or Tools",
+            "count": 3,
+            "from": [
+              {
+                "kind": "skill"
+              },
+              {
+                "kind": "item",
+                "where": {
+                  "group": "group:tools"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

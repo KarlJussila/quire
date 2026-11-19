@@ -1,0 +1,43 @@
+{
+  "id": "table:sentient-magic-items/communication@2024",
+  "name": "Communication",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "communication",
+      "name": "Communication"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "communication": "The item communicates by transmitting emotion to the creature carrying or wielding it."
+      },
+      "range": [
+        1,
+        6
+      ]
+    },
+    {
+      "cells": {
+        "communication": "The item speaks one or more languages."
+      },
+      "range": [
+        7,
+        9
+      ]
+    },
+    {
+      "cells": {
+        "communication": "The item speaks one or more languages. In addition, the item can communicate telepathically with any creature that carries or wields it."
+      },
+      "range": [
+        10,
+        10
+      ]
+    }
+  ],
+  "dice": "d10"
+}

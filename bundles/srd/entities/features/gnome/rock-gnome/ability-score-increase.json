@@ -1,0 +1,24 @@
+{
+  "id": "feature:gnome/rock-gnome/ability-score-increase",
+  "name": "Ability Score Increase",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Your Constitution score increases by 1.",
+    "plain": "Your Constitution score increases by 1.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:con": {
+            "$add": 1
+          }
+        }
+      }
+    }
+  ]
+}

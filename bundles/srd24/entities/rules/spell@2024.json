@@ -1,0 +1,18 @@
+{
+  "id": "rule:spell@2024",
+  "name": "Spell",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A spell is a magical effect that has the characteristics described in \"Spells.\"",
+    "plain": "A spell is a magical effect that has the characteristics described in \"Spells.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

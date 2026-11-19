@@ -1,0 +1,7 @@
+{
+  "id": "source-type:spell",
+  "name": "Spell",
+  "source": {
+    "book": "core"
+  }
+}

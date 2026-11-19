@@ -1,0 +1,8 @@
+{
+  "id": "roll:contest",
+  "name": "Contest",
+  "source": {
+    "book": "core"
+  },
+  "isA": "roll:check"
+}

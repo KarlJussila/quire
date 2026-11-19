@@ -1,0 +1,18 @@
+{
+  "id": "item:saddle-pack",
+  "name": "Saddle, Pack",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.",
+    "plain": "A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:gp"
+  },
+  "weight": 15.0
+}

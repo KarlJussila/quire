@@ -1,0 +1,72 @@
+{
+  "id": "feature:druid/proficiencies",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Armor: Light armor, medium armor, shields (druids will not wear armor or use shields made of metal)\nWeapons: Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears\nTools: Herbalism kit\nSaving Throws: Intelligence, Wisdom\nSkills: Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:int",
+        "ability:wis"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor",
+        "group:medium-armor",
+        "group:shield"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "item:club",
+        "item:dagger",
+        "item:dart",
+        "item:javelin",
+        "item:mace",
+        "item:quarterstaff",
+        "item:scimitar",
+        "item:sickle",
+        "item:sling",
+        "item:spear"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "item:herbalism-kit"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              "skill:arcana",
+              "skill:animal-handling",
+              "skill:insight",
+              "skill:medicine",
+              "skill:nature",
+              "skill:perception",
+              "skill:religion",
+              "skill:survival"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

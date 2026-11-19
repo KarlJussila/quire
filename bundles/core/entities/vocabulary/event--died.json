@@ -1,0 +1,7 @@
+{
+  "id": "event:died",
+  "name": "Died",
+  "source": {
+    "book": "core"
+  }
+}

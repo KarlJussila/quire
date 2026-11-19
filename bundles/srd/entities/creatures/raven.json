@@ -1,0 +1,61 @@
+{
+  "id": "creature:raven",
+  "name": "Raven",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "hp": {
+    "average": 1,
+    "formula": "1d4 - 1"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:fly": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 8,
+    "ability:dex": 14,
+    "ability:int": 2,
+    "ability:str": 2,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 3
+  },
+  "passivePerception": 13,
+  "xp": 10,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Mimicry",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The raven can mimic simple sounds it has heard, such as a person whispering, a baby crying, or an animal chittering. A creature that hears the sounds can tell they are imitations with a successful DC 10 Wisdom (Insight) check.",
+        "plain": "The raven can mimic simple sounds it has heard, such as a person whispering, a baby crying, or an animal chittering. A creature that hears the sounds can tell they are imitations with a successful DC 10 Wisdom (Insight) check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Beak",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 1 piercing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 1 piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

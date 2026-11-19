@@ -1,0 +1,16 @@
+{
+  "id": "rule:advantage@2024",
+  "name": "Advantage",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you have Advantage on a D20 Test, roll two d20s, and use the higher roll. A roll can't be affected by more than one Advantage, and Advantage and Disadvantage on the same roll cancel each other. _See also_ \"Playing the Game\" (\"D20 Tests\").",
+    "plain": "If you have Advantage on a D20 Test, roll two d20s, and use the higher roll. A roll can't be affected by more than one Advantage, and Advantage and Disadvantage on the same roll cancel each other. _See also_ \"Playing the Game\" (\"D20 Tests\").",
+    "wording": "srd"
+  },
+  "group": "group:ability-checks",
+  "appliesTo": {
+    "pool": "any"
+  }
+}

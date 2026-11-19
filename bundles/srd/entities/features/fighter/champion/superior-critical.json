@@ -1,0 +1,39 @@
+{
+  "id": "feature:fighter/champion/superior-critical",
+  "name": "Superior Critical",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 15th level, your weapon attacks score a critical hit on a roll of 18-20.",
+    "plain": "Starting at 15th level, your weapon attacks score a critical hit on a roll of 18-20.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "attack-mechanics",
+      "name": "weapon attacks score critical hits on rolls of 18 through 20"
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "criticalMinimum": {
+          "$atMost": 18
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "via": "weapon"
+          }
+        }
+      }
+    }
+  ]
+}

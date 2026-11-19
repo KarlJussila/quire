@@ -1,0 +1,67 @@
+{
+  "id": "rule:attack",
+  "name": "Attack",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "The most common action to take in combat is the Attack action, whether you are swinging a sword, firing an arrow from a bow, or brawling with your fists.\n\nWith this action, you make one melee or ranged attack. See the \"Making an Attack\" section for the rules that govern attacks.\n\nCertain features, such as the Extra Attack feature of the fighter, allow you to make more than one attack with this action.",
+    "plain": "The most common action to take in combat is the Attack action, whether you are swinging a sword, firing an arrow from a bow, or brawling with your fists.\n\nWith this action, you make one melee or ranged attack. See the \"Making an Attack\" section for the rules that govern attacks.\n\nCertain features, such as the Extra Attack feature of the fighter, allow you to make more than one attack with this action.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "attack",
+      "action": "action:attack",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "any": [
+                    {
+                      "match": {
+                        "delivery": {
+                          "attack": {
+                            "via": "weapon"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "match": {
+                        "delivery": {
+                          "attack": {
+                            "via": "unarmed"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "activity": "rule:grappling"
+                    },
+                    {
+                      "activity": "rule:shoving"
+                    }
+                  ]
+                }
+              },
+              "times": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

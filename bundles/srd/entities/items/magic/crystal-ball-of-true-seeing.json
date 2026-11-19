@@ -1,0 +1,16 @@
+{
+  "id": "item:crystal-ball-of-true-seeing",
+  "name": "Crystal Ball of True Seeing",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Wondrous item, very rare or legendary (requires attunement)_\n\nThe typical _Crystal Ball_, a very rare item, is about 6 inches in diameter. While touching it, you can cast the Scrying spell (save DC 17) with it.\n\nWhile scrying with the crystal ball, you have truesight with a radius of 120 feet centered on the spell's sensor.",
+    "plain": "Wondrous item, very rare or legendary (requires attunement)\n\nThe typical Crystal Ball, a very rare item, is about 6 inches in diameter. While touching it, you can cast the Scrying spell (save DC 17) with it.\n\nWhile scrying with the crystal ball, you have truesight with a radius of 120 feet centered on the spell's sensor.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:legendary",
+  "attunement": true,
+  "weight": 0.0
+}

@@ -1,0 +1,61 @@
+{
+  "id": "table:object-armor-class",
+  "name": "Object Armor Class",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "substance",
+      "name": "Substance"
+    },
+    {
+      "key": "ac",
+      "name": "AC"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "substance": "Cloth, paper, rope",
+        "ac": "11"
+      }
+    },
+    {
+      "cells": {
+        "substance": "Crystal, glass, ice",
+        "ac": "13"
+      }
+    },
+    {
+      "cells": {
+        "substance": "Wood, bone",
+        "ac": "15"
+      }
+    },
+    {
+      "cells": {
+        "substance": "Stone",
+        "ac": "17"
+      }
+    },
+    {
+      "cells": {
+        "substance": "Iron, steel",
+        "ac": "19"
+      }
+    },
+    {
+      "cells": {
+        "substance": "Mithral",
+        "ac": "21"
+      }
+    },
+    {
+      "cells": {
+        "substance": "Adamantine",
+        "ac": "23"
+      }
+    }
+  ]
+}

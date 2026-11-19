@@ -1,0 +1,117 @@
+{
+  "id": "item:scimitar-of-speed@2024",
+  "name": "Scimitar of Speed",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a +2 bonus to attack rolls and damage rolls made with this magic weapon. In addition, you can make one attack with it as a Bonus Action on each of your turns.",
+    "plain": "You gain a +2 bonus to attack rolls and damage rolls made with this magic weapon. In addition, you can make one attack with it as a Bonus Action on each of your turns.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:very-rare",
+  "attunement": true,
+  "base": "item:scimitar",
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "item": "this"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage",
+              "attack": {
+                "item": "this"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "speed-attack",
+      "name": "Speed Attack",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "held": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "match": {
+                    "delivery": {
+                      "attack": {
+                        "via": "weapon",
+                        "item": "this"
+                      }
+                    }
+                  }
+                }
+              },
+              "times": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

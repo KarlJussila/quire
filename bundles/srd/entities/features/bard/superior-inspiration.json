@@ -1,0 +1,41 @@
+{
+  "id": "feature:bard/superior-inspiration",
+  "name": "Superior Inspiration",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 20th level, when you roll initiative and have no uses of Bardic Inspiration left, you regain one use.",
+    "plain": "At 20th level, when you roll initiative and have no uses of Bardic Inspiration left, you regain one use.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:roll-made",
+          "by": "self",
+          "match": {
+            "roll": "roll:initiative"
+          },
+          "when": {
+            "compare": "pools.bardic-inspiration.current",
+            "atMost": 0
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "pool": {
+              "resource": "bardic-inspiration",
+              "add": 1
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

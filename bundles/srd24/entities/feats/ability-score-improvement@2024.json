@@ -1,0 +1,44 @@
+{
+  "id": "feat:ability-score-improvement@2024",
+  "name": "Ability Score Improvement",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Increase one ability score of your choice by 2, or increase two ability scores of your choice by 1. This feat can't increase an ability score above 20.\n\n_**Repeatable.**_ You can take this feat more than once.",
+    "plain": "Increase one ability score of your choice by 2, or increase two ability scores of your choice by 1. This feat can't increase an ability score above 20.\n\nRepeatable. You can take this feat more than once.",
+    "wording": "srd"
+  },
+  "group": "group:general",
+  "repeatable": true,
+  "requires": {
+    "compare": "levels.total",
+    "atLeast": 4
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "$at": {
+            "choose": {
+              "key": "ability",
+              "name": "Ability Score Increase",
+              "count": 2,
+              "each": 2,
+              "from": [
+                {
+                  "kind": "ability"
+                }
+              ]
+            }
+          },
+          "$add": {
+            "amount": 1,
+            "upTo": 20
+          }
+        }
+      }
+    }
+  ]
+}

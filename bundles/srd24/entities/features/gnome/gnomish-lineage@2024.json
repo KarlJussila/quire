@@ -1,0 +1,86 @@
+{
+  "id": "feature:gnome/gnomish-lineage@2024",
+  "name": "Gnomish Lineage",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You are part of a lineage that grants you supernatural abilities. Choose one of the following options; whichever one you choose, Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage):",
+    "plain": "You are part of a lineage that grants you supernatural abilities. Choose one of the following options; whichever one you choose, Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage):",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "choose": {
+        "key": "lineage",
+        "name": "Gnomish Lineage",
+        "from": [
+          {
+            "name": "Forest Gnome",
+            "of": [
+              {
+                "type": "spell-access",
+                "spells": [
+                  "spell:minor-illusion"
+                ],
+                "how": "known",
+                "ability": {
+                  "choose": {
+                    "key": "spellcasting-ability",
+                    "name": "Spellcasting ability",
+                    "from": [
+                      "ability:int",
+                      "ability:wis",
+                      "ability:cha"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "spell-access",
+                "spells": [
+                  "spell:speak-with-animals"
+                ],
+                "how": "prepared",
+                "ability": {
+                  "chosen": "spellcasting-ability"
+                },
+                "uses": {
+                  "max": "proficiencyBonus",
+                  "recover": [
+                    {
+                      "on": {
+                        "event": "event:rest-finished",
+                        "match": {
+                          "rest": "rest:long"
+                        },
+                        "subject": "self"
+                      },
+                      "amount": "all"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "name": "Rock Gnome",
+            "of": [
+              {
+                "type": "spell-access",
+                "spells": [
+                  "spell:mending",
+                  "spell:prestidigitation"
+                ],
+                "how": "known",
+                "ability": {
+                  "chosen": "spellcasting-ability"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "item:torch@2024",
+  "name": "Torch",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Torch burns for 1 hour, casting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. When you take the Attack action, you can attack with the Torch, using it as a Simple Melee weapon. On a hit, the target takes 1 Fire damage.",
+    "plain": "A Torch burns for 1 hour, casting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. When you take the Attack action, you can attack with the Torch, using it as a Simple Melee weapon. On a hit, the target takes 1 Fire damage.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:cp"
+  },
+  "weight": 1.0
+}

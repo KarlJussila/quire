@@ -1,0 +1,58 @@
+{
+  "id": "rule:rolling-20-or-1",
+  "name": "Rolling 1 or 20",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Sometimes fate blesses or curses a combatant, causing the novice to hit and the veteran to miss.\n\nIf the d20 roll for an attack is a 20, the attack hits regardless of any modifiers or the target's AC. This is called a critical hit.\n\nIf the d20 roll for an attack is a 1, the attack misses regardless of any modifiers or the target's AC.",
+    "plain": "Sometimes fate blesses or curses a combatant, causing the novice to hit and the veteran to miss.\n\nIf the d20 roll for an attack is a 20, the attack hits regardless of any modifiers or the target's AC. This is called a critical hit.\n\nIf the d20 roll for an attack is a 1, the attack misses regardless of any modifiers or the target's AC.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "criticalMinimum": {
+          "$atMost": 20
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "forced-result",
+      "success": true,
+      "when": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "crit": true
+        }
+      }
+    },
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "natural": 1
+        }
+      }
+    }
+  ]
+}

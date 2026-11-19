@@ -1,0 +1,30 @@
+{
+  "id": "feature:sorcerer/sorcerous-origin",
+  "name": "Sorcerous Origin",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Choose a sorcerous origin, which describes the source of your innate magical power, such as Draconic Bloodline.\n\nYour choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level.",
+    "plain": "Choose a sorcerous origin, which describes the source of your innate magical power, such as Draconic Bloodline.\n\nYour choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "subclass",
+        "name": "Sorcerous Origin",
+        "from": [
+          {
+            "kind": "subclass",
+            "where": {
+              "match": {
+                "class": "class:sorcerer"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

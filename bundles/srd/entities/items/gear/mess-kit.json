@@ -1,0 +1,18 @@
+{
+  "id": "item:mess-kit",
+  "name": "Mess Kit",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl.",
+    "plain": "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:sp"
+  },
+  "weight": 1.0
+}

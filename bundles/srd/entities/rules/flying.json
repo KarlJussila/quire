@@ -1,0 +1,78 @@
+{
+  "id": "rule:flying",
+  "name": "Flying Movement",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Flying creatures enjoy many benefits of mobility, but they must also deal with the danger of falling. If a flying creature is knocked Prone, has its speed reduced to 0, or is otherwise deprived of the ability to move, the creature falls, unless it has the ability to hover or it is being held aloft by magic, such as by the Fly spell.",
+    "plain": "Flying creatures enjoy many benefits of mobility, but they must also deal with the danger of falling. If a flying creature is knocked Prone, has its speed reduced to 0, or is otherwise deprived of the ability to move, the creature falls, unless it has the ability to hover or it is being held aloft by magic, such as by the Fly spell.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:state-applied",
+          "match": {
+            "state": "condition:prone"
+          },
+          "subject": "self"
+        },
+        {
+          "becomes": {
+            "compare": "speeds.movement-mode:fly.speed",
+            "atMost": 0
+          },
+          "subject": "self"
+        }
+      ],
+      "when": {
+        "all": [
+          {
+            "grounded": false
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "match": {
+                    "speeds": {
+                      "movement-mode:fly": {
+                        "hover": true
+                      }
+                    }
+                  }
+                },
+                {
+                  "prose": {
+                    "text": "held aloft by magic",
+                    "gap": {
+                      "category": "test",
+                      "name": "held-aloft-by-magic"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "step": {
+        "outcomes": [
+          {
+            "move": {
+              "kind": "fall"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

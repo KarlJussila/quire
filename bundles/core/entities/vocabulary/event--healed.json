@@ -1,0 +1,15 @@
+{
+  "id": "event:healed",
+  "name": "Healed",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "The subject regains hit points. `amount`; `spell` and `slot`, the spell doing the healing."
+  },
+  "payload": [
+    "amount",
+    "spell",
+    "slot"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "feature:tiefling/infernal-legacy",
+  "name": "Infernal Legacy",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You know the Thaumaturgy cantrip. When you reach 3rd level, you can cast the Hellish Rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the Darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
+    "plain": "You know the Thaumaturgy cantrip. When you reach 3rd level, you can cast the Hellish Rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the Darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:thaumaturgy"
+      ],
+      "how": "known",
+      "ability": "ability:cha"
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.total",
+        "atLeast": 3
+      },
+      "spells": [
+        "spell:hellish-rebuke"
+      ],
+      "how": "innate",
+      "ability": "ability:cha",
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "castAt": 2
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.total",
+        "atLeast": 5
+      },
+      "spells": [
+        "spell:darkness"
+      ],
+      "how": "innate",
+      "ability": "ability:cha",
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ]
+}

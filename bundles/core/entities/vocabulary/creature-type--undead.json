@@ -1,0 +1,7 @@
+{
+  "id": "creature-type:undead",
+  "name": "Undead",
+  "source": {
+    "book": "core"
+  }
+}

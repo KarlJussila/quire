@@ -1,0 +1,108 @@
+{
+  "id": "feature:cleric/blessed-strikes@2024",
+  "name": "Level 7: Blessed Strikes",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Divine power infuses you in battle. You gain one of the following options of your choice (if you get either option from a Cleric subclass in an older book, use only the option you choose for this feature).\n\n_**Divine Strike.**_ Once on each of your turns when you hit a creature with an attack roll using a weapon, you can cause the target to take an extra 1d8 Necrotic or Radiant damage (your choice).\n\n_**Potent Spellcasting.**_ Add your Wisdom modifier to the damage you deal with any Cleric cantrip.",
+    "plain": "Divine power infuses you in battle. You gain one of the following options of your choice (if you get either option from a Cleric subclass in an older book, use only the option you choose for this feature).\n\nDivine Strike. Once on each of your turns when you hit a creature with an attack roll using a weapon, you can cause the target to take an extra 1d8 Necrotic or Radiant damage (your choice).\n\nPotent Spellcasting. Add your Wisdom modifier to the damage you deal with any Cleric cantrip.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "choose": {
+        "key": "blessed-strikes",
+        "name": "Blessed Strikes",
+        "from": [
+          {
+            "name": "Divine Strike",
+            "of": [
+              {
+                "type": "damage-bonus",
+                "amount": {
+                  "byLevel": {
+                    "7": "1d8",
+                    "14": "2d8"
+                  },
+                  "of": "class:cleric"
+                },
+                "damageType": {
+                  "choose": {
+                    "key": "divine-strike-damage-type",
+                    "name": "Divine Strike Damage Type",
+                    "from": [
+                      "damage-type:necrotic",
+                      "damage-type:radiant"
+                    ]
+                  }
+                },
+                "when": {
+                  "all": [
+                    {
+                      "event": "event:roll-resolved",
+                      "by": "self",
+                      "match": {
+                        "roll": "roll:attack",
+                        "success": true,
+                        "attack": {
+                          "via": "weapon"
+                        }
+                      }
+                    },
+                    {
+                      "turn": "self"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "name": "Potent Spellcasting",
+            "of": [
+              {
+                "type": "change",
+                "of": "event",
+                "set": {
+                  "total": {
+                    "$add": "modifiers.ability:wis"
+                  }
+                },
+                "when": {
+                  "all": [
+                    {
+                      "event": "event:roll-made",
+                      "by": "self",
+                      "match": {
+                        "roll": "roll:damage"
+                      }
+                    },
+                    {
+                      "spell": {
+                        "kind": "spell",
+                        "where": {
+                          "all": [
+                            {
+                              "match": {
+                                "level": 0,
+                                "lists": "class:cleric"
+                              }
+                            },
+                            {
+                              "grantedBy": "class:cleric"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

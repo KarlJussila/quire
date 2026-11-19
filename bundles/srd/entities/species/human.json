@@ -1,0 +1,22 @@
+{
+  "id": "species:human",
+  "name": "Human",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "## Human Traits\n\nIt's hard to make generalizations about humans, but your human character has these traits.\n\n_**Ability Score Increase.**_ Your ability scores each increase by 1.\n\n_**Age.**_ Humans reach adulthood in their late teens and live less than a century.\n\n_**Alignment.**_ Humans tend toward no particular alignment. The best and the worst are found among them.\n\n_**Size.**_ Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.\n\n_**Speed.**_ Your base walking speed is 30 feet.\n\n_**Languages.**_ You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.",
+    "plain": "## Human Traits\n\nIt's hard to make generalizations about humans, but your human character has these traits.\n\nAbility Score Increase. Your ability scores each increase by 1.\n\nAge. Humans reach adulthood in their late teens and live less than a century.\n\nAlignment. Humans tend toward no particular alignment. The best and the worst are found among them.\n\nSize. Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.\n\nSpeed. Your base walking speed is 30 feet.\n\nLanguages. You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.",
+    "wording": "srd"
+  },
+  "features": [
+    "feature:human/ability-score-increase",
+    "feature:human/languages"
+  ],
+  "size": "size:medium",
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "item:battleaxe",
+  "name": "Battleaxe",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:martial-melee-weapon",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 4.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:versatile"
+    ],
+    "damage": {
+      "amount": "1d8",
+      "type": "damage-type:slashing"
+    },
+    "versatile": "1d10"
+  }
+}

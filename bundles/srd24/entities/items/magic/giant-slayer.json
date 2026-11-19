@@ -1,0 +1,136 @@
+{
+  "id": "item:giant-slayer@2024",
+  "name": "Giant Slayer",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.\n\nWhen you hit a Giant with this weapon, the Giant takes an extra 2d6 damage of the weapon's type and must succeed on a DC 15 Strength saving throw or have the Prone condition.",
+    "plain": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.\n\nWhen you hit a Giant with this weapon, the Giant takes an extra 2d6 damage of the weapon's type and must succeed on a DC 15 Strength saving throw or have the Prone condition.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:rare",
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Weapon",
+      "from": [
+        {
+          "kind": "item",
+          "where": {
+            "group": [
+              "group:simple-weapon",
+              "group:martial-weapon"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    },
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "match": {
+              "creatureType": "creature-type:giant"
+            }
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "this"
+          },
+          "success": true
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "key": "giant-damage",
+            "damage": {
+              "amount": "2d6",
+              "type": {
+                "of": "weapon"
+              }
+            },
+            "to": "subject"
+          },
+          {
+            "then": {
+              "target": {
+                "count": 1,
+                "who": "subject"
+              },
+              "delivery": {
+                "save": {
+                  "ability": "ability:str",
+                  "dc": 15
+                }
+              },
+              "outcomes": [
+                {
+                  "applyState": {
+                    "state": "condition:prone"
+                  },
+                  "to": "subject",
+                  "when": {
+                    "event": "event:roll-resolved",
+                    "match": {
+                      "success": false
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": "state:total-cover",
+  "name": "Total Cover",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A target with **total cover** can't be targeted directly by an attack or a spell, although some spells can reach such a target by including it in an area of effect. A target has total cover if it is completely concealed by an obstacle.",
+    "plain": "A target with total cover can't be targeted directly by an attack or a spell, although some spells can reach such a target by including it in an area of effect. A target has total cover if it is completely concealed by an obstacle.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:be-targeted"
+      ]
+    }
+  ]
+}

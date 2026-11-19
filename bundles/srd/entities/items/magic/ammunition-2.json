@@ -1,0 +1,69 @@
+{
+  "id": "item:ammunition-2",
+  "name": "Ammunition, +2",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have a bonus to attack and damage rolls made with this piece of magic ammunition. The bonus is determined by the rarity of the ammunition. Once it hits a target, the ammunition is no longer magical.",
+    "plain": "You have a bonus to attack and damage rolls made with this piece of magic ammunition. The bonus is determined by the rarity of the ammunition. Once it hits a target, the ammunition is no longer magical.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:rare",
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Ammunition",
+      "from": [
+        {
+          "kind": "item",
+          "where": {
+            "group": "group:ammunition"
+          }
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    }
+  ],
+  "gaps": []
+}

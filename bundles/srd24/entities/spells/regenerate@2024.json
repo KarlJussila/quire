@@ -1,0 +1,42 @@
+{
+  "id": "spell:regenerate@2024",
+  "name": "Regenerate",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A creature you touch regains 4d8 + 15 Hit Points. For the duration, the target regains 1 Hit Point at the start of each of its turns, and any severed body parts regrow after 2 minutes.",
+    "plain": "A creature you touch regains 4d8 + 15 Hit Points. For the duration, the target regains 1 Hit Point at the start of each of its turns, and any severed body parts regrow after 2 minutes.",
+    "wording": "srd"
+  },
+  "level": 7,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:druid"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a prayer wheel"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "time": {
+        "amount": 1,
+        "unit": "minute"
+      },
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour"
+      }
+    }
+  ]
+}

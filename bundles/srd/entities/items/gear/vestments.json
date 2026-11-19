@@ -1,0 +1,12 @@
+{
+  "id": "item:vestments",
+  "name": "Vestments",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Ceremonial robes worn by a priest during religious rites.",
+    "wording": "original"
+  },
+  "group": "group:adventuring-gear"
+}

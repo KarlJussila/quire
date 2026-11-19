@@ -1,0 +1,18 @@
+{
+  "id": "rule:nonplayer-character@2024",
+  "name": "Nonplayer Character",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A nonplayer character (NPC) is a monster that has a personal name and a distinct personality. _See also_ \"Monster.\"",
+    "plain": "A nonplayer character (NPC) is a monster that has a personal name and a distinct personality. See also \"Monster.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

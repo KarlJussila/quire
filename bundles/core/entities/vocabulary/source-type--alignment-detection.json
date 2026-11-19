@@ -1,0 +1,7 @@
+{
+  "id": "source-type:alignment-detection",
+  "name": "Alignment Detection",
+  "source": {
+    "book": "core"
+  }
+}

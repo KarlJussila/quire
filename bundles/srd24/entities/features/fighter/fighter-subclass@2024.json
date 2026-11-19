@@ -1,0 +1,30 @@
+{
+  "id": "feature:fighter/fighter-subclass@2024",
+  "name": "Level 3: Fighter Subclass",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a Fighter subclass of your choice. The Champion subclass is detailed after this class's description. A subclass is a specialization that grants you features at certain Fighter levels. For the rest of your career, you gain each of your subclass's features that are of your Fighter level or lower.",
+    "plain": "You gain a Fighter subclass of your choice. The Champion subclass is detailed after this class's description. A subclass is a specialization that grants you features at certain Fighter levels. For the rest of your career, you gain each of your subclass's features that are of your Fighter level or lower.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "subclass",
+        "name": "Fighter Subclass",
+        "from": [
+          {
+            "kind": "subclass",
+            "where": {
+              "match": {
+                "class": "class:fighter"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

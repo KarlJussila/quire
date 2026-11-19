@@ -1,0 +1,46 @@
+{
+  "id": "feature:warlock/pact-of-the-tome",
+  "name": "Pact of the Tome",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Your patron gives you a grimoire called a Book of Shadows. When you gain this feature, choose three cantrips from any class's spell list (the three needn't be from the same list). While the book is on your person, you can cast those cantrips at will. They don't count against your number of cantrips known. If they don't appear on the warlock spell list, they are nonetheless warlock spells for you.\n\nIf you lose your Book of Shadows, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous book. The book turns to ash when you die.",
+    "plain": "Your patron gives you a grimoire called a Book of Shadows. When you gain this feature, choose three cantrips from any class's spell list (the three needn't be from the same list). While the book is on your person, you can cast those cantrips at will. They don't count against your number of cantrips known. If they don't appear on the warlock spell list, they are nonetheless warlock spells for you.\n\nIf you lose your Book of Shadows, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous book. The book turns to ash when you die.",
+    "wording": "srd"
+  },
+  "group": "group:pact-boon",
+  "gaps": [
+    {
+      "category": "spellcasting",
+      "name": "Choose three cantrips from any class spell list; cast them at will only while the Book of Shadows is on your person, without counting them among known cantrips, and treat off-list choices as warlock spells."
+    },
+    {
+      "category": "item-destruction",
+      "name": "Replace a lost Book of Shadows in a 1-hour ceremony during a short or long rest, destroying the previous book; it turns to ash when you die."
+    }
+  ],
+  "effects": [
+    {
+      "type": "record",
+      "pick": {
+        "choose": {
+          "key": "cantrips",
+          "name": "Book of Shadows Cantrips",
+          "count": 3,
+          "from": [
+            {
+              "kind": "spell",
+              "where": {
+                "match": {
+                  "level": 0,
+                  "lists": true
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

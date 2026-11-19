@@ -1,0 +1,8 @@
+{
+  "id": "stat-block-section:reaction",
+  "name": "Reaction",
+  "source": {
+    "book": "core"
+  },
+  "order": 4
+}

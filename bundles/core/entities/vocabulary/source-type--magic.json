@@ -1,0 +1,7 @@
+{
+  "id": "source-type:magic",
+  "name": "Magic",
+  "source": {
+    "book": "core"
+  }
+}

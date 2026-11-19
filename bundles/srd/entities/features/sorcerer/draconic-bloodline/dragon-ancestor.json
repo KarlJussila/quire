@@ -1,0 +1,42 @@
+{
+  "id": "feature:sorcerer/draconic-bloodline/dragon-ancestor",
+  "name": "Dragon Ancestor",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 1st level, you choose one type of dragon as your ancestor. The damage type associated with each dragon is used by features you gain later.",
+    "plain": "At 1st level, you choose one type of dragon as your ancestor. The damage type associated with each dragon is used by features you gain later.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "language:draconic"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "roll-modifier",
+      "name": "Proficiency bonus doubled on Charisma checks when interacting with dragons"
+    }
+  ],
+  "features": [
+    {
+      "choose": {
+        "key": "ancestor",
+        "name": "Dragon Ancestor",
+        "from": [
+          {
+            "kind": "feature",
+            "where": {
+              "group": "group:dragon-ancestor"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

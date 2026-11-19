@@ -1,0 +1,49 @@
+{
+  "id": "feature:warlock/magical-cunning@2024",
+  "name": "Level 2: Magical Cunning",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can perform an esoteric rite for 1 minute. At the end of it, you regain expended Pact Magic spell slots but no more than a number equal to half your maximum (round up). Once you use this feature, you can't do so again until you finish a Long Rest.",
+    "plain": "You can perform an esoteric rite for 1 minute. At the end of it, you regain expended Pact Magic spell slots but no more than a number equal to half your maximum (round up). Once you use this feature, you can't do so again until you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "magical-cunning",
+      "name": "Magical Cunning",
+      "time": {
+        "amount": 1,
+        "unit": "minute"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Regain expended Pact Magic spell slots, up to a number equal to half your maximum, rounded up.",
+            "gap": {
+              "category": "resource",
+              "name": "Pact Magic spell slots"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

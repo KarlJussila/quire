@@ -1,0 +1,63 @@
+{
+  "id": "creature:berserker",
+  "name": "Berserker",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any-chaotic",
+  "ac": 13,
+  "acFrom": [
+    "hide armor"
+  ],
+  "hp": {
+    "average": 67,
+    "formula": "9d8 + 27"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 9,
+    "ability:con": 17,
+    "ability:dex": 12,
+    "ability:int": 9,
+    "ability:str": 16,
+    "ability:wis": 11
+  },
+  "passivePerception": 10,
+  "xp": 450,
+  "cr": 2,
+  "languages": [
+    {
+      "text": "any one language (usually Common)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Reckless",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "At the start of its turn, the berserker can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn.",
+        "plain": "At the start of its turn, the berserker can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Greataxe",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 9 (1d12 + 3) slashing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 9 (1d12 + 3) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

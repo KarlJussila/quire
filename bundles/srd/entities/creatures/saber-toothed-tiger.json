@@ -1,0 +1,77 @@
+{
+  "id": "creature:saber-toothed-tiger",
+  "name": "Saber-Toothed Tiger",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "hp": {
+    "average": 52,
+    "formula": "7d10 + 14"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 8,
+    "ability:con": 15,
+    "ability:dex": 14,
+    "ability:int": 3,
+    "ability:str": 18,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 3,
+    "skill:stealth": 6
+  },
+  "passivePerception": 13,
+  "xp": 450,
+  "cr": 2,
+  "blocks": [
+    {
+      "name": "Keen Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The tiger has advantage on Wisdom (Perception) checks that rely on smell.",
+        "plain": "The tiger has advantage on Wisdom (Perception) checks that rely on smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pounce",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the tiger moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked Prone. If the target is prone, the tiger can make one bite attack against it as a bonus action.",
+        "plain": "If the tiger moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked Prone. If the target is prone, the tiger can make one bite attack against it as a bonus action.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 10 (1d10 + 5) piercing damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 10 (1d10 + 5) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 12 (2d6 + 5) slashing damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

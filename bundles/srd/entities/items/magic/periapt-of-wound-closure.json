@@ -1,0 +1,16 @@
+{
+  "id": "item:periapt-of-wound-closure",
+  "name": "Periapt of Wound Closure",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While you wear this pendant, you stabilize whenever you are dying at the start of your turn. In addition, whenever you roll a Hit Die to regain hit points, double the number of hit points it restores.",
+    "plain": "While you wear this pendant, you stabilize whenever you are dying at the start of your turn. In addition, whenever you roll a Hit Die to regain hit points, double the number of hit points it restores.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "weight": 0.0
+}

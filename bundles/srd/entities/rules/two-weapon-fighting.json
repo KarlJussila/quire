@@ -1,0 +1,167 @@
+{
+  "id": "rule:two-weapon-fighting",
+  "name": "Two-Weapon Fighting",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you take the Attack action and attack with a light melee weapon that you're holding in one hand, you can use a bonus action to attack with a different light melee weapon that you're holding in the other hand. You don't add your ability modifier to the damage of the bonus attack, unless that modifier is negative.\n\nIf either weapon has the thrown property, you can throw the weapon, instead of making a melee attack with it.",
+    "plain": "When you take the Attack action and attack with a light melee weapon that you're holding in one hand, you can use a bonus action to attack with a different light melee weapon that you're holding in the other hand. You don't add your ability modifier to the damage of the bonus attack, unless that modifier is negative.\n\nIf either weapon has the thrown property, you can throw the weapon, instead of making a melee attack with it.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "extra-attack",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "when": {
+        "all": [
+          {
+            "turn": "self"
+          },
+          {
+            "happened": {
+              "event": "event:activity-used",
+              "by": "self",
+              "match": {
+                "action": "action:attack"
+              },
+              "since": "turn-start"
+            }
+          },
+          {
+            "happened": {
+              "event": "event:roll-made",
+              "by": "self",
+              "match": {
+                "roll": "roll:attack",
+                "attack": {
+                  "via": "weapon",
+                  "item": {
+                    "kind": "item",
+                    "where": {
+                      "all": [
+                        {
+                          "match": {
+                            "weapon": {
+                              "properties": "weapon-property:light"
+                            }
+                          }
+                        },
+                        {
+                          "group": "group:melee-weapon"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "since": "turn-start",
+              "when": {
+                "prose": {
+                  "text": "This qualifying attack was part of the Attack action on this turn.",
+                  "gap": {
+                    "category": "two-weapon",
+                    "name": "The qualifying attack’s containing Attack action"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "all": [
+                    {
+                      "match": {
+                        "delivery": {
+                          "attack": {
+                            "via": "weapon",
+                            "item": {
+                              "kind": "item",
+                              "where": {
+                                "all": [
+                                  {
+                                    "match": {
+                                      "weapon": {
+                                        "properties": "weapon-property:light"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "group": "group:melee-weapon"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "prose": {
+                        "text": "A different Light melee weapon held in the other hand from the qualifying Attack-action weapon; either may be thrown if it has Thrown.",
+                        "gap": {
+                          "category": "two-weapon",
+                          "name": "Different weapon and, in 2014, the other hand"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "times": 1
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "key": "omit-positive-ability",
+          "type": "change",
+          "of": "event",
+          "set": {
+            "total": {
+              "$subtract": {
+                "max": [
+                  0,
+                  "modifiers.{ability}"
+                ]
+              }
+            }
+          },
+          "when": {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage",
+              "ability": true,
+              "attack": {
+                "via": "weapon"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "two-weapon",
+      "name": "The qualifying attack’s containing Attack action, the different extra-attack weapon, and 2014 hand assignment remain explicit prose tests."
+    }
+  ]
+}

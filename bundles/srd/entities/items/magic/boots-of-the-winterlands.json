@@ -1,0 +1,41 @@
+{
+  "id": "item:boots-of-the-winterlands",
+  "name": "Boots of the Winterlands",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "These furred boots are snug and feel quite warm. While you wear them, you gain the following benefits:\n\n- You have resistance to cold damage.\n- You ignore difficult terrain created by ice or snow.\n- You can tolerate temperatures as low as -50 degrees Fahrenheit without any additional protection. If you wear heavy clothes, you can tolerate temperatures as low as -100 degrees Fahrenheit.",
+    "plain": "These furred boots are snug and feel quite warm. While you wear them, you gain the following benefits:\n\n- You have resistance to cold damage.\n- You ignore difficult terrain created by ice or snow.\n- You can tolerate temperatures as low as -50 degrees Fahrenheit without any additional protection. If you wear heavy clothes, you can tolerate temperatures as low as -100 degrees Fahrenheit.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "weight": 0,
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "Ignoring difficult terrain only from ice or snow needs terrain-specific context."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "The temperature thresholds and heavy-clothing condition need environment and clothing rules."
+    }
+  ]
+}

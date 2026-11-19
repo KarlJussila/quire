@@ -1,0 +1,13 @@
+{
+  "id": "language:primordial@2024",
+  "name": "Primordial",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A rare language — secret, or derived from another plane of existence, and so less widespread in the worlds of the Material Plane. It includes the Aquan, Auran, Ignan, and Terran dialects; creatures that know one of them can communicate with those that know another.",
+    "plain": "A rare language — secret, or derived from another plane of existence, and so less widespread in the worlds of the Material Plane. It includes the Aquan, Auran, Ignan, and Terran dialects; creatures that know one of them can communicate with those that know another.",
+    "wording": "srd"
+  },
+  "group": "group:rare-language"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "spell-school:evocation",
+  "name": "Evocation",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

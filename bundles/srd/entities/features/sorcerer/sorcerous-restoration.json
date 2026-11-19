@@ -1,0 +1,31 @@
+{
+  "id": "feature:sorcerer/sorcerous-restoration",
+  "name": "Sorcerous Restoration",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 20th level, you regain 4 expended sorcery points whenever you finish a short rest.",
+    "plain": "At 20th level, you regain 4 expended sorcery points whenever you finish a short rest.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "resource",
+      "key": "sorcery-points",
+      "max": "levels.class:sorcerer",
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:short"
+            },
+            "subject": "self"
+          },
+          "amount": 4
+        }
+      ]
+    }
+  ]
+}

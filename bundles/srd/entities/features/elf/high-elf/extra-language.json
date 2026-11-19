@@ -1,0 +1,31 @@
+{
+  "id": "feature:elf/high-elf/extra-language",
+  "name": "Extra Language",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can speak, read, and write one extra language of your choice.",
+    "plain": "You can speak, read, and write one extra language of your choice.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "language",
+            "name": "Language",
+            "from": [
+              {
+                "kind": "language"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

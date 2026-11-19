@@ -1,0 +1,20 @@
+{
+  "id": "feature:druid/multiclass-proficiencies@2024",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Gain the following traits from the Core Druid Traits table: Hit Point Die and training with Light armor and Shields.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor",
+        "group:shield"
+      ]
+    }
+  ]
+}

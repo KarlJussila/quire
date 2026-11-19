@@ -1,0 +1,111 @@
+{
+  "id": "creature:shambling-mound",
+  "name": "Shambling Mound",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:plant",
+  "alignment": "alignment:unaligned",
+  "ac": 15,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 136,
+    "formula": "16d10 + 48"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:swim": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 16,
+    "ability:dex": 8,
+    "ability:int": 5,
+    "ability:str": 18,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:stealth": 2
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60,
+      "blindBeyond": true
+    }
+  },
+  "passivePerception": 10,
+  "xp": 1800,
+  "cr": 5,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:lightning"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold",
+        "damage-type:fire"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:blinded",
+        "condition:deafened",
+        "condition:exhaustion"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Lightning Absorption",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "Whenever the shambling mound is subjected to lightning damage, it takes no damage and regains a number of hit points equal to the lightning damage dealt.",
+        "plain": "Whenever the shambling mound is subjected to lightning damage, it takes no damage and regains a number of hit points equal to the lightning damage dealt.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The shambling mound makes two slam attacks. If both attacks hit a Medium or smaller target, the target is Grappled (escape DC 14), and the shambling mound uses its Engulf on it.",
+        "plain": "The shambling mound makes two slam attacks. If both attacks hit a Medium or smaller target, the target is Grappled (escape DC 14), and the shambling mound uses its Engulf on it.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Slam",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +7 to hit, reach 5 ft., one target. _Hit:_ 13 (2d8 + 4) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Engulf",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The shambling mound engulfs a Medium or smaller creature Grappled by it. The engulfed target is Blinded, Restrained, and unable to breathe, and it must succeed on a DC 14 Constitution saving throw at the start of each of the mound's turns or take 13 (2d8 + 4) bludgeoning damage. If the mound moves, the engulfed target moves with it. The mound can have only one creature engulfed at a time.",
+        "plain": "The shambling mound engulfs a Medium or smaller creature Grappled by it. The engulfed target is Blinded, Restrained, and unable to breathe, and it must succeed on a DC 14 Constitution saving throw at the start of each of the mound's turns or take 13 (2d8 + 4) bludgeoning damage. If the mound moves, the engulfed target moves with it. The mound can have only one creature engulfed at a time.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

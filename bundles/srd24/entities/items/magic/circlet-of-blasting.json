@@ -1,0 +1,14 @@
+{
+  "id": "item:circlet-of-blasting@2024",
+  "name": "Circlet of Blasting",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this circlet, you can cast Scorching Ray with it (+5 to hit). The circlet can't cast this spell again until the next dawn.",
+    "plain": "While wearing this circlet, you can cast Scorching Ray with it (+5 to hit). The circlet can't cast this spell again until the next dawn.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon"
+}

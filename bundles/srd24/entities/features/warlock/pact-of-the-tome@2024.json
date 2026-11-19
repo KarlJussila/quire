@@ -1,0 +1,149 @@
+{
+  "id": "feature:warlock/pact-of-the-tome@2024",
+  "name": "Pact of the Tome",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Stitching together strands of shadow, you conjure forth a book in your hand at the end of a Short or Long Rest. This _Book of Shadows_ (you determine its appearance) contains eldritch magic that only you can access, granting you the benefits below. The book disappears if you conjure another book with this feature or if you die.\n\n_**Cantrips and Rituals.**_ When the book appears, choose three cantrips, and choose two level 1 spells that have the Ritual tag. The spells can be from any class's spell list, and they must be spells you don't already have prepared. While the book is on your person, you have the chosen spells prepared, and they function as Warlock spells for you.\n\n_**Spellcasting Focus.**_ You can use the book as a Spellcasting Focus.",
+    "plain": "Stitching together strands of shadow, you conjure forth a book in your hand at the end of a Short or Long Rest. This Book of Shadows (you determine its appearance) contains eldritch magic that only you can access, granting you the benefits below. The book disappears if you conjure another book with this feature or if you die.\n\nCantrips and Rituals. When the book appears, choose three cantrips, and choose two level 1 spells that have the Ritual tag. The spells can be from any class's spell list, and they must be spells you don't already have prepared. While the book is on your person, you have the chosen spells prepared, and they function as Warlock spells for you.\n\nSpellcasting Focus. You can use the book as a Spellcasting Focus.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [],
+  "activities": [
+    {
+      "key": "conjure-book-of-shadows",
+      "name": "Conjure Book of Shadows",
+      "trigger": {
+        "event": "event:rest-finished",
+        "subject": "self"
+      },
+      "outcomes": [
+        {
+          "create": {
+            "object": {
+              "name": "Book of Shadows",
+              "effects": [
+                {
+                  "type": "spell-access",
+                  "to": "source",
+                  "when": {
+                    "creature": "source",
+                    "where": {
+                      "has": "this"
+                    }
+                  },
+                  "how": "prepared",
+                  "counts": false,
+                  "countsAs": "class:warlock",
+                  "spells": [
+                    {
+                      "choose": {
+                        "key": "cantrips",
+                        "name": "Cantrips",
+                        "count": 3,
+                        "from": [
+                          {
+                            "kind": "spell",
+                            "where": {
+                              "all": [
+                                {
+                                  "match": {
+                                    "level": 0,
+                                    "lists": true
+                                  }
+                                },
+                                {
+                                  "not": {
+                                    "creature": "source",
+                                    "where": {
+                                      "prepared": true
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "by": "source"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "spell-access",
+                  "to": "source",
+                  "when": {
+                    "creature": "source",
+                    "where": {
+                      "has": "this"
+                    }
+                  },
+                  "how": "prepared",
+                  "counts": false,
+                  "countsAs": "class:warlock",
+                  "spells": [
+                    {
+                      "choose": {
+                        "key": "rituals",
+                        "name": "Rituals",
+                        "count": 2,
+                        "from": [
+                          {
+                            "kind": "spell",
+                            "where": {
+                              "all": [
+                                {
+                                  "match": {
+                                    "level": 1,
+                                    "ritual": true,
+                                    "lists": true
+                                  }
+                                },
+                                {
+                                  "not": {
+                                    "creature": "source",
+                                    "where": {
+                                      "prepared": true
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "by": "source"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "ends": [
+              {
+                "event": "event:activity-used",
+                "by": "source",
+                "when": {
+                  "activity": "conjure-book-of-shadows"
+                },
+                "next": true
+              },
+              {
+                "event": "event:died",
+                "subject": "source"
+              }
+            ]
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "content-dependency",
+      "name": "The spell-component rules must recognize this specific Book of Shadows as the creator’s spellcasting focus."
+    }
+  ]
+}

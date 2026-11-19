@@ -1,0 +1,16 @@
+{
+  "id": "item:rod-of-alertness",
+  "name": "Rod of Alertness",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This rod has a flanged head and the following properties.\n\n_**Alertness.**_ While holding the rod, you have advantage on Wisdom (Perception) checks and on rolls for initiative.\n\n_**Spells.**_ While holding the rod, you can use an action to cast one of the following spells from it: Detect Evil and Good, Detect Magic, Detect Poison and Disease, or See Invisibility.\n\n_**Protective Aura.**_ As an action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any Invisible hostile creature that is also in the bright light.\n\nThe rod's head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground. This property can't be used again until the next dawn.",
+    "plain": "This rod has a flanged head and the following properties.\n\nAlertness. While holding the rod, you have advantage on Wisdom (Perception) checks and on rolls for initiative.\n\nSpells. While holding the rod, you can use an action to cast one of the following spells from it: Detect Evil and Good, Detect Magic, Detect Poison and Disease, or See Invisibility.\n\nProtective Aura. As an action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any Invisible hostile creature that is also in the bright light.\n\nThe rod's head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground. This property can't be used again until the next dawn.",
+    "wording": "srd"
+  },
+  "group": "group:rod",
+  "rarity": "rarity:very-rare",
+  "attunement": true,
+  "weight": 2.0
+}

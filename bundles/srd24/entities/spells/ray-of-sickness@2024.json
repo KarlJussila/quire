@@ -1,0 +1,37 @@
+{
+  "id": "spell:ray-of-sickness@2024",
+  "name": "Ray of Sickness",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You shoot a greenish ray at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 Poison damage and has the Poisoned condition until the end of your next turn.\n\n_**Using a Higher-Level Spell Slot.**_ The damage increases by 1d8 for each spell slot level above 1.",
+    "plain": "You shoot a greenish ray at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 Poison damage and has the Poisoned condition until the end of your next turn.\n\nUsing a Higher-Level Spell Slot. The damage increases by 1d8 for each spell slot level above 1.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:necromancy",
+  "lists": [
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

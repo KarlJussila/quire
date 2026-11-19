@@ -1,0 +1,18 @@
+{
+  "id": "item:sack@2024",
+  "name": "Sack",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 1 CP\n\nA Sack holds up to 30 pounds within 1 cubic foot.",
+    "plain": "Cost: 1 CP\n\nA Sack holds up to 30 pounds within 1 cubic foot.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:cp"
+  },
+  "weight": 0.5
+}

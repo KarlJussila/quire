@@ -1,0 +1,18 @@
+{
+  "id": "item:case-crossbow-bolt@2024",
+  "name": "Case, Crossbow Bolt",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 1 GP\n\nA Crossbow Bolt Case holds up to 20 Bolts.",
+    "plain": "Cost: 1 GP\n\nA Crossbow Bolt Case holds up to 20 Bolts.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:gp"
+  },
+  "weight": 1.0
+}

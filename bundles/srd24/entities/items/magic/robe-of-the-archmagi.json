@@ -1,0 +1,125 @@
+{
+  "id": "item:robe-of-the-archmagi@2024",
+  "name": "Robe of the Archmagi",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This elegant garment is made from exquisite cloth and adorned with runes.\n\nYou gain these benefits while wearing the robe.\n\n_**Armor.**_ If you aren't wearing armor, your base Armor Class is 15 plus your Dexterity modifier.\n\n_**Magic Resistance.**_ You have Advantage on saving throws against spells and other magical effects.\n\n_**War Mage.**_ Your spell save DC and spell attack bonus each increase by 2.",
+    "plain": "This elegant garment is made from exquisite cloth and adorned with runes.\n\nYou gain these benefits while wearing the robe.\n\nArmor. If you aren't wearing armor, your base Armor Class is 15 plus your Dexterity modifier.\n\nMagic Resistance. You have Advantage on saving throws against spells and other magical effects.\n\nWar Mage. Your spell save DC and spell attack bonus each increase by 2.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:legendary",
+  "attunement": {
+    "by": {
+      "any": [
+        {
+          "class": "class:sorcerer"
+        },
+        {
+          "class": "class:warlock"
+        },
+        {
+          "class": "class:wizard"
+        }
+      ]
+    },
+    "text": "Requires Attunement by a Sorcerer, Warlock, or Wizard"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$base": {
+            "sum": [
+              15,
+              "modifiers.ability:dex"
+            ]
+          }
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "not": {
+              "has": "group:armor",
+              "match": {
+                "worn": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:save",
+              "against": {
+                "sourceType": "source-type:magic"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "$where": true,
+          "dc": {
+            "$add": 2
+          }
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "$where": true,
+          "attack": {
+            "$add": 2
+          }
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ]
+}

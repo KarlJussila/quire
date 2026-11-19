@@ -1,0 +1,11 @@
+{
+  "id": "skill:religion",
+  "name": "Religion",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:int"
+}

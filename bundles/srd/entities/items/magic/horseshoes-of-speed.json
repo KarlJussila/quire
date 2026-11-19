@@ -1,0 +1,45 @@
+{
+  "id": "item:horseshoes-of-speed",
+  "name": "Horseshoes of Speed",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "These iron horseshoes come in a set of four. While all four shoes are affixed to the hooves of a horse or similar creature, they increase the creature's walking speed by 30 feet.",
+    "plain": "These iron horseshoes come in a set of four. While all four shoes are affixed to the hooves of a horse or similar creature, they increase the creature's walking speed by 30 feet.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare",
+  "weight": 0,
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "movement-mode:walk": {
+            "speed": {
+              "$add": 30
+            }
+          }
+        }
+      },
+      "when": {
+        "any": [
+          {
+            "has": "this",
+            "match": {
+              "worn": true
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "held": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

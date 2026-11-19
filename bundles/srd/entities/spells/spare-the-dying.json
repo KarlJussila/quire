@@ -1,0 +1,36 @@
+{
+  "id": "spell:spare-the-dying",
+  "name": "Spare the Dying",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs.",
+    "plain": "You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs.",
+    "wording": "srd"
+  },
+  "level": 0,
+  "school": "spell-school:necromancy",
+  "lists": [
+    "class:cleric"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

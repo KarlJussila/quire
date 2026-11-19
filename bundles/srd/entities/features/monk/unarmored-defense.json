@@ -1,0 +1,48 @@
+{
+  "id": "feature:monk/unarmored-defense",
+  "name": "Unarmored Defense",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier.",
+    "plain": "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$base": {
+            "sum": [
+              10,
+              "modifiers.ability:dex",
+              "modifiers.ability:wis"
+            ]
+          }
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "not": {
+              "has": "group:armor",
+              "match": {
+                "worn": true
+              }
+            }
+          },
+          {
+            "not": {
+              "has": "group:shield",
+              "match": {
+                "held": true
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

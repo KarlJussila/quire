@@ -1,0 +1,62 @@
+{
+  "id": "spell:remove-curse@2024",
+  "name": "Remove Curse",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "At your touch, all curses affecting one creature or object end. If the object is a cursed magic item, its curse remains, but the spell breaks its owner's Attunement to the object so it can be removed or discarded.",
+    "plain": "At your touch, all curses affecting one creature or object end. If the object is a cursed magic item, its curse remains, but the spell breaks its owner's Attunement to the object so it can be removed or discarded.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:cleric",
+    "class:paladin",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": "instant",
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "endState": {
+            "state": "state:curse"
+          },
+          "to": "target"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "spell-mechanics",
+      "name": "The spell also targets objects. The cursed-magic-item exception retains the item’s curse and breaks its owner’s attunement, but the schema has no operation that links the targeted item to its owner while keeping that item curse."
+    }
+  ]
+}

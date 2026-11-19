@@ -1,0 +1,14 @@
+{
+  "id": "item:ring-of-water-walking",
+  "name": "Ring of Water Walking",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing this ring, you can stand on and move across any liquid surface as if it were solid ground.",
+    "plain": "While wearing this ring, you can stand on and move across any liquid surface as if it were solid ground.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:uncommon"
+}

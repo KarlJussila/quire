@@ -1,0 +1,43 @@
+{
+  "id": "rule:being-prone",
+  "name": "Being Prone",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Combatants often find themselves lying on the ground, either because they are knocked down or because they throw themselves down. In the game, they are Prone, a condition described in appendix PH-A.\n\nYou can **drop Prone** without using any of your speed. **Standing up** takes more effort; doing so costs an amount of movement equal to half your speed.\n\nFor example, if your speed is 30 feet, you must spend 15 feet of movement to stand up. You can't stand up if you don't have enough movement left or if your speed is 0.\n\nTo move while Prone, you must **crawl** or use magic such as teleportation. Every foot of movement while crawling costs 1 extra foot. Crawling 1 foot in difficult terrain, therefore, costs 3 feet of movement.",
+    "plain": "Combatants often find themselves lying on the ground, either because they are knocked down or because they throw themselves down. In the game, they are Prone, a condition described in appendix PH-A.\n\nYou can drop Prone without using any of your speed. Standing up takes more effort; doing so costs an amount of movement equal to half your speed.\n\nFor example, if your speed is 30 feet, you must spend 15 feet of movement to stand up. You can't stand up if you don't have enough movement left or if your speed is 0.\n\nTo move while Prone, you must crawl or use magic such as teleportation. Every foot of movement while crawling costs 1 extra foot. Crawling 1 foot in difficult terrain, therefore, costs 3 feet of movement.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "drop-prone",
+      "when": {
+        "all": [
+          {
+            "turn": "self"
+          },
+          {
+            "match": {
+              "speeds": {
+                "movement-mode:walk": true
+              }
+            }
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:prone"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

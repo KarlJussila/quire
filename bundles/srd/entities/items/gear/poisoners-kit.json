@@ -1,0 +1,18 @@
+{
+  "id": "item:poisoners-kit",
+  "name": "Poisoner’s Kit",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A poisoner’s kit is a favored resource for thieves, assassins, and others who engage in skulduggery. It allows you to apply poisons and create them from various materials. Your knowledge of poisons also helps you treat them.\n\n***Components.*** A poisoner’s kit includes glass vials, a mortar and pestle, chemicals, and a glass stirring rod.\n\n***History.*** Your training with poisons can help you when you try to recall facts about infamous poisonings.\n\n***Investigation, Perception.*** Your knowledge of poisons has taught you to handle those substances carefully, giving you an edge when you inspect poisoned objects or try to extract clues from events that involve poison.\n\n***Medicine.*** When you treat the victim of a poison, your knowledge grants you added insight into how to provide the best care to your patient.\n\n***Nature, Survival.*** Working with poisons enables you to acquire lore about which plants and animals are poisonous.\n\n***Handle Poison.*** Your proficiency allows you to handle and apply a poison without risk of exposing yourself to its effects.\n\n##### POISONER’S KIT\n\n| Activity | DC |\n|---|---|\n| Spot a poisoned object | 10 |\n| Determine the effects of a poison | 20 |",
+    "plain": "A poisoner’s kit is a favored resource for thieves, assassins, and others who engage in skulduggery. It allows you to apply poisons and create them from various materials. Your knowledge of poisons also helps you treat them.\n\nComponents. A poisoner’s kit includes glass vials, a mortar and pestle, chemicals, and a glass stirring rod.\n\nHistory. Your training with poisons can help you when you try to recall facts about infamous poisonings.\n\nInvestigation, Perception. Your knowledge of poisons has taught you to handle those substances carefully, giving you an edge when you inspect poisoned objects or try to extract clues from events that involve poison.\n\nMedicine. When you treat the victim of a poison, your knowledge grants you added insight into how to provide the best care to your patient.\n\nNature, Survival. Working with poisons enables you to acquire lore about which plants and animals are poisonous.\n\nHandle Poison. Your proficiency allows you to handle and apply a poison without risk of exposing yourself to its effects.\n\nPOISONER’S KIT\n\nActivity\tDC\n\nSpot a poisoned object\t10\n\nDetermine the effects of a poison\t20",
+    "wording": "srd"
+  },
+  "group": "group:tools",
+  "cost": {
+    "amount": 50,
+    "currency": "currency:gp"
+  },
+  "weight": 2.0
+}

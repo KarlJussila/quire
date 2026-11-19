@@ -1,0 +1,55 @@
+{
+  "id": "feat:savage-attacker@2024",
+  "name": "Savage Attacker",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You've trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon's damage dice twice and use either roll against the target.",
+    "plain": "You've trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon's damage dice twice and use either roll against the target.",
+    "wording": "srd"
+  },
+  "group": "group:origin",
+  "activities": [
+    {
+      "key": "savage-attacker",
+      "name": "Savage Attacker",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "weapon"
+          }
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": {
+                "pool": "any"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Roll the weapon’s damage dice twice and use either roll against the target.",
+            "gap": {
+              "category": "activity",
+              "name": "choose between two damage rolls"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

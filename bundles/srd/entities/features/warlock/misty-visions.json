@@ -1,0 +1,31 @@
+{
+  "id": "feature:warlock/misty-visions",
+  "name": "Misty Visions",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can cast Silent Image at will, without expending a spell slot or material components.",
+    "plain": "You can cast Silent Image at will, without expending a spell slot or material components.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:silent-image"
+      ],
+      "how": "innate",
+      "set": {
+        "components": {
+          "material": {
+            "$delete": true
+          }
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": []
+}

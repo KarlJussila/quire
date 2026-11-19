@@ -1,0 +1,13 @@
+{
+  "id": "language:thieves-cant",
+  "name": "Thieves' Cant",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A secret mix of dialect, jargon, and code, spoken by rogues and other criminals. It has no written form.",
+    "plain": "A secret mix of dialect, jargon, and code, spoken by rogues and other criminals. It has no written form.",
+    "wording": "original"
+  },
+  "speakers": "Rogues and other criminals"
+}

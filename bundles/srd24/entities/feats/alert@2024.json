@@ -1,0 +1,78 @@
+{
+  "id": "feat:alert@2024",
+  "name": "Alert",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain the following benefits.\n\n_**Initiative Proficiency.**_ When you roll Initiative, you can add your Proficiency Bonus to the roll.\n\n_**Initiative Swap.**_ Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can't make this swap if you or the ally has the Incapacitated condition.",
+    "plain": "You gain the following benefits.\n\nInitiative Proficiency. When you roll Initiative, you can add your Proficiency Bonus to the roll.\n\nInitiative Swap. Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can't make this swap if you or the ally has the Incapacitated condition.",
+    "wording": "srd"
+  },
+  "group": "group:origin",
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": "proficiencyBonus"
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:initiative"
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "initiative-swap",
+      "name": "Initiative Swap",
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:initiative"
+        }
+      },
+      "when": {
+        "not": {
+          "has": "condition:incapacitated"
+        }
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "ally",
+          "where": {
+            "all": [
+              {
+                "willing": true
+              },
+              {
+                "not": {
+                  "has": "condition:incapacitated"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Swap your Initiative with the ally's.",
+            "gap": {
+              "category": "activity",
+              "name": "swap initiative"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

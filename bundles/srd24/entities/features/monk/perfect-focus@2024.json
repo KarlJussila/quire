@@ -1,0 +1,46 @@
+{
+  "id": "feature:monk/perfect-focus@2024",
+  "name": "Level 15: Perfect Focus",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you roll Initiative and don't use Uncanny Metabolism, you regain expended Focus Points until you have 4 if you have 3 or fewer.",
+    "plain": "When you roll Initiative and don't use Uncanny Metabolism, you regain expended Focus Points until you have 4 if you have 3 or fewer.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "perfect-focus",
+      "name": "Perfect Focus",
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:initiative"
+        }
+      },
+      "outcomes": [
+        {
+          "pool": {
+            "resource": "focus-points",
+            "add": {
+              "sum": [
+                4,
+                {
+                  "times": "pools.focus-points.current",
+                  "by": -1
+                }
+              ]
+            }
+          },
+          "when": {
+            "compare": "pools.focus-points.current",
+            "atMost": 3
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

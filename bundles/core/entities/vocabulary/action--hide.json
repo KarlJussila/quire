@@ -1,0 +1,7 @@
+{
+  "id": "action:hide",
+  "name": "Hide",
+  "source": {
+    "book": "core"
+  }
+}

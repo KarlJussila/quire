@@ -1,0 +1,141 @@
+{
+  "id": "creature:vampire-spawn",
+  "name": "Vampire Spawn",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:neutral-evil",
+  "ac": 15,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 82,
+    "formula": "11d8 + 33"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 12,
+    "ability:con": 16,
+    "ability:dex": 16,
+    "ability:int": 11,
+    "ability:str": 16,
+    "ability:wis": 10
+  },
+  "saves": {
+    "ability:dex": 6,
+    "ability:wis": 3
+  },
+  "skills": {
+    "skill:perception": 3,
+    "skill:stealth": 6
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 13,
+  "xp": 1800,
+  "cr": 5,
+  "languages": [
+    {
+      "text": "the languages it knew in life"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:necrotic"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Regeneration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The vampire regains 10 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn.",
+        "plain": "The vampire regains 10 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spider Climb",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The vampire can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+        "plain": "The vampire can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Vampire Weaknesses",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The vampire has the following flaws:\n\n_**Forbiddance.**_ The vampire can't enter a residence without an invitation from one of the occupants.\n\n_**Harmed by Running Water.**_ The vampire takes 20 acid damage when it ends its turn in running water.\n\n_**Stake to the Heart.**_ The vampire is destroyed if a piercing weapon made of wood is driven into its heart while it is Incapacitated in its resting place.\n\n_**Sunlight Hypersensitivity.**_ The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks.",
+        "plain": "The vampire has the following flaws:\n\nForbiddance. The vampire can't enter a residence without an invitation from one of the occupants.\n\nHarmed by Running Water. The vampire takes 20 acid damage when it ends its turn in running water.\n\nStake to the Heart. The vampire is destroyed if a piercing weapon made of wood is driven into its heart while it is Incapacitated in its resting place.\n\nSunlight Hypersensitivity. The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The vampire makes two attacks, only one of which can be a bite attack.",
+        "plain": "The vampire makes two attacks, only one of which can be a bite attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claws",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one creature. _Hit:_ 8 (2d4 + 3) slashing damage. Instead of dealing damage, the vampire can grapple the target (escape DC 13).",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 8 (2d4 + 3) slashing damage. Instead of dealing damage, the vampire can grapple the target (escape DC 13).",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one willing creature, or a creature that is Grappled by the vampire, Incapacitated, or Restrained. _Hit:_ 6 (1d6 + 3) piercing damage plus 7 (2d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one willing creature, or a creature that is Grappled by the vampire, Incapacitated, or Restrained. Hit: 6 (1d6 + 3) piercing damage plus 7 (2d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

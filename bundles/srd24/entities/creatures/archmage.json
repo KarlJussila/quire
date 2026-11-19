@@ -1,0 +1,131 @@
+{
+  "id": "creature:archmage@2024",
+  "name": "Archmage",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 17,
+  "hp": {
+    "average": 170,
+    "formula": "31d8 + 31"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 16,
+    "ability:con": 12,
+    "ability:dex": 14,
+    "ability:int": 20,
+    "ability:str": 10,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:int": 9,
+    "ability:wis": 6
+  },
+  "skills": {
+    "skill:arcana": 13,
+    "skill:history": 9,
+    "skill:perception": 6
+  },
+  "passivePerception": 16,
+  "xp": 8000,
+  "proficiencyBonus": 4,
+  "initiative": 7,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Arcana",
+    "Individual"
+  ],
+  "gear": [
+    "Wand"
+  ],
+  "cr": 12,
+  "languages": [
+    {
+      "text": "Common plus five other languages"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:psychic"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The archmage has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The archmage has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The archmage makes four Arcane Burst attacks.",
+        "plain": "The archmage makes four Arcane Burst attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Arcane Burst",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +9, reach 5 ft. or range 150 ft. _Hit:_ 27 (4d10 + 5) Force damage.",
+        "plain": "Melee or Ranged Attack Roll: +9, reach 5 ft. or range 150 ft. Hit: 27 (4d10 + 5) Force damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The archmage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 17):\n\n- **At Will:** Detect Magic, Detect Thoughts, Disguise Self, Invisibility, Light, Mage Armor (included in AC), Mage Hand, Prestidigitation\n- **2/Day Each:** Fly, Lightning Bolt (level 7 version)\n- **1/Day Each:** Cone of Cold (level 9 version), Mind Blank  (cast before combat), Scrying, Teleport",
+        "plain": "The archmage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 17):\n\n- At Will: Detect Magic, Detect Thoughts, Disguise Self, Invisibility, Light, Mage Armor (included in AC), Mage Hand, Prestidigitation\n- 2/Day Each: Fly, Lightning Bolt (level 7 version)\n- 1/Day Each: Cone of Cold (level 9 version), Mind Blank  (cast before combat), Scrying, Teleport",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Misty Step",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The mage casts Misty Step, using the same spellcasting ability as Spellcasting.",
+        "plain": "The mage casts Misty Step, using the same spellcasting ability as Spellcasting.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Protective Magic",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "The archmage casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.",
+        "plain": "The archmage casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

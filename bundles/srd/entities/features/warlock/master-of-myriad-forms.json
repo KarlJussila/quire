@@ -1,0 +1,28 @@
+{
+  "id": "feature:warlock/master-of-myriad-forms",
+  "name": "Master of Myriad Forms",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite: 15th level_\n\nYou can cast Alter Self at will, without expending a spell slot.",
+    "plain": "Prerequisite: 15th level\n\nYou can cast Alter Self at will, without expending a spell slot.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 15
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:alter-self"
+      ],
+      "how": "innate"
+    }
+  ],
+  "activities": [],
+  "gaps": []
+}

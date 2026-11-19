@@ -1,0 +1,43 @@
+{
+  "id": "rule:finesse-weapon",
+  "name": "Finesse",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "An attack with a Finesse weapon can use Strength or Dexterity, for the attack roll and the damage roll alike."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "object",
+    "where": {
+      "match": {
+        "weapon": {
+          "properties": "weapon-property:finesse"
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "type": "ability-substitute",
+      "for": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": [
+            "roll:attack",
+            "roll:damage"
+          ],
+          "attack": {
+            "item": "this"
+          }
+        }
+      },
+      "use": [
+        "ability:str",
+        "ability:dex"
+      ]
+    }
+  ]
+}

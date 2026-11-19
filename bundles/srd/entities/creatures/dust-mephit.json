@@ -1,0 +1,113 @@
+{
+  "id": "creature:dust-mephit",
+  "name": "Dust Mephit",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:elemental",
+  "alignment": "alignment:neutral-evil",
+  "ac": 12,
+  "hp": {
+    "average": 17,
+    "formula": "5d6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 10,
+    "ability:dex": 14,
+    "ability:int": 9,
+    "ability:str": 5,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:perception": 2,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 12,
+  "xp": 100,
+  "cr": 0.5,
+  "languages": [
+    {
+      "language": "language:auran"
+    },
+    {
+      "language": "language:terran"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "vulnerable": [
+        "damage-type:fire"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Death Burst",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "When the mephit dies, it explodes in a burst of dust. Each creature within 5 feet of it must then succeed on a DC 10 Constitution saving throw or be Blinded for 1 minute. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.",
+        "plain": "When the mephit dies, it explodes in a burst of dust. Each creature within 5 feet of it must then succeed on a DC 10 Constitution saving throw or be Blinded for 1 minute. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Innate Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The mephit can innately cast Sleep, requiring no material components. Its innate spellcasting ability is Charisma.",
+        "plain": "The mephit can innately cast Sleep, requiring no material components. Its innate spellcasting ability is Charisma.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claws",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one creature. _Hit:_ 4 (1d4 + 2) slashing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Blinding Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The mephit exhales a 15 foot cone of blinding dust. Each creature in that area must succeed on a DC 10 Dexterity saving throw or be Blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+        "plain": "The mephit exhales a 15 foot cone of blinding dust. Each creature in that area must succeed on a DC 10 Dexterity saving throw or be Blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "alignment:neutral-good",
+  "name": "Neutral Good",
+  "source": {
+    "book": "core"
+  },
+  "components": [
+    "alignment:neutral",
+    "alignment:good"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "feature:half-orc/savage-attacks",
+  "name": "Savage Attacks",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.",
+    "plain": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.",
+    "wording": "srd"
+  }
+}

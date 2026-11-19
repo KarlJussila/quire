@@ -1,0 +1,38 @@
+{
+  "id": "feature:wizard/scholar@2024",
+  "name": "Level 2: Scholar",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While studying magic, you also specialized in another field of study. Choose one of the following skills in which you have proficiency: Arcana, History, Investigation, Medicine, Nature, or Religion. You have Expertise in the chosen skill.",
+    "plain": "While studying magic, you also specialized in another field of study. Choose one of the following skills in which you have proficiency: Arcana, History, Investigation, Medicine, Nature, or Religion. You have Expertise in the chosen skill.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "level": "expertise",
+      "in": [
+        {
+          "choose": {
+            "key": "scholar-skill",
+            "name": "Scholar Skill Expertise",
+            "count": 1,
+            "from": [
+              "skill:arcana",
+              "skill:history",
+              "skill:investigation",
+              "skill:medicine",
+              "skill:nature",
+              "skill:religion"
+            ],
+            "where": {
+              "proficient": "candidate"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "feature:monk/purity-of-body",
+  "name": "Purity of Body",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 10th level, your mastery of the ki flowing through you makes you immune to disease and poison.",
+    "plain": "At 10th level, your mastery of the ki flowing through you makes you immune to disease and poison.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned",
+        "damage-type:poison",
+        "source-type:poison",
+        "source-type:disease"
+      ]
+    }
+  ]
+}

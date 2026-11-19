@@ -1,0 +1,11 @@
+{
+  "id": "event:dusk",
+  "name": "Dusk",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Dusk, or sunset, each day. Items that regain charges \"daily at dusk\" or can't be used again \"until the next sunset\" recover on it. No clock is kept yet: the event fires when the table says dusk has come."
+  },
+  "emittedBy": "engine"
+}

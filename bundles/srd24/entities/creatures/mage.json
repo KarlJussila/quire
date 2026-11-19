@@ -1,0 +1,108 @@
+{
+  "id": "creature:mage@2024",
+  "name": "Mage",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 15,
+  "hp": {
+    "average": 81,
+    "formula": "18d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 11,
+    "ability:dex": 14,
+    "ability:int": 17,
+    "ability:str": 9,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:int": 6,
+    "ability:wis": 4
+  },
+  "skills": {
+    "skill:arcana": 6,
+    "skill:history": 6,
+    "skill:perception": 4
+  },
+  "passivePerception": 14,
+  "xp": 2300,
+  "proficiencyBonus": 3,
+  "initiative": 2,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Arcana",
+    "Individual"
+  ],
+  "gear": [
+    "Wand"
+  ],
+  "cr": 6,
+  "languages": [
+    {
+      "text": "Common plus three other languages"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The mage makes three Arcane Burst attacks.",
+        "plain": "The mage makes three Arcane Burst attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Arcane Burst",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +6, reach 5 ft. or range 120 ft. _Hit:_ 16 (3d8 + 3) Force damage.",
+        "plain": "Melee or Ranged Attack Roll: +6, reach 5 ft. or range 120 ft. Hit: 16 (3d8 + 3) Force damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The mage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 14):\n\n- **At Will:** Detect Magic, Light, Mage Armor (included in AC), Mage Hand, Prestidigitation\n- **2/Day Each:** Fireball (level 4 version), Invisibility\n- **1/Day Each:** Cone of Cold, Fly",
+        "plain": "The mage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 14):\n\n- At Will: Detect Magic, Light, Mage Armor (included in AC), Mage Hand, Prestidigitation\n- 2/Day Each: Fireball (level 4 version), Invisibility\n- 1/Day Each: Cone of Cold, Fly",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Misty Step",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The mage casts Misty Step, using the same spellcasting ability as Spellcasting.",
+        "plain": "The mage casts Misty Step, using the same spellcasting ability as Spellcasting.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Protective Magic",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "The mage casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.",
+        "plain": "The mage casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

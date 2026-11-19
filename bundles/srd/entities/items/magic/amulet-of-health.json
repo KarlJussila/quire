@@ -1,0 +1,35 @@
+{
+  "id": "item:amulet-of-health",
+  "name": "Amulet of Health",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is already 19 or higher.",
+    "plain": "Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is already 19 or higher.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "weight": 0,
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:con": {
+            "$atLeast": 19
+          }
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ]
+}

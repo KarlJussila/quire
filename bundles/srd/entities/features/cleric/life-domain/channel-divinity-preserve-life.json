@@ -1,0 +1,73 @@
+{
+  "id": "feature:cleric/life-domain/channel-divinity-preserve-life",
+  "name": "Channel Divinity: Preserve Life",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.\n\nAs an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct.",
+    "plain": "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.\n\nAs an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "preserve-life",
+      "name": "Channel Divinity: Preserve Life",
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "channel-divinity"
+        }
+      ],
+      "outcomes": [
+        {
+          "heal": {
+            "amount": {
+              "times": "levels.class:cleric",
+              "by": 5
+            },
+            "split": true
+          }
+        },
+        {
+          "prose": {
+            "text": "This feature can restore a creature to no more than half its hit point maximum.",
+            "gap": {
+              "category": "activity",
+              "name": "cap healing at half the hit point maximum"
+            }
+          }
+        }
+      ],
+      "target": {
+        "count": {
+          "atLeast": 1
+        },
+        "who": {
+          "pool": "any",
+          "chosen": true,
+          "includeSelf": true,
+          "where": {
+            "all": [
+              {
+                "within": 30
+              },
+              {
+                "not": {
+                  "match": {
+                    "creatureType": [
+                      "creature-type:undead",
+                      "creature-type:construct"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

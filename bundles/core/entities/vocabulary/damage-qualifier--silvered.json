@@ -1,0 +1,10 @@
+{
+  "id": "damage-qualifier:silvered",
+  "name": "Silvered",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

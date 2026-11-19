@@ -1,0 +1,23 @@
+{
+  "id": "feature:monk/tongue-of-the-sun-and-moon",
+  "name": "Tongue of the Sun and Moon",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 13th level, you learn to touch the ki of other minds so that you understand all spoken languages. Moreover, any creature that can understand a language can understand what you say.",
+    "plain": "Starting at 13th level, you learn to touch the ki of other minds so that you understand all spoken languages. Moreover, any creature that can understand a language can understand what you say.",
+    "wording": "srd"
+  },
+  "effects": [],
+  "gaps": [
+    {
+      "category": "communication",
+      "name": "Understand all spoken languages without gaining literacy or language proficiency."
+    },
+    {
+      "category": "communication",
+      "name": "A creature that can understand a language can understand what you say."
+    }
+  ]
+}

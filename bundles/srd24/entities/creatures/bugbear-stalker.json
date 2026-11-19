@@ -1,0 +1,120 @@
+{
+  "id": "creature:bugbear-stalker@2024",
+  "name": "Bugbear Stalker",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fey",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 15,
+  "hp": {
+    "average": 65,
+    "formula": "10d8 + 20"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 14,
+    "ability:dex": 14,
+    "ability:int": 11,
+    "ability:str": 17,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:con": 4,
+    "ability:wis": 3
+  },
+  "skills": {
+    "skill:stealth": 6,
+    "skill:survival": 3
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 11,
+  "xp": 700,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Forest",
+    "Grassland",
+    "Planar (Feywild)",
+    "Underdark"
+  ],
+  "treasure": [
+    "Armaments",
+    "Individual"
+  ],
+  "gear": [
+    "Chain Shirt",
+    "Javelins (6)",
+    "Morningstar"
+  ],
+  "cr": 3,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:goblin"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Abduct",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The bugbear needn't spend extra movement to move a creature it is grappling.",
+        "plain": "The bugbear needn't spend extra movement to move a creature it is grappling.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The bugbear makes two Javelin or Morningstar attacks.",
+        "plain": "The bugbear makes two Javelin or Morningstar attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Javelin",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +5, reach 10 ft. or range 30/120 ft. _Hit:_ 13 (3d6 + 3) Piercing damage.",
+        "plain": "Melee or Ranged Attack Roll: +5, reach 10 ft. or range 30/120 ft. Hit: 13 (3d6 + 3) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Morningstar",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5 (with Advantage if the target is Grappled by the bugbear), reach 10 ft. _Hit:_ 12 (2d8 + 3) Piercing damage.",
+        "plain": "Melee Attack Roll: +5 (with Advantage if the target is Grappled by the bugbear), reach 10 ft. Hit: 12 (2d8 + 3) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Quick Grapple",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 13, one Medium or smaller creature the bugbear can see within 10 feet. _Failure:_ The target has the Grappled condition (escape DC 13).",
+        "plain": "Dexterity Saving Throw: DC 13, one Medium or smaller creature the bugbear can see within 10 feet. Failure: The target has the Grappled condition (escape DC 13).",
+        "wording": "srd"
+      }
+    }
+  ]
+}

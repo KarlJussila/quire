@@ -1,0 +1,13 @@
+{
+  "id": "item:figurine-of-wondrous-power-ebony-fly@2024",
+  "name": "Figurine of Wondrous Power, Ebony Fly",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "A Figurine of Wondrous Power is a pocket-sized statuette that becomes its specified living creature when thrown to the ground with a Magic action. This ebony statuette, carved in the likeness of a horsefly, can become a Giant Fly for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 2 days have passed.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare"
+}

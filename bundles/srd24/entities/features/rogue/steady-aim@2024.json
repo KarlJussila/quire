@@ -1,0 +1,43 @@
+{
+  "id": "feature:rogue/steady-aim@2024",
+  "name": "Level 3: Steady Aim",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Bonus Action, you give yourself Advantage on your next attack roll on the current turn. You can use this feature only if you haven't moved during this turn, and after you use it, your Speed is 0 until the end of the current turn.",
+    "plain": "As a Bonus Action, you give yourself Advantage on your next attack roll on the current turn. You can use this feature only if you haven't moved during this turn, and after you use it, your Speed is 0 until the end of the current turn.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "steady-aim",
+      "name": "Steady Aim",
+      "when": {
+        "not": {
+          "moved": {
+            "atLeast": 1,
+            "since": "turn-start"
+          }
+        }
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Gain advantage on your next attack roll this turn. Your Speed is 0 until the end of the current turn.",
+            "gap": {
+              "category": "state",
+              "name": "advantage on next attack and Speed 0"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

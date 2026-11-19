@@ -1,0 +1,29 @@
+{
+  "id": "state:surprised@2024",
+  "name": "Surprised",
+  "source": {
+    "book": "core"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:initiative"
+        }
+      }
+    }
+  ],
+  "ends": [
+    {
+      "event": "event:roll-made",
+      "by": "self",
+      "match": {
+        "roll": "roll:initiative"
+      }
+    }
+  ]
+}

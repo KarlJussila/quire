@@ -1,0 +1,12 @@
+{
+  "id": "feature:devouring-blade/2@2024",
+  "name": "Devouring Blade",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 12+ Warlock, Thirsting Blade Invocation_\n\nThe Extra Attack of your Thirsting Blade invocation confers two extra attacks rather than one.",
+    "plain": "Prerequisite: Level 12+ Warlock, Thirsting Blade Invocation\n\nThe Extra Attack of your Thirsting Blade invocation confers two extra attacks rather than one.",
+    "wording": "srd"
+  }
+}

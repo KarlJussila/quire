@@ -1,0 +1,137 @@
+{
+  "id": "creature:ice-devil@2024",
+  "name": "Ice Devil",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 18,
+  "hp": {
+    "average": 228,
+    "formula": "24d10 + 96"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 18,
+    "ability:con": 18,
+    "ability:dex": 14,
+    "ability:int": 18,
+    "ability:str": 21,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:cha": 9,
+    "ability:con": 9,
+    "ability:dex": 7,
+    "ability:wis": 7
+  },
+  "skills": {
+    "skill:insight": 7,
+    "skill:perception": 7,
+    "skill:persuasion": 9
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 17,
+  "telepathy": 120,
+  "xp": 11500,
+  "proficiencyBonus": 5,
+  "initiative": 7,
+  "habitat": [
+    "Planar (Nine Hells)"
+  ],
+  "treasure": [
+    "Arcana"
+  ],
+  "cr": 14,
+  "languages": [
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Diabolical Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+        "plain": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The devil has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The devil has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The devil makes three Ice Spear attacks. It can replace one attack with a Tail attack.",
+        "plain": "The devil makes three Ice Spear attacks. It can replace one attack with a Tail attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ice Spear",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +10, reach 5 ft. or range 30/120 ft. _Hit:_ 14 (2d8 + 5) Piercing damage plus 10 (3d6) Cold damage. Until the end of its next turn, the target can't take a Bonus Action or Reaction, its Speed decreases by 10 feet, and it can move or take one action on its turn, not both. _Hit or Miss:_ The spear magically returns to the devil's hand immediately after a ranged attack.",
+        "plain": "Melee or Ranged Attack Roll: +10, reach 5 ft. or range 30/120 ft. Hit: 14 (2d8 + 5) Piercing damage plus 10 (3d6) Cold damage. Until the end of its next turn, the target can't take a Bonus Action or Reaction, its Speed decreases by 10 feet, and it can move or take one action on its turn, not both. Hit or Miss: The spear magically returns to the devil's hand immediately after a ranged attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +10, reach 10 ft. _Hit:_ 15 (3d6 + 5) Bludgeoning damage plus 18 (4d8) Cold damage.",
+        "plain": "Melee Attack Roll: +10, reach 10 ft. Hit: 15 (3d6 + 5) Bludgeoning damage plus 18 (4d8) Cold damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ice Wall",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The devil casts Wall of Ice (level 8 version), requiring no spell components and using Intelligence as the spellcasting ability (spell save DC 17).",
+        "plain": "The devil casts Wall of Ice (level 8 version), requiring no spell components and using Intelligence as the spellcasting ability (spell save DC 17).",
+        "wording": "srd"
+      }
+    }
+  ]
+}

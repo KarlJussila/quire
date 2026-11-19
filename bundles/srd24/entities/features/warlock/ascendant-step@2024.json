@@ -1,0 +1,39 @@
+{
+  "id": "feature:warlock/ascendant-step@2024",
+  "name": "Ascendant Step",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 5+ Warlock_\n\nYou can cast Levitate on yourself without expending a spell slot.",
+    "plain": "Prerequisite: Level 5+ Warlock\n\nYou can cast Levitate on yourself without expending a spell slot.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 5
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:levitate"
+      ],
+      "how": "innate",
+      "set": {
+        "activities": {
+          "cast": {
+            "target": {
+              "$replace": {
+                "who": "self",
+                "count": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "gaps": []
+}

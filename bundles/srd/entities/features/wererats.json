@@ -1,0 +1,11 @@
+{
+  "id": "feature:wererats",
+  "name": "Wererats",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

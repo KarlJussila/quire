@@ -1,0 +1,18 @@
+{
+ "id": "edition-user",
+ "name": "Either Edition",
+ "version": "1.0.0",
+ "kind": "homebrew",
+ "requires": [
+  {
+   "anyOf": [
+    {
+     "bundle": "ed14"
+    },
+    {
+     "bundle": "ed24"
+    }
+   ]
+  }
+ ]
+}

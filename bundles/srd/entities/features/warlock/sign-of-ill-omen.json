@@ -1,0 +1,61 @@
+{
+  "id": "feature:warlock/sign-of-ill-omen",
+  "name": "Sign of Ill Omen",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite: 5th level_\n\nYou can cast Bestow Curse once using a warlock spell slot. You can't do so again until you finish a long rest.",
+    "plain": "Prerequisite: 5th level\n\nYou can cast Bestow Curse once using a warlock spell slot. You can't do so again until you finish a long rest.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [],
+  "activities": [
+    {
+      "key": "cast-bestow-curse",
+      "name": "Cast Bestow Curse",
+      "when": {
+        "compare": "levels.class:warlock",
+        "atLeast": 5
+      },
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "pact-magic"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "cast": {
+            "spell": "spell:bestow-curse",
+            "castAt": "spellcasting.class:warlock.spellLevel",
+            "slot": false
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [],
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 5
+  }
+}

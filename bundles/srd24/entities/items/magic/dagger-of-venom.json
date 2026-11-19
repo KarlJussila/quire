@@ -1,0 +1,177 @@
+{
+  "id": "item:dagger-of-venom@2024",
+  "name": "Dagger of Venom",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.\n\nYou can take a Bonus Action to magically coat the blade with poison. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 15 Constitution saving throw or take 2d10 Poison damage and have the Poisoned condition for 1 minute. The weapon can't be used this way again until the next dawn.",
+    "plain": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.\n\nYou can take a Bonus Action to magically coat the blade with poison. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 15 Constitution saving throw or take 2d10 Poison damage and have the Poisoned condition for 1 minute. The weapon can't be used this way again until the next dawn.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:rare",
+  "base": "item:dagger",
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "coat-the-blade",
+      "name": "Coat the Blade with Poison",
+      "when": {
+        "has": "this",
+        "match": {
+          "held": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:dawn"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "triggered",
+                  "on": {
+                    "event": "event:roll-resolved",
+                    "by": "self",
+                    "subject": {
+                      "pool": "any",
+                      "where": {
+                        "kind": "creature"
+                      }
+                    },
+                    "match": {
+                      "roll": "roll:attack",
+                      "success": true,
+                      "attack": {
+                        "item": "this"
+                      }
+                    }
+                  },
+                  "step": {
+                    "delivery": {
+                      "save": {
+                        "ability": "ability:con",
+                        "dc": 15
+                      }
+                    },
+                    "outcomes": [
+                      {
+                        "damage": {
+                          "amount": "2d10",
+                          "type": "damage-type:poison"
+                        },
+                        "to": "subject",
+                        "when": {
+                          "event": "event:roll-resolved",
+                          "match": {
+                            "success": false
+                          }
+                        }
+                      },
+                      {
+                        "applyState": {
+                          "state": "condition:poisoned",
+                          "duration": {
+                            "amount": 1,
+                            "unit": "minute"
+                          }
+                        },
+                        "to": "subject",
+                        "when": {
+                          "event": "event:roll-resolved",
+                          "match": {
+                            "success": false
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "duration": {
+                "amount": 1,
+                "unit": "minute"
+              },
+              "ends": [
+                {
+                  "event": "event:roll-resolved",
+                  "by": "self",
+                  "subject": {
+                    "pool": "any",
+                    "where": {
+                      "kind": "creature"
+                    }
+                  },
+                  "match": {
+                    "roll": "roll:attack",
+                    "success": true,
+                    "attack": {
+                      "item": "this"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "to": "this"
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

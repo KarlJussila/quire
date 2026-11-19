@@ -1,0 +1,8 @@
+{
+  "id": "environment:darkness",
+  "name": "Darkness",
+  "source": {
+    "book": "core"
+  },
+  "isA": "environment:heavily-obscured"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "item:figurine-of-wondrous-power-bronze-griffon@2024",
+  "name": "Figurine of Wondrous Power, Bronze Griffon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "A Figurine of Wondrous Power is a pocket-sized statuette that becomes its specified living creature when thrown to the ground with a Magic action. This bronze statuette is of a griffon rampant. It can become a Griffon for up to 6 hours. Once it has been used, it can't be used again until 5 days have passed.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare"
+}

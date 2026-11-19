@@ -1,0 +1,38 @@
+{
+  "id": "item:glamoured-studded-leather@2024",
+  "name": "Glamoured Studded Leather",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this armor, you gain a +1 bonus to Armor Class. You can also take a Bonus Action to cause the armor to assume the appearance of a normal set of clothing or some other kind of armor. You decide what it looks like — including color, style, and accessories — but the armor retains its normal bulk and weight. The illusory appearance lasts until you use this property again or doff the armor.",
+    "plain": "While wearing this armor, you gain a +1 bonus to Armor Class. You can also take a Bonus Action to cause the armor to assume the appearance of a normal set of clothing or some other kind of armor. You decide what it looks like — including color, style, and accessories — but the armor retains its normal bulk and weight. The illusory appearance lasts until you use this property again or doff the armor.",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:rare",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "The schema cannot store the chosen illusory appearance or its appearance details for the Bonus Action that changes it."
+    }
+  ],
+  "base": "item:studded-leather"
+}

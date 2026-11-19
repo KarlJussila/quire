@@ -1,0 +1,58 @@
+{
+  "id": "rule:unarmed-strike",
+  "name": "Unarmed Strike",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Instead of using a weapon to make a melee weapon attack, you can use an **unarmed strike**: a punch, kick, head-butt, or similar forceful blow (none of which count as weapons). On a hit, an unarmed strike deals bludgeoning damage equal to 1 + your Strength modifier. You are proficient with your unarmed strikes.",
+    "plain": "Instead of using a weapon to make a melee weapon attack, you can use an unarmed strike: a punch, kick, head-butt, or similar forceful blow (none of which count as weapons). On a hit, an unarmed strike deals bludgeoning damage equal to 1 + your Strength modifier. You are proficient with your unarmed strikes.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": "proficiencyBonus"
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "via": "unarmed"
+          }
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "unarmed-strike",
+      "standalone": false,
+      "delivery": {
+        "attack": {
+          "range": "melee",
+          "via": "unarmed",
+          "ability": "ability:str"
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": 1,
+            "type": "damage-type:bludgeoning"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "feature:dwarf/dwarven-resilience",
+  "name": "Dwarven Resilience",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
+    "plain": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "against": {
+            "sourceType": "source-type:poison"
+          }
+        }
+      }
+    }
+  ],
+  "gaps": []
+}

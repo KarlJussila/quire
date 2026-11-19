@@ -1,0 +1,7 @@
+{
+  "id": "source-type:thought-reading",
+  "name": "Thought Reading",
+  "source": {
+    "book": "core"
+  }
+}

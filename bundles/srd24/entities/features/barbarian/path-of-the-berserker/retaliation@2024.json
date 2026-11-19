@@ -1,0 +1,61 @@
+{
+  "id": "feature:barbarian/path-of-the-berserker/retaliation@2024",
+  "name": "Level 10: Retaliation",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you take damage from a creature that is within 5 feet of you, you can take a Reaction to make one melee attack against that creature, using a weapon or an Unarmed Strike.",
+    "plain": "When you take damage from a creature that is within 5 feet of you, you can take a Reaction to make one melee attack against that creature, using a weapon or an Unarmed Strike.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "retaliation",
+      "name": "Retaliation",
+      "trigger": {
+        "event": "event:damaged",
+        "by": {
+          "pool": "any",
+          "where": {
+            "within": 5,
+            "of": "self"
+          }
+        },
+        "subject": "self"
+      },
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "target": {
+        "who": "actor"
+      },
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "match": {
+                    "delivery": {
+                      "attack": {
+                        "range": [
+                          "melee",
+                          "melee-or-ranged"
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "times": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

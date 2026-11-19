@@ -1,0 +1,62 @@
+{
+  "id": "feature:cleric/life-domain/divine-strike",
+  "name": "Divine Strike",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
+    "plain": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "divine-strike",
+      "name": "Divine Strike",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any"
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "weapon"
+          }
+        }
+      },
+      "when": {
+        "turn": "self"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": {
+              "byLevel": {
+                "8": "1d8",
+                "14": "2d8"
+              },
+              "of": "class:cleric"
+            },
+            "type": "damage-type:radiant"
+          },
+          "to": "subject"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "id": "creature:balor",
+  "name": "Balor",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 19,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 262,
+    "formula": "21d12 + 126"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    }
+  },
+  "abilities": {
+    "ability:cha": 22,
+    "ability:con": 22,
+    "ability:dex": 15,
+    "ability:int": 20,
+    "ability:str": 26,
+    "ability:wis": 16
+  },
+  "saves": {
+    "ability:cha": 12,
+    "ability:con": 12,
+    "ability:str": 14,
+    "ability:wis": 9
+  },
+  "senses": {
+    "sense:truesight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 13,
+  "telepathy": 120,
+  "xp": 22000,
+  "cr": 19,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold",
+        "damage-type:lightning"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Death Throes",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "When the balor dies, it explodes, and each creature within 30 feet of it must make a DC 20 Dexterity saving throw, taking 70 (20d6) fire damage on a failed save, or half as much damage on a successful one. The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the balor's weapons.",
+        "plain": "When the balor dies, it explodes, and each creature within 30 feet of it must make a DC 20 Dexterity saving throw, taking 70 (20d6) fire damage on a failed save, or half as much damage on a successful one. The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the balor's weapons.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fire Aura",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "At the start of each of the balor's turns, each creature within 5 feet of it takes 10 (3d6) fire damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature that touches the balor or hits it with a melee attack while within 5 feet of it takes 10 (3d6) fire damage.",
+        "plain": "At the start of each of the balor's turns, each creature within 5 feet of it takes 10 (3d6) fire damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature that touches the balor or hits it with a melee attack while within 5 feet of it takes 10 (3d6) fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The balor has advantage on saving throws against spells and other magical effects.",
+        "plain": "The balor has advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Weapons",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The balor's weapon attacks are magical.",
+        "plain": "The balor's weapon attacks are magical.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The balor makes two attacks: one with its longsword and one with its whip.",
+        "plain": "The balor makes two attacks: one with its longsword and one with its whip.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Longsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +14 to hit, reach 10 ft., one target. _Hit:_ 21 (3d8 + 8) slashing damage plus 13 (3d8) lightning damage. If the balor scores a critical hit, it rolls damage dice three times, instead of twice.",
+        "plain": "Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 21 (3d8 + 8) slashing damage plus 13 (3d8) lightning damage. If the balor scores a critical hit, it rolls damage dice three times, instead of twice.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Whip",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +14 to hit, reach 30 ft., one target. _Hit:_ 15 (2d6 + 8) slashing damage plus 10 (3d6) fire damage, and the target must succeed on a DC 20 Strength saving throw or be pulled up to 25 feet toward the balor.",
+        "plain": "Melee Weapon Attack: +14 to hit, reach 30 ft., one target. Hit: 15 (2d6 + 8) slashing damage plus 10 (3d6) fire damage, and the target must succeed on a DC 20 Strength saving throw or be pulled up to 25 feet toward the balor.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Teleport",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The balor magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.",
+        "plain": "The balor magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "rarity:artifact",
+  "name": "Artifact",
+  "source": {
+    "book": "core"
+  },
+  "order": 6
+}

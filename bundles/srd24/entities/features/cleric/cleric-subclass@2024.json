@@ -1,0 +1,30 @@
+{
+  "id": "feature:cleric/cleric-subclass@2024",
+  "name": "Level 3: Cleric Subclass",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a Cleric subclass of your choice. The Life Domain subclass is detailed after this class's description. A subclass is a specialization that grants you features at certain Cleric levels. For the rest of your career, you gain each of your subclass's features that are of your Cleric level or lower.",
+    "plain": "You gain a Cleric subclass of your choice. The Life Domain subclass is detailed after this class's description. A subclass is a specialization that grants you features at certain Cleric levels. For the rest of your career, you gain each of your subclass's features that are of your Cleric level or lower.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "subclass",
+        "name": "Cleric Subclass",
+        "from": [
+          {
+            "kind": "subclass",
+            "where": {
+              "match": {
+                "class": "class:cleric"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "damage-qualifier:magical",
+  "name": "Magical",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

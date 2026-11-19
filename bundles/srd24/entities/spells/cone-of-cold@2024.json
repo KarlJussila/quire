@@ -1,0 +1,41 @@
+{
+  "id": "spell:cone-of-cold@2024",
+  "name": "Cone of Cold",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You unleash a blast of cold air. Each creature in a 60-foot Cone originating from you makes a\n\nConstitution saving throw, taking 8d8 Cold damage on a failed save or half as much damage on a successful one. A creature killed by this spell becomes a frozen statue until it thaws.\n\n_**Using a Higher-Level Spell Slot.**_ The damage increases by 1d8 for each spell slot level above 5.",
+    "plain": "You unleash a blast of cold air. Each creature in a 60-foot Cone originating from you makes a\n\nConstitution saving throw, taking 8d8 Cold damage on a failed save or half as much damage on a successful one. A creature killed by this spell becomes a frozen statue until it thaws.\n\nUsing a Higher-Level Spell Slot. The damage increases by 1d8 for each spell slot level above 5.",
+    "wording": "srd"
+  },
+  "level": 5,
+  "school": "spell-school:evocation",
+  "lists": [
+    "class:druid",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a small crystal or glass cone"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

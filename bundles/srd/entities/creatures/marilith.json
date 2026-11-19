@@ -1,0 +1,172 @@
+{
+  "id": "creature:marilith",
+  "name": "Marilith",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 18,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 189,
+    "formula": "18d10 + 90"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 20,
+    "ability:con": 20,
+    "ability:dex": 20,
+    "ability:int": 18,
+    "ability:str": 18,
+    "ability:wis": 16
+  },
+  "saves": {
+    "ability:cha": 10,
+    "ability:con": 10,
+    "ability:str": 9,
+    "ability:wis": 8
+  },
+  "senses": {
+    "sense:truesight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 13,
+  "telepathy": 120,
+  "xp": 15000,
+  "cr": 16,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:lightning"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The marilith has advantage on saving throws against spells and other magical effects.",
+        "plain": "The marilith has advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Weapons",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The marilith's weapon attacks are magical.",
+        "plain": "The marilith's weapon attacks are magical.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Reactive",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The marilith can take one reaction on every turn in a combat.",
+        "plain": "The marilith can take one reaction on every turn in a combat.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The marilith makes seven attacks: six with its longswords and one with its tail.",
+        "plain": "The marilith makes seven attacks: six with its longswords and one with its tail.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Longsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +9 to hit, reach 5 ft., one target. _Hit:_ 13 (2d8 + 4) slashing damage.",
+        "plain": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +9 to hit, reach 10 ft., one creature. _Hit:_ 15 (2d10 + 4) bludgeoning damage. If the target is Medium or smaller, it is Grappled (escape DC 19). Until this grapple ends, the target is Restrained, the marilith can automatically hit the target with its tail, and the marilith can't make tail attacks against other targets.",
+        "plain": "Melee Weapon Attack: +9 to hit, reach 10 ft., one creature. Hit: 15 (2d10 + 4) bludgeoning damage. If the target is Medium or smaller, it is Grappled (escape DC 19). Until this grapple ends, the target is Restrained, the marilith can automatically hit the target with its tail, and the marilith can't make tail attacks against other targets.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Teleport",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The marilith magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.",
+        "plain": "The marilith magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Parry",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "The marilith adds 5 to its AC against one melee attack that would hit it. To do so, the marilith must see the attacker and be wielding a melee weapon.",
+        "plain": "The marilith adds 5 to its AC against one melee attack that would hit it. To do so, the marilith must see the attacker and be wielding a melee weapon.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

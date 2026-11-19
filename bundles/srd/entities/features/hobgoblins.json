@@ -1,0 +1,11 @@
+{
+  "id": "feature:hobgoblins",
+  "name": "Hobgoblins",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

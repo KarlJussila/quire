@@ -1,0 +1,46 @@
+{
+  "id": "spell:fly",
+  "name": "Fly",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You touch a willing creature. The target gains a flying speed of 60 feet for the duration. When the spell ends, the target falls if it is still aloft, unless it can stop the fall.\n\n_**At Higher Levels.**_ When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd.",
+    "plain": "You touch a willing creature. The target gains a flying speed of 60 feet for the duration. When the spell ends, the target falls if it is still aloft, unless it can stop the fall.\n\nAt Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a wing feather from any bird"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 10,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

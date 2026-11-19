@@ -1,0 +1,64 @@
+{
+  "id": "creature:seahorse@2024",
+  "name": "Seahorse",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "hp": {
+    "average": 1,
+    "formula": "1d4 - 1"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 5
+    },
+    "movement-mode:swim": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 2,
+    "ability:con": 8,
+    "ability:dex": 12,
+    "ability:int": 1,
+    "ability:str": 1,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 2,
+    "skill:stealth": 5
+  },
+  "passivePerception": 12,
+  "xp": 0,
+  "proficiencyBonus": 2,
+  "initiative": 1,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Water Breathing",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The seahorse can breathe only underwater.",
+        "plain": "The seahorse can breathe only underwater.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bubble Dash",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "While underwater, the seahorse moves up to its Swim Speed without provoking Opportunity Attacks.",
+        "plain": "While underwater, the seahorse moves up to its Swim Speed without provoking Opportunity Attacks.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

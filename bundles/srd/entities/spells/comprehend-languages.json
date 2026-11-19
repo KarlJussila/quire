@@ -1,0 +1,47 @@
+{
+  "id": "spell:comprehend-languages",
+  "name": "Comprehend Languages",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.\n\nThis spell doesn't decode secret messages in a text or a glyph, such as an arcane sigil, that isn't part of a written language.",
+    "plain": "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.\n\nThis spell doesn't decode secret messages in a text or a glyph, such as an arcane sigil, that isn't part of a written language.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:bard",
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "ritual": true,
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a pinch of soot and salt"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour"
+      },
+      "ritual": true
+    }
+  ]
+}

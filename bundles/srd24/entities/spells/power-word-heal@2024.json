@@ -1,0 +1,36 @@
+{
+  "id": "spell:power-word-heal@2024",
+  "name": "Power Word Heal",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A wave of healing energy washes over one creature you can see within range. The target regains all its Hit Points. If the creature has the Charmed, Frightened, Paralyzed, Poisoned, or Stunned condition, the condition ends. If the creature has the Prone condition, it can use its Reaction to stand up.",
+    "plain": "A wave of healing energy washes over one creature you can see within range. The target regains all its Hit Points. If the creature has the Charmed, Frightened, Paralyzed, Poisoned, or Stunned condition, the condition ends. If the creature has the Prone condition, it can use its Reaction to stand up.",
+    "wording": "srd"
+  },
+  "level": 9,
+  "school": "spell-school:enchantment",
+  "lists": [
+    "class:bard",
+    "class:cleric"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

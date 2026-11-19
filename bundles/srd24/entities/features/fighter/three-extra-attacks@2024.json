@@ -1,0 +1,40 @@
+{
+  "id": "feature:fighter/three-extra-attacks@2024",
+  "name": "Level 20: Three Extra Attacks",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can attack four times instead of once whenever you take the Attack action on your turn.",
+    "plain": "You can attack four times instead of once whenever you take the Attack action on your turn.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "action": "action:attack"
+          }
+        }
+      },
+      "set": {
+        "outcomes": {
+          "$where": {
+            "runs": true
+          },
+          "runs": {
+            "$where": {
+              "times": true
+            },
+            "times": {
+              "$atLeast": 4
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "skill:deception",
+  "name": "Deception",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:cha"
+}

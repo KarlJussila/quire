@@ -1,0 +1,104 @@
+{
+  "id": "creature:cloud-giant",
+  "name": "Cloud Giant",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:giant",
+  "alignment": {
+    "text": "neutral good (50%) or neutral evil (50%)"
+  },
+  "ac": 14,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 200,
+    "formula": "16d12 + 96"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 16,
+    "ability:con": 22,
+    "ability:dex": 10,
+    "ability:int": 12,
+    "ability:str": 27,
+    "ability:wis": 16
+  },
+  "saves": {
+    "ability:cha": 7,
+    "ability:con": 10,
+    "ability:wis": 7
+  },
+  "skills": {
+    "skill:insight": 7,
+    "skill:perception": 7
+  },
+  "passivePerception": 17,
+  "xp": 5000,
+  "cr": 9,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:giant"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Keen Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The giant has advantage on Wisdom (Perception) checks that rely on smell.",
+        "plain": "The giant has advantage on Wisdom (Perception) checks that rely on smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Innate Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The giant's innate spellcasting ability is Charisma. It can innately cast the following spells, requiring no material components:\n\n- At will: Detect Magic, Fog Cloud, Light\n- 3/day each: Feather Fall, Fly, Misty Step, Telekinesis\n- 1/day each: Control Weather, Gaseous Form",
+        "plain": "The giant's innate spellcasting ability is Charisma. It can innately cast the following spells, requiring no material components:\n\n- At will: Detect Magic, Fog Cloud, Light\n- 3/day each: Feather Fall, Fly, Misty Step, Telekinesis\n- 1/day each: Control Weather, Gaseous Form",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The giant makes two morningstar attacks.",
+        "plain": "The giant makes two morningstar attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Morningstar",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +12 to hit, reach 10 ft., one target. _Hit:_ 21 (3d8 + 8) piercing damage.",
+        "plain": "Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 21 (3d8 + 8) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rock",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +12 to hit, range 60/240 ft., one target. _Hit:_ 30 (4d10 + 8) bludgeoning damage.",
+        "plain": "Ranged Weapon Attack: +12 to hit, range 60/240 ft., one target. Hit: 30 (4d10 + 8) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

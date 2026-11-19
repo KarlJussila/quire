@@ -1,0 +1,14 @@
+{
+  "id": "event:item-unequipped",
+  "name": "Item Unequipped",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "The subject doffs armor or a shield, takes off a worn item, or drops, stows, or sheathes a held item. The trigger's item says which."
+  },
+  "payload": [
+    "item"
+  ],
+  "emittedBy": "engine"
+}

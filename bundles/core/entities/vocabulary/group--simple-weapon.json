@@ -1,0 +1,8 @@
+{
+  "id": "group:simple-weapon",
+  "name": "Simple Weapon",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:weapon"
+}

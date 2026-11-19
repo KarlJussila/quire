@@ -1,0 +1,69 @@
+{
+  "abilities": {
+    "ability:str": 11,
+    "ability:dex": 13,
+    "ability:con": 15,
+    "ability:int": 9,
+    "ability:wis": 18,
+    "ability:cha": 14
+  },
+  "proficiencyBonus": 3,
+  "hp.max": 38,
+  "ac": 18,
+  "saves": {
+    "ability:str": 0,
+    "ability:dex": 1,
+    "ability:con": 2,
+    "ability:int": -1,
+    "ability:wis": 7,
+    "ability:cha": 5
+  },
+  "skills": {
+    "skill:acrobatics": 1,
+    "skill:animal-handling": 4,
+    "skill:arcana": -1,
+    "skill:athletics": 0,
+    "skill:deception": 2,
+    "skill:history": 2,
+    "skill:insight": 7,
+    "skill:intimidation": 2,
+    "skill:investigation": -1,
+    "skill:medicine": 7,
+    "skill:nature": -1,
+    "skill:perception": 4,
+    "skill:performance": 2,
+    "skill:persuasion": 2,
+    "skill:religion": 2,
+    "skill:sleight-of-hand": 1,
+    "skill:stealth": 1,
+    "skill:survival": 4
+  },
+  "initiative": 1,
+  "spellcasting": {
+    "class:cleric": {
+      "dc": 15,
+      "attack": 7,
+      "prepared": 9,
+      "cantrips": 4
+    }
+  },
+  "spell-slots": [
+    4,
+    3,
+    2
+  ],
+  "pools": {
+    "channel-divinity": 1
+  },
+  "why": [
+    "The standard array is 15, 14, 13, 12, 10, 8; the human adds +1 to all six abilities, and the level 4 Ability Score Improvement adds +2 Wisdom (vaults/phb/Contents/03 - Chapter 1- Step-By-Step Characters.md, Ability Scores; vaults/phb/Contents/04 - Chapter 2- Races.md, Human; vaults/phb/Contents/08 - Cleric.md, Ability Score Improvement).",
+    "A 5th-level character has proficiency bonus +3 (vaults/phb/Contents/03 - Chapter 1- Step-By-Step Characters.md, Character Advancement).",
+    "Cleric hit points are 8 at level 1, then the fixed 5 per later level, plus Constitution modifier +2 at each level: 8 + 4×5 + 5×2 = 38 (vaults/phb/Contents/08 - Cleric.md, Hit Points).",
+    "Chain mail gives AC 16, and the shield adds 2 (vaults/phb/Contents/19 - Chapter 5- Equipment.md, Armor and Shields).",
+    "Cleric saving throw proficiencies are Wisdom and Charisma; proficient saves add +3 to the ability modifier (vaults/phb/Contents/08 - Cleric.md, Proficiencies; vaults/phb/Contents/21 - Chapter 7- Using Ability Scores.md, Saving Throws).",
+    "Acolyte grants Insight and Religion; the Cleric choices are History and Medicine. Each adds its ability modifier and +3 when proficient (vaults/phb/Contents/18 - Chapter 4- Personality and Background.md, Acolyte; vaults/phb/Contents/08 - Cleric.md, Proficiencies; vaults/phb/Contents/21 - Chapter 7- Using Ability Scores.md, Skills). Initiative is the Dexterity modifier +1 (vaults/phb/Contents/23 - Chapter 9- Combat.md, Initiative).",
+    "At Cleric 5, Wisdom modifier +4 plus Cleric level 5 gives nine prepared spells; the Cleric knows four cantrips and has 4/3/2 spell slots. Spell save DC is 8 + proficiency + Wisdom modifier = 15, and spell attacks add proficiency and Wisdom modifier = 7 (vaults/phb/Contents/08 - Cleric.md, Spellcasting and The Cleric table; vaults/phb/Contents/24 - Chapter 10- Spellcasting.md, Spell Save DC). Life Domain spells are always prepared and don't count against the prepared total (vaults/phb/Contents/20 - Chapter 6- Customization Options.md, Life Domain).",
+    "Channel Divinity has one use at Cleric 5, recovering on a short or long rest (vaults/phb/Contents/08 - Cleric.md, Channel Divinity and The Cleric table).",
+    "Religion is an Intelligence skill: -1 + 3 = 2. The first version of this sheet had 5."
+  ]
+}

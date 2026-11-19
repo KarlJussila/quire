@@ -1,0 +1,15 @@
+{
+  "id": "language:orc",
+  "name": "Orc",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A standard language, typically spoken by orcs, written in the Dwarvish script.",
+    "plain": "A standard language, typically spoken by orcs, written in the Dwarvish script.",
+    "wording": "original"
+  },
+  "group": "group:standard-language",
+  "script": "Dwarvish",
+  "speakers": "Orcs"
+}

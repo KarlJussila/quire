@@ -1,0 +1,49 @@
+{
+  "id": "feature:warlock/eldritch-master",
+  "name": "Eldritch Master",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 20th level, you can draw on your inner reserve of mystical power while entreating your patron to regain expended spell slots. You can spend 1 minute entreating your patron for aid to regain all your expended spell slots from your Pact Magic feature. Once you regain spell slots with this feature, you must finish a long rest before you can do so again.",
+    "plain": "At 20th level, you can draw on your inner reserve of mystical power while entreating your patron to regain expended spell slots. You can spend 1 minute entreating your patron for aid to regain all your expended spell slots from your Pact Magic feature. Once you regain spell slots with this feature, you must finish a long rest before you can do so again.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "eldritch-master",
+      "name": "Eldritch Master",
+      "time": {
+        "amount": 1,
+        "unit": "minute"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Regain all of your expended Pact Magic spell slots.",
+            "gap": {
+              "category": "resource",
+              "name": "Pact Magic spell slots"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

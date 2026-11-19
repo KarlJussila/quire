@@ -1,0 +1,25 @@
+{
+  "id": "species:dragonborn",
+  "name": "Dragonborn",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "## Dragonborn Traits\n\nYour draconic heritage manifests in a variety of traits you share with other dragonborn.\n\n_**Ability Score Increase.**_ Your Strength score increases by 2, and your Charisma score increases by 1.\n\n_**Age.**_ Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.\n\n_**Alignment.**_ Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil. Most dragonborn are good, but those who side with evil can be terrible villains.\n\n_**Size.**_ Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.\n\n_**Speed.**_ Your base walking speed is 30 feet.",
+    "plain": "## Dragonborn Traits\n\nYour draconic heritage manifests in a variety of traits you share with other dragonborn.\n\nAbility Score Increase. Your Strength score increases by 2, and your Charisma score increases by 1.\n\nAge. Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.\n\nAlignment. Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil. Most dragonborn are good, but those who side with evil can be terrible villains.\n\nSize. Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.\n\nSpeed. Your base walking speed is 30 feet.",
+    "wording": "srd"
+  },
+  "features": [
+    "feature:dragonborn/ability-score-increase",
+    "feature:dragonborn/draconic-ancestry",
+    "feature:dragonborn/breath-weapon",
+    "feature:dragonborn/damage-resistance",
+    "feature:dragonborn/languages"
+  ],
+  "size": "size:medium",
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  }
+}

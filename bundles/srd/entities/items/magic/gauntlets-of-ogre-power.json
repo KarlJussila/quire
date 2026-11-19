@@ -1,0 +1,35 @@
+{
+  "id": "item:gauntlets-of-ogre-power",
+  "name": "Gauntlets of Ogre Power",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Your Strength score is 19 while you wear these gauntlets. They have no effect on you if your Strength is already 19 or higher.",
+    "plain": "Your Strength score is 19 while you wear these gauntlets. They have no effect on you if your Strength is already 19 or higher.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "weight": 0,
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:str": {
+            "$atLeast": 19
+          }
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ]
+}

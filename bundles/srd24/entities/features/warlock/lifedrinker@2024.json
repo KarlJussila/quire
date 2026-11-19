@@ -1,0 +1,162 @@
+{
+  "id": "feature:warlock/lifedrinker@2024",
+  "name": "Lifedrinker",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 9+ Warlock, Pact of the Blade Invocation_\n\nOnce per turn when you hit a creature with your pact weapon, you can deal an extra 1d6 Necrotic, Psychic, or Radiant damage (your choice) to the creature, and you can expend one of your Hit Point Dice to roll it and regain a number of Hit Points equal to the roll plus your Constitution modifier (minimum of 1 Hit Point).",
+    "plain": "Prerequisite: Level 9+ Warlock, Pact of the Blade Invocation\n\nOnce per turn when you hit a creature with your pact weapon, you can deal an extra 1d6 Necrotic, Psychic, or Radiant damage (your choice) to the creature, and you can expend one of your Hit Point Dice to roll it and regain a number of Hit Points equal to the roll plus your Constitution modifier (minimum of 1 Hit Point).",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "all": [
+      {
+        "compare": "levels.class:warlock",
+        "atLeast": 9
+      },
+      {
+        "has": "feature:warlock/pact-of-the-blade"
+      }
+    ]
+  },
+  "effects": [],
+  "activities": [
+    {
+      "key": "lifedrinker",
+      "name": "Lifedrinker",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any"
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "weapon",
+            "item": {
+              "kind": "item",
+              "where": {
+                "has": "state:warlock/pact-weapon",
+                "source": "self"
+              }
+            }
+          }
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": {
+                "pool": "any"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "1d6",
+            "type": {
+              "choose": {
+                "key": "lifedrinker-damage-type",
+                "name": "Lifedrinker Damage Type",
+                "from": [
+                  "damage-type:necrotic",
+                  "damage-type:psychic",
+                  "damage-type:radiant"
+                ]
+              }
+            }
+          },
+          "to": "subject"
+        }
+      ]
+    },
+    {
+      "key": "lifedrinker-and-heal",
+      "name": "Lifedrinker with Healing",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any"
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "weapon",
+            "item": {
+              "kind": "item",
+              "where": {
+                "has": "state:warlock/pact-weapon",
+                "source": "self"
+              }
+            }
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "1d6",
+            "type": {
+              "choose": {
+                "key": "lifedrinker-damage-type",
+                "name": "Lifedrinker Damage Type",
+                "from": [
+                  "damage-type:necrotic",
+                  "damage-type:psychic",
+                  "damage-type:radiant"
+                ]
+              }
+            }
+          },
+          "to": "subject"
+        },
+        {
+          "heal": {
+            "amount": {
+              "max": [
+                1,
+                {
+                  "sum": [
+                    {
+                      "pool": "hit-dice",
+                      "facet": "spent"
+                    },
+                    "modifiers.ability:con"
+                  ]
+                }
+              ]
+            }
+          },
+          "to": "self"
+        }
+      ],
+      "cost": [
+        {
+          "resource": "lifedrinker"
+        },
+        {
+          "resource": "hit-dice"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Pact of the Blade must apply state:warlock/pact-weapon to the bonded weapon."
+    }
+  ]
+}

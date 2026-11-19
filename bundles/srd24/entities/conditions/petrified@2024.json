@@ -1,0 +1,77 @@
+{
+  "id": "condition:petrified@2024",
+  "name": "Petrified",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you have the Petrified condition, you experience the following effects.\n\n_**Turned to Inanimate Substance.**_ You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging.\n\n_**Incapacitated.**_ You have the Incapacitated condition.\n\n_**Speed 0.**_ Your Speed is 0 and can't increase.\n\n_**Attacks Affected.**_ Attack rolls against you have Advantage.\n\n_**Saving Throws Affected.**_ You automatically fail Strength and Dexterity saving throws.\n\n_**Resist Damage.**_ You have Resistance to all damage.\n\n_**Poison Immunity.**_ You have Immunity to the Poisoned condition.",
+    "plain": "While you have the Petrified condition, you experience the following effects.\n\nTurned to Inanimate Substance. You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging.\n\nIncapacitated. You have the Incapacitated condition.\n\nSpeed 0. Your Speed is 0 and can't increase.\n\nAttacks Affected. Attack rolls against you have Advantage.\n\nSaving Throws Affected. You automatically fail Strength and Dexterity saving throws.\n\nResist Damage. You have Resistance to all damage.\n\nPoison Immunity. You have Immunity to the Poisoned condition.",
+    "wording": "srd"
+  },
+  "implies": [
+    "condition:incapacitated"
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "$where": true,
+          "speed": {
+            "$replace": 0
+          }
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any"
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": [
+            "ability:str",
+            "ability:dex"
+          ]
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "resist": {
+        "all": true
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "weight": {
+          "$multiply": 10
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ]
+}

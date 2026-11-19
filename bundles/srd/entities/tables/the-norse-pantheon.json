@@ -1,0 +1,187 @@
+{
+  "id": "table:the-norse-pantheon",
+  "name": "The Norse Pantheon",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "deity",
+      "name": "Deity"
+    },
+    {
+      "key": "alignment",
+      "name": "Alignment"
+    },
+    {
+      "key": "suggested-domains",
+      "name": "Suggested Domains"
+    },
+    {
+      "key": "symbol",
+      "name": "Symbol"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "deity": "Odin, god of knowledge and war",
+        "alignment": "NG",
+        "suggested-domains": "Knowledge, War",
+        "symbol": "Watching blue eye"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Aegir, god of the sea and storms",
+        "alignment": "NE",
+        "suggested-domains": "Tempest",
+        "symbol": "Rough ocean waves"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Balder, god of beauty and poetry",
+        "alignment": "NG",
+        "suggested-domains": "Life, Light",
+        "symbol": "Gem-encrusted silver chalice"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Forseti, god of justice and law",
+        "alignment": "N",
+        "suggested-domains": "Light",
+        "symbol": "Head of a bearded man"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Frey, god of fertility and the sun",
+        "alignment": "NG",
+        "suggested-domains": "Life, Light",
+        "symbol": "Ice-blue greatsword"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Freya, goddess of fertility and love",
+        "alignment": "NG",
+        "suggested-domains": "Life",
+        "symbol": "Falcon"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Frigga, goddess of birth and fertility",
+        "alignment": "N",
+        "suggested-domains": "Life, Light",
+        "symbol": "Cat"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Heimdall, god of watchfulness and loyalty",
+        "alignment": "LG",
+        "suggested-domains": "Light, War",
+        "symbol": "Curling musical horn"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Hel, goddess of the underworld",
+        "alignment": "NE",
+        "suggested-domains": "Death",
+        "symbol": "Woman's face, rotting on one side"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Hermod, god of luck",
+        "alignment": "CN",
+        "suggested-domains": "Trickery",
+        "symbol": "Winged scroll"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Loki, god of thieves and trickery",
+        "alignment": "CE",
+        "suggested-domains": "Trickery",
+        "symbol": "Flame"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Njord, god of sea and wind",
+        "alignment": "NG",
+        "suggested-domains": "Nature, Tempest",
+        "symbol": "Gold coin"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Odur, god of light and the sun",
+        "alignment": "CG",
+        "suggested-domains": "Light",
+        "symbol": "Solar disk"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Sif, goddess of war",
+        "alignment": "CG",
+        "suggested-domains": "War",
+        "symbol": "Upraised sword"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Skadi, god of earth and mountains",
+        "alignment": "N",
+        "suggested-domains": "Nature",
+        "symbol": "Mountain peak"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Surtur, god of fire giants and war",
+        "alignment": "LE",
+        "suggested-domains": "War",
+        "symbol": "Flaming sword"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Thor, god of storms and thunder",
+        "alignment": "CG",
+        "suggested-domains": "Tempest, War",
+        "symbol": "Hammer"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Thrym, god of frost giants and cold",
+        "alignment": "CE",
+        "suggested-domains": "War",
+        "symbol": "White double-bladed axe"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Tyr, god of courage and strategy",
+        "alignment": "LN",
+        "suggested-domains": "Knowledge, War",
+        "symbol": "Sword"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Uller, god of hunting and winter",
+        "alignment": "CN",
+        "suggested-domains": "Nature",
+        "symbol": "Longbow"
+      }
+    }
+  ]
+}

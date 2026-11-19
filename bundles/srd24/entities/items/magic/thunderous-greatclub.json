@@ -1,0 +1,233 @@
+{
+  "id": "item:thunderous-greatclub@2024",
+  "name": "Thunderous Greatclub",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you are attuned to this magic weapon, your Strength is 20 unless your Strength is already equal to or greater than that score. The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren't being worn or carried.\n\nThe weapon has the following additional properties.\n\n_**Clap of Thunder.**_ As a Magic action, you can strike the weapon against a hard surface to create a loud clap of thunder audible out to 300 feet. You also create a 30-foot Cone of thunderous energy. Each creature in the Cone must succeed on a DC 15 Strength saving throw or have the Prone condition. Nonmagical objects in the Cone that aren't being worn or carried take 3d8 Thunder damage.\n\n_**Earthquake.**_ As a Magic action, you can strike the weapon against the ground to create an intense seismic disturbance in a 50-foot-radius circle centered on the point of impact. Structures in contact with the ground in that area take 50 Bludgeoning damage, and each creature on the ground in that area must succeed on a DC 20 Dexterity saving throw or have the Prone condition. If that creature is also concentrating, it must succeed on a DC 20 Constitution saving throw, or its Concentration is broken. In addition, you can cause a 30-foot-deep, 10-foot-wide fissure to open up on the ground anywhere in the area. Any creature on a spot where the fissure opens must make a DC 20 Dexterity saving throw, falling into the fissure on a failed save or moving with the fissure's edge on a successful one. Any structure on a spot where the fissure opens collapses into the fissure. Once you use this property, it can't be used again until the next dawn.",
+    "plain": "While you are attuned to this magic weapon, your Strength is 20 unless your Strength is already equal to or greater than that score. The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren't being worn or carried.\n\nThe weapon has the following additional properties.\n\nClap of Thunder. As a Magic action, you can strike the weapon against a hard surface to create a loud clap of thunder audible out to 300 feet. You also create a 30-foot Cone of thunderous energy. Each creature in the Cone must succeed on a DC 15 Strength saving throw or have the Prone condition. Nonmagical objects in the Cone that aren't being worn or carried take 3d8 Thunder damage.\n\nEarthquake. As a Magic action, you can strike the weapon against the ground to create an intense seismic disturbance in a 50-foot-radius circle centered on the point of impact. Structures in contact with the ground in that area take 50 Bludgeoning damage, and each creature on the ground in that area must succeed on a DC 20 Dexterity saving throw or have the Prone condition. If that creature is also concentrating, it must succeed on a DC 20 Constitution saving throw, or its Concentration is broken. In addition, you can cause a 30-foot-deep, 10-foot-wide fissure to open up on the ground anywhere in the area. Any creature on a spot where the fissure opens must make a DC 20 Dexterity saving throw, falling into the fissure on a failed save or moving with the fissure's edge on a successful one. Any structure on a spot where the fissure opens collapses into the fissure. Once you use this property, it can't be used again until the next dawn.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:very-rare",
+  "attunement": true,
+  "base": "item:greatclub",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:str": {
+            "$atLeast": 20
+          }
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true
+        }
+      }
+    },
+    {
+      "type": "damage-bonus",
+      "amount": "1d8",
+      "damageType": "damage-type:thunder",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage",
+              "attack": {
+                "item": "this"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          },
+          {
+            "creature": "target",
+            "where": {
+              "kind": "creature"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "clap-of-thunder",
+      "name": "Clap of Thunder",
+      "action": "action:magic",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "held": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "area": {
+        "shape": "area-shape:cone",
+        "size": 30,
+        "origin": "self",
+        "affects": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:str",
+          "dc": 15
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:prone"
+          },
+          "when": {
+            "event": "event:roll-resolved",
+            "match": {
+              "success": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "earthquake",
+      "name": "Earthquake",
+      "action": "action:magic",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "held": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:dawn"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "area": {
+        "shape": "area-shape:circle",
+        "size": 50,
+        "origin": "self",
+        "affects": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "kind": "creature"
+              },
+              {
+                "grounded": true
+              }
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "then": {
+            "delivery": {
+              "save": {
+                "ability": "ability:dex",
+                "dc": 20
+              }
+            },
+            "outcomes": [
+              {
+                "applyState": {
+                  "state": "condition:prone"
+                },
+                "when": {
+                  "event": "event:roll-resolved",
+                  "match": {
+                    "success": false
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "then": {
+            "delivery": {
+              "save": {
+                "ability": "ability:con",
+                "dc": 20
+              }
+            },
+            "outcomes": [
+              {
+                "endState": {
+                  "state": "state:concentrating"
+                },
+                "when": {
+                  "event": "event:roll-resolved",
+                  "match": {
+                    "success": false
+                  }
+                }
+              }
+            ]
+          },
+          "when": {
+            "has": "state:concentrating"
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "SCHEMA LIMIT: Clap of Thunder’s 300-foot audible range has no sound-propagation operation."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "SCHEMA LIMIT: The object grammar cannot identify nonmagical objects that are not worn or carried for Clap of Thunder’s 3d8 damage."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "SCHEMA LIMIT: The area grammar cannot select structures in contact with the ground for Earthquake’s 50 bludgeoning damage."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "SCHEMA LIMIT: The terrain grammar cannot place the optional fissure or model falling, moving with its edge, and collapsing structures."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "SCHEMA LIMIT: The weapon’s 3d8 thunder damage cannot target objects that are not worn or carried because those object properties are absent from the grammar."
+    }
+  ]
+}

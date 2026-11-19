@@ -1,0 +1,50 @@
+{
+  "id": "spell:continual-flame@2024",
+  "name": "Continual Flame",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A flame springs from an object that you touch. The effect casts Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. It looks like a regular flame, but it creates no heat and consumes no fuel. The flame can be covered or hidden but not smothered or quenched.",
+    "plain": "A flame springs from an object that you touch. The effect casts Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. It looks like a regular flame, but it creates no heat and consumes no fuel. The flame can be covered or hidden but not smothered or quenched.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:evocation",
+  "lists": [
+    "class:cleric",
+    "class:druid",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "ruby dust worth 50+ GP, which the spell consumes",
+      "parts": [
+        {
+          "worth": {
+            "amount": 50,
+            "currency": "currency:gp"
+          },
+          "consumed": true
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": "until-dispelled"
+    }
+  ]
+}

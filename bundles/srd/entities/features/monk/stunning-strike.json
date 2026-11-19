@@ -1,0 +1,61 @@
+{
+  "id": "feature:monk/stunning-strike",
+  "name": "Stunning Strike",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 5th level, you can interfere with the flow of ki in an opponent's body. When you hit another creature with a melee weapon attack, you can spend 1 ki point to attempt a stunning strike. The target must succeed on a Constitution saving throw or be Stunned until the end of your next turn.",
+    "plain": "Starting at 5th level, you can interfere with the flow of ki in an opponent's body. When you hit another creature with a melee weapon attack, you can spend 1 ki point to attempt a stunning strike. The target must succeed on a Constitution saving throw or be Stunned until the end of your next turn.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "stunning-strike",
+      "name": "Stunning Strike",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "range": "melee",
+            "via": "weapon"
+          }
+        }
+      },
+      "cost": [
+        {
+          "resource": "ki"
+        }
+      ],
+      "delivery": {
+        "save": {
+          "ability": "ability:con",
+          "dc": {
+            "sum": [
+              8,
+              "proficiencyBonus",
+              "modifiers.ability:wis"
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:stunned",
+            "ends": [
+              {
+                "event": "event:turn-end",
+                "subject": "source",
+                "next": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

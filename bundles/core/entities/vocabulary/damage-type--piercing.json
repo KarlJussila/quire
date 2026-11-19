@@ -1,0 +1,10 @@
+{
+  "id": "damage-type:piercing",
+  "name": "Piercing",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

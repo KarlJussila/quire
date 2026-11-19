@@ -1,0 +1,8 @@
+{
+  "name": "@quire/workspace",
+  "private": true,
+  "packageManager": "pnpm@11.13.0",
+  "scripts": {
+    "check": "pnpm -r check && node packages/engine/scripts/check-bundles.ts bundles/*"
+  }
+}

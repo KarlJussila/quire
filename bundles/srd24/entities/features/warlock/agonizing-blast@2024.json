@@ -1,0 +1,86 @@
+{
+  "id": "feature:warlock/agonizing-blast@2024",
+  "name": "Agonizing Blast",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 2+ Warlock, a Warlock Cantrip That Deals Damage_\n\nChoose one of your known Warlock cantrips that deals damage. You can add your Charisma modifier to that spell's damage rolls.\n\n_**Repeatable.**_ You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+    "plain": "Prerequisite: Level 2+ Warlock, a Warlock Cantrip That Deals Damage\n\nChoose one of your known Warlock cantrips that deals damage. You can add your Charisma modifier to that spell's damage rolls.\n\nRepeatable. You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 2
+  },
+  "repeatable": true,
+  "effects": [
+    {
+      "type": "record",
+      "pick": {
+        "choose": {
+          "key": "cantrip",
+          "name": "Warlock Cantrip",
+          "from": [
+            {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "level": 0,
+                      "lists": "class:warlock"
+                    }
+                  },
+                  {
+                    "has": "candidate"
+                  },
+                  {
+                    "dealsDamage": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": "modifiers.ability:cha"
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage"
+            }
+          },
+          {
+            "spell": {
+              "kind": "spell",
+              "where": {
+                "is": {
+                  "chosen": "cantrip"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "content-dependency",
+      "name": "The damaging-cantrip selector depends on the Warlock cantrips’ damage outcomes, which are not transcribed yet."
+    }
+  ]
+}

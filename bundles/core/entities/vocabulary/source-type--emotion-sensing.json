@@ -1,0 +1,7 @@
+{
+  "id": "source-type:emotion-sensing",
+  "name": "Emotion Sensing",
+  "source": {
+    "book": "core"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "feature:bard/college-of-lore/peerless-skill",
+  "name": "Peerless Skill",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 14th level, when you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roll the die for the ability check, but before the GM tells you whether you succeed or fail.",
+    "plain": "Starting at 14th level, when you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roll the die for the ability check, but before the GM tells you whether you succeed or fail.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "peerless-skill",
+      "name": "Peerless Skill",
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:check"
+        }
+      },
+      "cost": [
+        {
+          "resource": "bardic-inspiration"
+        }
+      ],
+      "when": {
+        "compare": "levels.class:bard",
+        "atLeast": 14
+      },
+      "outcomes": [
+        {
+          "intercept": {
+            "set": {
+              "$add": {
+                "byLevel": {
+                  "1": "1d6",
+                  "5": "1d8",
+                  "10": "1d10",
+                  "15": "1d12"
+                },
+                "of": "class:bard"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

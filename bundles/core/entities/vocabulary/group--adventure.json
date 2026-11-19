@@ -1,0 +1,7 @@
+{
+  "id": "group:adventure",
+  "name": "Adventure",
+  "source": {
+    "book": "core"
+  }
+}

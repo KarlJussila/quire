@@ -1,0 +1,12 @@
+{
+  "id": "feature:tropical-land@2024",
+  "name": "Tropical Land",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "|   Druid Level | Circle Spells                                 |\n|---------------|-----------------------------------------------|\n|             3 | Acid Splash, Ray of Sickness, Web |\n|             5 | Stinking Cloud                            |\n|             7 | Polymorph                                 |\n|             9 | Insect Plague                             |",
+    "plain": "|   Druid Level | Circle Spells                                 |\n|---------------|-----------------------------------------------|\n|             3 | Acid Splash, Ray of Sickness, Web |\n|             5 | Stinking Cloud                            |\n|             7 | Polymorph                                 |\n|             9 | Insect Plague                             |",
+    "wording": "srd"
+  }
+}

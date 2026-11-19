@@ -1,0 +1,71 @@
+{
+  "id": "class:cleric@2024",
+  "name": "Cleric",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Cleric, you gain the following class features when you reach the specified Cleric levels.",
+    "plain": "As a Cleric, you gain the following class features when you reach the specified Cleric levels.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d8",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:wis",
+      "atLeast": 13
+    },
+    "features": [
+      "feature:cleric/multiclass-proficiencies@2024"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:cleric/divine-order@2024",
+      "feature:cleric/spellcasting@2024"
+    ],
+    "2": [
+      "feature:cleric/channel-divinity@2024"
+    ],
+    "3": [
+      "feature:cleric/cleric-subclass@2024"
+    ],
+    "4": [
+      "feature:cleric/ability-score-improvement@2024"
+    ],
+    "5": [
+      "feature:cleric/sear-undead@2024"
+    ],
+    "7": [
+      "feature:cleric/blessed-strikes@2024"
+    ],
+    "8": [
+      "feature:cleric/ability-score-improvement@2024"
+    ],
+    "10": [
+      "feature:cleric/divine-intervention@2024"
+    ],
+    "12": [
+      "feature:cleric/ability-score-improvement@2024"
+    ],
+    "14": [
+      "feature:cleric/improved-blessed-strikes@2024"
+    ],
+    "16": [
+      "feature:cleric/ability-score-improvement@2024"
+    ],
+    "19": [
+      "feature:cleric/epic-boon@2024"
+    ],
+    "20": [
+      "feature:cleric/greater-divine-intervention@2024"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Divine Domain||Cleric Subclass"
+  },
+  "firstClass": [
+    "feature:cleric/proficiencies@2024"
+  ]
+}

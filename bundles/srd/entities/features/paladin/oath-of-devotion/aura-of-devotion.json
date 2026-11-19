@@ -1,0 +1,53 @@
+{
+  "id": "feature:paladin/oath-of-devotion/aura-of-devotion",
+  "name": "Aura of Devotion",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 7th level, you and friendly creatures within 10 feet of you can't be Charmed while you are conscious.\n\nAt 18th level, the range of this aura increases to 30 feet.",
+    "plain": "Starting at 7th level, you and friendly creatures within 10 feet of you can't be Charmed while you are conscious.\n\nAt 18th level, the range of this aura increases to 30 feet.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "aura",
+      "name": "nearby allies' immunity to being charmed while the paladin is conscious"
+    }
+  ],
+  "effects": [
+    {
+      "type": "zone",
+      "when": {
+        "not": {
+          "has": "condition:incapacitated"
+        }
+      },
+      "zone": {
+        "anchor": "self",
+        "area": {
+          "shape": "area-shape:emanation",
+          "size": {
+            "byLevel": {
+              "7": 10,
+              "18": 30
+            },
+            "of": "class:paladin"
+          }
+        },
+        "affects": {
+          "pool": "ally",
+          "includeSelf": true
+        },
+        "effects": [
+          {
+            "type": "defense",
+            "immune": [
+              "condition:charmed"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

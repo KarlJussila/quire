@@ -1,0 +1,42 @@
+{
+  "id": "feature:bard/expertise@2024",
+  "name": "Level 2: Expertise",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain Expertise (see \"Rules Glossary\") in two of your skill proficiencies of your choice. Performance and Persuasion are recommended if you have proficiency in them.\n\nAt Bard level 9, you gain Expertise in two more of your skill proficiencies of your choice.",
+    "plain": "You gain Expertise (see \"Rules Glossary\") in two of your skill proficiencies of your choice. Performance and Persuasion are recommended if you have proficiency in them.\n\nAt Bard level 9, you gain Expertise in two more of your skill proficiencies of your choice.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "level": "expertise",
+      "in": [
+        {
+          "choose": {
+            "key": "expertise",
+            "name": "Expertise",
+            "count": {
+              "byLevel": {
+                "2": 2,
+                "9": 4
+              },
+              "of": "class:bard"
+            },
+            "distinct": true,
+            "from": [
+              {
+                "kind": "skill",
+                "where": {
+                  "proficient": "candidate"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

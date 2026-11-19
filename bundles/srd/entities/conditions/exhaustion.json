@@ -1,0 +1,189 @@
+{
+  "id": "condition:exhaustion",
+  "name": "Exhaustion",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Some special abilities and environmental hazards, such as starvation and the long-term effects of freezing or scorching temperatures, can lead to a special condition called Exhaustion. Exhaustion is measured in six levels. An effect can give a creature one or more levels of exhaustion, as specified in the effect's description.\n\n|   Level | Effect                                         |\n|---------|------------------------------------------------|\n|       1 | Disadvantage on ability checks                 |\n|       2 | Speed halved                                   |\n|       3 | Disadvantage on attack rolls and saving throws |\n|       4 | Hit point maximum halved                       |\n|       5 | Speed reduced to 0                             |\n|       6 | Death                                          |\n\nIf an already exhausted creature suffers another effect that causes Exhaustion, its current level of exhaustion increases by the amount specified in the effect's description.\n\nA creature suffers the effect of its current level of Exhaustion as well as all lower levels. For example, a creature suffering level 2 exhaustion has its speed halved and has disadvantage on ability checks.\n\nAn effect that removes Exhaustion reduces its level as specified in the effect's description, with all exhaustion effects ending if a creature's exhaustion level is reduced below 1.\n\nFinishing a long rest reduces a creature's Exhaustion level by 1, provided that the creature has also ingested some food and drink.",
+    "plain": "Some special abilities and environmental hazards, such as starvation and the long-term effects of freezing or scorching temperatures, can lead to a special condition called Exhaustion. Exhaustion is measured in six levels. An effect can give a creature one or more levels of exhaustion, as specified in the effect's description.\n\n|   Level | Effect                                         |\n|---------|------------------------------------------------|\n|       1 | Disadvantage on ability checks                 |\n|       2 | Speed halved                                   |\n|       3 | Disadvantage on attack rolls and saving throws |\n|       4 | Hit point maximum halved                       |\n|       5 | Speed reduced to 0                             |\n|       6 | Death                                          |\n\nIf an already exhausted creature suffers another effect that causes Exhaustion, its current level of exhaustion increases by the amount specified in the effect's description.\n\nA creature suffers the effect of its current level of Exhaustion as well as all lower levels. For example, a creature suffering level 2 exhaustion has its speed halved and has disadvantage on ability checks.\n\nAn effect that removes Exhaustion reduces its level as specified in the effect's description, with all exhaustion effects ending if a creature's exhaustion level is reduced below 1.\n\nFinishing a long rest reduces a creature's Exhaustion level by 1, provided that the creature has also ingested some food and drink.",
+    "wording": "srd"
+  },
+  "stacks": "levels",
+  "maxLevel": 6,
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check"
+            }
+          },
+          {
+            "compare": {
+              "stackLevel": "condition:exhaustion"
+            },
+            "atLeast": 1
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "$where": true,
+          "speed": {
+            "$multiply": 0.5
+          }
+        }
+      },
+      "when": {
+        "compare": {
+          "stackLevel": "condition:exhaustion"
+        },
+        "atLeast": 2
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": [
+                "roll:attack",
+                "roll:save"
+              ]
+            }
+          },
+          {
+            "compare": {
+              "stackLevel": "condition:exhaustion"
+            },
+            "atLeast": 3
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "hp": {
+          "max": {
+            "$multiply": 0.5
+          }
+        }
+      },
+      "when": {
+        "compare": {
+          "stackLevel": "condition:exhaustion"
+        },
+        "atLeast": 4
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "$where": true,
+          "speed": {
+            "$replace": 0
+          }
+        }
+      },
+      "when": {
+        "compare": {
+          "stackLevel": "condition:exhaustion"
+        },
+        "atLeast": 5
+      }
+    },
+    {
+      "type": "triggered",
+      "when": {
+        "compare": {
+          "stackLevel": "condition:exhaustion"
+        },
+        "atLeast": 6
+      },
+      "on": [
+        {
+          "event": "event:state-applied",
+          "subject": "self",
+          "match": {
+            "state": "condition:exhaustion"
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "kill": {},
+            "to": "self"
+          }
+        ]
+      }
+    },
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:rest-finished",
+          "subject": "self",
+          "match": {
+            "rest": "rest:long"
+          }
+        }
+      ],
+      "when": {
+        "prose": {
+          "text": "ate and drank",
+          "gap": {
+            "category": "test",
+            "name": "ate-and-drank"
+          }
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "endState": {
+              "state": "condition:exhaustion",
+              "levels": 1
+            },
+            "to": "self"
+          }
+        ]
+      }
+    },
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:revived",
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "endState": {
+              "state": "condition:exhaustion",
+              "levels": 1
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

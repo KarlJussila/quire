@@ -1,0 +1,47 @@
+{
+  "id": "spell:augury",
+  "name": "Augury",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "By casting gem-inlaid sticks, rolling dragon bones, laying out ornate cards, or employing some other divining tool, you receive an omen from an otherworldly entity about the results of a specific course of action that you plan to take within the next 30 minutes. The GM chooses from the following possible omens:\n\n- _Weal_, for good results\n- _Woe_, for bad results\n- _Weal and woe_, for both good and bad results\n- _Nothing_, for results that aren't especially good or bad\n\nThe spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.\n\nIf you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The GM makes this roll in secret.",
+    "plain": "By casting gem-inlaid sticks, rolling dragon bones, laying out ornate cards, or employing some other divining tool, you receive an omen from an otherworldly entity about the results of a specific course of action that you plan to take within the next 30 minutes. The GM chooses from the following possible omens:\n\n- Weal, for good results\n- Woe, for bad results\n- Weal and woe, for both good and bad results\n- Nothing, for results that aren't especially good or bad\n\nThe spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.\n\nIf you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The GM makes this roll in secret.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:cleric"
+  ],
+  "ritual": true,
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "specially marked sticks, bones, or similar tokens worth at least 25 gp",
+      "parts": [
+        {
+          "worth": {
+            "amount": 25,
+            "currency": "currency:gp"
+          }
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "time": {
+        "amount": 1,
+        "unit": "minute"
+      },
+      "range": {
+        "self": true
+      },
+      "duration": "instant",
+      "ritual": true
+    }
+  ]
+}

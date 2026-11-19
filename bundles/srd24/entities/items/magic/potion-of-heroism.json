@@ -1,0 +1,14 @@
+{
+  "id": "item:potion-of-heroism@2024",
+  "name": "Potion of Heroism",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you drink this potion, you gain 10 Temporary Hit Points that last for 1 hour. For the same duration, you are under the effect of the Bless spell (no Concentration required).\n\nThis potion's blue liquid bubbles and steams as if boiling.",
+    "plain": "When you drink this potion, you gain 10 Temporary Hit Points that last for 1 hour. For the same duration, you are under the effect of the Bless spell (no Concentration required).\n\nThis potion's blue liquid bubbles and steams as if boiling.",
+    "wording": "srd"
+  },
+  "group": "group:potion",
+  "rarity": "rarity:rare"
+}

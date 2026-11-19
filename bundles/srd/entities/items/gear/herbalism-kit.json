@@ -1,0 +1,18 @@
+{
+  "id": "item:herbalism-kit",
+  "name": "Herbalism Kit",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Proficiency with an herbalism kit allows you to identify plants and safely collect their useful elements.\n\n***Components.*** An herbalism kit includes pouches to store herbs, clippers and leather gloves for collecting plants, a mortar and pestle, and several glass jars.\n\n***Arcana.*** Your knowledge of the nature and uses of herbs can add insight to your magical studies that deal with plants and your attempts to identify potions.\n\n***Investigation.*** When you inspect an area overgrown with plants, your proficiency can help you pick out details and clues that others might miss.\n\n***Medicine.*** Your mastery of herbalism improves your ability to treat illnesses and wounds by augmenting your methods of care with medicinal plants.\n\n***Nature and Survival.*** When you travel in the wild, your skill in herbalism makes it easier to identify plants and spot sources of food that others might overlook.\n\n***Identify Plants.*** You can identify most plants with a quick inspection of their appearance and smell.\n\n##### HERBALISM KIT\n\n| Activity | DC |\n|---|---|\n| Find plants | 15 |\n| Identify poison | 20 |",
+    "plain": "Proficiency with an herbalism kit allows you to identify plants and safely collect their useful elements.\n\nComponents. An herbalism kit includes pouches to store herbs, clippers and leather gloves for collecting plants, a mortar and pestle, and several glass jars.\n\nArcana. Your knowledge of the nature and uses of herbs can add insight to your magical studies that deal with plants and your attempts to identify potions.\n\nInvestigation. When you inspect an area overgrown with plants, your proficiency can help you pick out details and clues that others might miss.\n\nMedicine. Your mastery of herbalism improves your ability to treat illnesses and wounds by augmenting your methods of care with medicinal plants.\n\nNature and Survival. When you travel in the wild, your skill in herbalism makes it easier to identify plants and spot sources of food that others might overlook.\n\nIdentify Plants. You can identify most plants with a quick inspection of their appearance and smell.\n\nHERBALISM KIT\n\nActivity\tDC\n\nFind plants\t15\n\nIdentify poison\t20",
+    "wording": "srd"
+  },
+  "group": "group:tools",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:gp"
+  },
+  "weight": 3.0
+}

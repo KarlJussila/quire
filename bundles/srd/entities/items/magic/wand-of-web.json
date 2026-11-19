@@ -1,0 +1,95 @@
+{
+  "id": "item:wand-of-web",
+  "name": "Wand of Web",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cast the Web spell (save DC 15) from it.\n\nThe wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.",
+    "plain": "This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cast the Web spell (save DC 15) from it.\n\nThe wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.",
+    "wording": "srd"
+  },
+  "group": "group:wand",
+  "rarity": "rarity:uncommon",
+  "attunement": {
+    "by": {
+      "spellcaster": true
+    },
+    "text": "requires attunement by a spellcaster"
+  },
+  "weight": 1,
+  "effects": [
+    {
+      "type": "resource",
+      "key": "charges",
+      "max": 7,
+      "recover": [
+        {
+          "on": {
+            "event": "event:dawn"
+          },
+          "amount": "1d6+1"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "key": "web",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "held": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "charges"
+        }
+      ],
+      "outcomes": [
+        {
+          "cast": {
+            "spell": "spell:web",
+            "slot": false,
+            "stats": {
+              "dc": 15
+            },
+            "set": {
+              "components": {
+                "$replace": {}
+              }
+            }
+          }
+        },
+        {
+          "random": {
+            "dice": "1d20",
+            "results": [
+              {
+                "range": [
+                  1,
+                  1
+                ],
+                "outcomes": [
+                  {
+                    "destroy": {},
+                    "to": "this"
+                  }
+                ]
+              }
+            ]
+          },
+          "when": {
+            "compare": "this.pools.charges.current",
+            "atMost": 0
+          }
+        }
+      ]
+    }
+  ]
+}

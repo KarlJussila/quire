@@ -1,0 +1,95 @@
+{
+  "id": "feature:bard/bardic-inspiration@2024",
+  "name": "Level 1: Bardic Inspiration",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can supernaturally inspire others through words, music, or dance. This inspiration is represented by your Bardic Inspiration die, which is a d6.\n\n_**Using Bardic Inspiration.**_ As a Bonus Action, you can inspire another creature within 60 feet of yourself who can see or hear you. That creature gains one of your Bardic Inspiration dice. A creature can have only one Bardic Inspiration die at a time.\n\nOnce within the next hour when the creature fails a D20 Test, the creature can roll the Bardic Inspiration die and add the number rolled to the d20, potentially turning the failure into a success. A Bardic Inspiration die is expended when it's rolled.\n\n_**Number of Uses.**_ You can confer a Bardic Inspiration die a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.\n\n_**At Higher Levels.**_ Your Bardic Inspiration die changes when you reach certain Bard levels, as shown in the Bardic Die column of the Bard Features table. The die becomes a d8 at level 5, a d10 at level 10, and a d12 at level 15.",
+    "plain": "You can supernaturally inspire others through words, music, or dance. This inspiration is represented by your Bardic Inspiration die, which is a d6.\n\nUsing Bardic Inspiration. As a Bonus Action, you can inspire another creature within 60 feet of yourself who can see or hear you. That creature gains one of your Bardic Inspiration dice. A creature can have only one Bardic Inspiration die at a time.\n\nOnce within the next hour when the creature fails a D20 Test, the creature can roll the Bardic Inspiration die and add the number rolled to the d20, potentially turning the failure into a success. A Bardic Inspiration die is expended when it's rolled.\n\nNumber of Uses. You can confer a Bardic Inspiration die a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.\n\nAt Higher Levels. Your Bardic Inspiration die changes when you reach certain Bard levels, as shown in the Bardic Die column of the Bard Features table. The die becomes a d8 at level 5, a d10 at level 10, and a d12 at level 15.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "bardic-inspiration",
+      "name": "Bardic Inspiration",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "bardic-inspiration"
+        }
+      ],
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "not": {
+                  "is": "self"
+                }
+              },
+              {
+                "within": 60,
+                "of": "self"
+              },
+              {
+                "perceives": {
+                  "sense": "any",
+                  "of": "self"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "The creature gains one of your Bardic Inspiration dice. Within the next hour, when it fails a D20 Test, it can roll the die and add the number rolled to the d20.",
+            "gap": {
+              "category": "state",
+              "name": "Bardic Inspiration die on another creature"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "resource",
+      "key": "bardic-inspiration",
+      "max": {
+        "max": [
+          1,
+          "modifiers.ability:cha"
+        ]
+      },
+      "die": {
+        "byLevel": {
+          "1": "d6",
+          "5": "d8",
+          "10": "d10",
+          "15": "d12"
+        },
+        "of": "class:bard"
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ]
+}

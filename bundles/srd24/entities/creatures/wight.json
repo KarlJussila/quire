@@ -1,0 +1,132 @@
+{
+  "id": "creature:wight@2024",
+  "name": "Wight",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:neutral-evil",
+  "ac": 14,
+  "hp": {
+    "average": 82,
+    "formula": "11d8 + 33"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 15,
+    "ability:con": 16,
+    "ability:dex": 14,
+    "ability:int": 10,
+    "ability:str": 15,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:perception": 3,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 13,
+  "xp": 700,
+  "proficiencyBonus": 2,
+  "initiative": 4,
+  "habitat": [
+    "Desert",
+    "Planar (Shadowfell)",
+    "Swamp",
+    "Underdark",
+    "Urban"
+  ],
+  "treasure": [
+    "Armaments"
+  ],
+  "gear": [
+    "Studded Leather Armor"
+  ],
+  "cr": 3,
+  "languages": [
+    {
+      "text": "Common plus one other language"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:necrotic"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:exhaustion",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Sunlight Sensitivity",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While in sunlight, the wight has Disadvantage on ability checks and attack rolls.",
+        "plain": "While in sunlight, the wight has Disadvantage on ability checks and attack rolls.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The wight makes two attacks, using Necrotic Sword or Necrotic Bow in any combination. It can replace one attack with a use of Life Drain.",
+        "plain": "The wight makes two attacks, using Necrotic Sword or Necrotic Bow in any combination. It can replace one attack with a use of Life Drain.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Necrotic Sword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 6 (1d8 + 2) Slashing damage plus 4 (1d8) Necrotic damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Slashing damage plus 4 (1d8) Necrotic damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Necrotic Bow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +4, range 150/600 ft. _Hit:_ 6 (1d8 + 2) Piercing damage plus 4 (1d8) Necrotic damage.",
+        "plain": "Ranged Attack Roll: +4, range 150/600 ft. Hit: 6 (1d8 + 2) Piercing damage plus 4 (1d8) Necrotic damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Life Drain",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 13, one creature within 5 feet. _Failure:_ 6 (1d8 + 2) Necrotic damage, and the target's Hit Point maximum decreases by an amount equal to the damage taken.\n\nA Humanoid slain by this attack rises 24 hours later as a **Zombie** under the wight's control, unless the Humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at a time.",
+        "plain": "Constitution Saving Throw: DC 13, one creature within 5 feet. Failure: 6 (1d8 + 2) Necrotic damage, and the target's Hit Point maximum decreases by an amount equal to the damage taken.\n\nA Humanoid slain by this attack rises 24 hours later as a Zombie under the wight's control, unless the Humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at a time.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

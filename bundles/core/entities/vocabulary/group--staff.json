@@ -1,0 +1,7 @@
+{
+  "id": "group:staff",
+  "name": "Staff",
+  "source": {
+    "book": "core"
+  }
+}

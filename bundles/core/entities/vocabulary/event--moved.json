@@ -1,0 +1,8 @@
+{
+  "id": "event:moved",
+  "name": "Moved",
+  "source": {
+    "book": "core"
+  },
+  "emittedBy": "engine"
+}

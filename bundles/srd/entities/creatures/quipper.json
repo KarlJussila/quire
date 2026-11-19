@@ -1,0 +1,72 @@
+{
+  "id": "creature:quipper",
+  "name": "Quipper",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "hp": {
+    "average": 1,
+    "formula": "1d4 - 1"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 0
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 2,
+    "ability:con": 9,
+    "ability:dex": 16,
+    "ability:int": 1,
+    "ability:str": 2,
+    "ability:wis": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 8,
+  "xp": 10,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Blood Frenzy",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The quipper has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
+        "plain": "The quipper has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Water Breathing",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The quipper can breathe only underwater.",
+        "plain": "The quipper can breathe only underwater.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 1 piercing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 1 piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

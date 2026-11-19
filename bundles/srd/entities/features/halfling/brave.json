@@ -1,0 +1,28 @@
+{
+  "id": "feature:halfling/brave",
+  "name": "Brave",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have advantage on saving throws against being Frightened.",
+    "plain": "You have advantage on saving throws against being Frightened.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "against": {
+            "condition": "condition:frightened"
+          }
+        }
+      }
+    }
+  ]
+}

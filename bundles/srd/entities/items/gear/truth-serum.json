@@ -1,0 +1,18 @@
+{
+  "id": "item:truth-serum",
+  "name": "Truth Serum",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A creature subjected to this poison must succeed on a DC 11 Constitution saving throw or become Poisoned for 1 hour. The poisoned creature can't knowingly speak a lie, as if under the effect of a Zone of Truth spell.",
+    "plain": "A creature subjected to this poison must succeed on a DC 11 Constitution saving throw or become Poisoned for 1 hour. The poisoned creature can't knowingly speak a lie, as if under the effect of a Zone of Truth spell.",
+    "wording": "srd"
+  },
+  "group": "group:poison",
+  "cost": {
+    "amount": 150,
+    "currency": "currency:gp"
+  },
+  "weight": 0.5
+}

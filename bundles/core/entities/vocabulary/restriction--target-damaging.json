@@ -1,0 +1,7 @@
+{
+  "id": "restriction:target-damaging",
+  "name": "Target with Damaging Abilities or Magical Effects",
+  "source": {
+    "book": "core"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "feature:cleric/life-domain/bonus-proficiency",
+  "name": "Bonus Proficiency",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you choose this domain at 1st level, you gain proficiency with heavy armor.",
+    "plain": "When you choose this domain at 1st level, you gain proficiency with heavy armor.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:heavy-armor"
+      ]
+    }
+  ]
+}

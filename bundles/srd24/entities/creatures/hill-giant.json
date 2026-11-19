@@ -1,0 +1,80 @@
+{
+  "id": "creature:hill-giant@2024",
+  "name": "Hill Giant",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:giant",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 13,
+  "hp": {
+    "average": 105,
+    "formula": "10d12 + 40"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 19,
+    "ability:dex": 8,
+    "ability:int": 5,
+    "ability:str": 21,
+    "ability:wis": 9
+  },
+  "skills": {
+    "skill:perception": 2
+  },
+  "passivePerception": 12,
+  "xp": 1800,
+  "proficiencyBonus": 3,
+  "initiative": 2,
+  "habitat": [
+    "Hill"
+  ],
+  "treasure": [
+    "Armaments"
+  ],
+  "cr": 5,
+  "languages": [
+    {
+      "language": "language:giant"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The giant makes two attacks, using Tree Club or Trash Lob in any combination.",
+        "plain": "The giant makes two attacks, using Tree Club or Trash Lob in any combination.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tree Club",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +8, reach 10 ft. _Hit:_ 18 (3d8 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition.",
+        "plain": "Melee Attack Roll: +8, reach 10 ft. Hit: 18 (3d8 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Trash Lob",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +8, range 60/240 ft. _Hit:_ 16 (2d10 + 5) Bludgeoning damage, and the target has the Poisoned condition until the end of its next turn.",
+        "plain": "Ranged Attack Roll: +8, range 60/240 ft. Hit: 16 (2d10 + 5) Bludgeoning damage, and the target has the Poisoned condition until the end of its next turn.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

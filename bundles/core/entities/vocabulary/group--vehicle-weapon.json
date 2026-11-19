@@ -1,0 +1,7 @@
+{
+  "id": "group:vehicle-weapon",
+  "name": "Vehicle Weapon",
+  "source": {
+    "book": "core"
+  }
+}

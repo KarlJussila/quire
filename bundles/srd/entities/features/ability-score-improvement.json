@@ -1,0 +1,25 @@
+{
+  "id": "feature:ability-score-improvement",
+  "name": "Ability Score Improvement",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "When you reach this level, you can increase one ability score of your choice by 2, or two ability scores of your choice by 1. You can't increase an ability score above 20 using this feature. Using the optional feats rule, you can forgo this increase to take a feat instead.",
+    "wording": "original"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "improvement",
+        "name": "Ability Score Improvement",
+        "from": [
+          "feature:ability-score-improvement/ability-score-increase",
+          {
+            "kind": "feat"
+          }
+        ]
+      }
+    }
+  ]
+}

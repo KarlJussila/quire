@@ -1,0 +1,25 @@
+{
+  "id": "species:halfling@2024",
+  "name": "Halfling",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Halfling, you have these special traits.\n\n_**Brave.**_ You have Advantage on saving throws you make to avoid or end the Frightened condition.\n\n_**Halfling Nimbleness.**_ You can move through the space of any creature that is a size larger than you, but you can't stop in the same space.\n\n_**Luck.**_ When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll.\n\n_**Naturally Stealthy.**_ You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you.",
+    "plain": "As a Halfling, you have these special traits.\n\nBrave. You have Advantage on saving throws you make to avoid or end the Frightened condition.\n\nHalfling Nimbleness. You can move through the space of any creature that is a size larger than you, but you can't stop in the same space.\n\nLuck. When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll.\n\nNaturally Stealthy. You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you.",
+    "wording": "srd"
+  },
+  "features": [
+    "feature:halfling/brave@2024",
+    "feature:halfling/halfling-nimbleness@2024",
+    "feature:halfling/luck@2024",
+    "feature:halfling/naturally-stealthy@2024"
+  ],
+  "creatureType": "creature-type:humanoid",
+  "size": "size:small",
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  }
+}

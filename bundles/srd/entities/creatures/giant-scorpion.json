@@ -1,0 +1,72 @@
+{
+  "id": "creature:giant-scorpion",
+  "name": "Giant Scorpion",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 15,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 52,
+    "formula": "7d10 + 14"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 3,
+    "ability:con": 15,
+    "ability:dex": 13,
+    "ability:int": 1,
+    "ability:str": 15,
+    "ability:wis": 9
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    }
+  },
+  "passivePerception": 9,
+  "xp": 700,
+  "cr": 3,
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The scorpion makes three attacks: two with its claws and one with its sting.",
+        "plain": "The scorpion makes three attacks: two with its claws and one with its sting.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 6 (1d8 + 2) bludgeoning damage, and the target is Grappled (escape DC 12). The scorpion has two claws, each of which can grapple only one target.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) bludgeoning damage, and the target is Grappled (escape DC 12). The scorpion has two claws, each of which can grapple only one target.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one creature. _Hit:_ 7 (1d10 + 2) piercing damage, and the target must make a DC 12 Constitution saving throw, taking 22 (4d10) poison damage on a failed save, or half as much damage on a successful one.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 7 (1d10 + 2) piercing damage, and the target must make a DC 12 Constitution saving throw, taking 22 (4d10) poison damage on a failed save, or half as much damage on a successful one.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

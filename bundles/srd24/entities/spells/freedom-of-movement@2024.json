@@ -1,0 +1,45 @@
+{
+  "id": "spell:freedom-of-movement@2024",
+  "name": "Freedom of Movement",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You touch a willing creature. For the duration, the target's movement is unaffected by Difficult Terrain, and spells and other magical effects can neither reduce the target's Speed nor cause the target to have the Paralyzed or Restrained conditions. The target also has a Swim Speed equal to its Speed.\n\nIn addition, the target can spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature imposing the Grappled condition on it.\n\n_**Using a Higher-Level Spell Slot.**_ You can target one additional creature for each spell slot level above 4.",
+    "plain": "You touch a willing creature. For the duration, the target's movement is unaffected by Difficult Terrain, and spells and other magical effects can neither reduce the target's Speed nor cause the target to have the Paralyzed or Restrained conditions. The target also has a Swim Speed equal to its Speed.\n\nIn addition, the target can spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature imposing the Grappled condition on it.\n\nUsing a Higher-Level Spell Slot. You can target one additional creature for each spell slot level above 4.",
+    "wording": "srd"
+  },
+  "level": 4,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:druid",
+    "class:ranger"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a leather strap"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour"
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "creature:merfolk",
+  "name": "Merfolk",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 11,
+  "hp": {
+    "average": 11,
+    "formula": "2d8 + 2"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 12,
+    "ability:con": 12,
+    "ability:dex": 13,
+    "ability:int": 11,
+    "ability:str": 10,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:perception": 2
+  },
+  "passivePerception": 12,
+  "xp": 25,
+  "cr": 0.125,
+  "languages": [
+    {
+      "language": "language:aquan"
+    },
+    {
+      "language": "language:common"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The merfolk can breathe air and water.",
+        "plain": "The merfolk can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spear",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Weapon Attack:_ +2 to hit, reach 5 ft. or range 20/60 ft., one target. _Hit:_ 3 (1d6) piercing damage, or 4 (1d8) piercing damage if used with two hands to make a melee attack.",
+        "plain": "Melee or Ranged Weapon Attack: +2 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 3 (1d6) piercing damage, or 4 (1d8) piercing damage if used with two hands to make a melee attack.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

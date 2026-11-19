@@ -1,0 +1,70 @@
+{
+  "id": "table:acolyte/flaw",
+  "name": "Flaw",
+  "source": {
+    "book": "srd"
+  },
+  "dice": "d6",
+  "columns": [
+    {
+      "key": "entry",
+      "name": "Flaw"
+    }
+  ],
+  "rows": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "cells": {
+        "entry": "I judge others harshly, and myself even more severely."
+      }
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "cells": {
+        "entry": "I put too much trust in those who wield power within my temple’s hierarchy."
+      }
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "cells": {
+        "entry": "My piety sometimes leads me to blindly trust those that profess faith in my god."
+      }
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "cells": {
+        "entry": "I am inflexible in my thinking."
+      }
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "cells": {
+        "entry": "I am suspicious of strangers and expect the worst of them."
+      }
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "cells": {
+        "entry": "Once I pick a goal, I become obsessed with it to the detriment of everything else in my life."
+      }
+    }
+  ]
+}

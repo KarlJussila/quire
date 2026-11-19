@@ -1,0 +1,85 @@
+{
+  "id": "rule:action-economy",
+  "name": "Action Economy",
+  "source": {
+    "book": "core"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "resource",
+      "key": "action",
+      "max": 1,
+      "recover": [
+        {
+          "on": {
+            "event": "event:turn-start",
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "resource",
+      "key": "bonus-action",
+      "max": 1,
+      "recover": [
+        {
+          "on": {
+            "event": "event:turn-start",
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "resource",
+      "key": "reaction",
+      "max": 1,
+      "recover": [
+        {
+          "on": {
+            "event": "event:turn-start",
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "resource",
+      "key": "object-interaction",
+      "max": 1,
+      "recover": [
+        {
+          "on": {
+            "event": "event:turn-start",
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "resource",
+      "key": "movement",
+      "max": {
+        "speed": "in-use"
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:turn-start",
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ]
+}

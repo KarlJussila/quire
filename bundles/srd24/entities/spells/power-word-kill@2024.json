@@ -1,0 +1,38 @@
+{
+  "id": "spell:power-word-kill@2024",
+  "name": "Power Word Kill",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You compel one creature you can see within range to die. If the target has 100 Hit Points or fewer, it dies. Otherwise, it takes 12d12 Psychic damage.",
+    "plain": "You compel one creature you can see within range to die. If the target has 100 Hit Points or fewer, it dies. Otherwise, it takes 12d12 Psychic damage.",
+    "wording": "srd"
+  },
+  "level": 9,
+  "school": "spell-school:enchantment",
+  "lists": [
+    "class:bard",
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

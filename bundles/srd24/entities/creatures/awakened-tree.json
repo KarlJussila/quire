@@ -1,0 +1,71 @@
+{
+  "id": "creature:awakened-tree@2024",
+  "name": "Awakened Tree",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:plant",
+  "alignment": "alignment:neutral",
+  "ac": 13,
+  "hp": {
+    "average": 59,
+    "formula": "7d12 + 14"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 15,
+    "ability:dex": 6,
+    "ability:int": 10,
+    "ability:str": 19,
+    "ability:wis": 10
+  },
+  "passivePerception": 10,
+  "xp": 450,
+  "proficiencyBonus": 2,
+  "initiative": -2,
+  "habitat": [
+    "Forest"
+  ],
+  "cr": 2,
+  "languages": [
+    {
+      "text": "Common plus one other language"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing"
+      ]
+    },
+    {
+      "type": "defense",
+      "vulnerable": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Slam",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 10 ft. _Hit:_ 14 (3d6 + 4) Bludgeoning damage.",
+        "plain": "Melee Attack Roll: +6, reach 10 ft. Hit: 14 (3d6 + 4) Bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

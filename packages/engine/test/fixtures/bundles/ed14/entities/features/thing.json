@@ -1,0 +1,7 @@
+{
+ "id": "feature:thing",
+ "name": "thing",
+ "source": {
+  "book": "ed14"
+ }
+}

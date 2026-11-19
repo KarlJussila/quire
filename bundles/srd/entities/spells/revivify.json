@@ -1,0 +1,49 @@
+{
+  "id": "spell:revivify",
+  "name": "Revivify",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You touch a creature that has died within the last minute. That creature returns to life with 1 hit point. This spell can't return to life a creature that has died of old age, nor can it restore any missing body parts.",
+    "plain": "You touch a creature that has died within the last minute. That creature returns to life with 1 hit point. This spell can't return to life a creature that has died of old age, nor can it restore any missing body parts.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:necromancy",
+  "lists": [
+    "class:cleric",
+    "class:paladin"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "diamonds worth 300 gp, which the spell consumes",
+      "parts": [
+        {
+          "worth": {
+            "amount": 300,
+            "currency": "currency:gp"
+          },
+          "consumed": true
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

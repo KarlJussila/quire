@@ -1,0 +1,11 @@
+{
+  "id": "feature:tieflings",
+  "name": "Tieflings",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

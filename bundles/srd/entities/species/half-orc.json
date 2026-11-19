@@ -1,0 +1,26 @@
+{
+  "id": "species:half-orc",
+  "name": "Half-Orc",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "## Half-Orc Traits\n\nYour half-orc character has certain traits deriving from your orc ancestry.\n\n_**Ability Score Increase.**_ Your Strength score increases by 2, and your Constitution score increases by 1.\n\n_**Age.**_ Half-orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.\n\n_**Alignment.**_ Half-orcs inherit a tendency toward chaos from their orc parents and are not strongly inclined toward good. Half-orcs raised among orcs and willing to live out their lives among them are usually evil.\n\n_**Size.**_ Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall. Your size is Medium.\n\n_**Speed.**_ Your base walking speed is 30 feet.\n\n_**Darkvision.**_ Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.\n\n_**Menacing.**_ You gain proficiency in the Intimidation skill.\n\n_**Relentless Endurance.**_ When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.\n\n_**Savage Attacks.**_ When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.\n\n_**Languages.**_ You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.",
+    "plain": "## Half-Orc Traits\n\nYour half-orc character has certain traits deriving from your orc ancestry.\n\nAbility Score Increase. Your Strength score increases by 2, and your Constitution score increases by 1.\n\nAge. Half-orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.\n\nAlignment. Half-orcs inherit a tendency toward chaos from their orc parents and are not strongly inclined toward good. Half-orcs raised among orcs and willing to live out their lives among them are usually evil.\n\nSize. Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall. Your size is Medium.\n\nSpeed. Your base walking speed is 30 feet.\n\nDarkvision. Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.\n\nMenacing. You gain proficiency in the Intimidation skill.\n\nRelentless Endurance. When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.\n\nSavage Attacks. When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.\n\nLanguages. You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.",
+    "wording": "srd"
+  },
+  "features": [
+    "feature:half-orc/ability-score-increase",
+    "feature:half-orc/darkvision",
+    "feature:half-orc/languages",
+    "feature:half-orc/menacing",
+    "feature:half-orc/relentless-endurance",
+    "feature:half-orc/savage-attacks"
+  ],
+  "size": "size:medium",
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  }
+}

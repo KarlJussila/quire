@@ -1,0 +1,10 @@
+{
+  "id": "damage-type:psychic",
+  "name": "Psychic",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

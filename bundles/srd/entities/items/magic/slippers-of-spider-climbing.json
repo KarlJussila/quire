@@ -1,0 +1,36 @@
+{
+  "id": "item:slippers-of-spider-climbing",
+  "name": "Slippers of Spider Climbing",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While you wear these light shoes, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. You have a climbing speed equal to your walking speed. However, the slippers don't allow you to move this way on a slippery surface, such as one covered by ice or oil.",
+    "plain": "While you wear these light shoes, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. You have a climbing speed equal to your walking speed. However, the slippers don't allow you to move this way on a slippery surface, such as one covered by ice or oil.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "weight": 0,
+  "effects": [
+    {
+      "type": "speed",
+      "mode": "movement-mode:climb",
+      "speed": "speeds.movement-mode:walk.speed",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "Climbing on vertical surfaces or ceilings with free hands, except on slippery surfaces, is not represented by the climbing-speed grant."
+    }
+  ]
+}

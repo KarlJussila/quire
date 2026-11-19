@@ -1,0 +1,15 @@
+{
+  "id": "language:elvish",
+  "name": "Elvish",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A standard language, typically spoken by elves, written in the Elvish script.",
+    "plain": "A standard language, typically spoken by elves, written in the Elvish script.",
+    "wording": "original"
+  },
+  "group": "group:standard-language",
+  "script": "Elvish",
+  "speakers": "Elves"
+}

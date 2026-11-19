@@ -1,0 +1,68 @@
+{
+  "id": "feature:rogue/proficiencies",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Armor: Light armor\nWeapons: Simple weapons, hand crossbows, longswords, rapiers, shortswords\nTools: Thieves' tools\nSaving Throws: Dexterity, Intelligence\nSkills: Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:dex",
+        "ability:int"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon",
+        "item:hand-crossbow",
+        "item:longsword",
+        "item:rapier",
+        "item:shortsword"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "item:thieves-tools"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 4,
+            "distinct": true,
+            "from": [
+              "skill:acrobatics",
+              "skill:athletics",
+              "skill:deception",
+              "skill:insight",
+              "skill:intimidation",
+              "skill:investigation",
+              "skill:perception",
+              "skill:performance",
+              "skill:persuasion",
+              "skill:sleight-of-hand",
+              "skill:stealth"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

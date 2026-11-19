@@ -1,0 +1,85 @@
+{
+  "id": "creature:giant-frog",
+  "name": "Giant Frog",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 11,
+  "hp": {
+    "average": 18,
+    "formula": "4d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:swim": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 3,
+    "ability:con": 11,
+    "ability:dex": 13,
+    "ability:int": 2,
+    "ability:str": 12,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 2,
+    "skill:stealth": 3
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 30
+    }
+  },
+  "passivePerception": 12,
+  "xp": 50,
+  "cr": 0.25,
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The frog can breathe air and water.",
+        "plain": "The frog can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Standing Leap",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The frog's long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start.",
+        "plain": "The frog's long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one target. _Hit:_ 4 (1d6 + 1) piercing damage, and the target is Grappled (escape DC 11). Until this grapple ends, the target is Restrained, and the frog can't bite another target.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) piercing damage, and the target is Grappled (escape DC 11). Until this grapple ends, the target is Restrained, and the frog can't bite another target.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Swallow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The frog makes one bite attack against a Small or smaller target it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed target is Blinded and Restrained, it has total cover against attacks and other effects outside the frog, and it takes 5 (2d4) acid damage at the start of each of the frog's turns. The frog can have only one target swallowed at a time.\n\nIf the frog dies, a swallowed creature is no longer Restrained by it and can escape from the corpse using 5 feet of movement, exiting Prone.",
+        "plain": "The frog makes one bite attack against a Small or smaller target it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed target is Blinded and Restrained, it has total cover against attacks and other effects outside the frog, and it takes 5 (2d4) acid damage at the start of each of the frog's turns. The frog can have only one target swallowed at a time.\n\nIf the frog dies, a swallowed creature is no longer Restrained by it and can escape from the corpse using 5 feet of movement, exiting Prone.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

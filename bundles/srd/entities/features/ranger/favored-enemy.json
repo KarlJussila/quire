@@ -1,0 +1,550 @@
+{
+  "id": "feature:ranger/favored-enemy",
+  "name": "Favored Enemy",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.\n\nChoose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.\n\nYou have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.\n\nWhen you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.\n\nYou choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.",
+    "plain": "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.\n\nChoose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.\n\nYou have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.\n\nWhen you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.\n\nYou choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "record",
+      "pick": {
+        "choose": {
+          "key": "enemy-1",
+          "name": "Favored Enemy",
+          "from": [
+            {
+              "kind": "creature-type"
+            }
+          ]
+        }
+      },
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 1
+      }
+    },
+    {
+      "type": "record",
+      "when": {
+        "all": [
+          {
+            "compare": "levels.class:ranger",
+            "atLeast": 1
+          },
+          {
+            "has": "feature:ranger/favored-enemy",
+            "chosen": {
+              "enemy-1": "creature-type:humanoid"
+            }
+          }
+        ]
+      },
+      "pick": {
+        "choose": {
+          "key": "humanoid-enemies-1",
+          "name": "Two Humanoid Races",
+          "count": 2,
+          "distinct": true,
+          "from": [
+            {
+              "kind": "species",
+              "where": {
+                "prose": {
+                  "text": "A humanoid race represented by this species entity.",
+                  "gap": {
+                    "category": "test",
+                    "name": "The humanoid race represented by a species or NPC"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "proficiency",
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 1
+      },
+      "in": [
+        {
+          "choose": {
+            "key": "enemy-language-1",
+            "name": "Favored Enemy Language",
+            "optional": true,
+            "from": [
+              {
+                "kind": "language"
+              }
+            ],
+            "where": {
+              "prose": {
+                "text": "A language spoken by the favored enemies selected for this choice, if they speak one.",
+                "gap": {
+                  "category": "test",
+                  "name": "Language spoken by the selected favored enemies"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "record",
+      "pick": {
+        "choose": {
+          "key": "enemy-2",
+          "name": "Additional Favored Enemy (6)",
+          "from": [
+            {
+              "kind": "creature-type"
+            }
+          ]
+        }
+      },
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 6
+      }
+    },
+    {
+      "type": "record",
+      "when": {
+        "all": [
+          {
+            "compare": "levels.class:ranger",
+            "atLeast": 6
+          },
+          {
+            "has": "feature:ranger/favored-enemy",
+            "chosen": {
+              "enemy-2": "creature-type:humanoid"
+            }
+          }
+        ]
+      },
+      "pick": {
+        "choose": {
+          "key": "humanoid-enemies-2",
+          "name": "Two Humanoid Races",
+          "count": 2,
+          "distinct": true,
+          "from": [
+            {
+              "kind": "species",
+              "where": {
+                "prose": {
+                  "text": "A humanoid race represented by this species entity.",
+                  "gap": {
+                    "category": "test",
+                    "name": "The humanoid race represented by a species or NPC"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "proficiency",
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 6
+      },
+      "in": [
+        {
+          "choose": {
+            "key": "enemy-language-2",
+            "name": "Favored Enemy Language",
+            "optional": true,
+            "from": [
+              {
+                "kind": "language"
+              }
+            ],
+            "where": {
+              "prose": {
+                "text": "A language spoken by the favored enemies selected for this choice, if they speak one.",
+                "gap": {
+                  "category": "test",
+                  "name": "Language spoken by the selected favored enemies"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "record",
+      "pick": {
+        "choose": {
+          "key": "enemy-3",
+          "name": "Additional Favored Enemy (14)",
+          "from": [
+            {
+              "kind": "creature-type"
+            }
+          ]
+        }
+      },
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 14
+      }
+    },
+    {
+      "type": "record",
+      "when": {
+        "all": [
+          {
+            "compare": "levels.class:ranger",
+            "atLeast": 14
+          },
+          {
+            "has": "feature:ranger/favored-enemy",
+            "chosen": {
+              "enemy-3": "creature-type:humanoid"
+            }
+          }
+        ]
+      },
+      "pick": {
+        "choose": {
+          "key": "humanoid-enemies-3",
+          "name": "Two Humanoid Races",
+          "count": 2,
+          "distinct": true,
+          "from": [
+            {
+              "kind": "species",
+              "where": {
+                "prose": {
+                  "text": "A humanoid race represented by this species entity.",
+                  "gap": {
+                    "category": "test",
+                    "name": "The humanoid race represented by a species or NPC"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "proficiency",
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 14
+      },
+      "in": [
+        {
+          "choose": {
+            "key": "enemy-language-3",
+            "name": "Favored Enemy Language",
+            "optional": true,
+            "from": [
+              {
+                "kind": "language"
+              }
+            ],
+            "where": {
+              "prose": {
+                "text": "A language spoken by the favored enemies selected for this choice, if they speak one.",
+                "gap": {
+                  "category": "test",
+                  "name": "Language spoken by the selected favored enemies"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check",
+              "ability": "ability:wis",
+              "skill": "skill:survival"
+            }
+          },
+          {
+            "creature": "subject",
+            "where": {
+              "any": [
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": {
+                          "chosen": "enemy-1",
+                          "from": "feature:ranger/favored-enemy"
+                        }
+                      }
+                    },
+                    {
+                      "not": {
+                        "match": {
+                          "creatureType": "creature-type:humanoid"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": "creature-type:humanoid"
+                      }
+                    },
+                    {
+                      "has": {
+                        "chosen": "humanoid-enemies-1",
+                        "from": "feature:ranger/favored-enemy"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": {
+                          "chosen": "enemy-2",
+                          "from": "feature:ranger/favored-enemy"
+                        }
+                      }
+                    },
+                    {
+                      "not": {
+                        "match": {
+                          "creatureType": "creature-type:humanoid"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": "creature-type:humanoid"
+                      }
+                    },
+                    {
+                      "has": {
+                        "chosen": "humanoid-enemies-2",
+                        "from": "feature:ranger/favored-enemy"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": {
+                          "chosen": "enemy-3",
+                          "from": "feature:ranger/favored-enemy"
+                        }
+                      }
+                    },
+                    {
+                      "not": {
+                        "match": {
+                          "creatureType": "creature-type:humanoid"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": "creature-type:humanoid"
+                      }
+                    },
+                    {
+                      "has": {
+                        "chosen": "humanoid-enemies-3",
+                        "from": "feature:ranger/favored-enemy"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "prose": {
+              "text": "The check tracks this creature.",
+              "gap": {
+                "category": "test",
+                "name": "Purpose of this check"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check",
+              "ability": "ability:int"
+            }
+          },
+          {
+            "creature": "subject",
+            "where": {
+              "any": [
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": {
+                          "chosen": "enemy-1",
+                          "from": "feature:ranger/favored-enemy"
+                        }
+                      }
+                    },
+                    {
+                      "not": {
+                        "match": {
+                          "creatureType": "creature-type:humanoid"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": "creature-type:humanoid"
+                      }
+                    },
+                    {
+                      "has": {
+                        "chosen": "humanoid-enemies-1",
+                        "from": "feature:ranger/favored-enemy"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": {
+                          "chosen": "enemy-2",
+                          "from": "feature:ranger/favored-enemy"
+                        }
+                      }
+                    },
+                    {
+                      "not": {
+                        "match": {
+                          "creatureType": "creature-type:humanoid"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": "creature-type:humanoid"
+                      }
+                    },
+                    {
+                      "has": {
+                        "chosen": "humanoid-enemies-2",
+                        "from": "feature:ranger/favored-enemy"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": {
+                          "chosen": "enemy-3",
+                          "from": "feature:ranger/favored-enemy"
+                        }
+                      }
+                    },
+                    {
+                      "not": {
+                        "match": {
+                          "creatureType": "creature-type:humanoid"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": "creature-type:humanoid"
+                      }
+                    },
+                    {
+                      "has": {
+                        "chosen": "humanoid-enemies-3",
+                        "from": "feature:ranger/favored-enemy"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "prose": {
+              "text": "The check recalls information about this creature.",
+              "gap": {
+                "category": "test",
+                "name": "Purpose of this check"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Humanoid races absent from species (for example Gnoll), and humanoid NPC stat blocks without a species relationship, need an ancestry owner before racial favored enemies can cover them."
+    }
+  ]
+}

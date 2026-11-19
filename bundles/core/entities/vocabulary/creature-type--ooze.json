@@ -1,0 +1,7 @@
+{
+  "id": "creature-type:ooze",
+  "name": "Ooze",
+  "source": {
+    "book": "core"
+  }
+}

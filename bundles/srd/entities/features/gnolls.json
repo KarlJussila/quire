@@ -1,0 +1,11 @@
+{
+  "id": "feature:gnolls",
+  "name": "Gnolls",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

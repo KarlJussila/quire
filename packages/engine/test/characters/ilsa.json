@@ -1,0 +1,175 @@
+{
+  "format": 1,
+  "id": "4f9c2e1a-7b3d-4c5e-9f60-1a2b3c4d5e6f",
+  "name": "Ilsa",
+  "bundles": [
+    "core",
+    "srd24"
+  ],
+  "chosen": {
+    "rule:languages@2024": {
+      "languages": [
+        "language:elvish",
+        "language:dwarvish"
+      ]
+    }
+  },
+  "abilities": {
+    "ability:str": 8,
+    "ability:dex": 15,
+    "ability:con": 14,
+    "ability:int": 15,
+    "ability:wis": 10,
+    "ability:cha": 12
+  },
+  "species": {
+    "species": "species:elf@2024",
+    "chosen": {
+      "feature:elf/elven-lineage@2024": {
+        "lineage": "feature:elf/elven-lineage/high-elf@2024",
+        "spellcasting-ability": "ability:int"
+      },
+      "feature:elf/keen-senses@2024": {
+        "skill": "skill:perception"
+      }
+    }
+  },
+  "background": {
+    "background": "background:sage@2024",
+    "chosen": {
+      "feature:sage/ability-scores@2024": {
+        "ability-scores": {
+          "ability:int": 2,
+          "ability:con": 1
+        }
+      },
+      "feat:magic-initiate@2024": {
+        "cantrips": [
+          "spell:guidance",
+          "spell:light"
+        ],
+        "class": "class:cleric",
+        "spell": "spell:bless",
+        "spellcasting-ability": "ability:int"
+      }
+    }
+  },
+  "firstClass": "class:wizard@2024",
+  "classes": {
+    "class:wizard@2024": [
+      {
+        "hp": 6,
+        "chosen": {
+          "feature:wizard/spellcasting@2024": {
+            "cantrips": [
+              "spell:fire-bolt",
+              "spell:mage-hand",
+              "spell:prestidigitation",
+              "spell:ray-of-frost"
+            ],
+            "prepared": [
+              "spell:magic-missile@2024",
+              "spell:shield@2024",
+              "spell:mage-armor@2024",
+              "spell:detect-magic@2024",
+              "spell:misty-step@2024",
+              "spell:scorching-ray@2024",
+              "spell:web@2024"
+            ]
+          },
+          "feature:wizard/proficiencies@2024": {
+            "skills": [
+              "skill:investigation",
+              "skill:insight"
+            ]
+          }
+        }
+      },
+      {
+        "hp": 4,
+        "chosen": {
+          "feature:wizard/scholar@2024": {
+            "scholar-skill": "skill:arcana"
+          }
+        }
+      },
+      {
+        "hp": 4,
+        "chosen": {
+          "feature:wizard/wizard-subclass@2024": {
+            "subclass": "subclass:wizard/evoker@2024"
+          }
+        }
+      },
+      {
+        "hp": 4,
+        "chosen": {
+          "feature:wizard/ability-score-improvement@2024": {
+            "feat": "feat:ability-score-improvement@2024"
+          },
+          "feat:ability-score-improvement@2024": {
+            "ability": {
+              "ability:int": 1,
+              "ability:wis": 1
+            }
+          }
+        }
+      }
+    ],
+    "class:fighter@2024": [
+      {
+        "hp": 6,
+        "chosen": {
+          "feature:fighter/fighting-style@2024": {
+            "fighting-style": "feat:archery@2024"
+          },
+          "feature:fighter/weapon-mastery@2024": {
+            "mastery": [
+              "item:longsword@2024",
+              "item:longbow@2024",
+              "item:dagger@2024"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "item": "item:studded-leather@2024",
+      "worn": true
+    },
+    {
+      "item": "item:shield@2024"
+    },
+    {
+      "item": "item:dagger@2024",
+      "held": true
+    },
+    {
+      "item": "item:spellbook@2024",
+      "holds": {
+        "spellbook": [
+          "spell:magic-missile@2024",
+          "spell:shield@2024",
+          "spell:mage-armor@2024",
+          "spell:detect-magic@2024",
+          "spell:find-familiar@2024",
+          "spell:sleep@2024",
+          "spell:burning-hands@2024",
+          "spell:feather-fall@2024",
+          "spell:misty-step@2024",
+          "spell:scorching-ray@2024",
+          "spell:invisibility@2024",
+          "spell:web@2024",
+          "spell:thunderwave@2024",
+          "spell:shatter@2024"
+        ]
+      }
+    }
+  ],
+  "hp": {
+    "current": 27,
+    "temp": 0
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "sense:truesight",
+  "name": "Truesight",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

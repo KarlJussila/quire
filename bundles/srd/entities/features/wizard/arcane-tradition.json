@@ -1,0 +1,30 @@
+{
+  "id": "feature:wizard/arcane-tradition",
+  "name": "Arcane Tradition",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of eight schools, such as Evocation.\n\nYour choice grants you features at 2nd level and again at 6th, 10th, and 14th level.",
+    "plain": "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of eight schools, such as Evocation.\n\nYour choice grants you features at 2nd level and again at 6th, 10th, and 14th level.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "subclass",
+        "name": "Arcane Tradition",
+        "from": [
+          {
+            "kind": "subclass",
+            "where": {
+              "match": {
+                "class": "class:wizard"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

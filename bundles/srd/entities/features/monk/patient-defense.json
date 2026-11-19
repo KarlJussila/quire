@@ -1,0 +1,37 @@
+{
+  "id": "feature:monk/patient-defense",
+  "name": "Patient Defense",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can spend 1 ki point to take the Dodge action as a bonus action on your turn.",
+    "plain": "You can spend 1 ki point to take the Dodge action as a bonus action on your turn.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "patient-defense",
+      "name": "Patient Defense",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "ki"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": "rule:dodge",
+              "times": 1
+            }
+          ],
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "group:spellcasting-focus/ranger",
+  "name": "Ranger Spellcasting Focus",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:spellcasting-focus",
+  "text": {
+    "plain": "Items in this group can serve as a spellcasting focus for Ranger spells when held, as permitted by that class’s spellcasting rules."
+  }
+}

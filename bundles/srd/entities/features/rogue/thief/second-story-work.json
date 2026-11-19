@@ -1,0 +1,44 @@
+{
+  "id": "feature:rogue/thief/second-story-work",
+  "name": "Second-Story Work",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you choose this archetype at 3rd level, you gain the ability to climb faster than normal; climbing no longer costs you extra movement.\n\nIn addition, when you make a running jump, the distance you cover increases by a number of feet equal to your Dexterity modifier.",
+    "plain": "When you choose this archetype at 3rd level, you gain the ability to climb faster than normal; climbing no longer costs you extra movement.\n\nIn addition, when you make a running jump, the distance you cover increases by a number of feet equal to your Dexterity modifier.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "rule:climbing-swimming-crawling",
+      "set": {
+        "effects": {
+          "$remove": {
+            "type": "change",
+            "set": {
+              "movementCosts": {
+                "movement-mode:climb": true
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "jump": {
+          "$add": "modifiers.ability:dex"
+        }
+      },
+      "when": {
+        "moved": {
+          "atLeast": 10,
+          "since": "last-action"
+        }
+      }
+    }
+  ]
+}

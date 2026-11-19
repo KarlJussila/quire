@@ -1,0 +1,50 @@
+{
+  "id": "rule:states",
+  "name": "Gaining and Losing States",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "An outcome can give a creature a condition or other state, or end one. States also end when their duration runs out or their ending happens."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "emits": [
+    {
+      "event": "event:state-applied",
+      "for": {
+        "kind": "outcome",
+        "where": {
+          "match": {
+            "applyState": true
+          }
+        }
+      },
+      "at": "applied",
+      "fields": {
+        "state": {
+          "stored": "applyState.state"
+        }
+      }
+    },
+    {
+      "event": "event:state-ended",
+      "for": {
+        "kind": "outcome",
+        "where": {
+          "match": {
+            "endState": true
+          }
+        }
+      },
+      "at": "applied",
+      "fields": {
+        "state": {
+          "stored": "endState.state"
+        }
+      }
+    }
+  ]
+}

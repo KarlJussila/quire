@@ -1,0 +1,7 @@
+{
+  "id": "group:poison",
+  "name": "Poison",
+  "source": {
+    "book": "core"
+  }
+}

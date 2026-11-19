@@ -1,0 +1,18 @@
+{
+  "id": "item:spyglass@2024",
+  "name": "Spyglass",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 1,000 GP\n\nObjects viewed through a Spyglass are magnified to twice their size.",
+    "plain": "Cost: 1,000 GP\n\nObjects viewed through a Spyglass are magnified to twice their size.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1000,
+    "currency": "currency:gp"
+  },
+  "weight": 1.0
+}

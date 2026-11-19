@@ -1,0 +1,44 @@
+{
+  "id": "item:priests-pack",
+  "name": "Priest’s Pack",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Includes a backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, a censer, vestments, 2 days of rations, and a waterskin.",
+    "plain": "Includes a backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, a censer, vestments, 2 days of rations, and a waterskin.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 19,
+    "currency": "currency:gp"
+  },
+  "weight": 10.0,
+  "contents": [
+    {
+      "item": "item:backpack",
+      "quantity": 1
+    },
+    {
+      "item": "item:blanket",
+      "quantity": 1
+    },
+    {
+      "item": "item:candle",
+      "quantity": 5
+    },
+    {
+      "item": "item:tinderbox",
+      "quantity": 1
+    },
+    {
+      "item": "item:rations-1-day",
+      "quantity": 2
+    },
+    {
+      "item": "item:waterskin",
+      "quantity": 1
+    }
+  ]
+}

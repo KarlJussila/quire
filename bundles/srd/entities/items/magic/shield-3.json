@@ -1,0 +1,31 @@
+{
+  "id": "item:shield-3",
+  "name": "Shield, +3",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While holding this shield, you have a bonus to AC determined by the shield's rarity. This bonus is in addition to the shield's normal bonus to AC.",
+    "plain": "While holding this shield, you have a bonus to AC determined by the shield's rarity. This bonus is in addition to the shield's normal bonus to AC.",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:very-rare",
+  "base": "item:shield",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 3
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "held": true
+        }
+      }
+    }
+  ]
+}

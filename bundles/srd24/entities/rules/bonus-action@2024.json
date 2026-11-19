@@ -1,0 +1,18 @@
+{
+  "id": "rule:bonus-action@2024",
+  "name": "Bonus Action",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Bonus Action is a special action that you can take on the same turn that you take an action. You can't take more than one Bonus Action on a turn, and you have a Bonus Action to take only if a rule explicitly says so. _See also_ \"Playing the Game\" (\"Actions\").",
+    "plain": "A Bonus Action is a special action that you can take on the same turn that you take an action. You can't take more than one Bonus Action on a turn, and you have a Bonus Action to take only if a rule explicitly says so. See also \"Playing the Game\" (\"Actions\").",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

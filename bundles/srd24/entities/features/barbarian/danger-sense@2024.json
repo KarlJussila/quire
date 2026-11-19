@@ -1,0 +1,35 @@
+{
+  "id": "feature:barbarian/danger-sense@2024",
+  "name": "Level 2: Danger Sense",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain an uncanny sense of when things aren't as they should be, giving you an edge when you dodge perils. You have Advantage on Dexterity saving throws unless you have the Incapacitated condition.",
+    "plain": "You gain an uncanny sense of when things aren't as they should be, giving you an edge when you dodge perils. You have Advantage on Dexterity saving throws unless you have the Incapacitated condition.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:save",
+              "ability": "ability:dex"
+            }
+          },
+          {
+            "not": {
+              "has": "condition:incapacitated"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

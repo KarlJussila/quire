@@ -1,0 +1,40 @@
+{
+  "id": "feature:rogue/thief/use-magic-device@2024",
+  "name": "Level 13: Use Magic Device",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You've learned how to maximize use of magic items, granting you the following benefits.\n\n_**Attunement.**_ You can attune to up to four magic items at once.\n\n_**Charges.**_ Whenever you use a magic item property that expends charges, roll 1d6. On a roll of 6, you use the property without expending the charges.\n\n_**Scrolls.**_ You can use any Spell Scroll, using Intelligence as your spellcasting ability for the spell. If the spell is a cantrip or a level 1 spell, you can cast it reliably. If the scroll contains a higher-level spell, you must first succeed on an Intelligence (Arcana) check (DC 10 plus the spell's level). On a successful check, you cast the spell from the scroll. On a failed check, the scroll disintegrates.",
+    "plain": "You've learned how to maximize use of magic items, granting you the following benefits.\n\nAttunement. You can attune to up to four magic items at once.\n\nCharges. Whenever you use a magic item property that expends charges, roll 1d6. On a roll of 6, you use the property without expending the charges.\n\nScrolls. You can use any Spell Scroll, using Intelligence as your spellcasting ability for the spell. If the spell is a cantrip or a level 1 spell, you can cast it reliably. If the scroll contains a higher-level spell, you must first succeed on an Intelligence (Arcana) check (DC 10 plus the spell's level). On a successful check, you cast the spell from the scroll. On a failed check, the scroll disintegrates.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "spell-scroll",
+      "name": "Use Magic Device",
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Use any Spell Scroll, with Intelligence as your spellcasting ability. If the spell is a cantrip or a 1st-level spell, you cast it reliably. If the scroll holds a higher-level spell, first succeed on an Intelligence (Arcana) check with a DC of 10 plus the spell's level. On a failed check, the scroll disintegrates.",
+            "gap": {
+              "category": "activity",
+              "name": "cast from a Spell Scroll"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "attunementSlots": {
+          "$add": 1
+        }
+      }
+    }
+  ]
+}

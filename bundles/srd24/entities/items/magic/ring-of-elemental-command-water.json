@@ -1,0 +1,14 @@
+{
+  "id": "item:ring-of-water-elemental-command@2024",
+  "name": "Ring of Water Elemental Command",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "This Ring of Elemental Command is linked to the Elemental Plane of Water. While wearing it, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you. You know Aquan, gain a Swim Speed of 60 feet, and can breathe underwater. Its Elemental Compulsion has save DC 18. The ring has 5 charges, regains 1d4 + 1 expended charges daily at dawn, and casts its printed water spells at save DC 18.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:legendary",
+  "attunement": true
+}

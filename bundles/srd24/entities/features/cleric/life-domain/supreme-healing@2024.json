@@ -1,0 +1,31 @@
+{
+  "id": "feature:cleric/life-domain/supreme-healing@2024",
+  "name": "Level 17: Supreme Healing",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you would normally roll one or more dice to restore Hit Points to a creature with a spell or Channel Divinity, don't roll those dice for the healing; instead use the highest number possible for each die. For example, instead of restoring 2d6 Hit Points to a creature with a spell, you restore 12.",
+    "plain": "When you would normally roll one or more dice to restore Hit Points to a creature with a spell or Channel Divinity, don't roll those dice for the healing; instead use the highest number possible for each die. For example, instead of restoring 2d6 Hit Points to a creature with a spell, you restore 12.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "roll",
+      "name": "Maximizing healing dice from spells and Channel Divinity is not modeled."
+    }
+  ],
+  "effects": [
+    {
+      "type": "die-mod",
+      "maximize": true,
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:healing"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "group:weapon",
+  "name": "Weapon",
+  "source": {
+    "book": "core"
+  }
+}

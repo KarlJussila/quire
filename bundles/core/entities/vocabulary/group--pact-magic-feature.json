@@ -1,0 +1,7 @@
+{
+  "id": "group:pact-magic-feature",
+  "name": "Pact Magic Feature",
+  "source": {
+    "book": "core"
+  }
+}

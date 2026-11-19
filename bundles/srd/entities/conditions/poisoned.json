@@ -1,0 +1,28 @@
+{
+  "id": "condition:poisoned",
+  "name": "Poisoned",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- A Poisoned creature has disadvantage on attack rolls and ability checks.",
+    "plain": "A Poisoned creature has disadvantage on attack rolls and ability checks.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": [
+            "roll:attack",
+            "roll:check"
+          ]
+        }
+      }
+    }
+  ]
+}

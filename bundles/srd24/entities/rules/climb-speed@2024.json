@@ -1,0 +1,18 @@
+{
+  "id": "rule:climb-speed@2024",
+  "name": "Climb Speed",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Climb Speed can be used in place of Speed to traverse a vertical surface without expending the extra movement normally associated with climbing. _See also_ \"Climbing\" and \"Speed.\"",
+    "plain": "A Climb Speed can be used in place of Speed to traverse a vertical surface without expending the extra movement normally associated with climbing. See also \"Climbing\" and \"Speed.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

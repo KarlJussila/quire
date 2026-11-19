@@ -1,0 +1,45 @@
+{
+  "id": "spell:pass-without-trace@2024",
+  "name": "Pass without Trace",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You radiate a concealing aura in a 30-foot Emanation for the duration. While in the aura, you and each creature you choose have a +10 bonus to Dexterity (Stealth) checks and leave no tracks.",
+    "plain": "You radiate a concealing aura in a 30-foot Emanation for the duration. While in the aura, you and each creature you choose have a +10 bonus to Dexterity (Stealth) checks and leave no tracks.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:druid",
+    "class:ranger"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "ashes from burned mistletoe"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

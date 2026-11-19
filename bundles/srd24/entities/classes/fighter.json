@@ -1,0 +1,89 @@
+{
+  "id": "class:fighter@2024",
+  "name": "Fighter",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Fighter, you gain the following class features when you reach the specified Fighter levels.",
+    "plain": "As a Fighter, you gain the following class features when you reach the specified Fighter levels.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d10",
+  "multiclass": {
+    "requires": {
+      "any": [
+        {
+          "compare": "abilities.ability:str",
+          "atLeast": 13
+        },
+        {
+          "compare": "abilities.ability:dex",
+          "atLeast": 13
+        }
+      ]
+    },
+    "features": [
+      "feature:fighter/multiclass-proficiencies@2024"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:fighter/fighting-style@2024",
+      "feature:fighter/second-wind@2024",
+      "feature:fighter/weapon-mastery@2024"
+    ],
+    "2": [
+      "feature:fighter/action-surge@2024",
+      "feature:fighter/tactical-mind@2024"
+    ],
+    "3": [
+      "feature:fighter/fighter-subclass@2024"
+    ],
+    "4": [
+      "feature:fighter/ability-score-improvement@2024"
+    ],
+    "5": [
+      "feature:fighter/extra-attack@2024",
+      "feature:fighter/tactical-shift@2024"
+    ],
+    "6": [
+      "feature:fighter/ability-score-improvement@2024"
+    ],
+    "8": [
+      "feature:fighter/ability-score-improvement@2024"
+    ],
+    "9": [
+      "feature:fighter/indomitable@2024",
+      "feature:fighter/tactical-master@2024"
+    ],
+    "11": [
+      "feature:fighter/two-extra-attacks@2024"
+    ],
+    "12": [
+      "feature:fighter/ability-score-improvement@2024"
+    ],
+    "13": [
+      "feature:fighter/studied-attacks@2024"
+    ],
+    "14": [
+      "feature:fighter/ability-score-improvement@2024"
+    ],
+    "16": [
+      "feature:fighter/ability-score-improvement@2024"
+    ],
+    "19": [
+      "feature:fighter/epic-boon@2024"
+    ],
+    "20": [
+      "feature:fighter/three-extra-attacks@2024"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Martial Archetype||Fighter Subclass"
+  },
+  "firstClass": [
+    "feature:fighter/proficiencies@2024"
+  ]
+}

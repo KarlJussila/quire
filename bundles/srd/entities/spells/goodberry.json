@@ -1,0 +1,40 @@
+{
+  "id": "spell:goodberry",
+  "name": "Goodberry",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day.\n\nThe berries lose their potency if they have not been consumed within 24 hours of the casting of this spell.",
+    "plain": "Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day.\n\nThe berries lose their potency if they have not been consumed within 24 hours of the casting of this spell.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:druid",
+    "class:ranger"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a sprig of mistletoe"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

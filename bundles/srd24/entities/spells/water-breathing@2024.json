@@ -1,0 +1,47 @@
+{
+  "id": "spell:water-breathing@2024",
+  "name": "Water Breathing",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This spell grants up to ten willing creatures of your choice within range the ability to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration.",
+    "plain": "This spell grants up to ten willing creatures of your choice within range the ability to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:druid",
+    "class:ranger",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "ritual": true,
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a short reed"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "duration": {
+        "amount": 24,
+        "unit": "hour"
+      },
+      "ritual": true
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "rule:ranged-attacks",
+  "name": "Ranged Attacks",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you make a ranged attack, you fire a bow or a crossbow, hurl a handaxe, or otherwise send projectiles to strike a foe at a distance. A monster might shoot spines from its tail. Many spells also involve making a ranged attack.\n\n### Range\n\nYou can make ranged attacks only against targets within a specified range.\n\nIf a ranged attack, such as one made with a spell, has a single range, you can't attack a target beyond this range.\n\nSome ranged attacks, such as those made with a longbow or a shortbow, have two ranges. The smaller number is the normal range, and the larger number is the long range. Your attack roll has disadvantage when your target is beyond normal range, and you can't attack a target beyond the long range.\n\n### Ranged Attacks in Close Combat\n\nAiming a ranged attack is more difficult when a foe is next to you. When you make a ranged attack with a weapon, a spell, or some other means, you have disadvantage on the attack roll if you are within 5 feet of a hostile creature who can see you and who isn't Incapacitated.",
+    "plain": "When you make a ranged attack, you fire a bow or a crossbow, hurl a handaxe, or otherwise send projectiles to strike a foe at a distance. A monster might shoot spines from its tail. Many spells also involve making a ranged attack.\n\nRange\n\nYou can make ranged attacks only against targets within a specified range.\n\nIf a ranged attack, such as one made with a spell, has a single range, you can't attack a target beyond this range.\n\nSome ranged attacks, such as those made with a longbow or a shortbow, have two ranges. The smaller number is the normal range, and the larger number is the long range. Your attack roll has disadvantage when your target is beyond normal range, and you can't attack a target beyond the long range.\n\nRanged Attacks in Close Combat\n\nAiming a ranged attack is more difficult when a foe is next to you. When you make a ranged attack with a weapon, a spell, or some other means, you have disadvantage on the attack roll if you are within 5 feet of a hostile creature who can see you and who isn't Incapacitated.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "range": "ranged"
+              }
+            }
+          },
+          {
+            "prose": {
+              "text": "beyond normal range",
+              "gap": {
+                "category": "test",
+                "name": "beyond-normal-range"
+              }
+            }
+          }
+        ]
+      },
+      "key": "long-range"
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "range": "ranged"
+              }
+            }
+          },
+          {
+            "within": 5,
+            "of": {
+              "pool": "enemy",
+              "where": {
+                "all": [
+                  {
+                    "perceives": {
+                      "sense": "sight",
+                      "of": "self"
+                    }
+                  },
+                  {
+                    "not": {
+                      "has": "condition:incapacitated"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "key": "enemy-nearby"
+    }
+  ]
+}

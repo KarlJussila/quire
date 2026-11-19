@@ -1,0 +1,11 @@
+{
+  "id": "skill:sleight-of-hand",
+  "name": "Sleight of Hand",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:dex"
+}

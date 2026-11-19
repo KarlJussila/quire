@@ -1,0 +1,10 @@
+{
+  "id": "damage-type:force",
+  "name": "Force",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

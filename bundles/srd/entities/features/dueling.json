@@ -1,0 +1,72 @@
+{
+  "id": "feature:dueling",
+  "name": "Dueling",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.",
+    "plain": "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.",
+    "wording": "srd"
+  },
+  "group": "group:fighting-style",
+  "availableTo": [
+    "class:fighter",
+    "class:paladin",
+    "class:ranger"
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage",
+              "attack": {
+                "range": "melee",
+                "via": "weapon",
+                "hands": 1,
+                "item": "group:melee-weapon"
+              }
+            }
+          },
+          {
+            "compare": {
+              "count": {
+                "pool": "object",
+                "where": {
+                  "all": [
+                    {
+                      "match": {
+                        "weapon": true
+                      }
+                    },
+                    {
+                      "creature": "self",
+                      "where": {
+                        "has": "candidate",
+                        "match": {
+                          "held": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "atMost": 1
+          }
+        ]
+      }
+    }
+  ]
+}

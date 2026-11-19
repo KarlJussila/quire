@@ -1,0 +1,257 @@
+{
+  "id": "rule:saving-throws",
+  "name": "Saving Throws",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "An activity that calls for a saving throw has each target roll one; the creature using the activity is who the roll is against. A saving throw adds the modifier of its ability, and the proficiency bonus if the creature is proficient in that ability's saving throws."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "emits": [
+    {
+      "event": "event:roll-made",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "match": {
+                "delivery": {
+                  "save": true
+                }
+              }
+            },
+            {
+              "not": {
+                "match": {
+                  "delivery": {
+                    "save": {
+                      "kind": true
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "at": "rolled",
+      "by": "target",
+      "subject": "self",
+      "fields": {
+        "roll": "roll:save",
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        }
+      }
+    },
+    {
+      "event": "event:roll-resolved",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "match": {
+                "delivery": {
+                  "save": true
+                }
+              }
+            },
+            {
+              "not": {
+                "match": {
+                  "delivery": {
+                    "save": {
+                      "kind": true
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "at": "resolved",
+      "by": "target",
+      "subject": "self",
+      "fields": {
+        "roll": "roll:save",
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        },
+        "success": {
+          "settled": "success"
+        },
+        "margin": {
+          "settled": "margin"
+        }
+      }
+    },
+    {
+      "event": "event:roll-made",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "save": {
+                "kind": true
+              }
+            }
+          }
+        }
+      },
+      "at": "rolled",
+      "by": "target",
+      "subject": "self",
+      "fields": {
+        "roll": {
+          "stored": "delivery.save.kind"
+        },
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        }
+      }
+    },
+    {
+      "event": "event:roll-resolved",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "save": {
+                "kind": true
+              }
+            }
+          }
+        }
+      },
+      "at": "resolved",
+      "by": "target",
+      "subject": "self",
+      "fields": {
+        "roll": {
+          "stored": "delivery.save.kind"
+        },
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        },
+        "success": {
+          "settled": "success"
+        },
+        "margin": {
+          "settled": "margin"
+        }
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": "modifiers.{ability}"
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": true
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": {
+            "divide": {
+              "times": "proficiencies.{ability}",
+              "by": "proficiencyBonus"
+            },
+            "by": 1,
+            "round": "down"
+          }
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": true
+        }
+      }
+    }
+  ]
+}

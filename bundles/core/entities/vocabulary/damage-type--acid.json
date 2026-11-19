@@ -1,0 +1,10 @@
+{
+  "id": "damage-type:acid",
+  "name": "Acid",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

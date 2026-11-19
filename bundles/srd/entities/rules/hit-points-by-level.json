@@ -1,0 +1,37 @@
+{
+  "id": "rule:hit-points-by-level",
+  "name": "Hit Points by Level",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Each time you gain a level, you gain 1 additional Hit Die. Roll that Hit Die, add your Constitution modifier to the roll, and add the total to your hit point maximum. Alternatively, you can use the fixed value shown in your class entry, which is the average result of the die roll (rounded up).\n\nWhen your Constitution modifier increases by 1, your hit point maximum increases by 1 for each level you have attained. For example, if your 7th-level fighter has a Constitution score of 17, when he reaches 8th level, he increases his Constitution score from 17 to 18, thus increasing his Constitution modifier from +3 to +4. His hit point maximum then increases by 8."
+  },
+  "group": "group:character",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "hp": {
+          "max": {
+            "$base": {
+              "sum": {
+                "sum": [
+                  "classes.*.*.hp",
+                  "modifiers.ability:con"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "when": {
+        "compare": "levels.total",
+        "atLeast": 1
+      }
+    }
+  ]
+}

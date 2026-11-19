@@ -1,0 +1,8 @@
+{
+ "id": "ability:con",
+ "name": "Constitution",
+ "source": {
+  "book": "core"
+ },
+ "abbreviation": "Con"
+}

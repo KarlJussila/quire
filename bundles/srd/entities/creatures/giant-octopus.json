@@ -1,0 +1,94 @@
+{
+  "id": "creature:giant-octopus",
+  "name": "Giant Octopus",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 11,
+  "hp": {
+    "average": 52,
+    "formula": "8d10 + 8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:swim": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 4,
+    "ability:con": 13,
+    "ability:dex": 13,
+    "ability:int": 4,
+    "ability:str": 17,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 4,
+    "skill:stealth": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 200,
+  "cr": 1,
+  "blocks": [
+    {
+      "name": "Hold Breath",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While out of water, the octopus can hold its breath for 1 hour.",
+        "plain": "While out of water, the octopus can hold its breath for 1 hour.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Underwater Camouflage",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The octopus has advantage on Dexterity (Stealth) checks made while underwater.",
+        "plain": "The octopus has advantage on Dexterity (Stealth) checks made while underwater.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Water Breathing",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The octopus can breathe only underwater.",
+        "plain": "The octopus can breathe only underwater.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tentacles",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 15 ft., one target. _Hit:_ 10 (2d6 + 3) bludgeoning damage. If the target is a creature, it is Grappled (escape DC 16). Until this grapple ends, the target is Restrained, and the octopus can't use its tentacles on another target.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 15 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage. If the target is a creature, it is Grappled (escape DC 16). Until this grapple ends, the target is Restrained, and the octopus can't use its tentacles on another target.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ink Cloud",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "A 20 foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action.",
+        "plain": "A 20 foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

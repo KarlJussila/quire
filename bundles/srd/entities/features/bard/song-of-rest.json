@@ -1,0 +1,133 @@
+{
+  "id": "feature:bard/song-of-rest",
+  "name": "Song of Rest",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest by spending one or more Hit Dice, each of those creatures regains an extra 1d6 hit points.\n\nThe extra hit points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level.",
+    "plain": "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest by spending one or more Hit Dice, each of those creatures regains an extra 1d6 hit points.\n\nThe extra hit points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "zone",
+      "when": {
+        "prose": {
+          "text": "You are performing soothing music or oration during this Short Rest.",
+          "gap": {
+            "category": "test",
+            "name": "Whether the Bard is giving the Song of Rest performance."
+          }
+        }
+      },
+      "zone": {
+        "anchor": "self",
+        "area": {
+          "shape": "area-shape:emanation",
+          "size": "unlimited"
+        },
+        "affects": {
+          "pool": "ally",
+          "includeSelf": true,
+          "where": {
+            "any": [
+              {
+                "is": "self"
+              },
+              {
+                "perceives": {
+                  "sense": "hearing",
+                  "of": "self"
+                }
+              }
+            ]
+          }
+        },
+        "effects": [
+          {
+            "type": "triggered",
+            "on": {
+              "event": "event:healed",
+              "subject": "self",
+              "when": {
+                "activity": {
+                  "kind": "activity",
+                  "where": {
+                    "all": [
+                      {
+                        "activity": "rule:short-rest"
+                      },
+                      {
+                        "match": {
+                          "key": "spend-hit-die"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "match": {
+                "amount": {
+                  "atLeast": 1
+                }
+              }
+            },
+            "uses": {
+              "max": 1,
+              "recover": [
+                {
+                  "on": {
+                    "event": "event:rest-finished",
+                    "subject": "self",
+                    "match": {
+                      "rest": "rest:short"
+                    }
+                  },
+                  "amount": "all"
+                }
+              ]
+            },
+            "step": {
+              "outcomes": [
+                {
+                  "heal": {
+                    "amount": {
+                      "if": {
+                        "compare": "source.levels.class:bard",
+                        "atLeast": 17
+                      },
+                      "then": "1d12",
+                      "else": {
+                        "if": {
+                          "compare": "source.levels.class:bard",
+                          "atLeast": 13
+                        },
+                        "then": "1d10",
+                        "else": {
+                          "if": {
+                            "compare": "source.levels.class:bard",
+                            "atLeast": 9
+                          },
+                          "then": "1d8",
+                          "else": "1d6"
+                        }
+                      }
+                    }
+                  },
+                  "to": "self"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "test",
+      "name": "The live performance prerequisite remains a prose test."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "creature:gnoll-warrior@2024",
+  "name": "Gnoll Warrior",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 15,
+  "hp": {
+    "average": 27,
+    "formula": "6d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 11,
+    "ability:dex": 12,
+    "ability:int": 6,
+    "ability:str": 14,
+    "ability:wis": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 100,
+  "proficiencyBonus": 2,
+  "initiative": 1,
+  "habitat": [
+    "Desert",
+    "Forest",
+    "Grassland",
+    "Hill"
+  ],
+  "treasure": [
+    "Armaments",
+    "Individual"
+  ],
+  "cr": 0.5,
+  "languages": [
+    {
+      "language": "language:gnoll"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 5 (1d6 + 2) Piercing damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bone Bow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +3, range 150/600 ft. _Hit:_ 6 (1d10 + 1) Piercing damage.",
+        "plain": "Ranged Attack Roll: +3, range 150/600 ft. Hit: 6 (1d10 + 1) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rampage",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "Immediately after dealing damage to a creature that is already Bloodied, the gnoll moves up to half its Speed, and it makes one Rend attack.",
+        "plain": "Immediately after dealing damage to a creature that is already Bloodied, the gnoll moves up to half its Speed, and it makes one Rend attack.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

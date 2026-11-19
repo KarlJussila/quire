@@ -1,0 +1,41 @@
+{
+  "id": "spell:beacon-of-hope@2024",
+  "name": "Beacon of Hope",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Choose any number of creatures within range. For the duration, each target has Advantage on Wisdom saving throws and Death Saving Throws and regains the maximum number of Hit Points possible from any healing.",
+    "plain": "Choose any number of creatures within range. For the duration, each target has Advantage on Wisdom saving throws and Death Saving Throws and regains the maximum number of Hit Points possible from any healing.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:cleric"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

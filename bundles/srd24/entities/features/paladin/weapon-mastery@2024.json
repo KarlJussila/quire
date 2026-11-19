@@ -1,0 +1,103 @@
+{
+  "id": "feature:paladin/weapon-mastery@2024",
+  "name": "Level 1: Weapon Mastery",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Longswords and Javelins.\n\nWhenever you finish a Long Rest, you can change the kinds of weapons you chose. For example, you could switch to using the mastery properties of Halberds and Flails.",
+    "plain": "Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Longswords and Javelins.\n\nWhenever you finish a Long Rest, you can change the kinds of weapons you chose. For example, you could switch to using the mastery properties of Halberds and Flails.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "masteries": {
+          "$at": {
+            "choose": {
+              "key": "mastery",
+              "name": "Weapon Mastery",
+              "count": 2,
+              "distinct": true,
+              "from": [
+                {
+                  "kind": "item",
+                  "where": {
+                    "all": [
+                      {
+                        "match": {
+                          "weapon": {
+                            "mastery": true
+                          }
+                        }
+                      },
+                      {
+                        "proficient": "candidate"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "$replace": true
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-mastery",
+      "name": "Change Mastered Weapons",
+      "trigger": {
+        "event": "event:rest-finished",
+        "match": {
+          "rest": "rest:long"
+        },
+        "subject": "self"
+      },
+      "outcomes": [
+        {
+          "choose": {
+            "key": "mastery-replacements",
+            "name": "Weapon Choices to Change",
+            "from": [
+              {
+                "name": "One",
+                "of": [
+                  {
+                    "replace": {
+                      "choice": "mastery"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Two",
+                "of": [
+                  {
+                    "replace": {
+                      "choice": "mastery"
+                    }
+                  },
+                  {
+                    "replace": {
+                      "choice": "mastery"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "What each mastery property does in play is still text on the property."
+    }
+  ]
+}

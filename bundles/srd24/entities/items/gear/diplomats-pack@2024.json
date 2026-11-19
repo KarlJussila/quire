@@ -1,0 +1,64 @@
+{
+  "id": "item:diplomats-pack@2024",
+  "name": "Diplomat's Pack",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 39 GP\n\nA Diplomat's Pack contains the following items: Chest, Fine Clothes, Ink, 5 Ink Pens, Lamp, 2 Map or Scroll Cases, 4 flasks of Oil, 5 sheets of Paper, 5 sheets of Parchment, Perfume, and Tinderbox.",
+    "plain": "Cost: 39 GP\n\nA Diplomat's Pack contains the following items: Chest, Fine Clothes, Ink, 5 Ink Pens, Lamp, 2 Map or Scroll Cases, 4 flasks of Oil, 5 sheets of Paper, 5 sheets of Parchment, Perfume, and Tinderbox.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 39,
+    "currency": "currency:gp"
+  },
+  "weight": 39.0,
+  "contents": [
+    {
+      "item": "item:chest",
+      "quantity": 1
+    },
+    {
+      "item": "item:clothes-fine",
+      "quantity": 1
+    },
+    {
+      "item": "item:ink",
+      "quantity": 1
+    },
+    {
+      "item": "item:ink-pen",
+      "quantity": 5
+    },
+    {
+      "item": "item:lamp",
+      "quantity": 1
+    },
+    {
+      "item": "item:case-map-or-scroll",
+      "quantity": 2
+    },
+    {
+      "item": "item:oil",
+      "quantity": 4
+    },
+    {
+      "item": "item:paper",
+      "quantity": 5
+    },
+    {
+      "item": "item:parchment",
+      "quantity": 5
+    },
+    {
+      "item": "item:perfume",
+      "quantity": 1
+    },
+    {
+      "item": "item:tinderbox",
+      "quantity": 1
+    }
+  ]
+}

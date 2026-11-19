@@ -1,0 +1,11 @@
+{
+  "id": "feature:favored-terrain/arctic",
+  "name": "Arctic",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "You have Arctic as a favored terrain. While traveling in it you gain the benefits described under your Natural Explorer feature.",
+    "wording": "original"
+  }
+}

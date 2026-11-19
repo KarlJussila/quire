@@ -1,0 +1,12 @@
+{
+  "id": "language:otyugh",
+  "name": "Otyugh",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- **Languages** Otyugh",
+    "plain": "- Languages Otyugh",
+    "wording": "srd"
+  }
+}

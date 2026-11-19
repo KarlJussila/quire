@@ -1,0 +1,18 @@
+{
+  "id": "item:tinderbox@2024",
+  "name": "Tinderbox",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Tinderbox is a small container holding flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a Candle, Lamp, Lantern, or Torch — or anything else with exposed fuel — takes a Bonus Action. Lighting any other fire takes 1 minute.",
+    "plain": "A Tinderbox is a small container holding flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a Candle, Lamp, Lantern, or Torch — or anything else with exposed fuel — takes a Bonus Action. Lighting any other fire takes 1 minute.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:sp"
+  },
+  "weight": 1.0
+}

@@ -1,0 +1,139 @@
+{
+  "id": "creature:chain-devil@2024",
+  "name": "Chain Devil",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 15,
+  "hp": {
+    "average": 85,
+    "formula": "10d8 + 40"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 14,
+    "ability:con": 18,
+    "ability:dex": 15,
+    "ability:int": 11,
+    "ability:str": 18,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:con": 7,
+    "ability:wis": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120,
+      "note": "unimpeded by magical Darkness"
+    }
+  },
+  "passivePerception": 11,
+  "telepathy": 120,
+  "xp": 3900,
+  "proficiencyBonus": 3,
+  "initiative": 5,
+  "habitat": [
+    "Planar (Nine Hells)"
+  ],
+  "treasure": [
+    "Implements"
+  ],
+  "cr": 8,
+  "languages": [
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:cold",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Diabolical Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+        "plain": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The devil has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The devil has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The devil makes two Chain attacks and uses Conjure Infernal Chain.",
+        "plain": "The devil makes two Chain attacks and uses Conjure Infernal Chain.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Chain",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 10 ft. _Hit:_ 11 (2d6 + 4) Slashing damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of two chains, and it has the Restrained condition until the grapple ends.",
+        "plain": "Melee Attack Roll: +7, reach 10 ft. Hit: 11 (2d6 + 4) Slashing damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of two chains, and it has the Restrained condition until the grapple ends.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Conjure Infernal Chain",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The devil conjures a fiery chain to bind a creature. _Dexterity Saving Throw:_ DC 15, one creature the devil can see within 60 feet. _Failure:_ 9 (2d4 + 4) Fire damage, and the target has the Restrained condition until the end of the devil's next turn, at which point the chain disappears. If the target is Large or smaller, the devil moves the target up to 30 feet straight toward itself. _Success:_ The chain disappears.",
+        "plain": "The devil conjures a fiery chain to bind a creature. Dexterity Saving Throw: DC 15, one creature the devil can see within 60 feet. Failure: 9 (2d4 + 4) Fire damage, and the target has the Restrained condition until the end of the devil's next turn, at which point the chain disappears. If the target is Large or smaller, the devil moves the target up to 30 feet straight toward itself. Success: The chain disappears.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Unnerving Gaze",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "_Trigger:_ A creature the devil can see starts its turn within 30 feet of the devil and can see the devil. _Response — Wisdom Saving Throw DC 15, the triggering creature. _Failure:_ The target has the Frightened condition until the end of its turn. _Success:_ The target is immune to this devil's Unnerving Gaze for 24 hours.",
+        "plain": "Trigger: A creature the devil can see starts its turn within 30 feet of the devil and can see the devil. Response — Wisdom Saving Throw DC 15, the triggering creature. Failure: The target has the Frightened condition until the end of its turn. Success:_ The target is immune to this devil's Unnerving Gaze for 24 hours.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

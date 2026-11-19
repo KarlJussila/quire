@@ -1,0 +1,12 @@
+{
+  "id": "feature:desert-circle",
+  "name": "Desert Circle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "| Druid Level   | Circle Spells                                         |\n|---------------|-------------------------------------------------------|\n| 3rd           | Blur, Silence                                 |\n| 5th           | Create Food and Water, Protection from Energy |\n| 7th           | Blight, Hallucinatory Terrain                 |\n| 9th           | Insect Plague, Wall of Stone                  |",
+    "plain": "| Druid Level   | Circle Spells                                         |\n|---------------|-------------------------------------------------------|\n| 3rd           | Blur, Silence                                 |\n| 5th           | Create Food and Water, Protection from Energy |\n| 7th           | Blight, Hallucinatory Terrain                 |\n| 9th           | Insect Plague, Wall of Stone                  |",
+    "wording": "srd"
+  }
+}

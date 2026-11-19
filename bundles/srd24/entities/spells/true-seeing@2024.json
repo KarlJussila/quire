@@ -1,0 +1,55 @@
+{
+  "id": "spell:true-seeing@2024",
+  "name": "True Seeing",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "For the duration, the willing creature you touch has Truesight with a range of 120 feet.",
+    "plain": "For the duration, the willing creature you touch has Truesight with a range of 120 feet.",
+    "wording": "srd"
+  },
+  "level": 6,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "mushroom powder worth 25+ GP, which the spell consumes",
+      "parts": [
+        {
+          "worth": {
+            "amount": 25,
+            "currency": "currency:gp"
+          },
+          "consumed": true
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour"
+      }
+    }
+  ]
+}

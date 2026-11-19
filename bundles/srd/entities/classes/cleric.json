@@ -1,0 +1,59 @@
+{
+  "id": "class:cleric",
+  "name": "Cleric",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a cleric, you gain the following class features.",
+    "plain": "As a cleric, you gain the following class features.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d8",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:wis",
+      "atLeast": 13
+    },
+    "features": [
+      "feature:cleric/multiclass-proficiencies"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:cleric/divine-domain",
+      "feature:cleric/spellcasting"
+    ],
+    "10": [
+      "feature:cleric/divine-intervention"
+    ],
+    "12": [
+      "feature:ability-score-improvement"
+    ],
+    "16": [
+      "feature:ability-score-improvement"
+    ],
+    "19": [
+      "feature:ability-score-improvement"
+    ],
+    "2": [
+      "feature:cleric/channel-divinity"
+    ],
+    "4": [
+      "feature:ability-score-improvement"
+    ],
+    "5": [
+      "feature:cleric/destroy-undead"
+    ],
+    "8": [
+      "feature:ability-score-improvement"
+    ]
+  },
+  "subclass": {
+    "level": 1,
+    "title": "Divine Domain"
+  },
+  "firstClass": [
+    "feature:cleric/proficiencies"
+  ]
+}

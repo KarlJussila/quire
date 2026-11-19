@@ -1,0 +1,20 @@
+{
+  "id": "item:blowgun-needle",
+  "name": "Blowgun Needle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": [
+    "group:adventuring-gear",
+    "group:ammunition"
+  ],
+  "cost": {
+    "amount": 2,
+    "currency": "currency:cp"
+  },
+  "weight": 0.02
+}

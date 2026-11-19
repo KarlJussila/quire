@@ -1,0 +1,10 @@
+{
+ "id": "feature:uses-thing",
+ "name": "uses-thing",
+ "source": {
+  "book": "edition-user"
+ },
+ "requires": {
+  "has": "feature:thing"
+ }
+}

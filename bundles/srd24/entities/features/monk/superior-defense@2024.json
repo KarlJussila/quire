@@ -1,0 +1,61 @@
+{
+  "id": "feature:monk/superior-defense@2024",
+  "name": "Level 18: Superior Defense",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "At the start of your turn, you can expend 3 Focus Points to bolster yourself against harm for 1 minute or until you have the Incapacitated condition. During that time, you have Resistance to all damage except Force damage.",
+    "plain": "At the start of your turn, you can expend 3 Focus Points to bolster yourself against harm for 1 minute or until you have the Incapacitated condition. During that time, you have Resistance to all damage except Force damage.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "superior-defense",
+      "name": "Superior Defense",
+      "trigger": {
+        "event": "event:turn-start",
+        "subject": "self"
+      },
+      "cost": [
+        {
+          "resource": "focus-points",
+          "amount": 3
+        }
+      ],
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "defense",
+                  "resist": {
+                    "all": true,
+                    "except": [
+                      "damage-type:force"
+                    ]
+                  }
+                }
+              ]
+            },
+            "duration": {
+              "amount": 1,
+              "unit": "minute"
+            },
+            "ends": [
+              {
+                "event": "event:state-applied",
+                "subject": "self",
+                "match": {
+                  "state": "condition:incapacitated"
+                }
+              }
+            ]
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

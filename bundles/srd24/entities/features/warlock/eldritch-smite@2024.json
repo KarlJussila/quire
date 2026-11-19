@@ -1,0 +1,123 @@
+{
+  "id": "feature:warlock/eldritch-smite@2024",
+  "name": "Eldritch Smite",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 5+ Warlock, Pact of the Blade Invocation_\n\nOnce per turn when you hit a creature with your pact weapon, you can expend a Pact Magic spell slot to deal an extra 1d8 Force damage to the target, plus another 1d8 per level of the spell slot, and you can give the target the Prone condition if it is Huge or smaller.",
+    "plain": "Prerequisite: Level 5+ Warlock, Pact of the Blade Invocation\n\nOnce per turn when you hit a creature with your pact weapon, you can expend a Pact Magic spell slot to deal an extra 1d8 Force damage to the target, plus another 1d8 per level of the spell slot, and you can give the target the Prone condition if it is Huge or smaller.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "all": [
+      {
+        "compare": "levels.class:warlock",
+        "atLeast": 5
+      },
+      {
+        "has": "feature:warlock/pact-of-the-blade"
+      }
+    ]
+  },
+  "gaps": [],
+  "activities": [
+    {
+      "key": "eldritch-smite",
+      "name": "Eldritch Smite",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "weapon",
+            "item": {
+              "kind": "item",
+              "where": {
+                "has": "state:warlock/pact-weapon",
+                "source": "self"
+              }
+            }
+          }
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": {
+                "pool": "any"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "cost": [
+        {
+          "resource": "pact-magic"
+        }
+      ],
+      "outcomes": [
+        {
+          "damage": {
+            "amount": {
+              "dice": {
+                "count": {
+                  "sum": [
+                    1,
+                    "spellcasting.class:warlock.spellLevel"
+                  ]
+                },
+                "die": 8
+              }
+            },
+            "type": "damage-type:force"
+          },
+          "to": "subject"
+        },
+        {
+          "choose": {
+            "key": "eldritch-smite-prone",
+            "name": "Knock Prone",
+            "optional": true,
+            "from": [
+              {
+                "name": "Prone",
+                "of": [
+                  {
+                    "applyState": {
+                      "state": "condition:prone"
+                    },
+                    "to": "subject",
+                    "when": {
+                      "creature": "subject",
+                      "where": {
+                        "match": {
+                          "size": {
+                            "atMost": "size:huge"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

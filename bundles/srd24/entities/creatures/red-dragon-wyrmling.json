@@ -1,0 +1,108 @@
+{
+  "id": "creature:red-dragon-wyrmling@2024",
+  "name": "Red Dragon Wyrmling",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 17,
+  "hp": {
+    "average": 75,
+    "formula": "10d8 + 30"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:climb": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 15,
+    "ability:con": 17,
+    "ability:dex": 10,
+    "ability:int": 12,
+    "ability:str": 19,
+    "ability:wis": 11
+  },
+  "saves": {
+    "ability:dex": 2,
+    "ability:wis": 2
+  },
+  "skills": {
+    "skill:perception": 4,
+    "skill:stealth": 2
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    },
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 1100,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Hill",
+    "Mountain"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 4,
+  "languages": [
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes two Rend attacks.",
+        "plain": "The dragon makes two Rend attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 5 ft. _Hit:_ 9 (1d10 + 4) Slashing damage plus 3 (1d6) Fire damage.",
+        "plain": "Melee Attack Roll: +6, reach 5 ft. Hit: 9 (1d10 + 4) Slashing damage plus 3 (1d6) Fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fire Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 13, each creature in a 15-foot Cone. _Failure:_ 24 (7d6) Fire damage. _Success:_ Half damage.",
+        "plain": "Dexterity Saving Throw: DC 13, each creature in a 15-foot Cone. Failure: 24 (7d6) Fire damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

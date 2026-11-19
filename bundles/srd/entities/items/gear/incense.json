@@ -1,0 +1,12 @@
+{
+  "id": "item:incense",
+  "name": "Incense",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "A stick of incense burned in worship or meditation.",
+    "wording": "original"
+  },
+  "group": "group:adventuring-gear"
+}

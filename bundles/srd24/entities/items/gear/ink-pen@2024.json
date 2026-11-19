@@ -1,0 +1,18 @@
+{
+  "id": "item:ink-pen@2024",
+  "name": "Ink Pen",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Using Ink, an Ink Pen is used to write or draw.",
+    "plain": "Using Ink, an Ink Pen is used to write or draw.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:cp"
+  },
+  "weight": 0.0
+}

@@ -1,0 +1,79 @@
+{
+  "id": "feature:paladin/oath-of-devotion/oath-spells",
+  "name": "Oath Spells",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Each oath has a list of associated spells. You gain access to these spells at the levels specified in the oath description. Once you gain access to an oath spell, you always have it prepared. Oath spells don't count against the number of spells you can prepare each day.\n\nIf you gain an oath spell that doesn't appear on the paladin spell list, the spell is nonetheless a paladin spell for you.",
+    "plain": "Each oath has a list of associated spells. You gain access to these spells at the levels specified in the oath description. Once you gain access to an oath spell, you always have it prepared. Oath spells don't count against the number of spells you can prepare each day.\n\nIf you gain an oath spell that doesn't appear on the paladin spell list, the spell is nonetheless a paladin spell for you.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 3
+      },
+      "spells": [
+        "spell:protection-from-evil-and-good",
+        "spell:sanctuary"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 5
+      },
+      "spells": [
+        "spell:lesser-restoration",
+        "spell:zone-of-truth"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 9
+      },
+      "spells": [
+        "spell:beacon-of-hope",
+        "spell:dispel-magic"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 13
+      },
+      "spells": [
+        "spell:freedom-of-movement",
+        "spell:guardian-of-faith"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 17
+      },
+      "spells": [
+        "spell:commune",
+        "spell:flame-strike"
+      ],
+      "how": "prepared",
+      "counts": false
+    }
+  ]
+}

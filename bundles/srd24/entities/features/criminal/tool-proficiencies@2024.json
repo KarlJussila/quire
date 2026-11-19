@@ -1,0 +1,19 @@
+{
+  "id": "feature:criminal/tool-proficiencies@2024",
+  "name": "Tool Proficiency",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Tool Proficiency: Thieves' Tools",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "item:thieves-tools"
+      ]
+    }
+  ]
+}

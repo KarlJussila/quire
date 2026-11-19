@@ -1,0 +1,15 @@
+{
+  "id": "item:wand-of-fear@2024",
+  "name": "Wand of Fear",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This wand has 7 charges.\n\n_**Spells.**_ While holding the wand, you can cast one of the spells (save DC 15) in the table from it. The table indicates how many charges you must expend to cast the spell.\n\n| Spell                                 |   Charge Cost |\n|---------------------------------------|---------------|\n| Command (\"flee\" or \"grovel\" only) |             1 |\n| Fear (60-foot Cone)               |             3 |\n\n_**Regaining Charges.**_ The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+    "plain": "This wand has 7 charges.\n\nSpells. While holding the wand, you can cast one of the spells (save DC 15) in the table from it. The table indicates how many charges you must expend to cast the spell.\n\n| Spell                                 |   Charge Cost |\n|---------------------------------------|---------------|\n| Command (\"flee\" or \"grovel\" only) |             1 |\n| Fear (60-foot Cone)               |             3 |\n\nRegaining Charges. The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+    "wording": "srd"
+  },
+  "group": "group:wand",
+  "rarity": "rarity:rare",
+  "attunement": true
+}

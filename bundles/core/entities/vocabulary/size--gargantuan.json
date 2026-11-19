@@ -1,0 +1,12 @@
+{
+  "id": "size:gargantuan",
+  "name": "Gargantuan",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "rank": 5,
+  "space": 20
+}

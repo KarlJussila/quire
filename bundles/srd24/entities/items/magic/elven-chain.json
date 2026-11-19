@@ -1,0 +1,55 @@
+{
+  "id": "item:elven-chain@2024",
+  "name": "Elven Chain",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a +1 bonus to Armor Class while you wear this armor. You are considered trained with this armor even if you lack training with Medium or Heavy armor.",
+    "plain": "You gain a +1 bonus to Armor Class while you wear this armor. You are considered trained with this armor even if you lack training with Medium or Heavy armor.",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:rare",
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Armor",
+      "from": [
+        "item:chain-mail",
+        "item:chain-shirt"
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true
+        }
+      }
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "chosen": "base"
+        }
+      ],
+      "level": "proficient",
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true
+        }
+      }
+    }
+  ]
+}

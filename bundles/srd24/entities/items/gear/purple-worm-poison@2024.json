@@ -1,0 +1,24 @@
+{
+  "id": "item:purple-worm-poison@2024",
+  "name": "Purple Worm Poison",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 2,000 GP\n\n_Injury Poison_\n\nA creature subjected to Purple Worm Poison makes a DC 21 Constitution saving throw, taking 35 (10d6) Poison damage on a failed save or half as much damage on a successful one.",
+    "plain": "Cost: 2,000 GP\n\nInjury Poison\n\nA creature subjected to Purple Worm Poison makes a DC 21 Constitution saving throw, taking 35 (10d6) Poison damage on a failed save or half as much damage on a successful one.",
+    "wording": "srd"
+  },
+  "group": "group:poison",
+  "cost": {
+    "amount": 2000,
+    "currency": "currency:gp"
+  },
+  "weight": 0.5,
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "Poison exposure and its timed effects are retained in the SRD text."
+    }
+  ]
+}

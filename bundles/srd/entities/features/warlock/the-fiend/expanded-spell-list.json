@@ -1,0 +1,30 @@
+{
+  "id": "feature:warlock/the-fiend/expanded-spell-list",
+  "name": "Expanded Spell List",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "The Fiend lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+    "plain": "The Fiend lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-list",
+      "list": "class:warlock",
+      "spells": [
+        "spell:burning-hands",
+        "spell:command",
+        "spell:blindness-deafness",
+        "spell:scorching-ray",
+        "spell:fireball",
+        "spell:stinking-cloud",
+        "spell:fire-shield",
+        "spell:wall-of-fire",
+        "spell:flame-strike",
+        "spell:hallow"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "group:vehicle-armor",
+  "name": "Vehicle Armor",
+  "source": {
+    "book": "core"
+  }
+}

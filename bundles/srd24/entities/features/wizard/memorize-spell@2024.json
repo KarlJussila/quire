@@ -1,0 +1,55 @@
+{
+  "id": "feature:wizard/memorize-spell@2024",
+  "name": "Level 5: Memorize Spell",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Whenever you finish a Short Rest, you can study your spellbook and replace one of the level 1+ Wizard spells you have prepared for your Spellcasting feature with another level 1+ spell from the book.",
+    "plain": "Whenever you finish a Short Rest, you can study your spellbook and replace one of the level 1+ Wizard spells you have prepared for your Spellcasting feature with another level 1+ spell from the book.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "activities": [
+    {
+      "key": "memorize-spell",
+      "name": "Memorize Spell",
+      "trigger": {
+        "event": "event:rest-finished",
+        "subject": "self",
+        "match": {
+          "rest": "rest:short"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "prepared",
+            "from": "feature:wizard/spellcasting",
+            "with": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "lists": "class:wizard",
+                      "level": {
+                        "atLeast": 1
+                      }
+                    }
+                  },
+                  {
+                    "is": {
+                      "chosen": "spellbook",
+                      "from": "feature:wizard/spellcasting"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

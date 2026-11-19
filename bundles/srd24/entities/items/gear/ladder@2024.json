@@ -1,0 +1,18 @@
+{
+  "id": "item:ladder@2024",
+  "name": "Ladder",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 1 SP\n\nA Ladder is 10 feet tall. You must climb to move up or down it.",
+    "plain": "Cost: 1 SP\n\nA Ladder is 10 feet tall. You must climb to move up or down it.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:sp"
+  },
+  "weight": 25.0
+}

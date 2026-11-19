@@ -1,0 +1,352 @@
+[
+ {
+  "why": "a damage type without its kind prefix",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "effects": [
+    {
+     "type": "defense",
+     "resist": [
+      "fire"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "why": "unknown effect type",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "effects": [
+    {
+     "type": "heal-over-time",
+     "amount": 5
+    }
+   ]
+  }
+ },
+ {
+  "why": "unknown outcome",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "activities": [
+    {
+     "key": "x",
+     "outcomes": [
+      {
+       "explode": {}
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "why": "the removed flag atom",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "effects": [
+    {
+     "type": "roll-mod",
+     "mode": "advantage",
+     "when": {
+      "flag": "wearing-heavy-armor"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "why": "the removed roll atom, now an event test",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "effects": [
+    {
+     "type": "roll-mod",
+     "mode": "advantage",
+     "when": {
+      "roll": "roll:save"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "why": "the removed scaling field",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "activities": [
+    {
+     "key": "x",
+     "scaling": [
+      {
+       "perSlotAbove": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "why": "the removed Duration.until form",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "activities": [
+    {
+     "key": "x",
+     "duration": {
+      "until": [
+       {
+        "event": "event:turn-end"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ },
+ {
+  "why": "the removed alter-roll outcome",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "activities": [
+    {
+     "key": "x",
+     "outcomes": [
+      {
+       "alter-roll": {
+        "result": "success"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "why": "the removed forced-result result, now success and crit",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "effects": [
+    {
+     "type": "forced-result",
+     "result": "crit"
+    }
+   ]
+  }
+ },
+ {
+  "why": "misspelled field",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "activities": [
+    {
+     "key": "x",
+     "activaton": {
+      "type": "activation:action"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "why": "bad dice",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "activities": [
+    {
+     "key": "x",
+     "outcomes": [
+      {
+       "damage": {
+        "amount": "2x8",
+        "type": "damage-type:fire"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "why": "unknown entity kind",
+  "entity": {
+   "id": "widget:thing",
+   "name": "Thing",
+   "source": {
+    "book": "srd"
+   }
+  }
+ },
+ {
+  "why": "spell level out of range",
+  "entity": {
+   "id": "spell:x",
+   "name": "X",
+   "source": {
+    "book": "srd"
+   },
+   "level": 10,
+   "school": "spell-school:evocation",
+   "components": {}
+  }
+ },
+ {
+  "why": "a who-word that is not a role",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "activities": [
+    {
+     "key": "x",
+     "outcomes": [
+      {
+       "heal": {
+        "amount": 5
+       },
+       "to": "mount"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "why": "the removed trigger field on",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "activities": [
+    {
+     "key": "test",
+     "trigger": {
+      "on": "event:attack-roll",
+      "by": "self"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "why": "a preset base without its choices",
+  "entity": {
+   "id": "item:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "base": {
+    "item": "item:vorpal-sword"
+   }
+  }
+ },
+ {
+  "why": "the removed spell-access field without",
+  "entity": {
+   "id": "feature:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "effects": [
+    {
+     "type": "spell-access",
+     "spells": [
+      "spell:mage-hand"
+     ],
+     "how": "known",
+     "without": [
+      "verbal"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "why": "a cast patch on a field spells' casting doesn't have",
+  "entity": {
+   "id": "item:test",
+   "name": "Test",
+   "source": {
+    "book": "srd"
+   },
+   "activities": [
+    {
+     "key": "cast-fear",
+     "cost": [
+      {
+       "resource": "action"
+      }
+     ],
+     "outcomes": [
+      {
+       "cast": {
+        "spell": "spell:fear",
+        "slot": false,
+        "set": {
+         "activities": {
+          "cast": {
+           "concentrate": {
+            "$delete": true
+           }
+          }
+         }
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

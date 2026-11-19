@@ -1,0 +1,97 @@
+{
+  "id": "feature:cleric/improved-blessed-strikes@2024",
+  "name": "Level 14: Improved Blessed Strikes",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The option you chose for Blessed Strikes grows more powerful.\n\n_**Divine Strike.**_ The extra damage of your Divine Strike increases to 2d8.\n\n_**Potent Spellcasting.**_ When you cast a Cleric cantrip and deal damage to a creature with it, you can give vitality to yourself or another creature within 60 feet of yourself, granting a number of Temporary Hit Points equal to twice your Wisdom modifier.",
+    "plain": "The option you chose for Blessed Strikes grows more powerful.\n\nDivine Strike. The extra damage of your Divine Strike increases to 2d8.\n\nPotent Spellcasting. When you cast a Cleric cantrip and deal damage to a creature with it, you can give vitality to yourself or another creature within 60 feet of yourself, granting a number of Temporary Hit Points equal to twice your Wisdom modifier.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "activities": [
+    {
+      "key": "potent-spellcasting-vitality",
+      "name": "Potent Spellcasting Vitality",
+      "trigger": {
+        "event": "event:damaged",
+        "by": "self",
+        "match": {
+          "spell": {
+            "kind": "spell",
+            "where": {
+              "all": [
+                {
+                  "match": {
+                    "level": 0
+                  }
+                },
+                {
+                  "grantedBy": "class:cleric"
+                }
+              ]
+            }
+          }
+        },
+        "subject": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        },
+        "when": {
+          "event": "event:activity-used",
+          "by": "self",
+          "match": {
+            "spell": true
+          }
+        }
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any",
+          "chosen": true,
+          "where": {
+            "within": 60,
+            "of": "self"
+          },
+          "includeSelf": true
+        }
+      },
+      "outcomes": [
+        {
+          "tempHp": {
+            "amount": {
+              "times": "modifiers.ability:wis",
+              "by": 2
+            }
+          }
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:activity-used",
+              "by": "self",
+              "match": {
+                "spell": true
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "when": {
+        "has": "feature:cleric/blessed-strikes",
+        "chosen": {
+          "blessed-strikes": "Potent Spellcasting"
+        }
+      }
+    }
+  ],
+  "effects": []
+}

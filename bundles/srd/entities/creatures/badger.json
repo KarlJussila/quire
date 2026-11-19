@@ -1,0 +1,63 @@
+{
+  "id": "creature:badger",
+  "name": "Badger",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 10,
+  "hp": {
+    "average": 3,
+    "formula": "1d4 + 1"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:burrow": {
+      "speed": 5
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 12,
+    "ability:dex": 11,
+    "ability:int": 2,
+    "ability:str": 4,
+    "ability:wis": 12
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 30
+    }
+  },
+  "passivePerception": 11,
+  "xp": 10,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Keen Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The badger has advantage on Wisdom (Perception) checks that rely on smell.",
+        "plain": "The badger has advantage on Wisdom (Perception) checks that rely on smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +2 to hit, reach 5 ft., one target. _Hit:_ 1 piercing damage.",
+        "plain": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 1 piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

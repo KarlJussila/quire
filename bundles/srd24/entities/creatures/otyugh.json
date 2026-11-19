@@ -1,0 +1,95 @@
+{
+  "id": "creature:otyugh@2024",
+  "name": "Otyugh",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:aberration",
+  "alignment": "alignment:neutral",
+  "ac": 14,
+  "hp": {
+    "average": 104,
+    "formula": "11d10 + 44"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 19,
+    "ability:dex": 11,
+    "ability:int": 6,
+    "ability:str": 16,
+    "ability:wis": 13
+  },
+  "saves": {
+    "ability:con": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 11,
+  "telepathy": 120,
+  "xp": 1800,
+  "proficiencyBonus": 3,
+  "initiative": 0,
+  "habitat": [
+    "Underdark"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 5,
+  "languages": [
+    {
+      "language": "language:otyugh"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The otyugh makes one Bite attack and two Tentacle attacks.",
+        "plain": "The otyugh makes one Bite attack and two Tentacle attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 5 ft. _Hit:_ 12 (2d8 + 3) Piercing damage, and the target has the Poisoned condition. Whenever the Poisoned target finishes a Long Rest, it is subjected to the following effect. _Constitution Saving Throw:_ DC 15. _Failure:_ The target's Hit Point maximum decreases by 5 (1d10) and doesn't return to normal until the Poisoned condition ends on the target. _Success:_ The Poisoned condition ends.",
+        "plain": "Melee Attack Roll: +6, reach 5 ft. Hit: 12 (2d8 + 3) Piercing damage, and the target has the Poisoned condition. Whenever the Poisoned target finishes a Long Rest, it is subjected to the following effect. Constitution Saving Throw: DC 15. Failure: The target's Hit Point maximum decreases by 5 (1d10) and doesn't return to normal until the Poisoned condition ends on the target. Success: The Poisoned condition ends.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tentacle",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 10 ft. _Hit:_ 12 (2d8 + 3) Piercing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 13) from one of two tentacles.",
+        "plain": "Melee Attack Roll: +6, reach 10 ft. Hit: 12 (2d8 + 3) Piercing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 13) from one of two tentacles.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tentacle Slam",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 14, each creature Grappled by the otyugh. _Failure:_ 16 (3d8 + 3) Bludgeoning damage, and the target has the Stunned condition until the start of the otyugh's next turn. _Success:_ Half damage only.",
+        "plain": "Constitution Saving Throw: DC 14, each creature Grappled by the otyugh. Failure: 16 (3d8 + 3) Bludgeoning damage, and the target has the Stunned condition until the start of the otyugh's next turn. Success: Half damage only.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

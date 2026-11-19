@@ -1,0 +1,37 @@
+{
+  "id": "rule:armor-class",
+  "name": "Armor Class",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Armor protects its wearer from attacks. The armor (and shield) you wear determines your base Armor Class."
+  },
+  "group": "group:character",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$base": {
+            "sum": [
+              10,
+              "modifiers.ability:dex"
+            ]
+          }
+        }
+      },
+      "when": {
+        "not": {
+          "has": "group:armor",
+          "match": {
+            "worn": true
+          }
+        }
+      }
+    }
+  ]
+}

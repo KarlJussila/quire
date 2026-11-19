@@ -1,0 +1,30 @@
+{
+  "id": "feature:druid/druid-circle",
+  "name": "Druid Circle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 2nd level, you choose to identify with a circle of druids, such as the Circle of the Land. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level.",
+    "plain": "At 2nd level, you choose to identify with a circle of druids, such as the Circle of the Land. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "subclass",
+        "name": "Druid Circle",
+        "from": [
+          {
+            "kind": "subclass",
+            "where": {
+              "match": {
+                "class": "class:druid"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

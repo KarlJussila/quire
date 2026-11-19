@@ -1,0 +1,25 @@
+{
+  "id": "item:morningstar@2024",
+  "name": "Morningstar",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:martial-melee-weapon",
+  "cost": {
+    "amount": 15,
+    "currency": "currency:gp"
+  },
+  "weight": 4.0,
+  "weapon": {
+    "properties": [],
+    "damage": {
+      "amount": "1d8",
+      "type": "damage-type:piercing"
+    },
+    "mastery": "weapon-mastery:sap"
+  }
+}

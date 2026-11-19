@@ -1,0 +1,11 @@
+{
+  "id": "skill:performance",
+  "name": "Performance",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:cha"
+}

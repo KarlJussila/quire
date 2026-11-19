@@ -1,0 +1,30 @@
+{
+  "id": "feature:warlock/otherworldly-patron",
+  "name": "Otherworldly Patron",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 1st level, you have struck a bargain with an otherworldly being of your choice: the Archfey, the Fiend, or the Great Old One, each of which is detailed at the end of the class description. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.",
+    "plain": "At 1st level, you have struck a bargain with an otherworldly being of your choice: the Archfey, the Fiend, or the Great Old One, each of which is detailed at the end of the class description. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "subclass",
+        "name": "Otherworldly Patron",
+        "from": [
+          {
+            "kind": "subclass",
+            "where": {
+              "match": {
+                "class": "class:warlock"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "creature:will-o-wisp@2024",
+  "name": "Will-o’-Wisp",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 19,
+  "hp": {
+    "average": 27,
+    "formula": "11d4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 5
+    },
+    "movement-mode:fly": {
+      "speed": 50,
+      "hover": true
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 10,
+    "ability:dex": 28,
+    "ability:int": 13,
+    "ability:str": 1,
+    "ability:wis": 14
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 12,
+  "xp": 450,
+  "proficiencyBonus": 2,
+  "initiative": 9,
+  "habitat": [
+    "Forest",
+    "Swamp",
+    "Urban"
+  ],
+  "cr": 2,
+  "languages": [
+    {
+      "text": "Common plus one other language"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:lightning",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:acid",
+        "damage-type:bludgeoning",
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:necrotic",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:exhaustion",
+        "condition:grappled",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:poisoned",
+        "condition:prone",
+        "condition:restrained",
+        "condition:unconscious"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Ephemeral",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The wisp can't wear or carry anything.",
+        "plain": "The wisp can't wear or carry anything.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Illumination",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The wisp sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.",
+        "plain": "The wisp sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Incorporeal Movement",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The wisp can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.",
+        "plain": "The wisp can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shock",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 11 (2d8 + 2) Lightning damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 11 (2d8 + 2) Lightning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Consume Life",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 10, one living creature the wisp can see within 5 feet that has 0 Hit Points. _Failure:_ The target dies, and the wisp regains 10 (3d6) Hit Points.",
+        "plain": "Constitution Saving Throw: DC 10, one living creature the wisp can see within 5 feet that has 0 Hit Points. Failure: The target dies, and the wisp regains 10 (3d6) Hit Points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Vanish",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The wisp and its light have the Invisible condition until the wisp's Concentration ends on this effect, which ends early immediately after the wisp makes an attack roll or uses Consume Life.",
+        "plain": "The wisp and its light have the Invisible condition until the wisp's Concentration ends on this effect, which ends early immediately after the wisp makes an attack roll or uses Consume Life.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

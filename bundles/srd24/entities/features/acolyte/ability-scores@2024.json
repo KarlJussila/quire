@@ -1,0 +1,37 @@
+{
+  "id": "feature:acolyte/ability-scores@2024",
+  "name": "Ability Scores",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Ability Scores: Intelligence, Wisdom, Charisma",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "$at": {
+            "choose": {
+              "key": "ability-scores",
+              "name": "Ability Scores",
+              "count": 3,
+              "each": 2,
+              "from": [
+                "ability:int",
+                "ability:wis",
+                "ability:cha"
+              ]
+            }
+          },
+          "$add": {
+            "amount": 1,
+            "upTo": 20
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "spell:locate-animals-or-plants@2024",
+  "name": "Locate Animals or Plants",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Describe or name a specific kind of Beast, Plant creature, or nonmagical plant. You learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present.",
+    "plain": "Describe or name a specific kind of Beast, Plant creature, or nonmagical plant. You learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:bard",
+    "class:druid",
+    "class:ranger"
+  ],
+  "ritual": true,
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "fur from a bloodhound"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": "instant",
+      "ritual": true
+    }
+  ]
+}

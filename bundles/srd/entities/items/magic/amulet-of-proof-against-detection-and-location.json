@@ -1,0 +1,16 @@
+{
+  "id": "item:amulet-of-proof-against-detection-and-location",
+  "name": "Amulet of Proof Against Detection and Location",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing this amulet, you are hidden from divination magic. You can't be targeted by such magic or perceived through magical scrying sensors.",
+    "plain": "While wearing this amulet, you are hidden from divination magic. You can't be targeted by such magic or perceived through magical scrying sensors.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "weight": 0.0
+}

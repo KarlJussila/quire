@@ -1,0 +1,74 @@
+{
+  "id": "feature:barbarian/relentless-rage@2024",
+  "name": "Level 11: Relentless Rage",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your Rage can keep you fighting despite grievous wounds. If you drop to 0 Hit Points while your Rage is active and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, your Hit Points instead change to a number equal to twice your Barbarian level.\n\nEach time you use this feature after the first, the DC increases by 5. When you finish a Short or Long Rest, the DC resets to 10.",
+    "plain": "Your Rage can keep you fighting despite grievous wounds. If you drop to 0 Hit Points while your Rage is active and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, your Hit Points instead change to a number equal to twice your Barbarian level.\n\nEach time you use this feature after the first, the DC increases by 5. When you finish a Short or Long Rest, the DC resets to 10.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "relentless-rage",
+      "name": "Relentless Rage",
+      "trigger": {
+        "event": "event:damaged",
+        "subject": "self",
+        "match": {
+          "remaining": 0
+        },
+        "when": {
+          "not": {
+            "compare": {
+              "event": "excess"
+            },
+            "atLeast": "hp.max"
+          }
+        }
+      },
+      "when": {
+        "has": "state:raging"
+      },
+      "uses": {
+        "max": "unlimited",
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:short"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:con",
+          "dc": {
+            "sum": [
+              10,
+              {
+                "times": 5,
+                "by": "spent.relentless-rage"
+              }
+            ]
+          },
+          "by": "self"
+        }
+      },
+      "outcomes": [
+        {
+          "setHp": {
+            "times": 2,
+            "by": "levels.class:barbarian"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

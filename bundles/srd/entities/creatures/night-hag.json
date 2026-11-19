@@ -1,0 +1,156 @@
+{
+  "id": "creature:night-hag",
+  "name": "Night Hag",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:neutral-evil",
+  "ac": 17,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 112,
+    "formula": "15d8 + 45"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 16,
+    "ability:con": 16,
+    "ability:dex": 15,
+    "ability:int": 16,
+    "ability:str": 18,
+    "ability:wis": 14
+  },
+  "skills": {
+    "skill:deception": 7,
+    "skill:insight": 6,
+    "skill:perception": 6,
+    "skill:stealth": 6
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 16,
+  "xp": 1800,
+  "cr": 5,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    },
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:infernal"
+    },
+    {
+      "language": "language:primordial"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold",
+        "damage-type:fire"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical",
+                "damage-qualifier:silvered"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Innate Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hag's innate spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\n\n- At will: Detect Magic, Magic Missile\n- 2/day each: Plane Shift (self only), Ray of Enfeeblement, Sleep",
+        "plain": "The hag's innate spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\n\n- At will: Detect Magic, Magic Missile\n- 2/day each: Plane Shift (self only), Ray of Enfeeblement, Sleep",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hag has advantage on saving throws against spells and other magical effects.",
+        "plain": "The hag has advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claws (Hag Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +7 to hit, reach 5 ft., one target. _Hit:_ 13 (2d8 + 4) slashing damage.",
+        "plain": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Change Shape",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The hag magically polymorphs into a Small or Medium female humanoid, or back into her true form. Her statistics are the same in each form. Any equipment she is wearing or carrying isn't transformed. She reverts to her true form if she dies.",
+        "plain": "The hag magically polymorphs into a Small or Medium female humanoid, or back into her true form. Her statistics are the same in each form. Any equipment she is wearing or carrying isn't transformed. She reverts to her true form if she dies.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Etherealness",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The hag magically enters the Ethereal Plane from the Material Plane, or vice versa. To do so, the hag must have a _heartstone_ in her possession.",
+        "plain": "The hag magically enters the Ethereal Plane from the Material Plane, or vice versa. To do so, the hag must have a heartstone in her possession.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Nightmare Haunting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "While on the Ethereal Plane, the hag magically touches a sleeping humanoid on the Material Plane. A Protection from Evil and Good spell cast on the target prevents this contact, as does a Magic Circle. As long as the contact persists, the target has dreadful visions. If these visions last for at least 1 hour, the target gains no benefit from its rest, and its hit point maximum is reduced by 5 (1d10). If this effect reduces the target's hit point maximum to 0, the target dies, and if the target was evil, its soul is trapped in the hag's _soul bag_. The reduction to the target's hit point maximum lasts until removed by the Greater Restoration spell or similar magic.",
+        "plain": "While on the Ethereal Plane, the hag magically touches a sleeping humanoid on the Material Plane. A Protection from Evil and Good spell cast on the target prevents this contact, as does a Magic Circle. As long as the contact persists, the target has dreadful visions. If these visions last for at least 1 hour, the target gains no benefit from its rest, and its hit point maximum is reduced by 5 (1d10). If this effect reduces the target's hit point maximum to 0, the target dies, and if the target was evil, its soul is trapped in the hag's soul bag. The reduction to the target's hit point maximum lasts until removed by the Greater Restoration spell or similar magic.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

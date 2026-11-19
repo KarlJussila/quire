@@ -1,0 +1,62 @@
+{
+  "id": "condition:restrained@2024",
+  "name": "Restrained",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you have the Restrained condition, you experience the following effects.\n\n_**Speed 0.**_ Your Speed is 0 and can't increase.\n\n_**Attacks Affected.**_ Attack rolls against you have Advantage, and your attack rolls have Disadvantage.\n\n_**Saving Throws Affected.**_ You have Disadvantage on Dexterity saving throws.",
+    "plain": "While you have the Restrained condition, you experience the following effects.\n\nSpeed 0. Your Speed is 0 and can't increase.\n\nAttacks Affected. Attack rolls against you have Advantage, and your attack rolls have Disadvantage.\n\nSaving Throws Affected. You have Disadvantage on Dexterity saving throws.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "$where": true,
+          "speed": {
+            "$replace": 0
+          }
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any"
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": "ability:dex"
+        }
+      }
+    }
+  ]
+}

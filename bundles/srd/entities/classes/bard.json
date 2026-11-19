@@ -1,0 +1,70 @@
+{
+  "id": "class:bard",
+  "name": "Bard",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a bard, you gain the following class features.",
+    "plain": "As a bard, you gain the following class features.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d8",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:cha",
+      "atLeast": 13
+    },
+    "features": [
+      "feature:bard/multiclass-proficiencies"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:bard/bardic-inspiration",
+      "feature:bard/spellcasting"
+    ],
+    "10": [
+      "feature:bard/magical-secrets"
+    ],
+    "12": [
+      "feature:ability-score-improvement"
+    ],
+    "16": [
+      "feature:ability-score-improvement"
+    ],
+    "19": [
+      "feature:ability-score-improvement"
+    ],
+    "2": [
+      "feature:bard/jack-of-all-trades",
+      "feature:bard/song-of-rest"
+    ],
+    "20": [
+      "feature:bard/superior-inspiration"
+    ],
+    "3": [
+      "feature:bard/bard-college",
+      "feature:bard/expertise"
+    ],
+    "4": [
+      "feature:ability-score-improvement"
+    ],
+    "5": [
+      "feature:bard/font-of-inspiration"
+    ],
+    "6": [
+      "feature:bard/countercharm"
+    ],
+    "8": [
+      "feature:ability-score-improvement"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Bard College"
+  },
+  "firstClass": [
+    "feature:bard/proficiencies"
+  ]
+}

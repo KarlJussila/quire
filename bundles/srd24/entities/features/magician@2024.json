@@ -1,0 +1,67 @@
+{
+  "id": "feature:magician@2024",
+  "name": "Magician",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You know one extra cantrip from the Druid spell list. In addition, your mystical connection to nature gives you a bonus to your Intelligence (Arcana or Nature) checks. The bonus equals your Wisdom modifier (minimum bonus of +1).",
+    "plain": "You know one extra cantrip from the Druid spell list. In addition, your mystical connection to nature gives you a bonus to your Intelligence (Arcana or Nature) checks. The bonus equals your Wisdom modifier (minimum bonus of +1).",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "cantrip",
+            "name": "Druid Cantrip",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:druid",
+                    "level": 0
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "counts": false,
+      "countsAs": "class:druid",
+      "ability": "ability:wis"
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": {
+            "max": [
+              "modifiers.ability:wis",
+              1
+            ]
+          }
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:check",
+          "ability": "ability:int",
+          "skill": [
+            "skill:arcana",
+            "skill:nature"
+          ]
+        }
+      }
+    }
+  ],
+  "gaps": []
+}

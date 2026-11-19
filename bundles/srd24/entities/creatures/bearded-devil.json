@@ -1,0 +1,120 @@
+{
+  "id": "creature:bearded-devil@2024",
+  "name": "Bearded Devil",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 13,
+  "hp": {
+    "average": 58,
+    "formula": "9d8 + 18"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 14,
+    "ability:con": 15,
+    "ability:dex": 15,
+    "ability:int": 9,
+    "ability:str": 16,
+    "ability:wis": 11
+  },
+  "saves": {
+    "ability:cha": 4,
+    "ability:con": 4,
+    "ability:str": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120,
+      "note": "unimpeded by magical Darkness"
+    }
+  },
+  "passivePerception": 10,
+  "telepathy": 120,
+  "xp": 700,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Planar (Nine Hells)"
+  ],
+  "treasure": [
+    "Armaments"
+  ],
+  "cr": 3,
+  "languages": [
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:frightened",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The devil has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The devil has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The devil makes one Beard attack and one Infernal Glaive attack.",
+        "plain": "The devil makes one Beard attack and one Infernal Glaive attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Beard",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 7 (1d8 + 3) Piercing damage, and the target has the Poisoned condition until the start of the devil's next turn. Until this poison ends, the target can't regain Hit Points.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage, and the target has the Poisoned condition until the start of the devil's next turn. Until this poison ends, the target can't regain Hit Points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Infernal Glaive",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 10 ft. _Hit:_ 8 (1d10 + 3) Slashing damage. If the target is a creature and doesn't already have an infernal wound, it is subjected to the following effect. _Constitution Saving Throw:_ DC 12. _Failure:_ The target receives an infernal wound. While wounded, the target loses 5 (1d10) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a DC 12 Wisdom (Medicine) check.",
+        "plain": "Melee Attack Roll: +5, reach 10 ft. Hit: 8 (1d10 + 3) Slashing damage. If the target is a creature and doesn't already have an infernal wound, it is subjected to the following effect. Constitution Saving Throw: DC 12. Failure: The target receives an infernal wound. While wounded, the target loses 5 (1d10) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a DC 12 Wisdom (Medicine) check.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

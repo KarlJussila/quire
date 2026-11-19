@@ -1,0 +1,37 @@
+{
+  "id": "spell:heal@2024",
+  "name": "Heal",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Choose a creature that you can see within range. Positive energy washes through the target, restoring 70 Hit Points. This spell also ends the Blinded, Deafened, and Poisoned conditions on the target.\n\n_**Using a Higher-Level Spell Slot.**_ The healing increases by 10 for each spell slot level above 6.",
+    "plain": "Choose a creature that you can see within range. Positive energy washes through the target, restoring 70 Hit Points. This spell also ends the Blinded, Deafened, and Poisoned conditions on the target.\n\nUsing a Higher-Level Spell Slot. The healing increases by 10 for each spell slot level above 6.",
+    "wording": "srd"
+  },
+  "level": 6,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:cleric",
+    "class:druid"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

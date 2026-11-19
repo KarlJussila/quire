@@ -1,0 +1,35 @@
+{
+  "id": "item:amulet-of-health@2024",
+  "name": "Amulet of Health",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your Constitution is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it.",
+    "plain": "Your Constitution is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:con": {
+            "$atLeast": 19
+          }
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ],
+  "activities": []
+}

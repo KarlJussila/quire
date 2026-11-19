@@ -1,0 +1,18 @@
+{
+  "id": "item:bucket@2024",
+  "name": "Bucket",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 5 CP\n\nA Bucket holds up to half a cubic foot of contents.",
+    "plain": "Cost: 5 CP\n\nA Bucket holds up to half a cubic foot of contents.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:cp"
+  },
+  "weight": 2.0
+}

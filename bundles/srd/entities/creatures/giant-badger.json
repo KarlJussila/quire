@@ -1,0 +1,81 @@
+{
+  "id": "creature:giant-badger",
+  "name": "Giant Badger",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 10,
+  "hp": {
+    "average": 13,
+    "formula": "2d8 + 4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:burrow": {
+      "speed": 10
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 15,
+    "ability:dex": 10,
+    "ability:int": 2,
+    "ability:str": 13,
+    "ability:wis": 12
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 30
+    }
+  },
+  "passivePerception": 11,
+  "xp": 50,
+  "cr": 0.25,
+  "blocks": [
+    {
+      "name": "Keen Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The badger has advantage on Wisdom (Perception) checks that rely on smell.",
+        "plain": "The badger has advantage on Wisdom (Perception) checks that rely on smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The badger makes two attacks: one with its bite and one with its claws.",
+        "plain": "The badger makes two attacks: one with its bite and one with its claws.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one target. _Hit:_ 4 (1d6 + 1) piercing damage.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claws",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one target. _Hit:_ 6 (2d4 + 1) slashing damage.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 6 (2d4 + 1) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "feature:monk/perfect-self",
+  "name": "Perfect Self",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 20th level, when you roll for initiative and have no ki points remaining, you regain 4 ki points.",
+    "plain": "At 20th level, when you roll for initiative and have no ki points remaining, you regain 4 ki points.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:roll-made",
+          "by": "self",
+          "match": {
+            "roll": "roll:initiative"
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "pool": {
+              "resource": "ki",
+              "add": 4
+            },
+            "when": {
+              "compare": "pools.ki.current",
+              "atMost": 0
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

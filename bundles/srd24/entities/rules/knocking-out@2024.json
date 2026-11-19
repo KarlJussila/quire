@@ -1,0 +1,63 @@
+{
+  "id": "rule:knocking-out@2024",
+  "name": "Knocking Out a Creature",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you would reduce a creature to 0 Hit Points with a melee attack, you can instead reduce the creature to 1 Hit Point. The creature then has the Unconscious condition and starts a Short Rest.\n\nThe creature remains Unconscious until it regains any Hit Points or until someone uses an action to administer first aid to it, which requires a successful DC 10 Wisdom (Medicine) check.",
+    "plain": "When you would reduce a creature to 0 Hit Points with a melee attack, you can instead reduce the creature to 1 Hit Point. The creature then has the Unconscious condition and starts a Short Rest.\n\nThe creature remains Unconscious until it regains any Hit Points or until someone uses an action to administer first aid to it, which requires a successful DC 10 Wisdom (Medicine) check.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "knock-out",
+      "trigger": {
+        "event": "event:damaged",
+        "by": "self",
+        "match": {
+          "remaining": 0,
+          "attack": {
+            "range": "melee"
+          }
+        }
+      },
+      "target": {
+        "who": "subject"
+      },
+      "outcomes": [
+        {
+          "setHp": 1
+        },
+        {
+          "applyState": {
+            "state": "condition:unconscious",
+            "ends": [
+              {
+                "event": "event:rest-finished",
+                "subject": "self",
+                "match": {
+                  "rest": "rest:short"
+                }
+              },
+              {
+                "event": "event:healed",
+                "subject": "self"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "rest",
+      "name": "The creature starts a Short Rest; first aid (a DC 10 Wisdom (Medicine) check) also ends the condition"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "format": 1,
+  "id": "2b0e7b27-237b-43be-ce15-2fab2ec2a2e6",
+  "name": "Kara Ironstep",
+  "bundles": ["core",  "srd24"],
+  "chosen": {
+    "rule:languages@2024": {
+      "languages": [
+        "language:elvish",
+        "language:giant"
+      ]
+    }
+  },
+  "abilities": {
+    "ability:str": 15,
+    "ability:dex": 14,
+    "ability:con": 13,
+    "ability:int": 8,
+    "ability:wis": 12,
+    "ability:cha": 10
+  },
+  "species": {
+    "species": "species:orc@2024"
+  },
+  "background": {
+    "background": "background:soldier@2024",
+    "chosen": {
+      "feature:soldier/ability-scores@2024": {
+        "ability-scores": {
+          "ability:str": 2,
+          "ability:dex": 1
+        }
+      },
+      "feature:soldier/tool-proficiencies@2024": {
+        "tool": "item:dice-set@2024"
+      }
+    }
+  },
+  "firstClass": "class:fighter@2024",
+  "classes": {
+    "class:fighter@2024": [
+      {
+        "hp": 10,
+        "chosen": {
+          "feature:fighter/proficiencies@2024": {
+            "skills": [
+              "skill:acrobatics",
+              "skill:perception"
+            ]
+          },
+          "feature:fighter/fighting-style@2024": {
+            "fighting-style": "feat:defense@2024"
+          },
+          "feature:fighter/weapon-mastery@2024": {
+            "mastery": [
+              "item:longsword@2024",
+              "item:longbow@2024",
+              "item:maul@2024",
+              "item:javelin@2024"
+            ]
+          }
+        }
+      },
+      {
+        "hp": 6
+      },
+      {
+        "hp": 6,
+        "chosen": {
+          "feature:fighter/fighter-subclass@2024": {
+            "subclass": "subclass:fighter/champion@2024"
+          }
+        }
+      },
+      {
+        "hp": 6,
+        "chosen": {
+          "feature:fighter/ability-score-improvement@2024": {
+            "feat": "feat:ability-score-improvement@2024"
+          },
+          "feat:ability-score-improvement@2024": {
+            "ability": {
+              "ability:str": 2
+            }
+          }
+        }
+      },
+      {
+        "hp": 6
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "item": "item:chain-mail@2024",
+      "worn": true
+    },
+    {
+      "item": "item:shield@2024",
+      "held": true
+    },
+    {
+      "item": "item:longsword@2024",
+      "held": true
+    }
+  ],
+  "hp": {
+    "current": 39,
+    "temp": 0
+  }
+}

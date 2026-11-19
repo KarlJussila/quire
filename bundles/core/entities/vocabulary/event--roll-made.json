@@ -1,0 +1,28 @@
+{
+  "id": "event:roll-made",
+  "name": "Roll Made",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A creature (by) rolls; subject is who the roll is against. The die has landed and the roll can still change: rerolls, bonuses, advantage. `roll` is the kind of roll; `natural` the d20's face; `total`; `die` each die rolled; `criticalMinimum` the lowest d20 face that scores a critical hit (20 unless changed); `mode`; `attack` what an attack is made with; `spell` and `slot` the spell it belongs to; `against` where the effect it answers comes from (sourceType, damageType, condition, state, creatureType, creature, spellLevel, qualifier). A damage roll carries the `attack`, `success`, and `crit` of the attack it belongs to. The engine fires it for rolls outside any delivery: initiative, and checks the DM calls for."
+  },
+  "payload": [
+    "roll",
+    "ability",
+    "skill",
+    "natural",
+    "total",
+    "die",
+    "criticalMinimum",
+    "mode",
+    "success",
+    "crit",
+    "margin",
+    "attack",
+    "spell",
+    "slot",
+    "against"
+  ],
+  "emittedBy": "engine"
+}

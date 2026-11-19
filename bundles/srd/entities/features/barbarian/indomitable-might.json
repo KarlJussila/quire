@@ -1,0 +1,31 @@
+{
+  "id": "feature:barbarian/indomitable-might",
+  "name": "Indomitable Might",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.",
+    "plain": "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$atLeast": "abilities.ability:str"
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:check",
+          "ability": "ability:str"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "id": "creature:earth-elemental",
+  "name": "Earth Elemental",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:elemental",
+  "alignment": "alignment:neutral",
+  "ac": 17,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 126,
+    "formula": "12d10 + 60"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:burrow": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 20,
+    "ability:dex": 8,
+    "ability:int": 5,
+    "ability:str": 20,
+    "ability:wis": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    },
+    "sense:tremorsense": {
+      "range": 60
+    }
+  },
+  "xp": 1800,
+  "cr": 5,
+  "languages": [
+    {
+      "language": "language:terran"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "vulnerable": [
+        "damage-type:thunder"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:exhaustion",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:poisoned",
+        "condition:unconscious"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Earth Glide",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through.",
+        "plain": "The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Siege Monster",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The elemental deals double damage to objects and structures.",
+        "plain": "The elemental deals double damage to objects and structures.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The elemental makes two slam attacks.",
+        "plain": "The elemental makes two slam attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Slam",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +8 to hit, reach 10 ft., one target. _Hit:_ 14 (2d8 + 5) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 14 (2d8 + 5) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "feature:warlock/agonizing-blast",
+  "name": "Agonizing Blast",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite:_ Eldritch Blast _cantrip_\n\nWhen you cast Eldritch Blast, add your Charisma modifier to the damage it deals on a hit.",
+    "plain": "Prerequisite: Eldritch Blast cantrip\n\nWhen you cast Eldritch Blast, add your Charisma modifier to the damage it deals on a hit.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "has": "spell:eldritch-blast"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": "modifiers.ability:cha"
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage"
+            }
+          },
+          {
+            "spell": "spell:eldritch-blast"
+          }
+        ]
+      }
+    }
+  ]
+}

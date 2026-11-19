@@ -1,0 +1,218 @@
+{
+  "id": "creature:solar",
+  "name": "Solar",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:celestial",
+  "alignment": "alignment:lawful-good",
+  "ac": 21,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 243,
+    "formula": "18d10 + 144"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    },
+    "movement-mode:fly": {
+      "speed": 150
+    }
+  },
+  "abilities": {
+    "ability:cha": 30,
+    "ability:con": 26,
+    "ability:dex": 22,
+    "ability:int": 25,
+    "ability:str": 26,
+    "ability:wis": 25
+  },
+  "saves": {
+    "ability:cha": 17,
+    "ability:int": 14,
+    "ability:wis": 14
+  },
+  "skills": {
+    "skill:perception": 14
+  },
+  "senses": {
+    "sense:truesight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 24,
+  "telepathy": 120,
+  "xp": 33000,
+  "cr": 21,
+  "languages": [
+    {
+      "text": "all"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:necrotic",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:radiant"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:exhaustion",
+        "condition:frightened",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Angelic Weapons",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The solar's weapon attacks are magical. When the solar hits with any weapon, the weapon deals an extra 6d8 radiant damage (included in the attack).",
+        "plain": "The solar's weapon attacks are magical. When the solar hits with any weapon, the weapon deals an extra 6d8 radiant damage (included in the attack).",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Divine Awareness",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The solar knows if it hears a lie.",
+        "plain": "The solar knows if it hears a lie.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Innate Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The solar's spellcasting ability is Charisma (spell save DC 25). It can innately cast the following spells, requiring no material components:\n\n- At will: Detect Evil and Good, Invisibility (self only)\n- 3/day each: Blade Barrier, Dispel Evil and Good, Resurrection\n- 1/day each: Commune, Control Weather",
+        "plain": "The solar's spellcasting ability is Charisma (spell save DC 25). It can innately cast the following spells, requiring no material components:\n\n- At will: Detect Evil and Good, Invisibility (self only)\n- 3/day each: Blade Barrier, Dispel Evil and Good, Resurrection\n- 1/day each: Commune, Control Weather",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The solar has advantage on saving throws against spells and other magical effects.",
+        "plain": "The solar has advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The solar makes two greatsword attacks.",
+        "plain": "The solar makes two greatsword attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Greatsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +15 to hit, reach 5 ft., one target. _Hit:_ 22 (4d6 + 8) slashing damage plus 27 (6d8) radiant damage.",
+        "plain": "Melee Weapon Attack: +15 to hit, reach 5 ft., one target. Hit: 22 (4d6 + 8) slashing damage plus 27 (6d8) radiant damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Slaying Longbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +13 to hit, range 150/600 ft., one target. _Hit:_ 15 (2d8 + 6) piercing damage plus 27 (6d8) radiant damage. If the target is a creature that has 100 hit points or fewer, it must succeed on a DC 15 Constitution saving throw or die.",
+        "plain": "Ranged Weapon Attack: +13 to hit, range 150/600 ft., one target. Hit: 15 (2d8 + 6) piercing damage plus 27 (6d8) radiant damage. If the target is a creature that has 100 hit points or fewer, it must succeed on a DC 15 Constitution saving throw or die.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Flying Sword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The solar releases its greatsword to hover magically in an unoccupied space within 5 feet of it. If the solar can see the sword, the solar can mentally command it as a bonus action to fly up to 50 feet and either make one attack against a target or return to the solar's hands. If the hovering sword is targeted by any effect, the solar is considered to be holding it. The hovering sword falls if the solar dies.",
+        "plain": "The solar releases its greatsword to hover magically in an unoccupied space within 5 feet of it. If the solar can see the sword, the solar can mentally command it as a bonus action to fly up to 50 feet and either make one attack against a target or return to the solar's hands. If the hovering sword is targeted by any effect, the solar is considered to be holding it. The hovering sword falls if the solar dies.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Healing Touch",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The solar touches another creature. The target magically regains 40 (8d8 + 4) hit points and is freed from any curse, disease, poison, blindness, or deafness.",
+        "plain": "The solar touches another creature. The target magically regains 40 (8d8 + 4) hit points and is freed from any curse, disease, poison, blindness, or deafness.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Teleport",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The solar magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.",
+        "plain": "The solar magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Searing Burst",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The solar emits magical, divine energy. Each creature of its choice in a 10-foot radius must make a DC 23 Dexterity saving throw, taking 14 (4d6) fire damage plus 14 (4d6) radiant damage on a failed save, or half as much damage on a successful one.",
+        "plain": "The solar emits magical, divine energy. Each creature of its choice in a 10-foot radius must make a DC 23 Dexterity saving throw, taking 14 (4d6) fire damage plus 14 (4d6) radiant damage on a failed save, or half as much damage on a successful one.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Blinding Gaze",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The solar targets one creature it can see within 30 feet of it. If the target can see it, the target must succeed on a DC 15 Constitution saving throw or be Blinded until magic such as the Lesser Restoration spell removes the blindness.",
+        "plain": "The solar targets one creature it can see within 30 feet of it. If the target can see it, the target must succeed on a DC 15 Constitution saving throw or be Blinded until magic such as the Lesser Restoration spell removes the blindness.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

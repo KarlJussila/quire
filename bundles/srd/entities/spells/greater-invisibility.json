@@ -1,0 +1,43 @@
+{
+  "id": "spell:greater-invisibility",
+  "name": "Greater Invisibility",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You or a creature you touch becomes Invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person.",
+    "plain": "You or a creature you touch becomes Invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person.",
+    "wording": "srd"
+  },
+  "level": 4,
+  "school": "spell-school:illusion",
+  "lists": [
+    "class:bard",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

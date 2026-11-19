@@ -1,0 +1,25 @@
+{
+  "id": "feature:druid/ability-score-improvement@2024",
+  "name": "Level 4: Ability Score Improvement",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain the Ability Score Improvement feat (see \"Feats\") or another feat of your choice for which you qualify. You gain this feature again at Druid levels 8, 12, and 16.",
+    "plain": "You gain the Ability Score Improvement feat (see \"Feats\") or another feat of your choice for which you qualify. You gain this feature again at Druid levels 8, 12, and 16.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "feat",
+        "name": "Feat",
+        "from": [
+          {
+            "kind": "feat"
+          }
+        ]
+      }
+    }
+  ]
+}

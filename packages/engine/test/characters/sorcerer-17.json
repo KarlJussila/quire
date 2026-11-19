@@ -1,0 +1,222 @@
+{
+  "format": 1,
+  "id": "326732ed-1ae1-4946-b465-84152385530c",
+  "name": "Ilyra Ashfall",
+  "bundles": ["core",  "srd24"],
+  "chosen": {
+    "rule:languages@2024": {
+      "languages": [
+        "language:elvish",
+        "language:dwarvish"
+      ]
+    }
+  },
+  "abilities": {
+    "ability:str": 8,
+    "ability:dex": 13,
+    "ability:con": 14,
+    "ability:int": 10,
+    "ability:wis": 12,
+    "ability:cha": 15
+  },
+  "species": {
+    "species": "species:tiefling@2024",
+    "chosen": {
+      "feature:tiefling/fiendish-legacy@2024": {
+        "legacy": "Chthonic",
+        "spellcasting-ability": "ability:cha"
+      },
+      "species:tiefling@2024": {
+        "size": "size:medium"
+      }
+    }
+  },
+  "background": {
+    "background": "background:acolyte@2024",
+    "chosen": {
+      "feature:acolyte/ability-scores@2024": {
+        "ability-scores": {
+          "ability:cha": 2,
+          "ability:wis": 1
+        }
+      },
+      "feat:magic-initiate@2024": {
+        "cantrips": [
+          "spell:guidance",
+          "spell:sacred-flame"
+        ],
+        "class": "class:cleric",
+        "spell": "spell:bless",
+        "spellcasting-ability": "ability:wis"
+      }
+    }
+  },
+  "firstClass": "class:sorcerer@2024",
+  "classes": {
+    "class:sorcerer@2024": [
+      {
+        "hp": 6,
+        "chosen": {
+          "feature:sorcerer/proficiencies@2024": {
+            "skills": [
+              "skill:arcana",
+              "skill:deception"
+            ]
+          },
+          "feature:sorcerer/spellcasting@2024": {
+            "cantrips": [
+              "spell:fire-bolt@2024",
+              "spell:prestidigitation@2024",
+              "spell:shocking-grasp@2024",
+              "spell:mage-hand@2024",
+              "spell:ray-of-frost@2024",
+              "spell:minor-illusion@2024"
+            ],
+            "prepared": [
+              "spell:mage-armor@2024",
+              "spell:shield@2024",
+              "spell:magic-missile@2024",
+              "spell:burning-hands@2024",
+              "spell:detect-magic@2024",
+              "spell:misty-step@2024",
+              "spell:scorching-ray@2024",
+              "spell:shatter@2024",
+              "spell:fireball@2024",
+              "spell:haste@2024",
+              "spell:counterspell@2024",
+              "spell:lightning-bolt@2024",
+              "spell:dimension-door@2024",
+              "spell:greater-invisibility@2024",
+              "spell:cone-of-cold@2024",
+              "spell:chain-lightning@2024",
+              "spell:teleport@2024",
+              "spell:disintegrate@2024",
+              "spell:meteor-swarm@2024"
+            ]
+          }
+        }
+      },
+      {
+        "hp": 4,
+        "chosen": {
+          "feature:sorcerer/metamagic@2024": {
+            "metamagic": [
+              "feature:sorcerer/careful-spell@2024",
+              "feature:sorcerer/distant-spell@2024",
+              "feature:sorcerer/empowered-spell@2024",
+              "feature:sorcerer/heightened-spell@2024",
+              "feature:sorcerer/quickened-spell@2024",
+              "feature:sorcerer/subtle-spell@2024"
+            ]
+          }
+        }
+      },
+      {
+        "hp": 4,
+        "chosen": {
+          "feature:sorcerer/sorcerer-subclass@2024": {
+            "subclass": "subclass:sorcerer/draconic-sorcery@2024"
+          }
+        }
+      },
+      {
+        "hp": 4,
+        "chosen": {
+          "feature:sorcerer/ability-score-improvement@2024": {
+            "feat": "feat:ability-score-improvement@2024"
+          },
+          "feat:ability-score-improvement@2024": {
+            "ability": {
+              "ability:cha": 2
+            }
+          }
+        }
+      },
+      {
+        "hp": 4
+      },
+      {
+        "hp": 4,
+        "chosen": {
+          "feature:sorcerer/draconic-sorcery/elemental-affinity@2024": {
+            "damage-type": "damage-type:fire"
+          }
+        }
+      },
+      {
+        "hp": 4
+      },
+      {
+        "hp": 4,
+        "chosen": {
+          "feature:sorcerer/ability-score-improvement@2024": {
+            "feat": "feat:ability-score-improvement@2024"
+          },
+          "feat:ability-score-improvement@2024": {
+            "ability": {
+              "ability:cha": 1,
+              "ability:con": 1
+            }
+          }
+        }
+      },
+      {
+        "hp": 4
+      },
+      {
+        "hp": 4
+      },
+      {
+        "hp": 4
+      },
+      {
+        "hp": 4,
+        "chosen": {
+          "feature:sorcerer/ability-score-improvement@2024": {
+            "feat": "feat:ability-score-improvement@2024"
+          },
+          "feat:ability-score-improvement@2024": {
+            "ability": {
+              "ability:con": 2
+            }
+          }
+        }
+      },
+      {
+        "hp": 4
+      },
+      {
+        "hp": 4
+      },
+      {
+        "hp": 4
+      },
+      {
+        "hp": 4,
+        "chosen": {
+          "feature:sorcerer/ability-score-improvement@2024": {
+            "feat": "feat:ability-score-improvement@2024"
+          },
+          "feat:ability-score-improvement@2024": {
+            "ability": {
+              "ability:dex": 2
+            }
+          }
+        }
+      },
+      {
+        "hp": 4
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "item": "item:dagger@2024",
+      "held": true
+    }
+  ],
+  "hp": {
+    "current": 138,
+    "temp": 0
+  }
+}

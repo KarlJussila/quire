@@ -1,0 +1,38 @@
+{
+  "id": "spell:mass-cure-wounds@2024",
+  "name": "Mass Cure Wounds",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A wave of healing energy washes out from a point you can see within range. Choose up to six creatures in a 30-foot-radius Sphere centered on that point. Each target regains Hit Points equal to 5d8 plus your spellcasting ability modifier.\n\n_**Using a Higher-Level Spell Slot.**_ The healing increases by 1d8 for each spell slot level above 5.",
+    "plain": "A wave of healing energy washes out from a point you can see within range. Choose up to six creatures in a 30-foot-radius Sphere centered on that point. Each target regains Hit Points equal to 5d8 plus your spellcasting ability modifier.\n\nUsing a Higher-Level Spell Slot. The healing increases by 1d8 for each spell slot level above 5.",
+    "wording": "srd"
+  },
+  "level": 5,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:druid"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

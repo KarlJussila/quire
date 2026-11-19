@@ -1,0 +1,145 @@
+{
+  "id": "feature:monk/warrior-of-the-open-hand/open-hand-technique@2024",
+  "name": "Level 3: Open Hand Technique",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Whenever you hit a creature with an attack granted by your Flurry of Blows, you can impose one of the following effects on that target.\n\n_**Addle.**_ The target can't make Opportunity Attacks until the start of its next turn.\n\n_**Push.**_ The target must succeed on a Strength saving throw or be pushed up to 15 feet away from you.\n\n_**Topple.**_ The target must succeed on a Dexterity saving throw or have the Prone condition.",
+    "plain": "Whenever you hit a creature with an attack granted by your Flurry of Blows, you can impose one of the following effects on that target.\n\nAddle. The target can't make Opportunity Attacks until the start of its next turn.\n\nPush. The target must succeed on a Strength saving throw or be pushed up to 15 feet away from you.\n\nTopple. The target must succeed on a Dexterity saving throw or have the Prone condition.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "open-hand-addle",
+      "name": "Open Hand Technique: Addle",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any"
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "unarmed"
+          }
+        },
+        "when": {
+          "activity": "flurry-of-blows"
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "suppress",
+                  "rule": [
+                    "rule:opportunity-attacks"
+                  ]
+                }
+              ]
+            },
+            "ends": [
+              {
+                "event": "event:turn-start",
+                "subject": "self",
+                "next": true
+              }
+            ]
+          },
+          "to": "subject"
+        }
+      ]
+    },
+    {
+      "key": "open-hand-push",
+      "name": "Open Hand Technique: Push",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any"
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "unarmed"
+          }
+        },
+        "when": {
+          "activity": "flurry-of-blows"
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:str",
+          "dc": {
+            "sum": [
+              8,
+              "proficiencyBonus",
+              "modifiers.ability:wis"
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "move": {
+            "kind": "push",
+            "distance": 15,
+            "toward": {
+              "awayFrom": "self"
+            }
+          },
+          "to": "subject"
+        }
+      ]
+    },
+    {
+      "key": "open-hand-topple",
+      "name": "Open Hand Technique: Topple",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any"
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "unarmed"
+          }
+        },
+        "when": {
+          "activity": "flurry-of-blows"
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:dex",
+          "dc": {
+            "sum": [
+              8,
+              "proficiencyBonus",
+              "modifiers.ability:wis"
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:prone"
+          },
+          "to": "subject"
+        }
+      ]
+    }
+  ]
+}

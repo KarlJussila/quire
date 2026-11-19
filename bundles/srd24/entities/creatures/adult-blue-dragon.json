@@ -1,0 +1,159 @@
+{
+  "id": "creature:adult-blue-dragon@2024",
+  "name": "Adult Blue Dragon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:lawful-evil",
+  "ac": 19,
+  "hp": {
+    "average": 212,
+    "formula": "17d12 + 102"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:burrow": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    }
+  },
+  "abilities": {
+    "ability:cha": 20,
+    "ability:con": 23,
+    "ability:dex": 10,
+    "ability:int": 16,
+    "ability:str": 25,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:dex": 5,
+    "ability:wis": 7
+  },
+  "skills": {
+    "skill:perception": 12,
+    "skill:stealth": 5
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    },
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 22,
+  "xp": 15000,
+  "proficiencyBonus": 5,
+  "initiative": 10,
+  "habitat": [
+    "Coastal",
+    "Desert"
+  ],
+  "treasure": [
+    "Relics"
+  ],
+  "cr": 16,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:lightning"
+      ]
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Legendary Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "plain": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast Shatter.",
+        "plain": "The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast Shatter.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +12, reach 10 ft. _Hit:_ 16 (2d8 + 7) Slashing damage plus 5 (1d10) Lightning damage.",
+        "plain": "Melee Attack Roll: +12, reach 10 ft. Hit: 16 (2d8 + 7) Slashing damage plus 5 (1d10) Lightning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Lightning Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 19, each creature in a 90-foot-long, 5-footwide Line. _Failure:_ 60 (11d10) Lightning damage. _Success:_ Half damage.",
+        "plain": "Dexterity Saving Throw: DC 19, each creature in a 90-foot-long, 5-footwide Line. Failure: 60 (11d10) Lightning damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 18):\n\n- **At Will:** Detect Magic, Invisibility, Mage Hand, Shatter\n- **1/Day Each:** Scrying, Sending",
+        "plain": "The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 18):\n\n- At Will: Detect Magic, Invisibility, Mage Hand, Shatter\n- 1/Day Each: Scrying, Sending",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Cloaked Flight",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon uses Spellcasting to cast Invisibility on itself, and it can fly up to half its Fly Speed. The dragon can't take this action again until the start of its next turn.",
+        "plain": "The dragon uses Spellcasting to cast Invisibility on itself, and it can fly up to half its Fly Speed. The dragon can't take this action again until the start of its next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sonic Boom",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon uses Spellcasting to cast Shatter. The dragon can't take this action again until the start of its next turn.",
+        "plain": "The dragon uses Spellcasting to cast Shatter. The dragon can't take this action again until the start of its next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail Swipe",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon makes one Rend attack.",
+        "plain": "The dragon makes one Rend attack.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

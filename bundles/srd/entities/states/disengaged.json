@@ -1,0 +1,15 @@
+{
+  "id": "state:disengaged",
+  "name": "Disengaged",
+  "source": {
+    "book": "core"
+  },
+  "effects": [
+    {
+      "type": "suppress",
+      "rule": [
+        "rule:opportunity-attacks"
+      ]
+    }
+  ]
+}

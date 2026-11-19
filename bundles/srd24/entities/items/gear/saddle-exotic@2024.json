@@ -1,0 +1,18 @@
+{
+  "id": "item:saddle-exotic@2024",
+  "name": "Saddle, Exotic",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A saddle comes with a bit, a bridle, reins, and any other equipment needed to use the saddle. A Military Saddle gives Advantage on any ability check you make to remain mounted. An Exotic Saddle is required for riding an aquatic or a flying mount.",
+    "plain": "A saddle comes with a bit, a bridle, reins, and any other equipment needed to use the saddle. A Military Saddle gives Advantage on any ability check you make to remain mounted. An Exotic Saddle is required for riding an aquatic or a flying mount.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 60,
+    "currency": "currency:gp"
+  },
+  "weight": 40.0
+}

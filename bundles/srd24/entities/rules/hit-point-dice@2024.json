@@ -1,0 +1,18 @@
+{
+  "id": "rule:hit-point-dice@2024",
+  "name": "Hit Point Dice",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Hit Point Dice, or Hit Dice for short, help determine a player character's Hit Point maximum, as explained in \"Character Creation.\" Most monsters also have Hit Dice. A creature can spend Hit Dice during a Short Rest to regain Hit Points. _See also_ \"Short Rest.\"",
+    "plain": "Hit Point Dice, or Hit Dice for short, help determine a player character's Hit Point maximum, as explained in \"Character Creation.\" Most monsters also have Hit Dice. A creature can spend Hit Dice during a Short Rest to regain Hit Points. See also \"Short Rest.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

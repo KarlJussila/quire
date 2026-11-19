@@ -1,0 +1,44 @@
+{
+  "id": "spell:power-word-stun@2024",
+  "name": "Power Word Stun",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You overwhelm the mind of one creature you can see within range. If the target has 150 Hit Points or fewer, it has the Stunned condition. Otherwise, its Speed is 0 until the start of your next turn.\n\nThe Stunned target makes a Constitution saving throw at the end of each of its turns, ending the condition on itself on a success.",
+    "plain": "You overwhelm the mind of one creature you can see within range. If the target has 150 Hit Points or fewer, it has the Stunned condition. Otherwise, its Speed is 0 until the start of your next turn.\n\nThe Stunned target makes a Constitution saving throw at the end of each of its turns, ending the condition on itself on a success.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "spell-mechanics",
+      "name": "save-delivery-unknown"
+    }
+  ],
+  "level": 8,
+  "school": "spell-school:enchantment",
+  "lists": [
+    "class:bard",
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

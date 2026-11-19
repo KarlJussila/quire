@@ -1,0 +1,354 @@
+{
+  "id": "feature:sorcerer/spellcasting",
+  "name": "Spellcasting",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells.",
+    "plain": "An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells.",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting-feature",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "class:sorcerer": {
+            "ability": "ability:cha",
+            "slots": "table:full-caster",
+            "known": {
+              "$base": {
+                "byLevel": {
+                  "1": 2,
+                  "2": 3,
+                  "3": 4,
+                  "4": 5,
+                  "5": 6,
+                  "6": 7,
+                  "7": 8,
+                  "8": 9,
+                  "9": 10,
+                  "10": 11,
+                  "11": 12,
+                  "13": 13,
+                  "15": 14,
+                  "17": 15
+                },
+                "of": "class:sorcerer"
+              }
+            },
+            "cantrips": {
+              "$base": {
+                "byLevel": {
+                  "1": 4,
+                  "4": 5,
+                  "10": 6
+                },
+                "of": "class:sorcerer"
+              }
+            },
+            "casterLevel": {
+              "$base": "levels.class:sorcerer"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "cantrips",
+            "name": "Sorcerer Cantrips",
+            "count": "spellcasting.class:sorcerer.cantrips",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "level": 0,
+                    "lists": "class:sorcerer"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": "ability:cha"
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "known",
+            "name": "Sorcerer Spells Known",
+            "count": "spellcasting.class:sorcerer.known",
+            "distinct": true,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:sorcerer",
+                    "level": {
+                      "atLeast": 1,
+                      "atMost": "spellcasting.class:sorcerer.spellLevel"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": "ability:cha"
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-spell",
+      "name": "Replace Known Spell",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self",
+        "match": {
+          "class": "class:sorcerer"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "what": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "level": {
+                        "atLeast": 1
+                      }
+                    }
+                  },
+                  {
+                    "grantedBy": "feature:sorcerer/spellcasting"
+                  }
+                ]
+              }
+            },
+            "with": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "lists": "class:sorcerer",
+                      "level": {
+                        "atLeast": 1
+                      }
+                    }
+                  },
+                  {
+                    "any": [
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:sorcerer",
+                              "atLeast": 1,
+                              "atMost": 2
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 1
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:sorcerer",
+                              "atLeast": 3,
+                              "atMost": 4
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 2
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:sorcerer",
+                              "atLeast": 5,
+                              "atMost": 6
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 3
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:sorcerer",
+                              "atLeast": 7,
+                              "atMost": 8
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 4
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:sorcerer",
+                              "atLeast": 9,
+                              "atMost": 10
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 5
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:sorcerer",
+                              "atLeast": 11,
+                              "atMost": 12
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 6
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:sorcerer",
+                              "atLeast": 13,
+                              "atMost": 14
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 7
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:sorcerer",
+                              "atLeast": 15,
+                              "atMost": 16
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 8
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:sorcerer",
+                              "atLeast": 17
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 9
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "spellcasting",
+      "name": "The allowed focus is tied to this Sorcerer casting source, but its exact scope on a cast that can have multiple sources is unresolved."
+    }
+  ]
+}

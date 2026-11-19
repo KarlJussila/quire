@@ -1,0 +1,46 @@
+{
+  "id": "creature:riding-horse",
+  "name": "Riding Horse",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 10,
+  "hp": {
+    "average": 13,
+    "formula": "2d10 + 2"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 12,
+    "ability:dex": 10,
+    "ability:int": 2,
+    "ability:str": 16,
+    "ability:wis": 11
+  },
+  "passivePerception": 10,
+  "xp": 50,
+  "cr": 0.25,
+  "blocks": [
+    {
+      "name": "Hooves",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 8 (2d4 + 3) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 8 (2d4 + 3) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "language:gnoll",
+  "name": "Gnoll",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- **Languages** Gnoll",
+    "plain": "- Languages Gnoll",
+    "wording": "srd"
+  }
+}

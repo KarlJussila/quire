@@ -1,0 +1,92 @@
+{
+  "id": "feature:cleric/channel-divinity-turn-undead",
+  "name": "Channel Divinity: Turn Undead",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.\n\nA turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.",
+    "plain": "As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.\n\nA turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "turn-undead",
+      "name": "Channel Divinity: Turn Undead",
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "channel-divinity"
+        }
+      ],
+      "target": {
+        "count": "all",
+        "who": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "match": {
+                  "creatureType": "creature-type:undead"
+                }
+              },
+              {
+                "within": 30,
+                "of": "self"
+              },
+              {
+                "perceives": {
+                  "sense": "any",
+                  "of": "self"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:wis",
+          "dc": "spellcasting.class:cleric.dc"
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "forbid",
+                  "restriction": [
+                    "restriction:reactions"
+                  ]
+                }
+              ]
+            },
+            "duration": {
+              "amount": 1,
+              "unit": "minute"
+            },
+            "ends": [
+              {
+                "event": "event:damaged",
+                "subject": "self"
+              }
+            ]
+          }
+        },
+        {
+          "prose": {
+            "text": "While turned, it must spend its turns trying to move as far from you as it can, and it can't willingly move to a space within 30 feet of you. On its turn it can use only the Dash action, or try to escape an effect that stops it moving. If there's nowhere to move, it can use the Dodge action.",
+            "gap": {
+              "category": "state",
+              "name": "turned"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

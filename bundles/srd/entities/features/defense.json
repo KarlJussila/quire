@@ -1,0 +1,34 @@
+{
+  "id": "feature:defense",
+  "name": "Defense",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While you are wearing armor, you gain a +1 bonus to AC.",
+    "plain": "While you are wearing armor, you gain a +1 bonus to AC.",
+    "wording": "srd"
+  },
+  "group": "group:fighting-style",
+  "availableTo": [
+    "class:fighter",
+    "class:paladin",
+    "class:ranger"
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "has": "group:armor",
+        "match": {
+          "worn": true
+        }
+      }
+    }
+  ]
+}

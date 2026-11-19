@@ -1,0 +1,23 @@
+{
+  "id": "background:sage@2024",
+  "name": "Sage",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "- **Ability Scores:** Constitution, Intelligence, Wisdom\n- **Feat:** Magic Initiate (Wizard) (see \"Feats\")\n- **Skill Proficiencies:** Arcana and History\n- **Tool Proficiency:** Calligrapher's Supplies\n- **Equipment:** _Choose A or B:_ (A) Quarterstaff, Calligrapher's Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP; or (B) 50 GP",
+    "plain": "- Ability Scores: Constitution, Intelligence, Wisdom\n- Feat: Magic Initiate (Wizard) (see \"Feats\")\n- Skill Proficiencies: Arcana and History\n- Tool Proficiency: Calligrapher's Supplies\n- Equipment: Choose A or B: (A) Quarterstaff, Calligrapher's Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP; or (B) 50 GP",
+    "wording": "srd"
+  },
+  "features": [
+    "feature:sage/ability-scores@2024",
+    {
+      "feat": "feat:magic-initiate@2024",
+      "chosen": {
+        "class": "class:wizard"
+      }
+    },
+    "feature:sage/skill-proficiencies@2024",
+    "feature:sage/tool-proficiencies@2024"
+  ]
+}

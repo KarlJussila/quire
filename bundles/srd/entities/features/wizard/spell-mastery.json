@@ -1,0 +1,71 @@
+{
+  "id": "feature:wizard/spell-mastery",
+  "name": "Spell Mastery",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your spellbook. You can cast those spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.\n\nBy spending 8 hours in study, you can exchange one or both of the spells you chose for different spells of the same levels.",
+    "plain": "At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your spellbook. You can cast those spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.\n\nBy spending 8 hours in study, you can exchange one or both of the spells you chose for different spells of the same levels.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "spell-mastery-level-1",
+            "name": "Spell Mastery (1st-level spell)",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "all": [
+                    {
+                      "match": {
+                        "level": 1,
+                        "lists": "class:wizard"
+                      }
+                    },
+                    {
+                      "has": "candidate"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "choose": {
+            "key": "spell-mastery-level-2",
+            "name": "Spell Mastery (2nd-level spell)",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "all": [
+                    {
+                      "match": {
+                        "level": 2,
+                        "lists": "class:wizard"
+                      }
+                    },
+                    {
+                      "has": "candidate"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "innate",
+      "when": {
+        "prepared": true
+      }
+    }
+  ]
+}

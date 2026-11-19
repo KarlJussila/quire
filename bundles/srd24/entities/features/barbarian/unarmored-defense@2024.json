@@ -1,0 +1,36 @@
+{
+  "id": "feature:barbarian/unarmored-defense@2024",
+  "name": "Level 1: Unarmored Defense",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you aren't wearing any armor, your base Armor Class equals 10 plus your Dexterity and Constitution modifiers. You can use a Shield and still gain this benefit.",
+    "plain": "While you aren't wearing any armor, your base Armor Class equals 10 plus your Dexterity and Constitution modifiers. You can use a Shield and still gain this benefit.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$base": {
+            "sum": [
+              10,
+              "modifiers.ability:dex",
+              "modifiers.ability:con"
+            ]
+          }
+        }
+      },
+      "when": {
+        "not": {
+          "has": "group:armor",
+          "match": {
+            "worn": true
+          }
+        }
+      }
+    }
+  ]
+}

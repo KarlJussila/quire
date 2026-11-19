@@ -1,0 +1,112 @@
+{
+  "id": "rule:improvised-weapons",
+  "name": "Improvised Weapons",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Sometimes characters don't have their weapons and have to attack with whatever is at hand. An improvised weapon includes any object you can wield in one or two hands, such as broken glass, a table leg, a frying pan, a wagon wheel, or a dead goblin.\n\nOften, an improvised weapon is similar to an actual weapon and can be treated as such. For example, a table leg is akin to a club. At the GM's option, a character proficient with a weapon can use a similar object as if it were that weapon and use his or her proficiency bonus.\n\nAn object that bears no resemblance to a weapon deals 1d4 damage (the GM assigns a damage type appropriate to the object). If a character uses a ranged weapon to make a melee attack, or throws a melee weapon that does not have the thrown property, it also deals 1d4 damage. An improvised thrown weapon has a normal range of 20 feet and a long range of 60 feet.",
+    "plain": "Sometimes characters don't have their weapons and have to attack with whatever is at hand. An improvised weapon includes any object you can wield in one or two hands, such as broken glass, a table leg, a frying pan, a wagon wheel, or a dead goblin.\n\nOften, an improvised weapon is similar to an actual weapon and can be treated as such. For example, a table leg is akin to a club. At the GM's option, a character proficient with a weapon can use a similar object as if it were that weapon and use his or her proficiency bonus.\n\nAn object that bears no resemblance to a weapon deals 1d4 damage (the GM assigns a damage type appropriate to the object). If a character uses a ranged weapon to make a melee attack, or throws a melee weapon that does not have the thrown property, it also deals 1d4 damage. An improvised thrown weapon has a normal range of 20 feet and a long range of 60 feet.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "melee",
+      "name": "Improvised Weapon: Melee",
+      "standalone": false,
+      "delivery": {
+        "attack": {
+          "range": "melee",
+          "via": "weapon",
+          "ability": "ability:str",
+          "item": "group:improvised-weapon"
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "1d4",
+            "type": {
+              "choose": {
+                "key": "damage-type",
+                "name": "Damage type",
+                "from": [
+                  {
+                    "kind": "damage-type"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "thrown",
+      "name": "Improvised Weapon: Thrown",
+      "standalone": false,
+      "range": {
+        "distance": 20,
+        "long": 60
+      },
+      "delivery": {
+        "attack": {
+          "range": "ranged",
+          "via": "weapon",
+          "ability": "ability:dex",
+          "item": "group:improvised-weapon"
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "1d4",
+            "type": {
+              "choose": {
+                "key": "damage-type",
+                "name": "Damage type",
+                "from": [
+                  {
+                    "kind": "damage-type"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": "proficiencyBonus"
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "item": "group:improvised-weapon"
+              }
+            }
+          },
+          {
+            "proficient": "group:improvised-weapon"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "feature:acolyte/skill-proficiencies",
+  "name": "Skill Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Skill Proficiencies: Insight, Religion",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "skill:insight",
+        "skill:religion"
+      ]
+    }
+  ]
+}

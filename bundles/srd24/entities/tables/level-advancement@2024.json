@@ -1,0 +1,163 @@
+{
+  "id": "table:level-advancement@2024",
+  "name": "Level Advancement",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "level",
+      "name": "Level"
+    },
+    {
+      "key": "experience-points",
+      "name": "Experience Points"
+    },
+    {
+      "key": "proficiency-bonus",
+      "name": "Proficiency Bonus"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "level": "1",
+        "experience-points": "0",
+        "proficiency-bonus": "+2"
+      }
+    },
+    {
+      "cells": {
+        "level": "2",
+        "experience-points": "300",
+        "proficiency-bonus": "+2"
+      }
+    },
+    {
+      "cells": {
+        "level": "3",
+        "experience-points": "900",
+        "proficiency-bonus": "+2"
+      }
+    },
+    {
+      "cells": {
+        "level": "4",
+        "experience-points": "2,700",
+        "proficiency-bonus": "+2"
+      }
+    },
+    {
+      "cells": {
+        "level": "5",
+        "experience-points": "6,500",
+        "proficiency-bonus": "+3"
+      }
+    },
+    {
+      "cells": {
+        "level": "6",
+        "experience-points": "14,000",
+        "proficiency-bonus": "+3"
+      }
+    },
+    {
+      "cells": {
+        "level": "7",
+        "experience-points": "23,000",
+        "proficiency-bonus": "+3"
+      }
+    },
+    {
+      "cells": {
+        "level": "8",
+        "experience-points": "34,000",
+        "proficiency-bonus": "+3"
+      }
+    },
+    {
+      "cells": {
+        "level": "9",
+        "experience-points": "48,000",
+        "proficiency-bonus": "+4"
+      }
+    },
+    {
+      "cells": {
+        "level": "10",
+        "experience-points": "64,000",
+        "proficiency-bonus": "+4"
+      }
+    },
+    {
+      "cells": {
+        "level": "11",
+        "experience-points": "85,000",
+        "proficiency-bonus": "+4"
+      }
+    },
+    {
+      "cells": {
+        "level": "12",
+        "experience-points": "100,000",
+        "proficiency-bonus": "+4"
+      }
+    },
+    {
+      "cells": {
+        "level": "13",
+        "experience-points": "120,000",
+        "proficiency-bonus": "+5"
+      }
+    },
+    {
+      "cells": {
+        "level": "14",
+        "experience-points": "140,000",
+        "proficiency-bonus": "+5"
+      }
+    },
+    {
+      "cells": {
+        "level": "15",
+        "experience-points": "165,000",
+        "proficiency-bonus": "+5"
+      }
+    },
+    {
+      "cells": {
+        "level": "16",
+        "experience-points": "195,000",
+        "proficiency-bonus": "+5"
+      }
+    },
+    {
+      "cells": {
+        "level": "17",
+        "experience-points": "225,000",
+        "proficiency-bonus": "+6"
+      }
+    },
+    {
+      "cells": {
+        "level": "18",
+        "experience-points": "265,000",
+        "proficiency-bonus": "+6"
+      }
+    },
+    {
+      "cells": {
+        "level": "19",
+        "experience-points": "305,000",
+        "proficiency-bonus": "+6"
+      }
+    },
+    {
+      "cells": {
+        "level": "20",
+        "experience-points": "355,000",
+        "proficiency-bonus": "+6"
+      }
+    }
+  ]
+}

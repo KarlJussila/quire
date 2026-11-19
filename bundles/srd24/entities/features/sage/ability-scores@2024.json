@@ -1,0 +1,37 @@
+{
+  "id": "feature:sage/ability-scores@2024",
+  "name": "Ability Scores",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Ability Scores: Constitution, Intelligence, Wisdom",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "$at": {
+            "choose": {
+              "key": "ability-scores",
+              "name": "Ability Scores",
+              "count": 3,
+              "each": 2,
+              "from": [
+                "ability:con",
+                "ability:int",
+                "ability:wis"
+              ]
+            }
+          },
+          "$add": {
+            "amount": 1,
+            "upTo": 20
+          }
+        }
+      }
+    }
+  ]
+}

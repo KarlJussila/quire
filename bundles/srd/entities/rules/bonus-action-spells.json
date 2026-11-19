@@ -1,0 +1,34 @@
+{
+  "id": "rule:bonus-action-spells",
+  "name": "Bonus Action Spells",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A spell cast with a bonus action is especially swift. You must use a bonus action on your turn to cast the spell, provided that you haven't already taken a bonus action this turn. You can't cast another spell during the same turn, except for a cantrip with a casting time of 1 action.",
+    "plain": "A spell cast with a bonus action is especially swift. You must use a bonus action on your turn to cast the spell, provided that you haven't already taken a bonus action this turn. You can't cast another spell during the same turn, except for a cantrip with a casting time of 1 action.",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:expend-spell-slots"
+      ],
+      "when": {
+        "happened": {
+          "event": "event:pool-spent",
+          "by": "self",
+          "match": {
+            "pool": "spell-slots"
+          },
+          "since": "turn-start"
+        }
+      }
+    }
+  ]
+}

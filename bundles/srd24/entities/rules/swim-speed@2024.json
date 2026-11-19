@@ -1,0 +1,18 @@
+{
+  "id": "rule:swim-speed@2024",
+  "name": "Swim Speed",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Swim Speed can be used to swim without expending the extra movement normally associated with swimming. _See also_ \"Swimming\" and \"Speed.\"",
+    "plain": "A Swim Speed can be used to swim without expending the extra movement normally associated with swimming. See also \"Swimming\" and \"Speed.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

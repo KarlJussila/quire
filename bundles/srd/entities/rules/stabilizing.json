@@ -1,0 +1,64 @@
+{
+  "id": "rule:stabilizing",
+  "name": "Stabilizing a Creature",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "The best way to save a creature with 0 hit points is to heal it. If healing is unavailable, the creature can at least be stabilized so that it isn't killed by a failed death saving throw.\n\nYou can use your action to administer first aid to an Unconscious creature and attempt to stabilize it, which requires a successful DC 10 Wisdom (Medicine) check.\n\nA **stable** creature doesn't make death saving throws, even though it has 0 hit points, but it does remain Unconscious. The creature stops being stable, and must start making death saving throws again, if it takes any damage. A stable creature that isn't healed regains 1 hit point after 1d4 hours.",
+    "plain": "The best way to save a creature with 0 hit points is to heal it. If healing is unavailable, the creature can at least be stabilized so that it isn't killed by a failed death saving throw.\n\nYou can use your action to administer first aid to an Unconscious creature and attempt to stabilize it, which requires a successful DC 10 Wisdom (Medicine) check.\n\nA stable creature doesn't make death saving throws, even though it has 0 hit points, but it does remain Unconscious. The creature stops being stable, and must start making death saving throws again, if it takes any damage. A stable creature that isn't healed regains 1 hit point after 1d4 hours.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "stabilize",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "has": "condition:unconscious"
+              },
+              {
+                "compare": "hp.current",
+                "atMost": 0
+              }
+            ]
+          }
+        }
+      },
+      "delivery": {
+        "check": {
+          "ability": "ability:wis",
+          "skill": "skill:medicine",
+          "dc": 10,
+          "by": "self"
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "state:stable"
+          }
+        }
+      ]
+    }
+  ],
+  "defines": [
+    "state:stable"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "creature:warrior-infantry@2024",
+  "name": "Warrior Infantry",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 13,
+  "hp": {
+    "average": 9,
+    "formula": "2d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 8,
+    "ability:con": 11,
+    "ability:dex": 11,
+    "ability:int": 8,
+    "ability:str": 13,
+    "ability:wis": 11
+  },
+  "passivePerception": 10,
+  "xp": 25,
+  "proficiencyBonus": 2,
+  "initiative": 0,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Armaments"
+  ],
+  "gear": [
+    "Chain Shirt",
+    "Spear"
+  ],
+  "cr": 0.125,
+  "languages": [
+    {
+      "language": "language:common"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Pack Tactics",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The warrior has Advantage on an attack roll against a creature if at least one of the warrior's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+        "plain": "The warrior has Advantage on an attack roll against a creature if at least one of the warrior's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spear",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +3, reach 5 ft. or range 20/60 ft. _Hit:_ 4 (1d6 + 1) Piercing damage.",
+        "plain": "Melee or Ranged Attack Roll: +3, reach 5 ft. or range 20/60 ft. Hit: 4 (1d6 + 1) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

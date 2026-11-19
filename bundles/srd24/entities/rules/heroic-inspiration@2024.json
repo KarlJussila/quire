@@ -1,0 +1,73 @@
+{
+  "id": "rule:heroic-inspiration@2024",
+  "name": "Heroic Inspiration",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you (a player character) have Heroic Inspiration, you can expend it to reroll any die immediately after rolling it, and you must use the new roll.\n\nIf you gain Heroic Inspiration but already have it, it's lost unless you give it to a player character who lacks it.",
+    "plain": "If you (a player character) have Heroic Inspiration, you can expend it to reroll any die immediately after rolling it, and you must use the new roll.\n\nIf you gain Heroic Inspiration but already have it, it's lost unless you give it to a player character who lacks it.",
+    "wording": "srd"
+  },
+  "group": "group:character",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "resource",
+      "key": "heroic-inspiration",
+      "max": 1,
+      "recover": []
+    }
+  ],
+  "activities": [
+    {
+      "key": "reroll",
+      "cost": [
+        {
+          "resource": "heroic-inspiration"
+        }
+      ],
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self"
+      },
+      "outcomes": [
+        {
+          "intercept": {
+            "reroll": true
+          }
+        }
+      ]
+    },
+    {
+      "key": "give-inspiration",
+      "cost": [
+        {
+          "resource": "heroic-inspiration"
+        }
+      ],
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "ally",
+          "where": {
+            "not": {
+              "compare": "pools.heroic-inspiration.current",
+              "atLeast": 1
+            }
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "pool": {
+            "resource": "heroic-inspiration",
+            "add": 1
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "item:bracers-of-defense@2024",
+  "name": "Bracers of Defense",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing these bracers, you gain a +2 bonus to Armor Class if you are wearing no armor and using no Shield.",
+    "plain": "While wearing these bracers, you gain a +2 bonus to Armor Class if you are wearing no armor and using no Shield.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "not": {
+              "has": "group:armor",
+              "match": {
+                "worn": true
+              }
+            }
+          },
+          {
+            "not": {
+              "has": "group:shield",
+              "match": {
+                "held": true
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

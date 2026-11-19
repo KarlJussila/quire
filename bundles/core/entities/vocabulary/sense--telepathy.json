@@ -1,0 +1,11 @@
+{
+  "id": "sense:telepathy",
+  "name": "Telepathy",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Magical mental communication with a creature within the granted range.",
+    "wording": "original"
+  }
+}

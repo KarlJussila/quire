@@ -1,0 +1,50 @@
+{
+  "id": "feature:warlock/the-fiend/dark-ones-blessing",
+  "name": "Dark One’s Blessing",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 1st level, when you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level (minimum of 1).",
+    "plain": "Starting at 1st level, when you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level (minimum of 1).",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:damaged",
+        "by": "self",
+        "subject": {
+          "pool": "enemy",
+          "where": {
+            "hostile": true
+          }
+        },
+        "match": {
+          "remaining": 0
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "tempHp": {
+              "amount": {
+                "max": [
+                  1,
+                  {
+                    "sum": [
+                      "modifiers.ability:cha",
+                      "levels.class:warlock"
+                    ]
+                  }
+                ]
+              }
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

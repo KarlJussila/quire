@@ -1,0 +1,71 @@
+{
+  "id": "feature:wizard/signature-spells",
+  "name": "Signature Spells",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you reach 20th level, you gain mastery over two powerful spells and can cast them with little effort. Choose two 3rd-level wizard spells in your spellbook as your signature spells. You always have these spells prepared, they don't count against the number of spells you have prepared, and you can cast each of them once at 3rd level without expending a spell slot. When you do so, you can't do so again until you finish a short or long rest.\n\nIf you want to cast either spell at a higher level, you must expend a spell slot as normal.",
+    "plain": "When you reach 20th level, you gain mastery over two powerful spells and can cast them with little effort. Choose two 3rd-level wizard spells in your spellbook as your signature spells. You always have these spells prepared, they don't count against the number of spells you have prepared, and you can cast each of them once at 3rd level without expending a spell slot. When you do so, you can't do so again until you finish a short or long rest.\n\nIf you want to cast either spell at a higher level, you must expend a spell slot as normal.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "signature-spells",
+            "name": "Signature Spells",
+            "count": 2,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "all": [
+                    {
+                      "match": {
+                        "level": 3,
+                        "lists": "class:wizard"
+                      }
+                    },
+                    {
+                      "has": "candidate"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "chosen": "signature-spells"
+        }
+      ],
+      "how": "innate",
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:short"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "castAt": 3
+    }
+  ]
+}

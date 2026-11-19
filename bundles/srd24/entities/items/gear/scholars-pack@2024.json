@@ -1,0 +1,52 @@
+{
+  "id": "item:scholars-pack@2024",
+  "name": "Scholar's Pack",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Scholar's Pack contains the following items: Backpack, Book, Ink, Ink Pen, Lamp, 10 flasks of Oil, 10 sheets of Parchment, and Tinderbox.",
+    "plain": "A Scholar's Pack contains the following items: Backpack, Book, Ink, Ink Pen, Lamp, 10 flasks of Oil, 10 sheets of Parchment, and Tinderbox.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 40,
+    "currency": "currency:gp"
+  },
+  "weight": 22.0,
+  "contents": [
+    {
+      "item": "item:backpack",
+      "quantity": 1
+    },
+    {
+      "item": "item:book",
+      "quantity": 1
+    },
+    {
+      "item": "item:ink",
+      "quantity": 1
+    },
+    {
+      "item": "item:ink-pen",
+      "quantity": 1
+    },
+    {
+      "item": "item:lamp",
+      "quantity": 1
+    },
+    {
+      "item": "item:oil",
+      "quantity": 10
+    },
+    {
+      "item": "item:parchment",
+      "quantity": 10
+    },
+    {
+      "item": "item:tinderbox",
+      "quantity": 1
+    }
+  ]
+}

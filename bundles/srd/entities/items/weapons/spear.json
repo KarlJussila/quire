@@ -1,0 +1,32 @@
+{
+  "id": "item:spear",
+  "name": "Spear",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:simple-melee-weapon",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:gp"
+  },
+  "weight": 3.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:thrown",
+      "weapon-property:versatile"
+    ],
+    "damage": {
+      "amount": "1d6",
+      "type": "damage-type:piercing"
+    },
+    "versatile": "1d8",
+    "range": {
+      "long": 60,
+      "normal": 20
+    }
+  }
+}

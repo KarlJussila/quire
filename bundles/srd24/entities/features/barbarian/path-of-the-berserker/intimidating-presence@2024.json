@@ -1,0 +1,89 @@
+{
+  "id": "feature:barbarian/path-of-the-berserker/intimidating-presence@2024",
+  "name": "Level 14: Intimidating Presence",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Bonus Action, you can strike terror into others with your menacing presence and primal power. When you do so, each creature of your choice in a 30-foot Emanation originating from you must make a Wisdom saving throw (DC 8 plus your Strength modifier and Proficiency Bonus). On a failed save, a creature has the Frightened condition for 1 minute. At the end of each of the Frightened creature's turns, the creature repeats the save, ending the effect on itself on a success.\n\nOnce you use this feature, you can't use it again until you finish a Long Rest unless you expend a use of your Rage (no action required) to restore your use of it.",
+    "plain": "As a Bonus Action, you can strike terror into others with your menacing presence and primal power. When you do so, each creature of your choice in a 30-foot Emanation originating from you must make a Wisdom saving throw (DC 8 plus your Strength modifier and Proficiency Bonus). On a failed save, a creature has the Frightened condition for 1 minute. At the end of each of the Frightened creature's turns, the creature repeats the save, ending the effect on itself on a success.\n\nOnce you use this feature, you can't use it again until you finish a Long Rest unless you expend a use of your Rage (no action required) to restore your use of it.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "intimidating-presence",
+      "name": "Intimidating Presence",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "area": {
+        "shape": "area-shape:emanation",
+        "size": 30,
+        "origin": "self",
+        "affects": {
+          "pool": "any",
+          "chosen": true
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:wis",
+          "dc": {
+            "sum": [
+              8,
+              "proficiencyBonus",
+              "modifiers.ability:str"
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:frightened",
+            "duration": {
+              "amount": 1,
+              "unit": "minute"
+            },
+            "repeatSave": {}
+          }
+        }
+      ]
+    },
+    {
+      "key": "restore-intimidating-presence",
+      "name": "Restore Intimidating Presence",
+      "cost": [
+        {
+          "resource": "rage"
+        }
+      ],
+      "outcomes": [
+        {
+          "pool": {
+            "resource": "intimidating-presence",
+            "add": 1
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "feature:druid/circle-of-the-land/natures-sanctuary",
+  "name": "Nature’s Sanctuary",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you reach 14th level, creatures of the natural world sense your connection to nature and become hesitant to attack you. When a beast or plant creature attacks you, that creature must make a Wisdom saving throw against your druid spell save DC. On a failed save, the creature must choose a different target, or the attack automatically misses. On a successful save, the creature is immune to this effect for 24 hours.\n\nThe creature is aware of this effect before it makes its attack against you.",
+    "plain": "When you reach 14th level, creatures of the natural world sense your connection to nature and become hesitant to attack you. When a beast or plant creature attacks you, that creature must make a Wisdom saving throw against your druid spell save DC. On a failed save, the creature must choose a different target, or the attack automatically misses. On a successful save, the creature is immune to this effect for 24 hours.\n\nThe creature is aware of this effect before it makes its attack against you.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "match": {
+                  "creatureType": [
+                    "creature-type:beast",
+                    "creature-type:plant"
+                  ]
+                }
+              },
+              {
+                "not": {
+                  "defense": {
+                    "immune": "feature:druid/circle-of-the-land/natures-sanctuary"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      },
+      "step": {
+        "target": {
+          "who": "actor"
+        },
+        "delivery": {
+          "save": {
+            "ability": "ability:wis",
+            "dc": "spellcasting.class:druid.dc"
+          }
+        },
+        "outcomes": [
+          {
+            "choose": {
+              "key": "sanctuary-response",
+              "name": "Attacker Response",
+              "by": "actor",
+              "from": [
+                {
+                  "name": "Choose a different target",
+                  "of": [
+                    {
+                      "intercept": {
+                        "redirect": {
+                          "pool": "any",
+                          "chosen": true,
+                          "includeSelf": false,
+                          "where": {
+                            "all": [
+                              {
+                                "not": {
+                                  "is": "self"
+                                }
+                              },
+                              {
+                                "prose": {
+                                  "text": "A different legal target for this pending attack, chosen by the attacker.",
+                                  "gap": {
+                                    "category": "test",
+                                    "name": "Test legal alternative targets of a pending attack."
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Miss",
+                  "of": [
+                    {
+                      "intercept": {
+                        "success": false
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "otherwise": [
+          {
+            "applyState": {
+              "state": {
+                "effects": [
+                  {
+                    "type": "defense",
+                    "immune": [
+                      "feature:druid/circle-of-the-land/natures-sanctuary"
+                    ],
+                    "when": {
+                      "event": "event:roll-made",
+                      "by": "self",
+                      "subject": "source",
+                      "match": {
+                        "roll": "roll:attack"
+                      }
+                    }
+                  }
+                ]
+              },
+              "duration": {
+                "amount": 24,
+                "unit": "hour"
+              }
+            },
+            "to": "actor"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "test",
+      "name": "The legality of a replacement attack target remains a prose test."
+    }
+  ]
+}

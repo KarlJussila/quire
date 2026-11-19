@@ -1,0 +1,87 @@
+{
+  "id": "creature:octopus@2024",
+  "name": "Octopus",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "hp": {
+    "average": 3,
+    "formula": "1d6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 5
+    },
+    "movement-mode:swim": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 4,
+    "ability:con": 11,
+    "ability:dex": 15,
+    "ability:int": 3,
+    "ability:str": 4,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 2,
+    "skill:stealth": 6
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 30
+    }
+  },
+  "passivePerception": 12,
+  "xp": 10,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Compression",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The octopus can move through a space as narrow as 1 inch without expending extra movement to do so.",
+        "plain": "The octopus can move through a space as narrow as 1 inch without expending extra movement to do so.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Water Breathing",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The octopus can breathe only underwater.",
+        "plain": "The octopus can breathe only underwater.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tentacles",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 1 Bludgeoning damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 1 Bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ink Cloud",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "_Trigger:_ A creature ends its turn within 5 feet of the octopus while underwater. _Response:_ The octopus releases ink that fills a 5-foot Cube centered on itself, and the octopus moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink.",
+        "plain": "Trigger: A creature ends its turn within 5 feet of the octopus while underwater. Response: The octopus releases ink that fills a 5-foot Cube centered on itself, and the octopus moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

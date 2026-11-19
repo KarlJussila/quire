@@ -1,0 +1,7 @@
+{
+  "id": "group:memory",
+  "name": "Memory",
+  "source": {
+    "book": "core"
+  }
+}

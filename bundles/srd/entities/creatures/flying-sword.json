@@ -1,0 +1,101 @@
+{
+  "id": "creature:flying-sword",
+  "name": "Flying Sword",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:construct",
+  "alignment": "alignment:unaligned",
+  "ac": 17,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 17,
+    "formula": "5d6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 0
+    },
+    "movement-mode:fly": {
+      "speed": 50,
+      "hover": true
+    }
+  },
+  "abilities": {
+    "ability:cha": 1,
+    "ability:con": 11,
+    "ability:dex": 15,
+    "ability:int": 1,
+    "ability:str": 12,
+    "ability:wis": 5
+  },
+  "saves": {
+    "ability:dex": 4
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60,
+      "blindBeyond": true
+    }
+  },
+  "passivePerception": 7,
+  "xp": 50,
+  "cr": 0.25,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison",
+        "damage-type:psychic"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:blinded",
+        "condition:charmed",
+        "condition:deafened",
+        "condition:frightened",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Antimagic Susceptibility",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sword is Incapacitated while in the area of an Antimagic Field. If targeted by Dispel Magic, the sword must succeed on a Constitution saving throw against the caster's spell save DC or fall Unconscious for 1 minute.",
+        "plain": "The sword is Incapacitated while in the area of an Antimagic Field. If targeted by Dispel Magic, the sword must succeed on a Constitution saving throw against the caster's spell save DC or fall Unconscious for 1 minute.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "False Appearance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the sword remains motionless and isn't flying, it is indistinguishable from a normal sword.",
+        "plain": "While the sword remains motionless and isn't flying, it is indistinguishable from a normal sword.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Longsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one target. _Hit:_ 5 (1d8 + 1) slashing damage.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

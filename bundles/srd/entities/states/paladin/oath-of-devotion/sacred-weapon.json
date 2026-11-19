@@ -1,0 +1,97 @@
+{
+  "id": "state:paladin/oath-of-devotion/sacred-weapon",
+  "name": "Sacred Weapon",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As an action, you can imbue one weapon that you are holding with positive energy, using your Channel Divinity. For 1 minute, you add your Charisma modifier to attack rolls made with that weapon (with a minimum bonus of +1). The weapon also emits bright light in a 20-foot radius and dim light 20 feet beyond that. If the weapon is not already magical, it becomes magical for the duration.",
+    "plain": "As an action, you can imbue one weapon that you are holding with positive energy, using your Channel Divinity. For 1 minute, you add your Charisma modifier to attack rolls made with that weapon (with a minimum bonus of +1). The weapon also emits bright light in a 20-foot radius and dim light 20 feet beyond that. If the weapon is not already magical, it becomes magical for the duration.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "end-sacred-weapon",
+      "name": "End Sacred Weapon",
+      "when": {
+        "turn": "self"
+      },
+      "outcomes": [
+        {
+          "endState": {
+            "state": "state:paladin/oath-of-devotion/sacred-weapon"
+          },
+          "to": "this"
+        }
+      ]
+    }
+  ],
+  "duration": {
+    "amount": 1,
+    "unit": "minute"
+  },
+  "ends": [
+    {
+      "event": "event:state-applied",
+      "subject": "source",
+      "match": {
+        "state": "condition:unconscious"
+      }
+    },
+    {
+      "becomes": {
+        "not": {
+          "any": [
+            {
+              "has": "this",
+              "match": {
+                "held": true
+              }
+            },
+            {
+              "has": "this"
+            }
+          ]
+        }
+      },
+      "subject": "source"
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": {
+            "max": [
+              1,
+              "source.modifiers.ability:cha"
+            ]
+          }
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "this"
+          }
+        }
+      }
+    },
+    {
+      "type": "light",
+      "bright": 20,
+      "dim": 20
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "If the weapon isn't already magical, it becomes magical for the duration."
+    }
+  ]
+}

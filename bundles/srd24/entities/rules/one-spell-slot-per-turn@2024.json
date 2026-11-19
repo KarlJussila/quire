@@ -1,0 +1,34 @@
+{
+  "id": "rule:one-spell-slot-per-turn@2024",
+  "name": "One Spell with a Spell Slot per Turn",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "On a turn, you can expend only one spell slot to cast a spell. This rule means you can't, for example, cast a spell with a spell slot using the Magic action and another one using a Bonus Action on the same turn.",
+    "plain": "On a turn, you can expend only one spell slot to cast a spell. This rule means you can't, for example, cast a spell with a spell slot using the Magic action and another one using a Bonus Action on the same turn.",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:expend-spell-slots"
+      ],
+      "when": {
+        "happened": {
+          "event": "event:pool-spent",
+          "by": "self",
+          "match": {
+            "pool": "spell-slots"
+          },
+          "since": "turn-start"
+        }
+      }
+    }
+  ]
+}

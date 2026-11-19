@@ -1,0 +1,98 @@
+{
+  "id": "creature:hell-hound",
+  "name": "Hell Hound",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 15,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 45,
+    "formula": "7d8 + 14"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 14,
+    "ability:dex": 12,
+    "ability:int": 6,
+    "ability:str": 17,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:perception": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 15,
+  "xp": 700,
+  "cr": 3,
+  "languages": [
+    {
+      "language": "language:infernal",
+      "understandsOnly": true
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Keen Hearing and Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hound has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+        "plain": "The hound has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pack Tactics",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hound has advantage on an attack roll against a creature if at least one of the hound's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "plain": "The hound has advantage on an attack roll against a creature if at least one of the hound's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 7 (1d8 + 3) piercing damage plus 7 (2d6) fire damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 7 (2d6) fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fire Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The hound exhales fire in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 21 (6d6) fire damage on a failed save, or half as much damage on a successful one.",
+        "plain": "The hound exhales fire in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 21 (6d6) fire damage on a failed save, or half as much damage on a successful one.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

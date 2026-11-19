@@ -1,0 +1,8 @@
+{
+  "id": "roll:initiative",
+  "name": "Initiative",
+  "source": {
+    "book": "core"
+  },
+  "isA": "roll:check"
+}

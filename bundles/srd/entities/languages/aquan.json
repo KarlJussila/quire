@@ -1,0 +1,13 @@
+{
+  "id": "language:aquan",
+  "name": "Aquan",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- **Languages** Aquan, Draconic",
+    "plain": "- Languages Aquan, Draconic",
+    "wording": "srd"
+  },
+  "speakers": "Water elementals"
+}

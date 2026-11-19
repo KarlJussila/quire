@@ -1,0 +1,49 @@
+{
+  "id": "state:stable@2024",
+  "name": "Stable",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A creature is Stable if it has 0 Hit Points but isn't required to make Death Saving Throws. _See also_ \"Playing the Game\" (\"Damage and Healing\").",
+    "plain": "A creature is Stable if it has 0 Hit Points but isn't required to make Death Saving Throws. _See also_ \"Playing the Game\" (\"Damage and Healing\").",
+    "wording": "srd"
+  },
+  "ends": [
+    {
+      "event": "event:damaged",
+      "subject": "self"
+    }
+  ],
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:time-elapsed",
+          "subject": "self",
+          "every": {
+            "amount": "1d4",
+            "unit": "hour"
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "heal": {
+              "amount": 1
+            },
+            "to": "self"
+          },
+          {
+            "endState": {
+              "state": "state:stable"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

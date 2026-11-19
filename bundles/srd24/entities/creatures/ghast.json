@@ -1,0 +1,109 @@
+{
+  "id": "creature:ghast@2024",
+  "name": "Ghast",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 13,
+  "hp": {
+    "average": 36,
+    "formula": "8d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 8,
+    "ability:con": 10,
+    "ability:dex": 17,
+    "ability:int": 11,
+    "ability:str": 16,
+    "ability:wis": 10
+  },
+  "saves": {
+    "ability:wis": 2
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 450,
+  "proficiencyBonus": 2,
+  "initiative": 3,
+  "habitat": [
+    "Swamp",
+    "Underdark",
+    "Urban"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 2,
+  "languages": [
+    {
+      "language": "language:common"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:necrotic"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:exhaustion",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Stench",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 10, any creature that starts its turn in a 5-foot Emanation originating from the ghast. _Failure:_ The target has the Poisoned condition until the start of its next turn. _Success:_ The target is immune to this ghast's Stench for 24 hours.",
+        "plain": "Constitution Saving Throw: DC 10, any creature that starts its turn in a 5-foot Emanation originating from the ghast. Failure: The target has the Poisoned condition until the start of its next turn. Success: The target is immune to this ghast's Stench for 24 hours.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 7 (1d8 + 3) Piercing damage plus 9 (2d8) Necrotic damage.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage plus 9 (2d8) Necrotic damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 10 (2d6 + 3) Slashing damage. If the target is a non-Undead creature, it is subjected to the following effect. _Constitution Saving Throw:_ DC 10. _Failure:_ The target has the Paralyzed condition until the end of its next turn.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 10 (2d6 + 3) Slashing damage. If the target is a non-Undead creature, it is subjected to the following effect. Constitution Saving Throw: DC 10. Failure: The target has the Paralyzed condition until the end of its next turn.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

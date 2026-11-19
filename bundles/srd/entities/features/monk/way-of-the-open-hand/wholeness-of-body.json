@@ -1,0 +1,49 @@
+{
+  "id": "feature:monk/way-of-the-open-hand/wholeness-of-body",
+  "name": "Wholeness of Body",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 6th level, you gain the ability to heal yourself. As an action, you can regain hit points equal to three times your monk level. You must finish a long rest before you can use this feature again.",
+    "plain": "At 6th level, you gain the ability to heal yourself. As an action, you can regain hit points equal to three times your monk level. You must finish a long rest before you can use this feature again.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "wholeness-of-body",
+      "name": "Wholeness of Body",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "heal": {
+            "amount": {
+              "times": "levels.class:monk",
+              "by": 3
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "id": "creature:half-dragon@2024",
+  "name": "Half-Dragon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:neutral",
+  "ac": 18,
+  "hp": {
+    "average": 105,
+    "formula": "14d8 + 42"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 14,
+    "ability:con": 16,
+    "ability:dex": 14,
+    "ability:int": 10,
+    "ability:str": 19,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:dex": 5,
+    "ability:wis": 5
+  },
+  "skills": {
+    "skill:athletics": 7,
+    "skill:perception": 5,
+    "skill:stealth": 5
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    },
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 15,
+  "xp": 1800,
+  "proficiencyBonus": 3,
+  "initiative": 5,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Armaments"
+  ],
+  "cr": 5,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Draconic Origin",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The half-dragon is related to a type of dragon associated with one of the following damage types (GM's choice): Acid, Cold, Fire, Lightning, or Poison. This choice affects other aspects of the stat block.",
+        "plain": "The half-dragon is related to a type of dragon associated with one of the following damage types (GM's choice): Acid, Cold, Fire, Lightning, or Poison. This choice affects other aspects of the stat block.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The half-dragon makes two Claw attacks.",
+        "plain": "The half-dragon makes two Claw attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 10 ft. _Hit:_ 6 (1d4 + 4) Slashing damage plus 7 (2d6) damage of the type chosen for the Draconic Origin trait.",
+        "plain": "Melee Attack Roll: +7, reach 10 ft. Hit: 6 (1d4 + 4) Slashing damage plus 7 (2d6) damage of the type chosen for the Draconic Origin trait.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Dragon's Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 14, each creature in a 30-foot Cone. _Failure:_  28 (8d6) damage of the type chosen for the Draconic Origin trait. _Success:_ Half damage.",
+        "plain": "Dexterity Saving Throw: DC 14, each creature in a 30-foot Cone. Failure:  28 (8d6) damage of the type chosen for the Draconic Origin trait. Success: Half damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Leap",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The half-dragon jumps up to 30 feet by spending 10 feet of movement.",
+        "plain": "The half-dragon jumps up to 30 feet by spending 10 feet of movement.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

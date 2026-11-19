@@ -1,0 +1,18 @@
+{
+  "id": "rule:difficulty-class@2024",
+  "name": "Difficulty Class",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Difficulty Class (DC) is the target number for an ability check or a saving throw. _See also_ \"Playing the Game\" (\"D20 Tests\").",
+    "plain": "A Difficulty Class (DC) is the target number for an ability check or a saving throw. See also \"Playing the Game\" (\"D20 Tests\").",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "feature:dragonborn/draconic-ancestry/blue@2024",
+  "name": "Blue",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Damage Type: Lightning",
+    "wording": "srd"
+  },
+  "group": "group:draconic-ancestry",
+  "values": {
+    "damage-type": "damage-type:lightning"
+  }
+}

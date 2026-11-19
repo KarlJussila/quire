@@ -1,0 +1,33 @@
+{
+  "id": "feature:half-elf/skill-versatility",
+  "name": "Skill Versatility",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You gain proficiency in two skills of your choice.",
+    "plain": "You gain proficiency in two skills of your choice.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "from": [
+              {
+                "kind": "skill"
+              }
+            ],
+            "count": 2,
+            "distinct": true
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

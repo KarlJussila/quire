@@ -1,0 +1,11 @@
+{
+  "id": "feature:werewolfs",
+  "name": "Werewolfs",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "creature-type:plant",
+  "name": "Plant",
+  "source": {
+    "book": "core"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "damage-type:thunder",
+  "name": "Thunder",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

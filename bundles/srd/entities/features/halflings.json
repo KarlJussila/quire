@@ -1,0 +1,11 @@
+{
+  "id": "feature:halflings",
+  "name": "Halflings",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

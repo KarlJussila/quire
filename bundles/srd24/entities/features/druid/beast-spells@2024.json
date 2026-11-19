@@ -1,0 +1,67 @@
+{
+  "id": "feature:druid/beast-spells@2024",
+  "name": "Level 18: Beast Spells",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While using Wild Shape, you can cast spells in Beast form, except for any spell that has a Material component with a cost specified or that consumes its Material component.",
+    "plain": "While using Wild Shape, you can cast spells in Beast form, except for any spell that has a Material component with a cost specified or that consumes its Material component.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "waive",
+      "restriction": [
+        "restriction:cast-spells"
+      ],
+      "when": {
+        "has": "state:wild-shape"
+      }
+    },
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:cast-spells"
+      ],
+      "activity": {
+        "kind": "activity",
+        "where": {
+          "spell": {
+            "kind": "spell",
+            "where": {
+              "any": [
+                {
+                  "match": {
+                    "components": {
+                      "material": {
+                        "parts": {
+                          "consumed": true
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "match": {
+                    "components": {
+                      "material": {
+                        "parts": {
+                          "worth": true
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "when": {
+        "has": "state:wild-shape"
+      }
+    }
+  ],
+  "gaps": []
+}

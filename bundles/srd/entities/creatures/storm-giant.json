@@ -1,0 +1,123 @@
+{
+  "id": "creature:storm-giant",
+  "name": "Storm Giant",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:giant",
+  "alignment": "alignment:chaotic-good",
+  "ac": 16,
+  "acFrom": [
+    "scale mail"
+  ],
+  "hp": {
+    "average": 230,
+    "formula": "20d12 + 100"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    },
+    "movement-mode:swim": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 18,
+    "ability:con": 20,
+    "ability:dex": 14,
+    "ability:int": 16,
+    "ability:str": 29,
+    "ability:wis": 18
+  },
+  "saves": {
+    "ability:cha": 9,
+    "ability:con": 10,
+    "ability:str": 14,
+    "ability:wis": 9
+  },
+  "skills": {
+    "skill:arcana": 8,
+    "skill:athletics": 14,
+    "skill:history": 8,
+    "skill:perception": 9
+  },
+  "passivePerception": 19,
+  "xp": 10000,
+  "cr": 13,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:giant"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:lightning",
+        "damage-type:thunder"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The giant can breathe air and water.",
+        "plain": "The giant can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The giant makes two greatsword attacks.",
+        "plain": "The giant makes two greatsword attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Greatsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +14 to hit, reach 10 ft., one target. _Hit:_ 30 (6d6 + 9) slashing damage.",
+        "plain": "Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 30 (6d6 + 9) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rock",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +14 to hit, range 60/240 ft., one target. _Hit:_ 35 (4d12 + 9) bludgeoning damage.",
+        "plain": "Ranged Weapon Attack: +14 to hit, range 60/240 ft., one target. Hit: 35 (4d12 + 9) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Lightning Strike",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The giant hurls a magical lightning bolt at a point it can see within 500 feet of it. Each creature within 10 feet of that point must make a DC 17 Dexterity saving throw, taking 54 (12d8) lightning damage on a failed save, or half as much damage on a successful one.",
+        "plain": "The giant hurls a magical lightning bolt at a point it can see within 500 feet of it. Each creature within 10 feet of that point must make a DC 17 Dexterity saving throw, taking 54 (12d8) lightning damage on a failed save, or half as much damage on a successful one.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

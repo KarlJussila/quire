@@ -1,0 +1,92 @@
+{
+  "id": "creature:silver-dragon-wyrmling",
+  "name": "Silver Dragon Wyrmling",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:lawful-good",
+  "ac": 17,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 45,
+    "formula": "6d8 + 18"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 15,
+    "ability:con": 17,
+    "ability:dex": 10,
+    "ability:int": 12,
+    "ability:str": 19,
+    "ability:wis": 11
+  },
+  "saves": {
+    "ability:cha": 4,
+    "ability:con": 5,
+    "ability:dex": 2,
+    "ability:wis": 2
+  },
+  "skills": {
+    "skill:perception": 4,
+    "skill:stealth": 2
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    },
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 450,
+  "cr": 2,
+  "languages": [
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:cold"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 9 (1d10 + 4) piercing damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 9 (1d10 + 4) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Breath Weapons",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon uses one of the following breath weapons.\n\n- **Cold Breath.** The dragon exhales an icy blast in a 15 foot cone. Each creature in that area must make a DC 13 Constitution saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one.\n- **Paralyzing Breath.** The dragon exhales paralyzing gas in a 15-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw or be Paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+        "plain": "The dragon uses one of the following breath weapons.\n\n- Cold Breath. The dragon exhales an icy blast in a 15 foot cone. Each creature in that area must make a DC 13 Constitution saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one.\n- Paralyzing Breath. The dragon exhales paralyzing gas in a 15-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw or be Paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

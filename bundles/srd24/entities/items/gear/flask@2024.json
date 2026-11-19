@@ -1,0 +1,18 @@
+{
+  "id": "item:flask@2024",
+  "name": "Flask",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 2 CP\n\nA Flask holds up to 1 pint.",
+    "plain": "Cost: 2 CP\n\nA Flask holds up to 1 pint.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:cp"
+  },
+  "weight": 1.0
+}

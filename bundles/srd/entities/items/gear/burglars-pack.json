@@ -1,0 +1,76 @@
+{
+  "id": "item:burglars-pack",
+  "name": "Burglar’s Pack",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Includes a backpack, a bag of 1,000 ball bearings, 10 feet of string, a bell, 5 candles, a crowbar, a hammer, 10 pitons, a hooded lantern, 2 flasks of oil, 5 days rations, a tinderbox, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it.",
+    "plain": "Includes a backpack, a bag of 1,000 ball bearings, 10 feet of string, a bell, 5 candles, a crowbar, a hammer, 10 pitons, a hooded lantern, 2 flasks of oil, 5 days rations, a tinderbox, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 16,
+    "currency": "currency:gp"
+  },
+  "weight": 10.0,
+  "contents": [
+    {
+      "item": "item:backpack",
+      "quantity": 1
+    },
+    {
+      "item": "item:ball-bearings-bag-of-1-000",
+      "quantity": 1
+    },
+    {
+      "item": "item:string-10-feet",
+      "quantity": 1
+    },
+    {
+      "item": "item:bell",
+      "quantity": 1
+    },
+    {
+      "item": "item:candle",
+      "quantity": 5
+    },
+    {
+      "item": "item:crowbar",
+      "quantity": 1
+    },
+    {
+      "item": "item:hammer",
+      "quantity": 1
+    },
+    {
+      "item": "item:piton",
+      "quantity": 10
+    },
+    {
+      "item": "item:lantern-hooded",
+      "quantity": 1
+    },
+    {
+      "item": "item:oil-flask",
+      "quantity": 2
+    },
+    {
+      "item": "item:rations-1-day",
+      "quantity": 5
+    },
+    {
+      "item": "item:tinderbox",
+      "quantity": 1
+    },
+    {
+      "item": "item:waterskin",
+      "quantity": 1
+    },
+    {
+      "item": "item:rope-hempen-50-feet",
+      "quantity": 1
+    }
+  ]
+}

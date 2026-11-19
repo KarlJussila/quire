@@ -1,0 +1,18 @@
+{
+  "id": "item:leatherworkers-tools",
+  "name": "Leatherworker’s Tools",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Knowledge of leatherworking extends to lore concerning animal hides and their properties. It also confers knowledge of leather armor and similar goods.\n\n***Components.*** Leatherworker’s tools include a knife, a small mallet, an edger, a hole punch, thread, and leather scraps.\n\n***Arcana.*** Your expertise in working with leather grants you added insight when you inspect magic items crafted from leather, such as boots and some cloaks.\n\n***Investigation.*** You gain added insight when studying leather items or clues related to them, as you draw on your knowledge of leather to pick out details that others would overlook.\n\n***Identify Hides.*** When looking at a hide or a leather item, you can determine the source of the leather and any special techniques used to treat it. For example, you can spot the difference between leather crafted using dwarven methods and leather crafted using halfling methods.\n\n##### LEATHERWORKER’S TOOLS\n\n| Activity | DC |\n|---|---|\n| Modify a leather item’s appearance | 10 |\n| Determine a leather item’s history | 20 |",
+    "plain": "Knowledge of leatherworking extends to lore concerning animal hides and their properties. It also confers knowledge of leather armor and similar goods.\n\nComponents. Leatherworker’s tools include a knife, a small mallet, an edger, a hole punch, thread, and leather scraps.\n\nArcana. Your expertise in working with leather grants you added insight when you inspect magic items crafted from leather, such as boots and some cloaks.\n\nInvestigation. You gain added insight when studying leather items or clues related to them, as you draw on your knowledge of leather to pick out details that others would overlook.\n\nIdentify Hides. When looking at a hide or a leather item, you can determine the source of the leather and any special techniques used to treat it. For example, you can spot the difference between leather crafted using dwarven methods and leather crafted using halfling methods.\n\nLEATHERWORKER’S TOOLS\n\nActivity\tDC\n\nModify a leather item’s appearance\t10\n\nDetermine a leather item’s history\t20",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:gp"
+  },
+  "weight": 5.0
+}

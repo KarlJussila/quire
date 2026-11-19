@@ -1,0 +1,57 @@
+{
+  "id": "item:dragon-scale-mail-bronze",
+  "name": "Dragon Scale Mail, Bronze",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued.\n\nWhile wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to one damage type that is determined by the kind of dragon that provided the scales (see the table).\n\nAdditionally, you can focus your senses as an action to magically discern the distance and direction to the closest dragon within 30 miles of you that is of the same type as the armor. This special action can't be used again until the next dawn.\n\n| Dragon   | Resistance   |\n|----------|--------------|\n| Black    | Acid         |\n| Blue     | Lightning    |\n| Brass    | Fire         |\n| Bronze   | Lightning    |\n| Copper   | Acid         |\n| Gold     | Fire         |\n| Green    | Poison       |\n| Red      | Fire         |\n| Silver   | Cold         |\n| White    | Cold         |",
+    "plain": "Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued.\n\nWhile wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to one damage type that is determined by the kind of dragon that provided the scales (see the table).\n\nAdditionally, you can focus your senses as an action to magically discern the distance and direction to the closest dragon within 30 miles of you that is of the same type as the armor. This special action can't be used again until the next dawn.\n\n| Dragon   | Resistance   |\n|----------|--------------|\n| Black    | Acid         |\n| Blue     | Lightning    |\n| Brass    | Fire         |\n| Bronze   | Lightning    |\n| Copper   | Acid         |\n| Gold     | Fire         |\n| Green    | Poison       |\n| Red      | Fire         |\n| Silver   | Cold         |\n| White    | Cold         |",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:very-rare",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:lightning"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "Advantage on saves against dragon breath and Frightful Presence needs those activities to expose their source types"
+    },
+    {
+      "category": "item-mechanics",
+      "name": "The schema has no activity to locate the closest dragon of the armor’s type and report its distance and direction."
+    }
+  ],
+  "base": "item:scale-mail"
+}

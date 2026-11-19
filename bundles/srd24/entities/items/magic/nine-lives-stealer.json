@@ -1,0 +1,166 @@
+{
+  "id": "item:nine-lives-stealer@2024",
+  "name": "Nine Lives Stealer",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a +2 bonus to attack rolls and damage rolls made with this magic weapon.\n\n_**Life Stealing.**_ The weapon has 1d8 + 1 charges. When you attack a creature that has fewer than 100 Hit Points with this weapon and roll a 20 on the d20 for the attack roll, the creature must succeed on a DC 15 Constitution saving throw or be slain instantly as the sword tears its life force from its body. Constructs and Undead succeed on the save automatically. The weapon loses 1 charge if the creature is slain. When the weapon has no charges remaining, it loses this property.",
+    "plain": "You gain a +2 bonus to attack rolls and damage rolls made with this magic weapon.\n\nLife Stealing. The weapon has 1d8 + 1 charges. When you attack a creature that has fewer than 100 Hit Points with this weapon and roll a 20 on the d20 for the attack roll, the creature must succeed on a DC 15 Constitution saving throw or be slain instantly as the sword tears its life force from its body. Constructs and Undead succeed on the save automatically. The weapon loses 1 charge if the creature is slain. When the weapon has no charges remaining, it loses this property.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:very-rare",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "resource",
+      "key": "charges",
+      "max": "1d8+1",
+      "recover": []
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "item": "this"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage",
+              "attack": {
+                "item": "this"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "triggered",
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          },
+          {
+            "compare": "this.pools.charges.current",
+            "atLeast": 1
+          }
+        ]
+      },
+      "on": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "kind": "creature"
+              },
+              {
+                "compare": "hp.current",
+                "atMost": 99
+              },
+              {
+                "not": {
+                  "match": {
+                    "creatureType": [
+                      "creature-type:construct",
+                      "creature-type:undead"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "natural": 20,
+          "attack": {
+            "item": "this"
+          }
+        }
+      },
+      "step": {
+        "delivery": {
+          "save": {
+            "ability": "ability:con",
+            "dc": 15
+          }
+        },
+        "outcomes": [
+          {
+            "kill": {},
+            "when": {
+              "event": "event:roll-resolved",
+              "match": {
+                "success": false
+              }
+            },
+            "to": "subject"
+          },
+          {
+            "pool": {
+              "resource": "charges",
+              "spend": 1
+            },
+            "when": {
+              "event": "event:roll-resolved",
+              "match": {
+                "success": false
+              }
+            },
+            "to": "this"
+          }
+        ]
+      }
+    }
+  ]
+}

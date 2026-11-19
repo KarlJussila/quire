@@ -1,0 +1,72 @@
+{
+  "id": "class:bard@2024",
+  "name": "Bard",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Bard, you gain the following class features when you reach the specified Bard levels.",
+    "plain": "As a Bard, you gain the following class features when you reach the specified Bard levels.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d8",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:cha",
+      "atLeast": 13
+    },
+    "features": [
+      "feature:bard/multiclass-proficiencies@2024"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:bard/bardic-inspiration@2024",
+      "feature:bard/spellcasting@2024"
+    ],
+    "2": [
+      "feature:bard/expertise@2024",
+      "feature:bard/jack-of-all-trades@2024"
+    ],
+    "3": [
+      "feature:bard/bard-subclass@2024"
+    ],
+    "4": [
+      "feature:bard/ability-score-improvement@2024"
+    ],
+    "5": [
+      "feature:bard/font-of-inspiration@2024"
+    ],
+    "7": [
+      "feature:bard/countercharm@2024"
+    ],
+    "8": [
+      "feature:bard/ability-score-improvement@2024"
+    ],
+    "10": [
+      "feature:bard/magical-secrets@2024"
+    ],
+    "12": [
+      "feature:bard/ability-score-improvement@2024"
+    ],
+    "16": [
+      "feature:bard/ability-score-improvement@2024"
+    ],
+    "18": [
+      "feature:bard/superior-inspiration@2024"
+    ],
+    "19": [
+      "feature:bard/epic-boon@2024"
+    ],
+    "20": [
+      "feature:bard/words-of-creation@2024"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Bard College||Bard Subclass"
+  },
+  "firstClass": [
+    "feature:bard/proficiencies@2024"
+  ]
+}

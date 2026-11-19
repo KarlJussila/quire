@@ -1,0 +1,79 @@
+{
+  "id": "creature:hippogriff",
+  "name": "Hippogriff",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:unaligned",
+  "ac": 11,
+  "hp": {
+    "average": 19,
+    "formula": "3d10 + 3"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 8,
+    "ability:con": 13,
+    "ability:dex": 13,
+    "ability:int": 2,
+    "ability:str": 17,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 5
+  },
+  "passivePerception": 15,
+  "xp": 200,
+  "cr": 1,
+  "blocks": [
+    {
+      "name": "Keen Sight",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hippogriff has advantage on Wisdom (Perception) checks that rely on sight.",
+        "plain": "The hippogriff has advantage on Wisdom (Perception) checks that rely on sight.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The hippogriff makes two attacks: one with its beak and one with its claws.",
+        "plain": "The hippogriff makes two attacks: one with its beak and one with its claws.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Beak",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 8 (1d10 + 3) piercing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 8 (1d10 + 3) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claws",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 10 (2d6 + 3) slashing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

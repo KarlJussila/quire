@@ -1,0 +1,24 @@
+{
+  "id": "feature:warlock/voice-of-the-chain-master",
+  "name": "Voice of the Chain Master",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Pact of the Chain feature_\n\nYou can communicate telepathically with your familiar and perceive through your familiar's senses as long as you are on the same plane of existence. Additionally, while perceiving through your familiar's senses, you can also speak through your familiar in your own voice, even if your familiar is normally incapable of speech.",
+    "plain": "Prerequisite: Pact of the Chain feature\n\nYou can communicate telepathically with your familiar and perceive through your familiar's senses as long as you are on the same plane of existence. Additionally, while perceiving through your familiar's senses, you can also speak through your familiar in your own voice, even if your familiar is normally incapable of speech.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "communication",
+      "name": "Share the familiar’s senses and the warlock’s voice through it while both are on the same plane."
+    }
+  ],
+  "requires": {
+    "has": "feature:warlock/pact-of-the-chain"
+  }
+}

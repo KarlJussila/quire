@@ -1,0 +1,15 @@
+{
+  "id": "item:dragon-scale-mail@2024",
+  "name": "Dragon Scale Mail",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this armor, you gain a +1 bonus to Armor Class, you have Advantage on saving throws against the breath weapons of Dragons, and you have Resistance to one damage type determined by the kind of dragon that provided the scales (see the table).\n\nAdditionally, you can focus your senses as a Magic action to discern the distance and direction to the closest dragon within 30 miles of yourself that is of the same type as the armor. This action can't be used again until the next dawn.\n\n| Dragon   | Resistance   |\n|----------|--------------|\n| Black    | Acid         |\n| Blue     | Lightning    |\n| Brass    | Fire         |\n| Bronze   | Lightning    |\n| Copper   | Acid         |\n| Gold     | Fire         |\n| Green    | Poison       |\n| Red      | Fire         |\n| Silver   | Cold         |\n| White    | Cold         |",
+    "plain": "While wearing this armor, you gain a +1 bonus to Armor Class, you have Advantage on saving throws against the breath weapons of Dragons, and you have Resistance to one damage type determined by the kind of dragon that provided the scales (see the table).\n\nAdditionally, you can focus your senses as a Magic action to discern the distance and direction to the closest dragon within 30 miles of yourself that is of the same type as the armor. This action can't be used again until the next dawn.\n\n| Dragon   | Resistance   |\n|----------|--------------|\n| Black    | Acid         |\n| Blue     | Lightning    |\n| Brass    | Fire         |\n| Bronze   | Lightning    |\n| Copper   | Acid         |\n| Gold     | Fire         |\n| Green    | Poison       |\n| Red      | Fire         |\n| Silver   | Cold         |\n| White    | Cold         |",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:very-rare",
+  "attunement": true
+}

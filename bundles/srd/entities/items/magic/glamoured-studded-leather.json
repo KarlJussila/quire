@@ -1,0 +1,38 @@
+{
+  "id": "item:glamoured-studded-leather",
+  "name": "Glamoured Studded Leather",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing this armor, you gain a +1 bonus to AC. You can also use a bonus action to speak the armor's command word and cause the armor to assume the appearance of a normal set of clothing or some other kind of armor. You decide what it looks like, including color, style, and accessories, but the armor retains its normal bulk and weight. The illusory appearance lasts until you use this property again or remove the armor.",
+    "plain": "While wearing this armor, you gain a +1 bonus to AC. You can also use a bonus action to speak the armor's command word and cause the armor to assume the appearance of a normal set of clothing or some other kind of armor. You decide what it looks like, including color, style, and accessories, but the armor retains its normal bulk and weight. The illusory appearance lasts until you use this property again or remove the armor.",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:rare",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "The schema cannot store the chosen illusory appearance or its appearance details, and it has no command-word requirement for the Bonus Action that changes it."
+    }
+  ],
+  "base": "item:studded-leather"
+}

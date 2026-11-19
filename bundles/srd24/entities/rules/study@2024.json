@@ -1,0 +1,34 @@
+{
+  "id": "rule:study@2024",
+  "name": "Study",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you take the Study action, you make an Intelligence check to study your memory, a book, a clue, or another source of knowledge and call to mind an important piece of information about it.\n\nThe table suggests which skills are applicable to various areas of knowledge.\n\n| Skill         | Areas                                                                                                                                                               |\n|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| Arcana        | Spells, magic items, eldritch symbols, magical traditions, planes of existence, and certain creatures (Aberrations, Constructs, Elementals, Fey, and Monstrosities) |\n| History       | Historic events and people, ancient civilizations, wars, and certain creatures (Giants and Humanoids)                                                               |\n| Investigation | Traps, ciphers, riddles, and gadgetry                                                                                                                               |\n| Nature        | Terrain, flora, weather, and certain creatures (Beasts, Dragons, Oozes, and Plants)                                                                                 |\n| Religion      | Deities, religious hierarchies and rites, holy symbols, cults, and certain crea tures (Celestials, Fiends, and Undead)                                              |",
+    "plain": "When you take the Study action, you make an Intelligence check to study your memory, a book, a clue, or another source of knowledge and call to mind an important piece of information about it.\n\nThe table suggests which skills are applicable to various areas of knowledge.\n\nSkill\tAreas\nArcana\tSpells, magic items, eldritch symbols, magical traditions, planes of existence, and certain creatures (Aberrations, Constructs, Elementals, Fey, and Monstrosities)\nHistory\tHistoric events and people, ancient civilizations, wars, and certain creatures (Giants and Humanoids)\nInvestigation\tTraps, ciphers, riddles, and gadgetry\nNature\tTerrain, flora, weather, and certain creatures (Beasts, Dragons, Oozes, and Plants)\nReligion\tDeities, religious hierarchies and rites, holy symbols, cults, and certain crea tures (Celestials, Fiends, and Undead)",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "study",
+      "action": "action:study",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Make an Intelligence check: Arcana, History, Investigation, Nature, or Religion, by the area of knowledge."
+          }
+        }
+      ]
+    }
+  ]
+}

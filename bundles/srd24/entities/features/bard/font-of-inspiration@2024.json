@@ -1,0 +1,32 @@
+{
+  "id": "feature:bard/font-of-inspiration@2024",
+  "name": "Level 5: Font of Inspiration",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You now regain all your expended uses of Bardic Inspiration when you finish a Short or Long Rest.\n\nIn addition, you can expend a spell slot (no action required) to regain one expended use of Bardic Inspiration.",
+    "plain": "You now regain all your expended uses of Bardic Inspiration when you finish a Short or Long Rest.\n\nIn addition, you can expend a spell slot (no action required) to regain one expended use of Bardic Inspiration.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "font-of-inspiration",
+      "name": "Font of Inspiration",
+      "cost": [
+        {
+          "resource": "spell-slots"
+        }
+      ],
+      "outcomes": [
+        {
+          "pool": {
+            "resource": "bardic-inspiration",
+            "add": 1
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

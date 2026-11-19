@@ -1,0 +1,115 @@
+{
+  "id": "creature:hydra@2024",
+  "name": "Hydra",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:unaligned",
+  "ac": 15,
+  "hp": {
+    "average": 184,
+    "formula": "16d12 + 80"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 20,
+    "ability:dex": 12,
+    "ability:int": 2,
+    "ability:str": 20,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 6
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 16,
+  "xp": 3900,
+  "proficiencyBonus": 3,
+  "initiative": 4,
+  "habitat": [
+    "Coastal",
+    "Swamp"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 8,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:blinded",
+        "condition:charmed",
+        "condition:deafened",
+        "condition:frightened",
+        "condition:stunned",
+        "condition:unconscious"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Hold Breath",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hydra can hold its breath for 1 hour.",
+        "plain": "The hydra can hold its breath for 1 hour.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiple Heads",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hydra has five heads. Whenever the hydra takes 25 damage or more on a single turn, one of its heads dies. The hydra dies if all its heads are dead. At the end of each of its turns when it has at least one living head, the hydra grows two heads for each of its heads that died since its last turn, unless it has taken Fire damage since its last turn. The hydra regains 20 Hit Points when it grows new heads.",
+        "plain": "The hydra has five heads. Whenever the hydra takes 25 damage or more on a single turn, one of its heads dies. The hydra dies if all its heads are dead. At the end of each of its turns when it has at least one living head, the hydra grows two heads for each of its heads that died since its last turn, unless it has taken Fire damage since its last turn. The hydra regains 20 Hit Points when it grows new heads.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Reactive Heads",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "For each head the hydra has beyond one, it gets an extra Reaction that can be used only for Opportunity Attacks.",
+        "plain": "For each head the hydra has beyond one, it gets an extra Reaction that can be used only for Opportunity Attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The hydra makes as many Bite attacks as it has heads.",
+        "plain": "The hydra makes as many Bite attacks as it has heads.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +8, reach 10 ft. _Hit:_ 10 (1d10 + 5) Piercing damage.",
+        "plain": "Melee Attack Roll: +8, reach 10 ft. Hit: 10 (1d10 + 5) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

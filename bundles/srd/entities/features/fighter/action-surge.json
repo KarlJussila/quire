@@ -1,0 +1,50 @@
+{
+  "id": "feature:fighter/action-surge",
+  "name": "Action Surge",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.\n\nOnce you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn.",
+    "plain": "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.\n\nOnce you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "action-surge",
+      "name": "Action Surge",
+      "uses": {
+        "max": {
+          "byLevel": {
+            "2": 1,
+            "17": 2
+          }
+        },
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:short"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "On your turn, take one additional action on top of your regular action and a possible bonus action.",
+            "gap": {
+              "category": "activity",
+              "name": "extra action"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

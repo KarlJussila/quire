@@ -1,0 +1,58 @@
+{
+  "id": "table:travel-pace",
+  "name": "Travel Pace",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "pace",
+      "name": "Pace"
+    },
+    {
+      "key": "distance-traveled-per-minute",
+      "name": "Distance Traveled per Minute"
+    },
+    {
+      "key": "hour",
+      "name": "...Hour"
+    },
+    {
+      "key": "day",
+      "name": "...Day"
+    },
+    {
+      "key": "effect",
+      "name": "Effect"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "pace": "Fast",
+        "distance-traveled-per-minute": "400 feet",
+        "hour": "4 miles",
+        "day": "30 miles",
+        "effect": "-5 penalty to passive Wisdom (Perception) scores"
+      }
+    },
+    {
+      "cells": {
+        "pace": "Normal",
+        "distance-traveled-per-minute": "300 feet",
+        "hour": "3 miles",
+        "day": "24 miles",
+        "effect": "—"
+      }
+    },
+    {
+      "cells": {
+        "pace": "Slow",
+        "distance-traveled-per-minute": "200 feet",
+        "hour": "2 miles",
+        "day": "18 miles",
+        "effect": "Able to use stealth"
+      }
+    }
+  ]
+}

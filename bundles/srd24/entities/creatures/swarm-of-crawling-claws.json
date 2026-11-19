@@ -1,0 +1,108 @@
+{
+  "id": "creature:swarm-of-crawling-claws@2024",
+  "name": "Swarm of Crawling Claws",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "swarm": "size:tiny",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:neutral-evil",
+  "ac": 12,
+  "hp": {
+    "average": 49,
+    "formula": "11d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:climb": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 4,
+    "ability:con": 11,
+    "ability:dex": 14,
+    "ability:int": 5,
+    "ability:str": 14,
+    "ability:wis": 10
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    }
+  },
+  "passivePerception": 10,
+  "xp": 700,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Any"
+  ],
+  "cr": 3,
+  "languages": [
+    {
+      "language": "language:common",
+      "understandsOnly": true
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:necrotic",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:exhaustion",
+        "condition:frightened",
+        "condition:grappled",
+        "condition:incapacitated",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:poisoned",
+        "condition:prone",
+        "condition:restrained",
+        "condition:stunned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Swarm",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny creature. The swarm can't regain Hit Points or gain Temporary Hit Points.",
+        "plain": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny creature. The swarm can't regain Hit Points or gain Temporary Hit Points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Swarm of Grasping Hands",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 20 (4d8 + 2) Necrotic damage, or 11 (2d8 + 2) Necrotic damage if the swarm is Bloodied. If the target is a Medium or smaller creature, it has the Prone condition.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 20 (4d8 + 2) Necrotic damage, or 11 (2d8 + 2) Necrotic damage if the swarm is Bloodied. If the target is a Medium or smaller creature, it has the Prone condition.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

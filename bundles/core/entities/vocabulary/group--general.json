@@ -1,0 +1,7 @@
+{
+  "id": "group:general",
+  "name": "General Feat",
+  "source": {
+    "book": "core"
+  }
+}

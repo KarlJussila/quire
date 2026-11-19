@@ -1,0 +1,7 @@
+{
+  "id": "environment:sunlight",
+  "name": "Sunlight",
+  "source": {
+    "book": "core"
+  }
+}

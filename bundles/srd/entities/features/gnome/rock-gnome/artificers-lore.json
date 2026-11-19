@@ -1,0 +1,12 @@
+{
+  "id": "feature:gnome/rock-gnome/artificers-lore",
+  "name": "Artificer’s Lore",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply.",
+    "plain": "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply.",
+    "wording": "srd"
+  }
+}

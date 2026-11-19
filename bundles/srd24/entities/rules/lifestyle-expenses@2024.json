@@ -1,0 +1,18 @@
+{
+  "id": "rule:lifestyle-expenses@2024",
+  "name": "Lifestyle Expenses",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Lifestyle expenses summarize the cost of living in a fantasy world. They cover lodging, food, equipment maintenance, and other necessities.\n\nAt the start of each week or month (GM's choice), choose a lifestyle below — Wretched, Squalid, Poor, Modest, Comfortable, Wealthy, or Aristocratic — and pay the price to sustain that lifestyle.\n\nLifestyles have no inherent consequences, but the GM might take them into account when determining risks or how others perceive your character.\n\n## Wretched\n\n**Cost:** Free\n\nYou survive via chance and charity. You're often exposed to natural dangers as a result of sleeping outside.\n\n## Squalid\n\n**Cost:** 1 SP per Day\n\nYou spend the bare minimum for your necessities. You might be exposed to unhealthy conditions and opportunistic criminals.\n\n## Poor\n\n**Cost:** 2 SP per Day\n\nYou spend frugally for your necessities.\n\n## Modest\n\n**Cost:** 1 GP per Day\n\nYou support yourself at an average level.\n\n## Comfortable\n\n**Cost:** 2 GP per Day\n\nYou spend modestly for your necessities and enjoy a few luxuries.\n\n## Wealthy\n\n**Cost:** 4 GP per Day\n\nYou're accustomed to the finer things in life and might have servants.\n\n## Aristocratic\n\n**Cost:** 10 GP per Day\n\nYou pay for the best and might have a staff that supports your lifestyle. Others notice your wealth and might encourage you to share it, either legally or otherwise.",
+    "plain": "Lifestyle expenses summarize the cost of living in a fantasy world. They cover lodging, food, equipment maintenance, and other necessities.\n\nAt the start of each week or month (GM's choice), choose a lifestyle below — Wretched, Squalid, Poor, Modest, Comfortable, Wealthy, or Aristocratic — and pay the price to sustain that lifestyle.\n\nLifestyles have no inherent consequences, but the GM might take them into account when determining risks or how others perceive your character.\n\n## Wretched\n\nCost: Free\n\nYou survive via chance and charity. You're often exposed to natural dangers as a result of sleeping outside.\n\n## Squalid\n\nCost: 1 SP per Day\n\nYou spend the bare minimum for your necessities. You might be exposed to unhealthy conditions and opportunistic criminals.\n\n## Poor\n\nCost: 2 SP per Day\n\nYou spend frugally for your necessities.\n\n## Modest\n\nCost: 1 GP per Day\n\nYou support yourself at an average level.\n\n## Comfortable\n\nCost: 2 GP per Day\n\nYou spend modestly for your necessities and enjoy a few luxuries.\n\n## Wealthy\n\nCost: 4 GP per Day\n\nYou're accustomed to the finer things in life and might have servants.\n\n## Aristocratic\n\nCost: 10 GP per Day\n\nYou pay for the best and might have a staff that supports your lifestyle. Others notice your wealth and might encourage you to share it, either legally or otherwise.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "item:serpent-venom",
+  "name": "Serpent Venom",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This poison must be harvested from a dead or Incapacitated giant poisonous snake. A creature subjected to this poison must succeed on a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one.",
+    "plain": "This poison must be harvested from a dead or Incapacitated giant poisonous snake. A creature subjected to this poison must succeed on a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one.",
+    "wording": "srd"
+  },
+  "group": "group:poison",
+  "cost": {
+    "amount": 200,
+    "currency": "currency:gp"
+  },
+  "weight": 0.5
+}

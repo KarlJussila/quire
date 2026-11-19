@@ -1,0 +1,34 @@
+{
+  "id": "feature:ranger/vanish",
+  "name": "Vanish",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail.",
+    "plain": "Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "vanish-hide",
+      "name": "Vanish",
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 14
+      },
+      "action": "action:hide",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Protection from nonmagical tracking unless you choose to leave a trail is not encoded."
+    }
+  ]
+}

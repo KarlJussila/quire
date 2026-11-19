@@ -1,0 +1,71 @@
+{
+  "id": "feature:colossus-slayer",
+  "name": "Colossus Slayer",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it's below its hit point maximum. You can deal this extra damage only once per turn.",
+    "plain": "Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it's below its hit point maximum. You can deal this extra damage only once per turn.",
+    "wording": "srd"
+  },
+  "effects": [],
+  "activities": [
+    {
+      "key": "colossus-slayer",
+      "name": "Colossus Slayer",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "weapon"
+          }
+        },
+        "when": {
+          "creature": "subject",
+          "where": {
+            "not": {
+              "compare": "hp.current",
+              "atLeast": "hp.max"
+            }
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "1d8",
+            "type": {
+              "of": "attack"
+            }
+          },
+          "to": "subject"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": {
+                "pool": "any"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": []
+}

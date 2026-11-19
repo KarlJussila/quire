@@ -1,0 +1,65 @@
+{
+  "id": "creature:plesiosaurus",
+  "name": "Plesiosaurus",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 68,
+    "formula": "8d10 + 24"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 16,
+    "ability:dex": 15,
+    "ability:int": 2,
+    "ability:str": 18,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 3,
+    "skill:stealth": 4
+  },
+  "passivePerception": 13,
+  "xp": 450,
+  "cr": 2,
+  "blocks": [
+    {
+      "name": "Hold Breath",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The plesiosaurus can hold its breath for 1 hour.",
+        "plain": "The plesiosaurus can hold its breath for 1 hour.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 10 ft., one target. _Hit:_ 14 (3d6 + 4) piercing damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 10 ft., one target. Hit: 14 (3d6 + 4) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

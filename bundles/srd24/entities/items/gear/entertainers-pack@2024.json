@@ -1,0 +1,60 @@
+{
+  "id": "item:entertainers-pack@2024",
+  "name": "Entertainer's Pack",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "An Entertainer's Pack contains the following items: Backpack, Bedroll, Bell, Bullseye Lantern, 3 Costumes, Mirror, 8 flasks of Oil, 9 days of Rations, Tinderbox, and Waterskin.",
+    "plain": "An Entertainer's Pack contains the following items: Backpack, Bedroll, Bell, Bullseye Lantern, 3 Costumes, Mirror, 8 flasks of Oil, 9 days of Rations, Tinderbox, and Waterskin.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 40,
+    "currency": "currency:gp"
+  },
+  "weight": 58.5,
+  "contents": [
+    {
+      "item": "item:backpack",
+      "quantity": 1
+    },
+    {
+      "item": "item:bedroll",
+      "quantity": 1
+    },
+    {
+      "item": "item:bell",
+      "quantity": 1
+    },
+    {
+      "item": "item:lantern-bullseye",
+      "quantity": 1
+    },
+    {
+      "item": "item:costume",
+      "quantity": 3
+    },
+    {
+      "item": "item:mirror",
+      "quantity": 1
+    },
+    {
+      "item": "item:oil",
+      "quantity": 8
+    },
+    {
+      "item": "item:rations",
+      "quantity": 9
+    },
+    {
+      "item": "item:tinderbox",
+      "quantity": 1
+    },
+    {
+      "item": "item:waterskin",
+      "quantity": 1
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "feature:ranger/fighting-style",
+  "name": "Fighting Style",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",
+    "plain": "At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",
+    "wording": "srd"
+  },
+  "group": "group:fighting-style-feature",
+  "features": [
+    {
+      "choose": {
+        "key": "fighting-style",
+        "name": "Fighting Style",
+        "from": [
+          {
+            "kind": "feature",
+            "where": {
+              "group": "group:fighting-style",
+              "for": "class:ranger"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

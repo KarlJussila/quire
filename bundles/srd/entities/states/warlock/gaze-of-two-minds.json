@@ -1,0 +1,18 @@
+{
+  "id": "state:warlock/gaze-of-two-minds",
+  "name": "Gaze of Two Minds",
+  "source": {
+    "book": "srd"
+  },
+  "sourceName": "connected creature",
+  "text": {
+    "plain": "A connection that records the linked creature as its source."
+  },
+  "ends": [
+    {
+      "event": "event:turn-end",
+      "subject": "self",
+      "next": true
+    }
+  ]
+}

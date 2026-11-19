@@ -1,0 +1,102 @@
+{
+  "id": "condition:exhaustion@2024",
+  "name": "Exhaustion",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you have the Exhaustion condition, you experience the following effects.\n\n_**Exhaustion Levels.**_ This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6.\n\n_**D20 Tests Affected.**_ When you make a D20 Test, the roll is reduced by 2 times your Exhaustion level.\n\n_**Speed Reduced.**_ Your Speed is reduced by a number of feet equal to 5 times your Exhaustion level.\n\n_**Removing Exhaustion Levels.**_ Finishing a Long Rest removes 1 of your Exhaustion levels. When your Exhaustion level reaches 0, the condition ends.",
+    "plain": "While you have the Exhaustion condition, you experience the following effects.\n\nExhaustion Levels. This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6.\n\nD20 Tests Affected. When you make a D20 Test, the roll is reduced by 2 times your Exhaustion level.\n\nSpeed Reduced. Your Speed is reduced by a number of feet equal to 5 times your Exhaustion level.\n\nRemoving Exhaustion Levels. Finishing a Long Rest removes 1 of your Exhaustion levels. When your Exhaustion level reaches 0, the condition ends.",
+    "wording": "srd"
+  },
+  "stacks": "levels",
+  "maxLevel": 6,
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": {
+            "times": -2,
+            "by": {
+              "stackLevel": "condition:exhaustion"
+            }
+          }
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:d20-test"
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "$where": true,
+          "speed": {
+            "$add": {
+              "times": -5,
+              "by": {
+                "stackLevel": "condition:exhaustion"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "triggered",
+      "when": {
+        "compare": {
+          "stackLevel": "condition:exhaustion"
+        },
+        "atLeast": 6
+      },
+      "on": [
+        {
+          "event": "event:state-applied",
+          "subject": "self",
+          "match": {
+            "state": "condition:exhaustion"
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "kill": {},
+            "to": "self"
+          }
+        ]
+      }
+    },
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:rest-finished",
+          "subject": "self",
+          "match": {
+            "rest": "rest:long"
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "endState": {
+              "state": "condition:exhaustion",
+              "levels": 1
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

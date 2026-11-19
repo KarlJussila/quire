@@ -1,0 +1,65 @@
+{
+  "id": "creature:hyena@2024",
+  "name": "Hyena",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 11,
+  "hp": {
+    "average": 5,
+    "formula": "1d8 + 1"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 12,
+    "ability:dex": 13,
+    "ability:int": 2,
+    "ability:str": 11,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 3
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 13,
+  "xp": 10,
+  "proficiencyBonus": 2,
+  "initiative": 1,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Pack Tactics",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hyena has Advantage on an attack roll against a creature if at least one of the hyena's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+        "plain": "The hyena has Advantage on an attack roll against a creature if at least one of the hyena's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +2, reach 5 ft. _Hit:_ 3 (1d6) Piercing damage.",
+        "plain": "Melee Attack Roll: +2, reach 5 ft. Hit: 3 (1d6) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

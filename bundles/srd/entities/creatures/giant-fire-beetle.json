@@ -1,0 +1,63 @@
+{
+  "id": "creature:giant-fire-beetle",
+  "name": "Giant Fire Beetle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 4,
+    "formula": "1d6 + 1"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 3,
+    "ability:con": 12,
+    "ability:dex": 10,
+    "ability:int": 1,
+    "ability:str": 8,
+    "ability:wis": 7
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    }
+  },
+  "passivePerception": 8,
+  "xp": 10,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Illumination",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The beetle sheds bright light in a 10-foot radius and dim light for an additional 10 feet.",
+        "plain": "The beetle sheds bright light in a 10-foot radius and dim light for an additional 10 feet.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +1 to hit, reach 5 ft., one target. _Hit:_ 2 (1d6 - 1) slashing damage.",
+        "plain": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 2 (1d6 - 1) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rule:damage@2024",
+  "name": "Damage",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Damage represents harm that causes a creature or an object to lose Hit Points.",
+    "plain": "Damage represents harm that causes a creature or an object to lose Hit Points.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

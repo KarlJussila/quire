@@ -1,0 +1,82 @@
+{
+  "id": "class:paladin",
+  "name": "Paladin",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a paladin, you gain the following class features.",
+    "plain": "As a paladin, you gain the following class features.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d10",
+  "multiclass": {
+    "requires": {
+      "all": [
+        {
+          "compare": "abilities.ability:str",
+          "atLeast": 13
+        },
+        {
+          "compare": "abilities.ability:cha",
+          "atLeast": 13
+        }
+      ]
+    },
+    "features": [
+      "feature:paladin/multiclass-proficiencies"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:paladin/divine-sense",
+      "feature:paladin/lay-on-hands"
+    ],
+    "10": [
+      "feature:paladin/aura-of-courage"
+    ],
+    "11": [
+      "feature:paladin/improved-divine-smite"
+    ],
+    "12": [
+      "feature:ability-score-improvement"
+    ],
+    "14": [
+      "feature:paladin/cleansing-touch"
+    ],
+    "16": [
+      "feature:ability-score-improvement"
+    ],
+    "19": [
+      "feature:ability-score-improvement"
+    ],
+    "2": [
+      "feature:paladin/divine-smite",
+      "feature:paladin/fighting-style",
+      "feature:paladin/spellcasting"
+    ],
+    "3": [
+      "feature:paladin/divine-health",
+      "feature:paladin/sacred-oath"
+    ],
+    "4": [
+      "feature:ability-score-improvement"
+    ],
+    "5": [
+      "feature:paladin/extra-attack"
+    ],
+    "6": [
+      "feature:paladin/aura-of-protection"
+    ],
+    "8": [
+      "feature:ability-score-improvement"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Sacred Oath"
+  },
+  "firstClass": [
+    "feature:paladin/proficiencies"
+  ]
+}

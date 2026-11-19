@@ -1,0 +1,81 @@
+{
+  "id": "feature:fighter/champion/survivor@2024",
+  "name": "Level 18: Survivor",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You attain the pinnacle of resilience in battle, giving you these benefits.\n\n_**Defy Death.**_ You have Advantage on Death Saving Throws. Moreover, when you roll 18-20 on a Death Saving Throw, you gain the benefit of rolling a 20 on it.\n\n_**Heroic Rally.**_ At the start of each of your turns, you regain Hit Points equal to 5 plus your Constitution modifier if you are Bloodied and have at least 1 Hit Point.",
+    "plain": "You attain the pinnacle of resilience in battle, giving you these benefits.\n\nDefy Death. You have Advantage on Death Saving Throws. Moreover, when you roll 18-20 on a Death Saving Throw, you gain the benefit of rolling a 20 on it.\n\nHeroic Rally. At the start of each of your turns, you regain Hit Points equal to 5 plus your Constitution modifier if you are Bloodied and have at least 1 Hit Point.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:death-save"
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "die": {
+          "$replace": 20
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:death-save",
+          "natural": {
+            "atLeast": 18
+          }
+        }
+      }
+    },
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:turn-start",
+        "subject": "self",
+        "when": {
+          "all": [
+            {
+              "compare": "hp.current",
+              "atMost": {
+                "times": "hp.max",
+                "by": 0.5
+              }
+            },
+            {
+              "compare": "hp.current",
+              "atLeast": 1
+            }
+          ]
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "heal": {
+              "amount": {
+                "sum": [
+                  5,
+                  "modifiers.ability:con"
+                ]
+              }
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

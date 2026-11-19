@@ -1,0 +1,15 @@
+{
+  "id": "state:total-cover@2024",
+  "name": "Total Cover",
+  "source": {
+    "book": "core"
+  },
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:be-targeted"
+      ]
+    }
+  ]
+}

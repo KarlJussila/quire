@@ -1,0 +1,184 @@
+{
+  "id": "feature:barbarian/brutal-strike@2024",
+  "name": "Level 9: Brutal Strike",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you use Reckless Attack, you can forgo any Advantage on one Strength-based attack roll of your choice on your turn. The chosen attack roll mustn't have Disadvantage. If the chosen attack roll hits, the target takes an extra 1d10 damage of the same type dealt by the weapon or Unarmed Strike, and you can cause one Brutal Strike effect of your choice. You have the following effect options.\n\n_**Forceful Blow.**_ The target is pushed 15 feet straight away from you. You can then move up to half your Speed straight toward the target without provoking Opportunity Attacks.\n\n_**Hamstring Blow.**_ The target's Speed is reduced by 15 feet until the start of your next turn. A target can be affected by only one Hamstring Blow at a time the most recent one.",
+    "plain": "If you use Reckless Attack, you can forgo any Advantage on one Strength-based attack roll of your choice on your turn. The chosen attack roll mustn't have Disadvantage. If the chosen attack roll hits, the target takes an extra 1d10 damage of the same type dealt by the weapon or Unarmed Strike, and you can cause one Brutal Strike effect of your choice. You have the following effect options.\n\nForceful Blow. The target is pushed 15 feet straight away from you. You can then move up to half your Speed straight toward the target without provoking Opportunity Attacks.\n\nHamstring Blow. The target's Speed is reduced by 15 feet until the start of your next turn. A target can be affected by only one Hamstring Blow at a time the most recent one.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "activities": [
+    {
+      "key": "brutal-strike",
+      "name": "Brutal Strike",
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self",
+        "subject": {
+          "pool": "any"
+        },
+        "match": {
+          "roll": "roll:attack",
+          "ability": "ability:str"
+        },
+        "when": {
+          "all": [
+            {
+              "happened": {
+                "event": "event:activity-used",
+                "by": "self",
+                "match": {
+                  "activity": "reckless-attack"
+                },
+                "since": "turn-start"
+              }
+            },
+            {
+              "not": {
+                "event": "event:roll-made",
+                "match": {
+                  "mode": "disadvantage"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "when": {
+        "turn": "self"
+      },
+      "cost": [
+        {
+          "forgo": "advantage"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "state:barbarian/brutal-strike@2024"
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "brutal-strike-hit",
+      "name": "Brutal Strike",
+      "standalone": false,
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any"
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true
+        }
+      },
+      "when": {
+        "has": "state:barbarian/brutal-strike@2024"
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "1d10",
+            "type": {
+              "of": "attack"
+            }
+          },
+          "to": "subject"
+        },
+        {
+          "choose": {
+            "key": "brutal-strike-effect",
+            "name": "Brutal Strike Effect",
+            "distinct": true,
+            "from": [
+              {
+                "name": "Forceful Blow",
+                "of": [
+                  {
+                    "move": {
+                      "kind": "push",
+                      "distance": 15,
+                      "toward": {
+                        "awayFrom": "self"
+                      }
+                    },
+                    "to": "subject"
+                  },
+                  {
+                    "move": {
+                      "kind": "move",
+                      "distance": {
+                        "divide": {
+                          "speed": "in-use"
+                        },
+                        "by": 2,
+                        "round": "down"
+                      },
+                      "toward": "subject",
+                      "provokes": false
+                    },
+                    "to": "self"
+                  }
+                ]
+              },
+              {
+                "name": "Hamstring Blow",
+                "of": [
+                  {
+                    "applyState": {
+                      "state": {
+                        "sourceName": "Hamstring Blow",
+                        "stacks": "no",
+                        "effects": [
+                          {
+                            "type": "change",
+                            "set": {
+                              "speeds": {
+                                "$where": true,
+                                "speed": {
+                                  "$subtract": 15
+                                }
+                              }
+                            }
+                          }
+                        ],
+                        "ends": [
+                          {
+                            "event": "event:turn-start",
+                            "subject": "source",
+                            "next": true
+                          }
+                        ]
+                      },
+                      "source": "self"
+                    },
+                    "to": "subject"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "state:warlock/pact-weapon",
+  "name": "Pact Weapon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Marks the weapon currently bonded by Pact of the Blade to the warlock who is the state source."
+  }
+}

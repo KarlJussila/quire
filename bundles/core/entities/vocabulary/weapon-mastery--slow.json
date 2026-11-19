@@ -1,0 +1,114 @@
+{
+  "id": "weapon-mastery:slow",
+  "name": "Slow",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",
+    "plain": "If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "item": {
+              "kind": "item",
+              "where": {
+                "match": {
+                  "weapon": {
+                    "mastery": "weapon-mastery:slow"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "when": {
+          "compare": "masteries.{attack.item}",
+          "equals": true
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "runs": [
+              {
+                "activity": "slow"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "slow",
+      "standalone": false,
+      "when": {
+        "all": [
+          {
+            "compare": {
+              "result": "weapon-damage"
+            },
+            "atLeast": 1
+          },
+          {
+            "creature": "target",
+            "where": {
+              "kind": "creature"
+            }
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "choose": {
+            "key": "slow",
+            "name": "Slow the Target",
+            "optional": true,
+            "from": [
+              {
+                "applyState": {
+                  "state": {
+                    "effects": [
+                      {
+                        "key": "mastery-slow",
+                        "type": "change",
+                        "set": {
+                          "speeds": {
+                            "$where": true,
+                            "speed": {
+                              "$subtract": 10
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "ends": [
+                      {
+                        "event": "event:turn-start",
+                        "subject": "source"
+                      }
+                    ]
+                  },
+                  "source": "self"
+                },
+                "to": "target"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

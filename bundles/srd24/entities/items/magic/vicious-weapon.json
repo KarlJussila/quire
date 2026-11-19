@@ -1,0 +1,14 @@
+{
+  "id": "item:vicious-weapon@2024",
+  "name": "Vicious Weapon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This magic weapon deals an extra 2d6 damage to any creature it hits. This extra damage is of the same type as the weapon's normal damage.",
+    "plain": "This magic weapon deals an extra 2d6 damage to any creature it hits. This extra damage is of the same type as the weapon's normal damage.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:rare"
+}

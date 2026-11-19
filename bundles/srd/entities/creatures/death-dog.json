@@ -1,0 +1,73 @@
+{
+  "id": "creature:death-dog",
+  "name": "Death Dog",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:neutral-evil",
+  "ac": 12,
+  "hp": {
+    "average": 39,
+    "formula": "6d8 + 12"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 14,
+    "ability:dex": 14,
+    "ability:int": 3,
+    "ability:str": 15,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:perception": 5,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 15,
+  "xp": 200,
+  "cr": 1,
+  "blocks": [
+    {
+      "name": "Two-Headed",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The dog has advantage on Wisdom (Perception) checks and on saving throws against being Blinded, Charmed, Deafened, Frightened, Stunned, or knocked Unconscious.",
+        "plain": "The dog has advantage on Wisdom (Perception) checks and on saving throws against being Blinded, Charmed, Deafened, Frightened, Stunned, or knocked Unconscious.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dog makes two bite attacks.",
+        "plain": "The dog makes two bite attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 5 (1d6 + 2) piercing damage. If the target is a creature, it must succeed on a DC 12 Constitution saving throw against disease or become Poisoned until the disease is cured. Every 24 hours that elapse, the creature must repeat the saving throw, reducing its hit point maximum by 5 (1d10) on a failure. This reduction lasts until the disease is cured. The creature dies if the disease reduces its hit point maximum to 0.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage. If the target is a creature, it must succeed on a DC 12 Constitution saving throw against disease or become Poisoned until the disease is cured. Every 24 hours that elapse, the creature must repeat the saving throw, reducing its hit point maximum by 5 (1d10) on a failure. This reduction lasts until the disease is cured. The creature dies if the disease reduces its hit point maximum to 0.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

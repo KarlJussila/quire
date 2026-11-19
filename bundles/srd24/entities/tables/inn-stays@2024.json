@@ -1,0 +1,55 @@
+{
+  "id": "table:inn-stays@2024",
+  "name": "Inn Stays",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "inn-stay-per-day",
+      "name": "Inn Stay per Day"
+    },
+    {
+      "key": "cost",
+      "name": "Cost"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "inn-stay-per-day": "Squalid",
+        "cost": "7 CP"
+      }
+    },
+    {
+      "cells": {
+        "inn-stay-per-day": "Poor",
+        "cost": "1 SP"
+      }
+    },
+    {
+      "cells": {
+        "inn-stay-per-day": "Modest",
+        "cost": "5 SP"
+      }
+    },
+    {
+      "cells": {
+        "inn-stay-per-day": "Comfortable",
+        "cost": "8 SP"
+      }
+    },
+    {
+      "cells": {
+        "inn-stay-per-day": "Wealthy",
+        "cost": "2 GP"
+      }
+    },
+    {
+      "cells": {
+        "inn-stay-per-day": "Aristocratic",
+        "cost": "4 GP"
+      }
+    }
+  ]
+}

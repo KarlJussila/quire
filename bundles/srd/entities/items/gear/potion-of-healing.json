@@ -1,0 +1,50 @@
+{
+  "id": "item:potion-of-healing",
+  "name": "Potion of Healing",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You regain hit points when you drink this potion. The number of hit points depends on the potion's rarity, as shown in the Potions of Healing table.\n\nWhatever its potency, the potion's red liquid glimmers when agitated.",
+    "plain": "You regain hit points when you drink this potion. The number of hit points depends on the potion's rarity, as shown in the Potions of Healing table.\n\nWhatever its potency, the potion's red liquid glimmers when agitated.",
+    "wording": "srd"
+  },
+  "group": "group:potion",
+  "cost": {
+    "amount": 50,
+    "currency": "currency:gp"
+  },
+  "weight": 0.5,
+  "activities": [
+    {
+      "key": "drink",
+      "name": "Drink or Administer",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "target": {
+        "who": {
+          "pool": "any",
+          "includeSelf": true
+        }
+      },
+      "outcomes": [
+        {
+          "heal": {
+            "amount": "2d4+2"
+          }
+        },
+        {
+          "destroy": {},
+          "to": "this"
+        }
+      ]
+    }
+  ],
+  "rarity": "rarity:common"
+}

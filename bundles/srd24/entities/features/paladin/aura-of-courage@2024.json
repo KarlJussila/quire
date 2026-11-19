@@ -1,0 +1,47 @@
+{
+  "id": "feature:paladin/aura-of-courage@2024",
+  "name": "Level 10: Aura of Courage",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You and your allies have Immunity to the Frightened condition while in your Aura of Protection. If a Frightened ally enters the aura, that condition has no effect on that ally while there.",
+    "plain": "You and your allies have Immunity to the Frightened condition while in your Aura of Protection. If a Frightened ally enters the aura, that condition has no effect on that ally while there.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "zone",
+      "zone": {
+        "anchor": "self",
+        "area": {
+          "shape": "area-shape:emanation",
+          "size": {
+            "byLevel": {
+              "6": 10,
+              "18": 30
+            },
+            "of": "class:paladin"
+          }
+        },
+        "affects": {
+          "pool": "ally",
+          "includeSelf": true
+        },
+        "effects": [
+          {
+            "type": "defense",
+            "immune": [
+              "condition:frightened"
+            ]
+          }
+        ]
+      },
+      "when": {
+        "not": {
+          "has": "condition:incapacitated"
+        }
+      }
+    }
+  ]
+}

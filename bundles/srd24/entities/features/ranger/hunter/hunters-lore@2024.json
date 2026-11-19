@@ -1,0 +1,18 @@
+{
+  "id": "feature:ranger/hunter/hunters-lore@2024",
+  "name": "Level 3: Hunter's Lore",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can call on the forces of nature to reveal certain strengths and weaknesses of your prey. While a creature is marked by your Hunter's Mark, you know whether that creature has any Immunities, Resistances, or Vulnerabilities, and if the creature has any, you know what they are.",
+    "plain": "You can call on the forces of nature to reveal certain strengths and weaknesses of your prey. While a creature is marked by your Hunter's Mark, you know whether that creature has any Immunities, Resistances, or Vulnerabilities, and if the creature has any, you know what they are.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "While a creature has a Hunter’s Mark state from you, disclose its actual Immunities, Resistances, and Vulnerabilities to you."
+    }
+  ]
+}

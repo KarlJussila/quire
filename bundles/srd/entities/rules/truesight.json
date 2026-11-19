@@ -1,0 +1,37 @@
+{
+  "id": "rule:truesight",
+  "name": "Truesight",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A creature with truesight can, out to a specific range, see in normal and magical darkness, see Invisible creatures and objects, automatically detect visual illusions and succeed on saving throws against them, and perceives the original form of a shapechanger or a creature that is transformed by magic. Furthermore, the creature can see into the Ethereal Plane.",
+    "plain": "A creature with truesight can, out to a specific range, see in normal and magical darkness, see Invisible creatures and objects, automatically detect visual illusions and succeed on saving throws against them, and perceives the original form of a shapechanger or a creature that is transformed by magic. Furthermore, the creature can see into the Ethereal Plane.",
+    "wording": "srd"
+  },
+  "group": "group:exploration",
+  "appliesTo": {
+    "pool": "any",
+    "where": {
+      "match": {
+        "senses": {
+          "sense:truesight": true
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "type": "see",
+      "range": "senses.sense:truesight.range",
+      "darkness": "bright",
+      "magicalDarkness": true,
+      "invisible": true,
+      "illusions": true,
+      "transformations": true,
+      "planes": [
+        "plane:ethereal"
+      ]
+    }
+  ]
+}

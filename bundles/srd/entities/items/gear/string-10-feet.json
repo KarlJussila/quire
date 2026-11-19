@@ -1,0 +1,13 @@
+{
+  "id": "item:string-10-feet",
+  "name": "String (10 feet)",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "weight": 0.0
+}

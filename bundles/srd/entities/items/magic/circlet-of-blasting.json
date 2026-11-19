@@ -1,0 +1,15 @@
+{
+  "id": "item:circlet-of-blasting",
+  "name": "Circlet of Blasting",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing this circlet, you can use an action to cast the Scorching Ray spell with it. When you make the spell's attacks, you do so with an attack bonus of +5. The circlet can't be used this way again until the next dawn.",
+    "plain": "While wearing this circlet, you can use an action to cast the Scorching Ray spell with it. When you make the spell's attacks, you do so with an attack bonus of +5. The circlet can't be used this way again until the next dawn.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "weight": 0.0
+}

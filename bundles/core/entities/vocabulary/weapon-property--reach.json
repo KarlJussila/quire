@@ -1,0 +1,7 @@
+{
+  "id": "weapon-property:reach",
+  "name": "Reach",
+  "source": {
+    "book": "core"
+  }
+}

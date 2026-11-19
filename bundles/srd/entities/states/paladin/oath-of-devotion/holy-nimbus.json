@@ -1,0 +1,91 @@
+{
+  "id": "state:paladin/oath-of-devotion/holy-nimbus",
+  "name": "Holy Nimbus",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 20th level, as an action, you can emanate an aura of sunlight. For 1 minute, bright light shines from you in a 30-foot radius, and dim light shines 30 feet beyond that.\n\nWhenever an enemy creature starts its turn in the bright light, the creature takes 10 radiant damage.\n\nIn addition, for the duration, you have advantage on saving throws against spells cast by fiends or undead.\n\nOnce you use this feature, you can't use it again until you finish a long rest.",
+    "plain": "At 20th level, as an action, you can emanate an aura of sunlight. For 1 minute, bright light shines from you in a 30-foot radius, and dim light shines 30 feet beyond that.\n\nWhenever an enemy creature starts its turn in the bright light, the creature takes 10 radiant damage.\n\nIn addition, for the duration, you have advantage on saving throws against spells cast by fiends or undead.\n\nOnce you use this feature, you can't use it again until you finish a long rest.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "light",
+      "bright": 30,
+      "dim": 30
+    },
+    {
+      "type": "zone",
+      "zone": {
+        "area": {
+          "shape": "area-shape:emanation",
+          "size": 30
+        },
+        "anchor": "self",
+        "affects": {
+          "pool": "enemy"
+        },
+        "on": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": {
+                "pool": "enemy",
+                "where": {
+                  "within": 30,
+                  "of": "source"
+                }
+              }
+            },
+            "step": {
+              "outcomes": [
+                {
+                  "damage": {
+                    "amount": 10,
+                    "type": "damage-type:radiant"
+                  },
+                  "to": "subject"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:save",
+              "against": {
+                "sourceType": "source-type:spell"
+              }
+            }
+          },
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "against": {
+                "creatureType": [
+                  "creature-type:fiend",
+                  "creature-type:undead"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "duration": {
+    "amount": 1,
+    "unit": "minute"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "creature:reef-shark@2024",
+  "name": "Reef Shark",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "hp": {
+    "average": 22,
+    "formula": "4d8 + 4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 5
+    },
+    "movement-mode:swim": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 4,
+    "ability:con": 13,
+    "ability:dex": 15,
+    "ability:int": 1,
+    "ability:str": 14,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 2
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    }
+  },
+  "passivePerception": 12,
+  "xp": 100,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "cr": 0.5,
+  "blocks": [
+    {
+      "name": "Pack Tactics",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The shark has Advantage on an attack roll against a creature if at least one of the shark's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+        "plain": "The shark has Advantage on an attack roll against a creature if at least one of the shark's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Water Breathing",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The shark can breathe only underwater.",
+        "plain": "The shark can breathe only underwater.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 7 (2d4 + 2) Piercing damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

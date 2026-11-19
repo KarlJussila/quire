@@ -1,0 +1,89 @@
+{
+  "id": "creature:swarm-of-venomous-snakes@2024",
+  "name": "Swarm of Venomous Snakes",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "swarm": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 14,
+  "hp": {
+    "average": 36,
+    "formula": "8d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:swim": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 3,
+    "ability:con": 11,
+    "ability:dex": 18,
+    "ability:int": 1,
+    "ability:str": 8,
+    "ability:wis": 10
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    }
+  },
+  "passivePerception": 10,
+  "xp": 450,
+  "proficiencyBonus": 2,
+  "initiative": 4,
+  "cr": 2,
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened",
+        "condition:grappled",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:prone",
+        "condition:restrained",
+        "condition:stunned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Swarm",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny snake. The swarm can't regain Hit Points or gain Temporary Hit Points.",
+        "plain": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny snake. The swarm can't regain Hit Points or gain Temporary Hit Points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bites",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 5 ft. _Hit:_ 8 (1d8 + 4) Piercing damage — or 6 (1d4 + 4) Piercing damage if the swarm is Bloodied — plus 10 (3d6) Poison damage.",
+        "plain": "Melee Attack Roll: +6, reach 5 ft. Hit: 8 (1d8 + 4) Piercing damage — or 6 (1d4 + 4) Piercing damage if the swarm is Bloodied — plus 10 (3d6) Poison damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

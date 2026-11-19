@@ -1,0 +1,18 @@
+{
+  "id": "item:robe@2024",
+  "name": "Robe",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Robe has vocational or ceremonial significance. Some events and locations admit only people wearing a Robe bearing certain colors or symbols.",
+    "plain": "A Robe has vocational or ceremonial significance. Some events and locations admit only people wearing a Robe bearing certain colors or symbols.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:gp"
+  },
+  "weight": 4.0
+}

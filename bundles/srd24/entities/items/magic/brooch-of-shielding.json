@@ -1,0 +1,33 @@
+{
+  "id": "item:brooch-of-shielding@2024",
+  "name": "Brooch of Shielding",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this brooch, you have Resistance to Force damage, and you have Immunity to damage from the Magic Missile spell.",
+    "plain": "While wearing this brooch, you have Resistance to Force damage, and you have Immunity to damage from the Magic Missile spell.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:force"
+      ],
+      "immune": [
+        "spell:magic-missile"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ]
+}

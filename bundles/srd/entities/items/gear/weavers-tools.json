@@ -1,0 +1,18 @@
+{
+  "id": "item:weavers-tools",
+  "name": "Weaver’s Tools",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Weaver‘s tools allow you to create cloth and tailor it into articles of clothing.\n\n***Components.*** Weaver’s tools include thread, needles, and scraps of cloth. You know how to work a loom, but such equipment is too large to transport.\n\n***Arcana, History.*** Your expertise lends you additional insight when examining cloth objects, including cloaks and robes.\n\n***Investigation.*** Using your knowledge of the process of creating cloth objects, you can spot clues and make deductions that others would overlook when you examine tapestries, upholstery, clothing, and other woven items.\n\n***Repair.*** As part of a short rest, you can repair a single damaged cloth object.\n\n***Craft Clothing.*** Assuming you have access to sufficient cloth and thread, you can create an outfit for a creature as part of a long rest.\n\n##### WEAVER’S TOOLS\n\n| Activity | DC |\n|---|---|\n| Repurpose cloth | 10 |\n| Mend a hole in a piece of cloth | 10 |\n| Tailor an outfit | 15 |",
+    "plain": "Weaver‘s tools allow you to create cloth and tailor it into articles of clothing.\n\nComponents. Weaver’s tools include thread, needles, and scraps of cloth. You know how to work a loom, but such equipment is too large to transport.\n\nArcana, History. Your expertise lends you additional insight when examining cloth objects, including cloaks and robes.\n\nInvestigation. Using your knowledge of the process of creating cloth objects, you can spot clues and make deductions that others would overlook when you examine tapestries, upholstery, clothing, and other woven items.\n\nRepair. As part of a short rest, you can repair a single damaged cloth object.\n\nCraft Clothing. Assuming you have access to sufficient cloth and thread, you can create an outfit for a creature as part of a long rest.\n\nWEAVER’S TOOLS\n\nActivity\tDC\n\nRepurpose cloth\t10\n\nMend a hole in a piece of cloth\t10\n\nTailor an outfit\t15",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:gp"
+  },
+  "weight": 5.0
+}

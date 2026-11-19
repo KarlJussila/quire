@@ -1,0 +1,135 @@
+{
+  "id": "creature:fire-elemental",
+  "name": "Fire Elemental",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:elemental",
+  "alignment": "alignment:neutral",
+  "ac": 13,
+  "hp": {
+    "average": 102,
+    "formula": "12d10 + 36"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 16,
+    "ability:dex": 17,
+    "ability:int": 6,
+    "ability:str": 10,
+    "ability:wis": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 1800,
+  "cr": 5,
+  "languages": [
+    {
+      "language": "language:ignan"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:exhaustion",
+        "condition:grappled",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:poisoned",
+        "condition:prone",
+        "condition:restrained",
+        "condition:unconscious"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Fire Form",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage. In addition, the elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 (1d10) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 5 (1d10) fire damage at the start of each of its turns.",
+        "plain": "The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage. In addition, the elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 (1d10) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 5 (1d10) fire damage at the start of each of its turns.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Illumination",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The elemental sheds bright light in a 30 foot radius and dim light in an additional 30 feet.",
+        "plain": "The elemental sheds bright light in a 30 foot radius and dim light in an additional 30 feet.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Water Susceptibility",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "For every 5 feet the elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage.",
+        "plain": "For every 5 feet the elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The elemental makes two touch attacks.",
+        "plain": "The elemental makes two touch attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Touch",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 10 (2d6 + 3) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 (1d10) fire damage at the start of each of its turns.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 (1d10) fire damage at the start of each of its turns.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

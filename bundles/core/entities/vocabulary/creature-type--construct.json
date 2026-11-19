@@ -1,0 +1,7 @@
+{
+  "id": "creature-type:construct",
+  "name": "Construct",
+  "source": {
+    "book": "core"
+  }
+}

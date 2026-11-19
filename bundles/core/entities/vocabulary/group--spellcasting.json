@@ -1,0 +1,7 @@
+{
+  "id": "group:spellcasting",
+  "name": "Spellcasting",
+  "source": {
+    "book": "core"
+  }
+}

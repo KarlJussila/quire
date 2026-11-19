@@ -1,0 +1,68 @@
+{
+  "id": "item:cloak-of-elvenkind@2024",
+  "name": "Cloak of Elvenkind",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you wear this cloak, Wisdom (Perception) checks made to perceive you have Disadvantage, and you have Advantage on Dexterity (Stealth) checks.",
+    "plain": "While you wear this cloak, Wisdom (Perception) checks made to perceive you have Disadvantage, and you have Advantage on Dexterity (Stealth) checks.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": {
+              "pool": "any"
+            },
+            "subject": "self",
+            "match": {
+              "roll": "roll:check",
+              "ability": "ability:wis",
+              "skill": "skill:perception"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check",
+              "ability": "ability:dex",
+              "skill": "skill:stealth"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "id": "creature:ancient-white-dragon@2024",
+  "name": "Ancient White Dragon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:gargantuan",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 20,
+  "hp": {
+    "average": 333,
+    "formula": "18d20 + 144"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:burrow": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 18,
+    "ability:con": 26,
+    "ability:dex": 10,
+    "ability:int": 10,
+    "ability:str": 26,
+    "ability:wis": 13
+  },
+  "saves": {
+    "ability:dex": 6,
+    "ability:wis": 7
+  },
+  "skills": {
+    "skill:perception": 13,
+    "skill:stealth": 6
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    },
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 23,
+  "xp": 25000,
+  "proficiencyBonus": 6,
+  "initiative": 12,
+  "habitat": [
+    "Arctic"
+  ],
+  "treasure": [
+    "Arcana"
+  ],
+  "cr": 20,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:cold"
+      ]
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Ice Walk",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, Difficult Terrain composed of ice or snow doesn't cost it extra movement.",
+        "plain": "The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, Difficult Terrain composed of ice or snow doesn't cost it extra movement.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Legendary Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "plain": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes three Rend attacks.",
+        "plain": "The dragon makes three Rend attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +14, reach 15 ft. _Hit:_ 17 (2d8 + 8) Slashing damage plus 7 (2d6) Cold damage.",
+        "plain": "Melee Attack Roll: +14, reach 15 ft. Hit: 17 (2d8 + 8) Slashing damage plus 7 (2d6) Cold damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Cold Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 22, each creature in a 90-foot Cone. _Failure:_ 63 (14d8) Cold damage. _Success:_ Half damage.",
+        "plain": "Constitution Saving Throw: DC 22, each creature in a 90-foot Cone. Failure: 63 (14d8) Cold damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Freezing Burst",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 20, each creature in a 30-foot-radius Sphere centered on a point the dragon can see within 120 feet. _Failure:_ 14 (4d6) Cold damage, and the target's Speed is 0 until the end of the target's next turn. _Failure or Success:_ The dragon can't take this action again until the start of its next turn.",
+        "plain": "Constitution Saving Throw: DC 20, each creature in a 30-foot-radius Sphere centered on a point the dragon can see within 120 feet. Failure: 14 (4d6) Cold damage, and the target's Speed is 0 until the end of the target's next turn. Failure or Success: The dragon can't take this action again until the start of its next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Frightful Presence",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon casts Fear, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 18). The dragon can't take this action again until the start of its next turn.",
+        "plain": "The dragon casts Fear, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 18). The dragon can't take this action again until the start of its next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pounce",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon moves up to half its Speed, and it makes one Rend attack.",
+        "plain": "The dragon moves up to half its Speed, and it makes one Rend attack.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "spell:spare-the-dying@2024",
+  "name": "Spare the Dying",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Choose a creature within range that has 0 Hit Points and isn't dead. The creature becomes Stable.\n\n_**Cantrip Upgrade.**_ The range doubles when you reach levels 5 (30 feet), 11 (60 feet), and 17 (120 feet).",
+    "plain": "Choose a creature within range that has 0 Hit Points and isn't dead. The creature becomes Stable.\n\nCantrip Upgrade. The range doubles when you reach levels 5 (30 feet), 11 (60 feet), and 17 (120 feet).",
+    "wording": "srd"
+  },
+  "level": 0,
+  "school": "spell-school:necromancy",
+  "lists": [
+    "class:cleric",
+    "class:druid"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 15
+      },
+      "duration": "instant"
+    }
+  ]
+}

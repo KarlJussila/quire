@@ -1,0 +1,11 @@
+{
+  "id": "skill:medicine",
+  "name": "Medicine",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:wis"
+}

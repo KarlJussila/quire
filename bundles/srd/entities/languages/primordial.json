@@ -1,0 +1,15 @@
+{
+  "id": "language:primordial",
+  "name": "Primordial",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "An exotic language, typically spoken by elementals, written in the Dwarvish script. It is a family of dialects — Auran, Aquan, Ignan, and Terran, one per elemental plane — whose speakers can understand one another.",
+    "plain": "An exotic language, typically spoken by elementals, written in the Dwarvish script. It is a family of dialects — Auran, Aquan, Ignan, and Terran, one per elemental plane — whose speakers can understand one another.",
+    "wording": "original"
+  },
+  "group": "group:exotic-language",
+  "script": "Dwarvish",
+  "speakers": "Elementals"
+}

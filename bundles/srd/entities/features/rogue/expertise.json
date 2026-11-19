@@ -1,0 +1,44 @@
+{
+  "id": "feature:rogue/expertise",
+  "name": "Expertise",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.\n\nAt 6th level, you can choose two more of your proficiencies (in skills or with thieves' tools) to gain this benefit.",
+    "plain": "At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.\n\nAt 6th level, you can choose two more of your proficiencies (in skills or with thieves' tools) to gain this benefit.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "level": "expertise",
+      "in": [
+        {
+          "choose": {
+            "key": "expertise",
+            "name": "Expertise",
+            "count": {
+              "byLevel": {
+                "1": 2,
+                "6": 4
+              },
+              "of": "class:rogue"
+            },
+            "from": [
+              {
+                "kind": "skill"
+              },
+              "item:thieves-tools"
+            ],
+            "where": {
+              "proficient": "candidate",
+              "level": "proficient"
+            },
+            "distinct": true
+          }
+        }
+      ]
+    }
+  ]
+}

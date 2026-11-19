@@ -1,0 +1,79 @@
+{
+  "id": "feature:paladin/oath-of-devotion/oath-spells@2024",
+  "name": "Level 3: Oath of Devotion Spells",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The magic of your oath ensures you always have certain spells ready; when you reach a Paladin level specified in the table, you thereafter always have the listed spells prepared.\n\n|   Paladin Level | Spells                                                 |\n|-----------------|--------------------------------------------------------|\n|               3 | Protection from Evil and Good, Shield of Faith |\n|               5 | Aid, Zone of Truth                             |\n|               9 | Beacon of Hope, Dispel Magic                   |\n|              13 | Freedom of Movement, Guardian of Faith         |\n|              17 | Commune, Flame Strike                          |",
+    "plain": "The magic of your oath ensures you always have certain spells ready; when you reach a Paladin level specified in the table, you thereafter always have the listed spells prepared.\n\n|   Paladin Level | Spells                                                 |\n|-----------------|--------------------------------------------------------|\n|               3 | Protection from Evil and Good, Shield of Faith |\n|               5 | Aid, Zone of Truth                             |\n|               9 | Beacon of Hope, Dispel Magic                   |\n|              13 | Freedom of Movement, Guardian of Faith         |\n|              17 | Commune, Flame Strike                          |",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 3
+      },
+      "spells": [
+        "spell:protection-from-evil-and-good",
+        "spell:shield-of-faith"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 5
+      },
+      "spells": [
+        "spell:aid",
+        "spell:zone-of-truth"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 9
+      },
+      "spells": [
+        "spell:beacon-of-hope",
+        "spell:dispel-magic"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 13
+      },
+      "spells": [
+        "spell:freedom-of-movement",
+        "spell:guardian-of-faith"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 17
+      },
+      "spells": [
+        "spell:commune",
+        "spell:flame-strike"
+      ],
+      "how": "prepared",
+      "counts": false
+    }
+  ]
+}

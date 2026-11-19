@@ -1,0 +1,22 @@
+{
+  "id": "event:damaged",
+  "name": "Damaged",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Damage has been dealt to the subject by a creature (by). Its fields are those of event:taking-damage, as dealt. Damage that temporary hit points absorb is still damage taken."
+  },
+  "payload": [
+    "amount",
+    "damageType",
+    "attack",
+    "success",
+    "crit",
+    "spell",
+    "slot",
+    "against",
+    "excess",
+    "remaining"
+  ]
+}

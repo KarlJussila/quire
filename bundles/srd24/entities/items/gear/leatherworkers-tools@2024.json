@@ -1,0 +1,18 @@
+{
+  "id": "item:leatherworkers-tools@2024",
+  "name": "Leatherworker’s Tools",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "- **Cost:** 5 GP\n- **Ability:** Dexterity\n- **Weight:** 5 lb.\n- **Utilize:** Add a design to a leather item (DC 10)\n- **Craft:** Sling, Whip, Hide Armor, Leather Armor, Studded Leather Armor, Backpack, Crossbow Bolt Case, Map or Scroll Case, Parchment, Pouch, Quiver, Waterskin",
+    "plain": "- Cost: 5 GP\n- Ability: Dexterity\n- Weight: 5 lb.\n- Utilize: Add a design to a leather item (DC 10)\n- Craft: Sling, Whip, Hide Armor, Leather Armor, Studded Leather Armor, Backpack, Crossbow Bolt Case, Map or Scroll Case, Parchment, Pouch, Quiver, Waterskin",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:gp"
+  },
+  "weight": 5.0
+}

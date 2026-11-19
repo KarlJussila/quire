@@ -1,0 +1,178 @@
+{
+  "id": "feature:ranger/foe-slayer",
+  "name": "Foe Slayer",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied.",
+    "plain": "At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "content-dependency",
+      "name": "Racial favored-enemy tests cover recorded species relationships; humanoid NPC ancestry and absent race entities remain the Favored Enemy owner’s gap."
+    }
+  ],
+  "activities": [
+    {
+      "key": "foe-slayer",
+      "name": "Foe Slayer",
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        },
+        "match": {
+          "roll": [
+            "roll:attack",
+            "roll:damage"
+          ],
+          "attack": true
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "turn": "self"
+          },
+          {
+            "creature": "subject",
+            "where": {
+              "any": [
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": {
+                          "chosen": "enemy-1",
+                          "from": "feature:ranger/favored-enemy"
+                        }
+                      }
+                    },
+                    {
+                      "not": {
+                        "match": {
+                          "creatureType": "creature-type:humanoid"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": "creature-type:humanoid"
+                      }
+                    },
+                    {
+                      "has": {
+                        "chosen": "humanoid-enemies-1",
+                        "from": "feature:ranger/favored-enemy"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": {
+                          "chosen": "enemy-2",
+                          "from": "feature:ranger/favored-enemy"
+                        }
+                      }
+                    },
+                    {
+                      "not": {
+                        "match": {
+                          "creatureType": "creature-type:humanoid"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": "creature-type:humanoid"
+                      }
+                    },
+                    {
+                      "has": {
+                        "chosen": "humanoid-enemies-2",
+                        "from": "feature:ranger/favored-enemy"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": {
+                          "chosen": "enemy-3",
+                          "from": "feature:ranger/favored-enemy"
+                        }
+                      }
+                    },
+                    {
+                      "not": {
+                        "match": {
+                          "creatureType": "creature-type:humanoid"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "match": {
+                        "creatureType": "creature-type:humanoid"
+                      }
+                    },
+                    {
+                      "has": {
+                        "chosen": "humanoid-enemies-3",
+                        "from": "feature:ranger/favored-enemy"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "intercept": {
+            "set": {
+              "$add": "modifiers.ability:wis"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

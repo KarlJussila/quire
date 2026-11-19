@@ -1,0 +1,51 @@
+{
+  "id": "creature:commoner",
+  "name": "Commoner",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any",
+  "ac": 10,
+  "hp": {
+    "average": 4,
+    "formula": "1d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 10,
+    "ability:dex": 10,
+    "ability:int": 10,
+    "ability:str": 10,
+    "ability:wis": 10
+  },
+  "passivePerception": 10,
+  "xp": 10,
+  "cr": 0,
+  "languages": [
+    {
+      "text": "any one language (usually Common)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Club",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +2 to hit, reach 5 ft., one target. _Hit:_ 2 (1d4) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "creature-type:aberration",
+  "name": "Aberration",
+  "source": {
+    "book": "core"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "spell:jump@2024",
+  "name": "Jump",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You touch a willing creature. Once on each of its turns until the spell ends, that creature can jump up to 30 feet by spending 10 feet of movement.\n\n_**Using a Higher-Level Spell Slot.**_ You can target one additional creature for each spell slot level above 1.",
+    "plain": "You touch a willing creature. Once on each of its turns until the spell ends, that creature can jump up to 30 feet by spending 10 feet of movement.\n\nUsing a Higher-Level Spell Slot. You can target one additional creature for each spell slot level above 1.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:druid",
+    "class:ranger",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a grasshopper’s hind leg"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute"
+      }
+    }
+  ]
+}

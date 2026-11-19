@@ -1,0 +1,18 @@
+{
+  "id": "rule:weapon-attack@2024",
+  "name": "Weapon Attack",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A weapon attack is an attack roll made with a weapon. _See also_ \"Weapon.\"",
+    "plain": "A weapon attack is an attack roll made with a weapon. See also \"Weapon.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

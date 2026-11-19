@@ -1,0 +1,41 @@
+{
+  "id": "feature:warlock/otherworldly-leap@2024",
+  "name": "Otherworldly Leap",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 2+ Warlock_\n\nYou can cast Jump on yourself without expending a spell slot.",
+    "plain": "Prerequisite: Level 2+ Warlock\n\nYou can cast Jump on yourself without expending a spell slot.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 2
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:jump"
+      ],
+      "how": "innate",
+      "countsAs": "class:warlock",
+      "set": {
+        "activities": {
+          "cast": {
+            "target": {
+              "$replace": {
+                "who": "self",
+                "count": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": []
+}

@@ -1,0 +1,7 @@
+{
+  "id": "roll:healing",
+  "name": "Healing Roll",
+  "source": {
+    "book": "core"
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "id": "creature:draconic-spirit@2024",
+  "name": "Draconic Spirit",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Large Dragon, Neutral_\n\n- **AC** 14 + the spell's level\n- **HP** 50 + 10 for each spell level above 5\n- **Speed** 30 ft., Fly 60 ft., Swim 30 ft.\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| **Score**        |     19 |     14 |     17 |     10 |     14 |     14 |\n| **Modifier**     |     +4 |     +2 |     +3 |     +0 |     +2 |     +2 |\n| **Saving Throw** |     +4 |     +2 |     +3 |     +0 |     +2 |     +2 |\n\n- **Resistances** Acid, Cold, Fire, Lightning, Poison\n- **Immunities** Charmed, Frightened, Poisoned\n- **Senses** Blindsight 30 ft., Darkvision 60 ft.;\n\nPassive Perception 12\n\n- **Languages** Draconic, understands the languages you know\n- **CR** None (XP 0; PB equals your Proficiency Bonus)\n\n### Traits\n\n_**Shared Resistances.**_ When you summon the spirit, choose one of its Resistances. You have Resistance to the chosen damage type until the spell ends.\n\n### Actions\n\n_**Multiattack.**_ The spirit makes a number of Rend attacks equal to half the spell's level (round down), and it uses Breath Weapon.\n\n_**Rend.**_ _Melee Attack Roll:_ Bonus equals your spell attack modifier, reach 10 feet. _Hit:_ 1d6 + 4 + the spell's level Piercing damage.\n\n_**Breath Weapon.**_ _Dexterity Saving Throw:_ DC equals your spell save DC, each creature in a 30-foot Cone. _Failure:_ 2d6 damage of a type this spirit has Resistance to (your choice when you cast the spell). _Success:_  Half damage.",
+    "plain": "Large Dragon, Neutral\n\n- AC 14 + the spell's level\n- HP 50 + 10 for each spell level above 5\n- Speed 30 ft., Fly 60 ft., Swim 30 ft.\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| Score        |     19 |     14 |     17 |     10 |     14 |     14 |\n| Modifier     |     +4 |     +2 |     +3 |     +0 |     +2 |     +2 |\n| Saving Throw |     +4 |     +2 |     +3 |     +0 |     +2 |     +2 |\n\n- Resistances Acid, Cold, Fire, Lightning, Poison\n- Immunities Charmed, Frightened, Poisoned\n- Senses Blindsight 30 ft., Darkvision 60 ft.;\n\nPassive Perception 12\n\n- Languages Draconic, understands the languages you know\n- CR None (XP 0; PB equals your Proficiency Bonus)\n\n### Traits\n\nShared Resistances. When you summon the spirit, choose one of its Resistances. You have Resistance to the chosen damage type until the spell ends.\n\n### Actions\n\nMultiattack. The spirit makes a number of Rend attacks equal to half the spell's level (round down), and it uses Breath Weapon.\n\nRend. Melee Attack Roll: Bonus equals your spell attack modifier, reach 10 feet. Hit: 1d6 + 4 + the spell's level Piercing damage.\n\nBreath Weapon. Dexterity Saving Throw: DC equals your spell save DC, each creature in a 30-foot Cone. Failure: 2d6 damage of a type this spirit has Resistance to (your choice when you cast the spell). Success:  Half damage.",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:neutral",
+  "ac": {
+    "prose": {
+      "text": "14 + the spell's level",
+      "gap": {
+        "category": "value",
+        "name": "This value depends on the summoner, spell slot, or chosen form."
+      }
+    }
+  },
+  "hp": {
+    "average": {
+      "prose": {
+        "text": "50 + 10 for each spell level above 5",
+        "gap": {
+          "category": "value",
+          "name": "This value depends on the summoner, spell slot, or chosen form."
+        }
+      }
+    }
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    },
+    "movement-mode:swim": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:str": 19,
+    "ability:dex": 14,
+    "ability:con": 17,
+    "ability:int": 10,
+    "ability:wis": 14,
+    "ability:cha": 14
+  },
+  "passivePerception": 12,
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    },
+    "sense:blindsight": {
+      "range": 30
+    }
+  },
+  "languages": [
+    {
+      "text": "Draconic, understands the languages you know"
+    }
+  ],
+  "xp": 0,
+  "proficiencyBonus": {
+    "prose": {
+      "text": "None (XP 0; PB equals your Proficiency Bonus)",
+      "gap": {
+        "category": "value",
+        "name": "This value depends on the summoner, spell slot, or chosen form."
+      }
+    }
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened",
+        "condition:poisoned"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:acid",
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:lightning",
+        "damage-type:poison"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Shared Resistances",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "When you summon the spirit, choose one of its Resistances. You have Resistance to the chosen damage type until the spell ends.",
+        "plain": "When you summon the spirit, choose one of its Resistances. You have Resistance to the chosen damage type until the spell ends.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-trait",
+          "name": "The printed Shared Resistances rule is retained as text."
+        }
+      ]
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The spirit makes a number of Rend attacks equal to half the spell's level (round down), and it uses Breath Weapon.",
+        "plain": "The spirit makes a number of Rend attacks equal to half the spell's level (round down), and it uses Breath Weapon.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-action",
+          "name": "The printed Multiattack rule is retained as text."
+        }
+      ]
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ Bonus equals your spell attack modifier, reach 10 feet. _Hit:_ 1d6 + 4 + the spell's level Piercing damage.",
+        "plain": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 10 feet. Hit: 1d6 + 4 + the spell's level Piercing damage.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-action",
+          "name": "The printed Rend rule is retained as text."
+        }
+      ]
+    },
+    {
+      "name": "Breath Weapon",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC equals your spell save DC, each creature in a 30-foot Cone. _Failure:_ 2d6 damage of a type this spirit has Resistance to (your choice when you cast the spell). _Success:_  Half damage.",
+        "plain": "Dexterity Saving Throw: DC equals your spell save DC, each creature in a 30-foot Cone. Failure: 2d6 damage of a type this spirit has Resistance to (your choice when you cast the spell). Success:  Half damage.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-action",
+          "name": "The printed Breath Weapon rule is retained as text."
+        }
+      ]
+    }
+  ]
+}

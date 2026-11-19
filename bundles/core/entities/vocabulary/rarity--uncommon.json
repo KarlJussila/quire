@@ -1,0 +1,8 @@
+{
+  "id": "rarity:uncommon",
+  "name": "Uncommon",
+  "source": {
+    "book": "core"
+  },
+  "order": 2
+}

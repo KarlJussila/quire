@@ -1,0 +1,7 @@
+{
+  "id": "creature-type:celestial",
+  "name": "Celestial",
+  "source": {
+    "book": "core"
+  }
+}

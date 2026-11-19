@@ -1,0 +1,43 @@
+{
+  "id": "spell:true-strike",
+  "name": "True Strike",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended.",
+    "plain": "You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended.",
+    "wording": "srd"
+  },
+  "level": 0,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:bard",
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "round",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

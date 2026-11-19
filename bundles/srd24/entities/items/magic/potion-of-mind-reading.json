@@ -1,0 +1,14 @@
+{
+  "id": "item:potion-of-mind-reading@2024",
+  "name": "Potion of Mind Reading",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you drink this potion, you gain the effect of the Detect Thoughts spell (save DC 13) for 10 minutes (no Concentration required).\n\nThis potion's dense, purple liquid has an ovoid cloud of pink floating in it.",
+    "plain": "When you drink this potion, you gain the effect of the Detect Thoughts spell (save DC 13) for 10 minutes (no Concentration required).\n\nThis potion's dense, purple liquid has an ovoid cloud of pink floating in it.",
+    "wording": "srd"
+  },
+  "group": "group:potion",
+  "rarity": "rarity:rare"
+}

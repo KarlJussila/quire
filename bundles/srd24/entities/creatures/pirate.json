@@ -1,0 +1,86 @@
+{
+  "id": "creature:pirate@2024",
+  "name": "Pirate",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 14,
+  "hp": {
+    "average": 33,
+    "formula": "6d8 + 6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 14,
+    "ability:con": 12,
+    "ability:dex": 16,
+    "ability:int": 8,
+    "ability:str": 10,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:cha": 4,
+    "ability:dex": 5
+  },
+  "passivePerception": 11,
+  "xp": 200,
+  "proficiencyBonus": 2,
+  "initiative": 5,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Individual",
+    "Implements"
+  ],
+  "gear": [
+    "Daggers (6)",
+    "Leather Armor"
+  ],
+  "cr": 1,
+  "languages": [
+    {
+      "text": "Common plus one other language"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The pirate makes two Dagger attacks. It can replace one attack with a use of Enthralling Panache.",
+        "plain": "The pirate makes two Dagger attacks. It can replace one attack with a use of Enthralling Panache.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Dagger",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +5, reach 5 ft. or range 20/60 ft. _Hit:_ 5 (1d4 + 3) Piercing damage.",
+        "plain": "Melee or Ranged Attack Roll: +5, reach 5 ft. or range 20/60 ft. Hit: 5 (1d4 + 3) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Enthralling Panache",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Wisdom Saving Throw:_ DC 12, one creature the pirate can see within 30 feet. _Failure:_ The target has the Charmed condition until the start of the pirate's next turn.",
+        "plain": "Wisdom Saving Throw: DC 12, one creature the pirate can see within 30 feet. Failure: The target has the Charmed condition until the start of the pirate's next turn.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

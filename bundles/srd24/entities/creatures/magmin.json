@@ -1,0 +1,87 @@
+{
+  "id": "creature:magmin@2024",
+  "name": "Magmin",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:elemental",
+  "alignment": "alignment:chaotic-neutral",
+  "ac": 14,
+  "hp": {
+    "average": 13,
+    "formula": "3d6 + 3"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 12,
+    "ability:dex": 15,
+    "ability:int": 8,
+    "ability:str": 7,
+    "ability:wis": 11
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 100,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Planar (Elemental Plane of Fire)"
+  ],
+  "cr": 0.5,
+  "languages": [
+    {
+      "text": "Primordial (Ignan)"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Death Burst",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The magmin explodes when it dies. _Dexterity Saving Throw:_ DC 11, each creature in a 10-foot Emanation originating from the magmin. _Failure_: 7 (2d6) Fire damage. _Success:_ Half damage.",
+        "plain": "The magmin explodes when it dies. Dexterity Saving Throw: DC 11, each creature in a 10-foot Emanation originating from the magmin. Failure: 7 (2d6) Fire damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Touch",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 7 (2d4 + 2) Fire damage. If the target is a creature or a flammable object that isn't being worn or carried, it starts burning.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) Fire damage. If the target is a creature or a flammable object that isn't being worn or carried, it starts burning.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ignited Illumination",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The magmin sets itself ablaze or extinguishes its flames. While ablaze, the magmin sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.",
+        "plain": "The magmin sets itself ablaze or extinguishes its flames. While ablaze, the magmin sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

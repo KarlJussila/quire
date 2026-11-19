@@ -1,0 +1,20 @@
+{
+  "id": "item:sling-bullet",
+  "name": "Sling Bullet",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": [
+    "group:adventuring-gear",
+    "group:ammunition"
+  ],
+  "cost": {
+    "amount": 0.2,
+    "currency": "currency:cp"
+  },
+  "weight": 0.075
+}

@@ -1,0 +1,23 @@
+{
+  "id": "state:surprised",
+  "name": "Surprised",
+  "source": {
+    "book": "core"
+  },
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:move",
+        "restriction:actions",
+        "restriction:reactions"
+      ]
+    }
+  ],
+  "ends": [
+    {
+      "event": "event:turn-end",
+      "subject": "self"
+    }
+  ]
+}

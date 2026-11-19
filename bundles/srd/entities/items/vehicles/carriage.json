@@ -1,0 +1,17 @@
+{
+  "id": "item:carriage",
+  "name": "Carriage",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:vehicle",
+  "cost": {
+    "amount": 100,
+    "currency": "currency:gp"
+  },
+  "weight": 600.0
+}

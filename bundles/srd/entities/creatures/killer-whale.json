@@ -1,0 +1,87 @@
+{
+  "id": "creature:killer-whale",
+  "name": "Killer Whale",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 90,
+    "formula": "12d12 + 12"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 0
+    },
+    "movement-mode:swim": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 13,
+    "ability:dex": 10,
+    "ability:int": 3,
+    "ability:str": 19,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 3
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 13,
+  "xp": 700,
+  "cr": 3,
+  "blocks": [
+    {
+      "name": "Echolocation",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The whale can't use its blindsight while Deafened.",
+        "plain": "The whale can't use its blindsight while Deafened.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hold Breath",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The whale can hold its breath for 30 minutes.",
+        "plain": "The whale can hold its breath for 30 minutes.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Keen Hearing",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The whale has advantage on Wisdom (Perception) checks that rely on hearing.",
+        "plain": "The whale has advantage on Wisdom (Perception) checks that rely on hearing.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 21 (5d6 + 4) piercing damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 21 (5d6 + 4) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

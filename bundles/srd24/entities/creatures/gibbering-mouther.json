@@ -1,0 +1,94 @@
+{
+  "id": "creature:gibbering-mouther@2024",
+  "name": "Gibbering Mouther",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:aberration",
+  "alignment": "alignment:chaotic-neutral",
+  "ac": 9,
+  "hp": {
+    "average": 52,
+    "formula": "7d8 + 21"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:swim": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 16,
+    "ability:dex": 8,
+    "ability:int": 3,
+    "ability:str": 10,
+    "ability:wis": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 450,
+  "proficiencyBonus": 2,
+  "initiative": -1,
+  "habitat": [
+    "Underdark"
+  ],
+  "cr": 2,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:prone"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Aberrant Ground",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The ground in a 10-foot Emanation originating from the mouther is Difficult Terrain.",
+        "plain": "The ground in a 10-foot Emanation originating from the mouther is Difficult Terrain.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Gibbering",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The mouther babbles incoherently while it doesn't have the Incapacitated condition. _Wisdom Saving Throw:_ DC 10, any creature that starts its turn within 20 feet of the mouther while it is babbling. _Failure:_ The target rolls 1d8 to determine what it does during the current turn:\n\n- **1-4.** The target does nothing.\n- **5-6.** The target takes no action or Bonus Action and uses all its movement to move in a random direction.\n- **7-8.** The target makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack.",
+        "plain": "The mouther babbles incoherently while it doesn't have the Incapacitated condition. Wisdom Saving Throw: DC 10, any creature that starts its turn within 20 feet of the mouther while it is babbling. Failure: The target rolls 1d8 to determine what it does during the current turn:\n\n- 1-4. The target does nothing.\n- 5-6. The target takes no action or Bonus Action and uses all its movement to move in a random direction.\n- 7-8. The target makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +2, reach 5 ft. _Hit:_ 7 (2d6) Piercing damage. If the target is a Medium or smaller creature, it has the Prone condition. The target dies if it is reduced to 0 Hit Points by this attack. Its body is then absorbed into the mouther, leaving only equipment behind.",
+        "plain": "Melee Attack Roll: +2, reach 5 ft. Hit: 7 (2d6) Piercing damage. If the target is a Medium or smaller creature, it has the Prone condition. The target dies if it is reduced to 0 Hit Points by this attack. Its body is then absorbed into the mouther, leaving only equipment behind.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Blinding Spittle",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 10, each creature in a 10-foot-radius Sphere centered on a point within 30 feet. _Failure:_ 7 (2d6) Radiant damage, and the target has the Blinded condition until the end of the mouther's next turn.",
+        "plain": "Dexterity Saving Throw: DC 10, each creature in a 10-foot-radius Sphere centered on a point within 30 feet. Failure: 7 (2d6) Radiant damage, and the target has the Blinded condition until the end of the mouther's next turn.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

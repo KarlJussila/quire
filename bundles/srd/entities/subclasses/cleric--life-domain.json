@@ -1,0 +1,32 @@
+{
+  "id": "subclass:cleric/life-domain",
+  "name": "Life Domain",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "The Life domain focuses on the vibrant positive energy — one of the fundamental forces of the universe — that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities (such as Chauntea, Arawai, and Demeter), sun gods (such as Lathander, Pelor, and Re-Horakhty), gods of healing or endurance (such as Ilmater, Mishakal, Apollo, and Diancecht), and gods of home and community (such as Hestia, Hathor, and Boldrei).",
+    "plain": "The Life domain focuses on the vibrant positive energy — one of the fundamental forces of the universe — that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities (such as Chauntea, Arawai, and Demeter), sun gods (such as Lathander, Pelor, and Re-Horakhty), gods of healing or endurance (such as Ilmater, Mishakal, Apollo, and Diancecht), and gods of home and community (such as Hestia, Hathor, and Boldrei).",
+    "wording": "srd"
+  },
+  "class": "class:cleric",
+  "levels": {
+    "1": [
+      "feature:cleric/life-domain/domain-spells",
+      "feature:cleric/life-domain/bonus-proficiency",
+      "feature:cleric/life-domain/disciple-of-life"
+    ],
+    "17": [
+      "feature:cleric/life-domain/supreme-healing"
+    ],
+    "2": [
+      "feature:cleric/life-domain/channel-divinity-preserve-life"
+    ],
+    "6": [
+      "feature:cleric/life-domain/blessed-healer"
+    ],
+    "8": [
+      "feature:cleric/life-domain/divine-strike"
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "feature:wizard/school-of-evocation/evocation-savant",
+  "name": "Evocation Savant",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning when you select this school at 2nd level, the gold and time you must spend to copy an evocation spell into your spellbook is halved.",
+    "plain": "Beginning when you select this school at 2nd level, the gold and time you must spend to copy an evocation spell into your spellbook is halved.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "grantedBy": "feature:wizard/spellcasting"
+            },
+            {
+              "match": {
+                "key": "copy-spell"
+              }
+            }
+          ]
+        }
+      },
+      "variant": "evocation-savant-copy",
+      "set": {
+        "time": {
+          "amount": {
+            "$multiply": 0.5
+          }
+        },
+        "cost": {
+          "$where": {
+            "unit": "currency:gp"
+          },
+          "currency": {
+            "$multiply": 0.5
+          }
+        },
+        "outcomes": {
+          "copied-spell": {
+            "pool": {
+              "store": {
+                "$where": true,
+                "from": {
+                  "$where": {
+                    "kind": "spell"
+                  },
+                  "where": {
+                    "match": {
+                      "school": "spell-school:evocation"
+                    }
+                  },
+                  "kind": "spell"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

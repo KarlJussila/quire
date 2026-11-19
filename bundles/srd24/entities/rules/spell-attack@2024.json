@@ -1,0 +1,18 @@
+{
+  "id": "rule:spell-attack@2024",
+  "name": "Spell Attack",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A spell attack is an attack roll made as part of a spell or another magical effect. _See also_ \"Spells\" (\"Casting Spells\").",
+    "plain": "A spell attack is an attack roll made as part of a spell or another magical effect. See also \"Spells\" (\"Casting Spells\").",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

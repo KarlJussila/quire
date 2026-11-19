@@ -1,0 +1,43 @@
+{
+  "id": "item:mantle-of-spell-resistance",
+  "name": "Mantle of Spell Resistance",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have advantage on saving throws against spells while you wear this cloak.",
+    "plain": "You have advantage on saving throws against spells while you wear this cloak.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "weight": 0,
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:save",
+              "against": {
+                "sourceType": "source-type:spell"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

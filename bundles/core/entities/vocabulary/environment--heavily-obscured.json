@@ -1,0 +1,7 @@
+{
+  "id": "environment:heavily-obscured",
+  "name": "Heavily Obscured",
+  "source": {
+    "book": "core"
+  }
+}

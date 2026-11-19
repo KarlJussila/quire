@@ -1,0 +1,65 @@
+{
+  "id": "class:warlock@2024",
+  "name": "Warlock",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Warlock, you gain the following class features when you reach the specified Warlock levels.",
+    "plain": "As a Warlock, you gain the following class features when you reach the specified Warlock levels.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d8",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:cha",
+      "atLeast": 13
+    },
+    "features": [
+      "feature:warlock/multiclass-proficiencies@2024"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:warlock/eldritch-invocations@2024",
+      "feature:warlock/pact-magic@2024"
+    ],
+    "2": [
+      "feature:warlock/magical-cunning@2024"
+    ],
+    "3": [
+      "feature:warlock/warlock-subclass@2024"
+    ],
+    "4": [
+      "feature:warlock/ability-score-improvement@2024"
+    ],
+    "8": [
+      "feature:warlock/ability-score-improvement@2024"
+    ],
+    "9": [
+      "feature:warlock/contact-patron@2024"
+    ],
+    "11": [
+      "feature:warlock/mystic-arcanum@2024"
+    ],
+    "12": [
+      "feature:warlock/ability-score-improvement@2024"
+    ],
+    "16": [
+      "feature:warlock/ability-score-improvement@2024"
+    ],
+    "19": [
+      "feature:warlock/epic-boon@2024"
+    ],
+    "20": [
+      "feature:warlock/eldritch-master@2024"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Otherworldly Patron||Warlock Subclass"
+  },
+  "firstClass": [
+    "feature:warlock/proficiencies@2024"
+  ]
+}

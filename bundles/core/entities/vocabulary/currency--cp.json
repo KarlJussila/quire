@@ -1,0 +1,12 @@
+{
+  "id": "currency:cp",
+  "name": "Copper Piece",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "cp": 1,
+  "symbol": "cp"
+}

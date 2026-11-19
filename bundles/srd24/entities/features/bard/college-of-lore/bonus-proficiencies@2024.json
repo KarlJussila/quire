@@ -1,0 +1,31 @@
+{
+  "id": "feature:bard/college-of-lore/bonus-proficiencies@2024",
+  "name": "Level 3: Bonus Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain proficiency with three skills of your choice.",
+    "plain": "You gain proficiency with three skills of your choice.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skill",
+            "name": "Skill Proficiency",
+            "count": 3,
+            "from": [
+              {
+                "kind": "skill"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

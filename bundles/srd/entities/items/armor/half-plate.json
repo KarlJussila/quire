@@ -1,0 +1,31 @@
+{
+  "id": "item:half-plate",
+  "name": "Half Plate",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Half plate consists of shaped metal plates that cover most of the wearer's body. It does not include leg protection beyond simple greaves that are attached with leather straps.",
+    "plain": "Half plate consists of shaped metal plates that cover most of the wearer's body. It does not include leg protection beyond simple greaves that are attached with leather straps.",
+    "wording": "srd"
+  },
+  "group": "group:medium-armor",
+  "cost": {
+    "amount": 750,
+    "currency": "currency:gp"
+  },
+  "weight": 40.0,
+  "armor": {
+    "ac": {
+      "sum": [
+        15,
+        {
+          "min": [
+            2,
+            "modifiers.ability:dex"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "weapon-mastery:push",
+  "name": "Push",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+    "plain": "If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "item": {
+              "kind": "item",
+              "where": {
+                "match": {
+                  "weapon": {
+                    "mastery": "weapon-mastery:push"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "when": {
+          "compare": "masteries.{attack.item}",
+          "equals": true
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "runs": [
+              {
+                "activity": "push"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "push",
+      "standalone": false,
+      "when": {
+        "creature": "target",
+        "where": {
+          "all": [
+            {
+              "kind": "creature"
+            },
+            {
+              "match": {
+                "size": {
+                  "atMost": "size:large"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "outcomes": [
+        {
+          "move": {
+            "kind": "push",
+            "distance": {
+              "choose": {
+                "key": "distance",
+                "name": "Push Distance",
+                "from": [
+                  {
+                    "atLeast": 0,
+                    "atMost": 10
+                  }
+                ]
+              }
+            },
+            "toward": {
+              "awayFrom": "self"
+            }
+          },
+          "to": "target"
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

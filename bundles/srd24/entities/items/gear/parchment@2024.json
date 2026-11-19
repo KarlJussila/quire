@@ -1,0 +1,18 @@
+{
+  "id": "item:parchment@2024",
+  "name": "Parchment",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "One sheet of Parchment can hold about 250 handwritten words.",
+    "plain": "One sheet of Parchment can hold about 250 handwritten words.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:sp"
+  },
+  "weight": 0.0
+}

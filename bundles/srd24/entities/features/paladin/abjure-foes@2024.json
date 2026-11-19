@@ -1,0 +1,89 @@
+{
+  "id": "feature:paladin/abjure-foes@2024",
+  "name": "Level 9: Abjure Foes",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Magic action, you can expend one use of this class's Channel Divinity to overwhelm foes with awe. As you present your Holy Symbol or weapon, you can target a number of creatures equal to your Charisma modifier (minimum of one creature) that you can see within 60 feet of yourself. Each target must succeed on a Wisdom saving throw or have the Frightened condition for 1 minute or until it takes any damage. While Frightened in this way, a target can do only one of the following on its turns: move, take an action, or take a Bonus Action.",
+    "plain": "As a Magic action, you can expend one use of this class's Channel Divinity to overwhelm foes with awe. As you present your Holy Symbol or weapon, you can target a number of creatures equal to your Charisma modifier (minimum of one creature) that you can see within 60 feet of yourself. Each target must succeed on a Wisdom saving throw or have the Frightened condition for 1 minute or until it takes any damage. While Frightened in this way, a target can do only one of the following on its turns: move, take an action, or take a Bonus Action.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "abjure-foes",
+      "name": "Abjure Foes",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 9
+      },
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "channel-divinity"
+        }
+      ],
+      "target": {
+        "count": {
+          "max": [
+            "modifiers.ability:cha",
+            1
+          ]
+        },
+        "who": {
+          "pool": "any",
+          "chosen": true,
+          "where": {
+            "all": [
+              {
+                "within": 60,
+                "of": "self"
+              },
+              {
+                "perceives": {
+                  "sense": "sight",
+                  "of": "self"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:wis",
+          "dc": "spellcasting.class:paladin.dc"
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:frightened",
+            "duration": {
+              "amount": 1,
+              "unit": "minute"
+            },
+            "ends": [
+              {
+                "event": "event:damaged",
+                "subject": "self"
+              }
+            ]
+          }
+        },
+        {
+          "prose": {
+            "text": "While frightened this way, a target can do only one of these on its turns: move, take an action, or take a Bonus Action.",
+            "gap": {
+              "category": "state",
+              "name": "one of move, action, or bonus action per turn"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

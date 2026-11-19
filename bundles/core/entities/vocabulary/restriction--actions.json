@@ -1,0 +1,7 @@
+{
+  "id": "restriction:actions",
+  "name": "Take Actions",
+  "source": {
+    "book": "core"
+  }
+}

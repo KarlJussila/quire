@@ -1,0 +1,48 @@
+{
+  "id": "feature:ranger/multiclass-proficiencies@2024",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Gain the following traits from the Core Ranger Traits table: Hit Point Die, proficiency with Martial weapons, proficiency in one skill of your choice from the Ranger's skill list, and training with Light and Medium armor and Shields.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:martial-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor",
+        "group:medium-armor",
+        "group:shield"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skill",
+            "name": "Skill Proficiency",
+            "from": [
+              "skill:animal-handling",
+              "skill:athletics",
+              "skill:insight",
+              "skill:investigation",
+              "skill:nature",
+              "skill:perception",
+              "skill:stealth",
+              "skill:survival"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

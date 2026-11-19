@@ -1,0 +1,42 @@
+{
+  "id": "spell:commune@2024",
+  "name": "Commune",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You contact a deity or a divine proxy and ask up to three questions that can be answered with yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.\n\nDivine beings aren't necessarily omniscient, so you might receive \"unclear\" as an answer if a question pertains to information that lies beyond the deity's knowledge. In a case where a one-word answer could be misleading or contrary to the deity's interests, the GM might offer a short phrase as an answer instead.\n\nIf you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer.",
+    "plain": "You contact a deity or a divine proxy and ask up to three questions that can be answered with yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.\n\nDivine beings aren't necessarily omniscient, so you might receive \"unclear\" as an answer if a question pertains to information that lies beyond the deity's knowledge. In a case where a one-word answer could be misleading or contrary to the deity's interests, the GM might offer a short phrase as an answer instead.\n\nIf you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer.",
+    "wording": "srd"
+  },
+  "level": 5,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:cleric"
+  ],
+  "ritual": true,
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "incense"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "time": {
+        "amount": 1,
+        "unit": "minute"
+      },
+      "range": {
+        "self": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute"
+      },
+      "ritual": true
+    }
+  ]
+}

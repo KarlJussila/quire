@@ -1,0 +1,96 @@
+{
+  "id": "feature:druid/wild-resurgence@2024",
+  "name": "Level 5: Wild Resurgence",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Once on each of your turns, if you have no uses of Wild Shape left, you can give yourself one use by expending a spell slot (no action required).\n\nIn addition, you can expend one use of Wild Shape (no action required) to give yourself a level 1 spell slot, but you can't do so again until you finish a Long Rest.",
+    "plain": "Once on each of your turns, if you have no uses of Wild Shape left, you can give yourself one use by expending a spell slot (no action required).\n\nIn addition, you can expend one use of Wild Shape (no action required) to give yourself a level 1 spell slot, but you can't do so again until you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "wild-resurgence-slot",
+      "name": "Wild Resurgence",
+      "when": {
+        "all": [
+          {
+            "compare": "levels.class:druid",
+            "atLeast": 5
+          },
+          {
+            "compare": "pools.wild-shape.current",
+            "atMost": 0
+          }
+        ]
+      },
+      "cost": [
+        {
+          "resource": "spell-slots"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "pool": {
+            "resource": "wild-shape",
+            "add": 1
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "wild-resurgence-slot-gain",
+      "name": "Wild Resurgence",
+      "when": {
+        "compare": "levels.class:druid",
+        "atLeast": 5
+      },
+      "cost": [
+        {
+          "resource": "wild-shape"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Gain one level 1 spell slot.",
+            "gap": {
+              "category": "spell-slot",
+              "name": "gain a level 1 spell slot"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

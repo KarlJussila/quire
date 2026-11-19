@@ -1,0 +1,36 @@
+{
+  "id": "spell:mass-heal@2024",
+  "name": "Mass Heal",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A flood of healing energy flows from you into creatures around you. You restore up to 700 Hit Points, divided as you choose among any number of creatures that you can see within range. Creatures healed by this spell also have the Blinded, Deafened, and Poisoned conditions removed from them.",
+    "plain": "A flood of healing energy flows from you into creatures around you. You restore up to 700 Hit Points, divided as you choose among any number of creatures that you can see within range. Creatures healed by this spell also have the Blinded, Deafened, and Poisoned conditions removed from them.",
+    "wording": "srd"
+  },
+  "level": 9,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:cleric"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

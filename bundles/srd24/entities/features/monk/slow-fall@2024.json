@@ -1,0 +1,39 @@
+{
+  "id": "feature:monk/slow-fall@2024",
+  "name": "Level 4: Slow Fall",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can take a Reaction when you fall to reduce any damage you take from the fall by an amount equal to five times your Monk level.",
+    "plain": "You can take a Reaction when you fall to reduce any damage you take from the fall by an amount equal to five times your Monk level.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "slow-fall",
+      "name": "Slow Fall",
+      "trigger": {
+        "event": "event:fell",
+        "subject": "self"
+      },
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "outcomes": [
+        {
+          "intercept": {
+            "set": {
+              "$subtract": {
+                "times": "levels.class:monk",
+                "by": 5
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

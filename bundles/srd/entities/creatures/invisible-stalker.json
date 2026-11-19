@@ -1,0 +1,137 @@
+{
+  "id": "creature:invisible-stalker",
+  "name": "Invisible Stalker",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:elemental",
+  "alignment": "alignment:neutral",
+  "ac": 14,
+  "hp": {
+    "average": 104,
+    "formula": "16d8 + 32"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    },
+    "movement-mode:fly": {
+      "speed": 50,
+      "hover": true
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 14,
+    "ability:dex": 19,
+    "ability:int": 10,
+    "ability:str": 16,
+    "ability:wis": 15
+  },
+  "skills": {
+    "skill:perception": 8,
+    "skill:stealth": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 18,
+  "xp": 2300,
+  "cr": 6,
+  "languages": [
+    {
+      "language": "language:auran"
+    },
+    {
+      "language": "language:common",
+      "understandsOnly": true
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:exhaustion",
+        "condition:grappled",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:poisoned",
+        "condition:prone",
+        "condition:restrained",
+        "condition:unconscious"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Invisibility",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The stalker is Invisible.",
+        "plain": "The stalker is Invisible.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Faultless Tracker",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The stalker is given a quarry by its summoner. The stalker knows the direction and distance to its quarry as long as the two of them are on the same plane of existence. The stalker also knows the location of its summoner.",
+        "plain": "The stalker is given a quarry by its summoner. The stalker knows the direction and distance to its quarry as long as the two of them are on the same plane of existence. The stalker also knows the location of its summoner.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The stalker makes two slam attacks.",
+        "plain": "The stalker makes two slam attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Slam",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 10 (2d6 + 3) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

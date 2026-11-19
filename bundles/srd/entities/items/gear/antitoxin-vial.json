@@ -1,0 +1,18 @@
+{
+  "id": "item:antitoxin-vial",
+  "name": "Antitoxin (vial)",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs.",
+    "plain": "A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 50,
+    "currency": "currency:gp"
+  },
+  "weight": 0.0
+}

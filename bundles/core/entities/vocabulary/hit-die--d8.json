@@ -1,0 +1,11 @@
+{
+  "id": "hit-die:d8",
+  "name": "d8 Hit Die",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "sides": 8
+}

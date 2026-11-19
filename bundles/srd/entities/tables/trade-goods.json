@@ -1,0 +1,97 @@
+{
+  "id": "table:trade-goods",
+  "name": "Trade Goods",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "cost",
+      "name": "Cost"
+    },
+    {
+      "key": "goods",
+      "name": "Goods"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "cost": "1 cp",
+        "goods": "1 lb. of wheat"
+      }
+    },
+    {
+      "cells": {
+        "cost": "2 cp",
+        "goods": "1 lb. of flour or one chicken"
+      }
+    },
+    {
+      "cells": {
+        "cost": "5 cp",
+        "goods": "1 lb. of salt"
+      }
+    },
+    {
+      "cells": {
+        "cost": "1 sp",
+        "goods": "1 lb. of iron or 1 sq. yd. of canvas"
+      }
+    },
+    {
+      "cells": {
+        "cost": "5 sp",
+        "goods": "1 lb. of copper or 1 sq. yd. of cotton cloth"
+      }
+    },
+    {
+      "cells": {
+        "cost": "1 gp",
+        "goods": "1 lb. of ginger or one goat"
+      }
+    },
+    {
+      "cells": {
+        "cost": "2 gp",
+        "goods": "1 lb. of cinnamon or pepper, or one sheep"
+      }
+    },
+    {
+      "cells": {
+        "cost": "3 gp",
+        "goods": "1 lb. of cloves or one pig"
+      }
+    },
+    {
+      "cells": {
+        "cost": "5 gp",
+        "goods": "1 lb. of silver or 1 sq. yd. of linen"
+      }
+    },
+    {
+      "cells": {
+        "cost": "10 gp",
+        "goods": "1 sq. yd. of silk or one cow"
+      }
+    },
+    {
+      "cells": {
+        "cost": "15 gp",
+        "goods": "1 lb. of saffron or one ox"
+      }
+    },
+    {
+      "cells": {
+        "cost": "50 gp",
+        "goods": "1 lb. of gold"
+      }
+    },
+    {
+      "cells": {
+        "cost": "500 gp",
+        "goods": "1 lb. of platinum"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rule:monster@2024",
+  "name": "Monster",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A monster is a creature controlled by the GM, even if the creature is benevolent. _See also_ \"Creature\" and \"NPC.\"",
+    "plain": "A monster is a creature controlled by the GM, even if the creature is benevolent. See also \"Creature\" and \"NPC.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

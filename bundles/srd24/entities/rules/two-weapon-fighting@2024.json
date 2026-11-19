@@ -1,0 +1,153 @@
+{
+  "id": "rule:two-weapon-fighting@2024",
+  "name": "Light (Two-Weapon Fighting)",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don't add your ability modifier to the extra attack's damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative.",
+    "plain": "When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don't add your ability modifier to the extra attack's damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "extra-attack",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "when": {
+        "all": [
+          {
+            "turn": "self"
+          },
+          {
+            "happened": {
+              "event": "event:activity-used",
+              "by": "self",
+              "match": {
+                "action": "action:attack"
+              },
+              "since": "turn-start"
+            }
+          },
+          {
+            "happened": {
+              "event": "event:roll-made",
+              "by": "self",
+              "match": {
+                "roll": "roll:attack",
+                "attack": {
+                  "via": "weapon",
+                  "item": {
+                    "kind": "item",
+                    "where": {
+                      "match": {
+                        "weapon": {
+                          "properties": "weapon-property:light"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "since": "turn-start",
+              "when": {
+                "prose": {
+                  "text": "This qualifying attack was part of the Attack action on this turn.",
+                  "gap": {
+                    "category": "two-weapon",
+                    "name": "The qualifying attack’s containing Attack action"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "all": [
+                    {
+                      "match": {
+                        "delivery": {
+                          "attack": {
+                            "via": "weapon",
+                            "item": {
+                              "kind": "item",
+                              "where": {
+                                "match": {
+                                  "weapon": {
+                                    "properties": "weapon-property:light"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "prose": {
+                        "text": "A different Light weapon from the weapon used for the qualifying Attack-action attack.",
+                        "gap": {
+                          "category": "two-weapon",
+                          "name": "Different weapon and, in 2014, the other hand"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "times": 1
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "key": "omit-positive-ability",
+          "type": "change",
+          "of": "event",
+          "set": {
+            "total": {
+              "$subtract": {
+                "max": [
+                  0,
+                  "modifiers.{ability}"
+                ]
+              }
+            }
+          },
+          "when": {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage",
+              "ability": true,
+              "attack": {
+                "via": "weapon"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "two-weapon",
+      "name": "The qualifying attack’s containing Attack action, the different extra-attack weapon, and 2014 hand assignment remain explicit prose tests."
+    }
+  ]
+}

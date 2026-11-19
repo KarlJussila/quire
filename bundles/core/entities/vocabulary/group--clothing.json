@@ -1,0 +1,7 @@
+{
+  "id": "group:clothing",
+  "name": "Clothing",
+  "source": {
+    "book": "core"
+  }
+}

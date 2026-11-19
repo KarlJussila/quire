@@ -1,0 +1,82 @@
+{
+  "id": "creature:black-bear",
+  "name": "Black Bear",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 11,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 19,
+    "formula": "3d8 + 6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:climb": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 14,
+    "ability:dex": 10,
+    "ability:int": 2,
+    "ability:str": 15,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 3
+  },
+  "passivePerception": 13,
+  "xp": 100,
+  "cr": 0.5,
+  "blocks": [
+    {
+      "name": "Keen Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The bear has advantage on Wisdom (Perception) checks that rely on smell.",
+        "plain": "The bear has advantage on Wisdom (Perception) checks that rely on smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The bear makes two attacks: one with its bite and one with its claws.",
+        "plain": "The bear makes two attacks: one with its bite and one with its claws.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one target. _Hit:_ 5 (1d6 + 2) piercing damage.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claws",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one target. _Hit:_ 7 (2d4 + 2) slashing damage.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

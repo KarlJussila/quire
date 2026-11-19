@@ -1,0 +1,11 @@
+{
+  "id": "feature:grimlock",
+  "name": "Grimlock",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

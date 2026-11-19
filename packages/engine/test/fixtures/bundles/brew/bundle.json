@@ -1,0 +1,18 @@
+{
+ "id": "brew",
+ "name": "Homebrew",
+ "version": "0.1.0",
+ "kind": "homebrew",
+ "requires": [
+  {
+   "anyOf": [
+    {
+     "bundle": "other"
+    },
+    {
+     "bundle": "another"
+    }
+   ]
+  }
+ ]
+}

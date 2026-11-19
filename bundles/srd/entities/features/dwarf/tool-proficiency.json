@@ -1,0 +1,31 @@
+{
+  "id": "feature:dwarf/tool-proficiency",
+  "name": "Tool Proficiency",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools.",
+    "plain": "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "tool",
+            "name": "Tool Proficiency",
+            "from": [
+              "item:smiths-tools",
+              "item:brewers-supplies",
+              "item:masons-tools"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

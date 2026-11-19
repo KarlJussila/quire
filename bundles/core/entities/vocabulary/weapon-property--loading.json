@@ -1,0 +1,7 @@
+{
+  "id": "weapon-property:loading",
+  "name": "Loading",
+  "source": {
+    "book": "core"
+  }
+}

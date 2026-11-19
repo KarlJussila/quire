@@ -1,0 +1,18 @@
+{
+  "id": "rule:hostile@2024",
+  "name": "Hostile",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Hostile creature views you unfavorably. You have Disadvantage on an ability check to influence a Hostile creature. _See also_ \"Influence.\"",
+    "plain": "A Hostile creature views you unfavorably. You have Disadvantage on an ability check to influence a Hostile creature. See also \"Influence.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "spell:color-spray@2024",
+  "name": "Color Spray",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You launch a dazzling array of flashing, colorful light. Each creature in a 15-foot Cone originating from you must succeed on a Constitution saving throw or have the Blinded condition until the end of your next turn.",
+    "plain": "You launch a dazzling array of flashing, colorful light. Each creature in a 15-foot Cone originating from you must succeed on a Constitution saving throw or have the Blinded condition until the end of your next turn.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:illusion",
+  "lists": [
+    "class:bard",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a pinch of colorful sand"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

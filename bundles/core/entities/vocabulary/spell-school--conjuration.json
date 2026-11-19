@@ -1,0 +1,10 @@
+{
+  "id": "spell-school:conjuration",
+  "name": "Conjuration",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

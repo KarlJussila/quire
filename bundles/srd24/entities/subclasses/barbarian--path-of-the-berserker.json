@@ -1,0 +1,27 @@
+{
+  "id": "subclass:barbarian/path-of-the-berserker@2024",
+  "name": "Path of the Berserker",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Channel Rage into Violent Fury_\n\nBarbarians who walk the Path of the Berserker direct their Rage primarily toward violence. Their path is one of untrammeled fury, and they thrill in the chaos of battle as they allow their Rage to seize and empower them.",
+    "plain": "Channel Rage into Violent Fury\n\nBarbarians who walk the Path of the Berserker direct their Rage primarily toward violence. Their path is one of untrammeled fury, and they thrill in the chaos of battle as they allow their Rage to seize and empower them.",
+    "wording": "srd"
+  },
+  "class": "class:barbarian",
+  "levels": {
+    "10": [
+      "feature:barbarian/path-of-the-berserker/retaliation@2024"
+    ],
+    "14": [
+      "feature:barbarian/path-of-the-berserker/intimidating-presence@2024"
+    ],
+    "3": [
+      "feature:barbarian/path-of-the-berserker/frenzy@2024"
+    ],
+    "6": [
+      "feature:barbarian/path-of-the-berserker/mindless-rage@2024"
+    ]
+  }
+}

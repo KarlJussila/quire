@@ -1,0 +1,7 @@
+{
+  "id": "creature-type:giant",
+  "name": "Giant",
+  "source": {
+    "book": "core"
+  }
+}

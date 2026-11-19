@@ -1,0 +1,81 @@
+{
+  "id": "creature:pegasus@2024",
+  "name": "Pegasus",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:celestial",
+  "alignment": "alignment:chaotic-good",
+  "ac": 12,
+  "hp": {
+    "average": 59,
+    "formula": "7d10 + 21"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 60
+    },
+    "movement-mode:fly": {
+      "speed": 90
+    }
+  },
+  "abilities": {
+    "ability:cha": 13,
+    "ability:con": 16,
+    "ability:dex": 15,
+    "ability:int": 10,
+    "ability:str": 18,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:cha": 3,
+    "ability:con": 5,
+    "ability:dex": 4,
+    "ability:wis": 4
+  },
+  "skills": {
+    "skill:perception": 6
+  },
+  "passivePerception": 16,
+  "xp": 450,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Forest",
+    "Grassland",
+    "Hill",
+    "Planar (Upper Planes)"
+  ],
+  "cr": 2,
+  "languages": [
+    {
+      "language": "language:celestial",
+      "understandsOnly": true
+    },
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:elvish"
+    },
+    {
+      "text": "and Sylvan but can't speak"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Hooves",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 5 ft. _Hit:_ 7 (1d6 + 4) Bludgeoning damage plus 5 (2d4) Radiant damage.",
+        "plain": "Melee Attack Roll: +6, reach 5 ft. Hit: 7 (1d6 + 4) Bludgeoning damage plus 5 (2d4) Radiant damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

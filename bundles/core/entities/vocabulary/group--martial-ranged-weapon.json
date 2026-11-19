@@ -1,0 +1,11 @@
+{
+  "id": "group:martial-ranged-weapon",
+  "name": "Martial Ranged Weapon",
+  "source": {
+    "book": "core"
+  },
+  "isA": [
+    "group:martial-weapon",
+    "group:ranged-weapon"
+  ]
+}

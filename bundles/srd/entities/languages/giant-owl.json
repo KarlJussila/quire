@@ -1,0 +1,12 @@
+{
+  "id": "language:giant-owl",
+  "name": "Giant Owl",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- **Languages** Giant Owl, understands Common, Elvish, and Sylvan but can't speak them",
+    "plain": "- Languages Giant Owl, understands Common, Elvish, and Sylvan but can't speak them",
+    "wording": "srd"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "item:helm-of-comprehending-languages",
+  "name": "Helm of Comprehending Languages",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing this helm, you can use an action to cast the Comprehend Languages spell from it at will.",
+    "plain": "While wearing this helm, you can use an action to cast the Comprehend Languages spell from it at will.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "weight": 0.0
+}

@@ -1,0 +1,7 @@
+{
+  "id": "group:tools",
+  "name": "Tool",
+  "source": {
+    "book": "core"
+  }
+}

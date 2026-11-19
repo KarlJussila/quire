@@ -1,0 +1,170 @@
+{
+  "id": "spell:hunters-mark@2024",
+  "name": "Hunter’s Mark",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You magically mark one creature you can see within range as your quarry. Until the spell ends, you deal an extra 1d6 Force damage to the target whenever you hit it with an attack roll. You also have Advantage on any Wisdom (Perception or Survival) check you make to find it.\n\nIf the target drops to 0 Hit Points before this spell ends, you can take a Bonus Action to move the mark to a new creature you can see within range.\n\n_**Using a Higher-Level Spell Slot.**_ Your Concentration can last longer with a spell slot of level 3-4 (up to 8 hours) or 5+ (up to 24 hours).",
+    "plain": "You magically mark one creature you can see within range as your quarry. Until the spell ends, you deal an extra 1d6 Force damage to the target whenever you hit it with an attack roll. You also have Advantage on any Wisdom (Perception or Survival) check you make to find it.\n\nIf the target drops to 0 Hit Points before this spell ends, you can take a Bonus Action to move the mark to a new creature you can see within range.\n\nUsing a Higher-Level Spell Slot. Your Concentration can last longer with a spell slot of level 3-4 (up to 8 hours) or 5+ (up to 24 hours).",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:ranger"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "range": {
+        "distance": 90
+      },
+      "duration": {
+        "amount": {
+          "if": {
+            "compare": {
+              "slotLevel": true
+            },
+            "atLeast": 5
+          },
+          "then": 24,
+          "else": {
+            "if": {
+              "compare": {
+                "slotLevel": true
+              },
+              "atLeast": 3
+            },
+            "then": 8,
+            "else": 1
+          }
+        },
+        "unit": "hour",
+        "upTo": true
+      },
+      "concentration": true,
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "kind": "creature"
+              },
+              {
+                "perceived": "sight",
+                "by": "self"
+              }
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "key": "mark",
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "triggered",
+                  "on": {
+                    "event": "event:roll-resolved",
+                    "by": "source",
+                    "subject": "self",
+                    "match": {
+                      "roll": "roll:attack",
+                      "success": true
+                    }
+                  },
+                  "step": {
+                    "outcomes": [
+                      {
+                        "damage": {
+                          "amount": {
+                            "dice": {
+                              "count": 1,
+                              "die": "source.huntersMark.damageDie"
+                            }
+                          },
+                          "type": "damage-type:force"
+                        },
+                        "to": "self"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "roll-mod",
+                  "to": "source",
+                  "mode": "advantage",
+                  "when": {
+                    "all": [
+                      {
+                        "event": "event:roll-made",
+                        "by": "source",
+                        "subject": "self",
+                        "match": {
+                          "roll": "roll:check",
+                          "ability": "ability:wis",
+                          "skill": [
+                            "skill:perception",
+                            "skill:survival"
+                          ]
+                        }
+                      },
+                      {
+                        "prose": {
+                          "text": "The check is made to find the marked creature.",
+                          "gap": {
+                            "category": "test",
+                            "name": "A check made to find this particular creature"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "stacks": "separate"
+            },
+            "source": "self"
+          },
+          "to": "target"
+        }
+      ]
+    }
+  ],
+  "values": {
+    "damage-die": 6
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "huntersMark": {
+          "damageDie": {
+            "$base": {
+              "value": "damage-die"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "spell-mechanics",
+      "name": "Moving the existing mark after its target reaches 0 HP must preserve the casting and its remaining concentration duration; 2014 allows it only on a subsequent turn."
+    }
+  ]
+}

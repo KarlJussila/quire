@@ -1,0 +1,53 @@
+{
+  "id": "spell:nondetection@2024",
+  "name": "Nondetection",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "For the duration, you hide a target that you touch from Divination spells. The target can be a willing creature, or it can be a place or an object no larger than 10 feet in any dimension. The target can't be targeted by any Divination spell or perceived through magical scrying sensors.",
+    "plain": "For the duration, you hide a target that you touch from Divination spells. The target can be a willing creature, or it can be a place or an object no larger than 10 feet in any dimension. The target can't be targeted by any Divination spell or perceived through magical scrying sensors.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:bard",
+    "class:ranger",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a pinch of diamond dust worth 25+ GP, which the spell consumes",
+      "parts": [
+        {
+          "worth": {
+            "amount": 25,
+            "currency": "currency:gp"
+          },
+          "consumed": true
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 8,
+        "unit": "hour"
+      }
+    }
+  ]
+}

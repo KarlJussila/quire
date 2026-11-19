@@ -1,0 +1,88 @@
+{
+  "id": "class:barbarian@2024",
+  "name": "Barbarian",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Barbarian, you gain the following class features when you reach the specified Barbarian levels.",
+    "plain": "As a Barbarian, you gain the following class features when you reach the specified Barbarian levels.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d12",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:str",
+      "atLeast": 13
+    },
+    "features": [
+      "feature:barbarian/multiclass-proficiencies@2024"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:barbarian/rage@2024",
+      "feature:barbarian/unarmored-defense@2024",
+      "feature:barbarian/weapon-mastery@2024"
+    ],
+    "2": [
+      "feature:barbarian/danger-sense@2024",
+      "feature:barbarian/reckless-attack@2024"
+    ],
+    "3": [
+      "feature:barbarian/barbarian-subclass@2024",
+      "feature:barbarian/primal-knowledge@2024"
+    ],
+    "4": [
+      "feature:barbarian/ability-score-improvement@2024"
+    ],
+    "5": [
+      "feature:barbarian/extra-attack@2024",
+      "feature:barbarian/fast-movement@2024"
+    ],
+    "7": [
+      "feature:barbarian/feral-instinct@2024",
+      "feature:barbarian/instinctive-pounce@2024"
+    ],
+    "8": [
+      "feature:barbarian/ability-score-improvement@2024"
+    ],
+    "9": [
+      "feature:barbarian/brutal-strike@2024"
+    ],
+    "11": [
+      "feature:barbarian/relentless-rage@2024"
+    ],
+    "12": [
+      "feature:barbarian/ability-score-improvement@2024"
+    ],
+    "13": [
+      "feature:barbarian/improved-brutal-strike-13@2024"
+    ],
+    "15": [
+      "feature:barbarian/persistent-rage@2024"
+    ],
+    "16": [
+      "feature:barbarian/ability-score-improvement@2024"
+    ],
+    "17": [
+      "feature:barbarian/improved-brutal-strike-17@2024"
+    ],
+    "18": [
+      "feature:barbarian/indomitable-might@2024"
+    ],
+    "19": [
+      "feature:barbarian/epic-boon@2024"
+    ],
+    "20": [
+      "feature:barbarian/primal-champion@2024"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Primal Path||Barbarian Subclass"
+  },
+  "firstClass": [
+    "feature:barbarian/proficiencies@2024"
+  ]
+}

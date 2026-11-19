@@ -1,0 +1,157 @@
+{
+  "id": "creature:will-o-wisp",
+  "name": "Will-o’-Wisp",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 19,
+  "hp": {
+    "average": 22,
+    "formula": "9d4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 0
+    },
+    "movement-mode:fly": {
+      "speed": 50,
+      "hover": true
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 10,
+    "ability:dex": 28,
+    "ability:int": 13,
+    "ability:str": 1,
+    "ability:wis": 14
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 12,
+  "xp": 450,
+  "cr": 2,
+  "languages": [
+    {
+      "text": "the languages it knew in life"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:lightning",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:acid",
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:necrotic",
+        "damage-type:thunder"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:exhaustion",
+        "condition:grappled",
+        "condition:paralyzed",
+        "condition:poisoned",
+        "condition:prone",
+        "condition:restrained",
+        "condition:unconscious"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Consume Life",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "As a bonus action, the will-o'-wisp can target one creature it can see within 5 feet of it that has 0 hit points and is still alive. The target must succeed on a DC 10 Constitution saving throw against this magic or die. If the target dies, the will-o'-wisp regains 10 (3d6) hit points.",
+        "plain": "As a bonus action, the will-o'-wisp can target one creature it can see within 5 feet of it that has 0 hit points and is still alive. The target must succeed on a DC 10 Constitution saving throw against this magic or die. If the target dies, the will-o'-wisp regains 10 (3d6) hit points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ephemeral",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The will-o'-wisp can't wear or carry anything.",
+        "plain": "The will-o'-wisp can't wear or carry anything.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Incorporeal Movement",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The will-o'-wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.",
+        "plain": "The will-o'-wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Variable Illumination",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The will-o'-wisp sheds bright light in a 5- to 20-foot radius and dim light for an additional number of feet equal to the chosen radius. The will-o'-wisp can alter the radius as a bonus action.",
+        "plain": "The will-o'-wisp sheds bright light in a 5- to 20-foot radius and dim light for an additional number of feet equal to the chosen radius. The will-o'-wisp can alter the radius as a bonus action.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shock",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "Melee Spell Attack:_ +4 to hit, reach 5 ft., one creature. _Hit:_ 9 (2d8) lightning damage.",
+        "plain": "Melee Spell Attack: +4 to hit, reach 5 ft., one creature. Hit:_ 9 (2d8) lightning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Invisibility",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The will-o'-wisp and its light magically become Invisible until it attacks or uses its Consume Life, or until its concentration ends (as if concentrating on a spell).",
+        "plain": "The will-o'-wisp and its light magically become Invisible until it attacks or uses its Consume Life, or until its concentration ends (as if concentrating on a spell).",
+        "wording": "srd"
+      }
+    }
+  ]
+}

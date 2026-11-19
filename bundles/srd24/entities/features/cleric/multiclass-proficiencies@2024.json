@@ -1,0 +1,21 @@
+{
+  "id": "feature:cleric/multiclass-proficiencies@2024",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Gain the following traits from the Core Cleric Traits table: Hit Point Die and training with Light and Medium armor and Shields.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor",
+        "group:medium-armor",
+        "group:shield"
+      ]
+    }
+  ]
+}

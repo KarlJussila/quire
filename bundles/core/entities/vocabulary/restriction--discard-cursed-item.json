@@ -1,0 +1,10 @@
+{
+  "id": "restriction:discard-cursed-item",
+  "name": "Discard Cursed Item",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Discard the specific item responsible for this curse."
+  }
+}

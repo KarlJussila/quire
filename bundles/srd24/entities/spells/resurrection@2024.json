@@ -1,0 +1,47 @@
+{
+  "id": "spell:resurrection@2024",
+  "name": "Resurrection",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "With a touch, you revive a dead creature that has been dead for no more than a century, didn't die of old age, and wasn't Undead when it died.\n\nThe creature returns to life with all its Hit Points. This spell also neutralizes any poisons that affected the creature at the time of death. This spell closes all mortal wounds and restores any missing body parts.\n\nComing back from the dead is an ordeal. The target takes a -4 penalty to D20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0.\n\nCasting this spell to revive a creature that has been dead for 365 days or longer taxes you. Until you finish a Long Rest, you can't cast spells again, and you have Disadvantage on D20 Tests.",
+    "plain": "With a touch, you revive a dead creature that has been dead for no more than a century, didn't die of old age, and wasn't Undead when it died.\n\nThe creature returns to life with all its Hit Points. This spell also neutralizes any poisons that affected the creature at the time of death. This spell closes all mortal wounds and restores any missing body parts.\n\nComing back from the dead is an ordeal. The target takes a -4 penalty to D20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0.\n\nCasting this spell to revive a creature that has been dead for 365 days or longer taxes you. Until you finish a Long Rest, you can't cast spells again, and you have Disadvantage on D20 Tests.",
+    "wording": "srd"
+  },
+  "level": 7,
+  "school": "spell-school:necromancy",
+  "lists": [
+    "class:bard",
+    "class:cleric"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a diamond worth 1,000+ GP, which the spell consumes",
+      "parts": [
+        {
+          "worth": {
+            "amount": 1000,
+            "currency": "currency:gp"
+          },
+          "consumed": true
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "time": {
+        "amount": 1,
+        "unit": "hour"
+      },
+      "range": {
+        "touch": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

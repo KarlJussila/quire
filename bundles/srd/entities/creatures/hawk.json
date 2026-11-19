@@ -1,0 +1,61 @@
+{
+  "id": "creature:hawk",
+  "name": "Hawk",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "hp": {
+    "average": 1,
+    "formula": "1d4 - 1"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 8,
+    "ability:dex": 16,
+    "ability:int": 2,
+    "ability:str": 5,
+    "ability:wis": 14
+  },
+  "skills": {
+    "skill:perception": 4
+  },
+  "passivePerception": 14,
+  "xp": 10,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Keen Sight",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hawk has advantage on Wisdom (Perception) checks that rely on sight.",
+        "plain": "The hawk has advantage on Wisdom (Perception) checks that rely on sight.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Talons",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 1 slashing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 1 slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

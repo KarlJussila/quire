@@ -1,0 +1,15 @@
+{
+  "id": "item:ring-of-free-action@2024",
+  "name": "Ring of Free Action",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you wear this ring, Difficult Terrain doesn't cost you extra movement. In addition, magic can neither reduce any of your Speeds nor cause you to have the Paralyzed or Restrained condition.",
+    "plain": "While you wear this ring, Difficult Terrain doesn't cost you extra movement. In addition, magic can neither reduce any of your Speeds nor cause you to have the Paralyzed or Restrained condition.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:rare",
+  "attunement": true
+}

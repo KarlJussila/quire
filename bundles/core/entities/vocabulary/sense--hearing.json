@@ -1,0 +1,10 @@
+{
+  "id": "sense:hearing",
+  "name": "Hearing",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Perceives sounds."
+  }
+}

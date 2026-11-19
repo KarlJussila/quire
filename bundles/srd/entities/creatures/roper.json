@@ -1,0 +1,115 @@
+{
+  "id": "creature:roper",
+  "name": "Roper",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:neutral-evil",
+  "ac": 20,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 93,
+    "formula": "11d10 + 33"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:climb": {
+      "speed": 10
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 17,
+    "ability:dex": 8,
+    "ability:int": 7,
+    "ability:str": 18,
+    "ability:wis": 16
+  },
+  "skills": {
+    "skill:perception": 6,
+    "skill:stealth": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 16,
+  "xp": 1800,
+  "cr": 5,
+  "blocks": [
+    {
+      "name": "False Appearance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the roper remains motionless, it is indistinguishable from a normal cave formation, such as a stalagmite.",
+        "plain": "While the roper remains motionless, it is indistinguishable from a normal cave formation, such as a stalagmite.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Grasping Tendrils",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The roper can have up to six tendrils at a time. Each tendril can be attacked (AC 20; 10 hit points; immunity to poison and psychic damage). Destroying a tendril deals no damage to the roper, which can extrude a replacement tendril on its next turn. A tendril can also be broken if a creature takes an action and succeeds on a DC 15 Strength check against it.",
+        "plain": "The roper can have up to six tendrils at a time. Each tendril can be attacked (AC 20; 10 hit points; immunity to poison and psychic damage). Destroying a tendril deals no damage to the roper, which can extrude a replacement tendril on its next turn. A tendril can also be broken if a creature takes an action and succeeds on a DC 15 Strength check against it.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spider Climb",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The roper can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+        "plain": "The roper can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The roper makes four attacks with its tendrils, uses Reel, and makes one attack with its bite.",
+        "plain": "The roper makes four attacks with its tendrils, uses Reel, and makes one attack with its bite.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +7 to hit, reach 5 ft., one target. _Hit:_ 22 (4d8 + 4) piercing damage.",
+        "plain": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 22 (4d8 + 4) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tendril",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +7 to hit, reach 50 ft., one creature. _Hit:_ The target is Grappled (escape DC 15). Until the grapple ends, the target is Restrained and has disadvantage on Strength checks and Strength saving throws, and the roper can't use the same tendril on another target.",
+        "plain": "Melee Weapon Attack: +7 to hit, reach 50 ft., one creature. Hit: The target is Grappled (escape DC 15). Until the grapple ends, the target is Restrained and has disadvantage on Strength checks and Strength saving throws, and the roper can't use the same tendril on another target.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Reel",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The roper pulls each creature Grappled by it up to 25 feet straight toward it.",
+        "plain": "The roper pulls each creature Grappled by it up to 25 feet straight toward it.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

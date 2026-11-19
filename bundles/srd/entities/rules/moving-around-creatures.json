@@ -1,0 +1,16 @@
+{
+  "id": "rule:moving-around-creatures",
+  "name": "Moving Around Other Creatures",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can move through a nonhostile creature's space. In contrast, you can move through a hostile creature's space only if the creature is at least two sizes larger or smaller than you. Remember that another creature's space is difficult terrain for you.\n\nWhether a creature is a friend or an enemy, you can't willingly end your move in its space.\n\nIf you leave a hostile creature's reach during your move, you provoke an opportunity attack.",
+    "plain": "You can move through a nonhostile creature's space. In contrast, you can move through a hostile creature's space only if the creature is at least two sizes larger or smaller than you. Remember that another creature's space is difficult terrain for you.\n\nWhether a creature is a friend or an enemy, you can't willingly end your move in its space.\n\nIf you leave a hostile creature's reach during your move, you provoke an opportunity attack.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  }
+}

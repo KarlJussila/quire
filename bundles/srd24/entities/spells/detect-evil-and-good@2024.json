@@ -1,0 +1,45 @@
+{
+  "id": "spell:detect-evil-and-good@2024",
+  "name": "Detect Evil and Good",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "For the duration, you sense the location of any Aberration, Celestial, Elemental, Fey, Fiend, or Undead within 30 feet of yourself. You also sense whether the Hallow spell is active there and, if so, where.\n\nThe spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.",
+    "plain": "For the duration, you sense the location of any Aberration, Celestial, Elemental, Fey, Fiend, or Undead within 30 feet of yourself. You also sense whether the Hallow spell is active there and, if so, where.\n\nThe spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:cleric",
+    "class:paladin"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": {
+        "amount": 10,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true,
+      "sourceTypes": [
+        "source-type:creature-type-detection"
+      ]
+    }
+  ]
+}

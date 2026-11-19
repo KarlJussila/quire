@@ -1,0 +1,25 @@
+{
+  "id": "feature:warlock/witch-sight",
+  "name": "Witch Sight",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite: 15th level_\n\nYou can see the true form of any shapechanger or creature concealed by illusion or transmutation magic while the creature is within 30 feet of you and within line of sight.",
+    "plain": "Prerequisite: 15th level\n\nYou can see the true form of any shapechanger or creature concealed by illusion or transmutation magic while the creature is within 30 feet of you and within line of sight.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "See the true form only of shapechangers and creatures concealed by Illusion or Transmutation magic within 30 feet and line of sight."
+    }
+  ],
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 15
+  }
+}

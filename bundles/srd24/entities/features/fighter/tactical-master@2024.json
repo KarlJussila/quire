@@ -1,0 +1,18 @@
+{
+  "id": "feature:fighter/tactical-master@2024",
+  "name": "Level 9: Tactical Master",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you attack with a weapon whose mastery property you can use, you can replace that property with the Push, Sap, or Slow property for that attack.",
+    "plain": "When you attack with a weapon whose mastery property you can use, you can replace that property with the Push, Sap, or Slow property for that attack.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Using Push, Sap, or Slow in place of the weapon's own mastery property for one attack: nothing yet says a rider is used instead of another, so the weapon's own would still run."
+    }
+  ]
+}

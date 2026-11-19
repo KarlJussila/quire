@@ -1,0 +1,21 @@
+{
+  "id": "feature:elf/keen-senses",
+  "name": "Keen Senses",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have proficiency in the Perception skill.",
+    "plain": "You have proficiency in the Perception skill.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "skill:perception"
+      ]
+    }
+  ],
+  "gaps": []
+}

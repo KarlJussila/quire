@@ -1,0 +1,58 @@
+{
+  "id": "feature:sorcerer/draconic-sorcery/dragon-wings@2024",
+  "name": "Level 14: Dragon Wings",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Bonus Action, you can cause draconic wings to appear on your back. The wings last for 1 hour or until you dismiss them (no action required). For the duration, you have a Fly Speed of 60 feet.\n\nOnce you use this feature, you can't use it again until you finish a Long Rest unless you spend 3 Sorcery Points (no action required) to restore your use of it.",
+    "plain": "As a Bonus Action, you can cause draconic wings to appear on your back. The wings last for 1 hour or until you dismiss them (no action required). For the duration, you have a Fly Speed of 60 feet.\n\nOnce you use this feature, you can't use it again until you finish a Long Rest unless you spend 3 Sorcery Points (no action required) to restore your use of it.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "dragon-wings",
+      "name": "Dragon Wings",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "speed",
+                  "mode": "movement-mode:fly",
+                  "speed": 60
+                }
+              ]
+            },
+            "duration": {
+              "amount": 1,
+              "unit": "hour"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

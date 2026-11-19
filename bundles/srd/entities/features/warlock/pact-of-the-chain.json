@@ -1,0 +1,99 @@
+{
+  "id": "feature:warlock/pact-of-the-chain",
+  "name": "Pact of the Chain",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You learn the Find Familiar spell and can cast it as a ritual. The spell doesn't count against your number of spells known.\n\nWhen you cast the spell, you can choose one of the normal forms for your familiar or one of the following special forms: imp, pseudodragon, quasit, or sprite.\n\nAdditionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its reaction.",
+    "plain": "You learn the Find Familiar spell and can cast it as a ritual. The spell doesn't count against your number of spells known.\n\nWhen you cast the spell, you can choose one of the normal forms for your familiar or one of the following special forms: imp, pseudodragon, quasit, or sprite.\n\nAdditionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its reaction.",
+    "wording": "srd"
+  },
+  "group": "group:pact-boon",
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:find-familiar"
+      ],
+      "how": "known",
+      "counts": false
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "spell": "spell:find-familiar"
+        }
+      },
+      "set": {
+        "time": {
+          "$add": {
+            "amount": 10,
+            "unit": "minute"
+          }
+        },
+        "cost": {
+          "$remove": {
+            "resource": "spell-slots"
+          }
+        },
+        "ritual": true
+      },
+      "variant": "ritual"
+    }
+  ],
+  "gaps": [
+    {
+      "category": "content-dependency",
+      "name": "Find Familiar must provide its summon selector, one-familiar lifecycle, sourced familiar marker, and typed creature attacks. This feature then adds Imp, Pseudodragon, Quasit, or Sprite to the normal forms and can grant the familiar’s reaction attack."
+    }
+  ],
+  "activities": [
+    {
+      "key": "familiar-attack",
+      "name": "Familiar Attack",
+      "trigger": {
+        "event": "event:activity-used",
+        "by": "self",
+        "match": {
+          "action": "action:attack"
+        }
+      },
+      "cost": [
+        {
+          "forgo": "attack"
+        }
+      ],
+      "outcomes": [
+        {
+          "grant": {
+            "activity": {
+              "kind": "activity",
+              "where": {
+                "match": {
+                  "delivery": {
+                    "attack": true
+                  }
+                }
+              }
+            },
+            "cost": [
+              {
+                "resource": "reaction"
+              }
+            ]
+          },
+          "to": {
+            "pool": "any",
+            "where": {
+              "has": "state:familiar",
+              "source": "self"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

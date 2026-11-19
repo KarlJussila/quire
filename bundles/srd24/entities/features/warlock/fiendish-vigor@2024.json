@@ -1,0 +1,48 @@
+{
+  "id": "feature:warlock/fiendish-vigor@2024",
+  "name": "Fiendish Vigor",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 2+ Warlock_\n\nYou can cast False Life on yourself without expending a spell slot. When you cast the spell with this feature, you don't roll the die for the Temporary Hit Points; you automatically get the highest number on the die.",
+    "plain": "Prerequisite: Level 2+ Warlock\n\nYou can cast False Life on yourself without expending a spell slot. When you cast the spell with this feature, you don't roll the die for the Temporary Hit Points; you automatically get the highest number on the die.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 2
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:false-life"
+      ],
+      "how": "innate",
+      "set": {
+        "activities": {
+          "cast": {
+            "target": {
+              "$replace": {
+                "who": "self",
+                "count": 1
+              }
+            },
+            "outcomes": {
+              "$replace": [
+                {
+                  "tempHp": {
+                    "amount": 12
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "alignment:chaotic-good",
+  "name": "Chaotic Good",
+  "source": {
+    "book": "core"
+  },
+  "components": [
+    "alignment:chaotic",
+    "alignment:good"
+  ]
+}

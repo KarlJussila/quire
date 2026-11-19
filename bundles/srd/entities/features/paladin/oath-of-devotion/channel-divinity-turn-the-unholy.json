@@ -1,0 +1,81 @@
+{
+  "id": "feature:paladin/oath-of-devotion/channel-divinity-turn-the-unholy",
+  "name": "Channel Divinity: Turn the Unholy",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As an action, you present your holy symbol and speak a prayer censuring fiends and undead, using your Channel Divinity. Each fiend or undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes damage.",
+    "plain": "As an action, you present your holy symbol and speak a prayer censuring fiends and undead, using your Channel Divinity. Each fiend or undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes damage.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "turn-the-unholy",
+      "name": "Channel Divinity: Turn the Unholy",
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "channel-divinity"
+        }
+      ],
+      "target": {
+        "count": "all",
+        "who": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "within": 30,
+                "of": "self"
+              },
+              {
+                "match": {
+                  "creatureType": [
+                    "creature-type:fiend",
+                    "creature-type:undead"
+                  ]
+                }
+              },
+              {
+                "any": [
+                  {
+                    "perceives": {
+                      "sense": "sight",
+                      "of": "self"
+                    }
+                  },
+                  {
+                    "perceives": {
+                      "sense": "hearing",
+                      "of": "self"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:wis",
+          "dc": "spellcasting.class:paladin.dc"
+        }
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "A creature that fails is turned for 1 minute or until it takes damage. A turned creature must spend its turns moving as far from you as it can, cannot willingly move within 30 feet of you, cannot take reactions, and on its turn can only Dash or try to escape an effect that prevents it from moving. If it has nowhere to move, it can Dodge.",
+            "gap": {
+              "category": "state",
+              "name": "turned"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

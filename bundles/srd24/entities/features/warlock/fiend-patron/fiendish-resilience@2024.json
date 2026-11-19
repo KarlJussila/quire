@@ -1,0 +1,53 @@
+{
+  "id": "feature:warlock/fiend-patron/fiendish-resilience@2024",
+  "name": "Level 10: Fiendish Resilience",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Choose one damage type, other than Force, whenever you finish a Short or Long Rest. You have Resistance to that damage type until you choose a different one with this feature.",
+    "plain": "Choose one damage type, other than Force, whenever you finish a Short or Long Rest. You have Resistance to that damage type until you choose a different one with this feature.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        {
+          "choose": {
+            "key": "fiendish-resilience",
+            "name": "Damage Type",
+            "from": [
+              {
+                "kind": "damage-type",
+                "where": {
+                  "not": {
+                    "is": "damage-type:force"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-fiendish-resilience",
+      "name": "Replace Damage Type",
+      "trigger": {
+        "event": "event:rest-finished",
+        "subject": "self"
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "fiendish-resilience"
+          }
+        }
+      ]
+    }
+  ]
+}

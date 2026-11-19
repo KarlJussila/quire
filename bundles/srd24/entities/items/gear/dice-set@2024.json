@@ -1,0 +1,17 @@
+{
+  "id": "item:dice-set@2024",
+  "name": "Dice Set",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:gaming-set",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:sp"
+  },
+  "weight": 0.0
+}

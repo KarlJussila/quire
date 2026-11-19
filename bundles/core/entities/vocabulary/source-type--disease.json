@@ -1,0 +1,7 @@
+{
+  "id": "source-type:disease",
+  "name": "Disease",
+  "source": {
+    "book": "core"
+  }
+}

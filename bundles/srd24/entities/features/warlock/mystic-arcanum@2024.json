@@ -1,0 +1,188 @@
+{
+  "id": "feature:warlock/mystic-arcanum@2024",
+  "name": "Level 11: Mystic Arcanum",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your patron grants you a magical secret called an arcanum. Choose one level 6 Warlock spell as this arcanum.\n\nYou can cast your arcanum spell once without expending a spell slot, and you must finish a Long Rest before you can cast it in this way again.\n\nAs shown in the Warlock Features table, you gain another Warlock spell of your choice that can be cast in this way when you reach Warlock levels 13 (level 7 spell), 15 (level 8 spell), and 17 (level 9 spell). You regain all uses of your Mystic Arcanum when you finish a Long Rest.\n\nWhenever you gain a Warlock level, you can replace one of your arcanum spells with another Warlock spell of the same level.",
+    "plain": "Your patron grants you a magical secret called an arcanum. Choose one level 6 Warlock spell as this arcanum.\n\nYou can cast your arcanum spell once without expending a spell slot, and you must finish a Long Rest before you can cast it in this way again.\n\nAs shown in the Warlock Features table, you gain another Warlock spell of your choice that can be cast in this way when you reach Warlock levels 13 (level 7 spell), 15 (level 8 spell), and 17 (level 9 spell). You regain all uses of your Mystic Arcanum when you finish a Long Rest.\n\nWhenever you gain a Warlock level, you can replace one of your arcanum spells with another Warlock spell of the same level.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "arcanum-6",
+            "name": "Level 6 Arcanum",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:warlock",
+                    "level": 6
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "innate",
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "when": {
+        "compare": "levels.class:warlock",
+        "atLeast": 11
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "arcanum-7",
+            "name": "Level 7 Arcanum",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:warlock",
+                    "level": 7
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "innate",
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "when": {
+        "compare": "levels.class:warlock",
+        "atLeast": 13
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "arcanum-8",
+            "name": "Level 8 Arcanum",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:warlock",
+                    "level": 8
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "innate",
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "when": {
+        "compare": "levels.class:warlock",
+        "atLeast": 15
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "arcanum-9",
+            "name": "Level 9 Arcanum",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:warlock",
+                    "level": 9
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "innate",
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "when": {
+        "compare": "levels.class:warlock",
+        "atLeast": 17
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Replacing one arcanum spell with another Warlock spell of the same level whenever you gain a Warlock level is not encoded."
+    }
+  ]
+}

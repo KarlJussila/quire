@@ -1,0 +1,7 @@
+{
+  "id": "group:character",
+  "name": "Character",
+  "source": {
+    "book": "core"
+  }
+}

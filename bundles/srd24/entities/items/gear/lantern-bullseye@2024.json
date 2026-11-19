@@ -1,0 +1,18 @@
+{
+  "id": "item:lantern-bullseye@2024",
+  "name": "Lantern, Bullseye",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Bullseye Lantern burns Oil as fuel to cast Bright Light in a 60-foot Cone and Dim Light for an additional 60 feet.",
+    "plain": "A Bullseye Lantern burns Oil as fuel to cast Bright Light in a 60-foot Cone and Dim Light for an additional 60 feet.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 2.0
+}

@@ -1,0 +1,39 @@
+{
+  "id": "feature:fighter/champion/improved-critical",
+  "name": "Improved Critical",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning when you choose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20.",
+    "plain": "Beginning when you choose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "attack-mechanics",
+      "name": "weapon attacks score critical hits on rolls of 19 or 20"
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "criticalMinimum": {
+          "$atMost": 19
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "via": "weapon"
+          }
+        }
+      }
+    }
+  ]
+}

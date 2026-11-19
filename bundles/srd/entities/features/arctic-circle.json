@@ -1,0 +1,12 @@
+{
+  "id": "feature:arctic-circle",
+  "name": "Arctic Circle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "| Druid Level   | Circle Spells                             |\n|---------------|-------------------------------------------|\n| 3rd           | Hold Person, Spike Growth         |\n| 5th           | Sleet Storm, Slow                 |\n| 7th           | Freedom of Movement, Ice Storm    |\n| 9th           | Commune with Nature, Cone of Cold |",
+    "plain": "| Druid Level   | Circle Spells                             |\n|---------------|-------------------------------------------|\n| 3rd           | Hold Person, Spike Growth         |\n| 5th           | Sleet Storm, Slow                 |\n| 7th           | Freedom of Movement, Ice Storm    |\n| 9th           | Commune with Nature, Cone of Cold |",
+    "wording": "srd"
+  }
+}

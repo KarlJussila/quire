@@ -1,0 +1,18 @@
+{
+  "id": "rule:object@2024",
+  "name": "Object",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "An object is a nonliving, distinct thing. Composite things, like buildings, comprise more than one object. _See also_ \"Breaking Objects.\"",
+    "plain": "An object is a nonliving, distinct thing. Composite things, like buildings, comprise more than one object. See also \"Breaking Objects.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

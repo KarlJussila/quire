@@ -1,0 +1,50 @@
+{
+  "id": "feature:paladin/oath-of-devotion/purity-of-spirit",
+  "name": "Purity of Spirit",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 15th level, you are always under the effects of a Protection from Evil and Good spell.",
+    "plain": "Beginning at 15th level, you are always under the effects of a Protection from Evil and Good spell.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any",
+          "where": {
+            "match": {
+              "creatureType": [
+                "creature-type:aberration",
+                "creature-type:celestial",
+                "creature-type:elemental",
+                "creature-type:fey",
+                "creature-type:fiend",
+                "creature-type:undead"
+              ]
+            }
+          }
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "defense",
+      "name": "Creatures of the listed types cannot charm, frighten, or possess you."
+    },
+    {
+      "category": "roll",
+      "name": "While charmed, frightened, or possessed by a listed creature, you have Advantage on new saving throws against the relevant effect."
+    }
+  ]
+}

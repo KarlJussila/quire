@@ -1,0 +1,52 @@
+{
+  "id": "condition:stunned",
+  "name": "Stunned",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- A Stunned creature is Incapacitated (see the condition), can't move, and can speak only falteringly.\n- The creature automatically fails Strength and Dexterity saving throws.\n- Attack rolls against the creature have advantage.",
+    "plain": "A Stunned creature is Incapacitated (see the condition), can't move, and can speak only falteringly.\nThe creature automatically fails Strength and Dexterity saving throws.\nAttack rolls against the creature have advantage.",
+    "wording": "srd"
+  },
+  "implies": [
+    "condition:incapacitated"
+  ],
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:move"
+      ]
+    },
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": [
+            "ability:str",
+            "ability:dex"
+          ]
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any"
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    }
+  ]
+}

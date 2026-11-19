@@ -1,0 +1,11 @@
+{
+  "id": "group:spellcasting-focus/cleric",
+  "name": "Cleric Spellcasting Focus",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:spellcasting-focus",
+  "text": {
+    "plain": "Items in this group can serve as a spellcasting focus for Cleric spells when held, as permitted by that class’s spellcasting rules."
+  }
+}

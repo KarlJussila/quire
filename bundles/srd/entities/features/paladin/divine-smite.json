@@ -1,0 +1,91 @@
+{
+  "id": "feature:paladin/divine-smite",
+  "name": "Divine Smite",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon's damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend.",
+    "plain": "Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon's damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "scaling",
+      "name": "+1d8 per slot level above 1st (max 5d8); +1d8 against undead and fiends (max 6d8 total)"
+    }
+  ],
+  "activities": [
+    {
+      "key": "divine-smite",
+      "name": "Divine Smite",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 2
+      },
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "range": "melee",
+            "via": "weapon"
+          }
+        }
+      },
+      "cost": [
+        {
+          "resource": "spell-slots"
+        }
+      ],
+      "outcomes": [
+        {
+          "damage": {
+            "amount": {
+              "dice": {
+                "count": {
+                  "min": [
+                    {
+                      "sum": [
+                        1,
+                        {
+                          "slotLevel": true
+                        }
+                      ]
+                    },
+                    5
+                  ]
+                },
+                "die": 8
+              }
+            },
+            "type": "damage-type:radiant"
+          },
+          "to": "subject"
+        },
+        {
+          "damage": {
+            "amount": {
+              "dice": {
+                "count": 1,
+                "die": 8
+              }
+            },
+            "type": "damage-type:radiant"
+          },
+          "when": {
+            "match": {
+              "creatureType": [
+                "creature-type:undead",
+                "creature-type:fiend"
+              ]
+            }
+          },
+          "to": "subject"
+        }
+      ]
+    }
+  ]
+}

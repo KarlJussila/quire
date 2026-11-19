@@ -1,0 +1,11 @@
+{
+  "id": "feature:elves",
+  "name": "Elves",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "item:ring-of-warmth@2024",
+  "name": "Ring of Warmth",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you take Cold damage while wearing this ring, the ring reduces the damage you take by 2d8.\n\nIn addition, while wearing this ring, you and everything you wear and carry are unharmed by temperatures of 0 degrees Fahrenheit or lower.",
+    "plain": "If you take Cold damage while wearing this ring, the ring reduces the damage you take by 2d8.\n\nIn addition, while wearing this ring, you and everything you wear and carry are unharmed by temperatures of 0 degrees Fahrenheit or lower.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "amount": {
+          "$subtract": "2d8"
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:taking-damage",
+            "subject": "self",
+            "match": {
+              "against": {
+                "damageType": "damage-type:cold"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "suppress",
+      "rule": [
+        "rule:extreme-cold"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "content-dependency",
+      "name": "The schema corpus has no object-temperature harm procedure for the clause protecting everything you wear and carry; only the creature extreme-cold rule is represented."
+    }
+  ]
+}

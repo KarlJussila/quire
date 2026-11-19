@@ -1,0 +1,48 @@
+{
+  "id": "condition:charmed",
+  "name": "Charmed",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- A Charmed creature can't attack the charmer or target the charmer with harmful abilities or magical effects.\n- The charmer has advantage on any ability check to interact socially with the creature.",
+    "plain": "A Charmed creature can't attack the charmer or target the charmer with harmful abilities or magical effects.\nThe charmer has advantage on any ability check to interact socially with the creature.",
+    "wording": "srd"
+  },
+  "sourceName": "the charmer",
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:attack",
+        "restriction:target-harmful"
+      ],
+      "target": "source"
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "source",
+            "subject": "self",
+            "match": {
+              "roll": "roll:check"
+            }
+          },
+          {
+            "prose": {
+              "text": "social interaction",
+              "gap": {
+                "category": "test",
+                "name": "social-interaction"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

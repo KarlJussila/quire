@@ -1,0 +1,42 @@
+{
+  "id": "rule:ranged-weapon",
+  "name": "Ranged Weapon",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A ranged weapon's attack is a ranged attack and uses Dexterity."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "object",
+    "where": {
+      "group": "group:ranged-weapon"
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "attack": {
+                "item": "this"
+              }
+            }
+          }
+        }
+      },
+      "set": {
+        "delivery": {
+          "attack": {
+            "range": "ranged",
+            "ability": "ability:dex"
+          }
+        }
+      }
+    }
+  ]
+}

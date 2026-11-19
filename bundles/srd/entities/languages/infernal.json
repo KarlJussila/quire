@@ -1,0 +1,15 @@
+{
+  "id": "language:infernal",
+  "name": "Infernal",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "An exotic language, typically spoken by devils, written in the Infernal script.",
+    "plain": "An exotic language, typically spoken by devils, written in the Infernal script.",
+    "wording": "original"
+  },
+  "group": "group:exotic-language",
+  "script": "Infernal",
+  "speakers": "Devils"
+}

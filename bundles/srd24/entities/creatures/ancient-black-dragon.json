@@ -1,0 +1,167 @@
+{
+  "id": "creature:ancient-black-dragon@2024",
+  "name": "Ancient Black Dragon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:gargantuan",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 22,
+  "hp": {
+    "average": 367,
+    "formula": "21d20 + 147"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 22,
+    "ability:con": 25,
+    "ability:dex": 14,
+    "ability:int": 16,
+    "ability:str": 27,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:dex": 9,
+    "ability:wis": 9
+  },
+  "skills": {
+    "skill:perception": 16,
+    "skill:stealth": 9
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    },
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 26,
+  "xp": 33000,
+  "proficiencyBonus": 7,
+  "initiative": 16,
+  "habitat": [
+    "Swamp"
+  ],
+  "treasure": [
+    "Relics"
+  ],
+  "cr": 21,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:acid"
+      ]
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The dragon can breathe air and water.",
+        "plain": "The dragon can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Legendary Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "plain": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast Acid Arrow (level 4 version).",
+        "plain": "The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast Acid Arrow (level 4 version).",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +15, reach 15 ft. _Hit:_ 17 (2d8 + 8) Slashing damage plus 9 (2d8) Acid damage.",
+        "plain": "Melee Attack Roll: +15, reach 15 ft. Hit: 17 (2d8 + 8) Slashing damage plus 9 (2d8) Acid damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Acid Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 22, each creature in a 90-foot-long, 10-footwide Line. _Failure:_ 67 (15d8) Acid damage. _Success:_ Half damage.",
+        "plain": "Dexterity Saving Throw: DC 22, each creature in a 90-foot-long, 10-footwide Line. Failure: 67 (15d8) Acid damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 21, +13 to hit with spell attacks):\n\n- **At Will:** Acid Arrow (level 4 version), Detect Magic, Fear\n- **1/Day Each:** Create Undead, Speak with Dead, Vitriolic Sphere (level 5 version)",
+        "plain": "The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 21, +13 to hit with spell attacks):\n\n- At Will: Acid Arrow (level 4 version), Detect Magic, Fear\n- 1/Day Each: Create Undead, Speak with Dead, Vitriolic Sphere (level 5 version)",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Cloud of Insects",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 21, one creature the dragon can see within 120 feet. _Failure:_ 33 (6d10) Poison damage, and the target has Disadvantage on saving throws to maintain Concentration until the end of its next turn. _Failure or Success:_ The dragon can't take this action again until the start of its next turn.",
+        "plain": "Dexterity Saving Throw: DC 21, one creature the dragon can see within 120 feet. Failure: 33 (6d10) Poison damage, and the target has Disadvantage on saving throws to maintain Concentration until the end of its next turn. Failure or Success: The dragon can't take this action again until the start of its next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Frightful Presence",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon uses Spellcasting to cast Fear. The dragon can't take this action again until the start of its next turn.",
+        "plain": "The dragon uses Spellcasting to cast Fear. The dragon can't take this action again until the start of its next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pounce",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon moves up to half its Speed, and it makes one Rend attack.",
+        "plain": "The dragon moves up to half its Speed, and it makes one Rend attack.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

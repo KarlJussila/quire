@@ -1,0 +1,17 @@
+{
+  "id": "item:pole-10-foot",
+  "name": "Pole (10—foot)",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:cp"
+  },
+  "weight": 7.0
+}

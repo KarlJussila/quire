@@ -1,0 +1,49 @@
+{
+  "id": "spell:continual-flame",
+  "name": "Continual Flame",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A _Continual Flame_ can be covered or hidden but not smothered or quenched.",
+    "plain": "A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A Continual Flame can be covered or hidden but not smothered or quenched.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:evocation",
+  "lists": [
+    "class:cleric",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "ruby dust worth 50 gp, which the spell consumes",
+      "parts": [
+        {
+          "worth": {
+            "amount": 50,
+            "currency": "currency:gp"
+          },
+          "consumed": true
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": "until-dispelled"
+    }
+  ]
+}

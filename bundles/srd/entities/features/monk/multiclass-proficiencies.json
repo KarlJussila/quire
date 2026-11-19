@@ -1,0 +1,20 @@
+{
+  "id": "feature:monk/multiclass-proficiencies",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Proficiencies Gained: Simple weapons, shortswords",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon",
+        "item:shortsword"
+      ]
+    }
+  ]
+}

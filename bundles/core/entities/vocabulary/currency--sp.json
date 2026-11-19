@@ -1,0 +1,12 @@
+{
+  "id": "currency:sp",
+  "name": "Silver Piece",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "cp": 10,
+  "symbol": "sp"
+}

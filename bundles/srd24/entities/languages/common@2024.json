@@ -1,0 +1,13 @@
+{
+  "id": "language:common@2024",
+  "name": "Common",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A standard language, widespread in the setting. Every player character knows it.",
+    "plain": "A standard language, widespread in the setting. Every player character knows it.",
+    "wording": "srd"
+  },
+  "group": "group:standard-language"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "creature:pony",
+  "name": "Pony",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 10,
+  "hp": {
+    "average": 11,
+    "formula": "2d8 + 2"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 13,
+    "ability:dex": 10,
+    "ability:int": 2,
+    "ability:str": 15,
+    "ability:wis": 11
+  },
+  "passivePerception": 10,
+  "xp": 25,
+  "cr": 0.125,
+  "blocks": [
+    {
+      "name": "Hooves",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 7 (2d4 + 2) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

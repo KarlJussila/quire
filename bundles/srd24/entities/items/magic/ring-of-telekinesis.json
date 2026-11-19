@@ -1,0 +1,15 @@
+{
+  "id": "item:ring-of-telekinesis@2024",
+  "name": "Ring of Telekinesis",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this ring, you can cast Telekinesis from it.",
+    "plain": "While wearing this ring, you can cast Telekinesis from it.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:very-rare",
+  "attunement": true
+}

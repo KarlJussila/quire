@@ -1,0 +1,247 @@
+{
+  "id": "feature:cleric/channel-divinity@2024",
+  "name": "Level 2: Channel Divinity",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can channel divine energy directly from the Outer Planes to fuel magical effects. You start with two such effects: Divine Spark and Turn Undead, each of which is described below. Each time you use this class's Channel Divinity, choose which Channel Divinity effect from this class to create. You gain additional effect options at higher Cleric levels.\n\nYou can use this class's Channel Divinity twice. You regain one of its expended uses when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest. You gain additional uses when you reach certain Cleric levels, as shown in the Channel Divinity column of the Cleric Features table.\n\nIf a Channel Divinity effect requires a saving throw, the DC equals the spell save DC from this class's Spellcasting feature.\n\n_**Divine Spark.**_ As a Magic action, you point your Holy Symbol at another creature you can see within 30 feet of yourself and focus divine energy at it. Roll 1d8 and add your Wisdom modifier. You either restore Hit Points to the creature equal to that total or force the creature to make a Constitution saving throw. On a failed save, the creature takes Necrotic or Radiant damage (your choice) equal to that total. On a successful save, the creature takes half as much damage (round down).\n\nYou roll an additional d8 when you reach Cleric levels 7 (2d8), 13 (3d8), and 18 (4d8).\n\n_**Turn Undead.**_ As a Magic action, you present your Holy Symbol and censure Undead creatures. Each Undead of your choice within 30 feet of you must make a Wisdom saving throw. If the creature fails its save, it has the Frightened and Incapacitated conditions for 1 minute. For that duration, it tries to move as far from you as it can on its turns. This effect ends early on the creature if it takes any damage, if you have the Incapacitated condition, or if you die.",
+    "plain": "You can channel divine energy directly from the Outer Planes to fuel magical effects. You start with two such effects: Divine Spark and Turn Undead, each of which is described below. Each time you use this class's Channel Divinity, choose which Channel Divinity effect from this class to create. You gain additional effect options at higher Cleric levels.\n\nYou can use this class's Channel Divinity twice. You regain one of its expended uses when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest. You gain additional uses when you reach certain Cleric levels, as shown in the Channel Divinity column of the Cleric Features table.\n\nIf a Channel Divinity effect requires a saving throw, the DC equals the spell save DC from this class's Spellcasting feature.\n\nDivine Spark. As a Magic action, you point your Holy Symbol at another creature you can see within 30 feet of yourself and focus divine energy at it. Roll 1d8 and add your Wisdom modifier. You either restore Hit Points to the creature equal to that total or force the creature to make a Constitution saving throw. On a failed save, the creature takes Necrotic or Radiant damage (your choice) equal to that total. On a successful save, the creature takes half as much damage (round down).\n\nYou roll an additional d8 when you reach Cleric levels 7 (2d8), 13 (3d8), and 18 (4d8).\n\nTurn Undead. As a Magic action, you present your Holy Symbol and censure Undead creatures. Each Undead of your choice within 30 feet of you must make a Wisdom saving throw. If the creature fails its save, it has the Frightened and Incapacitated conditions for 1 minute. For that duration, it tries to move as far from you as it can on its turns. This effect ends early on the creature if it takes any damage, if you have the Incapacitated condition, or if you die.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "divine-spark",
+      "name": "Divine Spark",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "channel-divinity"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "not": {
+                  "is": "self"
+                }
+              },
+              {
+                "perceived": "sight",
+                "by": "self"
+              }
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "choose": {
+            "key": "spark",
+            "name": "Divine Spark",
+            "from": [
+              {
+                "name": "Restore hit points",
+                "of": [
+                  {
+                    "heal": {
+                      "amount": {
+                        "sum": [
+                          {
+                            "byLevel": {
+                              "1": "1d8",
+                              "7": "2d8",
+                              "13": "3d8",
+                              "18": "4d8"
+                            },
+                            "of": "class:cleric"
+                          },
+                          "modifiers.ability:wis"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Damage",
+                "of": [
+                  {
+                    "then": {
+                      "delivery": {
+                        "save": {
+                          "ability": "ability:con",
+                          "dc": "spellcasting.class:cleric.dc"
+                        }
+                      },
+                      "outcomes": [
+                        {
+                          "damage": {
+                            "amount": {
+                              "sum": [
+                                {
+                                  "byLevel": {
+                                    "1": "1d8",
+                                    "7": "2d8",
+                                    "13": "3d8",
+                                    "18": "4d8"
+                                  },
+                                  "of": "class:cleric"
+                                },
+                                "modifiers.ability:wis"
+                              ]
+                            },
+                            "type": {
+                              "choose": {
+                                "key": "damage",
+                                "name": "Damage Type",
+                                "from": [
+                                  "damage-type:necrotic",
+                                  "damage-type:radiant"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ],
+                      "otherwise": "half"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "key": "turn-undead",
+      "name": "Turn Undead",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "channel-divinity"
+        }
+      ],
+      "target": {
+        "count": {
+          "atLeast": 0
+        },
+        "who": {
+          "pool": "any",
+          "chosen": true,
+          "where": {
+            "all": [
+              {
+                "match": {
+                  "creatureType": "creature-type:undead"
+                }
+              },
+              {
+                "within": 30,
+                "of": "self"
+              }
+            ]
+          }
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:wis",
+          "dc": "spellcasting.class:cleric.dc"
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:frightened",
+            "duration": {
+              "amount": 1,
+              "unit": "minute"
+            },
+            "ends": [
+              {
+                "event": "event:damaged",
+                "subject": "self"
+              }
+            ]
+          }
+        },
+        {
+          "applyState": {
+            "state": "condition:incapacitated",
+            "duration": {
+              "amount": 1,
+              "unit": "minute"
+            },
+            "ends": [
+              {
+                "event": "event:damaged",
+                "subject": "self"
+              }
+            ]
+          }
+        },
+        {
+          "prose": {
+            "text": "While turned, it tries to move as far from you as it can on its turns.",
+            "gap": {
+              "category": "activity",
+              "name": "move away from you"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "resource",
+      "key": "channel-divinity",
+      "max": {
+        "byLevel": {
+          "2": 2,
+          "6": 3,
+          "18": 4
+        },
+        "of": "class:cleric"
+      },
+      "dc": "spellcasting.class:cleric.dc",
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:short"
+            },
+            "subject": "self"
+          },
+          "amount": 1
+        },
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ]
+}

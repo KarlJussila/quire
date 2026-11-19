@@ -1,0 +1,90 @@
+{
+  "id": "feature:elf/elven-lineage/wood-elf@2024",
+  "name": "Wood Elf",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Level 1: Your Speed increases to 35 feet. You also know the Druidcraft cantrip. Level 3: Longstrider. Level 5: Pass without Trace.",
+    "wording": "srd"
+  },
+  "group": "group:elven-lineage",
+  "effects": [
+    {
+      "type": "speed",
+      "mode": "movement-mode:walk",
+      "speed": 35
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:druidcraft"
+      ],
+      "how": "known",
+      "ability": {
+        "chosen": "spellcasting-ability",
+        "from": "feature:elf/elven-lineage@2024"
+      }
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.total",
+        "atLeast": 3
+      },
+      "spells": [
+        "spell:longstrider"
+      ],
+      "how": "prepared",
+      "ability": {
+        "chosen": "spellcasting-ability",
+        "from": "feature:elf/elven-lineage@2024"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.total",
+        "atLeast": 5
+      },
+      "spells": [
+        "spell:pass-without-trace"
+      ],
+      "how": "prepared",
+      "ability": {
+        "chosen": "spellcasting-ability",
+        "from": "feature:elf/elven-lineage@2024"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ]
+}

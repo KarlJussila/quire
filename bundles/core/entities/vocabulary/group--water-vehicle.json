@@ -1,0 +1,8 @@
+{
+  "id": "group:water-vehicle",
+  "name": "Water Vehicle",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:vehicle"
+}

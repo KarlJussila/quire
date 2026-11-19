@@ -1,0 +1,100 @@
+{
+  "id": "creature:sprite@2024",
+  "name": "Sprite",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:fey",
+  "alignment": "alignment:neutral-good",
+  "ac": 15,
+  "hp": {
+    "average": 10,
+    "formula": "4d4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:fly": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 10,
+    "ability:dex": 18,
+    "ability:int": 14,
+    "ability:str": 3,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:perception": 3,
+    "skill:stealth": 8
+  },
+  "passivePerception": 13,
+  "xp": 50,
+  "proficiencyBonus": 2,
+  "initiative": 4,
+  "habitat": [
+    "Forest",
+    "Planar (Feywild)"
+  ],
+  "treasure": [
+    "Armaments"
+  ],
+  "cr": 0.25,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:elvish"
+    },
+    {
+      "language": "language:sylvan"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Needle Sword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 5 ft. _Hit:_ 6 (1d4 + 4) Piercing damage.",
+        "plain": "Melee Attack Roll: +6, reach 5 ft. Hit: 6 (1d4 + 4) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Enchanting Bow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +6, range 40/160 ft. _Hit:_ 1 Piercing damage, and the target has the Charmed condition until the start of the sprite's next turn.",
+        "plain": "Ranged Attack Roll: +6, range 40/160 ft. Hit: 1 Piercing damage, and the target has the Charmed condition until the start of the sprite's next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Heart Sight",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Charisma Saving Throw:_ DC 10, one creature within 5 feet the sprite can see (Celestials, Fiends, and Undead automatically fail the save). _Failure:_ The sprite knows the target's emotions and alignment.",
+        "plain": "Charisma Saving Throw: DC 10, one creature within 5 feet the sprite can see (Celestials, Fiends, and Undead automatically fail the save). Failure: The sprite knows the target's emotions and alignment.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Invisibility",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The sprite casts Invisibility on itself, requiring no spell components and using Charisma as the spellcasting ability.",
+        "plain": "The sprite casts Invisibility on itself, requiring no spell components and using Charisma as the spellcasting ability.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

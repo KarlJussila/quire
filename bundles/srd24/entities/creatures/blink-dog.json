@@ -1,0 +1,75 @@
+{
+  "id": "creature:blink-dog@2024",
+  "name": "Blink Dog",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fey",
+  "alignment": "alignment:lawful-good",
+  "ac": 13,
+  "hp": {
+    "average": 22,
+    "formula": "4d8 + 4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 12,
+    "ability:dex": 17,
+    "ability:int": 10,
+    "ability:str": 12,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:perception": 5,
+    "skill:stealth": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 15,
+  "xp": 50,
+  "proficiencyBonus": 2,
+  "initiative": 3,
+  "habitat": [
+    "Forest",
+    "Planar (Feywild)"
+  ],
+  "cr": 0.25,
+  "languages": [
+    {
+      "text": "Blink Dog; understands Elvish and Sylvan but can't speak them"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 5 (1d4 + 3) Piercing damage.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Teleport",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The dog teleports up to 40 feet to an unoccupied space it can see.",
+        "plain": "The dog teleports up to 40 feet to an unoccupied space it can see.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

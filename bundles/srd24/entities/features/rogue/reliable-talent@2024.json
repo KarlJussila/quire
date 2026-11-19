@@ -1,0 +1,45 @@
+{
+  "id": "feature:rogue/reliable-talent@2024",
+  "name": "Level 7: Reliable Talent",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Whenever you make an ability check that uses one of your skill or tool proficiencies, you can treat a d20 roll of 9 or lower as a 10.",
+    "plain": "Whenever you make an ability check that uses one of your skill or tool proficiencies, you can treat a d20 roll of 9 or lower as a 10.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "A check that uses a tool proficiency and no skill isn't covered."
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "die": {
+          "$atLeast": 10
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check",
+              "skill": true
+            }
+          },
+          {
+            "compare": "proficiencies.{skill}",
+            "atLeast": 1
+          }
+        ]
+      }
+    }
+  ]
+}

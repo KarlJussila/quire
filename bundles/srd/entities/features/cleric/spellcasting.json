@@ -1,0 +1,116 @@
+{
+  "id": "feature:cleric/spellcasting",
+  "name": "Spellcasting",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a conduit for divine power, you can cast cleric spells.",
+    "plain": "As a conduit for divine power, you can cast cleric spells.",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting-feature",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "class:cleric": {
+            "ability": "ability:wis",
+            "slots": "table:full-caster",
+            "prepared": {
+              "$base": {
+                "max": [
+                  1,
+                  {
+                    "sum": [
+                      "modifiers.ability:wis",
+                      "levels.class:cleric"
+                    ]
+                  }
+                ]
+              }
+            },
+            "cantrips": {
+              "$base": {
+                "byLevel": {
+                  "1": 3,
+                  "4": 4,
+                  "10": 5
+                },
+                "of": "class:cleric"
+              }
+            },
+            "casterLevel": {
+              "$base": "levels.class:cleric"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "cantrips",
+            "name": "Cleric Cantrips",
+            "count": "spellcasting.class:cleric.cantrips",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "level": 0,
+                    "lists": "class:cleric"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": "ability:wis"
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "prepared",
+            "name": "Prepared Cleric Spells",
+            "count": "spellcasting.class:cleric.prepared",
+            "distinct": true,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:cleric",
+                    "level": {
+                      "atLeast": 1,
+                      "atMost": "spellcasting.class:cleric.spellLevel"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "prepared",
+      "ability": "ability:wis"
+    }
+  ],
+  "gaps": [
+    {
+      "category": "effect-model",
+      "name": "Preparation time needs the sum of the levels of all selected prepared spells."
+    },
+    {
+      "category": "spellcasting",
+      "name": "The allowed focus is tied to this Cleric casting source, but its exact scope on a cast that can have multiple sources is unresolved."
+    }
+  ]
+}

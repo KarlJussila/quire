@@ -1,0 +1,70 @@
+{
+  "id": "creature:giant-sea-horse",
+  "name": "Giant Sea Horse",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 16,
+    "formula": "3d10"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 0
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 11,
+    "ability:dex": 15,
+    "ability:int": 2,
+    "ability:str": 12,
+    "ability:wis": 12
+  },
+  "passivePerception": 11,
+  "xp": 100,
+  "cr": 0.5,
+  "blocks": [
+    {
+      "name": "Charge",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the sea horse moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) bludgeoning damage. It the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked Prone.",
+        "plain": "If the sea horse moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) bludgeoning damage. It the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked Prone.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Water Breathing",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sea horse can breathe only underwater.",
+        "plain": "The sea horse can breathe only underwater.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ram",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one target. _Hit:_ 4 (1d6 + 1) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

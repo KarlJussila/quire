@@ -1,0 +1,44 @@
+{
+  "id": "spell:animal-friendship",
+  "name": "Animal Friendship",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be Charmed by you for the spell's duration. If you or one of your companions harms the target, the spells ends.\n\n_**At Higher Levels.**_ When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast t level above 1st.",
+    "plain": "This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be Charmed by you for the spell's duration. If you or one of your companions harms the target, the spells ends.\n\nAt Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast t level above 1st.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:enchantment",
+  "lists": [
+    "class:bard",
+    "class:druid",
+    "class:ranger"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a morsel of food"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "duration": {
+        "amount": 24,
+        "unit": "hour"
+      }
+    }
+  ]
+}

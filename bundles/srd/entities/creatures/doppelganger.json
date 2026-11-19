@@ -1,0 +1,113 @@
+{
+  "id": "creature:doppelganger",
+  "name": "Doppelganger",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:neutral",
+  "ac": 14,
+  "hp": {
+    "average": 52,
+    "formula": "8d8 + 16"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 14,
+    "ability:con": 14,
+    "ability:dex": 18,
+    "ability:int": 11,
+    "ability:str": 11,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:deception": 6,
+    "skill:insight": 3
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 11,
+  "xp": 700,
+  "cr": 3,
+  "languages": [
+    {
+      "language": "language:common"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Shapechanger",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The doppelganger can use its action to polymorph into a Small or Medium humanoid it has seen, or back into its true form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+        "plain": "The doppelganger can use its action to polymorph into a Small or Medium humanoid it has seen, or back into its true form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ambusher",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "In the first round of a combat, the doppelganger has advantage on attack rolls against any creature it has surprised.",
+        "plain": "In the first round of a combat, the doppelganger has advantage on attack rolls against any creature it has surprised.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Surprise Attack",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the doppelganger surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 10 (3d6) damage from the attack.",
+        "plain": "If the doppelganger surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 10 (3d6) damage from the attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The doppelganger makes two melee attacks.",
+        "plain": "The doppelganger makes two melee attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Slam",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 7 (1d6 + 4) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Read Thoughts",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The doppelganger magically reads the surface thoughts of one creature within 60 feet of it. The effect can penetrate barriers, but 3 feet of wood or dirt, 2 feet of stone, 2 inches of metal, or a thin sheet of lead blocks it. While the target is in range, the doppelganger can continue reading its thoughts, as long as the doppelganger's concentration isn't broken (as if concentrating on a spell). While reading the target's mind, the doppelganger has advantage on Wisdom (Insight) and Charisma (Deception, Intimidation, and Persuasion) checks against the target.",
+        "plain": "The doppelganger magically reads the surface thoughts of one creature within 60 feet of it. The effect can penetrate barriers, but 3 feet of wood or dirt, 2 feet of stone, 2 inches of metal, or a thin sheet of lead blocks it. While the target is in range, the doppelganger can continue reading its thoughts, as long as the doppelganger's concentration isn't broken (as if concentrating on a spell). While reading the target's mind, the doppelganger has advantage on Wisdom (Insight) and Charisma (Deception, Intimidation, and Persuasion) checks against the target.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

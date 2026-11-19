@@ -1,0 +1,14 @@
+{
+  "id": "language:druidic",
+  "name": "Druidic",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A secret language known only to druids, who can leave hidden messages in it that only another speaker can find.",
+    "plain": "A secret language known only to druids, who can leave hidden messages in it that only another speaker can find.",
+    "wording": "original"
+  },
+  "script": "Druidic",
+  "speakers": "Druids"
+}

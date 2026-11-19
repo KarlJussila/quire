@@ -1,0 +1,44 @@
+{
+  "id": "condition:deafened",
+  "name": "Deafened",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- A Deafened creature can't hear and automatically fails any ability check that requires hearing.",
+    "plain": "A Deafened creature can't hear and automatically fails any ability check that requires hearing.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:hear"
+      ]
+    },
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check"
+            }
+          },
+          {
+            "prose": {
+              "text": "requires hearing",
+              "gap": {
+                "category": "test",
+                "name": "requires-hearing"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

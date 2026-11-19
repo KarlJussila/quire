@@ -1,0 +1,88 @@
+{
+  "id": "creature:guard-captain@2024",
+  "name": "Guard Captain",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 18,
+  "hp": {
+    "average": 75,
+    "formula": "10d8 + 30"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 13,
+    "ability:con": 16,
+    "ability:dex": 14,
+    "ability:int": 12,
+    "ability:str": 18,
+    "ability:wis": 14
+  },
+  "skills": {
+    "skill:athletics": 6,
+    "skill:perception": 4
+  },
+  "passivePerception": 14,
+  "xp": 1100,
+  "proficiencyBonus": 2,
+  "initiative": 4,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Armaments",
+    "Individual"
+  ],
+  "gear": [
+    "Breastplate",
+    "Javelins (6)",
+    "Longsword",
+    "Shield"
+  ],
+  "cr": 4,
+  "languages": [
+    {
+      "language": "language:common"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The guard makes two attacks, using Javelin or Longsword in any combination.",
+        "plain": "The guard makes two attacks, using Javelin or Longsword in any combination.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Javelin",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +6, reach 5 ft. or range 30/120 ft. _Hit:_ 14 (3d6 + 4) Piercing damage.",
+        "plain": "Melee or Ranged Attack Roll: +6, reach 5 ft. or range 30/120 ft. Hit: 14 (3d6 + 4) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Longsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 5 ft. _Hit:_ 15 (2d10 + 4) Slashing damage.",
+        "plain": "Melee Attack Roll: +6, reach 5 ft. Hit: 15 (2d10 + 4) Slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

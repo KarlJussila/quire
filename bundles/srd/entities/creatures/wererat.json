@@ -1,0 +1,130 @@
+{
+  "id": "creature:wererat",
+  "name": "Wererat",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:lawful-evil",
+  "ac": 12,
+  "hp": {
+    "average": 33,
+    "formula": "6d8 + 6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 8,
+    "ability:con": 12,
+    "ability:dex": 15,
+    "ability:int": 11,
+    "ability:str": 10,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 2,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60,
+      "note": "rat form only"
+    }
+  },
+  "passivePerception": 12,
+  "xp": 450,
+  "cr": 2,
+  "languages": [
+    {
+      "text": "Common (can't speak in rat form)"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical",
+                "damage-qualifier:silvered"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Shapechanger",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+        "plain": "The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Keen Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The wererat has advantage on Wisdom (Perception) checks that rely on smell.",
+        "plain": "The wererat has advantage on Wisdom (Perception) checks that rely on smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack (Humanoid or Hybrid Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The wererat makes two attacks, only one of which can be a bite.",
+        "plain": "The wererat makes two attacks, only one of which can be a bite.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite (Rat or Hybrid Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 4 (1d4 + 2) piercing damage. If the target is a humanoid, it must succeed on a DC 11 Constitution saving throw or be cursed with wererat lycanthropy.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage. If the target is a humanoid, it must succeed on a DC 11 Constitution saving throw or be cursed with wererat lycanthropy.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shortsword (Humanoid or Hybrid Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 5 (1d6 + 2) piercing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hand Crossbow (Humanoid or Hybrid Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +4 to hit, range 30/120 ft., one target. _Hit:_ 5 (1d6 + 2) piercing damage.",
+        "plain": "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

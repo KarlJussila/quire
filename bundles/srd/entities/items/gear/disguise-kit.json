@@ -1,0 +1,18 @@
+{
+  "id": "item:disguise-kit",
+  "name": "Disguise Kit",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise.",
+    "plain": "This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise.",
+    "wording": "srd"
+  },
+  "group": "group:tools",
+  "cost": {
+    "amount": 25,
+    "currency": "currency:gp"
+  },
+  "weight": 3.0
+}

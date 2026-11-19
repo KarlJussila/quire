@@ -1,0 +1,89 @@
+{
+  "id": "creature:manticore@2024",
+  "name": "Manticore",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:lawful-evil",
+  "ac": 14,
+  "hp": {
+    "average": 68,
+    "formula": "8d10 + 24"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 8,
+    "ability:con": 17,
+    "ability:dex": 16,
+    "ability:int": 7,
+    "ability:str": 17,
+    "ability:wis": 12
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 11,
+  "xp": 700,
+  "proficiencyBonus": 2,
+  "initiative": 3,
+  "habitat": [
+    "Arctic",
+    "Coastal",
+    "Grassland",
+    "Hill",
+    "Mountain"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 3,
+  "languages": [
+    {
+      "language": "language:common"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The manticore makes three attacks, using Rend or Tail Spike in any combination.",
+        "plain": "The manticore makes three attacks, using Rend or Tail Spike in any combination.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 7 (1d8 + 3) Slashing damage.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail Spike",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +5, range 100/200 ft. _Hit:_ 7 (1d8 + 3) Piercing damage.",
+        "plain": "Ranged Attack Roll: +5, range 100/200 ft. Hit: 7 (1d8 + 3) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

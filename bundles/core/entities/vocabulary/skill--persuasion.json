@@ -1,0 +1,11 @@
+{
+  "id": "skill:persuasion",
+  "name": "Persuasion",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:cha"
+}

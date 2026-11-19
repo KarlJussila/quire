@@ -1,0 +1,99 @@
+{
+  "id": "creature:giant-spider",
+  "name": "Giant Spider",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 14,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 26,
+    "formula": "4d10 + 4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:climb": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 4,
+    "ability:con": 12,
+    "ability:dex": 16,
+    "ability:int": 2,
+    "ability:str": 14,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:stealth": 7
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    },
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 200,
+  "cr": 1,
+  "blocks": [
+    {
+      "name": "Spider Climb",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+        "plain": "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Web Sense",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.",
+        "plain": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Web Walker",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The spider ignores movement restrictions caused by webbing.",
+        "plain": "The spider ignores movement restrictions caused by webbing.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one creature. _Hit:_ 7 (1d8 + 3) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but Poisoned for 1 hour, even after regaining hit points, and is Paralyzed while poisoned in this way.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 7 (1d8 + 3) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but Poisoned for 1 hour, even after regaining hit points, and is Paralyzed while poisoned in this way.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Web",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +5 to hit, range 30/60 ft., one creature. _Hit:_ The target is Restrained by webbing. As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage).",
+        "plain": "Ranged Weapon Attack: +5 to hit, range 30/60 ft., one creature. Hit: The target is Restrained by webbing. As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage).",
+        "wording": "srd"
+      }
+    }
+  ]
+}

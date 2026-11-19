@@ -1,0 +1,61 @@
+{
+  "id": "feature:warlock/one-with-shadows@2024",
+  "name": "One with Shadows",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 5+ Warlock_\n\nWhile you're in an area of Dim Light or Darkness, you can cast Invisibility on yourself without expending a spell slot.",
+    "plain": "Prerequisite: Level 5+ Warlock\n\nWhile you're in an area of Dim Light or Darkness, you can cast Invisibility on yourself without expending a spell slot.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 5
+  },
+  "effects": [],
+  "activities": [
+    {
+      "key": "cast-invisibility",
+      "name": "Cast Invisibility on Yourself",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "when": {
+        "any": [
+          {
+            "environment": "environment:dim-light"
+          },
+          {
+            "environment": "environment:darkness"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "cast": {
+            "spell": "spell:invisibility",
+            "slot": false,
+            "set": {
+              "activities": {
+                "cast": {
+                  "target": {
+                    "$replace": {
+                      "who": "self",
+                      "count": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

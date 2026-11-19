@@ -1,0 +1,8 @@
+{
+  "id": "stat-block-section:legendary-action",
+  "name": "Legendary Action",
+  "source": {
+    "book": "core"
+  },
+  "order": 5
+}

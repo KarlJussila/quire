@@ -1,0 +1,52 @@
+{
+  "id": "spell:holy-aura@2024",
+  "name": "Holy Aura",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "For the duration, you emit an aura in a 30-foot Emanation. While in the aura, creatures of your choice have Advantage on all saving throws, and other creatures have Disadvantage on attack rolls against them. In addition, when a Fiend or an Undead hits an affected creature with a melee attack roll, the attacker must succeed on a Constitution saving throw or have the Blinded condition until the end of its next turn.",
+    "plain": "For the duration, you emit an aura in a 30-foot Emanation. While in the aura, creatures of your choice have Advantage on all saving throws, and other creatures have Disadvantage on attack rolls against them. In addition, when a Fiend or an Undead hits an affected creature with a melee attack roll, the attacker must succeed on a Constitution saving throw or have the Blinded condition until the end of its next turn.",
+    "wording": "srd"
+  },
+  "level": 8,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:cleric"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a reliquary worth 1,000+ GP",
+      "parts": [
+        {
+          "worth": {
+            "amount": 1000,
+            "currency": "currency:gp"
+          }
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

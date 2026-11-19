@@ -1,0 +1,52 @@
+{
+  "id": "spell:greater-restoration@2024",
+  "name": "Greater Restoration",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You touch a creature and magically remove one of the following effects from it:\n\n- 1 Exhaustion level\n- The Charmed or Petrified condition\n- A curse, including the target's Attunement to a cursed magic item\n- Any reduction to one of the target's ability scores\n- Any reduction to the target's Hit Point maximum",
+    "plain": "You touch a creature and magically remove one of the following effects from it:\n\n- 1 Exhaustion level\n- The Charmed or Petrified condition\n- A curse, including the target's Attunement to a cursed magic item\n- Any reduction to one of the target's ability scores\n- Any reduction to the target's Hit Point maximum",
+    "wording": "srd"
+  },
+  "level": 5,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:druid",
+    "class:paladin",
+    "class:ranger"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "diamond dust worth 100+ GP, which the spell consumes",
+      "parts": [
+        {
+          "worth": {
+            "amount": 100,
+            "currency": "currency:gp"
+          },
+          "consumed": true
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

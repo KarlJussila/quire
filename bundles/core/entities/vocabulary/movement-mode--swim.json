@@ -1,0 +1,10 @@
+{
+  "id": "movement-mode:swim",
+  "name": "Swimming",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

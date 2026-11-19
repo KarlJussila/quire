@@ -1,0 +1,35 @@
+{
+  "id": "item:headband-of-intellect",
+  "name": "Headband of Intellect",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Your Intelligence score is 19 while you wear this headband. It has no effect on you if your Intelligence is already 19 or higher.",
+    "plain": "Your Intelligence score is 19 while you wear this headband. It has no effect on you if your Intelligence is already 19 or higher.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "weight": 0,
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:int": {
+            "$atLeast": 19
+          }
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ]
+}

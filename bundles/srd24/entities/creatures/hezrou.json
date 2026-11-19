@@ -1,0 +1,137 @@
+{
+  "id": "creature:hezrou@2024",
+  "name": "Hezrou",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 18,
+  "hp": {
+    "average": 157,
+    "formula": "15d10 + 75"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 13,
+    "ability:con": 20,
+    "ability:dex": 17,
+    "ability:int": 5,
+    "ability:str": 19,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:con": 8,
+    "ability:str": 7,
+    "ability:wis": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 11,
+  "telepathy": 120,
+  "xp": 3900,
+  "proficiencyBonus": 3,
+  "initiative": 6,
+  "habitat": [
+    "Planar (Abyss)"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 8,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:lightning"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Demonic Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the hezrou dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.",
+        "plain": "If the hezrou dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hezrou has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The hezrou has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Stench",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 16, any creature that starts its turn in a 10-foot Emanation originating from the hezrou. _Failure:_ The target has the Poisoned condition until the start of its next turn.",
+        "plain": "Constitution Saving Throw: DC 16, any creature that starts its turn in a 10-foot Emanation originating from the hezrou. Failure: The target has the Poisoned condition until the start of its next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The hezrou makes three Rend attacks.",
+        "plain": "The hezrou makes three Rend attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 5 ft. _Hit:_ 6 (1d4 + 4) Slashing damage plus 9 (2d8) Poison damage.",
+        "plain": "Melee Attack Roll: +7, reach 5 ft. Hit: 6 (1d4 + 4) Slashing damage plus 9 (2d8) Poison damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Leap",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The hezrou jumps up to 30 feet by spending 10 feet of movement.",
+        "plain": "The hezrou jumps up to 30 feet by spending 10 feet of movement.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

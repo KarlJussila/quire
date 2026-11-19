@@ -1,0 +1,11 @@
+{
+  "id": "group:martial-melee-weapon",
+  "name": "Martial Melee Weapon",
+  "source": {
+    "book": "core"
+  },
+  "isA": [
+    "group:martial-weapon",
+    "group:melee-weapon"
+  ]
+}

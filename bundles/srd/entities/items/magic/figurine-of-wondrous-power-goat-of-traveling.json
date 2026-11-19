@@ -1,0 +1,19 @@
+{
+  "id": "item:figurine-of-wondrous-power-goat-of-traveling",
+  "name": "Figurine of Wondrous Power, Goat of Traveling",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "This ivory statuette is one of a set of three unique goats. The Goat of Traveling can become a Large goat with the same statistics as a Riding Horse. It has 24 charges, and each hour or portion thereof it spends in goat form costs 1 charge. While it has charges, you can use it as often as you wish. When it runs out of charges, it reverts to a figurine and can't be used again until 7 days have passed, when it regains all expended charges.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "item-state",
+      "name": "Seven-day lockout and full charge restoration after the last charge is spent"
+    }
+  ],
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare"
+}

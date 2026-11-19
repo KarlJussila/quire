@@ -1,0 +1,46 @@
+{
+  "id": "rule:bloodied@2024",
+  "name": "Bloodied",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A creature is Bloodied while it has half its Hit Points or fewer remaining.",
+    "plain": "A creature is Bloodied while it has half its Hit Points or fewer remaining.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "defines": [
+    "state:bloodied"
+  ],
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "becomes": {
+            "compare": "hp.current",
+            "atMost": {
+              "times": "hp.max",
+              "by": 0.5
+            }
+          },
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "applyState": {
+              "state": "state:bloodied"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

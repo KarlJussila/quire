@@ -1,0 +1,69 @@
+{
+  "id": "creature:giant-crab",
+  "name": "Giant Crab",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 15,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 13,
+    "formula": "3d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:swim": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 3,
+    "ability:con": 11,
+    "ability:dex": 15,
+    "ability:int": 1,
+    "ability:str": 13,
+    "ability:wis": 9
+  },
+  "skills": {
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    }
+  },
+  "passivePerception": 9,
+  "xp": 25,
+  "cr": 0.125,
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The crab can breathe air and water.",
+        "plain": "The crab can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one target. _Hit:_ 4 (1d6 + 1) bludgeoning damage, and the target is Grappled (escape DC 11). The crab has two claws, each of which can grapple only one target.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage, and the target is Grappled (escape DC 11). The crab has two claws, each of which can grapple only one target.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

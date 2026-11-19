@@ -1,0 +1,29 @@
+{
+  "id": "feature:ranger/foe-slayer@2024",
+  "name": "Level 20: Foe Slayer",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The damage die of your Hunter's Mark is a d10 rather than a d6.",
+    "plain": "The damage die of your Hunter's Mark is a d10 rather than a d6.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "spell",
+        "where": {
+          "is": "spell:hunters-mark"
+        }
+      },
+      "set": {
+        "values": {
+          "damage-die": 10
+        }
+      }
+    }
+  ]
+}

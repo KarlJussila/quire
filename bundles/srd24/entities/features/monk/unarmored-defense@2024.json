@@ -1,0 +1,48 @@
+{
+  "id": "feature:monk/unarmored-defense@2024",
+  "name": "Level 1: Unarmored Defense",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you aren't wearing armor or wielding a Shield, your base Armor Class equals 10 plus your Dexterity and Wisdom modifiers.",
+    "plain": "While you aren't wearing armor or wielding a Shield, your base Armor Class equals 10 plus your Dexterity and Wisdom modifiers.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$base": {
+            "sum": [
+              10,
+              "modifiers.ability:dex",
+              "modifiers.ability:wis"
+            ]
+          }
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "not": {
+              "has": "group:armor",
+              "match": {
+                "worn": true
+              }
+            }
+          },
+          {
+            "not": {
+              "has": "group:shield",
+              "match": {
+                "held": true
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "abilities": {
+    "ability:str": 8,
+    "ability:dex": 14,
+    "ability:con": 14,
+    "ability:int": 19,
+    "ability:wis": 12,
+    "ability:cha": 10
+  },
+  "proficiencyBonus": 3,
+  "hp.max": 32,
+  "ac": 12,
+  "saves": {
+    "ability:str": -1,
+    "ability:dex": 2,
+    "ability:con": 2,
+    "ability:int": 7,
+    "ability:wis": 4,
+    "ability:cha": 0
+  },
+  "skills": {
+    "skill:acrobatics": 2,
+    "skill:animal-handling": 1,
+    "skill:arcana": 10,
+    "skill:athletics": -1,
+    "skill:deception": 0,
+    "skill:history": 7,
+    "skill:insight": 4,
+    "skill:intimidation": 0,
+    "skill:investigation": 7,
+    "skill:medicine": 1,
+    "skill:nature": 4,
+    "skill:perception": 1,
+    "skill:performance": 0,
+    "skill:persuasion": 0,
+    "skill:religion": 4,
+    "skill:sleight-of-hand": 2,
+    "skill:stealth": 2,
+    "skill:survival": 1
+  },
+  "initiative": 2,
+  "spellcasting": {
+    "class:wizard": {
+      "dc": 15,
+      "attack": 7,
+      "prepared": 9,
+      "cantrips": 4
+    }
+  },
+  "spell-slots": [
+    4,
+    3,
+    2
+  ],
+  "pools": {
+    "arcane-recovery": 1
+  },
+  "attacks": {
+    "Dagger: Attack": "+5, 1d4+2 piercing",
+    "Unarmed Strike: Damage": "+2, 1-1 bludgeoning"
+  },
+  "why": [
+    "Abilities: standard array, Sage's +2 Intelligence and +1 Constitution, and the level 4 Ability Score Improvement's +2 Intelligence (PHB24 Character Creation, Character Origins; Character Classes, Wizard).",
+    "Proficiency bonus is +3 at level 5; saving throws add it for Intelligence and Wisdom, and skill bonuses add it for Sage's and Wizard's chosen proficiencies, with Arcana expertise from Scholar (PHB24 Character Classes, Wizard; Character Origins, Sage).",
+    "HP: 6 at Wizard 1, then fixed 4 per later level, plus Constitution modifier at each level (PHB24 Character Classes, Wizard).",
+    "AC: unarmored base AC is 10 + Dexterity modifier (PHB24 Chapter 1, Armor Class).",
+    "Spell DC and attack: 8 + proficiency + Intelligence modifier, and proficiency + Intelligence modifier (PHB24 Character Classes, Wizard).",
+    "Prepared spells, cantrips, and slots are the level 5 row of the Wizard Features table (PHB24 Character Classes, Wizard).",
+    "Arcane Recovery can be used once per short rest (PHB24 Character Classes, Wizard).",
+    "Intelligence 19 is +4, so History (Sage) and Investigation (a Wizard pick) are +7, and Nature and Religion +4; the helper's first figures for these four used a different modifier and were corrected against the rules.",
+    "Attacks: the ability modifier (Strength for melee, Dexterity for ranged, either for Finesse) plus the Proficiency Bonus with a weapon the class is trained in; damage adds the same modifier. Checked by hand against the weapon table and each class's weapon training."
+  ]
+}

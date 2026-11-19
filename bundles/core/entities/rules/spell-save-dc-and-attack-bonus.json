@@ -1,0 +1,41 @@
+{
+  "id": "rule:spell-save-dc-and-attack-bonus",
+  "name": "Spell Save DC and Spell Attack Bonus",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Each source of a creature's spellcasting has a spellcasting ability. Its spell save DC is 8 plus the creature's proficiency bonus plus that ability's modifier, and its spell attack bonus is the proficiency bonus plus that modifier."
+  },
+  "group": "group:character",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "$where": true,
+          "dc": {
+            "$base": {
+              "sum": [
+                8,
+                "proficiencyBonus",
+                "modifiers.{ability}"
+              ]
+            }
+          },
+          "attack": {
+            "$base": {
+              "sum": [
+                "proficiencyBonus",
+                "modifiers.{ability}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

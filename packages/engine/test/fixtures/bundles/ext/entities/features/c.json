@@ -1,0 +1,27 @@
+{
+ "id": "feature:c",
+ "name": "C",
+ "source": {
+  "book": "ext"
+ },
+ "effects": [
+  {
+   "type": "defense",
+   "resist": [
+    "damage-type:psychic"
+   ]
+  }
+ ],
+ "activities": [
+  {
+   "key": "x",
+   "outcomes": [
+    {
+     "cast": {
+      "spell": "spell:missing"
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "feature:dragonborn/draconic-ancestry/black@2024",
+  "name": "Black",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Damage Type: Acid",
+    "wording": "srd"
+  },
+  "group": "group:draconic-ancestry",
+  "values": {
+    "damage-type": "damage-type:acid"
+  }
+}

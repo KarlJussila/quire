@@ -1,0 +1,95 @@
+{
+  "id": "feature:dragonborn/breath-weapon",
+  "name": "Breath Weapon",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.",
+    "plain": "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "breath-weapon",
+      "name": "Breath Weapon",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:short"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "area": {
+        "shape": {
+          "chosen": "ancestry",
+          "value": "breath-shape",
+          "from": "feature:dragonborn/draconic-ancestry"
+        },
+        "size": {
+          "chosen": "ancestry",
+          "value": "breath-size",
+          "from": "feature:dragonborn/draconic-ancestry"
+        },
+        "width": {
+          "chosen": "ancestry",
+          "value": "breath-width",
+          "from": "feature:dragonborn/draconic-ancestry"
+        },
+        "origin": "self",
+        "affects": {
+          "pool": "any"
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": {
+            "chosen": "ancestry",
+            "value": "breath-save",
+            "from": "feature:dragonborn/draconic-ancestry"
+          },
+          "dc": {
+            "sum": [
+              8,
+              "modifiers.ability:con",
+              "proficiencyBonus"
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": {
+              "byLevel": {
+                "1": "2d6",
+                "6": "3d6",
+                "11": "4d6",
+                "16": "5d6"
+              }
+            },
+            "type": {
+              "chosen": "ancestry",
+              "value": "damage-type",
+              "from": "feature:dragonborn/draconic-ancestry"
+            }
+          }
+        }
+      ],
+      "otherwise": "half"
+    }
+  ]
+}

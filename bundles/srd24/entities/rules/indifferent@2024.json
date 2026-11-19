@@ -1,0 +1,18 @@
+{
+  "id": "rule:indifferent@2024",
+  "name": "Indifferent",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "An Indifferent creature has no desire to help or hinder you. Indifferent is the default attitude of a monster. _See also_ \"Influence.\"",
+    "plain": "An Indifferent creature has no desire to help or hinder you. Indifferent is the default attitude of a monster. See also \"Influence.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "id": "creature:gargoyle@2024",
+  "name": "Gargoyle",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:elemental",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 15,
+  "hp": {
+    "average": 67,
+    "formula": "9d8 + 27"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 16,
+    "ability:dex": 11,
+    "ability:int": 6,
+    "ability:str": 15,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 450,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Underdark",
+    "Urban"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 2,
+  "languages": [
+    {
+      "text": "Primordial (Terran)"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:exhaustion",
+        "condition:petrified",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Flyby",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The gargoyle doesn't provoke an Opportunity Attack when it flies out of an enemy's reach.",
+        "plain": "The gargoyle doesn't provoke an Opportunity Attack when it flies out of an enemy's reach.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The gargoyle makes two Claw attacks.",
+        "plain": "The gargoyle makes two Claw attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 7 (2d4 + 2) Slashing damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) Slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

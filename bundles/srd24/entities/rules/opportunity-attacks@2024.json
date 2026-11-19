@@ -1,0 +1,77 @@
+{
+  "id": "rule:opportunity-attacks@2024",
+  "name": "Opportunity Attacks",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Combatants watch for enemies to drop their guard. If you move heedlessly past your foes, you put yourself in danger by provoking an Opportunity Attack.\n\n_**Avoiding Opportunity Attacks.**_ You can avoid provoking an Opportunity Attack by taking the Disengage action. You also don't provoke an Opportunity Attack when you Teleport or when you are moved without using your movement, action, Bonus Action, or Reaction. For example, you don't provoke an Opportunity Attack if an explosion hurls you out of a foe's reach or if you fall past an enemy.\n\n_**Making an Opportunity Attack.**_ You can make an Opportunity Attack when a creature that you can see leaves your reach. To make the attack, take a Reaction to make one melee attack with a weapon or an Unarmed Strike against that creature. The attack occurs right before it leaves your reach.",
+    "plain": "Combatants watch for enemies to drop their guard. If you move heedlessly past your foes, you put yourself in danger by provoking an Opportunity Attack.\n\n_Avoiding Opportunity Attacks._ You can avoid provoking an Opportunity Attack by taking the Disengage action. You also don't provoke an Opportunity Attack when you Teleport or when you are moved without using your movement, action, Bonus Action, or Reaction. For example, you don't provoke an Opportunity Attack if an explosion hurls you out of a foe's reach or if you fall past an enemy.\n\n_Making an Opportunity Attack._ You can make an Opportunity Attack when a creature that you can see leaves your reach. To make the attack, take a Reaction to make one melee attack with a weapon or an Unarmed Strike against that creature. The attack occurs right before it leaves your reach.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "opportunity-attack",
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "trigger": {
+        "event": "event:leaves-reach",
+        "by": {
+          "pool": "any",
+          "where": {
+            "perceived": "sight"
+          }
+        },
+        "subject": "self"
+      },
+      "target": {
+        "who": "actor"
+      },
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "any": [
+                    {
+                      "match": {
+                        "delivery": {
+                          "attack": {
+                            "range": [
+                              "melee",
+                              "melee-or-ranged"
+                            ],
+                            "via": "weapon"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "match": {
+                        "delivery": {
+                          "attack": {
+                            "via": "unarmed"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "times": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "feature:warlock/eldritch-invocations@2024",
+  "name": "Level 1: Eldritch Invocations",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have unearthed Eldritch Invocations, pieces of forbidden knowledge that imbue you with an abiding magical ability or other lessons. You gain one invocation of your choice, such as Pact of the Tome. Invocations are described in the \"Eldritch Invocation Options\" section later in this class's description.\n\n_**Prerequisites.**_ If an invocation has a prerequisite, you must meet it to learn that invocation. For example, if an invocation requires you to be a level 5+ Warlock, you can select the invocation once you reach Warlock level 5.\n\n_**Replacing and Gaining Invocations.**_ Whenever you gain a Warlock level, you can replace one of your invocations with another one for which you qualify. You can't replace an invocation if it's a prerequisite for another invocation that you have.\n\nWhen you gain certain Warlock levels, you gain more invocations of your choice, as shown in the Invocations column of the Warlock Features table.\n\nYou can't pick the same invocation more than once unless its description says otherwise.",
+    "plain": "You have unearthed Eldritch Invocations, pieces of forbidden knowledge that imbue you with an abiding magical ability or other lessons. You gain one invocation of your choice, such as Pact of the Tome. Invocations are described in the \"Eldritch Invocation Options\" section later in this class's description.\n\nPrerequisites. If an invocation has a prerequisite, you must meet it to learn that invocation. For example, if an invocation requires you to be a level 5+ Warlock, you can select the invocation once you reach Warlock level 5.\n\nReplacing and Gaining Invocations. Whenever you gain a Warlock level, you can replace one of your invocations with another one for which you qualify. You can't replace an invocation if it's a prerequisite for another invocation that you have.\n\nWhen you gain certain Warlock levels, you gain more invocations of your choice, as shown in the Invocations column of the Warlock Features table.\n\nYou can't pick the same invocation more than once unless its description says otherwise.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "eldritch-invocations",
+        "name": "Eldritch Invocations",
+        "count": {
+          "byLevel": {
+            "1": 1,
+            "2": 3,
+            "5": 5,
+            "7": 6,
+            "9": 7,
+            "12": 8,
+            "15": 9,
+            "18": 10
+          },
+          "of": "class:warlock"
+        },
+        "from": [
+          {
+            "kind": "feature",
+            "where": {
+              "group": "group:eldritch-invocation"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-eldritch-invocations",
+      "name": "Replace Eldritch Invocations",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self",
+        "match": {
+          "class": "class:warlock"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "eldritch-invocations"
+          }
+        }
+      ]
+    }
+  ]
+}

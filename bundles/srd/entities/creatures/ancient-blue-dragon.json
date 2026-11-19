@@ -1,0 +1,173 @@
+{
+  "id": "creature:ancient-blue-dragon",
+  "name": "Ancient Blue Dragon",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:gargantuan",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:lawful-evil",
+  "ac": 22,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 481,
+    "formula": "26d20 + 208"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:burrow": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    }
+  },
+  "abilities": {
+    "ability:cha": 21,
+    "ability:con": 27,
+    "ability:dex": 10,
+    "ability:int": 18,
+    "ability:str": 29,
+    "ability:wis": 17
+  },
+  "saves": {
+    "ability:cha": 12,
+    "ability:con": 15,
+    "ability:dex": 7,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 17,
+    "skill:stealth": 7
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    },
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 27,
+  "xp": 50000,
+  "cr": 23,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:lightning"
+      ]
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Legendary Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "plain": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.",
+        "plain": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +16 to hit, reach 15 ft., one target. _Hit:_ 20 (2d10 + 9) piercing damage plus 11 (2d10) lightning damage.",
+        "plain": "Melee Weapon Attack: +16 to hit, reach 15 ft., one target. Hit: 20 (2d10 + 9) piercing damage plus 11 (2d10) lightning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +16 to hit, reach 10 ft., one target. _Hit:_ 16 (2d6 + 9) slashing damage.",
+        "plain": "Melee Weapon Attack: +16 to hit, reach 10 ft., one target. Hit: 16 (2d6 + 9) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +16 to hit, reach 20 ft., one target. _Hit:_ 18 (2d8 + 9) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +16 to hit, reach 20 ft., one target. Hit: 18 (2d8 + 9) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Frightful Presence",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 20 Wisdom saving throw or become Frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.",
+        "plain": "Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 20 Wisdom saving throw or become Frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Lightning Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon exhales lightning in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 23 Dexterity saving throw, taking 88 (16d10) lightning damage on a failed save, or half as much damage on a successful one.",
+        "plain": "The dragon exhales lightning in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 23 Dexterity saving throw, taking 88 (16d10) lightning damage on a failed save, or half as much damage on a successful one.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Detect",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon makes a Wisdom (Perception) check.",
+        "plain": "The dragon makes a Wisdom (Perception) check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail Attack",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon makes a tail attack.",
+        "plain": "The dragon makes a tail attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Wing Attack",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon beats its wings. Each creature within 15 feet of the dragon must succeed on a DC 24 Dexterity saving throw or take 16 (2d6 + 9) bludgeoning damage and be knocked Prone. The dragon can then fly up to half its flying speed.",
+        "plain": "The dragon beats its wings. Each creature within 15 feet of the dragon must succeed on a DC 24 Dexterity saving throw or take 16 (2d6 + 9) bludgeoning damage and be knocked Prone. The dragon can then fly up to half its flying speed.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

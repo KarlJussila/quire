@@ -1,0 +1,13 @@
+{
+  "id": "item:arcane-focus@2024",
+  "name": "Arcane Focus",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "An Arcane Focus takes one of the forms in the table and is bejeweled or carved to channel arcane magic. A Sorcerer, Warlock, or Wizard can use such an item as a Spellcasting Focus.\n\n| Focus                       | Weight   | Cost   |\n|-----------------------------|----------|--------|\n| Crystal                     | 1 lb.    | 10 GP  |\n| Orb                         | 3 lb.    | 20 GP  |\n| Rod                         | 2 lb.    | 10 GP  |\n| Staff (also a Quarterstaff) | 4 lb.    | 5 GP   |\n| Wand                        | 1 lb.    | 10 GP  |",
+    "plain": "An Arcane Focus takes one of the forms in the table and is bejeweled or carved to channel arcane magic. A Sorcerer, Warlock, or Wizard can use such an item as a Spellcasting Focus.\n\n| Focus                       | Weight   | Cost   |\n|-----------------------------|----------|--------|\n| Crystal                     | 1 lb.    | 10 GP  |\n| Orb                         | 3 lb.    | 20 GP  |\n| Rod                         | 2 lb.    | 10 GP  |\n| Staff (also a Quarterstaff) | 4 lb.    | 5 GP   |\n| Wand                        | 1 lb.    | 10 GP  |",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "feature:warlock/the-fiend/hurl-through-hell",
+  "name": "Hurl Through Hell",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 14th level, when you hit a creature with an attack, you can use this feature to instantly transport the target through the lower planes. The creature disappears and hurtles through a nightmare landscape.\n\nAt the end of your next turn, the target returns to the space it previously occupied, or the nearest unoccupied space. If the target is not a fiend, it takes 10d10 psychic damage as it reels from its horrific experience.\n\nOnce you use this feature, you can't use it again until you finish a long rest.",
+    "plain": "Starting at 14th level, when you hit a creature with an attack, you can use this feature to instantly transport the target through the lower planes. The creature disappears and hurtles through a nightmare landscape.\n\nAt the end of your next turn, the target returns to the space it previously occupied, or the nearest unoccupied space. If the target is not a fiend, it takes 10d10 psychic damage as it reels from its horrific experience.\n\nOnce you use this feature, you can't use it again until you finish a long rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "hurl-through-hell",
+      "name": "Hurl Through Hell",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true
+        }
+      },
+      "target": {
+        "who": "subject"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "The target disappears into the lower planes. At the end of your next turn it returns to the space it left, or the nearest unoccupied space.",
+            "gap": {
+              "category": "move",
+              "name": "hurl through the lower planes"
+            }
+          }
+        },
+        {
+          "damage": {
+            "amount": "10d10",
+            "type": "damage-type:psychic"
+          },
+          "when": {
+            "not": {
+              "match": {
+                "creatureType": "creature-type:fiend"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

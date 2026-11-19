@@ -1,0 +1,69 @@
+{
+  "id": "creature:constrictor-snake@2024",
+  "name": "Constrictor Snake",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "hp": {
+    "average": 13,
+    "formula": "2d10 + 2"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:swim": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 3,
+    "ability:con": 12,
+    "ability:dex": 14,
+    "ability:int": 1,
+    "ability:str": 15,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 2,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    }
+  },
+  "passivePerception": 12,
+  "xp": 50,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "cr": 0.25,
+  "blocks": [
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 6 (1d8 + 2) Piercing damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Constrict",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Strength Saving Throw:_ DC 12, one Medium or smaller creature the snake can see within 5 feet. _Failure:_ 7 (3d4) Bludgeoning damage, and the target has the Grappled condition (escape DC 12).",
+        "plain": "Strength Saving Throw: DC 12, one Medium or smaller creature the snake can see within 5 feet. Failure: 7 (3d4) Bludgeoning damage, and the target has the Grappled condition (escape DC 12).",
+        "wording": "srd"
+      }
+    }
+  ]
+}

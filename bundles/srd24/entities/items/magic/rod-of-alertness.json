@@ -1,0 +1,15 @@
+{
+  "id": "item:rod-of-alertness@2024",
+  "name": "Rod of Alertness",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This rod has the following properties.\n\n_**Alertness.**_ While holding the rod, you have Advantage on Wisdom (Perception) checks and on Initiative rolls.\n\n_**Spells.**_ While holding the rod, you can cast the following spells from it:\n\n- Detect Evil and Good\n- Detect Magic\n- Detect Poison and Disease\n- See Invisibility\n\n_**Protective Aura.**_ As a Magic action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds Bright Light in a 60-foot radius and Dim Light for an additional 60 feet. While in that Bright Light, you and your allies gain a +1 bonus to Armor Class and saving throws and can sense the location of any Invisible creature that is also in the Bright Light.\n\nThe rod's head stops glowing and the effect ends after 10 minutes or when a creature takes a Magic action to pull the rod from the ground. Once used, this property can't be used again until the next dawn.",
+    "plain": "This rod has the following properties.\n\nAlertness. While holding the rod, you have Advantage on Wisdom (Perception) checks and on Initiative rolls.\n\nSpells. While holding the rod, you can cast the following spells from it:\n\n- Detect Evil and Good\n- Detect Magic\n- Detect Poison and Disease\n- See Invisibility\n\nProtective Aura. As a Magic action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds Bright Light in a 60-foot radius and Dim Light for an additional 60 feet. While in that Bright Light, you and your allies gain a +1 bonus to Armor Class and saving throws and can sense the location of any Invisible creature that is also in the Bright Light.\n\nThe rod's head stops glowing and the effect ends after 10 minutes or when a creature takes a Magic action to pull the rod from the ground. Once used, this property can't be used again until the next dawn.",
+    "wording": "srd"
+  },
+  "group": "group:rod",
+  "rarity": "rarity:very-rare",
+  "attunement": true
+}

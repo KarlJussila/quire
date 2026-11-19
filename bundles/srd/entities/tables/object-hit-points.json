@@ -1,0 +1,51 @@
+{
+  "id": "table:object-hit-points",
+  "name": "Object Hit Points",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "size",
+      "name": "Size"
+    },
+    {
+      "key": "fragile",
+      "name": "Fragile"
+    },
+    {
+      "key": "resilient",
+      "name": "Resilient"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "size": "Tiny (bottle, lock)",
+        "fragile": "2 (1d4)",
+        "resilient": "5 (2d4)"
+      }
+    },
+    {
+      "cells": {
+        "size": "Small (chest, lute)",
+        "fragile": "3 (1d6)",
+        "resilient": "10 (3d6)"
+      }
+    },
+    {
+      "cells": {
+        "size": "Medium (barrel, chandelier)",
+        "fragile": "4 (1d8)",
+        "resilient": "18 (4d8)"
+      }
+    },
+    {
+      "cells": {
+        "size": "Large (cart, 10-ft.-by-10-ft. window)",
+        "fragile": "5 (1d10)",
+        "resilient": "27 (5d10)"
+      }
+    }
+  ]
+}

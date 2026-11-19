@@ -1,0 +1,31 @@
+{
+  "id": "item:breastplate",
+  "name": "Breastplate",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This armor consists of a fitted metal chest piece worn with supple leather. Although it leaves the legs and arms relatively unprotected, this armor provides good protection for the wearer's vital organs while leaving the wearer relatively unencumbered.",
+    "plain": "This armor consists of a fitted metal chest piece worn with supple leather. Although it leaves the legs and arms relatively unprotected, this armor provides good protection for the wearer's vital organs while leaving the wearer relatively unencumbered.",
+    "wording": "srd"
+  },
+  "group": "group:medium-armor",
+  "cost": {
+    "amount": 400,
+    "currency": "currency:gp"
+  },
+  "weight": 20.0,
+  "armor": {
+    "ac": {
+      "sum": [
+        14,
+        {
+          "min": [
+            2,
+            "modifiers.ability:dex"
+          ]
+        }
+      ]
+    }
+  }
+}

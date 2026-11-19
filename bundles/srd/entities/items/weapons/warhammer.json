@@ -1,0 +1,27 @@
+{
+  "id": "item:warhammer",
+  "name": "Warhammer",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:martial-melee-weapon",
+  "cost": {
+    "amount": 15,
+    "currency": "currency:gp"
+  },
+  "weight": 2.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:versatile"
+    ],
+    "damage": {
+      "amount": "1d8",
+      "type": "damage-type:bludgeoning"
+    },
+    "versatile": "1d10"
+  }
+}

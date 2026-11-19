@@ -1,0 +1,177 @@
+{
+  "id": "creature:adult-bronze-dragon@2024",
+  "name": "Adult Bronze Dragon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:lawful-good",
+  "ac": 18,
+  "hp": {
+    "average": 212,
+    "formula": "17d12 + 102"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 20,
+    "ability:con": 23,
+    "ability:dex": 10,
+    "ability:int": 16,
+    "ability:str": 25,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:dex": 5,
+    "ability:wis": 7
+  },
+  "skills": {
+    "skill:insight": 7,
+    "skill:perception": 12,
+    "skill:stealth": 5
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    },
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 22,
+  "xp": 13000,
+  "proficiencyBonus": 5,
+  "initiative": 10,
+  "habitat": [
+    "Coastal"
+  ],
+  "treasure": [
+    "Implements"
+  ],
+  "cr": 15,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:lightning"
+      ]
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The dragon can breathe air and water.",
+        "plain": "The dragon can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Legendary Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "plain": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes three Rend attacks. It can replace one attack with a use of (A) Repulsion Breath or (B) Spellcasting to cast Guiding Bolt (level 2 version).",
+        "plain": "The dragon makes three Rend attacks. It can replace one attack with a use of (A) Repulsion Breath or (B) Spellcasting to cast Guiding Bolt (level 2 version).",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +12, reach 10 ft. _Hit:_ 16 (2d8 + 7) Slashing damage plus 5 (1d10) Lightning damage.",
+        "plain": "Melee Attack Roll: +12, reach 10 ft. Hit: 16 (2d8 + 7) Slashing damage plus 5 (1d10) Lightning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Lightning Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 19, each creature in a 90-foot-long, 5-footwide Line. _Failure:_ 55 (10d10) Lightning damage. _Success:_ Half damage.",
+        "plain": "Dexterity Saving Throw: DC 19, each creature in a 90-foot-long, 5-footwide Line. Failure: 55 (10d10) Lightning damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Repulsion Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Strength Saving Throw:_ DC 19, each creature in a 30-foot Cone. _Failure:_ The target is pushed up to 60 feet straight away from the dragon and has the Prone condition.",
+        "plain": "Strength Saving Throw: DC 19, each creature in a 30-foot Cone. Failure: The target is pushed up to 60 feet straight away from the dragon and has the Prone condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 17, +10 to hit with spell attacks):\n\n- **At Will:** Detect Magic, Guiding Bolt (level 2 version), Shapechange (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell), Speak with Animals, Thaumaturgy\n- **1/Day Each:** Detect Thoughts, Water Breathing",
+        "plain": "The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 17, +10 to hit with spell attacks):\n\n- At Will: Detect Magic, Guiding Bolt (level 2 version), Shapechange (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell), Speak with Animals, Thaumaturgy\n- 1/Day Each: Detect Thoughts, Water Breathing",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Guiding Light",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon uses Spellcasting to cast Guiding Bolt (level 2 version).",
+        "plain": "The dragon uses Spellcasting to cast Guiding Bolt (level 2 version).",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pounce",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon moves up to half its Speed, and it makes one Rend attack.",
+        "plain": "The dragon moves up to half its Speed, and it makes one Rend attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Thunderclap",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 17, each creature in a 20-foot-radius Sphere centered on a point the dragon can see within 90 feet. _Failure:_ 10 (3d6) Thunder damage, and the target has the Deafened condition until the end of its next turn.",
+        "plain": "Constitution Saving Throw: DC 17, each creature in a 20-foot-radius Sphere centered on a point the dragon can see within 90 feet. Failure: 10 (3d6) Thunder damage, and the target has the Deafened condition until the end of its next turn.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

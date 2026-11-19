@@ -1,0 +1,10 @@
+{
+  "id": "spell-school:illusion",
+  "name": "Illusion",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

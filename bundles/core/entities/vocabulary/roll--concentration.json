@@ -1,0 +1,8 @@
+{
+  "id": "roll:concentration",
+  "name": "Concentration Save",
+  "source": {
+    "book": "core"
+  },
+  "isA": "roll:save"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "group:light-armor",
+  "name": "Light Armor",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:armor"
+}

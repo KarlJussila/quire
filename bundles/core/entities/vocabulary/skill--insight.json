@@ -1,0 +1,11 @@
+{
+  "id": "skill:insight",
+  "name": "Insight",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:wis"
+}

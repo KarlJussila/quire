@@ -1,0 +1,87 @@
+{
+  "id": "feature:druid/archdruid@2024",
+  "name": "Level 20: Archdruid",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The vitality of nature constantly blooms within you, granting you the following benefits.\n\n_**Evergreen Wild Shape.**_ Whenever you roll Initiative and have no uses of Wild Shape left, you regain one expended use of it.\n\n_**Nature Magician.**_ You can convert uses of Wild Shape into a spell slot (no action required). Choose a number of your unexpended uses of Wild Shape and convert them into a single spell slot, with each use contributing 2 spell levels. For example, if you convert two uses of Wild Shape, you produce a level 4 spell slot. Once you use this benefit, you can't do so again until you finish a Long Rest.\n\n_**Longevity.**_ The primal magic that you wield causes you to age more slowly. For every ten years that pass, your body ages only one year.",
+    "plain": "The vitality of nature constantly blooms within you, granting you the following benefits.\n\nEvergreen Wild Shape. Whenever you roll Initiative and have no uses of Wild Shape left, you regain one expended use of it.\n\nNature Magician. You can convert uses of Wild Shape into a spell slot (no action required). Choose a number of your unexpended uses of Wild Shape and convert them into a single spell slot, with each use contributing 2 spell levels. For example, if you convert two uses of Wild Shape, you produce a level 4 spell slot. Once you use this benefit, you can't do so again until you finish a Long Rest.\n\nLongevity. The primal magic that you wield causes you to age more slowly. For every ten years that pass, your body ages only one year.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "evergreen-wild-shape",
+      "name": "Evergreen Wild Shape",
+      "when": {
+        "compare": "levels.class:druid",
+        "atLeast": 20
+      },
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:initiative"
+        },
+        "when": {
+          "compare": "pools.wild-shape.current",
+          "atMost": 0
+        }
+      },
+      "outcomes": [
+        {
+          "pool": {
+            "resource": "wild-shape",
+            "add": 1
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "nature-magician",
+      "name": "Nature Magician",
+      "when": {
+        "compare": "levels.class:druid",
+        "atLeast": 20
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Convert any number of your unexpended uses of Wild Shape into one spell slot, each use contributing 2 spell levels. For example, two uses make a level 4 spell slot.",
+            "gap": {
+              "category": "resource",
+              "name": "convert Wild Shape uses into a spell slot"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "age": {
+          "$multiply": 0.1
+        }
+      }
+    }
+  ]
+}

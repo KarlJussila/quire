@@ -1,0 +1,21 @@
+{
+  "id": "feature:rogue/slippery-mind@2024",
+  "name": "Level 15: Slippery Mind",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your cunning mind is exceptionally difficult to control. You gain proficiency in Wisdom and Charisma saving throws.",
+    "plain": "Your cunning mind is exceptionally difficult to control. You gain proficiency in Wisdom and Charisma saving throws.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:wis",
+        "ability:cha"
+      ]
+    }
+  ]
+}

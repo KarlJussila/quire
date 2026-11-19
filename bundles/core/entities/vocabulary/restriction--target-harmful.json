@@ -1,0 +1,7 @@
+{
+  "id": "restriction:target-harmful",
+  "name": "Target with Harmful Abilities or Magical Effects",
+  "source": {
+    "book": "core"
+  }
+}

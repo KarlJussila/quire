@@ -1,0 +1,162 @@
+{
+  "id": "creature:marilith@2024",
+  "name": "Marilith",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 16,
+  "hp": {
+    "average": 220,
+    "formula": "21d10 + 105"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:climb": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 20,
+    "ability:con": 20,
+    "ability:dex": 20,
+    "ability:int": 18,
+    "ability:str": 18,
+    "ability:wis": 16
+  },
+  "saves": {
+    "ability:cha": 10,
+    "ability:con": 10,
+    "ability:str": 9,
+    "ability:wis": 8
+  },
+  "skills": {
+    "skill:perception": 8
+  },
+  "senses": {
+    "sense:truesight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 18,
+  "telepathy": 120,
+  "xp": 15000,
+  "proficiencyBonus": 5,
+  "initiative": 10,
+  "habitat": [
+    "Planar (Abyss)"
+  ],
+  "treasure": [
+    "Armaments"
+  ],
+  "cr": 16,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:lightning"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Demonic Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the marilith dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.",
+        "plain": "If the marilith dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The marilith has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The marilith has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Reactive",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The marilith can take one Reaction on every turn of combat.",
+        "plain": "The marilith can take one Reaction on every turn of combat.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The marilith makes six Pact Blade attacks and uses Constrict.",
+        "plain": "The marilith makes six Pact Blade attacks and uses Constrict.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pact Blade",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +10, reach 5 ft. _Hit:_ 10 (1d10 + 5) Slashing damage plus 7 (2d6) Necrotic damage.",
+        "plain": "Melee Attack Roll: +10, reach 5 ft. Hit: 10 (1d10 + 5) Slashing damage plus 7 (2d6) Necrotic damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Constrict",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Strength Saving Throw:_ DC 17, one Medium or smaller creature the marilith can see within 5 feet. _Failure:_ 15 (2d10 + 4) Bludgeoning damage. The target has the Grappled condition (escape DC 14), and it has the Restrained condition until the grapple ends.",
+        "plain": "Strength Saving Throw: DC 17, one Medium or smaller creature the marilith can see within 5 feet. Failure: 15 (2d10 + 4) Bludgeoning damage. The target has the Grappled condition (escape DC 14), and it has the Restrained condition until the grapple ends.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Teleport",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The marilith teleports up to 120 feet to an unoccupied space it can see.",
+        "plain": "The marilith teleports up to 120 feet to an unoccupied space it can see.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Parry",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "_Trigger:_ The marilith is hit by a melee attack roll while holding a weapon. _Response:_ The marilith adds 5 to its AC against that attack, possibly causing it to miss.",
+        "plain": "Trigger: The marilith is hit by a melee attack roll while holding a weapon. Response: The marilith adds 5 to its AC against that attack, possibly causing it to miss.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

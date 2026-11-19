@@ -1,0 +1,21 @@
+{
+  "id": "feature:barbarian/multiclass-proficiencies",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Proficiencies Gained: Shields, simple weapons, martial weapons",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:shield",
+        "group:simple-weapon",
+        "group:martial-weapon"
+      ]
+    }
+  ]
+}

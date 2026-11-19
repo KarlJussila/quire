@@ -1,0 +1,25 @@
+{
+  "id": "feature:rogue/epic-boon@2024",
+  "name": "Level 19: Epic Boon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain an Epic Boon feat (see \"Feats\") or another feat of your choice for which you qualify. Boon of the Night Spirit is recommended.",
+    "plain": "You gain an Epic Boon feat (see \"Feats\") or another feat of your choice for which you qualify. Boon of the Night Spirit is recommended.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "feat",
+        "name": "Feat",
+        "from": [
+          {
+            "kind": "feat"
+          }
+        ]
+      }
+    }
+  ]
+}

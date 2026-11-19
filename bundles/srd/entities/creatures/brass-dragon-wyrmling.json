@@ -1,0 +1,95 @@
+{
+  "id": "creature:brass-dragon-wyrmling",
+  "name": "Brass Dragon Wyrmling",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:chaotic-good",
+  "ac": 16,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 16,
+    "formula": "3d8 + 3"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:burrow": {
+      "speed": 15
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 13,
+    "ability:con": 13,
+    "ability:dex": 10,
+    "ability:int": 10,
+    "ability:str": 15,
+    "ability:wis": 11
+  },
+  "saves": {
+    "ability:cha": 3,
+    "ability:con": 3,
+    "ability:dex": 2,
+    "ability:wis": 2
+  },
+  "skills": {
+    "skill:perception": 4,
+    "skill:stealth": 2
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    },
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 200,
+  "cr": 1,
+  "languages": [
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 7 (1d10 + 2) piercing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Breath Weapons",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon uses one of the following breath weapons.\n\n- **Fire Breath.** The dragon exhales fire in an 20-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 14 (4d6) fire damage on a failed save, or half as much damage on a successful one.\n- **Sleep Breath.** The dragon exhales sleep gas in a 15-foot cone. Each creature in that area must succeed on a DC 11 Constitution saving throw or fall Unconscious for 1 minute. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.",
+        "plain": "The dragon uses one of the following breath weapons.\n\n- Fire Breath. The dragon exhales fire in an 20-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 14 (4d6) fire damage on a failed save, or half as much damage on a successful one.\n- Sleep Breath. The dragon exhales sleep gas in a 15-foot cone. Each creature in that area must succeed on a DC 11 Constitution saving throw or fall Unconscious for 1 minute. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

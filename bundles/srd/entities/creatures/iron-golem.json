@@ -1,0 +1,165 @@
+{
+  "id": "creature:iron-golem",
+  "name": "Iron Golem",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:construct",
+  "alignment": "alignment:unaligned",
+  "ac": 20,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 210,
+    "formula": "20d10 + 100"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 1,
+    "ability:con": 20,
+    "ability:dex": 9,
+    "ability:int": 3,
+    "ability:str": 24,
+    "ability:wis": 11
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 10,
+  "xp": 15000,
+  "cr": 16,
+  "languages": [
+    {
+      "text": "understands the languages of its creator but can't speak"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison",
+        "damage-type:psychic"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:adamantine",
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:exhaustion",
+        "condition:frightened",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Fire Absorption",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "Whenever the golem is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt.",
+        "plain": "Whenever the golem is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Immutable Form",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The golem is immune to any spell or effect that would alter its form.",
+        "plain": "The golem is immune to any spell or effect that would alter its form.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The golem has advantage on saving throws against spells and other magical effects.",
+        "plain": "The golem has advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Weapons",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The golem's weapon attacks are magical.",
+        "plain": "The golem's weapon attacks are magical.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The golem makes two melee attacks.",
+        "plain": "The golem makes two melee attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Slam",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +13 to hit, reach 5 ft., one target. _Hit:_ 20 (3d8 + 7) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +13 to hit, reach 5 ft., one target. Hit: 20 (3d8 + 7) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +13 to hit, reach 10 ft., one target. _Hit:_ 23 (3d10 + 7) slashing damage.",
+        "plain": "Melee Weapon Attack: +13 to hit, reach 10 ft., one target. Hit: 23 (3d10 + 7) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Poison Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The golem exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.",
+        "plain": "The golem exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

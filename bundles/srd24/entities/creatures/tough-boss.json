@@ -1,0 +1,96 @@
+{
+  "id": "creature:tough-boss@2024",
+  "name": "Tough Boss",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 16,
+  "hp": {
+    "average": 82,
+    "formula": "11d8 + 33"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 16,
+    "ability:dex": 14,
+    "ability:int": 11,
+    "ability:str": 17,
+    "ability:wis": 10
+  },
+  "saves": {
+    "ability:cha": 2,
+    "ability:con": 5,
+    "ability:str": 5
+  },
+  "passivePerception": 10,
+  "xp": 1100,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Armaments"
+  ],
+  "gear": [
+    "Chain Mail",
+    "Heavy Crossbow",
+    "Warhammer"
+  ],
+  "cr": 4,
+  "languages": [
+    {
+      "text": "Common plus one other language"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Pack Tactics",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The tough has Advantage on an attack roll against a creature if at least one of the tough's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+        "plain": "The tough has Advantage on an attack roll against a creature if at least one of the tough's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The tough makes two attacks, using Warhammer or Heavy Crossbow in any combination.",
+        "plain": "The tough makes two attacks, using Warhammer or Heavy Crossbow in any combination.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Warhammer",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 12 (2d8 + 3) Bludgeoning damage. If the target is a Large or smaller creature, the tough pushes the target up to 10 feet straight away from itself.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 12 (2d8 + 3) Bludgeoning damage. If the target is a Large or smaller creature, the tough pushes the target up to 10 feet straight away from itself.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Heavy Crossbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +4, range 100/400 ft. _Hit:_ 13 (2d10 + 2) Piercing damage.",
+        "plain": "Ranged Attack Roll: +4, range 100/400 ft. Hit: 13 (2d10 + 2) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

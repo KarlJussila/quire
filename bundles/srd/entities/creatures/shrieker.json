@@ -1,0 +1,71 @@
+{
+  "id": "creature:shrieker",
+  "name": "Shrieker",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:plant",
+  "alignment": "alignment:unaligned",
+  "ac": 5,
+  "hp": {
+    "average": 13,
+    "formula": "3d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 0
+    }
+  },
+  "abilities": {
+    "ability:cha": 1,
+    "ability:con": 10,
+    "ability:dex": 1,
+    "ability:int": 1,
+    "ability:str": 1,
+    "ability:wis": 3
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30,
+      "blindBeyond": true
+    }
+  },
+  "passivePerception": 6,
+  "xp": 10,
+  "cr": 0,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:blinded",
+        "condition:deafened",
+        "condition:frightened"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "False Appearance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the shrieker remains motionless, it is indistinguishable from an ordinary fungus.",
+        "plain": "While the shrieker remains motionless, it is indistinguishable from an ordinary fungus.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shriek",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "When bright light or a creature is within 30 feet of the shrieker, it emits a shriek audible within 300 feet of it. The shrieker continues to shriek until the disturbance moves out of range and for 1d4 of the shrieker's turns afterward.",
+        "plain": "When bright light or a creature is within 30 feet of the shrieker, it emits a shriek audible within 300 feet of it. The shrieker continues to shriek until the disturbance moves out of range and for 1d4 of the shrieker's turns afterward.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

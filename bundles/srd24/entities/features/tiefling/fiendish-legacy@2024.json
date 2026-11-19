@@ -1,0 +1,267 @@
+{
+  "id": "feature:tiefling/fiendish-legacy@2024",
+  "name": "Fiendish Legacy",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the table. You gain the level 1 benefit of the chosen legacy.",
+    "plain": "You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the table. You gain the level 1 benefit of the chosen legacy.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "choose": {
+        "key": "legacy",
+        "name": "Fiendish Legacy",
+        "from": [
+          {
+            "name": "Abyssal",
+            "of": [
+              {
+                "type": "defense",
+                "resist": [
+                  "damage-type:poison"
+                ]
+              },
+              {
+                "type": "spell-access",
+                "spells": [
+                  "spell:poison-spray"
+                ],
+                "how": "known",
+                "ability": {
+                  "choose": {
+                    "key": "spellcasting-ability",
+                    "name": "Spellcasting ability",
+                    "from": [
+                      "ability:int",
+                      "ability:wis",
+                      "ability:cha"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.total",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:ray-of-sickness"
+                ],
+                "how": "prepared",
+                "ability": {
+                  "chosen": "spellcasting-ability"
+                },
+                "uses": {
+                  "max": 1,
+                  "recover": [
+                    {
+                      "on": {
+                        "event": "event:rest-finished",
+                        "match": {
+                          "rest": "rest:long"
+                        },
+                        "subject": "self"
+                      },
+                      "amount": "all"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.total",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:hold-person"
+                ],
+                "how": "prepared",
+                "ability": {
+                  "chosen": "spellcasting-ability"
+                },
+                "uses": {
+                  "max": 1,
+                  "recover": [
+                    {
+                      "on": {
+                        "event": "event:rest-finished",
+                        "match": {
+                          "rest": "rest:long"
+                        },
+                        "subject": "self"
+                      },
+                      "amount": "all"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "name": "Chthonic",
+            "of": [
+              {
+                "type": "defense",
+                "resist": [
+                  "damage-type:necrotic"
+                ]
+              },
+              {
+                "type": "spell-access",
+                "spells": [
+                  "spell:chill-touch"
+                ],
+                "how": "known",
+                "ability": {
+                  "chosen": "spellcasting-ability"
+                }
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.total",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:false-life"
+                ],
+                "how": "prepared",
+                "ability": {
+                  "chosen": "spellcasting-ability"
+                },
+                "uses": {
+                  "max": 1,
+                  "recover": [
+                    {
+                      "on": {
+                        "event": "event:rest-finished",
+                        "match": {
+                          "rest": "rest:long"
+                        },
+                        "subject": "self"
+                      },
+                      "amount": "all"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.total",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:ray-of-enfeeblement"
+                ],
+                "how": "prepared",
+                "ability": {
+                  "chosen": "spellcasting-ability"
+                },
+                "uses": {
+                  "max": 1,
+                  "recover": [
+                    {
+                      "on": {
+                        "event": "event:rest-finished",
+                        "match": {
+                          "rest": "rest:long"
+                        },
+                        "subject": "self"
+                      },
+                      "amount": "all"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "name": "Infernal",
+            "of": [
+              {
+                "type": "defense",
+                "resist": [
+                  "damage-type:fire"
+                ]
+              },
+              {
+                "type": "spell-access",
+                "spells": [
+                  "spell:fire-bolt"
+                ],
+                "how": "known",
+                "ability": {
+                  "chosen": "spellcasting-ability"
+                }
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.total",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:hellish-rebuke"
+                ],
+                "how": "prepared",
+                "ability": {
+                  "chosen": "spellcasting-ability"
+                },
+                "uses": {
+                  "max": 1,
+                  "recover": [
+                    {
+                      "on": {
+                        "event": "event:rest-finished",
+                        "match": {
+                          "rest": "rest:long"
+                        },
+                        "subject": "self"
+                      },
+                      "amount": "all"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.total",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:darkness"
+                ],
+                "how": "prepared",
+                "ability": {
+                  "chosen": "spellcasting-ability"
+                },
+                "uses": {
+                  "max": 1,
+                  "recover": [
+                    {
+                      "on": {
+                        "event": "event:rest-finished",
+                        "match": {
+                          "rest": "rest:long"
+                        },
+                        "subject": "self"
+                      },
+                      "amount": "all"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

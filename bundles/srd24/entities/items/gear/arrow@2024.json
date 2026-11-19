@@ -1,0 +1,20 @@
+{
+  "id": "item:arrow@2024",
+  "name": "Arrow",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": [
+    "group:adventuring-gear",
+    "group:ammunition"
+  ],
+  "cost": {
+    "amount": 5,
+    "currency": "currency:cp"
+  },
+  "weight": 0.05
+}

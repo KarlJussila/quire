@@ -1,0 +1,105 @@
+{
+  "id": "creature:swarm-of-quippers",
+  "name": "Swarm of Quippers",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "swarm": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "hp": {
+    "average": 28,
+    "formula": "8d8 - 8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 0
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 2,
+    "ability:con": 9,
+    "ability:dex": 16,
+    "ability:int": 1,
+    "ability:str": 13,
+    "ability:wis": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 8,
+  "xp": 200,
+  "cr": 1,
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened",
+        "condition:grappled",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:prone",
+        "condition:restrained",
+        "condition:stunned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Blood Frenzy",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The swarm has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
+        "plain": "The swarm has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Swarm",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny quipper. The swarm can't regain hit points or gain temporary hit points.",
+        "plain": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny quipper. The swarm can't regain hit points or gain temporary hit points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Water Breathing",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The swarm can breathe only underwater.",
+        "plain": "The swarm can breathe only underwater.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bites",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 0 ft., one creature in the swarm's space. _Hit:_ 14 (4d6) piercing damage, or 7 (2d6) piercing damage if the swarm has half of its hit points or fewer.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 0 ft., one creature in the swarm's space. Hit: 14 (4d6) piercing damage, or 7 (2d6) piercing damage if the swarm has half of its hit points or fewer.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

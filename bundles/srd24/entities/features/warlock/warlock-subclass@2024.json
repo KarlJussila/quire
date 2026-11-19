@@ -1,0 +1,30 @@
+{
+  "id": "feature:warlock/warlock-subclass@2024",
+  "name": "Level 3: Warlock Subclass",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a Warlock subclass of your choice. The Fiend Patron subclass is detailed after this class's description. A subclass is a specialization that grants you features at certain Warlock levels. For the rest of your career, you gain each of your subclass's features that are of your Warlock level or lower.",
+    "plain": "You gain a Warlock subclass of your choice. The Fiend Patron subclass is detailed after this class's description. A subclass is a specialization that grants you features at certain Warlock levels. For the rest of your career, you gain each of your subclass's features that are of your Warlock level or lower.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "subclass",
+        "name": "Warlock Subclass",
+        "from": [
+          {
+            "kind": "subclass",
+            "where": {
+              "match": {
+                "class": "class:warlock"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

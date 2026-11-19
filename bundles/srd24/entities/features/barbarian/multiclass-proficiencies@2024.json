@@ -1,0 +1,25 @@
+{
+  "id": "feature:barbarian/multiclass-proficiencies@2024",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Gain the following traits from the Core Barbarian Traits table: Hit Point Die, proficiency with Martial weapons, and training with Shields.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:martial-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:shield"
+      ]
+    }
+  ]
+}

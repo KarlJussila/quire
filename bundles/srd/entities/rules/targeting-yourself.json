@@ -1,0 +1,16 @@
+{
+  "id": "rule:targeting-yourself",
+  "name": "Targeting Yourself",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "If a spell targets a creature of your choice, you can choose yourself, unless the creature must be hostile or specifically a creature other than you. If you are in the area of effect of a spell you cast, you can target yourself.",
+    "plain": "If a spell targets a creature of your choice, you can choose yourself, unless the creature must be hostile or specifically a creature other than you. If you are in the area of effect of a spell you cast, you can target yourself.",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting",
+  "appliesTo": {
+    "pool": "any"
+  }
+}

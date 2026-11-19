@@ -1,0 +1,15 @@
+{
+  "id": "language:dwarvish",
+  "name": "Dwarvish",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A standard language, typically spoken by dwarves, written in the Dwarvish script.",
+    "plain": "A standard language, typically spoken by dwarves, written in the Dwarvish script.",
+    "wording": "original"
+  },
+  "group": "group:standard-language",
+  "script": "Dwarvish",
+  "speakers": "Dwarves"
+}

@@ -1,0 +1,192 @@
+{
+  "id": "creature:ancient-bronze-dragon",
+  "name": "Ancient Bronze Dragon",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:gargantuan",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:lawful-good",
+  "ac": 22,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 444,
+    "formula": "24d20 + 192"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 21,
+    "ability:con": 27,
+    "ability:dex": 10,
+    "ability:int": 18,
+    "ability:str": 29,
+    "ability:wis": 17
+  },
+  "saves": {
+    "ability:cha": 12,
+    "ability:con": 15,
+    "ability:dex": 7,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:insight": 10,
+    "skill:perception": 17,
+    "skill:stealth": 7
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    },
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 27,
+  "xp": 41000,
+  "cr": 22,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:lightning"
+      ]
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The dragon can breathe air and water.",
+        "plain": "The dragon can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Legendary Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "plain": "If the dragon fails a saving throw, it can choose to succeed instead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.",
+        "plain": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +16 to hit, reach 15 ft., one target. _Hit:_ 20 (2d10 + 9) piercing damage.",
+        "plain": "Melee Weapon Attack: +16 to hit, reach 15 ft., one target. Hit: 20 (2d10 + 9) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +16 to hit, reach 10 ft., one target. _Hit:_ 16 (2d6 + 9) slashing damage.",
+        "plain": "Melee Weapon Attack: +16 to hit, reach 10 ft., one target. Hit: 16 (2d6 + 9) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +16 to hit, reach 20 ft., one target. _Hit:_ 18 (2d8 + 9) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +16 to hit, reach 20 ft., one target. Hit: 18 (2d8 + 9) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Frightful Presence",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 20 Wisdom saving throw or become Frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.",
+        "plain": "Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 20 Wisdom saving throw or become Frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Breath Weapons",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon uses one of the following breath weapons.\n\n- **Lightning Breath.** The dragon exhales lightning in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 23 Dexterity saving throw, taking 88 (16d10) lightning damage on a failed save, or half as much damage on a successful one.\n- **Repulsion Breath.** The dragon exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a DC 23 Strength saving throw. On a failed save, the creature is pushed 60 feet away from the dragon.",
+        "plain": "The dragon uses one of the following breath weapons.\n\n- Lightning Breath. The dragon exhales lightning in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 23 Dexterity saving throw, taking 88 (16d10) lightning damage on a failed save, or half as much damage on a successful one.\n- Repulsion Breath. The dragon exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a DC 23 Strength saving throw. On a failed save, the creature is pushed 60 feet away from the dragon.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Change Shape",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).\n\nIn a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.",
+        "plain": "The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).\n\nIn a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Detect",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon makes a Wisdom (Perception) check.",
+        "plain": "The dragon makes a Wisdom (Perception) check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail Attack",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon makes a tail attack.",
+        "plain": "The dragon makes a tail attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Wing Attack",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The dragon beats its wings. Each creature within 15 feet of the dragon must succeed on a DC 24 Dexterity saving throw or take 16 (2d6 + 9) bludgeoning damage and be knocked Prone. The dragon can then fly up to half its flying speed.",
+        "plain": "The dragon beats its wings. Each creature within 15 feet of the dragon must succeed on a DC 24 Dexterity saving throw or take 16 (2d6 + 9) bludgeoning damage and be knocked Prone. The dragon can then fly up to half its flying speed.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

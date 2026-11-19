@@ -1,0 +1,44 @@
+{
+  "id": "item:armor-2",
+  "name": "Armor, +2",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have a bonus to Armor Class while wearing this armor. The bonus is determined by its rarity.",
+    "plain": "You have a bonus to Armor Class while wearing this armor. The bonus is determined by its rarity.",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:very-rare",
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Armor",
+      "from": [
+        {
+          "kind": "item",
+          "where": {
+            "group": "group:armor"
+          }
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true
+        }
+      }
+    }
+  ]
+}

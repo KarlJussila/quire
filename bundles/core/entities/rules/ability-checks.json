@@ -1,0 +1,409 @@
+{
+  "id": "rule:ability-checks",
+  "name": "Ability Checks",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "An activity that calls for an ability check has each target make it, or the creature using the activity when the check is its own; a contest has both sides roll. An ability check adds the modifier of its ability, and the proficiency bonus as many times as the creature's proficiency in the check's skill counts it: half, once, or twice."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "emits": [
+    {
+      "event": "event:roll-made",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "match": {
+                "delivery": {
+                  "check": true
+                }
+              }
+            },
+            {
+              "not": {
+                "match": {
+                  "delivery": {
+                    "check": {
+                      "by": "self"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "at": "rolled",
+      "by": "target",
+      "subject": "self",
+      "fields": {
+        "roll": "roll:check",
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        }
+      }
+    },
+    {
+      "event": "event:roll-resolved",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "match": {
+                "delivery": {
+                  "check": true
+                }
+              }
+            },
+            {
+              "not": {
+                "match": {
+                  "delivery": {
+                    "check": {
+                      "by": "self"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "at": "resolved",
+      "by": "target",
+      "subject": "self",
+      "fields": {
+        "roll": "roll:check",
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        },
+        "success": {
+          "settled": "success"
+        },
+        "margin": {
+          "settled": "margin"
+        }
+      }
+    },
+    {
+      "event": "event:roll-made",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "check": {
+                "by": "self"
+              }
+            }
+          }
+        }
+      },
+      "at": "rolled",
+      "fields": {
+        "roll": "roll:check",
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        }
+      }
+    },
+    {
+      "event": "event:roll-resolved",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "check": {
+                "by": "self"
+              }
+            }
+          }
+        }
+      },
+      "at": "resolved",
+      "fields": {
+        "roll": "roll:check",
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        },
+        "success": {
+          "settled": "success"
+        },
+        "margin": {
+          "settled": "margin"
+        }
+      }
+    },
+    {
+      "event": "event:roll-made",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "contest": true
+            }
+          }
+        }
+      },
+      "at": "rolled",
+      "fields": {
+        "roll": "roll:contest",
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        }
+      }
+    },
+    {
+      "event": "event:roll-made",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "contest": true
+            }
+          }
+        }
+      },
+      "at": "rolled",
+      "by": "target",
+      "subject": "self",
+      "fields": {
+        "roll": "roll:contest",
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        }
+      }
+    },
+    {
+      "event": "event:roll-resolved",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "contest": true
+            }
+          }
+        }
+      },
+      "at": "resolved",
+      "fields": {
+        "roll": "roll:contest",
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        },
+        "success": {
+          "settled": "success"
+        },
+        "margin": {
+          "settled": "margin"
+        }
+      }
+    },
+    {
+      "event": "event:roll-resolved",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "contest": true
+            }
+          }
+        }
+      },
+      "at": "resolved",
+      "by": "target",
+      "subject": "self",
+      "fields": {
+        "roll": "roll:contest",
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        },
+        "success": {
+          "settled": "success"
+        },
+        "margin": {
+          "settled": "margin"
+        }
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": "modifiers.{ability}"
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:check",
+          "ability": true
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": {
+            "divide": {
+              "times": {
+                "max": [
+                  "proficiencies.{skill}",
+                  "proficiencies.group:ability-checks"
+                ]
+              },
+              "by": "proficiencyBonus"
+            },
+            "by": 1,
+            "round": "down"
+          }
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:check"
+        }
+      }
+    }
+  ]
+}

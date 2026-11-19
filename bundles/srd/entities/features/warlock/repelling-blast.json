@@ -1,0 +1,47 @@
+{
+  "id": "feature:warlock/repelling-blast",
+  "name": "Repelling Blast",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite:_ Eldritch Blast _cantrip_\n\nWhen you hit a creature with Eldritch Blast, you can push the creature up to 10 feet away from you in a straight line.",
+    "plain": "Prerequisite: Eldritch Blast cantrip\n\nWhen you hit a creature with Eldritch Blast, you can push the creature up to 10 feet away from you in a straight line.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [],
+  "activities": [
+    {
+      "key": "repelling-blast",
+      "name": "Repelling Blast",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true
+        },
+        "when": {
+          "spell": "spell:eldritch-blast"
+        }
+      },
+      "outcomes": [
+        {
+          "move": {
+            "kind": "push",
+            "distance": 10,
+            "toward": {
+              "awayFrom": "self"
+            }
+          },
+          "to": "subject"
+        }
+      ]
+    }
+  ],
+  "gaps": [],
+  "requires": {
+    "has": "spell:eldritch-blast"
+  }
+}

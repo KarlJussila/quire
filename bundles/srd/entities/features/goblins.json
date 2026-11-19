@@ -1,0 +1,11 @@
+{
+  "id": "feature:goblins",
+  "name": "Goblins",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

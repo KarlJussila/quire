@@ -1,0 +1,54 @@
+{
+  "id": "feature:fighter/indomitable",
+  "name": "Indomitable",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest.\n\nYou can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level.",
+    "plain": "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest.\n\nYou can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "indomitable",
+      "name": "Indomitable",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "success": false
+        }
+      },
+      "uses": {
+        "max": {
+          "byLevel": {
+            "9": 1,
+            "13": 2,
+            "17": 3
+          }
+        },
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "intercept": {
+            "reroll": true
+          }
+        }
+      ]
+    }
+  ]
+}

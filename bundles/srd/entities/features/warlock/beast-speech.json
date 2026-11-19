@@ -1,0 +1,22 @@
+{
+  "id": "feature:warlock/beast-speech",
+  "name": "Beast Speech",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can cast Speak with Animals at will, without expending a spell slot.",
+    "plain": "You can cast Speak with Animals at will, without expending a spell slot.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:speak-with-animals"
+      ],
+      "how": "innate"
+    }
+  ]
+}

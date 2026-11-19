@@ -1,0 +1,84 @@
+{
+  "id": "creature:wyvern@2024",
+  "name": "Wyvern",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:unaligned",
+  "ac": 14,
+  "hp": {
+    "average": 127,
+    "formula": "15d10 + 45"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 16,
+    "ability:dex": 10,
+    "ability:int": 5,
+    "ability:str": 19,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 14,
+  "xp": 2300,
+  "proficiencyBonus": 3,
+  "initiative": 0,
+  "habitat": [
+    "Hill",
+    "Mountain"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 6,
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The wyvern makes one Bite attack and one Sting attack.",
+        "plain": "The wyvern makes one Bite attack and one Sting attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 5 ft. _Hit:_ 13 (2d8 + 4) Piercing damage.",
+        "plain": "Melee Attack Roll: +7, reach 5 ft. Hit: 13 (2d8 + 4) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 10 ft. _Hit:_ 11 (2d6 + 4) Piercing damage plus 24 (7d6) Poison damage, and the target has the Poisoned condition until the start of the wyvern's next turn.",
+        "plain": "Melee Attack Roll: +7, reach 10 ft. Hit: 11 (2d6 + 4) Piercing damage plus 24 (7d6) Poison damage, and the target has the Poisoned condition until the start of the wyvern's next turn.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

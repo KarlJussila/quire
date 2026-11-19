@@ -1,0 +1,12 @@
+{
+  "id": "size:small",
+  "name": "Small",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "rank": 1,
+  "space": 5
+}

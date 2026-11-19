@@ -1,0 +1,36 @@
+{
+  "id": "state:hostility-pending",
+  "name": "Hostility Pending",
+  "source": {
+    "book": "core"
+  },
+  "sourceName": "the creature you will become hostile to",
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:dawn"
+      },
+      "step": {
+        "outcomes": [
+          {
+            "applyState": {
+              "state": "state:hostile-to-source",
+              "source": "source"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ],
+  "ends": [
+    {
+      "event": "event:state-applied",
+      "match": {
+        "state": "state:hostile-to-source"
+      },
+      "subject": "self"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "feature:cleric/destroy-undead",
+  "name": "Destroy Undead",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown in the Destroy Undead table.",
+    "plain": "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown in the Destroy Undead table.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:roll-resolved",
+        "by": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "match": {
+                  "creatureType": "creature-type:undead"
+                }
+              },
+              {
+                "compare": "cr",
+                "atMost": {
+                  "byLevel": {
+                    "5": 0.5,
+                    "8": 1,
+                    "11": 2,
+                    "14": 3,
+                    "17": 4
+                  },
+                  "of": "class:cleric"
+                }
+              }
+            ]
+          }
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:save",
+          "success": false
+        },
+        "when": {
+          "activity": "feature:cleric/channel-divinity-turn-undead"
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "kill": {},
+            "to": "actor"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": []
+}

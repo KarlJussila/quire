@@ -1,0 +1,48 @@
+{
+  "id": "feature:wizard/proficiencies@2024",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Saving Throw Proficiencies: Intelligence and Wisdom\nSkill Proficiencies: Choose 2: Arcana, History, Insight, Investigation, Medicine, Nature, or Religion\nWeapon Proficiencies: Simple weapons\nArmor Training: None",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:int",
+        "ability:wis"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              "skill:arcana",
+              "skill:history",
+              "skill:insight",
+              "skill:investigation",
+              "skill:medicine",
+              "skill:nature",
+              "skill:religion"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

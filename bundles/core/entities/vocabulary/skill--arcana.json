@@ -1,0 +1,11 @@
+{
+  "id": "skill:arcana",
+  "name": "Arcana",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:int"
+}

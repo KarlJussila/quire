@@ -1,0 +1,123 @@
+{
+  "id": "feature:ranger/hunter/defensive-tactics@2024",
+  "name": "Level 7: Defensive Tactics",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain one of the following feature options of your choice. Whenever you finish a Short or Long Rest, you can replace the chosen option with the other one.\n\n_**Escape the Horde.**_ Opportunity Attacks have Disadvantage against you.\n\n_**Multiattack Defense.**_ When a creature hits you with an attack roll, that creature has Disadvantage on all other attack rolls against you this turn.",
+    "plain": "You gain one of the following feature options of your choice. Whenever you finish a Short or Long Rest, you can replace the chosen option with the other one.\n\nEscape the Horde. Opportunity Attacks have Disadvantage against you.\n\nMultiattack Defense. When a creature hits you with an attack roll, that creature has Disadvantage on all other attack rolls against you this turn.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "choose": {
+        "key": "defensive-tactics",
+        "name": "Defensive Tactics",
+        "count": 1,
+        "from": [
+          {
+            "name": "Escape the Horde",
+            "of": [
+              {
+                "type": "roll-mod",
+                "mode": "disadvantage",
+                "when": {
+                  "all": [
+                    {
+                      "event": "event:roll-made",
+                      "by": {
+                        "pool": "any"
+                      },
+                      "subject": "self",
+                      "match": {
+                        "roll": "roll:attack"
+                      }
+                    },
+                    {
+                      "prose": {
+                        "text": "opportunity attack",
+                        "gap": {
+                          "category": "test",
+                          "name": "opportunity-attack"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "name": "Multiattack Defense",
+            "of": [
+              {
+                "type": "triggered",
+                "on": {
+                  "event": "event:roll-resolved",
+                  "by": {
+                    "pool": "any"
+                  },
+                  "subject": "self",
+                  "match": {
+                    "roll": "roll:attack",
+                    "success": true
+                  }
+                },
+                "step": {
+                  "outcomes": [
+                    {
+                      "applyState": {
+                        "state": {
+                          "effects": [
+                            {
+                              "type": "roll-mod",
+                              "mode": "disadvantage",
+                              "when": {
+                                "event": "event:roll-made",
+                                "by": "self",
+                                "subject": "source",
+                                "match": {
+                                  "roll": "roll:attack"
+                                }
+                              }
+                            }
+                          ],
+                          "ends": [
+                            {
+                              "event": "event:turn-end",
+                              "subject": "self"
+                            }
+                          ]
+                        },
+                        "source": "self"
+                      },
+                      "to": "actor"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-defensive-tactics",
+      "name": "Replace Defensive Tactics",
+      "trigger": {
+        "event": "event:rest-finished",
+        "subject": "self"
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "defensive-tactics"
+          }
+        }
+      ]
+    }
+  ]
+}

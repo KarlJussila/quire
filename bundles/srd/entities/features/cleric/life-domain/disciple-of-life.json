@@ -1,0 +1,55 @@
+{
+  "id": "feature:cleric/life-domain/disciple-of-life",
+  "name": "Disciple of Life",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level.",
+    "plain": "Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:healed",
+          "by": "self",
+          "subject": {
+            "pool": "any"
+          },
+          "when": {
+            "spell": {
+              "kind": "spell",
+              "where": {
+                "match": {
+                  "level": {
+                    "atLeast": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "heal": {
+              "amount": {
+                "sum": [
+                  2,
+                  {
+                    "slotLevel": true
+                  }
+                ]
+              }
+            },
+            "to": "subject"
+          }
+        ]
+      }
+    }
+  ]
+}

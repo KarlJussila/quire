@@ -1,0 +1,10 @@
+{
+  "id": "spell-school:transmutation",
+  "name": "Transmutation",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

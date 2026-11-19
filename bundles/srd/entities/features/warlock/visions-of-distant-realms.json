@@ -1,0 +1,29 @@
+{
+  "id": "feature:warlock/visions-of-distant-realms",
+  "name": "Visions of Distant Realms",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite: 15th level_\n\nYou can cast Arcane Eye at will, without expending a spell slot.",
+    "plain": "Prerequisite: 15th level\n\nYou can cast Arcane Eye at will, without expending a spell slot.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:arcane-eye"
+      ],
+      "how": "innate",
+      "countsAs": "class:warlock"
+    }
+  ],
+  "activities": [],
+  "gaps": [],
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 15
+  }
+}

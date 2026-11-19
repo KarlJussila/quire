@@ -1,0 +1,18 @@
+{
+  "id": "rule:unoccupied-space@2024",
+  "name": "Unoccupied Space",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A space is unoccupied if no creatures are in it and it isn't completely filled by objects.",
+    "plain": "A space is unoccupied if no creatures are in it and it isn't completely filled by objects.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

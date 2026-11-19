@@ -1,0 +1,192 @@
+{
+  "id": "creature:lich",
+  "name": "Lich",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:any-evil",
+  "ac": 17,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 135,
+    "formula": "18d8 + 54"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 16,
+    "ability:con": 16,
+    "ability:dex": 16,
+    "ability:int": 20,
+    "ability:str": 11,
+    "ability:wis": 14
+  },
+  "saves": {
+    "ability:con": 10,
+    "ability:int": 12,
+    "ability:wis": 9
+  },
+  "skills": {
+    "skill:arcana": 19,
+    "skill:history": 12,
+    "skill:insight": 9,
+    "skill:perception": 9
+  },
+  "senses": {
+    "sense:truesight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 19,
+  "xp": 33000,
+  "cr": 21,
+  "languages": [
+    {
+      "text": "Common plus up to five other languages"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold",
+        "damage-type:lightning",
+        "damage-type:necrotic"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:exhaustion",
+        "condition:frightened",
+        "condition:paralyzed",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Legendary Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the lich fails a saving throw, it can choose to succeed instead.",
+        "plain": "If the lich fails a saving throw, it can choose to succeed instead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rejuvenation",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery.",
+        "plain": "If it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). The lich has the following wizard spells prepared:\n\n- Cantrips (at will): Mage Hand, Prestidigitation, Ray of Frost\n- 1st level (4 slots): Detect Magic, Magic Missile, Shield, Thunderwave\n- 2nd level (3 slots): Acid Arrow, Detect Thoughts, Invisibility, Mirror Image\n- 3rd level (3 slots): Animate Dead, Counterspell, Dispel Magic, Fireball\n- 4th level (3 slots): Blight, Dimension Door\n- 5th level (3 slots): Cloudkill, Scrying\n- 6th level (1 slot): Disintegrate, Globe of Invulnerability\n- 7th level (1 slot): Finger of Death, Plane Shift\n- 8th level (1 slot): Dominate Monster, Power Word Stun\n- 9th level (1 slot): Power Word Kill",
+        "plain": "The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). The lich has the following wizard spells prepared:\n\n- Cantrips (at will): Mage Hand, Prestidigitation, Ray of Frost\n- 1st level (4 slots): Detect Magic, Magic Missile, Shield, Thunderwave\n- 2nd level (3 slots): Acid Arrow, Detect Thoughts, Invisibility, Mirror Image\n- 3rd level (3 slots): Animate Dead, Counterspell, Dispel Magic, Fireball\n- 4th level (3 slots): Blight, Dimension Door\n- 5th level (3 slots): Cloudkill, Scrying\n- 6th level (1 slot): Disintegrate, Globe of Invulnerability\n- 7th level (1 slot): Finger of Death, Plane Shift\n- 8th level (1 slot): Dominate Monster, Power Word Stun\n- 9th level (1 slot): Power Word Kill",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Turn Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The lich has advantage on saving throws against any effect that turns undead.",
+        "plain": "The lich has advantage on saving throws against any effect that turns undead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Paralyzing Touch",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "Melee Spell Attack:_ +12 to hit, reach 5 ft., one creature. _Hit:_ 10 (3d6) cold damage. The target must succeed on a DC 18 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+        "plain": "Melee Spell Attack: +12 to hit, reach 5 ft., one creature. Hit:_ 10 (3d6) cold damage. The target must succeed on a DC 18 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Cantrip",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The lich casts a cantrip.",
+        "plain": "The lich casts a cantrip.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Paralyzing Touch",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The lich uses its Paralyzing Touch.",
+        "plain": "The lich uses its Paralyzing Touch.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Frightening Gaze",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The lich fixes its gaze on one creature it can see within 10 feet of it. The target must succeed on a DC 18 Wisdom saving throw against this magic or become Frightened for 1 minute. The frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the lich's gaze for the next 24 hours.",
+        "plain": "The lich fixes its gaze on one creature it can see within 10 feet of it. The target must succeed on a DC 18 Wisdom saving throw against this magic or become Frightened for 1 minute. The frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the lich's gaze for the next 24 hours.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Disrupt Life",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "Each non-undead creature within 20 feet of the lich must make a DC 18 Constitution saving throw against this magic, taking 21 (6d6) necrotic damage on a failed save, or half as much damage on a successful one.",
+        "plain": "Each non-undead creature within 20 feet of the lich must make a DC 18 Constitution saving throw against this magic, taking 21 (6d6) necrotic damage on a failed save, or half as much damage on a successful one.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

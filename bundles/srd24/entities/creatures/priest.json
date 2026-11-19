@@ -1,0 +1,106 @@
+{
+  "id": "creature:priest@2024",
+  "name": "Priest",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 13,
+  "hp": {
+    "average": 38,
+    "formula": "7d8 + 7"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 13,
+    "ability:con": 12,
+    "ability:dex": 10,
+    "ability:int": 13,
+    "ability:str": 16,
+    "ability:wis": 16
+  },
+  "skills": {
+    "skill:medicine": 7,
+    "skill:perception": 5,
+    "skill:religion": 5
+  },
+  "passivePerception": 15,
+  "xp": 450,
+  "proficiencyBonus": 2,
+  "initiative": 0,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Individual",
+    "Relics"
+  ],
+  "gear": [
+    "Chain Shirt",
+    "Holy Symbol",
+    "Mace"
+  ],
+  "cr": 2,
+  "languages": [
+    {
+      "text": "Common plus one other language"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The priest makes two attacks, using Mace or Radiant Flame in any combination.",
+        "plain": "The priest makes two attacks, using Mace or Radiant Flame in any combination.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Mace",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 6 (1d6 + 3) Bludgeoning damage plus 5 (2d4) Radiant damage.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Bludgeoning damage plus 5 (2d4) Radiant damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Radiant Flame",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +5, range 60 ft. _Hit:_ 11 (2d10) Radiant damage.",
+        "plain": "Ranged Attack Roll: +5, range 60 ft. Hit: 11 (2d10) Radiant damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The priest casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC 13):\n\n- **At Will:** Light, Thaumaturgy\n- **1/Day:** Spirit Guardians",
+        "plain": "The priest casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC 13):\n\n- At Will: Light, Thaumaturgy\n- 1/Day: Spirit Guardians",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Divine Aid",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The priest casts Bless, Dispel Magic, Healing Word, or Lesser Restoration, using the same spellcasting ability as Spellcasting.",
+        "plain": "The priest casts Bless, Dispel Magic, Healing Word, or Lesser Restoration, using the same spellcasting ability as Spellcasting.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

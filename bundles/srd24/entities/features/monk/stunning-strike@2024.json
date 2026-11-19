@@ -1,0 +1,157 @@
+{
+  "id": "feature:monk/stunning-strike@2024",
+  "name": "Level 5: Stunning Strike",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Once per turn when you hit a creature with a Monk weapon or an Unarmed Strike, you can expend 1 Focus Point to attempt a stunning strike. The target must make a Constitution saving throw. On a failed save, the target has the Stunned condition until the start of your next turn. On a successful save, the target's Speed is halved until the start of your next turn, and the next attack roll made against the target before then has Advantage.",
+    "plain": "Once per turn when you hit a creature with a Monk weapon or an Unarmed Strike, you can expend 1 Focus Point to attempt a stunning strike. The target must make a Constitution saving throw. On a failed save, the target has the Stunned condition until the start of your next turn. On a successful save, the target's Speed is halved until the start of your next turn, and the next attack roll made against the target before then has Advantage.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "stunning-strike",
+      "name": "Stunning Strike",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true
+        },
+        "when": {
+          "any": [
+            {
+              "event": "event:roll-resolved",
+              "match": {
+                "attack": {
+                  "range": "melee",
+                  "via": "unarmed"
+                }
+              }
+            },
+            {
+              "event": "event:roll-resolved",
+              "match": {
+                "attack": {
+                  "range": "melee",
+                  "via": "weapon",
+                  "item": "group:simple-melee-weapon"
+                }
+              }
+            },
+            {
+              "event": "event:roll-resolved",
+              "match": {
+                "attack": {
+                  "range": "melee",
+                  "via": "weapon",
+                  "item": {
+                    "kind": "item",
+                    "where": {
+                      "all": [
+                        {
+                          "group": "group:martial-melee-weapon"
+                        },
+                        {
+                          "match": {
+                            "weapon": {
+                              "properties": "weapon-property:light"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "cost": [
+        {
+          "resource": "focus-points"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": {
+                "pool": "any"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:con",
+          "dc": {
+            "sum": [
+              8,
+              "proficiencyBonus",
+              "modifiers.ability:wis"
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:stunned",
+            "ends": [
+              {
+                "event": "event:turn-start",
+                "subject": "source",
+                "next": true
+              }
+            ]
+          }
+        }
+      ],
+      "otherwise": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "change",
+                  "set": {
+                    "speeds": {
+                      "$where": true,
+                      "speed": {
+                        "$multiply": 0.5
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "ends": [
+              {
+                "event": "event:turn-start",
+                "subject": "source",
+                "next": true
+              }
+            ]
+          }
+        },
+        {
+          "prose": {
+            "text": "The next attack roll made against the target before the start of your next turn has Advantage.",
+            "gap": {
+              "category": "roll",
+              "name": "advantage on the next attack against the target"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

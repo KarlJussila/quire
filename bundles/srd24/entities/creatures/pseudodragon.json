@@ -1,0 +1,111 @@
+{
+  "id": "creature:pseudodragon@2024",
+  "name": "Pseudodragon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:neutral-good",
+  "ac": 14,
+  "hp": {
+    "average": 10,
+    "formula": "3d4 + 3"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 15
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 13,
+    "ability:dex": 15,
+    "ability:int": 10,
+    "ability:str": 6,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 5,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    },
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 15,
+  "xp": 50,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Coastal",
+    "Desert",
+    "Forest",
+    "Hill",
+    "Mountain",
+    "Urban"
+  ],
+  "treasure": [
+    "Arcana"
+  ],
+  "cr": 0.25,
+  "languages": [
+    {
+      "language": "language:common",
+      "understandsOnly": true
+    },
+    {
+      "language": "language:draconic",
+      "understandsOnly": true
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The pseudodragon has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The pseudodragon has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The pseudodragon makes two Bite attacks.",
+        "plain": "The pseudodragon makes two Bite attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 4 (1d4 + 2) Piercing damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 12, one creature the pseudodragon can see within 5 feet. _Failure:_ 5 (2d4) Poison damage, and the target has the Poisoned condition for 1 hour. _Failure by 5 or More:_ While Poisoned, the target also has the Unconscious condition, which ends early if the target takes damage or a creature within 5 feet of it takes an action to wake it.",
+        "plain": "Constitution Saving Throw: DC 12, one creature the pseudodragon can see within 5 feet. Failure: 5 (2d4) Poison damage, and the target has the Poisoned condition for 1 hour. Failure by 5 or More: While Poisoned, the target also has the Unconscious condition, which ends early if the target takes damage or a creature within 5 feet of it takes an action to wake it.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

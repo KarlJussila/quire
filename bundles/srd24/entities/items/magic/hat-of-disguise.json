@@ -1,0 +1,15 @@
+{
+  "id": "item:hat-of-disguise@2024",
+  "name": "Hat of Disguise",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this hat, you can cast the Disguise Self spell. The spell ends if the hat is removed.",
+    "plain": "While wearing this hat, you can cast the Disguise Self spell. The spell ends if the hat is removed.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true
+}

@@ -1,0 +1,11 @@
+{
+  "id": "alignment:lawful-evil",
+  "name": "Lawful Evil",
+  "source": {
+    "book": "core"
+  },
+  "components": [
+    "alignment:lawful",
+    "alignment:evil"
+  ]
+}

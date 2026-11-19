@@ -1,0 +1,10 @@
+{
+  "id": "movement-mode:walk",
+  "name": "Walking",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

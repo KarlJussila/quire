@@ -1,0 +1,18 @@
+{
+  "id": "item:potters-tools",
+  "name": "Potter’s Tools",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Potter’s tools are used to create a variety of ceramic Objects, most typically pots and similar vessels.\n\n***Components.*** Potter’s tools include potter’s needles, ribs, scrapers, a knife, and calipers.\n\n***History.*** Your expertise aids you in identifying ceramic objects, including when they were created and their likely place or culture of origin.\n\n***Investigation, Perception.*** You gain additional insight when inspecting ceramics, uncovering clues others would overlook by spotting minor irregularities.\n\n***Reconstruction.*** By examining pottery shards, you can determine an object’s original, intact form and its likely purpose.\n\n##### POTTER’S TOOLS\n\n| Activity | DC |\n|---|---|\n| Determine what a vessel once held | 10 |\n| Create a serviceable pot | 15 |\n| Find a weak point in a ceramic Object | 20 |",
+    "plain": "Potter’s tools are used to create a variety of ceramic Objects, most typically pots and similar vessels.\n\nComponents. Potter’s tools include potter’s needles, ribs, scrapers, a knife, and calipers.\n\nHistory. Your expertise aids you in identifying ceramic objects, including when they were created and their likely place or culture of origin.\n\nInvestigation, Perception. You gain additional insight when inspecting ceramics, uncovering clues others would overlook by spotting minor irregularities.\n\nReconstruction. By examining pottery shards, you can determine an object’s original, intact form and its likely purpose.\n\nPOTTER’S TOOLS\n\nActivity\tDC\n\nDetermine what a vessel once held\t10\n\nCreate a serviceable pot\t15\n\nFind a weak point in a ceramic Object\t20",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 3.0
+}

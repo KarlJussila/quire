@@ -1,0 +1,81 @@
+{
+  "id": "feat:great-weapon-fighting@2024",
+  "name": "Great Weapon Fighting",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile property to gain this benefit.",
+    "plain": "When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile property to gain this benefit.",
+    "wording": "srd"
+  },
+  "group": "group:fighting-style",
+  "requires": {
+    "has": "group:fighting-style-feature"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "die": {
+          "$atLeast": 3
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage",
+              "attack": {
+                "range": "melee",
+                "via": "weapon",
+                "hands": 2,
+                "item": {
+                  "kind": "item",
+                  "where": {
+                    "match": {
+                      "weapon": {
+                        "properties": [
+                          "weapon-property:two-handed",
+                          "weapon-property:versatile"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "has": {
+              "kind": "item",
+              "where": {
+                "all": [
+                  {
+                    "group": "group:weapon"
+                  },
+                  {
+                    "match": {
+                      "weapon": {
+                        "properties": [
+                          "weapon-property:two-handed",
+                          "weapon-property:versatile"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "match": {
+              "held": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

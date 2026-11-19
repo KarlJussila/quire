@@ -1,0 +1,22 @@
+{
+  "id": "event:taking-damage",
+  "name": "Taking Damage",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Damage is about to be dealt to the subject by a creature (by); the amount can still change. `amount`; `damageType`; `attack` and `spell` it comes from, and the attack's `success` and `crit`; `against`, where it comes from; `excess`, the damage left over once hit points reach 0; `remaining`, the hit points it would leave."
+  },
+  "payload": [
+    "amount",
+    "damageType",
+    "attack",
+    "success",
+    "crit",
+    "spell",
+    "slot",
+    "against",
+    "excess",
+    "remaining"
+  ]
+}

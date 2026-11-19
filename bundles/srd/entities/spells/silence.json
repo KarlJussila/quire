@@ -1,0 +1,45 @@
+{
+  "id": "spell:silence",
+  "name": "Silence",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "For the duration, no sound can be created within or pass through a 20-foot-radius sphere centered on a point you choose within range. Any creature or object entirely inside the sphere is immune to thunder damage, and creatures are Deafened while entirely inside it. Casting a spell that includes a verbal component is impossible there.",
+    "plain": "For the duration, no sound can be created within or pass through a 20-foot-radius sphere centered on a point you choose within range. Any creature or object entirely inside the sphere is immune to thunder damage, and creatures are Deafened while entirely inside it. Casting a spell that includes a verbal component is impossible there.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:illusion",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:ranger"
+  ],
+  "ritual": true,
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 120
+      },
+      "duration": {
+        "amount": 10,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true,
+      "ritual": true
+    }
+  ]
+}

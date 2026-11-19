@@ -1,0 +1,18 @@
+{
+  "id": "weapon-mastery:graze",
+  "name": "Graze",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.",
+    "plain": "If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "The missed attack’s ability modifier alone sets this damage, and no other damage-increasing effect may affect it. Damage outcomes inherit the ordinary damage-roll modifiers; suppress names sources, not all increases except the chosen ability modifier."
+    }
+  ]
+}

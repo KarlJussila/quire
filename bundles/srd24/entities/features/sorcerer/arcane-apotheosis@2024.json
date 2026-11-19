@@ -1,0 +1,18 @@
+{
+  "id": "feature:sorcerer/arcane-apotheosis@2024",
+  "name": "Level 20: Arcane Apotheosis",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While your Innate Sorcery feature is active, you can use one Metamagic option on each of your turns without spending Sorcery Points on it.",
+    "plain": "While your Innate Sorcery feature is active, you can use one Metamagic option on each of your turns without spending Sorcery Points on it.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Metamagic options are not typed, so their costs cannot be waived while Innate Sorcery is active."
+    }
+  ]
+}

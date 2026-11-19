@@ -1,0 +1,12 @@
+{
+  "id": "feature:multiattack-defense@2024",
+  "name": "Multiattack Defense",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When a creature hits you with an attack roll, that creature has Disadvantage on all other attack rolls against you this turn.",
+    "plain": "When a creature hits you with an attack roll, that creature has Disadvantage on all other attack rolls against you this turn.",
+    "wording": "srd"
+  }
+}

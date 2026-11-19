@@ -1,0 +1,36 @@
+{
+  "id": "feature:escape-the-horde",
+  "name": "Escape the Horde",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Opportunity attacks against you are made with disadvantage.",
+    "plain": "Opportunity attacks against you are made with disadvantage.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": {
+              "pool": "any"
+            },
+            "subject": "self",
+            "match": {
+              "roll": "roll:attack"
+            }
+          },
+          {
+            "activity": "rule:opportunity-attacks"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": []
+}

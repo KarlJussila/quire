@@ -1,0 +1,54 @@
+{
+  "id": "rule:versatile-weapon",
+  "name": "Versatile",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A Versatile weapon held in two hands deals its larger damage."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "object",
+    "where": {
+      "match": {
+        "weapon": {
+          "properties": "weapon-property:versatile"
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "attack": {
+                "item": "this"
+              }
+            }
+          }
+        }
+      },
+      "set": {
+        "outcomes": {
+          "$where": {
+            "damage": true
+          },
+          "damage": {
+            "amount": "this.weapon.versatile"
+          }
+        },
+        "delivery": {
+          "attack": {
+            "hands": 2
+          }
+        }
+      },
+      "variant": "two-handed"
+    }
+  ]
+}

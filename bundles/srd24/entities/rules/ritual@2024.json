@@ -1,0 +1,55 @@
+{
+  "id": "rule:ritual@2024",
+  "name": "Ritual",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you have a spell prepared that has the Ritual tag, you can cast that spell as a Ritual. The Ritual version of a spell takes 10 minutes longer to cast than normal. It also doesn't expend a spell slot, which means the ritual version of a spell can't be cast at a higher level. _See also_ \"Spells.\"",
+    "plain": "If you have a spell prepared that has the Ritual tag, you can cast that spell as a Ritual. The Ritual version of a spell takes 10 minutes longer to cast than normal. It also doesn't expend a spell slot, which means the ritual version of a spell can't be cast at a higher level. _See also_ \"Spells.\"",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "spell": {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "ritual": true
+                  }
+                }
+              }
+            },
+            {
+              "prepared": true
+            }
+          ]
+        }
+      },
+      "set": {
+        "time": {
+          "$add": {
+            "amount": 10,
+            "unit": "minute"
+          }
+        },
+        "cost": {
+          "$remove": {
+            "resource": "spell-slots"
+          }
+        }
+      },
+      "variant": "ritual"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "id": "feature:dragonborn/breath-weapon@2024",
+  "name": "Breath Weapon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry trait. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).",
+    "plain": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry trait. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "breath-weapon",
+      "name": "Breath Weapon",
+      "cost": [
+        {
+          "forgo": "attack"
+        }
+      ],
+      "uses": {
+        "max": "proficiencyBonus",
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "area": {
+        "choose": {
+          "key": "shape",
+          "name": "Shape",
+          "from": [
+            {
+              "name": "15-foot Cone",
+              "of": [
+                {
+                  "shape": "area-shape:cone",
+                  "size": 15,
+                  "origin": "self",
+                  "affects": {
+                    "pool": "any"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "30-foot Line",
+              "of": [
+                {
+                  "shape": "area-shape:line",
+                  "size": 30,
+                  "width": 5,
+                  "origin": "self",
+                  "affects": {
+                    "pool": "any"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:dex",
+          "dc": {
+            "sum": [
+              8,
+              "modifiers.ability:con",
+              "proficiencyBonus"
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": {
+              "byLevel": {
+                "1": "1d10",
+                "5": "2d10",
+                "11": "3d10",
+                "17": "4d10"
+              }
+            },
+            "type": {
+              "chosen": "ancestry",
+              "value": "damage-type",
+              "from": "feature:dragonborn/draconic-ancestry"
+            }
+          }
+        }
+      ],
+      "otherwise": "half"
+    }
+  ]
+}

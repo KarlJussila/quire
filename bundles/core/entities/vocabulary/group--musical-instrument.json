@@ -1,0 +1,8 @@
+{
+  "id": "group:musical-instrument",
+  "name": "Musical Instrument",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:tools"
+}

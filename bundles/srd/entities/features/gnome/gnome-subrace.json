@@ -1,0 +1,11 @@
+{
+  "id": "feature:gnome/gnome-subrace",
+  "name": "Gnome Subrace",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "rule:dodge@2024",
+  "name": "Dodge",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you take the Dodge action, you gain the following benefits: until the start of your next turn, any attack roll made against you has Disadvantage if you can see the attacker, and you make Dexterity saving throws with Advantage.\n\nYou lose these benefits if you have the Incapacitated condition or if your Speed is 0.",
+    "plain": "If you take the Dodge action, you gain the following benefits: until the start of your next turn, any attack roll made against you has Disadvantage if you can see the attacker, and you make Dexterity saving throws with Advantage.\n\nYou lose these benefits if you have the Incapacitated condition or if your Speed is 0.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "dodge",
+      "action": "action:dodge",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "when": {
+                "not": {
+                  "any": [
+                    {
+                      "has": "condition:incapacitated"
+                    },
+                    {
+                      "compare": "speeds.movement-mode:walk.speed",
+                      "atMost": 0
+                    }
+                  ]
+                }
+              },
+              "effects": [
+                {
+                  "type": "roll-mod",
+                  "mode": "disadvantage",
+                  "when": {
+                    "event": "event:roll-made",
+                    "by": {
+                      "pool": "any",
+                      "where": {
+                        "perceived": "sight"
+                      }
+                    },
+                    "subject": "self",
+                    "match": {
+                      "roll": "roll:attack"
+                    }
+                  }
+                },
+                {
+                  "type": "roll-mod",
+                  "mode": "advantage",
+                  "when": {
+                    "event": "event:roll-made",
+                    "by": "self",
+                    "match": {
+                      "roll": "roll:save",
+                      "ability": "ability:dex"
+                    }
+                  }
+                }
+              ]
+            },
+            "ends": [
+              {
+                "event": "event:turn-start",
+                "subject": "self"
+              }
+            ]
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

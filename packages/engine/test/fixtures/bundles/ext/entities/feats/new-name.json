@@ -1,0 +1,10 @@
+{
+ "id": "feat:new-name",
+ "name": "New Name",
+ "source": {
+  "book": "ext"
+ },
+ "supersedes": [
+  "feat:old-name"
+ ]
+}

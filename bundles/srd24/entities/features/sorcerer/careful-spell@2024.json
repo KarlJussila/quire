@@ -1,0 +1,21 @@
+{
+  "id": "feature:sorcerer/careful-spell@2024",
+  "name": "Careful Spell",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Cost: 1 Sorcery Point_\n\nWhen you cast a spell that forces other creatures to make a saving throw, you can protect some of those creatures from the spell's full force. To do so, spend 1 Sorcery Point and choose a number of those creatures up to your Charisma modifier (minimum of one creature). A chosen creature automatically succeeds on its saving throw against the spell, and it takes no damage if it would normally take half damage on a successful save.",
+    "plain": "Cost: 1 Sorcery Point\n\nWhen you cast a spell that forces other creatures to make a saving throw, you can protect some of those creatures from the spell's full force. To do so, spend 1 Sorcery Point and choose a number of those creatures up to your Charisma modifier (minimum of one creature). A chosen creature automatically succeeds on its saving throw against the spell, and it takes no damage if it would normally take half damage on a successful save.",
+    "wording": "srd"
+  },
+  "group": "group:metamagic",
+  "effects": [],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "roll",
+      "name": "Spend 1 Sorcery Point to choose up to max(1, your Charisma modifier) original spell targets to succeed on their saves and take no damage on a successful half-damage save."
+    }
+  ]
+}

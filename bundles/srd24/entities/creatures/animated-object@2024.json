@@ -1,0 +1,91 @@
+{
+  "id": "creature:animated-object@2024",
+  "name": "Animated Object",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Huge or Smaller Construct, Unaligned_\n\n- **AC** 15\n- **HP** 10 (Medium or smaller), 20 (Large), 40 (Huge)\n- **Speed** 30 ft.\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| **Score**        |     16 |     10 |     10 |      3 |      3 |      1 |\n| **Modifier**     |     +3 |     +0 |     +0 |     -4 |     -4 |     -5 |\n| **Saving Throw** |     +3 |     +0 |     +0 |     -4 |     -4 |     -5 |\n\n- **Immunities** Poison, Psychic; Charmed, Exhaustion, Frightened, Paralyzed, Poisoned\n- **Senses** Blindsight 30 ft.; Passive Perception 6\n- **Languages** Understands the languages you know\n- **CR** None (XP 0; PB equals your Proficiency Bonus)\n\n### Actions\n\n_**Slam.**_ _Melee Attack Roll:_ Bonus equals your spell attack modifier, reach 5 ft. _Hit:_ Force damage equal to 1d4 + 3 (Medium or smaller), 2d6 + 3 + your spellcasting ability modifier (Large), or 2d12 + 3 + your spellcasting ability modifier (Huge).",
+    "plain": "Huge or Smaller Construct, Unaligned\n\n- AC 15\n- HP 10 (Medium or smaller), 20 (Large), 40 (Huge)\n- Speed 30 ft.\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| Score        |     16 |     10 |     10 |      3 |      3 |      1 |\n| Modifier     |     +3 |     +0 |     +0 |     -4 |     -4 |     -5 |\n| Saving Throw |     +3 |     +0 |     +0 |     -4 |     -4 |     -5 |\n\n- Immunities Poison, Psychic; Charmed, Exhaustion, Frightened, Paralyzed, Poisoned\n- Senses Blindsight 30 ft.; Passive Perception 6\n- Languages Understands the languages you know\n- CR None (XP 0; PB equals your Proficiency Bonus)\n\n### Actions\n\nSlam. Melee Attack Roll: Bonus equals your spell attack modifier, reach 5 ft. Hit: Force damage equal to 1d4 + 3 (Medium or smaller), 2d6 + 3 + your spellcasting ability modifier (Large), or 2d12 + 3 + your spellcasting ability modifier (Huge).",
+    "wording": "srd"
+  },
+  "size": [
+    "size:tiny",
+    "size:small",
+    "size:medium",
+    "size:large",
+    "size:huge"
+  ],
+  "creatureType": "creature-type:construct",
+  "alignment": "alignment:unaligned",
+  "ac": 15,
+  "hp": {
+    "average": 10,
+    "formula": "Medium or smaller), 20 (Large), 40 (Huge"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:str": 16,
+    "ability:dex": 10,
+    "ability:con": 10,
+    "ability:int": 3,
+    "ability:wis": 3,
+    "ability:cha": 1
+  },
+  "passivePerception": 6,
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    }
+  },
+  "languages": [
+    {
+      "text": "Understands the languages you know"
+    }
+  ],
+  "xp": 0,
+  "proficiencyBonus": {
+    "prose": {
+      "text": "None (XP 0; PB equals your Proficiency Bonus)",
+      "gap": {
+        "category": "value",
+        "name": "This value depends on the summoner, spell slot, or chosen form."
+      }
+    }
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison",
+        "damage-type:psychic",
+        "condition:charmed",
+        "condition:exhaustion",
+        "condition:frightened",
+        "condition:paralyzed",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Slam",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ Bonus equals your spell attack modifier, reach 5 ft. _Hit:_ Force damage equal to 1d4 + 3 (Medium or smaller), 2d6 + 3 + your spellcasting ability modifier (Large), or 2d12 + 3 + your spellcasting ability modifier (Huge).",
+        "plain": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 5 ft. Hit: Force damage equal to 1d4 + 3 (Medium or smaller), 2d6 + 3 + your spellcasting ability modifier (Large), or 2d12 + 3 + your spellcasting ability modifier (Huge).",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-action",
+          "name": "The printed Slam rule is retained as text."
+        }
+      ]
+    }
+  ]
+}

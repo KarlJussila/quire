@@ -1,0 +1,72 @@
+{
+  "id": "rule:flying@2024",
+  "name": "Flying",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A variety of effects allow a creature to fly. While flying, you fall if you have the Incapacitated or Prone condition or your Fly Speed is reduced to 0. You can stay aloft in those circumstances if you can hover. _See also_ \"Falling\" and \"Fly Speed.\"",
+    "plain": "A variety of effects allow a creature to fly. While flying, you fall if you have the Incapacitated or Prone condition or your Fly Speed is reduced to 0. You can stay aloft in those circumstances if you can hover. _See also_ \"Falling\" and \"Fly Speed.\"",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:state-applied",
+          "match": {
+            "state": "condition:prone"
+          },
+          "subject": "self"
+        },
+        {
+          "event": "event:state-applied",
+          "match": {
+            "state": "condition:incapacitated"
+          },
+          "subject": "self"
+        },
+        {
+          "becomes": {
+            "compare": "speeds.movement-mode:fly.speed",
+            "atMost": 0
+          },
+          "subject": "self"
+        }
+      ],
+      "when": {
+        "all": [
+          {
+            "grounded": false
+          },
+          {
+            "not": {
+              "match": {
+                "speeds": {
+                  "movement-mode:fly": {
+                    "hover": true
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "step": {
+        "outcomes": [
+          {
+            "move": {
+              "kind": "fall"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

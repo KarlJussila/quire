@@ -1,0 +1,216 @@
+{
+  "id": "rule:death-saving-throws@2024",
+  "name": "Death Saving Throws",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Whenever you start your turn with 0 Hit Points, you must make a Death Saving Throw to determine whether you creep closer to death or hang on to life. Unlike other saving throws, this one isn't tied to an ability score. You're in the hands of fate now.\n\n_**Three Successes/Failures.**_ Roll 1d20. If the roll is 10 or higher, you succeed. Otherwise, you fail. A success or failure has no effect by itself. On your third success, you become Stable (see \"Stabilizing a Character\" below). On your third failure, you die.\n\nThe successes and failures don't need to be consecutive; keep track of both until you collect three of a kind. The number of both is reset to zero when you regain any Hit Points or become Stable.\n\n_**Rolling a 1 or 20.**_ When you roll a 1 on the d20 for a Death Saving Throw, you suffer two failures. If you roll a 20 on the d20, you regain 1 Hit Point.\n\n_**Damage at 0 Hit Points.**_ If you take any damage while you have 0 Hit Points, you suffer a Death Saving Throw failure. If the damage is from a Critical Hit, you suffer two failures instead. If the damage equals or exceeds your Hit Point maximum, you die.",
+    "plain": "Whenever you start your turn with 0 Hit Points, you must make a Death Saving Throw to determine whether you creep closer to death or hang on to life. Unlike other saving throws, this one isn't tied to an ability score. You're in the hands of fate now.\n\n_Three Successes/Failures._ Roll 1d20. If the roll is 10 or higher, you succeed. Otherwise, you fail. A success or failure has no effect by itself. On your third success, you become Stable (see \"Stabilizing a Character\" below). On your third failure, you die.\n\nThe successes and failures don't need to be consecutive; keep track of both until you collect three of a kind. The number of both is reset to zero when you regain any Hit Points or become Stable.\n\n_Rolling a 1 or 20._ When you roll a 1 on the d20 for a Death Saving Throw, you suffer two failures. If you roll a 20 on the d20, you regain 1 Hit Point.\n\n_Damage at 0 Hit Points._ If you take any damage while you have 0 Hit Points, you suffer a Death Saving Throw failure. If the damage is from a Critical Hit, you suffer two failures instead. If the damage equals or exceeds your Hit Point maximum, you die.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "resource",
+      "key": "death-save-successes",
+      "max": 3,
+      "recover": []
+    },
+    {
+      "type": "resource",
+      "key": "death-save-failures",
+      "max": 3,
+      "recover": []
+    },
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:turn-start",
+          "subject": "self",
+          "when": {
+            "all": [
+              {
+                "compare": "hp.current",
+                "atMost": 0
+              },
+              {
+                "not": {
+                  "has": "state:stable"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "step": {
+        "target": {
+          "who": "self"
+        },
+        "delivery": {
+          "save": {
+            "kind": "roll:death-save",
+            "dc": 10,
+            "by": "self"
+          }
+        },
+        "outcomes": [
+          {
+            "heal": {
+              "amount": 1
+            },
+            "to": "self",
+            "when": {
+              "event": "event:roll-resolved",
+              "match": {
+                "natural": 20
+              }
+            },
+            "otherwise": [
+              {
+                "pool": {
+                  "resource": "death-save-successes",
+                  "add": 1
+                },
+                "to": "self"
+              }
+            ]
+          },
+          {
+            "applyState": {
+              "state": "state:stable"
+            },
+            "to": "self",
+            "when": {
+              "compare": "pools.death-save-successes.current",
+              "atLeast": 3
+            }
+          }
+        ],
+        "otherwise": [
+          {
+            "pool": {
+              "resource": "death-save-failures",
+              "add": 1
+            },
+            "to": "self"
+          },
+          {
+            "pool": {
+              "resource": "death-save-failures",
+              "add": 1
+            },
+            "to": "self",
+            "when": {
+              "event": "event:roll-resolved",
+              "match": {
+                "natural": 1
+              }
+            }
+          },
+          {
+            "kill": {},
+            "to": "self",
+            "when": {
+              "compare": "pools.death-save-failures.current",
+              "atLeast": 3
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:damaged",
+          "subject": "self",
+          "when": {
+            "compare": "hp.current",
+            "atMost": 0
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "pool": {
+              "resource": "death-save-failures",
+              "add": 1
+            },
+            "to": "self"
+          },
+          {
+            "pool": {
+              "resource": "death-save-failures",
+              "add": 1
+            },
+            "to": "self",
+            "when": {
+              "event": "event:damaged",
+              "match": {
+                "crit": true
+              }
+            }
+          },
+          {
+            "kill": {},
+            "to": "self",
+            "when": {
+              "any": [
+                {
+                  "compare": "pools.death-save-failures.current",
+                  "atLeast": 3
+                },
+                {
+                  "compare": {
+                    "event": "amount"
+                  },
+                  "atLeast": "hp.max"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:healed",
+          "subject": "self"
+        },
+        {
+          "event": "event:state-applied",
+          "subject": "self",
+          "match": {
+            "state": "state:stable"
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "pool": {
+              "resource": "death-save-successes",
+              "spend": "pools.death-save-successes.current"
+            },
+            "to": "self"
+          },
+          {
+            "pool": {
+              "resource": "death-save-failures",
+              "spend": "pools.death-save-failures.current"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

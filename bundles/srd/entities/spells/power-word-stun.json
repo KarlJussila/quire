@@ -1,0 +1,44 @@
+{
+  "id": "spell:power-word-stun",
+  "name": "Power Word Stun",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You speak a word of power that can overwhelm the mind of one creature you can see within range, leaving it dumbfounded. If the target has 150 hit points or fewer, it is Stunned. Otherwise, the spell has no effect.\n\nThe Stunned target must make a Constitution saving throw at the end of each of its turns. On a successful save, this stunning effect ends.",
+    "plain": "You speak a word of power that can overwhelm the mind of one creature you can see within range, leaving it dumbfounded. If the target has 150 hit points or fewer, it is Stunned. Otherwise, the spell has no effect.\n\nThe Stunned target must make a Constitution saving throw at the end of each of its turns. On a successful save, this stunning effect ends.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "spell-mechanics",
+      "name": "save-delivery-unknown"
+    }
+  ],
+  "level": 8,
+  "school": "spell-school:enchantment",
+  "lists": [
+    "class:bard",
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "item:potion-of-clairvoyance",
+  "name": "Potion of Clairvoyance",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you drink this potion, you gain the effect of the Clairvoyance spell. An eyeball bobs in this yellowish liquid but vanishes when the potion is opened.",
+    "plain": "When you drink this potion, you gain the effect of the Clairvoyance spell. An eyeball bobs in this yellowish liquid but vanishes when the potion is opened.",
+    "wording": "srd"
+  },
+  "group": "group:potion",
+  "rarity": "rarity:rare",
+  "weight": 0.5
+}

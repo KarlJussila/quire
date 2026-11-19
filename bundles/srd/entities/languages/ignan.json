@@ -1,0 +1,13 @@
+{
+  "id": "language:ignan",
+  "name": "Ignan",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- **Languages** Ignan",
+    "plain": "- Languages Ignan",
+    "wording": "srd"
+  },
+  "speakers": "Fire elementals"
+}

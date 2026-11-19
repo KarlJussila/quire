@@ -1,0 +1,15 @@
+{
+  "id": "item:boots-of-levitation@2024",
+  "name": "Boots of Levitation",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you wear these boots, you can cast Levitate on yourself.",
+    "plain": "While you wear these boots, you can cast Levitate on yourself.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare",
+  "attunement": true
+}

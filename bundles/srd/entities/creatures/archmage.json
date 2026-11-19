@@ -1,0 +1,80 @@
+{
+  "id": "creature:archmage",
+  "name": "Archmage",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any",
+  "ac": 12,
+  "acFrom": [
+    "15 with mage armor"
+  ],
+  "hp": {
+    "average": 99,
+    "formula": "18d8 + 18"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 16,
+    "ability:con": 12,
+    "ability:dex": 14,
+    "ability:int": 20,
+    "ability:str": 10,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:int": 9,
+    "ability:wis": 6
+  },
+  "skills": {
+    "skill:arcana": 13,
+    "skill:history": 13
+  },
+  "passivePerception": 12,
+  "xp": 8400,
+  "cr": 12,
+  "languages": [
+    {
+      "text": "any six languages"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The archmage has advantage on saving throws against spells and other magical effects.",
+        "plain": "The archmage has advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The archmage can cast Disguise Self and Invisibility at will and has the following wizard spells prepared:\n\n- Cantrips (at will): Fire Bolt, Light, Mage Hand, Prestidigitation, Shocking Grasp\n- 1st level (4 slots): Detect Magic, Identify, Mage Armor,\\* Magic Missile\n- 2nd level (3 slots): Detect Thoughts, Mirror Image, Misty Step\n- 3rd level (3 slots): Counterspell, Fly, Lightning Bolt\n- 4th level (3 slots): Banishment, Fire Shield, Stoneskin\\*\n- 5th level (3 slots): Cone of Cold, Scrying, Wall of Force\n- 6th level (1 slot): Globe of Invulnerability\n- 7th level (1 slot): Teleport\n- 8th level (1 slot): Mind Blank\\*\n- 9th level (1 slot): Time Stop\n\n\\**The archmage casts these spells on itself before combat.*",
+        "plain": "The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The archmage can cast Disguise Self and Invisibility at will and has the following wizard spells prepared:\n\n- Cantrips (at will): Fire Bolt, Light, Mage Hand, Prestidigitation, Shocking Grasp\n- 1st level (4 slots): Detect Magic, Identify, Mage Armor,\\* Magic Missile\n- 2nd level (3 slots): Detect Thoughts, Mirror Image, Misty Step\n- 3rd level (3 slots): Counterspell, Fly, Lightning Bolt\n- 4th level (3 slots): Banishment, Fire Shield, Stoneskin\\*\n- 5th level (3 slots): Cone of Cold, Scrying, Wall of Force\n- 6th level (1 slot): Globe of Invulnerability\n- 7th level (1 slot): Teleport\n- 8th level (1 slot): Mind Blank\\*\n- 9th level (1 slot): Time Stop\n\n\\*The archmage casts these spells on itself before combat.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Dagger",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Weapon Attack:_ +6 to hit, reach 5 ft. or range 20/60 ft., one target. _Hit:_ 4 (1d4 + 2) piercing damage.",
+        "plain": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

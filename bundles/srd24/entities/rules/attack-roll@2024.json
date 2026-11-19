@@ -1,0 +1,18 @@
+{
+  "id": "rule:attack-roll@2024",
+  "name": "Attack Roll",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "An attack roll is a D20 Test that represents making an attack with a weapon, an Unarmed Strike, or a spell. _See also_ \"Playing the Game\" (\"D20 Tests\").",
+    "plain": "An attack roll is a D20 Test that represents making an attack with a weapon, an Unarmed Strike, or a spell. See also \"Playing the Game\" (\"D20 Tests\").",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

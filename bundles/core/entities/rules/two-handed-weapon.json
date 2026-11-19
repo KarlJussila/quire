@@ -1,0 +1,45 @@
+{
+  "id": "rule:two-handed-weapon",
+  "name": "Two-Handed",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A Two-Handed weapon's attack is made with it held in two hands."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "object",
+    "where": {
+      "match": {
+        "weapon": {
+          "properties": "weapon-property:two-handed"
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "attack": {
+                "item": "this"
+              }
+            }
+          }
+        }
+      },
+      "set": {
+        "delivery": {
+          "attack": {
+            "hands": 2
+          }
+        }
+      }
+    }
+  ]
+}

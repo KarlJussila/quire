@@ -1,0 +1,10 @@
+{
+  "id": "item:book-of-shadows",
+  "name": "Book of Shadows",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "A grimoire called a Book of Shadows, given to a warlock by their patron."
+  }
+}

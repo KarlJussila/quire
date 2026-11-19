@@ -1,0 +1,15 @@
+{
+  "id": "item:amulet-of-proof-against-detection-and-location@2024",
+  "name": "Amulet of Proof against Detection and Location",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this amulet, you can't be targeted by Divination spells or perceived through magical scrying sensors unless you allow it.",
+    "plain": "While wearing this amulet, you can't be targeted by Divination spells or perceived through magical scrying sensors unless you allow it.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true
+}

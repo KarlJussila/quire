@@ -1,0 +1,24 @@
+{
+  "id": "feature:dwarf/dwarven-combat-training",
+  "name": "Dwarven Combat Training",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.",
+    "plain": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "item:battleaxe",
+        "item:handaxe",
+        "item:light-hammer",
+        "item:warhammer"
+      ]
+    }
+  ],
+  "gaps": []
+}

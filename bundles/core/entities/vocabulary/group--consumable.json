@@ -1,0 +1,7 @@
+{
+  "id": "group:consumable",
+  "name": "Consumable",
+  "source": {
+    "book": "core"
+  }
+}

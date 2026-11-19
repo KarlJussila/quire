@@ -1,0 +1,49 @@
+{
+  "id": "item:necklace-of-adaptation",
+  "name": "Necklace of Adaptation",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing this necklace, you can breathe normally in any environment, and you have advantage on saving throws made against harmful gases and vapors (such as Cloudkill and Stinking Cloud effects, inhaled poisons, and the breath weapons of some dragons).",
+    "plain": "While wearing this necklace, you can breathe normally in any environment, and you have advantage on saving throws made against harmful gases and vapors (such as Cloudkill and Stinking Cloud effects, inhaled poisons, and the breath weapons of some dragons).",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "weight": 0,
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:save"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "prose": {
+              "text": "harmful gas or vapor",
+              "gap": {
+                "category": "test",
+                "name": "harmful-gas-or-vapor"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

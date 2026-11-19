@@ -1,0 +1,454 @@
+{
+  "id": "feature:bard/spellcasting@2024",
+  "name": "Level 1: Spellcasting",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have learned to cast spells through your bardic arts. See \"Spells\" for the rules on spellcasting. The information below details how you use those rules with Bard spells, which appear in the Bard spell list later in the class's description.\n\n_**Cantrips.**_ You know two cantrips of your choice from the Bard spell list. Dancing Lights and Vicious Mockery are recommended.\n\nWhenever you gain a Bard level, you can replace one of your cantrips with another cantrip of your choice from the Bard spell list.\n\nWhen you reach Bard levels 4 and 10, you learn another cantrip of your choice from the Bard spell list, as shown in the Cantrips column of the Bard Features table.\n\n_**Spell Slots.**_ The Bard Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest.\n\n_**Prepared Spells of Level 1+.**_ You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose four level 1 spells from the Bard spell list. Charm Person, Color Spray, Dissonant Whispers, and Healing Word are recommended.\n\nThe number of spells on your list increases as you gain Bard levels, as shown in the Prepared Spells column of the Bard Features table. Whenever that number increases, choose additional spells from the Bard spell list until the number of spells on your list matches the number on the table. The chosen spells must be of a level for which you have spell slots. For example, if you're a level 3 Bard, your list of prepared spells can include six spells of levels 1 and 2 in any combination.\n\nIf another Bard feature gives you spells that you always have prepared, those spells don't count against the number of spells you can prepare with this feature, but those spells otherwise count as Bard spells for you.\n\n_**Changing Your Prepared Spells.**_ Whenever you gain a Bard level, you can replace one spell on your list with another Bard spell for which you have spell slots.\n\n_**Spellcasting Ability.**_ Charisma is your spellcasting ability for your Bard spells.\n\n_**Spellcasting Focus.**_ You can use a Musical Instrument as a Spellcasting Focus for your Bard spells.",
+    "plain": "You have learned to cast spells through your bardic arts. See \"Spells\" for the rules on spellcasting. The information below details how you use those rules with Bard spells, which appear in the Bard spell list later in the class's description.\n\nCantrips. You know two cantrips of your choice from the Bard spell list. Dancing Lights and Vicious Mockery are recommended.\n\nWhenever you gain a Bard level, you can replace one of your cantrips with another cantrip of your choice from the Bard spell list.\n\nWhen you reach Bard levels 4 and 10, you learn another cantrip of your choice from the Bard spell list, as shown in the Cantrips column of the Bard Features table.\n\nSpell Slots. The Bard Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest.\n\nPrepared Spells of Level 1+. You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose four level 1 spells from the Bard spell list. Charm Person, Color Spray, Dissonant Whispers, and Healing Word are recommended.\n\nThe number of spells on your list increases as you gain Bard levels, as shown in the Prepared Spells column of the Bard Features table. Whenever that number increases, choose additional spells from the Bard spell list until the number of spells on your list matches the number on the table. The chosen spells must be of a level for which you have spell slots. For example, if you're a level 3 Bard, your list of prepared spells can include six spells of levels 1 and 2 in any combination.\n\nIf another Bard feature gives you spells that you always have prepared, those spells don't count against the number of spells you can prepare with this feature, but those spells otherwise count as Bard spells for you.\n\nChanging Your Prepared Spells. Whenever you gain a Bard level, you can replace one spell on your list with another Bard spell for which you have spell slots.\n\nSpellcasting Ability. Charisma is your spellcasting ability for your Bard spells.\n\nSpellcasting Focus. You can use a Musical Instrument as a Spellcasting Focus for your Bard spells.",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting-feature",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "class:bard": {
+            "ability": "ability:cha",
+            "slots": "table:full-caster",
+            "prepared": {
+              "$base": {
+                "byLevel": {
+                  "1": 4,
+                  "2": 5,
+                  "3": 6,
+                  "4": 7,
+                  "5": 9,
+                  "6": 10,
+                  "7": 11,
+                  "8": 12,
+                  "9": 14,
+                  "10": 15,
+                  "11": 16,
+                  "12": 16,
+                  "13": 17,
+                  "14": 17,
+                  "15": 18,
+                  "16": 18,
+                  "17": 19,
+                  "18": 20,
+                  "19": 21,
+                  "20": 22
+                },
+                "of": "class:bard"
+              }
+            },
+            "cantrips": {
+              "$base": {
+                "byLevel": {
+                  "1": 2,
+                  "2": 2,
+                  "3": 2,
+                  "4": 3,
+                  "5": 3,
+                  "6": 3,
+                  "7": 3,
+                  "8": 3,
+                  "9": 3,
+                  "10": 4,
+                  "11": 4,
+                  "12": 4,
+                  "13": 4,
+                  "14": 4,
+                  "15": 4,
+                  "16": 4,
+                  "17": 4,
+                  "18": 4,
+                  "19": 4,
+                  "20": 4
+                },
+                "of": "class:bard"
+              }
+            },
+            "casterLevel": {
+              "$base": "levels.class:bard"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "cantrips",
+            "name": "Bard Cantrips",
+            "count": "spellcasting.class:bard.cantrips",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "level": 0,
+                    "lists": "class:bard"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": "ability:cha"
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "prepared",
+            "name": "Prepared Bard Spells",
+            "count": "spellcasting.class:bard.prepared",
+            "distinct": true,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:bard",
+                    "level": {
+                      "atLeast": 1,
+                      "atMost": "spellcasting.class:bard.spellLevel"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "prepared",
+      "ability": "ability:cha"
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-cantrip",
+      "name": "Replace Cantrip",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self",
+        "match": {
+          "class": "class:bard"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "from": "feature:bard/spellcasting",
+            "what": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "lists": "class:bard",
+                      "level": 0
+                    }
+                  },
+                  {
+                    "grantedBy": "feature:bard/spellcasting"
+                  }
+                ]
+              }
+            },
+            "with": {
+              "kind": "spell",
+              "where": {
+                "match": {
+                  "lists": "class:bard",
+                  "level": 0
+                }
+              }
+            },
+            "same": [
+              "level"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "key": "replace-spell",
+      "name": "Replace Prepared Spell",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self",
+        "match": {
+          "class": "class:bard"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "what": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "level": {
+                        "atLeast": 1
+                      }
+                    }
+                  },
+                  {
+                    "any": [
+                      {
+                        "grantedBy": "feature:bard/spellcasting"
+                      },
+                      {
+                        "grantedBy": "feature:bard/magical-secrets"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "with": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "any": [
+                      {
+                        "match": {
+                          "lists": "class:bard",
+                          "level": {
+                            "atLeast": 1
+                          }
+                        }
+                      },
+                      {
+                        "all": [
+                          {
+                            "compare": "levels.class:bard",
+                            "atLeast": 10
+                          },
+                          {
+                            "match": {
+                              "lists": [
+                                "class:cleric",
+                                "class:druid",
+                                "class:wizard"
+                              ],
+                              "level": {
+                                "atLeast": 1
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "any": [
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 1,
+                              "atMost": 2
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 1
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 3,
+                              "atMost": 4
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 2
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 5,
+                              "atMost": 6
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 3
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 7,
+                              "atMost": 8
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 4
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 9,
+                              "atMost": 10
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 5
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 11,
+                              "atMost": 12
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 6
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 13,
+                              "atMost": 14
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 7
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 15,
+                              "atMost": 16
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 8
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 17
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 9
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "spellcasting",
+      "name": "The allowed focus is tied to the Bard casting source, but its exact scope on a cast that can have multiple sources is unresolved."
+    }
+  ]
+}

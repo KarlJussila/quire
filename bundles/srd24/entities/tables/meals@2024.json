@@ -1,0 +1,55 @@
+{
+  "id": "table:meals@2024",
+  "name": "Meals",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "meal",
+      "name": "Meal"
+    },
+    {
+      "key": "cost",
+      "name": "Cost"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "meal": "Squalid",
+        "cost": "1 CP"
+      }
+    },
+    {
+      "cells": {
+        "meal": "Poor",
+        "cost": "2 CP"
+      }
+    },
+    {
+      "cells": {
+        "meal": "Modest",
+        "cost": "1 SP"
+      }
+    },
+    {
+      "cells": {
+        "meal": "Comfortable",
+        "cost": "2 SP"
+      }
+    },
+    {
+      "cells": {
+        "meal": "Wealthy",
+        "cost": "3 SP"
+      }
+    },
+    {
+      "cells": {
+        "meal": "Aristocratic",
+        "cost": "6 SP"
+      }
+    }
+  ]
+}

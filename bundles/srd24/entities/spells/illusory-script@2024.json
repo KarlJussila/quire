@@ -1,0 +1,52 @@
+{
+  "id": "spell:illusory-script@2024",
+  "name": "Illusory Script",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You write on parchment, paper, or another suitable material and imbue it with an illusion that lasts for the duration. To you and any creatures you designate when you cast the spell, the writing appears normal, seems to be written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, the illusion can alter the meaning, handwriting, and language of the text, though the language must be one you know.\n\nIf the spell is dispelled, the original script and the illusion both disappear.\n\nA creature that has Truesight can read the hidden message.",
+    "plain": "You write on parchment, paper, or another suitable material and imbue it with an illusion that lasts for the duration. To you and any creatures you designate when you cast the spell, the writing appears normal, seems to be written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, the illusion can alter the meaning, handwriting, and language of the text, though the language must be one you know.\n\nIf the spell is dispelled, the original script and the illusion both disappear.\n\nA creature that has Truesight can read the hidden message.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:illusion",
+  "lists": [
+    "class:bard",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "ritual": true,
+  "components": {
+    "somatic": true,
+    "material": {
+      "text": "ink worth 10+ GP, which the spell consumes",
+      "parts": [
+        {
+          "worth": {
+            "amount": 10,
+            "currency": "currency:gp"
+          },
+          "consumed": true
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "time": {
+        "amount": 1,
+        "unit": "minute"
+      },
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 10,
+        "unit": "day"
+      },
+      "ritual": true
+    }
+  ]
+}

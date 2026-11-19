@@ -1,0 +1,40 @@
+{
+  "id": "spell:cure-wounds@2024",
+  "name": "Cure Wounds",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A creature you touch regains a number of Hit Points equal to 2d8 plus your spellcasting ability modifier.\n\n_**Using a Higher-Level Spell Slot.**_ The healing increases by 2d8 for each spell slot level above 1.",
+    "plain": "A creature you touch regains a number of Hit Points equal to 2d8 plus your spellcasting ability modifier.\n\nUsing a Higher-Level Spell Slot. The healing increases by 2d8 for each spell slot level above 1.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:druid",
+    "class:paladin",
+    "class:ranger"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

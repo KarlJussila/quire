@@ -1,0 +1,47 @@
+{
+  "id": "rule:weapon-proficiency",
+  "name": "Weapon Proficiency",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A creature adds its proficiency bonus to an attack roll made with a weapon it is proficient with."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "object",
+    "where": {
+      "match": {
+        "weapon": true
+      }
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": "proficiencyBonus"
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "item": "this"
+              }
+            }
+          },
+          {
+            "proficient": "this"
+          }
+        ]
+      }
+    }
+  ]
+}

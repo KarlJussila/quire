@@ -1,0 +1,94 @@
+{
+  "id": "creature:giant-vulture",
+  "name": "Giant Vulture",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:neutral-evil",
+  "ac": 10,
+  "hp": {
+    "average": 22,
+    "formula": "3d10 + 6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 15,
+    "ability:dex": 10,
+    "ability:int": 6,
+    "ability:str": 15,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 3
+  },
+  "passivePerception": 13,
+  "xp": 200,
+  "cr": 1,
+  "languages": [
+    {
+      "language": "language:common",
+      "understandsOnly": true
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Keen Sight and Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell.",
+        "plain": "The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pack Tactics",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The vulture has advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "plain": "The vulture has advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The vulture makes two attacks: one with its beak and one with its talons.",
+        "plain": "The vulture makes two attacks: one with its beak and one with its talons.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Beak",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 7 (2d4 + 2) piercing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Talons",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 9 (2d6 + 2) slashing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "skill:history",
+  "name": "History",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:int"
+}

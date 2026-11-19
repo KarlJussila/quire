@@ -1,0 +1,86 @@
+{
+  "id": "feature:barbarian/path-of-the-berserker/frenzy@2024",
+  "name": "Level 3: Frenzy",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you use Reckless Attack while your Rage is active, you deal extra damage to the first target you hit on your turn with a Strength-based attack. To determine the extra damage, roll a number of d6s equal to your Rage Damage bonus, and add them together. The damage has the same type as the weapon or Unarmed Strike used for the attack.",
+    "plain": "If you use Reckless Attack while your Rage is active, you deal extra damage to the first target you hit on your turn with a Strength-based attack. To determine the extra damage, roll a number of d6s equal to your Rage Damage bonus, and add them together. The damage has the same type as the weapon or Unarmed Strike used for the attack.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "frenzy",
+      "name": "Frenzy",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any"
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "ability": "ability:str"
+          }
+        },
+        "when": {
+          "prose": {
+            "text": "reckless attack",
+            "gap": {
+              "category": "test",
+              "name": "reckless-attack"
+            }
+          }
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "has": "state:raging"
+          },
+          {
+            "turn": "self"
+          }
+        ]
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": {
+              "dice": {
+                "count": {
+                  "byLevel": {
+                    "1": 2,
+                    "9": 3,
+                    "16": 4
+                  },
+                  "of": "class:barbarian"
+                },
+                "die": 6
+              }
+            },
+            "type": {
+              "of": "weapon"
+            }
+          },
+          "to": "subject"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "feat:boon-of-the-night-spirit@2024",
+  "name": "Boon of the Night Spirit",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain the following benefits.\n\n_**Ability Score Increase.**_ Increase one ability score of your choice by 1, to a maximum of 30.\n\n_**Merge with Shadows.**_ While within Dim Light or Darkness, you can give yourself the Invisible condition as a Bonus Action. The condition ends on you immediately after you take an action, a Bonus Action, or a Reaction.\n\n_**Shadowy Form.**_ While within Dim Light or Darkness, you have Resistance to all damage except Psychic and Radiant.",
+    "plain": "You gain the following benefits.\n\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\n\nMerge with Shadows. While within Dim Light or Darkness, you can give yourself the Invisible condition as a Bonus Action. The condition ends on you immediately after you take an action, a Bonus Action, or a Reaction.\n\nShadowy Form. While within Dim Light or Darkness, you have Resistance to all damage except Psychic and Radiant.",
+    "wording": "srd"
+  },
+  "group": "group:epic-boon",
+  "requires": {
+    "compare": "levels.total",
+    "atLeast": 19
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "$at": {
+            "choose": {
+              "key": "ability",
+              "name": "Ability Score Increase",
+              "from": [
+                {
+                  "kind": "ability"
+                }
+              ]
+            }
+          },
+          "$add": {
+            "amount": 1,
+            "upTo": 30
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "resist": {
+        "all": true,
+        "except": [
+          "damage-type:psychic",
+          "damage-type:radiant"
+        ]
+      },
+      "when": {
+        "any": [
+          {
+            "environment": "environment:dim-light"
+          },
+          {
+            "environment": "environment:darkness"
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "merge-with-shadows",
+      "name": "Merge with Shadows",
+      "when": {
+        "any": [
+          {
+            "environment": "environment:dim-light"
+          },
+          {
+            "environment": "environment:darkness"
+          }
+        ]
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:invisible"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

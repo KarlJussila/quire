@@ -1,0 +1,60 @@
+{
+  "id": "feature:warlock/eldritch-invocations",
+  "name": "Eldritch Invocations",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.\n\nAt 2nd level, you gain two eldritch invocations of your choice. Your invocation options are detailed at the end of the class description. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table.\n\nAdditionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.",
+    "plain": "In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.\n\nAt 2nd level, you gain two eldritch invocations of your choice. Your invocation options are detailed at the end of the class description. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table.\n\nAdditionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "eldritch-invocations",
+        "name": "Eldritch Invocations",
+        "count": {
+          "byLevel": {
+            "2": 2,
+            "5": 3,
+            "7": 4,
+            "9": 5,
+            "12": 6,
+            "15": 7,
+            "18": 8
+          },
+          "of": "class:warlock"
+        },
+        "from": [
+          {
+            "kind": "feature",
+            "where": {
+              "group": "group:eldritch-invocation"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-eldritch-invocations",
+      "name": "Replace Eldritch Invocations",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self",
+        "match": {
+          "class": "class:warlock"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "eldritch-invocations"
+          }
+        }
+      ]
+    }
+  ]
+}

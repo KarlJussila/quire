@@ -1,0 +1,20 @@
+{
+  "id": "feature:gnome/languages",
+  "name": "Languages",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Languages. You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "language:common",
+        "language:gnomish"
+      ]
+    }
+  ]
+}

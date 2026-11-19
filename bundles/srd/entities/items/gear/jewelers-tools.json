@@ -1,0 +1,18 @@
+{
+  "id": "item:jewelers-tools",
+  "name": "Jeweler’s Tools",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Training with jeweler’s tools includes the basic techniques needed to beautify gems. it also gives you expertise in identifying precious stones.\n\n***Components.*** Jeweler’s tools consist Of a small saw and hammer, files, pliers, and tweezers.\n\n***Arcana.*** Proficiency with jeweler’s tools grants you knowledge about the reputed mystical uses of gems. This insight proves handy when you make Arcana checks related to gems or gem—encrusted items.\n\n***Investigation.*** When you inspect jeweled objects. your proficiency with jeweler’s tools aids you in picking out clues they might hold.\n\n***Identify Gems.*** You can identify gems and determine their value at a glance.\n\n##### JEWELER’S TOOLS\n\n| Activity | DC |\n|---|---|\n| Modify a gem's appearance | 15 |\n| Determine a gem's history | 20 |",
+    "plain": "Training with jeweler’s tools includes the basic techniques needed to beautify gems. it also gives you expertise in identifying precious stones.\n\nComponents. Jeweler’s tools consist Of a small saw and hammer, files, pliers, and tweezers.\n\nArcana. Proficiency with jeweler’s tools grants you knowledge about the reputed mystical uses of gems. This insight proves handy when you make Arcana checks related to gems or gem—encrusted items.\n\nInvestigation. When you inspect jeweled objects. your proficiency with jeweler’s tools aids you in picking out clues they might hold.\n\nIdentify Gems. You can identify gems and determine their value at a glance.\n\nJEWELER’S TOOLS\n\nActivity\tDC\n\nModify a gem's appearance\t15\n\nDetermine a gem's history\t20",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 25,
+    "currency": "currency:gp"
+  },
+  "weight": 2.0
+}

@@ -1,0 +1,41 @@
+{
+  "id": "rule:using-an-activity",
+  "name": "Using an Activity",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "When a creature uses an activity, it pays the activity's costs and then the activity starts."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "emits": [
+    {
+      "event": "event:activity-used",
+      "for": {
+        "kind": "activity"
+      },
+      "at": "started",
+      "fields": {
+        "activity": "this",
+        "action": {
+          "stored": "action"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "spent": {
+          "settled": "spent"
+        },
+        "attack": {
+          "settled": "attack"
+        }
+      }
+    }
+  ]
+}

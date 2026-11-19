@@ -1,0 +1,124 @@
+{
+  "id": "creature:werebear",
+  "name": "Werebear",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral-good",
+  "ac": 10,
+  "hp": {
+    "average": 135,
+    "formula": "18d8 + 54"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30,
+      "note": "40 ft., climb 30 ft. in bear or hybrid form"
+    }
+  },
+  "abilities": {
+    "ability:cha": 12,
+    "ability:con": 17,
+    "ability:dex": 10,
+    "ability:int": 11,
+    "ability:str": 19,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 7
+  },
+  "passivePerception": 17,
+  "xp": 1800,
+  "cr": 5,
+  "languages": [
+    {
+      "text": "Common (can't speak in bear form)"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical",
+                "damage-qualifier:silvered"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Shapechanger",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+        "plain": "The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Keen Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The werebear has advantage on Wisdom (Perception) checks that rely on smell.",
+        "plain": "The werebear has advantage on Wisdom (Perception) checks that rely on smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "In bear form, the werebear makes two claw attacks. In humanoid form, it makes two greataxe attacks. In hybrid form, it can attack like a bear or a humanoid.",
+        "plain": "In bear form, the werebear makes two claw attacks. In humanoid form, it makes two greataxe attacks. In hybrid form, it can attack like a bear or a humanoid.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite (Bear or Hybrid Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +7 to hit, reach 5 ft., one target. _Hit:_ 15 (2d10 + 4) piercing damage. If the target is a humanoid, it must succeed on a DC 14 Constitution saving throw or be cursed with werebear lycanthropy.",
+        "plain": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 15 (2d10 + 4) piercing damage. If the target is a humanoid, it must succeed on a DC 14 Constitution saving throw or be cursed with werebear lycanthropy.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw (Bear or Hybrid Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +7 to hit, reach 5 ft., one target. _Hit:_ 13 (2d8 + 4) slashing damage.",
+        "plain": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Greataxe (Humanoid or Hybrid Form Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +7 to hit, reach 5 ft., one target. _Hit:_ 10 (1d12 + 4) slashing damage.",
+        "plain": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 10 (1d12 + 4) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

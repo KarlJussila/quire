@@ -1,0 +1,10 @@
+{
+  "id": "sense:sight",
+  "name": "Sight",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Perceives visually; a note can distinguish ordinary vision from special sight."
+  }
+}

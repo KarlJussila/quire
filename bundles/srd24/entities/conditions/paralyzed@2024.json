@@ -1,0 +1,75 @@
+{
+  "id": "condition:paralyzed@2024",
+  "name": "Paralyzed",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you have the Paralyzed condition, you experience the following effects.\n\n_**Incapacitated.**_ You have the Incapacitated condition.\n\n_**Speed 0.**_ Your Speed is 0 and can't increase.\n\n_**Saving Throws Affected.**_ You automatically fail Strength and Dexterity saving throws.\n\n_**Attacks Affected.**_ Attack rolls against you have Advantage.\n\n_**Automatic Critical Hits.**_ Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.",
+    "plain": "While you have the Paralyzed condition, you experience the following effects.\n\nIncapacitated. You have the Incapacitated condition.\n\nSpeed 0. Your Speed is 0 and can't increase.\n\nSaving Throws Affected. You automatically fail Strength and Dexterity saving throws.\n\nAttacks Affected. Attack rolls against you have Advantage.\n\nAutomatic Critical Hits. Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.",
+    "wording": "srd"
+  },
+  "implies": [
+    "condition:incapacitated"
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "$where": true,
+          "speed": {
+            "$replace": 0
+          }
+        }
+      }
+    },
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": [
+            "ability:str",
+            "ability:dex"
+          ]
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any"
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "forced-result",
+      "crit": true,
+      "when": {
+        "event": "event:roll-resolved",
+        "by": {
+          "pool": "any",
+          "where": {
+            "within": 5
+          }
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true
+        }
+      }
+    }
+  ]
+}

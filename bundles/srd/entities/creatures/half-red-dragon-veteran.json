@@ -1,0 +1,114 @@
+{
+  "id": "creature:half-red-dragon-veteran",
+  "name": "Half-Red Dragon Veteran",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Medium humanoid (human), any alignment_\n\n- **Armor Class** 18 (plate)\n- **Hit Points** 65 (10d8 + 20)\n- **Speed** 30 ft.\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| **Score**        |     16 |     13 |     14 |     10 |     11 |     10 |\n| **Modifier**     |     +3 |     +1 |     +2 |     +0 |     +0 |     +0 |\n| **Saving Throw** |     +3 |     +1 |     +2 |     +0 |     +0 |     +0 |\n\n- **Skills** Athletics +5, Perception +2\n- **Damage Resistances** fire\n- **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 12\n- **Languages** Common, Draconic\n- **Challenge** 5 (1,800 XP)\n\n### Actions\n\n_**Multiattack.**_ The veteran makes two longsword attacks. If it has a shortsword drawn, it can also make a shortsword attack.\n\n_**Longsword.**_ _Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands.\n\n_**Shortsword.**_ _Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 6 (1d6 + 3) piercing damage.\n\n_**Heavy Crossbow.**_ _Ranged Weapon Attack:_ +3 to hit, range 100/400 ft., one target. _Hit:_ 6 (1d10 + 1) piercing damage.\n\n_**Fire Breath (Recharge 5-6).**_ The veteran exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 24 (7d6) fire damage on a failed save, or half as much damage on a successful one.",
+    "plain": "Medium humanoid (human), any alignment\n\n- Armor Class 18 (plate)\n- Hit Points 65 (10d8 + 20)\n- Speed 30 ft.\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| Score        |     16 |     13 |     14 |     10 |     11 |     10 |\n| Modifier     |     +3 |     +1 |     +2 |     +0 |     +0 |     +0 |\n| Saving Throw |     +3 |     +1 |     +2 |     +0 |     +0 |     +0 |\n\n- Skills Athletics +5, Perception +2\n- Damage Resistances fire\n- Senses blindsight 10 ft., darkvision 60 ft., passive Perception 12\n- Languages Common, Draconic\n- Challenge 5 (1,800 XP)\n\n### Actions\n\nMultiattack. The veteran makes two longsword attacks. If it has a shortsword drawn, it can also make a shortsword attack.\n\nLongsword. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands.\n\nShortsword. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.\n\nHeavy Crossbow. Ranged Weapon Attack: +3 to hit, range 100/400 ft., one target. Hit: 6 (1d10 + 1) piercing damage.\n\nFire Breath (Recharge 5-6). The veteran exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 24 (7d6) fire damage on a failed save, or half as much damage on a successful one.",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any",
+  "ac": 18,
+  "acFrom": [
+    "plate"
+  ],
+  "hp": {
+    "average": 65,
+    "formula": "10d8 + 20"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 14,
+    "ability:dex": 13,
+    "ability:int": 10,
+    "ability:str": 16,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:athletics": 5,
+    "skill:perception": 2
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    },
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 12,
+  "xp": 1800,
+  "cr": 5,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The veteran makes two longsword attacks. If it has a shortsword drawn, it can also make a shortsword attack.",
+        "plain": "The veteran makes two longsword attacks. If it has a shortsword drawn, it can also make a shortsword attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Longsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shortsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 6 (1d6 + 3) piercing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Heavy Crossbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +3 to hit, range 100/400 ft., one target. _Hit:_ 6 (1d10 + 1) piercing damage.",
+        "plain": "Ranged Weapon Attack: +3 to hit, range 100/400 ft., one target. Hit: 6 (1d10 + 1) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fire Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The veteran exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 24 (7d6) fire damage on a failed save, or half as much damage on a successful one.",
+        "plain": "The veteran exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 24 (7d6) fire damage on a failed save, or half as much damage on a successful one.",
+        "wording": "upstream"
+      }
+    }
+  ]
+}

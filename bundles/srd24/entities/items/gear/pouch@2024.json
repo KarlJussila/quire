@@ -1,0 +1,18 @@
+{
+  "id": "item:pouch@2024",
+  "name": "Pouch",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Pouch holds up to 6 pounds within one-fifth of a cubic foot.",
+    "plain": "A Pouch holds up to 6 pounds within one-fifth of a cubic foot.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:sp"
+  },
+  "weight": 1.0
+}

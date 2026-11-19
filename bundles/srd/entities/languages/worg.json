@@ -1,0 +1,12 @@
+{
+  "id": "language:worg",
+  "name": "Worg",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- **Languages** Goblin, Worg",
+    "plain": "- Languages Goblin, Worg",
+    "wording": "srd"
+  }
+}

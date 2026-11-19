@@ -1,0 +1,11 @@
+{
+  "id": "alignment:lawful-good",
+  "name": "Lawful Good",
+  "source": {
+    "book": "core"
+  },
+  "components": [
+    "alignment:lawful",
+    "alignment:good"
+  ]
+}

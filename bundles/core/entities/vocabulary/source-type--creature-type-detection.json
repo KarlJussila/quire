@@ -1,0 +1,7 @@
+{
+  "id": "source-type:creature-type-detection",
+  "name": "Creature-Type Detection",
+  "source": {
+    "book": "core"
+  }
+}

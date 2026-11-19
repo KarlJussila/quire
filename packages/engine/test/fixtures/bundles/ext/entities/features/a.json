@@ -1,0 +1,15 @@
+{
+ "id": "feature:a",
+ "name": "A",
+ "source": {
+  "book": "ext"
+ },
+ "effects": [
+  {
+   "type": "defense",
+   "resist": [
+    "damage-type:poison"
+   ]
+  }
+ ]
+}

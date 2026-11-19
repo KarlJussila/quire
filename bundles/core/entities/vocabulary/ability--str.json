@@ -1,0 +1,12 @@
+{
+  "id": "ability:str",
+  "name": "Strength",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "abbreviation": "Str",
+  "order": 1
+}

@@ -1,0 +1,156 @@
+{
+  "id": "creature:otherworldly-steed@2024",
+  "name": "Otherworldly Steed",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Large Celestial, Fey, or Fiend (Your Choice), Neutral_\n\n- **AC** 10 + 1 per spell level\n- **HP** 5 + 10 per spell level (the steed has a number of Hit Dice (d10s) equal to the spell's level)\n- **Speed** 60 ft., Fly 60 ft. (requires level 4+ spell)\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| **Score**        |     18 |     12 |     14 |      6 |     12 |      8 |\n| **Modifier**     |     +4 |     +1 |     +2 |     -2 |     +1 |     -1 |\n| **Saving Throw** |     +4 |     +1 |     +2 |     -2 |     +1 |     -1 |\n\n- **Senses** Passive Perception 11\n- **Languages** Telepathy 1 mile (works only with you)\n- **CR** None (XP 0; PB equals your Proficiency Bonus)\n\n### Traits\n\n_**Life Bond.**_ When you regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if you're within 5 feet of it.\n\n### Actions\n\n_**Otherworldly Slam.**_ _Melee Attack Roll:_ Bonus equals your spell attack modifier, reach 5 ft. _Hit:_ 1d8 plus the spell's level of Radiant (Celestial), Psychic (Fey), or Necrotic (Fiend) damage.\n\n### Bonus Actions\n\n_**Fell Glare (Fiend Only; Recharges after a Long Rest).**_\n\n_Wisdom Saving Throw:_ DC equals your spell save DC, one creature within 60 feet the steed can see. _Failure:_ The target has the Frightened condition until the end of your next turn.\n\n_**Fey Step (Fey Only; Recharges after a Long Rest).**_ The steed teleports, along with its rider, to an unoccupied space of your choice up to 60 feet away from itself.\n\n_**Healing Touch (Celestial Only; Recharges after a Long Rest).**_ One creature within 5 feet of the steed regains a number of Hit Points equal to 2d8 plus the spell's level.",
+    "plain": "Large Celestial, Fey, or Fiend (Your Choice), Neutral\n\n- AC 10 + 1 per spell level\n- HP 5 + 10 per spell level (the steed has a number of Hit Dice (d10s) equal to the spell's level)\n- Speed 60 ft., Fly 60 ft. (requires level 4+ spell)\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| Score        |     18 |     12 |     14 |      6 |     12 |      8 |\n| Modifier     |     +4 |     +1 |     +2 |     -2 |     +1 |     -1 |\n| Saving Throw |     +4 |     +1 |     +2 |     -2 |     +1 |     -1 |\n\n- Senses Passive Perception 11\n- Languages Telepathy 1 mile (works only with you)\n- CR None (XP 0; PB equals your Proficiency Bonus)\n\n### Traits\n\nLife Bond. When you regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if you're within 5 feet of it.\n\n### Actions\n\nOtherworldly Slam. Melee Attack Roll: Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 plus the spell's level of Radiant (Celestial), Psychic (Fey), or Necrotic (Fiend) damage.\n\n### Bonus Actions\n\nFell Glare (Fiend Only; Recharges after a Long Rest).\n\nWisdom Saving Throw: DC equals your spell save DC, one creature within 60 feet the steed can see. Failure: The target has the Frightened condition until the end of your next turn.\n\nFey Step (Fey Only; Recharges after a Long Rest). The steed teleports, along with its rider, to an unoccupied space of your choice up to 60 feet away from itself.\n\nHealing Touch (Celestial Only; Recharges after a Long Rest). One creature within 5 feet of the steed regains a number of Hit Points equal to 2d8 plus the spell's level.",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": [
+    "creature-type:celestial",
+    "creature-type:fey",
+    "creature-type:fiend"
+  ],
+  "alignment": "alignment:neutral",
+  "ac": {
+    "prose": {
+      "text": "10 + 1 per spell level",
+      "gap": {
+        "category": "value",
+        "name": "This value depends on the summoner, spell slot, or chosen form."
+      }
+    }
+  },
+  "hp": {
+    "average": {
+      "prose": {
+        "text": "5 + 10 per spell level (the steed has a number of Hit Dice (d10s) equal to the spell's level)",
+        "gap": {
+          "category": "value",
+          "name": "This value depends on the summoner, spell slot, or chosen form."
+        }
+      }
+    }
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 60
+    },
+    "movement-mode:fly": {
+      "speed": {
+        "prose": {
+          "text": "Fly 60 ft. (requires level 4+ spell)",
+          "gap": {
+            "category": "value",
+            "name": "This value depends on the summoner, spell slot, or chosen form."
+          }
+        }
+      }
+    }
+  },
+  "abilities": {
+    "ability:str": 18,
+    "ability:dex": 12,
+    "ability:con": 14,
+    "ability:int": 6,
+    "ability:wis": 12,
+    "ability:cha": 8
+  },
+  "passivePerception": 11,
+  "languages": [
+    {
+      "text": "Telepathy 1 mile (works only with you)"
+    }
+  ],
+  "xp": 0,
+  "proficiencyBonus": {
+    "prose": {
+      "text": "None (XP 0; PB equals your Proficiency Bonus)",
+      "gap": {
+        "category": "value",
+        "name": "This value depends on the summoner, spell slot, or chosen form."
+      }
+    }
+  },
+  "blocks": [
+    {
+      "name": "Life Bond",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "When you regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if you're within 5 feet of it.",
+        "plain": "When you regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if you're within 5 feet of it.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-trait",
+          "name": "The printed Life Bond rule is retained as text."
+        }
+      ]
+    },
+    {
+      "name": "Otherworldly Slam",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ Bonus equals your spell attack modifier, reach 5 ft. _Hit:_ 1d8 plus the spell's level of Radiant (Celestial), Psychic (Fey), or Necrotic (Fiend) damage.",
+        "plain": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 plus the spell's level of Radiant (Celestial), Psychic (Fey), or Necrotic (Fiend) damage.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-action",
+          "name": "The printed Otherworldly Slam rule is retained as text."
+        }
+      ]
+    },
+    {
+      "name": "Fell Glare (Fiend Only; Recharges after a Long Rest)",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "_Wisdom Saving Throw:_ DC equals your spell save DC, one creature within 60 feet the steed can see. _Failure:_ The target has the Frightened condition until the end of your next turn.",
+        "plain": "Wisdom Saving Throw: DC equals your spell save DC, one creature within 60 feet the steed can see. Failure: The target has the Frightened condition until the end of your next turn.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-bonus-action",
+          "name": "The printed Fell Glare (Fiend Only; Recharges after a Long Rest) rule is retained as text."
+        }
+      ]
+    },
+    {
+      "name": "Fey Step (Fey Only; Recharges after a Long Rest)",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The steed teleports, along with its rider, to an unoccupied space of your choice up to 60 feet away from itself.",
+        "plain": "The steed teleports, along with its rider, to an unoccupied space of your choice up to 60 feet away from itself.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-bonus-action",
+          "name": "The printed Fey Step (Fey Only; Recharges after a Long Rest) rule is retained as text."
+        }
+      ]
+    },
+    {
+      "name": "Healing Touch (Celestial Only; Recharges after a Long Rest)",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "One creature within 5 feet of the steed regains a number of Hit Points equal to 2d8 plus the spell's level.",
+        "plain": "One creature within 5 feet of the steed regains a number of Hit Points equal to 2d8 plus the spell's level.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-bonus-action",
+          "name": "The printed Healing Touch (Celestial Only; Recharges after a Long Rest) rule is retained as text."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "sense:tremorsense",
+  "name": "Tremorsense",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "item:bead-of-nourishment@2024",
+  "name": "Bead of Nourishment",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This flavorless, gelatinous bead dissolves on your tongue and provides as much nourishment as 1 day of Rations.",
+    "plain": "This flavorless, gelatinous bead dissolves on your tongue and provides as much nourishment as 1 day of Rations.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:common"
+}

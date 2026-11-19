@@ -1,0 +1,42 @@
+{
+  "id": "rule:hit-points-by-level@2024",
+  "name": "Hit Points by Level",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Each time you gain a level, you gain an additional Hit Die. Roll that die, add your Constitution modifier to the roll, and add the total (minimum of 1) to your Hit Point maximum. Instead of rolling, you can use the fixed value shown in the table."
+  },
+  "group": "group:character",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "hp": {
+          "max": {
+            "$base": {
+              "sum": {
+                "max": [
+                  1,
+                  {
+                    "sum": [
+                      "classes.*.*.hp",
+                      "modifiers.ability:con"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "when": {
+        "compare": "levels.total",
+        "atLeast": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "id": "creature:vampire-familiar@2024",
+  "name": "Vampire Familiar",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral-evil",
+  "ac": 15,
+  "hp": {
+    "average": 65,
+    "formula": "10d8 + 20"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:climb": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 14,
+    "ability:con": 15,
+    "ability:dex": 16,
+    "ability:int": 10,
+    "ability:str": 17,
+    "ability:wis": 10
+  },
+  "saves": {
+    "ability:dex": 5,
+    "ability:wis": 2
+  },
+  "skills": {
+    "skill:perception": 4,
+    "skill:persuasion": 4,
+    "skill:stealth": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 700,
+  "proficiencyBonus": 2,
+  "initiative": 5,
+  "habitat": [
+    "Underdark",
+    "Urban"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "gear": [
+    "Daggers (10)"
+  ],
+  "cr": 3,
+  "languages": [
+    {
+      "text": "Common plus one other language"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:necrotic"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Vampiric Connection",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the familiar and its vampire master are on the same plane of existence, the vampire can communicate with the familiar telepathically, and the vampire can perceive through the familiar's senses.",
+        "plain": "While the familiar and its vampire master are on the same plane of existence, the vampire can communicate with the familiar telepathically, and the vampire can perceive through the familiar's senses.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The familiar makes two Umbral Dagger attacks.",
+        "plain": "The familiar makes two Umbral Dagger attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Umbral Dagger",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +5, reach 5 ft. or range 20/60 ft. _Hit:_ 5 (1d4 + 3) Piercing damage plus 7 (3d4) Necrotic damage. If the target is reduced to 0 Hit Points by this attack, the target becomes Stable but has the Poisoned condition for 1 hour. While it has the Poisoned condition, the target has the Paralyzed condition.",
+        "plain": "Melee or Ranged Attack Roll: +5, reach 5 ft. or range 20/60 ft. Hit: 5 (1d4 + 3) Piercing damage plus 7 (3d4) Necrotic damage. If the target is reduced to 0 Hit Points by this attack, the target becomes Stable but has the Poisoned condition for 1 hour. While it has the Poisoned condition, the target has the Paralyzed condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Deathless Agility",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The familiar takes the Dash or Disengage action.",
+        "plain": "The familiar takes the Dash or Disengage action.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

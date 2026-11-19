@@ -1,0 +1,42 @@
+{
+  "id": "spell:protection-from-poison@2024",
+  "name": "Protection from Poison",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You touch a creature and end the Poisoned condition on it. For the duration, the target has Advantage on saving throws to avoid or end the Poisoned condition, and it has Resistance to Poison damage.",
+    "plain": "You touch a creature and end the Poisoned condition on it. For the duration, the target has Advantage on saving throws to avoid or end the Poisoned condition, and it has Resistance to Poison damage.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:cleric",
+    "class:druid",
+    "class:paladin",
+    "class:ranger"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour"
+      }
+    }
+  ]
+}

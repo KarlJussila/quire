@@ -1,0 +1,45 @@
+{
+  "id": "spell:darkvision@2024",
+  "name": "Darkvision",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "For the duration, a willing creature you touch has Darkvision with a range of 150 feet.",
+    "plain": "For the duration, a willing creature you touch has Darkvision with a range of 150 feet.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:druid",
+    "class:ranger",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a dried carrot"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 8,
+        "unit": "hour"
+      }
+    }
+  ]
+}

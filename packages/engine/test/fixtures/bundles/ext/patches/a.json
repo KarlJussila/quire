@@ -1,0 +1,56 @@
+{
+ "source": {
+  "book": "ext"
+ },
+ "patches": [
+  {
+   "target": "feature:a",
+   "set": {
+    "effects": {
+     "$append": [
+      {
+       "type": "roll-mod",
+       "mode": "advantage",
+       "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+         "roll": "roll:save",
+         "against": {
+          "sourceType": "source-type:poison"
+         }
+        }
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "target": "feature:not-loaded",
+   "set": {
+    "repeatable": true
+   }
+  },
+  {
+   "target": "feature:b",
+   "set": {
+    "effects": {
+     "$append": [
+      {
+       "type": "no-such-effect"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "target": "feature:core-only",
+   "set": {
+    "requires": {
+     "has": "feat:new-name"
+    }
+   }
+  }
+ ]
+}

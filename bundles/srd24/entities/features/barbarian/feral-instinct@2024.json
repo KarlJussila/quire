@@ -1,0 +1,25 @@
+{
+  "id": "feature:barbarian/feral-instinct@2024",
+  "name": "Level 7: Feral Instinct",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your instincts are so honed that you have Advantage on Initiative rolls.",
+    "plain": "Your instincts are so honed that you have Advantage on Initiative rolls.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:initiative"
+        }
+      }
+    }
+  ]
+}

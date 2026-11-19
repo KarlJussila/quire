@@ -1,0 +1,18 @@
+{
+  "id": "feature:dwarf/darkvision@2024",
+  "name": "Darkvision",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Darkvision. You have Darkvision with a range of 120 feet.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "sense",
+      "sense": "sense:darkvision",
+      "range": 120
+    }
+  ]
+}

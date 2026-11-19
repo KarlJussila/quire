@@ -1,0 +1,7 @@
+{
+  "id": "environment:difficult-terrain",
+  "name": "Difficult Terrain",
+  "source": {
+    "book": "core"
+  }
+}

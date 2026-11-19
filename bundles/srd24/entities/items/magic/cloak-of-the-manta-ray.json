@@ -1,0 +1,15 @@
+{
+  "id": "item:cloak-of-the-manta-ray@2024",
+  "name": "Cloak of the Manta Ray",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this cloak, you can breathe underwater, and you have a Swim Speed of 60 feet.",
+    "plain": "While wearing this cloak, you can breathe underwater, and you have a Swim Speed of 60 feet.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true
+}

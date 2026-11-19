@@ -1,0 +1,12 @@
+{
+  "id": "feature:thirsting-blade/2@2024",
+  "name": "Thirsting Blade",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 5+ Warlock, Pact of the Blade Invocation_\n\nYou gain the Extra Attack feature for your pact weapon only. With that feature, you can attack twice with the weapon instead of once when you take the Attack action on your turn.",
+    "plain": "Prerequisite: Level 5+ Warlock, Pact of the Blade Invocation\n\nYou gain the Extra Attack feature for your pact weapon only. With that feature, you can attack twice with the weapon instead of once when you take the Attack action on your turn.",
+    "wording": "srd"
+  }
+}

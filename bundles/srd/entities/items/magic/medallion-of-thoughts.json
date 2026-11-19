@@ -1,0 +1,16 @@
+{
+  "id": "item:medallion-of-thoughts",
+  "name": "Medallion of Thoughts",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "The medallion has 3 charges. While wearing it, you can use an action and expend 1 charge to cast the Detect Thoughts spell (save DC 13) from it. The medallion regains 1d3 expended charges daily at dawn.",
+    "plain": "The medallion has 3 charges. While wearing it, you can use an action and expend 1 charge to cast the Detect Thoughts spell (save DC 13) from it. The medallion regains 1d3 expended charges daily at dawn.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "weight": 0.0
+}

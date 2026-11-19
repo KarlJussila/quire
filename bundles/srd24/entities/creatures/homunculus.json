@@ -1,0 +1,92 @@
+{
+  "id": "creature:homunculus@2024",
+  "name": "Homunculus",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:construct",
+  "alignment": "alignment:neutral",
+  "ac": 13,
+  "hp": {
+    "average": 4,
+    "formula": "1d4 + 2"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:fly": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 14,
+    "ability:dex": 15,
+    "ability:int": 10,
+    "ability:str": 4,
+    "ability:wis": 10
+  },
+  "saves": {
+    "ability:cha": 0,
+    "ability:wis": 2
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 10,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Any"
+  ],
+  "cr": 0,
+  "languages": [
+    {
+      "text": "Understands Common plus one other language but can't speak"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Telepathic Bond",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the homunculus is on the same plane of existence as its master, the two of them can communicate telepathically with each other.",
+        "plain": "While the homunculus is on the same plane of existence as its master, the two of them can communicate telepathically with each other.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 1 Piercing damage, and the target is subjected to the following effect. _Constitution Saving Throw:_ DC 12. _Failure:_ The target has the Poisoned condition until the end of the homunculus's next turn. _Failure by 5 or More:_ The target has the Poisoned condition for 1 minute. While Poisoned, the target has the Unconscious condition, which ends early if the target takes any damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 1 Piercing damage, and the target is subjected to the following effect. Constitution Saving Throw: DC 12. Failure: The target has the Poisoned condition until the end of the homunculus's next turn. Failure by 5 or More: The target has the Poisoned condition for 1 minute. While Poisoned, the target has the Unconscious condition, which ends early if the target takes any damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

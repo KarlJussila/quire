@@ -1,0 +1,31 @@
+{
+  "id": "item:staff-of-healing",
+  "name": "Staff of Healing",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability modifier: Cure Wounds (1 charge per spell level, up to 4th), Lesser Restoration (2 charges), or Mass Cure Wounds (5 charges).\n\nThe staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff vanishes in a flash of light, lost forever.",
+    "plain": "This staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability modifier: Cure Wounds (1 charge per spell level, up to 4th), Lesser Restoration (2 charges), or Mass Cure Wounds (5 charges).\n\nThe staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff vanishes in a flash of light, lost forever.",
+    "wording": "srd"
+  },
+  "group": "group:staff",
+  "rarity": "rarity:rare",
+  "attunement": {
+    "by": {
+      "any": [
+        {
+          "class": "class:bard"
+        },
+        {
+          "class": "class:cleric"
+        },
+        {
+          "class": "class:druid"
+        }
+      ]
+    },
+    "text": "requires attunement by a bard, cleric, or druid"
+  },
+  "weight": 4.0
+}

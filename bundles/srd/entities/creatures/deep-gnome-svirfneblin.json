@@ -1,0 +1,106 @@
+{
+  "id": "creature:deep-gnome-svirfneblin",
+  "name": "Deep Gnome (Svirfneblin)",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral-good",
+  "ac": 15,
+  "acFrom": [
+    "chain shirt"
+  ],
+  "hp": {
+    "average": 16,
+    "formula": "3d6 + 6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 9,
+    "ability:con": 14,
+    "ability:dex": 14,
+    "ability:int": 12,
+    "ability:str": 15,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:investigation": 3,
+    "skill:perception": 2,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 12,
+  "xp": 100,
+  "cr": 0.5,
+  "languages": [
+    {
+      "language": "language:gnomish"
+    },
+    {
+      "language": "language:terran"
+    },
+    {
+      "language": "language:undercommon"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Stone Camouflage",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The gnome has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.",
+        "plain": "The gnome has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Gnome Cunning",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The gnome has advantage on Intelligence, Wisdom, and Charisma saving throws against magic.",
+        "plain": "The gnome has advantage on Intelligence, Wisdom, and Charisma saving throws against magic.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Innate Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The gnome's innate spellcasting ability is Intelligence (spell save DC 11). It can innately cast the following spells, requiring no material components:\n\n- At will: Nondetection (self only)\n- 1/day each: Blindness/Deafness, Blur, Disguise Self",
+        "plain": "The gnome's innate spellcasting ability is Intelligence (spell save DC 11). It can innately cast the following spells, requiring no material components:\n\n- At will: Nondetection (self only)\n- 1/day each: Blindness/Deafness, Blur, Disguise Self",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "War Pick",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 6 (1d8 + 2) piercing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Poisoned Dart",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +4 to hit, range 30/120 ft., one creature. Hit: 4 (1d4 + 2) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or be Poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+        "plain": "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one creature. Hit: 4 (1d4 + 2) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or be Poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

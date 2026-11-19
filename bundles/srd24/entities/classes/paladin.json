@@ -1,0 +1,89 @@
+{
+  "id": "class:paladin@2024",
+  "name": "Paladin",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Paladin, you gain the following class features when you reach the specified Paladin levels.",
+    "plain": "As a Paladin, you gain the following class features when you reach the specified Paladin levels.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d10",
+  "multiclass": {
+    "requires": {
+      "all": [
+        {
+          "compare": "abilities.ability:str",
+          "atLeast": 13
+        },
+        {
+          "compare": "abilities.ability:cha",
+          "atLeast": 13
+        }
+      ]
+    },
+    "features": [
+      "feature:paladin/multiclass-proficiencies@2024"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:paladin/lay-on-hands@2024",
+      "feature:paladin/spellcasting@2024",
+      "feature:paladin/weapon-mastery@2024"
+    ],
+    "2": [
+      "feature:paladin/fighting-style@2024",
+      "feature:paladin/paladins-smite@2024"
+    ],
+    "3": [
+      "feature:paladin/channel-divinity@2024",
+      "feature:paladin/paladin-subclass@2024"
+    ],
+    "4": [
+      "feature:paladin/ability-score-improvement@2024"
+    ],
+    "5": [
+      "feature:paladin/extra-attack@2024",
+      "feature:paladin/faithful-steed@2024"
+    ],
+    "6": [
+      "feature:paladin/aura-of-protection@2024"
+    ],
+    "8": [
+      "feature:paladin/ability-score-improvement@2024"
+    ],
+    "9": [
+      "feature:paladin/abjure-foes@2024"
+    ],
+    "10": [
+      "feature:paladin/aura-of-courage@2024"
+    ],
+    "11": [
+      "feature:paladin/radiant-strikes@2024"
+    ],
+    "12": [
+      "feature:paladin/ability-score-improvement@2024"
+    ],
+    "14": [
+      "feature:paladin/restoring-touch@2024"
+    ],
+    "16": [
+      "feature:paladin/ability-score-improvement@2024"
+    ],
+    "18": [
+      "feature:paladin/aura-expansion@2024"
+    ],
+    "19": [
+      "feature:paladin/epic-boon@2024"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Sacred Oath||Paladin Subclass"
+  },
+  "firstClass": [
+    "feature:paladin/proficiencies@2024"
+  ]
+}

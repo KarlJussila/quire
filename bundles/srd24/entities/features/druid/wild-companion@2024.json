@@ -1,0 +1,54 @@
+{
+  "id": "feature:druid/wild-companion@2024",
+  "name": "Level 2: Wild Companion",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can summon a nature spirit that assumes an animal form to aid you. As a Magic action, you can expend a spell slot or a use of Wild Shape to cast the Find Familiar spell without Material components.\n\nWhen you cast the spell in this way, the familiar is Fey and disappears when you finish a Long Rest.",
+    "plain": "You can summon a nature spirit that assumes an animal form to aid you. As a Magic action, you can expend a spell slot or a use of Wild Shape to cast the Find Familiar spell without Material components.\n\nWhen you cast the spell in this way, the familiar is Fey and disappears when you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "wild-companion",
+      "name": "Wild Companion",
+      "when": {
+        "compare": "levels.class:druid",
+        "atLeast": 2
+      },
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "oneOf": [
+            [
+              {
+                "resource": "spell-slots"
+              }
+            ],
+            [
+              {
+                "resource": "wild-shape"
+              }
+            ]
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Cast Find Familiar without Material components. The familiar is a Fey, and it disappears when you finish a Long Rest.",
+            "gap": {
+              "category": "spell",
+              "name": "Find Familiar without Material components"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

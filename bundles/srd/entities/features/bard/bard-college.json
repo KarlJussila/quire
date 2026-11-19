@@ -1,0 +1,30 @@
+{
+  "id": "feature:bard/bard-college",
+  "name": "Bard College",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 3rd level, you delve into the advanced techniques of a bard college of your choice, such as the College of Lore. Your choice grants you features at 3rd level and again at 6th and 14th level.",
+    "plain": "At 3rd level, you delve into the advanced techniques of a bard college of your choice, such as the College of Lore. Your choice grants you features at 3rd level and again at 6th and 14th level.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "subclass",
+        "name": "Bard College",
+        "from": [
+          {
+            "kind": "subclass",
+            "where": {
+              "match": {
+                "class": "class:bard"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

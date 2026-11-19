@@ -1,0 +1,103 @@
+{
+  "id": "creature:gray-ooze@2024",
+  "name": "Gray Ooze",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:ooze",
+  "alignment": "alignment:unaligned",
+  "ac": 9,
+  "hp": {
+    "average": 22,
+    "formula": "3d8 + 9"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:climb": {
+      "speed": 10
+    }
+  },
+  "abilities": {
+    "ability:cha": 2,
+    "ability:con": 16,
+    "ability:dex": 6,
+    "ability:int": 1,
+    "ability:str": 12,
+    "ability:wis": 6
+  },
+  "skills": {
+    "skill:stealth": 2
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    }
+  },
+  "passivePerception": 8,
+  "xp": 100,
+  "proficiencyBonus": 2,
+  "initiative": -2,
+  "habitat": [
+    "Underdark"
+  ],
+  "cr": 0.5,
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:acid",
+        "damage-type:cold",
+        "damage-type:fire"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:blinded",
+        "condition:charmed",
+        "condition:deafened",
+        "condition:exhaustion",
+        "condition:frightened",
+        "condition:grappled",
+        "condition:prone",
+        "condition:restrained"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Amorphous",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The ooze can move through a space as narrow as 1 inch without expending extra movement to do so.",
+        "plain": "The ooze can move through a space as narrow as 1 inch without expending extra movement to do so.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Corrosive Form",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "Nonmagical ammunition is destroyed immediately after hitting the ooze and dealing any damage. Any nonmagical weapon takes a cumulative -1 penalty to attack rolls immediately after dealing damage to the ooze and coming into contact with it. The weapon is destroyed if the penalty reaches -5. The penalty can be removed by casting the Mending spell on the weapon.\n\nThe ooze can eat through 2-inch-thick, nonmagical metal or wood in 1 round.",
+        "plain": "Nonmagical ammunition is destroyed immediately after hitting the ooze and dealing any damage. Any nonmagical weapon takes a cumulative -1 penalty to attack rolls immediately after dealing damage to the ooze and coming into contact with it. The weapon is destroyed if the penalty reaches -5. The penalty can be removed by casting the Mending spell on the weapon.\n\nThe ooze can eat through 2-inch-thick, nonmagical metal or wood in 1 round.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pseudopod",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +3, reach 5 ft. _Hit:_ 10 (2d8 + 1) Acid damage. Nonmagical armor worn by the target takes a -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the Mending spell on the armor.",
+        "plain": "Melee Attack Roll: +3, reach 5 ft. Hit: 10 (2d8 + 1) Acid damage. Nonmagical armor worn by the target takes a -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the Mending spell on the armor.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "item:chain-10-feet",
+  "name": "Chain (10 feet)",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A chain has 10 hit points. It can be burst with a successful DC 20 Strength check.",
+    "plain": "A chain has 10 hit points. It can be burst with a successful DC 20 Strength check.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:gp"
+  },
+  "weight": 10.0
+}

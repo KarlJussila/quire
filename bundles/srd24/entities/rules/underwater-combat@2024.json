@@ -1,0 +1,133 @@
+{
+  "id": "rule:underwater-combat@2024",
+  "name": "Underwater Combat",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A fight underwater follows these rules.\n\n### Impeded Weapons\n\nWhen making a melee attack roll with a weapon underwater, a creature that lacks a Swim Speed has Disadvantage on the attack roll unless the weapon deals Piercing damage.\n\nA ranged attack roll with a weapon underwater automatically misses a target beyond the weapon's normal range, and the attack roll has Disadvantage against a target within normal range.\n\n### Fire Resistance\n\nAnything underwater has Resistance to Fire damage (explained in \"Damage and Healing\").",
+    "plain": "A fight underwater follows these rules.\n\nImpeded Weapons\n\nWhen making a melee attack roll with a weapon underwater, a creature that lacks a Swim Speed has Disadvantage on the attack roll unless the weapon deals Piercing damage.\n\nA ranged attack roll with a weapon underwater automatically misses a target beyond the weapon's normal range, and the attack roll has Disadvantage against a target within normal range.\n\nFire Resistance\n\nAnything underwater has Resistance to Fire damage (explained in \"Damage and Healing\").",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "range": "melee",
+                "via": "weapon"
+              }
+            }
+          },
+          {
+            "environment": "environment:underwater"
+          },
+          {
+            "not": {
+              "match": {
+                "speeds": {
+                  "movement-mode:swim": true
+                }
+              }
+            }
+          },
+          {
+            "not": {
+              "dealsDamage": "damage-type:piercing"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "range": "ranged",
+                "via": "weapon"
+              }
+            }
+          },
+          {
+            "environment": "environment:underwater"
+          },
+          {
+            "prose": {
+              "text": "beyond normal range",
+              "gap": {
+                "category": "test",
+                "name": "beyond-normal-range"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "range": "ranged",
+                "via": "weapon"
+              }
+            }
+          },
+          {
+            "environment": "environment:underwater"
+          },
+          {
+            "not": {
+              "prose": {
+                "text": "beyond normal range",
+                "gap": {
+                  "category": "test",
+                  "name": "beyond-normal-range"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:fire"
+      ],
+      "when": {
+        "environment": "environment:underwater"
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "objects",
+      "name": "Objects underwater also have resistance to fire damage"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "id": "creature:young-copper-dragon@2024",
+  "name": "Young Copper Dragon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:chaotic-good",
+  "ac": 17,
+  "hp": {
+    "average": 119,
+    "formula": "14d10 + 42"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:climb": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    }
+  },
+  "abilities": {
+    "ability:cha": 15,
+    "ability:con": 17,
+    "ability:dex": 12,
+    "ability:int": 16,
+    "ability:str": 19,
+    "ability:wis": 13
+  },
+  "saves": {
+    "ability:dex": 4,
+    "ability:wis": 4
+  },
+  "skills": {
+    "skill:deception": 5,
+    "skill:perception": 7,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    },
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 17,
+  "xp": 2900,
+  "proficiencyBonus": 3,
+  "initiative": 4,
+  "habitat": [
+    "Hill"
+  ],
+  "treasure": [
+    "Arcana"
+  ],
+  "cr": 7,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:acid"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes three Rend attacks. It can replace one attack with a use of Slowing Breath.",
+        "plain": "The dragon makes three Rend attacks. It can replace one attack with a use of Slowing Breath.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 10 ft. _Hit:_ 15 (2d10 + 4) Slashing damage.",
+        "plain": "Melee Attack Roll: +7, reach 10 ft. Hit: 15 (2d10 + 4) Slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Acid Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 14, each creature in a 40-foot-long, 5-footwide Line. _Failure:_ 40 (9d8) Acid damage. _Success:_ Half damage.",
+        "plain": "Dexterity Saving Throw: DC 14, each creature in a 40-foot-long, 5-footwide Line. Failure: 40 (9d8) Acid damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Slowing Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 14, each creature in a 30-foot Cone. _Failure:_ The target can't take Reactions; its Speed is halved; and it can take either an action or a Bonus Action on its turn, not both. This effect lasts until the end of its next turn.",
+        "plain": "Constitution Saving Throw: DC 14, each creature in a 30-foot Cone. Failure: The target can't take Reactions; its Speed is halved; and it can take either an action or a Bonus Action on its turn, not both. This effect lasts until the end of its next turn.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

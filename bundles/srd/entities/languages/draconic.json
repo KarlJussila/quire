@@ -1,0 +1,15 @@
+{
+  "id": "language:draconic",
+  "name": "Draconic",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "An exotic language, typically spoken by dragons and dragonborn, written in the Draconic script.",
+    "plain": "An exotic language, typically spoken by dragons and dragonborn, written in the Draconic script.",
+    "wording": "original"
+  },
+  "group": "group:exotic-language",
+  "script": "Draconic",
+  "speakers": "Dragons, dragonborn"
+}

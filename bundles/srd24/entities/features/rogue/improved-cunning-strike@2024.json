@@ -1,0 +1,46 @@
+{
+  "id": "feature:rogue/improved-cunning-strike@2024",
+  "name": "Level 11: Improved Cunning Strike",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can use up to two Cunning Strike effects when you deal Sneak Attack damage, paying the die cost for each effect.",
+    "plain": "You can use up to two Cunning Strike effects when you deal Sneak Attack damage, paying the die cost for each effect.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "grantedBy": "feature:rogue/cunning-strike"
+            },
+            {
+              "match": {
+                "key": "cunning-strike"
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "effects": {
+          "$where": {
+            "type": "record"
+          },
+          "pick": {
+            "$where": true,
+            "count": {
+              "atMost": 2
+            }
+          }
+        }
+      }
+    }
+  ]
+}

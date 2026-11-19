@@ -1,0 +1,46 @@
+{
+  "id": "rule:falling-unconscious",
+  "name": "Falling Unconscious",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "If damage reduces you to 0 hit points and fails to kill you, you fall Unconscious (see appendix PH-A). This unconsciousness ends if you regain any hit points.",
+    "plain": "If damage reduces you to 0 hit points and fails to kill you, you fall Unconscious (see appendix PH-A). This unconsciousness ends if you regain any hit points.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "becomes": {
+            "compare": "hp.current",
+            "atMost": 0
+          },
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "applyState": {
+              "state": "condition:unconscious",
+              "ends": [
+                {
+                  "event": "event:healed",
+                  "subject": "self"
+                }
+              ]
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

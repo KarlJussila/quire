@@ -1,0 +1,87 @@
+{
+  "id": "feature:monk/self-restoration@2024",
+  "name": "Level 10: Self-Restoration",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Through sheer force of will, you can remove one of the following conditions from yourself at the end of each of your turns: Charmed, Frightened, or Poisoned.\n\nIn addition, forgoing food and drink doesn't give you levels of Exhaustion.",
+    "plain": "Through sheer force of will, you can remove one of the following conditions from yourself at the end of each of your turns: Charmed, Frightened, or Poisoned.\n\nIn addition, forgoing food and drink doesn't give you levels of Exhaustion.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:turn-end",
+          "subject": "self",
+          "when": {
+            "any": [
+              {
+                "has": "condition:charmed"
+              },
+              {
+                "has": "condition:frightened"
+              },
+              {
+                "has": "condition:poisoned"
+              }
+            ]
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "choose": {
+              "key": "self-restoration-condition",
+              "name": "Condition to Remove",
+              "from": [
+                {
+                  "name": "Charmed",
+                  "of": [
+                    {
+                      "endState": {
+                        "state": "condition:charmed"
+                      },
+                      "when": {
+                        "has": "condition:charmed"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Frightened",
+                  "of": [
+                    {
+                      "endState": {
+                        "state": "condition:frightened"
+                      },
+                      "when": {
+                        "has": "condition:frightened"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Poisoned",
+                  "of": [
+                    {
+                      "endState": {
+                        "state": "condition:poisoned"
+                      },
+                      "when": {
+                        "has": "condition:poisoned"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "item:bedroll@2024",
+  "name": "Bedroll",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Bedroll sleeps one Small or Medium creature. While in a Bedroll, you automatically succeed on saving throws against extreme cold (see \"Gameplay Toolbox\").",
+    "plain": "A Bedroll sleeps one Small or Medium creature. While in a Bedroll, you automatically succeed on saving throws against extreme cold (see \"Gameplay Toolbox\").",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:gp"
+  },
+  "weight": 7.0
+}

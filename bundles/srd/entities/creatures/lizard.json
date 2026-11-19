@@ -1,0 +1,54 @@
+{
+  "id": "creature:lizard",
+  "name": "Lizard",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 10,
+  "hp": {
+    "average": 2,
+    "formula": "1d4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:climb": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 3,
+    "ability:con": 10,
+    "ability:dex": 11,
+    "ability:int": 1,
+    "ability:str": 2,
+    "ability:wis": 8
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 30
+    }
+  },
+  "passivePerception": 9,
+  "xp": 10,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +0 to hit, reach 5 ft., one target. _Hit:_ 1 piercing damage.",
+        "plain": "Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: 1 piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

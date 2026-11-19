@@ -1,0 +1,12 @@
+{
+  "id": "feature:temperate-land@2024",
+  "name": "Temperate Land",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "|   Druid Level | Circle Spells                                 |\n|---------------|-----------------------------------------------|\n|             3 | Misty Step, Shocking Grasp, Sleep |\n|             5 | Lightning Bolt                            |\n|             7 | Freedom of Movement                       |\n|             9 | Tree Stride                               |",
+    "plain": "|   Druid Level | Circle Spells                                 |\n|---------------|-----------------------------------------------|\n|             3 | Misty Step, Shocking Grasp, Sleep |\n|             5 | Lightning Bolt                            |\n|             7 | Freedom of Movement                       |\n|             9 | Tree Stride                               |",
+    "wording": "srd"
+  }
+}

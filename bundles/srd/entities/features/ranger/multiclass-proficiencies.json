@@ -1,0 +1,44 @@
+{
+  "id": "feature:ranger/multiclass-proficiencies",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Proficiencies Gained: Light armor, medium armor, shields, simple weapons, martial weapons, one skill from the class's skill list",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor",
+        "group:medium-armor",
+        "group:shield",
+        "group:simple-weapon",
+        "group:martial-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skill",
+            "name": "Skill Proficiency",
+            "from": [
+              "skill:animal-handling",
+              "skill:athletics",
+              "skill:insight",
+              "skill:investigation",
+              "skill:nature",
+              "skill:perception",
+              "skill:stealth",
+              "skill:survival"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

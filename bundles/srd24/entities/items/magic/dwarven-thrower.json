@@ -1,0 +1,153 @@
+{
+  "id": "item:dwarven-thrower@2024",
+  "name": "Dwarven Thrower",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. It has the Thrown property with a normal range of 20 feet and a long range of 60 feet. When you hit with a ranged attack using this weapon, it deals an extra 1d8 Force damage, or an extra 2d8 Force damage if the target is a Giant. Immediately after hitting or missing, the weapon flies back to your hand.",
+    "plain": "You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. It has the Thrown property with a normal range of 20 feet and a long range of 60 feet. When you hit with a ranged attack using this weapon, it deals an extra 1d8 Force damage, or an extra 2d8 Force damage if the target is a Giant. Immediately after hitting or missing, the weapon flies back to your hand.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:very-rare",
+  "attunement": {
+    "by": {
+      "any": [
+        {
+          "has": "species:dwarf"
+        },
+        {
+          "has": "item:belt-of-dwarvenkind",
+          "match": {
+            "attuned": true
+          }
+        }
+      ]
+    },
+    "text": "Requires Attunement by a Dwarf or a Creature Attuned to a Belt of Dwarvenkind"
+  },
+  "base": "item:warhammer",
+  "weapon": {
+    "properties": [
+      "weapon-property:thrown",
+      "weapon-property:versatile"
+    ],
+    "damage": {
+      "amount": "1d8",
+      "type": "damage-type:bludgeoning"
+    },
+    "versatile": "1d10",
+    "mastery": "weapon-mastery:push",
+    "range": {
+      "normal": 20,
+      "long": 60
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 3
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "item": "this"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 3
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage",
+              "attack": {
+                "item": "this"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "triggered",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true
+        }
+      },
+      "on": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "item": "this",
+            "range": "ranged"
+          }
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "damage": {
+              "amount": {
+                "if": {
+                  "match": {
+                    "creatureType": "creature-type:giant"
+                  }
+                },
+                "then": "2d8",
+                "else": "1d8"
+              },
+              "type": "damage-type:force"
+            },
+            "to": "subject"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "Immediately after hitting or missing with a ranged attack, the weapon flies back to your hand."
+    }
+  ]
+}

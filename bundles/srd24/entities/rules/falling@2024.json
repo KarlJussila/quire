@@ -1,0 +1,127 @@
+{
+  "id": "rule:falling@2024",
+  "name": "Falling",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A creature that falls takes 1d6 Bludgeoning damage at the end of the fall for every 10 feet it fell, to a maximum of 20d6. When the creature lands, it has the Prone condition unless it avoids taking any damage from the fall.\n\nA creature that falls into water or another liquid can use its Reaction to make a DC 15 Strength (Athletics) or Dexterity (Acrobatics) check to hit the surface head or feet first. On a successful check, any damage resulting from the fall is halved.",
+    "plain": "A creature that falls takes 1d6 Bludgeoning damage at the end of the fall for every 10 feet it fell, to a maximum of 20d6. When the creature lands, it has the Prone condition unless it avoids taking any damage from the fall.\n\nA creature that falls into water or another liquid can use its Reaction to make a DC 15 Strength (Athletics) or Dexterity (Acrobatics) check to hit the surface head or feet first. On a successful check, any damage resulting from the fall is halved.",
+    "wording": "srd"
+  },
+  "group": "group:exploration",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:fell",
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "key": "fall-damage",
+            "damage": {
+              "amount": {
+                "dice": {
+                  "count": {
+                    "min": [
+                      20,
+                      {
+                        "divide": {
+                          "event": "distance"
+                        },
+                        "by": 10,
+                        "round": "down"
+                      }
+                    ]
+                  },
+                  "die": 6
+                }
+              },
+              "type": "damage-type:bludgeoning"
+            },
+            "to": "self"
+          },
+          {
+            "applyState": {
+              "state": "condition:prone"
+            },
+            "to": "self",
+            "when": {
+              "compare": {
+                "result": "fall-damage"
+              },
+              "atLeast": 1
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "into-water",
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "trigger": {
+        "event": "event:fell",
+        "subject": "self",
+        "when": {
+          "environment": "environment:water"
+        }
+      },
+      "delivery": {
+        "check": {
+          "choose": {
+            "key": "check",
+            "name": "Which Check",
+            "from": [
+              {
+                "ability": "ability:str",
+                "skill": "skill:athletics"
+              },
+              {
+                "ability": "ability:dex",
+                "skill": "skill:acrobatics"
+              }
+            ]
+          },
+          "dc": 15,
+          "by": "self"
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "defense",
+                  "resist": [
+                    "damage-type:bludgeoning"
+                  ]
+                }
+              ]
+            },
+            "ends": [
+              {
+                "event": "event:damaged",
+                "subject": "self"
+              }
+            ]
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

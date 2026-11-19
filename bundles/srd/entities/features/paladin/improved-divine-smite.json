@@ -1,0 +1,30 @@
+{
+  "id": "feature:paladin/improved-divine-smite",
+  "name": "Improved Divine Smite",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "By 11th level, you are so suffused with righteous might that all your melee weapon strikes carry divine power with them. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage. If you also use your Divine Smite with an attack, you add this damage to the extra damage of your Divine Smite.",
+    "plain": "By 11th level, you are so suffused with righteous might that all your melee weapon strikes carry divine power with them. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage. If you also use your Divine Smite with an attack, you add this damage to the extra damage of your Divine Smite.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "damage-bonus",
+      "amount": "1d8",
+      "damageType": "damage-type:radiant",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:damage",
+          "attack": {
+            "range": "melee",
+            "via": "weapon"
+          }
+        }
+      }
+    }
+  ]
+}

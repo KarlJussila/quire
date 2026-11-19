@@ -1,0 +1,510 @@
+{
+  "id": "feature:druid/circle-of-the-land/circle-spells",
+  "name": "Circle Spells",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Your mystical connection to the land infuses you with the ability to cast certain spells. At 3rd, 5th, 7th, and 9th level you gain access to circle spells connected to the land where you became a druid. Choose that land — arctic, coast, desert, forest, grassland, mountain, or swamp — and consult the associated list of spells.\n\nOnce you gain access to a circle spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day. If you gain access to a spell that doesn't appear on the druid spell list, the spell is nonetheless a druid spell for you.",
+    "plain": "Your mystical connection to the land infuses you with the ability to cast certain spells. At 3rd, 5th, 7th, and 9th level you gain access to circle spells connected to the land where you became a druid. Choose that land — arctic, coast, desert, forest, grassland, mountain, or swamp — and consult the associated list of spells.\n\nOnce you gain access to a circle spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day. If you gain access to a spell that doesn't appear on the druid spell list, the spell is nonetheless a druid spell for you.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "choose": {
+        "key": "land",
+        "name": "Land",
+        "from": [
+          {
+            "name": "Arctic",
+            "of": [
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:hold-person",
+                  "spell:spike-growth"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:sleet-storm",
+                  "spell:slow"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 7
+                },
+                "spells": [
+                  "spell:freedom-of-movement",
+                  "spell:ice-storm"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 9
+                },
+                "spells": [
+                  "spell:commune-with-nature",
+                  "spell:cone-of-cold"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              }
+            ]
+          },
+          {
+            "name": "Coast",
+            "of": [
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:mirror-image",
+                  "spell:misty-step"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:water-breathing",
+                  "spell:water-walk"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 7
+                },
+                "spells": [
+                  "spell:control-water",
+                  "spell:freedom-of-movement"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 9
+                },
+                "spells": [
+                  "spell:conjure-elemental",
+                  "spell:scrying"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              }
+            ]
+          },
+          {
+            "name": "Desert",
+            "of": [
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:blur",
+                  "spell:silence"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:create-food-and-water",
+                  "spell:protection-from-energy"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 7
+                },
+                "spells": [
+                  "spell:blight",
+                  "spell:hallucinatory-terrain"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 9
+                },
+                "spells": [
+                  "spell:insect-plague",
+                  "spell:wall-of-stone"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              }
+            ]
+          },
+          {
+            "name": "Forest",
+            "of": [
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:barkskin",
+                  "spell:spider-climb"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:call-lightning",
+                  "spell:plant-growth"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 7
+                },
+                "spells": [
+                  "spell:divination",
+                  "spell:freedom-of-movement"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 9
+                },
+                "spells": [
+                  "spell:commune-with-nature",
+                  "spell:tree-stride"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              }
+            ]
+          },
+          {
+            "name": "Grassland",
+            "of": [
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:invisibility",
+                  "spell:pass-without-trace"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:daylight",
+                  "spell:haste"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 7
+                },
+                "spells": [
+                  "spell:divination",
+                  "spell:freedom-of-movement"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 9
+                },
+                "spells": [
+                  "spell:dream",
+                  "spell:insect-plague"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              }
+            ]
+          },
+          {
+            "name": "Mountain",
+            "of": [
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:spider-climb",
+                  "spell:spike-growth"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:lightning-bolt",
+                  "spell:meld-into-stone"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 7
+                },
+                "spells": [
+                  "spell:stone-shape",
+                  "spell:stoneskin"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 9
+                },
+                "spells": [
+                  "spell:passwall",
+                  "spell:wall-of-stone"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              }
+            ]
+          },
+          {
+            "name": "Swamp",
+            "of": [
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:darkness",
+                  "spell:acid-arrow"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:water-walk",
+                  "spell:stinking-cloud"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 7
+                },
+                "spells": [
+                  "spell:freedom-of-movement",
+                  "spell:locate-creature"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 9
+                },
+                "spells": [
+                  "spell:insect-plague",
+                  "spell:scrying"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              }
+            ]
+          },
+          {
+            "name": "Underdark",
+            "of": [
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:spider-climb",
+                  "spell:web"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:gaseous-form",
+                  "spell:stinking-cloud"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 7
+                },
+                "spells": [
+                  "spell:greater-invisibility",
+                  "spell:stone-shape"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 9
+                },
+                "spells": [
+                  "spell:cloudkill",
+                  "spell:insect-plague"
+                ],
+                "how": "prepared",
+                "counts": false,
+                "countsAs": "class:druid"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

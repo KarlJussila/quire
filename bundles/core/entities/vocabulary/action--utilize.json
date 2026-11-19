@@ -1,0 +1,7 @@
+{
+  "id": "action:utilize",
+  "name": "Utilize",
+  "source": {
+    "book": "core"
+  }
+}

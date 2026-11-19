@@ -1,0 +1,20 @@
+{
+  "id": "feature:soldier/skill-proficiencies@2024",
+  "name": "Skill Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Skill Proficiencies: Athletics and Intimidation",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "skill:athletics",
+        "skill:intimidation"
+      ]
+    }
+  ]
+}

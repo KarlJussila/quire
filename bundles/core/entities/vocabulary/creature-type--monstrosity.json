@@ -1,0 +1,7 @@
+{
+  "id": "creature-type:monstrosity",
+  "name": "Monstrosity",
+  "source": {
+    "book": "core"
+  }
+}

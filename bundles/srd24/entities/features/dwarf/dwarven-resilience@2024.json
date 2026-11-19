@@ -1,0 +1,35 @@
+{
+  "id": "feature:dwarf/dwarven-resilience@2024",
+  "name": "Dwarven Resilience",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.",
+    "plain": "You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "against": {
+            "condition": "condition:poisoned"
+          }
+        }
+      }
+    }
+  ],
+  "gaps": []
+}

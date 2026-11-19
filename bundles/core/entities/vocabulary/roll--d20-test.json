@@ -1,0 +1,7 @@
+{
+  "id": "roll:d20-test",
+  "name": "D20 Test",
+  "source": {
+    "book": "core"
+  }
+}

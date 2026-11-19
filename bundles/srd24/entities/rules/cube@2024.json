@@ -1,0 +1,18 @@
+{
+  "id": "rule:cube@2024",
+  "name": "Cube",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Cube is an area of effect that extends in straight lines from a point of origin located anywhere on a face of the Cube. The effect that creates a Cube specifies its size, which is the length of each side.\n\nA Cube's point of origin isn't included in the area of effect unless its creator decides otherwise.",
+    "plain": "A Cube is an area of effect that extends in straight lines from a point of origin located anywhere on a face of the Cube. The effect that creates a Cube specifies its size, which is the length of each side.\n\nA Cube's point of origin isn't included in the area of effect unless its creator decides otherwise.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

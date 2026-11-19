@@ -1,0 +1,51 @@
+{
+  "id": "feature:fighter/second-wind",
+  "name": "Second Wind",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.",
+    "plain": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "second-wind",
+      "name": "Second Wind",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:short"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "heal": {
+            "amount": {
+              "sum": [
+                "1d10",
+                "levels.class:fighter"
+              ]
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

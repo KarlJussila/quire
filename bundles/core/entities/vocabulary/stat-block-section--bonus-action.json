@@ -1,0 +1,8 @@
+{
+  "id": "stat-block-section:bonus-action",
+  "name": "Bonus Action",
+  "source": {
+    "book": "core"
+  },
+  "order": 3
+}

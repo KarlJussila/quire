@@ -1,0 +1,41 @@
+{
+  "id": "spell:mending",
+  "name": "Mending",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.\n\nThis spell can physically repair a magic item or construct, but the spell can't restore magic to such an object.",
+    "plain": "This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.\n\nThis spell can physically repair a magic item or construct, but the spell can't restore magic to such an object.",
+    "wording": "srd"
+  },
+  "level": 0,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:druid",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "two lodestones"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "time": {
+        "amount": 1,
+        "unit": "minute"
+      },
+      "range": {
+        "touch": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

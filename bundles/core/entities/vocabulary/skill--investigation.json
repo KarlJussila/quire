@@ -1,0 +1,11 @@
+{
+  "id": "skill:investigation",
+  "name": "Investigation",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:int"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rule:brewing-potions-of-healing@2024",
+  "name": "Brewing Potions of Healing",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A character who has proficiency with the Herbalism Kit can create a Potion of Healing. Doing so requires using that kit and 25 GP of raw material over the course of 1 day (8 hours of work).",
+    "plain": "A character who has proficiency with the Herbalism Kit can create a Potion of Healing. Doing so requires using that kit and 25 GP of raw material over the course of 1 day (8 hours of work).",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

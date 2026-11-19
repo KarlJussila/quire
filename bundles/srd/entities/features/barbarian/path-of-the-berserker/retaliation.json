@@ -1,0 +1,62 @@
+{
+  "id": "feature:barbarian/path-of-the-berserker/retaliation",
+  "name": "Retaliation",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature.",
+    "plain": "Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "retaliation",
+      "name": "Retaliation",
+      "trigger": {
+        "event": "event:damaged",
+        "by": {
+          "pool": "any",
+          "where": {
+            "within": 5,
+            "of": "self"
+          }
+        },
+        "subject": "self"
+      },
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "target": {
+        "who": "actor"
+      },
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "match": {
+                    "delivery": {
+                      "attack": {
+                        "range": [
+                          "melee",
+                          "melee-or-ranged"
+                        ],
+                        "via": "weapon"
+                      }
+                    }
+                  }
+                }
+              },
+              "times": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

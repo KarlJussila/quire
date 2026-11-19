@@ -1,0 +1,116 @@
+{
+  "id": "weapon-mastery:vex",
+  "name": "Vex",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.",
+    "plain": "If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "item": {
+              "kind": "item",
+              "where": {
+                "match": {
+                  "weapon": {
+                    "mastery": "weapon-mastery:vex"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "when": {
+          "compare": "masteries.{attack.item}",
+          "equals": true
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "runs": [
+              {
+                "activity": "vex"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "vex",
+      "standalone": false,
+      "when": {
+        "all": [
+          {
+            "compare": {
+              "result": "weapon-damage"
+            },
+            "atLeast": 1
+          },
+          {
+            "creature": "target",
+            "where": {
+              "kind": "creature"
+            }
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "roll-mod",
+                  "to": "source",
+                  "mode": "advantage",
+                  "when": {
+                    "event": "event:roll-made",
+                    "by": "source",
+                    "subject": "self",
+                    "match": {
+                      "roll": "roll:attack"
+                    }
+                  }
+                }
+              ],
+              "ends": [
+                {
+                  "event": "event:roll-made",
+                  "by": "source",
+                  "subject": "self",
+                  "match": {
+                    "roll": "roll:attack"
+                  }
+                },
+                {
+                  "event": "event:turn-end",
+                  "subject": "source",
+                  "next": true
+                }
+              ],
+              "stacks": "separate"
+            },
+            "source": "self"
+          },
+          "to": "target"
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

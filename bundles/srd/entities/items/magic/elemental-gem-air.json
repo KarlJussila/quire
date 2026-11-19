@@ -1,0 +1,15 @@
+{
+  "id": "item:elemental-gem-air",
+  "name": "Elemental Gem, Air",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This gem contains a mote of elemental energy. When you use an action to break the gem, an elemental is summoned as if you had cast the Conjure Elemental spell, and the gem's magic is lost. The type of gem determines the elemental summoned by the spell.\n\n| Gem            | Summoned Elemental   |\n|----------------|----------------------|\n| Blue sapphire  | Air elemental        |\n| Yellow diamond | Earth elemental      |\n| Red corundum   | Fire elemental       |\n| Emerald        | Water elemental      |",
+    "plain": "This gem contains a mote of elemental energy. When you use an action to break the gem, an elemental is summoned as if you had cast the Conjure Elemental spell, and the gem's magic is lost. The type of gem determines the elemental summoned by the spell.\n\n| Gem            | Summoned Elemental   |\n|----------------|----------------------|\n| Blue sapphire  | Air elemental        |\n| Yellow diamond | Earth elemental      |\n| Red corundum   | Fire elemental       |\n| Emerald        | Water elemental      |",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "weight": 0.0
+}

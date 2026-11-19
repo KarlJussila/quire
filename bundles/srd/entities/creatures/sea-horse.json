@@ -1,0 +1,49 @@
+{
+  "id": "creature:sea-horse",
+  "name": "Sea Horse",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 11,
+  "hp": {
+    "average": 1,
+    "formula": "1d4 - 1"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 0
+    },
+    "movement-mode:swim": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 2,
+    "ability:con": 8,
+    "ability:dex": 12,
+    "ability:int": 1,
+    "ability:str": 1,
+    "ability:wis": 10
+  },
+  "passivePerception": 10,
+  "xp": 0,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Water Breathing",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sea horse can breathe only underwater.",
+        "plain": "The sea horse can breathe only underwater.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

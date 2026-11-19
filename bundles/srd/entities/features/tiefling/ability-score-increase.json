@@ -1,0 +1,34 @@
+{
+  "id": "feature:tiefling/ability-score-increase",
+  "name": "Ability Score Increase",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Ability Score Increase. Your Intelligence score increases by 1, and your Charisma score increases by 2.",
+    "plain": "Ability Score Increase. Your Intelligence score increases by 1, and your Charisma score increases by 2.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:int": {
+            "$add": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:cha": {
+            "$add": 2
+          }
+        }
+      }
+    }
+  ]
+}

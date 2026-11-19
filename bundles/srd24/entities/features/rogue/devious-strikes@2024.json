@@ -1,0 +1,63 @@
+{
+  "id": "feature:rogue/devious-strikes@2024",
+  "name": "Level 14: Devious Strikes",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You've practiced new ways to use your Sneak Attack deviously. The following effects are now among your Cunning Strike options.\n\n_**Daze (Cost: 2d6).**_ The target must succeed on a Constitution saving throw, or on its next turn, it can do only one of the following: move or take an action or a Bonus Action.\n\n_**Knock Out (Cost: 6d6).**_ The target must succeed on a Constitution saving throw, or it has the Unconscious condition for 1 minute or until it takes any damage. The Unconscious target repeats the save at the end of each of its turns, ending the effect on itself on a success.\n\n_**Obscure (Cost: 3d6).**_ The target must succeed on a Dexterity saving throw, or it has the Blinded condition until the end of its next turn.",
+    "plain": "You've practiced new ways to use your Sneak Attack deviously. The following effects are now among your Cunning Strike options.\n\nDaze (Cost: 2d6). The target must succeed on a Constitution saving throw, or on its next turn, it can do only one of the following: move or take an action or a Bonus Action.\n\nKnock Out (Cost: 6d6). The target must succeed on a Constitution saving throw, or it has the Unconscious condition for 1 minute or until it takes any damage. The Unconscious target repeats the save at the end of each of its turns, ending the effect on itself on a success.\n\nObscure (Cost: 3d6). The target must succeed on a Dexterity saving throw, or it has the Blinded condition until the end of its next turn.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "grantedBy": "feature:rogue/cunning-strike"
+            },
+            {
+              "match": {
+                "key": "cunning-strike"
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "effects": {
+          "$where": {
+            "type": "record"
+          },
+          "pick": {
+            "$where": true,
+            "from": {
+              "$append": [
+                {
+                  "kind": "feature",
+                  "where": {
+                    "any": [
+                      {
+                        "is": "feature:daze-cost-2d6"
+                      },
+                      {
+                        "is": "feature:knock-out-cost-6d6"
+                      },
+                      {
+                        "is": "feature:obscure-cost-3d6"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

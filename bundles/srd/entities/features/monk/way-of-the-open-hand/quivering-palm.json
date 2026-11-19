@@ -1,0 +1,80 @@
+{
+  "id": "feature:monk/way-of-the-open-hand/quivering-palm",
+  "name": "Quivering Palm",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 17th level, you gain the ability to set up lethal vibrations in someone's body. When you hit a creature with an unarmed strike, you can spend 3 ki points to start these imperceptible vibrations, which last for a number of days equal to your monk level. The vibrations are harmless unless you use your action to end them. To do so, you and the target must be on the same plane of existence. When you use this action, the creature must make a Constitution saving throw. If it fails, it is reduced to 0 hit points. If it succeeds, it takes 10d10 necrotic damage.\n\nYou can have only one creature under the effect of this feature at a time. You can choose to end the vibrations harmlessly without using an action.",
+    "plain": "At 17th level, you gain the ability to set up lethal vibrations in someone's body. When you hit a creature with an unarmed strike, you can spend 3 ki points to start these imperceptible vibrations, which last for a number of days equal to your monk level. The vibrations are harmless unless you use your action to end them. To do so, you and the target must be on the same plane of existence. When you use this action, the creature must make a Constitution saving throw. If it fails, it is reduced to 0 hit points. If it succeeds, it takes 10d10 necrotic damage.\n\nYou can have only one creature under the effect of this feature at a time. You can choose to end the vibrations harmlessly without using an action.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "quivering-palm-start",
+      "name": "Quivering Palm",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "unarmed"
+          }
+        }
+      },
+      "cost": [
+        {
+          "resource": "ki",
+          "amount": 3
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Start imperceptible vibrations in the target's body. They last a number of days equal to your monk level and are harmless unless you use your action to end them.",
+            "gap": {
+              "category": "state",
+              "name": "quivering palm vibrations"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "quivering-palm-end",
+      "name": "Quivering Palm",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "delivery": {
+        "save": {
+          "ability": "ability:con",
+          "dc": {
+            "sum": [
+              8,
+              "proficiencyBonus",
+              "modifiers.ability:wis"
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "setHp": 0
+        }
+      ],
+      "otherwise": [
+        {
+          "damage": {
+            "amount": "10d10",
+            "type": "damage-type:necrotic"
+          }
+        }
+      ]
+    }
+  ]
+}

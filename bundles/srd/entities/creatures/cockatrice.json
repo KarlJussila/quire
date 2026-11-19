@@ -1,0 +1,54 @@
+{
+  "id": "creature:cockatrice",
+  "name": "Cockatrice",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:unaligned",
+  "ac": 11,
+  "hp": {
+    "average": 27,
+    "formula": "6d6 + 6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:fly": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 12,
+    "ability:dex": 12,
+    "ability:int": 2,
+    "ability:str": 6,
+    "ability:wis": 13
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 11,
+  "xp": 100,
+  "cr": 0.5,
+  "blocks": [
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one creature. _Hit:_ 3 (1d4 + 1) piercing damage, and the target must succeed on a DC 11 Constitution saving throw against being magically Petrified. On a failed save, the creature begins to turn to stone and is Restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified for 24 hours.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 3 (1d4 + 1) piercing damage, and the target must succeed on a DC 11 Constitution saving throw against being magically Petrified. On a failed save, the creature begins to turn to stone and is Restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified for 24 hours.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

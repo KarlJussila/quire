@@ -1,0 +1,90 @@
+{
+  "id": "creature:cultist-fanatic@2024",
+  "name": "Cultist Fanatic",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 13,
+  "hp": {
+    "average": 44,
+    "formula": "8d8 + 8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 13,
+    "ability:con": 12,
+    "ability:dex": 14,
+    "ability:int": 10,
+    "ability:str": 11,
+    "ability:wis": 14
+  },
+  "saves": {
+    "ability:wis": 4
+  },
+  "skills": {
+    "skill:deception": 3,
+    "skill:persuasion": 3,
+    "skill:religion": 2
+  },
+  "passivePerception": 12,
+  "xp": 450,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Individual",
+    "Relics"
+  ],
+  "gear": [
+    "Holy Symbol",
+    "Leather Armor"
+  ],
+  "cr": 2,
+  "languages": [
+    {
+      "language": "language:common"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Pact Blade",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit_: 6 (1d8 + 2) Slashing damage plus 7 (2d6) Necrotic damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Slashing damage plus 7 (2d6) Necrotic damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The cultist casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC 12, +4 to hit with spell attacks):\n\n- **At Will:** Light, Thaumaturgy\n- **2/Day:** Command\n- **1/Day:** Hold Person",
+        "plain": "The cultist casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC 12, +4 to hit with spell attacks):\n\n- At Will: Light, Thaumaturgy\n- 2/Day: Command\n- 1/Day: Hold Person",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spiritual Weapon",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The cultist casts the Spiritual Weapon spell, using the same spellcasting ability as Spellcasting.",
+        "plain": "The cultist casts the Spiritual Weapon spell, using the same spellcasting ability as Spellcasting.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

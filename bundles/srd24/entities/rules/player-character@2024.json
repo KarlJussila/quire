@@ -1,0 +1,18 @@
+{
+  "id": "rule:player-character@2024",
+  "name": "Player Character",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A player character is a character controlled by a player. _See also_ \"Character Creation.\"",
+    "plain": "A player character is a character controlled by a player. See also \"Character Creation.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

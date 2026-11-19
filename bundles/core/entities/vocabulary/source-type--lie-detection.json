@@ -1,0 +1,7 @@
+{
+  "id": "source-type:lie-detection",
+  "name": "Lie Detection",
+  "source": {
+    "book": "core"
+  }
+}

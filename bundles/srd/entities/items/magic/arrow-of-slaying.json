@@ -1,0 +1,109 @@
+{
+  "id": "item:arrow-of-slaying",
+  "name": "Arrow of Slaying",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "An _Arrow of Slaying_ is a magic weapon meant to slay a particular kind of creature. Some are more focused than others; for example, there are both _Arrows of Dragon Slaying_ and _Arrows of Blue Dragon Slaying_. If a creature belonging to the type, race, or group associated with an _Arrow of Slaying_ takes damage from the arrow, the creature must make a DC 17 Constitution saving throw, taking an extra 6d10 piercing damage on a failed save, or half as much extra damage on a successful one.\n\nOnce an _Arrow of Slaying_ deals its extra damage to a creature, it becomes a nonmagical arrow.\n\nOther types of magic ammunition of this kind exist, such as _Bolts of Slaying_ meant for a crossbow, though arrows are most common.",
+    "plain": "An Arrow of Slaying is a magic weapon meant to slay a particular kind of creature. Some are more focused than others; for example, there are both Arrows of Dragon Slaying and Arrows of Blue Dragon Slaying. If a creature belonging to the type, race, or group associated with an Arrow of Slaying takes damage from the arrow, the creature must make a DC 17 Constitution saving throw, taking an extra 6d10 piercing damage on a failed save, or half as much extra damage on a successful one.\n\nOnce an Arrow of Slaying deals its extra damage to a creature, it becomes a nonmagical arrow.\n\nOther types of magic ammunition of this kind exist, such as Bolts of Slaying meant for a crossbow, though arrows are most common.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:very-rare",
+  "base": "item:arrow",
+  "effects": [
+    {
+      "type": "record",
+      "pick": {
+        "choose": {
+          "key": "kind",
+          "name": "Type, Race, or Group",
+          "from": [
+            "creature-type:aberration",
+            "creature-type:beast",
+            "creature-type:celestial",
+            "creature-type:construct",
+            "creature-type:dragon",
+            "creature-type:elemental",
+            "creature-type:fey",
+            "creature-type:fiend",
+            "creature-type:giant",
+            "creature-type:humanoid",
+            "creature-type:monstrosity",
+            "creature-type:ooze",
+            "creature-type:plant",
+            "creature-type:undead",
+            "creature-tag:demon",
+            "creature-tag:devil",
+            "creature-tag:goblinoid"
+          ]
+        }
+      }
+    },
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:damaged",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "kind": "creature"
+              },
+              {
+                "any": [
+                  {
+                    "match": {
+                      "creatureType": {
+                        "chosen": "kind"
+                      }
+                    }
+                  },
+                  {
+                    "match": {
+                      "tags": {
+                        "chosen": "kind"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "match": {
+          "attack": {
+            "item": "this"
+          }
+        }
+      },
+      "step": {
+        "delivery": {
+          "save": {
+            "ability": "ability:con",
+            "dc": 17
+          }
+        },
+        "outcomes": [
+          {
+            "damage": {
+              "amount": "6d10",
+              "type": "damage-type:piercing"
+            },
+            "to": "subject"
+          }
+        ],
+        "otherwise": "half"
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "content-dependency",
+      "name": "An arrow of blue dragon slaying, aimed at one specific kind of creature, has no term the filter can test beyond a creature type or tag."
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "creature:mimic",
+  "name": "Mimic",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:neutral",
+  "ac": 12,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 58,
+    "formula": "9d8 + 18"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 15
+    }
+  },
+  "abilities": {
+    "ability:cha": 8,
+    "ability:con": 15,
+    "ability:dex": 12,
+    "ability:int": 5,
+    "ability:str": 17,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:stealth": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 11,
+  "xp": 450,
+  "cr": 2,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:acid"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:prone"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Shapechanger",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The mimic can use its action to polymorph into an object or back into its true, amorphous form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+        "plain": "The mimic can use its action to polymorph into an object or back into its true, amorphous form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Adhesive (Object Form Only)",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The mimic adheres to anything that touches it. A Huge or smaller creature adhered to the mimic is also Grappled by it (escape DC 13). Ability checks made to escape this grapple have disadvantage.",
+        "plain": "The mimic adheres to anything that touches it. A Huge or smaller creature adhered to the mimic is also Grappled by it (escape DC 13). Ability checks made to escape this grapple have disadvantage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "False Appearance (Object Form Only)",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the mimic remains motionless, it is indistinguishable from an ordinary object.",
+        "plain": "While the mimic remains motionless, it is indistinguishable from an ordinary object.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Grappler",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The mimic has advantage on attack rolls against any creature Grappled by it.",
+        "plain": "The mimic has advantage on attack rolls against any creature Grappled by it.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pseudopod",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 7 (1d8 + 3) bludgeoning damage. If the mimic is in object form, the target is subjected to its Adhesive trait.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage. If the mimic is in object form, the target is subjected to its Adhesive trait.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 7 (1d8 + 3) piercing damage plus 4 (1d8) acid damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 4 (1d8) acid damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

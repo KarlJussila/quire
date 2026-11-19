@@ -1,0 +1,68 @@
+{
+  "id": "feature:warlock/fiend-patron/fiend-spells@2024",
+  "name": "Level 3: Fiend Spells",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The magic of your patron ensures you always have certain spells ready; when you reach a Warlock level specified in the table, you thereafter always have the listed spells prepared.\n\n|   Warlock Level | Spells                                                            |\n|-----------------|-------------------------------------------------------------------|\n|               3 | Burning Hands, Command, Scorching Ray, Suggestion |\n|               5 | Fireball, Stinking Cloud                                  |\n|               7 | Fire Shield, Wall of Fire                                 |\n|               9 | Geas, Insect Plague                                       |",
+    "plain": "The magic of your patron ensures you always have certain spells ready; when you reach a Warlock level specified in the table, you thereafter always have the listed spells prepared.\n\n|   Warlock Level | Spells                                                            |\n|-----------------|-------------------------------------------------------------------|\n|               3 | Burning Hands, Command, Scorching Ray, Suggestion |\n|               5 | Fireball, Stinking Cloud                                  |\n|               7 | Fire Shield, Wall of Fire                                 |\n|               9 | Geas, Insect Plague                                       |",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:warlock",
+        "atLeast": 3
+      },
+      "spells": [
+        "spell:burning-hands",
+        "spell:command",
+        "spell:scorching-ray",
+        "spell:suggestion"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:warlock",
+        "atLeast": 5
+      },
+      "spells": [
+        "spell:fireball",
+        "spell:stinking-cloud"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:warlock",
+        "atLeast": 7
+      },
+      "spells": [
+        "spell:fire-shield",
+        "spell:wall-of-fire"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.class:warlock",
+        "atLeast": 9
+      },
+      "spells": [
+        "spell:geas",
+        "spell:insect-plague"
+      ],
+      "how": "prepared",
+      "counts": false
+    }
+  ]
+}

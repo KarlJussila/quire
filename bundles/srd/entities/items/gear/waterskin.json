@@ -1,0 +1,17 @@
+{
+  "id": "item:waterskin",
+  "name": "Waterskin",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:sp"
+  },
+  "weight": 5.0
+}

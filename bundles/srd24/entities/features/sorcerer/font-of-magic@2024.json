@@ -1,0 +1,199 @@
+{
+  "id": "feature:sorcerer/font-of-magic@2024",
+  "name": "Level 2: Font of Magic",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can tap into the wellspring of magic within yourself. This wellspring is represented by Sorcery Points, which allow you to create a variety of magical effects.\n\nYou have 2 Sorcery Points, and you gain more as you reach higher levels, as shown in the Sorcery Points column of the Sorcerer Features table. You can't have more Sorcery Points than the number shown in the table for your level. You regain all expended Sorcery Points when you finish a Long Rest.\n\nYou can use your Sorcery Points to fuel the options below, along with other features, such as Metamagic, that use those points.\n\n_**Converting Spell Slots to Sorcery Points.**_ You can expend a spell slot to gain a number of Sorcery Points equal to the slot's level (no action required).\n\n_**Creating Spell Slots.**_ As a Bonus Action, you can transform unexpended Sorcery Points into one spell slot. The Creating Spell Slots table shows the cost of creating a spell slot of a given level, and it lists the minimum Sorcerer level you must be to create a slot. You can create a spell slot no higher than level 5.\n\nAny spell slot you create with this feature vanishes when you finish a Long Rest.",
+    "plain": "You can tap into the wellspring of magic within yourself. This wellspring is represented by Sorcery Points, which allow you to create a variety of magical effects.\n\nYou have 2 Sorcery Points, and you gain more as you reach higher levels, as shown in the Sorcery Points column of the Sorcerer Features table. You can't have more Sorcery Points than the number shown in the table for your level. You regain all expended Sorcery Points when you finish a Long Rest.\n\nYou can use your Sorcery Points to fuel the options below, along with other features, such as Metamagic, that use those points.\n\nConverting Spell Slots to Sorcery Points. You can expend a spell slot to gain a number of Sorcery Points equal to the slot's level (no action required).\n\nCreating Spell Slots. As a Bonus Action, you can transform unexpended Sorcery Points into one spell slot. The Creating Spell Slots table shows the cost of creating a spell slot of a given level, and it lists the minimum Sorcerer level you must be to create a slot. You can create a spell slot no higher than level 5.\n\nAny spell slot you create with this feature vanishes when you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "convert-spell-slot",
+      "name": "Converting a Spell Slot to Sorcery Points",
+      "cost": [
+        {
+          "resource": "spell-slots"
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Gain sorcery points equal to the level of the spell slot you expended.",
+            "gap": {
+              "category": "resource",
+              "name": "sorcery points from a spell slot"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "create-spell-slot-1",
+      "name": "Creating a 1st-Level Spell Slot",
+      "when": {
+        "compare": "levels.class:sorcerer",
+        "atLeast": 2
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "sorcery-points",
+          "amount": 2
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Gain one 1st-level spell slot. It vanishes when you finish a long rest.",
+            "gap": {
+              "category": "resource",
+              "name": "created spell slot"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "create-spell-slot-2",
+      "name": "Creating a 2nd-Level Spell Slot",
+      "when": {
+        "compare": "levels.class:sorcerer",
+        "atLeast": 3
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "sorcery-points",
+          "amount": 3
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Gain one 2nd-level spell slot. It vanishes when you finish a long rest.",
+            "gap": {
+              "category": "resource",
+              "name": "created spell slot"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "create-spell-slot-3",
+      "name": "Creating a 3rd-Level Spell Slot",
+      "when": {
+        "compare": "levels.class:sorcerer",
+        "atLeast": 5
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "sorcery-points",
+          "amount": 5
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Gain one 3rd-level spell slot. It vanishes when you finish a long rest.",
+            "gap": {
+              "category": "resource",
+              "name": "created spell slot"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "create-spell-slot-4",
+      "name": "Creating a 4th-Level Spell Slot",
+      "when": {
+        "compare": "levels.class:sorcerer",
+        "atLeast": 7
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "sorcery-points",
+          "amount": 6
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Gain one 4th-level spell slot. It vanishes when you finish a long rest.",
+            "gap": {
+              "category": "resource",
+              "name": "created spell slot"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "create-spell-slot-5",
+      "name": "Creating a 5th-Level Spell Slot",
+      "when": {
+        "compare": "levels.class:sorcerer",
+        "atLeast": 9
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "sorcery-points",
+          "amount": 7
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Gain one 5th-level spell slot. It vanishes when you finish a long rest.",
+            "gap": {
+              "category": "resource",
+              "name": "created spell slot"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "resource",
+      "key": "sorcery-points",
+      "max": "levels.class:sorcerer",
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ]
+}

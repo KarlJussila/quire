@@ -1,0 +1,18 @@
+{
+  "id": "item:brewers-supplies@2024",
+  "name": "Brewer’s Supplies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "- **Cost:** 20 GP\n- **Ability:** Intelligence\n- **Weight:** 9 lb.\n- **Utilize:** Detect poisoned drink (DC 15), or identify alcohol (DC 10)\n- **Craft:** Antitoxin",
+    "plain": "- Cost: 20 GP\n- Ability: Intelligence\n- Weight: 9 lb.\n- Utilize: Detect poisoned drink (DC 15), or identify alcohol (DC 10)\n- Craft: Antitoxin",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 20,
+    "currency": "currency:gp"
+  },
+  "weight": 9.0
+}

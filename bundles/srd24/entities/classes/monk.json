@@ -1,0 +1,97 @@
+{
+  "id": "class:monk@2024",
+  "name": "Monk",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Monk, you gain the following class features when you reach the specified Monk levels.",
+    "plain": "As a Monk, you gain the following class features when you reach the specified Monk levels.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d8",
+  "multiclass": {
+    "requires": {
+      "all": [
+        {
+          "compare": "abilities.ability:dex",
+          "atLeast": 13
+        },
+        {
+          "compare": "abilities.ability:wis",
+          "atLeast": 13
+        }
+      ]
+    }
+  },
+  "levels": {
+    "1": [
+      "feature:monk/martial-arts@2024",
+      "feature:monk/unarmored-defense@2024"
+    ],
+    "2": [
+      "feature:monk/monks-focus@2024",
+      "feature:monk/unarmored-movement@2024",
+      "feature:monk/uncanny-metabolism@2024"
+    ],
+    "3": [
+      "feature:monk/deflect-attacks@2024",
+      "feature:monk/monk-subclass@2024"
+    ],
+    "4": [
+      "feature:monk/ability-score-improvement@2024",
+      "feature:monk/slow-fall@2024"
+    ],
+    "5": [
+      "feature:monk/extra-attack@2024",
+      "feature:monk/stunning-strike@2024"
+    ],
+    "6": [
+      "feature:monk/empowered-strikes@2024"
+    ],
+    "7": [
+      "feature:monk/evasion@2024"
+    ],
+    "8": [
+      "feature:monk/ability-score-improvement@2024"
+    ],
+    "9": [
+      "feature:monk/acrobatic-movement@2024"
+    ],
+    "10": [
+      "feature:monk/heightened-focus@2024",
+      "feature:monk/self-restoration@2024"
+    ],
+    "12": [
+      "feature:monk/ability-score-improvement@2024"
+    ],
+    "13": [
+      "feature:monk/deflect-energy@2024"
+    ],
+    "14": [
+      "feature:monk/disciplined-survivor@2024"
+    ],
+    "15": [
+      "feature:monk/perfect-focus@2024"
+    ],
+    "16": [
+      "feature:monk/ability-score-improvement@2024"
+    ],
+    "18": [
+      "feature:monk/superior-defense@2024"
+    ],
+    "19": [
+      "feature:monk/epic-boon@2024"
+    ],
+    "20": [
+      "feature:monk/body-and-mind@2024"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Monastic Tradition||Monk Subclass"
+  },
+  "firstClass": [
+    "feature:monk/proficiencies@2024"
+  ]
+}

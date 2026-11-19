@@ -1,0 +1,13 @@
+{
+  "id": "state:familiar",
+  "name": "Familiar",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Marks a familiar creature and records its caster as the state source.",
+    "formatted": "Marks a familiar creature and records its caster as the state source.",
+    "wording": "original"
+  },
+  "effects": []
+}

@@ -1,0 +1,129 @@
+{
+  "id": "creature:avatar-of-death@2024",
+  "name": "Avatar of Death",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Medium Undead, Neutral evil_\n\n- **AC** 20\n- **Initiative** +3 (13)\n- **HP** Half the HP maximum of its summoner\n- **Speed** 60 ft., Fly 60 ft. (hover)\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| **Score**        |     16 |     16 |     16 |     16 |     16 |     16 |\n| **Modifier**     |     +3 |     +3 |     +3 |     +3 |     +3 |     +3 |\n| **Saving Throw** |     +3 |     +3 |     +3 |     +3 |     +3 |     +3 |\n\n- **Immunities** Necrotic, Poison; Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned, Unconscious\n- **Senses** Truesight 60 ft., Passive Perception 13\n- **Languages** All languages known to its summoner\n- **CR** None (XP 0; PB equals its summoner's)\n\n### Traits\n\n_**Incorporeal Movement.**_ The avatar can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.\n\n### Actions\n\n_**Multiattack.**_ The avatar makes a number of Reaping Scythe attacks equal to half the summoner's Proficiency Bonus (rounded up).\n\n_**Reaping Scythe.**_ _Melee Attack Roll:_ Automatic hit, reach 5 ft. _Hit:_ 7 (1d8 + 3) Slashing damage plus 4 (1d8) Necrotic damage.",
+    "plain": "Medium Undead, Neutral evil\n\n- AC 20\n- Initiative +3 (13)\n- HP Half the HP maximum of its summoner\n- Speed 60 ft., Fly 60 ft. (hover)\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| Score        |     16 |     16 |     16 |     16 |     16 |     16 |\n| Modifier     |     +3 |     +3 |     +3 |     +3 |     +3 |     +3 |\n| Saving Throw |     +3 |     +3 |     +3 |     +3 |     +3 |     +3 |\n\n- Immunities Necrotic, Poison; Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned, Unconscious\n- Senses Truesight 60 ft., Passive Perception 13\n- Languages All languages known to its summoner\n- CR None (XP 0; PB equals its summoner's)\n\n### Traits\n\nIncorporeal Movement. The avatar can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.\n\n### Actions\n\nMultiattack. The avatar makes a number of Reaping Scythe attacks equal to half the summoner's Proficiency Bonus (rounded up).\n\nReaping Scythe. Melee Attack Roll: Automatic hit, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage plus 4 (1d8) Necrotic damage.",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:neutral-evil",
+  "ac": 20,
+  "hp": {
+    "average": {
+      "prose": {
+        "text": "Half the HP maximum of its summoner",
+        "gap": {
+          "category": "value",
+          "name": "This value depends on the summoner, spell slot, or chosen form."
+        }
+      }
+    }
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 60
+    },
+    "movement-mode:fly": {
+      "speed": 60,
+      "hover": true
+    }
+  },
+  "abilities": {
+    "ability:str": 16,
+    "ability:dex": 16,
+    "ability:con": 16,
+    "ability:int": 16,
+    "ability:wis": 16,
+    "ability:cha": 16
+  },
+  "initiative": 3,
+  "passivePerception": 13,
+  "senses": {
+    "sense:truesight": {
+      "range": 60
+    }
+  },
+  "languages": [
+    {
+      "text": "All languages known to its summoner"
+    }
+  ],
+  "xp": 0,
+  "proficiencyBonus": {
+    "prose": {
+      "text": "None (XP 0; PB equals its summoner's)",
+      "gap": {
+        "category": "value",
+        "name": "This value depends on the summoner, spell slot, or chosen form."
+      }
+    }
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison",
+        "damage-type:necrotic",
+        "condition:charmed",
+        "condition:exhaustion",
+        "condition:frightened",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:poisoned",
+        "condition:unconscious"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Incorporeal Movement",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The avatar can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.",
+        "plain": "The avatar can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-trait",
+          "name": "The printed Incorporeal Movement rule is retained as text."
+        }
+      ]
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The avatar makes a number of Reaping Scythe attacks equal to half the summoner's Proficiency Bonus (rounded up).",
+        "plain": "The avatar makes a number of Reaping Scythe attacks equal to half the summoner's Proficiency Bonus (rounded up).",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-action",
+          "name": "The printed Multiattack rule is retained as text."
+        }
+      ]
+    },
+    {
+      "name": "Reaping Scythe",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ Automatic hit, reach 5 ft. _Hit:_ 7 (1d8 + 3) Slashing damage plus 4 (1d8) Necrotic damage.",
+        "plain": "Melee Attack Roll: Automatic hit, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage plus 4 (1d8) Necrotic damage.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-action",
+          "name": "The printed Reaping Scythe rule is retained as text."
+        }
+      ]
+    }
+  ]
+}

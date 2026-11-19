@@ -1,0 +1,18 @@
+{
+  "id": "background:criminal@2024",
+  "name": "Criminal",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "- **Ability Scores:** Dexterity, Constitution, Intelligence\n- **Feat:** Alert (see \"Feats\")\n- **Skill Proficiencies:** Sleight of Hand and Stealth\n- **Tool Proficiency:** Thieves' Tools\n- **Equipment:** _Choose A or B:_ (A) 2 Daggers, Thieves' Tools, Crowbar, 2 Pouches, Traveler's Clothes, 16 GP; or (B) 50 GP",
+    "plain": "- Ability Scores: Dexterity, Constitution, Intelligence\n- Feat: Alert (see \"Feats\")\n- Skill Proficiencies: Sleight of Hand and Stealth\n- Tool Proficiency: Thieves' Tools\n- Equipment: Choose A or B: (A) 2 Daggers, Thieves' Tools, Crowbar, 2 Pouches, Traveler's Clothes, 16 GP; or (B) 50 GP",
+    "wording": "srd"
+  },
+  "features": [
+    "feature:criminal/ability-scores@2024",
+    "feat:alert@2024",
+    "feature:criminal/skill-proficiencies@2024",
+    "feature:criminal/tool-proficiencies@2024"
+  ]
+}

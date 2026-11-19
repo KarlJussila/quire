@@ -1,0 +1,34 @@
+{
+  "id": "item:heavy-crossbow@2024",
+  "name": "Heavy Crossbow",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:martial-ranged-weapon",
+  "cost": {
+    "amount": 50,
+    "currency": "currency:gp"
+  },
+  "weight": 18.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:ammunition",
+      "weapon-property:heavy",
+      "weapon-property:loading",
+      "weapon-property:two-handed"
+    ],
+    "damage": {
+      "amount": "1d10",
+      "type": "damage-type:piercing"
+    },
+    "mastery": "weapon-mastery:push",
+    "range": {
+      "long": 400,
+      "normal": 100
+    }
+  }
+}

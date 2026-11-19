@@ -1,0 +1,33 @@
+{
+  "id": "feature:gnome/gnome-cunning",
+  "name": "Gnome Cunning",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
+    "plain": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": [
+            "ability:int",
+            "ability:wis",
+            "ability:cha"
+          ],
+          "against": {
+            "sourceType": "source-type:magic"
+          }
+        }
+      }
+    }
+  ]
+}

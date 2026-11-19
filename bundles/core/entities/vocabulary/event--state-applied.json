@@ -1,0 +1,10 @@
+{
+  "id": "event:state-applied",
+  "name": "State Applied",
+  "source": {
+    "book": "core"
+  },
+  "payload": [
+    "state"
+  ]
+}

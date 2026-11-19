@@ -1,0 +1,28 @@
+{
+  "id": "subclass:wizard/evoker@2024",
+  "name": "Evoker",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Create Explosive Elemental Effects_\n\nYour studies focus on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some Evokers find employment in military forces, serving as artillery to blast armies from afar. Others use their power to protect others, while some seek their own gain.",
+    "plain": "Create Explosive Elemental Effects\n\nYour studies focus on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some Evokers find employment in military forces, serving as artillery to blast armies from afar. Others use their power to protect others, while some seek their own gain.",
+    "wording": "srd"
+  },
+  "class": "class:wizard",
+  "levels": {
+    "10": [
+      "feature:wizard/evoker/empowered-evocation@2024"
+    ],
+    "14": [
+      "feature:wizard/evoker/overchannel@2024"
+    ],
+    "3": [
+      "feature:wizard/evoker/evocation-savant@2024",
+      "feature:wizard/evoker/potent-cantrip@2024"
+    ],
+    "6": [
+      "feature:wizard/evoker/sculpt-spells@2024"
+    ]
+  }
+}

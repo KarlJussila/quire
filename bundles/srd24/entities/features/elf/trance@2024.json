@@ -1,0 +1,12 @@
+{
+  "id": "feature:elf/trance@2024",
+  "name": "Trance",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.",
+    "plain": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.",
+    "wording": "srd"
+  }
+}

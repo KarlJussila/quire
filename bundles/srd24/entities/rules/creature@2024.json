@@ -1,0 +1,18 @@
+{
+  "id": "rule:creature@2024",
+  "name": "Creature",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Any being in the game, including a player's character, is a creature. _See also_ \"Creature Type.\"",
+    "plain": "Any being in the game, including a player's character, is a creature. See also \"Creature Type.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

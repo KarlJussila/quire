@@ -1,0 +1,10 @@
+{
+ "id": "feature:rule-ref",
+ "name": "rule-ref",
+ "source": {
+  "book": "edition-user"
+ },
+ "requires": {
+  "has": "feature:only-2024"
+ }
+}

@@ -1,0 +1,101 @@
+{
+  "id": "creature:centaur-trooper@2024",
+  "name": "Centaur Trooper",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:fey",
+  "alignment": "alignment:neutral-good",
+  "ac": 16,
+  "hp": {
+    "average": 45,
+    "formula": "6d10 + 12"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 14,
+    "ability:dex": 14,
+    "ability:int": 9,
+    "ability:str": 18,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:athletics": 6,
+    "skill:perception": 3
+  },
+  "passivePerception": 13,
+  "xp": 450,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Forest",
+    "Grassland",
+    "Planar (Feywild)"
+  ],
+  "treasure": [
+    "Armaments",
+    "Individual"
+  ],
+  "gear": [
+    "Breastplate",
+    "Longbow",
+    "Pike"
+  ],
+  "cr": 2,
+  "languages": [
+    {
+      "language": "language:elvish"
+    },
+    {
+      "language": "language:sylvan"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The centaur makes two attacks, using Pike or Longbow in any combination.",
+        "plain": "The centaur makes two attacks, using Pike or Longbow in any combination.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pike",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 10 ft. _Hit:_ 9 (1d10 + 4) Piercing damage.",
+        "plain": "Melee Attack Roll: +6, reach 10 ft. Hit: 9 (1d10 + 4) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Longbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +4, range 150/600 ft. _Hit:_ 6 (1d8 + 2) Piercing damage.",
+        "plain": "Ranged Attack Roll: +4, range 150/600 ft. Hit: 6 (1d8 + 2) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Trampling Charge",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The centaur moves up to its Speed without provoking Opportunity Attacks and can move through the spaces of Medium or smaller creatures. Each creature whose space the centaur enters is targeted once by the following effect. _Strength Saving Throw:_ DC 14. _Failure:_ 7 (1d6 + 4) Bludgeoning damage, and the target has the Prone condition.",
+        "plain": "The centaur moves up to its Speed without provoking Opportunity Attacks and can move through the spaces of Medium or smaller creatures. Each creature whose space the centaur enters is targeted once by the following effect. Strength Saving Throw: DC 14. Failure: 7 (1d6 + 4) Bludgeoning damage, and the target has the Prone condition.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

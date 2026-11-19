@@ -1,0 +1,44 @@
+{
+  "id": "spell:sending",
+  "name": "Sending",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.\n\nYou can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive.",
+    "plain": "You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.\n\nYou can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:evocation",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "A short piece of fine copper wire"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "unlimited": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "round"
+      }
+    }
+  ]
+}

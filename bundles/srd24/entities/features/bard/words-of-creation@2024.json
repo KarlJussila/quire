@@ -1,0 +1,52 @@
+{
+  "id": "feature:bard/words-of-creation@2024",
+  "name": "Level 20: Words of Creation",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have mastered two of the Words of Creation: the words of life and death. You therefore always have the Power Word Heal and Power Word Kill  spells prepared. When you cast either spell, you can target a second creature with it if that creature is within 10 feet of the first target.",
+    "plain": "You have mastered two of the Words of Creation: the words of life and death. You therefore always have the Power Word Heal and Power Word Kill  spells prepared. When you cast either spell, you can target a second creature with it if that creature is within 10 feet of the first target.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:power-word-heal",
+        "spell:power-word-kill"
+      ],
+      "how": "prepared",
+      "counts": false
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "spell": [
+            "spell:power-word-heal",
+            "spell:power-word-kill"
+          ]
+        }
+      },
+      "set": {
+        "target": {
+          "also": {
+            "$replace": {
+              "who": {
+                "pool": "any",
+                "chosen": true,
+                "where": {
+                  "within": 10,
+                  "of": "target"
+                }
+              },
+              "count": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

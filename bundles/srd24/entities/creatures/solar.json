@@ -1,0 +1,183 @@
+{
+  "id": "creature:solar@2024",
+  "name": "Solar",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:celestial",
+  "alignment": "alignment:lawful-good",
+  "ac": 21,
+  "hp": {
+    "average": 297,
+    "formula": "22d10 + 176"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    },
+    "movement-mode:fly": {
+      "speed": 150,
+      "hover": true
+    }
+  },
+  "abilities": {
+    "ability:cha": 30,
+    "ability:con": 26,
+    "ability:dex": 22,
+    "ability:int": 25,
+    "ability:str": 26,
+    "ability:wis": 25
+  },
+  "skills": {
+    "skill:perception": 14
+  },
+  "senses": {
+    "sense:truesight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 24,
+  "telepathy": 120,
+  "xp": 33000,
+  "proficiencyBonus": 7,
+  "initiative": 20,
+  "habitat": [
+    "Planar (Upper Planes)"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 21,
+  "languages": [
+    {
+      "text": "All"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison",
+        "damage-type:radiant"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:exhaustion",
+        "condition:frightened",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Divine Awareness",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The solar knows if it hears a lie.",
+        "plain": "The solar knows if it hears a lie.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Exalted Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the solar dies outside Mount Celestia, its body disappears, and it gains a new body instantly, reviving with all its Hit Points somewhere in Mount Celestia.",
+        "plain": "If the solar dies outside Mount Celestia, its body disappears, and it gains a new body instantly, reviving with all its Hit Points somewhere in Mount Celestia.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Legendary Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the solar fails a saving throw, it can choose to succeed instead.",
+        "plain": "If the solar fails a saving throw, it can choose to succeed instead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The solar has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The solar has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The solar makes two Flying Sword attacks. It can replace one attack with a use of Slaying Bow.",
+        "plain": "The solar makes two Flying Sword attacks. It can replace one attack with a use of Slaying Bow.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Flying Sword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +15, reach 10 ft. or range 120 ft. _Hit:_ 22 (4d6 + 8) Slashing damage plus 36 (8d8) Radiant damage. _Hit or Miss:_ The sword magically returns to the solar's hand or hovers within 5 feet of the solar immediately after a ranged attack.",
+        "plain": "Melee or Ranged Attack Roll: +15, reach 10 ft. or range 120 ft. Hit: 22 (4d6 + 8) Slashing damage plus 36 (8d8) Radiant damage. Hit or Miss: The sword magically returns to the solar's hand or hovers within 5 feet of the solar immediately after a ranged attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Slaying Bow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 21, one creature the solar can see within 600 feet. _Failure:_ If the creature has 100 Hit Points or fewer, it dies. It otherwise takes 24 (4d8 + 6) Piercing damage plus 36 (8d8) Radiant damage.",
+        "plain": "Dexterity Saving Throw: DC 21, one creature the solar can see within 600 feet. Failure: If the creature has 100 Hit Points or fewer, it dies. It otherwise takes 24 (4d8 + 6) Piercing damage plus 36 (8d8) Radiant damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The solar casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 25):\n\n- **At Will:** Detect Evil and Good\n- **1/Day Each:** Commune, Control Weather, Dispel Evil and Good, Resurrection",
+        "plain": "The solar casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 25):\n\n- At Will: Detect Evil and Good\n- 1/Day Each: Commune, Control Weather, Dispel Evil and Good, Resurrection",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Divine Aid",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The solar casts Cure Wounds (level 2 version), Lesser Restoration, or Remove Curse, using the same spellcasting ability as Spellcasting.",
+        "plain": "The solar casts Cure Wounds (level 2 version), Lesser Restoration, or Remove Curse, using the same spellcasting ability as Spellcasting.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Blinding Gaze",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 25, one creature the solar can see within 120 feet. _Failure:_ The target has the Blinded condition for 1 minute. _Failure or Success:_ The solar can't take this action again until the start of its next turn.",
+        "plain": "Constitution Saving Throw: DC 25, one creature the solar can see within 120 feet. Failure: The target has the Blinded condition for 1 minute. Failure or Success: The solar can't take this action again until the start of its next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Radiant Teleport",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The solar teleports up to 60 feet to an unoccupied space it can see. _Dexterity Saving Throw:_ DC 25, each creature in a 10-foot Emanation originating from the solar at its destination space. _Failure:_ 11 (2d10) Radiant damage. _Success:_ Half damage.",
+        "plain": "The solar teleports up to 60 feet to an unoccupied space it can see. Dexterity Saving Throw: DC 25, each creature in a 10-foot Emanation originating from the solar at its destination space. Failure: 11 (2d10) Radiant damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

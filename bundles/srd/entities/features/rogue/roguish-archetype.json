@@ -1,0 +1,30 @@
+{
+  "id": "feature:rogue/roguish-archetype",
+  "name": "Roguish Archetype",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities, such as Thief. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level.",
+    "plain": "At 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities, such as Thief. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "subclass",
+        "name": "Roguish Archetype",
+        "from": [
+          {
+            "kind": "subclass",
+            "where": {
+              "match": {
+                "class": "class:rogue"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

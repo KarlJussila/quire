@@ -1,0 +1,18 @@
+{
+  "id": "rule:spellcasting-focus@2024",
+  "name": "Spellcasting Focus",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Spellcasting Focus is an object that certain creatures can use in place of a spell's Material components if those materials aren't consumed by the spell and don't have a cost specified. Some classes allow its members to use certain types of Spellcasting Focuses. _See also_ \"Spells\" (\"Casting Spells\").",
+    "plain": "A Spellcasting Focus is an object that certain creatures can use in place of a spell's Material components if those materials aren't consumed by the spell and don't have a cost specified. Some classes allow its members to use certain types of Spellcasting Focuses. See also \"Spells\" (\"Casting Spells\").",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

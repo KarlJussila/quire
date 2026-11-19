@@ -1,0 +1,7 @@
+{
+ "id": "damage-type:poison",
+ "name": "Poison",
+ "source": {
+  "book": "core"
+ }
+}

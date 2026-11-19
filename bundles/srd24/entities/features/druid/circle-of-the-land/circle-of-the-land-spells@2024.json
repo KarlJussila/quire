@@ -1,0 +1,246 @@
+{
+  "id": "feature:druid/circle-of-the-land/circle-of-the-land-spells@2024",
+  "name": "Level 3: Circle of the Land Spells",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Whenever you finish a Long Rest, choose one type of land: arid, polar, temperate, or tropical. Consult the table below that corresponds to the chosen type; you have the spells listed for your Druid level and lower prepared.",
+    "plain": "Whenever you finish a Long Rest, choose one type of land: arid, polar, temperate, or tropical. Consult the table below that corresponds to the chosen type; you have the spells listed for your Druid level and lower prepared.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "choose": {
+        "key": "land",
+        "name": "Land Type",
+        "from": [
+          {
+            "name": "Arid",
+            "of": [
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:blur",
+                  "spell:burning-hands",
+                  "spell:fire-bolt"
+                ],
+                "how": "prepared"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:fireball"
+                ],
+                "how": "prepared"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 7
+                },
+                "spells": [
+                  "spell:blight"
+                ],
+                "how": "prepared"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 9
+                },
+                "spells": [
+                  "spell:wall-of-stone"
+                ],
+                "how": "prepared"
+              }
+            ]
+          },
+          {
+            "name": "Polar",
+            "of": [
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:fog-cloud",
+                  "spell:hold-person",
+                  "spell:ray-of-frost"
+                ],
+                "how": "prepared"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:sleet-storm"
+                ],
+                "how": "prepared"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 7
+                },
+                "spells": [
+                  "spell:ice-storm"
+                ],
+                "how": "prepared"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 9
+                },
+                "spells": [
+                  "spell:cone-of-cold"
+                ],
+                "how": "prepared"
+              }
+            ]
+          },
+          {
+            "name": "Temperate",
+            "of": [
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:misty-step",
+                  "spell:shocking-grasp",
+                  "spell:sleep"
+                ],
+                "how": "prepared"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:lightning-bolt"
+                ],
+                "how": "prepared"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 7
+                },
+                "spells": [
+                  "spell:freedom-of-movement"
+                ],
+                "how": "prepared"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 9
+                },
+                "spells": [
+                  "spell:tree-stride"
+                ],
+                "how": "prepared"
+              }
+            ]
+          },
+          {
+            "name": "Tropical",
+            "of": [
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 3
+                },
+                "spells": [
+                  "spell:acid-splash",
+                  "spell:ray-of-sickness",
+                  "spell:web"
+                ],
+                "how": "prepared"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 5
+                },
+                "spells": [
+                  "spell:stinking-cloud"
+                ],
+                "how": "prepared"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 7
+                },
+                "spells": [
+                  "spell:polymorph"
+                ],
+                "how": "prepared"
+              },
+              {
+                "type": "spell-access",
+                "when": {
+                  "compare": "levels.class:druid",
+                  "atLeast": 9
+                },
+                "spells": [
+                  "spell:insect-plague"
+                ],
+                "how": "prepared"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-land",
+      "name": "Replace Land Type",
+      "trigger": {
+        "event": "event:rest-finished",
+        "match": {
+          "rest": "rest:long"
+        },
+        "subject": "self"
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "land"
+          }
+        }
+      ]
+    }
+  ]
+}

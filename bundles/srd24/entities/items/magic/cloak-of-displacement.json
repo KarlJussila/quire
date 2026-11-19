@@ -1,0 +1,49 @@
+{
+  "id": "item:cloak-of-displacement@2024",
+  "name": "Cloak of Displacement",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you wear this cloak, it magically projects an illusion that makes you appear to be standing in a place near your actual location, causing any creature to have Disadvantage on attack rolls against you. If you take damage, the property ceases to function until the start of your next turn. This property is suppressed while your Speed is 0.",
+    "plain": "While you wear this cloak, it magically projects an illusion that makes you appear to be standing in a place near your actual location, causing any creature to have Disadvantage on attack rolls against you. If you take damage, the property ceases to function until the start of your next turn. This property is suppressed while your Speed is 0.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": {
+              "pool": "any"
+            },
+            "subject": "self",
+            "match": {
+              "roll": "roll:attack"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "match": {
+              "speeds": {
+                "movement-mode:walk": true
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

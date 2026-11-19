@@ -1,0 +1,141 @@
+{
+  "id": "item:robe-of-the-archmagi/white",
+  "name": "Robe of the Archmagi (White)",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This elegant garment is made from exquisite cloth of white, gray, or black and adorned with silvery runes. The robe's color corresponds to the alignment for which the item was created. A white robe was made for good, gray for neutral, and black for evil. You can't attune to a _Robe of the Archmagi_ that doesn't correspond to your alignment.\n\nYou gain these benefits while wearing the robe:\n\n- If you aren't wearing armor, your base Armor Class is 15 + your Dexterity modifier.\n- You have advantage on saving throws against spells and other magical effects.\n- Your spell save DC and spell attack bonus each increase by 2.",
+    "plain": "This elegant garment is made from exquisite cloth of white, gray, or black and adorned with silvery runes. The robe's color corresponds to the alignment for which the item was created. A white robe was made for good, gray for neutral, and black for evil. You can't attune to a Robe of the Archmagi that doesn't correspond to your alignment.\n\nYou gain these benefits while wearing the robe:\n\n- If you aren't wearing armor, your base Armor Class is 15 + your Dexterity modifier.\n- You have advantage on saving throws against spells and other magical effects.\n- Your spell save DC and spell attack bonus each increase by 2.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "ac-source",
+      "name": "robe of the archmagi"
+    }
+  ],
+  "group": "group:wondrous-item",
+  "rarity": "rarity:legendary",
+  "attunement": {
+    "by": {
+      "all": [
+        {
+          "any": [
+            {
+              "class": "class:sorcerer"
+            },
+            {
+              "class": "class:warlock"
+            },
+            {
+              "class": "class:wizard"
+            }
+          ]
+        },
+        {
+          "match": {
+            "alignment": "alignment:good"
+          }
+        }
+      ]
+    },
+    "text": "requires attunement by a sorcerer, warlock, or wizard"
+  },
+  "weight": 0,
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$base": {
+            "sum": [
+              15,
+              "modifiers.ability:dex"
+            ]
+          }
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "not": {
+              "has": "group:armor",
+              "match": {
+                "worn": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:save",
+              "against": {
+                "sourceType": "source-type:magic"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "$where": true,
+          "dc": {
+            "$add": 2
+          }
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "$where": true,
+          "attack": {
+            "$add": 2
+          }
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ]
+}

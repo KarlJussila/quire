@@ -1,0 +1,7 @@
+{
+  "id": "action:help",
+  "name": "Help",
+  "source": {
+    "book": "core"
+  }
+}

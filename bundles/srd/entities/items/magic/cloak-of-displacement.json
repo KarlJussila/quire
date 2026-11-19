@@ -1,0 +1,53 @@
+{
+  "id": "item:cloak-of-displacement",
+  "name": "Cloak of Displacement",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While you wear this cloak, it projects an illusion that makes you appear to be standing in a place near your actual location, causing any creature to have disadvantage on attack rolls against you. If you take damage, the property ceases to function until the start of your next turn. This property is suppressed while you are Incapacitated, Restrained, or otherwise unable to move.",
+    "plain": "While you wear this cloak, it projects an illusion that makes you appear to be standing in a place near your actual location, causing any creature to have disadvantage on attack rolls against you. If you take damage, the property ceases to function until the start of your next turn. This property is suppressed while you are Incapacitated, Restrained, or otherwise unable to move.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "weight": 0,
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": {
+              "pool": "any"
+            },
+            "subject": "self",
+            "match": {
+              "roll": "roll:attack"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "not": {
+              "has": "condition:incapacitated"
+            }
+          },
+          {
+            "not": {
+              "has": "condition:restrained"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

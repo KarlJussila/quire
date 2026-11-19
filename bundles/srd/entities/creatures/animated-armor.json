@@ -1,0 +1,104 @@
+{
+  "id": "creature:animated-armor",
+  "name": "Animated Armor",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:construct",
+  "alignment": "alignment:unaligned",
+  "ac": 18,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 33,
+    "formula": "6d8 + 6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 25
+    }
+  },
+  "abilities": {
+    "ability:cha": 1,
+    "ability:con": 13,
+    "ability:dex": 11,
+    "ability:int": 1,
+    "ability:str": 14,
+    "ability:wis": 3
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60,
+      "blindBeyond": true
+    }
+  },
+  "passivePerception": 6,
+  "xp": 200,
+  "cr": 1,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison",
+        "damage-type:psychic"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:blinded",
+        "condition:charmed",
+        "condition:deafened",
+        "condition:exhaustion",
+        "condition:frightened",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Antimagic Susceptibility",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The armor is Incapacitated while in the area of an Antimagic Field. If targeted by Dispel Magic, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall Unconscious for 1 minute.",
+        "plain": "The armor is Incapacitated while in the area of an Antimagic Field. If targeted by Dispel Magic, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall Unconscious for 1 minute.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "False Appearance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the armor remains motionless, it is indistinguishable from a normal suit of armor.",
+        "plain": "While the armor remains motionless, it is indistinguishable from a normal suit of armor.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The armor makes two melee attacks.",
+        "plain": "The armor makes two melee attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Slam",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 5 (1d6 + 2) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

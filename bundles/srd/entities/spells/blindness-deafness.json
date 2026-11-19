@@ -1,0 +1,41 @@
+{
+  "id": "spell:blindness-deafness",
+  "name": "Blindness/Deafness",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can blind or deafen a foe. Choose one creature that you can see within range to make a Constitution saving throw. If it fails, the target is either Blinded or Deafened (your choice) for the duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends.\n\n_**At Higher Levels.**_ When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
+    "plain": "You can blind or deafen a foe. Choose one creature that you can see within range to make a Constitution saving throw. If it fails, the target is either Blinded or Deafened (your choice) for the duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends.\n\nAt Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:necromancy",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute"
+      }
+    }
+  ]
+}

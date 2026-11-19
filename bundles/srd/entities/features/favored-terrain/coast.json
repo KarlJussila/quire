@@ -1,0 +1,11 @@
+{
+  "id": "feature:favored-terrain/coast",
+  "name": "Coast",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "You have Coast as a favored terrain. While traveling in it you gain the benefits described under your Natural Explorer feature.",
+    "wording": "original"
+  }
+}

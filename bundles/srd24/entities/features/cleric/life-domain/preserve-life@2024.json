@@ -1,0 +1,71 @@
+{
+  "id": "feature:cleric/life-domain/preserve-life@2024",
+  "name": "Level 3: Preserve Life",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Magic action, you present your Holy Symbol and expend a use of your Channel Divinity to evoke healing energy that can restore a number of Hit Points equal to five times your Cleric level. Choose Bloodied creatures within 30 feet of yourself (which can include you), and divide those Hit Points among them. This feature can restore a creature to no more than half its Hit Point maximum.",
+    "plain": "As a Magic action, you present your Holy Symbol and expend a use of your Channel Divinity to evoke healing energy that can restore a number of Hit Points equal to five times your Cleric level. Choose Bloodied creatures within 30 feet of yourself (which can include you), and divide those Hit Points among them. This feature can restore a creature to no more than half its Hit Point maximum.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "preserve-life",
+      "name": "Preserve Life",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        },
+        {
+          "resource": "channel-divinity"
+        }
+      ],
+      "outcomes": [
+        {
+          "heal": {
+            "amount": {
+              "times": "levels.class:cleric",
+              "by": 5
+            },
+            "split": true
+          }
+        },
+        {
+          "prose": {
+            "text": "This feature can restore a creature to no more than half its hit point maximum.",
+            "gap": {
+              "category": "activity",
+              "name": "cap healing at half the hit point maximum"
+            }
+          }
+        }
+      ],
+      "target": {
+        "count": {
+          "atLeast": 1
+        },
+        "who": {
+          "pool": "any",
+          "chosen": true,
+          "includeSelf": true,
+          "where": {
+            "all": [
+              {
+                "within": 30
+              },
+              {
+                "compare": "hp.current",
+                "atMost": {
+                  "times": "hp.max",
+                  "by": 0.5
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

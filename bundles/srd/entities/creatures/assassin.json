@@ -1,0 +1,217 @@
+{
+  "id": "creature:assassin",
+  "name": "Assassin",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any-non-good",
+  "ac": 15,
+  "acFrom": [
+    "studded leather"
+  ],
+  "hp": {
+    "average": 78,
+    "formula": "12d8 + 24"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 14,
+    "ability:dex": 16,
+    "ability:int": 13,
+    "ability:str": 11,
+    "ability:wis": 11
+  },
+  "saves": {
+    "ability:dex": 6,
+    "ability:int": 4
+  },
+  "skills": {
+    "skill:acrobatics": 6,
+    "skill:deception": 3,
+    "skill:perception": 3,
+    "skill:stealth": 9
+  },
+  "passivePerception": 13,
+  "xp": 3900,
+  "cr": 8,
+  "languages": [
+    {
+      "text": "Thieves' cant plus any two languages"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:poison"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Assassinate",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "During its first turn, the assassin has advantage on attack rolls against any creature that hasn’t taken a turn. Any hit the assassin scores against a surprised creature is a critical hit.",
+        "plain": "During its first turn, the assassin has advantage on attack rolls against any creature that hasn’t taken a turn. Any hit the assassin scores against a surprised creature is a critical hit.",
+        "wording": "upstream"
+      }
+    },
+    {
+      "name": "Evasion",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the assassin is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the assassin instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.",
+        "plain": "If the assassin is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the assassin instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.",
+        "wording": "upstream"
+      },
+      "effects": [
+        {
+          "type": "triggered",
+          "on": {
+            "event": "event:taking-damage",
+            "subject": "self",
+            "when": {
+              "all": [
+                {
+                  "event": "event:roll-resolved",
+                  "by": "self",
+                  "match": {
+                    "roll": "roll:save",
+                    "success": true,
+                    "ability": "ability:dex"
+                  }
+                },
+                {
+                  "activity": {
+                    "kind": "activity",
+                    "where": {
+                      "match": {
+                        "delivery": {
+                          "save": {
+                            "ability": "ability:dex"
+                          }
+                        },
+                        "otherwise": "half"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "step": {
+            "outcomes": [
+              {
+                "intercept": {
+                  "set": {
+                    "$replace": 0
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "triggered",
+          "on": {
+            "event": "event:taking-damage",
+            "subject": "self",
+            "when": {
+              "all": [
+                {
+                  "event": "event:roll-resolved",
+                  "by": "self",
+                  "match": {
+                    "roll": "roll:save",
+                    "success": false,
+                    "ability": "ability:dex"
+                  }
+                },
+                {
+                  "activity": {
+                    "kind": "activity",
+                    "where": {
+                      "match": {
+                        "delivery": {
+                          "save": {
+                            "ability": "ability:dex"
+                          }
+                        },
+                        "otherwise": "half"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "step": {
+            "outcomes": [
+              {
+                "intercept": {
+                  "set": {
+                    "$replace": {
+                      "divide": {
+                        "event": "amount"
+                      },
+                      "by": 2,
+                      "round": "down"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sneak Attack (1/Turn)",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The assassin deals an extra 14 (4d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the assassin that isn’t incapacitated and the assassin doesn’t have disadvantage on the attack roll.",
+        "plain": "The assassin deals an extra 14 (4d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the assassin that isn’t incapacitated and the assassin doesn’t have disadvantage on the attack roll.",
+        "wording": "upstream"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The assassin makes two shortsword attacks.",
+        "plain": "The assassin makes two shortsword attacks.",
+        "wording": "upstream"
+      }
+    },
+    {
+      "name": "Shortsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "*Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 6 (1d6 + 3) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one.",
+        "wording": "upstream"
+      }
+    },
+    {
+      "name": "Light Crossbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "*Ranged Weapon Attack:* +6 to hit, range 80/320 ft., one target. *Hit:* 7 (1d8 + 3) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one.",
+        "plain": "Ranged Weapon Attack: +6 to hit, range 80/320 ft., one target. Hit: 7 (1d8 + 3) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one.",
+        "wording": "upstream"
+      }
+    }
+  ]
+}

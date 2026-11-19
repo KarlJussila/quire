@@ -1,0 +1,51 @@
+{
+  "id": "feature:monk/diamond-soul",
+  "name": "Diamond Soul",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 14th level, your mastery of ki grants you proficiency in all saving throws.\n\nAdditionally, whenever you make a saving throw and fail, you can spend 1 ki point to reroll it and take the second result.",
+    "plain": "Beginning at 14th level, your mastery of ki grants you proficiency in all saving throws.\n\nAdditionally, whenever you make a saving throw and fail, you can spend 1 ki point to reroll it and take the second result.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "diamond-soul",
+      "name": "Diamond Soul",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "success": false
+        }
+      },
+      "cost": [
+        {
+          "resource": "ki"
+        }
+      ],
+      "outcomes": [
+        {
+          "intercept": {
+            "reroll": true
+          }
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:str",
+        "ability:dex",
+        "ability:con",
+        "ability:int",
+        "ability:wis",
+        "ability:cha"
+      ]
+    }
+  ]
+}

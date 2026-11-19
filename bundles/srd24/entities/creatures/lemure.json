@@ -1,0 +1,95 @@
+{
+  "id": "creature:lemure@2024",
+  "name": "Lemure",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 9,
+  "hp": {
+    "average": 9,
+    "formula": "2d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 3,
+    "ability:con": 11,
+    "ability:dex": 5,
+    "ability:int": 1,
+    "ability:str": 10,
+    "ability:wis": 11
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120,
+      "note": "unimpeded by magical Darkness"
+    }
+  },
+  "passivePerception": 10,
+  "xp": 10,
+  "proficiencyBonus": 2,
+  "initiative": -3,
+  "habitat": [
+    "Planar (Nine Hells)"
+  ],
+  "cr": 0,
+  "languages": [
+    {
+      "language": "language:infernal",
+      "understandsOnly": true
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Hellish Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the lemure dies in the Nine Hells, it revives with all its Hit Points in 1d10 days unless it is killed by a creature under the effects of a Bless spell or its remains are sprinkled with Holy Water.",
+        "plain": "If the lemure dies in the Nine Hells, it revives with all its Hit Points in 1d10 days unless it is killed by a creature under the effects of a Bless spell or its remains are sprinkled with Holy Water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Vile Slime",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +2, reach 5 ft. _Hit:_ 2 (1d4) Poison damage.",
+        "plain": "Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4) Poison damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

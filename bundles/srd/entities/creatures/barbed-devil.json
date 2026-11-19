@@ -1,0 +1,168 @@
+{
+  "id": "creature:barbed-devil",
+  "name": "Barbed Devil",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 15,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 110,
+    "formula": "13d8 + 52"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 14,
+    "ability:con": 18,
+    "ability:dex": 17,
+    "ability:int": 12,
+    "ability:str": 16,
+    "ability:wis": 14
+  },
+  "saves": {
+    "ability:cha": 5,
+    "ability:con": 7,
+    "ability:str": 6,
+    "ability:wis": 5
+  },
+  "skills": {
+    "skill:deception": 5,
+    "skill:insight": 5,
+    "skill:perception": 8
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 18,
+  "telepathy": 120,
+  "xp": 1800,
+  "cr": 5,
+  "languages": [
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical",
+                "damage-qualifier:silvered"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Barbed Hide",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "At the start of each of its turns, the barbed devil deals 5 (1d10) piercing damage to any creature grappling it.",
+        "plain": "At the start of each of its turns, the barbed devil deals 5 (1d10) piercing damage to any creature grappling it.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Devil's Sight",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "Magical darkness doesn't impede the devil's darkvision.",
+        "plain": "Magical darkness doesn't impede the devil's darkvision.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The devil has advantage on saving throws against spells and other magical effects.",
+        "plain": "The devil has advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The devil makes three melee attacks: one with its tail and two with its claws. Alternatively, it can use Hurl Flame twice.",
+        "plain": "The devil makes three melee attacks: one with its tail and two with its claws. Alternatively, it can use Hurl Flame twice.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 6 (1d6 + 3) piercing damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 10 (2d6 + 3) piercing damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hurl Flame",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "Ranged Spell Attack:_ +5 to hit, range 150 ft., one target. _Hit:_ 10 (3d6) fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire.",
+        "plain": "Ranged Spell Attack: +5 to hit, range 150 ft., one target. Hit:_ 10 (3d6) fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

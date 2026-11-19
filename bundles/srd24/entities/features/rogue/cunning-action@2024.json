@@ -1,0 +1,71 @@
+{
+  "id": "feature:rogue/cunning-action@2024",
+  "name": "Level 2: Cunning Action",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your quick thinking and agility allow you to move and act quickly. On your turn, you can take one of the following actions as a Bonus Action: Dash, Disengage, or Hide.",
+    "plain": "Your quick thinking and agility allow you to move and act quickly. On your turn, you can take one of the following actions as a Bonus Action: Dash, Disengage, or Hide.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "cunning-action-dash",
+      "name": "Cunning Action",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": "rule:dash",
+              "times": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cunning-action-disengage",
+      "name": "Cunning Action",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": "rule:disengage",
+              "times": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cunning-action-hide",
+      "name": "Cunning Action",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": "rule:hide",
+              "times": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "weapon-property:thrown",
+  "name": "Thrown",
+  "source": {
+    "book": "core"
+  }
+}

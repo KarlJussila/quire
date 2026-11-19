@@ -1,0 +1,58 @@
+{
+  "abilities": {
+    "ability:str": 8,
+    "ability:dex": 19,
+    "ability:con": 15,
+    "ability:int": 13,
+    "ability:wis": 12,
+    "ability:cha": 10
+  },
+  "proficiencyBonus": 3,
+  "hp.max": 38,
+  "ac": 16,
+  "saves": {
+    "ability:str": -1,
+    "ability:dex": 7,
+    "ability:con": 2,
+    "ability:int": 4,
+    "ability:wis": 1,
+    "ability:cha": 0
+  },
+  "skills": {
+    "skill:acrobatics": 7,
+    "skill:animal-handling": 1,
+    "skill:arcana": 1,
+    "skill:athletics": -1,
+    "skill:deception": 0,
+    "skill:history": 1,
+    "skill:insight": 4,
+    "skill:intimidation": 0,
+    "skill:investigation": 4,
+    "skill:medicine": 1,
+    "skill:nature": 1,
+    "skill:perception": 4,
+    "skill:performance": 0,
+    "skill:persuasion": 0,
+    "skill:religion": 1,
+    "skill:sleight-of-hand": 10,
+    "skill:stealth": 10,
+    "skill:survival": 1
+  },
+  "initiative": 7,
+  "pools": {
+    "sneak-attack": 1
+  },
+  "attacks": {
+    "Dagger: Attack": "+7, 1d4+4 piercing",
+    "Unarmed Strike: Damage": "+2, 1-1 bludgeoning"
+  },
+  "why": [
+    "HP 38 = 8 at Rogue level 1, plus 5 fixed HP at each later level, plus Constitution modifier +2 at all five levels (Chapter 2, Leveling Up and Fixed Hit Points by Class).",
+    "AC 16 = Studded Leather 12 + Dexterity modifier +4 (Chapter 6, Armor table).",
+    "Saving throw proficiency is Dexterity and Intelligence; add proficiency bonus +3 to those ability modifiers (Chapter 3, Core Rogue Traits; Proficiency Bonus table).",
+    "Skills use their ability modifiers and +3 proficiency for the four Rogue picks and Criminal's Sleight of Hand and Stealth; Expertise adds proficiency twice to Sleight of Hand and Stealth (Chapter 3, Core Rogue Traits and Level 1: Expertise; Chapter 2, Criminal background).",
+    "Initiative is Dexterity modifier +4 plus the Alert feat's proficiency bonus +3 (Chapter 1, Initiative; Chapter 5, Alert feat).",
+    "Sneak Attack can be used once per turn (Chapter 3, Rogue, Level 1: Sneak Attack).",
+    "Attacks: the ability modifier (Strength for melee, Dexterity for ranged, either for Finesse) plus the Proficiency Bonus with a weapon the class is trained in; damage adds the same modifier. Checked by hand against the weapon table and each class's weapon training."
+  ]
+}

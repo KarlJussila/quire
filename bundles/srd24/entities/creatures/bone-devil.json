@@ -1,0 +1,136 @@
+{
+  "id": "creature:bone-devil@2024",
+  "name": "Bone Devil",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 16,
+  "hp": {
+    "average": 161,
+    "formula": "17d10 + 68"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 16,
+    "ability:con": 18,
+    "ability:dex": 16,
+    "ability:int": 13,
+    "ability:str": 18,
+    "ability:wis": 14
+  },
+  "saves": {
+    "ability:cha": 7,
+    "ability:int": 5,
+    "ability:str": 8,
+    "ability:wis": 6
+  },
+  "skills": {
+    "skill:deception": 7,
+    "skill:insight": 6
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120,
+      "note": "unimpeded by magical Darkness"
+    }
+  },
+  "passivePerception": 12,
+  "telepathy": 120,
+  "xp": 5000,
+  "proficiencyBonus": 4,
+  "initiative": 7,
+  "habitat": [
+    "Planar (Nine Hells)"
+  ],
+  "treasure": [
+    "Implements"
+  ],
+  "cr": 9,
+  "languages": [
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Diabolical Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+        "plain": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The devil has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The devil has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The devil makes two Claw attacks and one Infernal Sting attack.",
+        "plain": "The devil makes two Claw attacks and one Infernal Sting attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +8, reach 10 ft. _Hit:_ 13 (2d8 + 4) Slashing damage.",
+        "plain": "Melee Attack Roll: +8, reach 10 ft. Hit: 13 (2d8 + 4) Slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Infernal Sting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +8, reach 10 ft. _Hit:_  15 (2d10 + 4) Piercing damage plus 18 (4d8) Poison damage, and the target has the Poisoned condition until the start of the devil's next turn. While Poisoned, the target can't regain Hit Points.",
+        "plain": "Melee Attack Roll: +8, reach 10 ft. Hit:  15 (2d10 + 4) Piercing damage plus 18 (4d8) Poison damage, and the target has the Poisoned condition until the start of the devil's next turn. While Poisoned, the target can't regain Hit Points.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

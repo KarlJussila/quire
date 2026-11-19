@@ -1,0 +1,10 @@
+{
+  "id": "damage-type:lightning",
+  "name": "Lightning",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

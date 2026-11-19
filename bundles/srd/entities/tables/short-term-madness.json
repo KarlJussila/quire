@@ -1,0 +1,106 @@
+{
+  "id": "table:short-term-madness",
+  "name": "Short-Term Madness",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "effect-lasts-1d10-minutes",
+      "name": "Effect (lasts 1d10 minutes)"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "effect-lasts-1d10-minutes": "The character retreats into his or her mind and becomes Paralyzed. The effect ends if the character takes any damage."
+      },
+      "range": [
+        1,
+        20
+      ]
+    },
+    {
+      "cells": {
+        "effect-lasts-1d10-minutes": "The character becomes Incapacitated and spends the duration screaming, laughing, or weeping."
+      },
+      "range": [
+        21,
+        30
+      ]
+    },
+    {
+      "cells": {
+        "effect-lasts-1d10-minutes": "The character becomes Frightened and must use his or her action and movement each round to flee from the source of the fear."
+      },
+      "range": [
+        31,
+        40
+      ]
+    },
+    {
+      "cells": {
+        "effect-lasts-1d10-minutes": "The character begins babbling and is incapable of normal speech or spellcasting."
+      },
+      "range": [
+        41,
+        50
+      ]
+    },
+    {
+      "cells": {
+        "effect-lasts-1d10-minutes": "The character must use his or her action each round to attack the nearest creature."
+      },
+      "range": [
+        51,
+        60
+      ]
+    },
+    {
+      "cells": {
+        "effect-lasts-1d10-minutes": "The character experiences vivid hallucinations and has disadvantage on ability checks."
+      },
+      "range": [
+        61,
+        70
+      ]
+    },
+    {
+      "cells": {
+        "effect-lasts-1d10-minutes": "The character does whatever anyone tells him or her to do that isn't obviously self destructive."
+      },
+      "range": [
+        71,
+        75
+      ]
+    },
+    {
+      "cells": {
+        "effect-lasts-1d10-minutes": "The character experiences an overpowering urge to eat something strange such as dirt, slime, or offal."
+      },
+      "range": [
+        76,
+        80
+      ]
+    },
+    {
+      "cells": {
+        "effect-lasts-1d10-minutes": "The character is Stunned."
+      },
+      "range": [
+        81,
+        90
+      ]
+    },
+    {
+      "cells": {
+        "effect-lasts-1d10-minutes": "The character falls Unconscious."
+      },
+      "range": [
+        91,
+        100
+      ]
+    }
+  ],
+  "dice": "d100"
+}

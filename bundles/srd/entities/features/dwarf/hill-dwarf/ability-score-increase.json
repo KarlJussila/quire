@@ -1,0 +1,24 @@
+{
+  "id": "feature:dwarf/hill-dwarf/ability-score-increase",
+  "name": "Ability Score Increase",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Your Wisdom score increases by 1.",
+    "plain": "Your Wisdom score increases by 1.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:wis": {
+            "$add": 1
+          }
+        }
+      }
+    }
+  ]
+}

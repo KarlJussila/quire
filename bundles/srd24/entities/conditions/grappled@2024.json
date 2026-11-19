@@ -1,0 +1,96 @@
+{
+  "id": "condition:grappled@2024",
+  "name": "Grappled",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you have the Grappled condition, you experience the following effects.\n\n_**Speed 0.**_ Your Speed is 0 and can't increase.\n\n_**Attacks Affected.**_ You have Disadvantage on attack rolls against any target other than the grappler.\n\n_**Movable.**_ The grappler can drag or carry you when it moves, but every foot of movement costs it 1 extra foot unless you are Tiny or two or more sizes smaller than it.",
+    "plain": "While you have the Grappled condition, you experience the following effects.\n\nSpeed 0. Your Speed is 0 and can't increase.\n\nAttacks Affected. You have Disadvantage on attack rolls against any target other than the grappler.\n\nMovable. The grappler can drag or carry you when it moves, but every foot of movement costs it 1 extra foot unless you are Tiny or two or more sizes smaller than it.",
+    "wording": "srd"
+  },
+  "sourceName": "the grappler",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "$where": true,
+          "speed": {
+            "$replace": 0
+          }
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "not": {
+              "is": "source"
+            }
+          }
+        },
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "movementCosts": {
+          "$where": true,
+          "$add": 1
+        }
+      },
+      "to": "source",
+      "when": {
+        "not": {
+          "any": [
+            {
+              "match": {
+                "size": "size:tiny"
+              }
+            },
+            {
+              "match": {
+                "size": {
+                  "atMost": {
+                    "of": "source",
+                    "steps": -2
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "key": "extra-movement"
+    }
+  ],
+  "ends": [
+    {
+      "event": "event:state-applied",
+      "subject": "source",
+      "match": {
+        "state": "condition:incapacitated"
+      }
+    },
+    {
+      "event": "event:moved",
+      "subject": "self",
+      "when": {
+        "not": {
+          "within": "source.reach",
+          "of": "source"
+        }
+      }
+    }
+  ]
+}

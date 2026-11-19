@@ -1,0 +1,12 @@
+{
+  "id": "event:level-gained",
+  "name": "Level Gained",
+  "source": {
+    "book": "core"
+  },
+  "payload": [
+    "class",
+    "gives"
+  ],
+  "emittedBy": "engine"
+}

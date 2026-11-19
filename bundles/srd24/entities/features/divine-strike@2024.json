@@ -1,0 +1,70 @@
+{
+  "id": "feature:divine-strike@2024",
+  "name": "Divine Strike",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Once on each of your turns when you hit a creature with an attack roll using a weapon, you can cause the target to take an extra 1d8 Necrotic or Radiant damage (your choice).",
+    "plain": "Once on each of your turns when you hit a creature with an attack roll using a weapon, you can cause the target to take an extra 1d8 Necrotic or Radiant damage (your choice).",
+    "wording": "srd"
+  },
+  "effects": [],
+  "activities": [
+    {
+      "key": "divine-strike",
+      "name": "Divine Strike",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "weapon"
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "1d8",
+            "type": {
+              "choose": {
+                "key": "divine-strike-damage-type",
+                "name": "Divine Strike Damage Type",
+                "from": [
+                  "damage-type:necrotic",
+                  "damage-type:radiant"
+                ]
+              }
+            }
+          },
+          "to": "subject"
+        }
+      ],
+      "when": {
+        "turn": "self"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": []
+}

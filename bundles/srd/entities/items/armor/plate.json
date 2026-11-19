@@ -1,0 +1,22 @@
+{
+  "id": "item:plate",
+  "name": "Plate",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body.",
+    "plain": "Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body.",
+    "wording": "srd"
+  },
+  "group": "group:heavy-armor",
+  "cost": {
+    "amount": 1500,
+    "currency": "currency:gp"
+  },
+  "weight": 65.0,
+  "armor": {
+    "ac": 18,
+    "strength": 15
+  }
+}

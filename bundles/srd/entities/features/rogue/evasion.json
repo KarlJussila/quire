@@ -1,0 +1,112 @@
+{
+  "id": "feature:rogue/evasion",
+  "name": "Evasion",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 7th level, you can nimbly dodge out of the way of certain area effects, such as a red dragon's fiery breath or an Ice Storm spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.",
+    "plain": "Beginning at 7th level, you can nimbly dodge out of the way of certain area effects, such as a red dragon's fiery breath or an Ice Storm spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:taking-damage",
+        "subject": "self",
+        "when": {
+          "all": [
+            {
+              "event": "event:roll-resolved",
+              "by": "self",
+              "match": {
+                "roll": "roll:save",
+                "ability": "ability:dex",
+                "success": true
+              }
+            },
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "match": {
+                    "delivery": {
+                      "save": {
+                        "ability": "ability:dex"
+                      }
+                    },
+                    "otherwise": "half"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "intercept": {
+              "set": {
+                "$replace": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:taking-damage",
+        "subject": "self",
+        "when": {
+          "all": [
+            {
+              "event": "event:roll-resolved",
+              "by": "self",
+              "match": {
+                "roll": "roll:save",
+                "ability": "ability:dex",
+                "success": false
+              }
+            },
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "match": {
+                    "delivery": {
+                      "save": {
+                        "ability": "ability:dex"
+                      }
+                    },
+                    "otherwise": "half"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "intercept": {
+              "set": {
+                "$replace": {
+                  "divide": {
+                    "event": "amount"
+                  },
+                  "by": 2,
+                  "round": "down"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

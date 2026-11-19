@@ -1,0 +1,31 @@
+{
+  "id": "rule:darkvision@2024",
+  "name": "Darkvision",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you have Darkvision, you can see in Dim Light within a specified range as if it were Bright Light and in Darkness within that range as if it were Dim Light. You discern colors in that Darkness only as shades of gray. _See also_ \"Playing the Game\" (\"Exploration\").",
+    "plain": "If you have Darkvision, you can see in Dim Light within a specified range as if it were Bright Light and in Darkness within that range as if it were Dim Light. You discern colors in that Darkness only as shades of gray. _See also_ \"Playing the Game\" (\"Exploration\").",
+    "wording": "srd"
+  },
+  "group": "group:exploration",
+  "appliesTo": {
+    "pool": "any",
+    "where": {
+      "match": {
+        "senses": {
+          "sense:darkvision": true
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "type": "see",
+      "range": "senses.sense:darkvision.range",
+      "dim": "bright",
+      "darkness": "dim"
+    }
+  ]
+}

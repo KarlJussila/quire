@@ -1,0 +1,116 @@
+{
+  "id": "creature:rakshasa",
+  "name": "Rakshasa",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 16,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 110,
+    "formula": "13d8 + 52"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 20,
+    "ability:con": 18,
+    "ability:dex": 17,
+    "ability:int": 13,
+    "ability:str": 14,
+    "ability:wis": 16
+  },
+  "skills": {
+    "skill:deception": 10,
+    "skill:insight": 8
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 13,
+  "xp": 10000,
+  "cr": 13,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Limited Magic Immunity",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The rakshasa can't be affected or detected by spells of 6th level or lower unless it wishes to be. It has advantage on saving throws against all other spells and magical effects.",
+        "plain": "The rakshasa can't be affected or detected by spells of 6th level or lower unless it wishes to be. It has advantage on saving throws against all other spells and magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Innate Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The rakshasa's innate spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). The rakshasa can innately cast the following spells, requiring no material components:\n\n- At will: Detect Thoughts, Disguise Self, Mage Hand, Minor Illusion\n- 3/day each: Charm Person, Detect Magic, Invisibility, Major Image, Suggestion\n- 1/day each: Dominate Person, Fly, Plane Shift, True Seeing",
+        "plain": "The rakshasa's innate spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). The rakshasa can innately cast the following spells, requiring no material components:\n\n- At will: Detect Thoughts, Disguise Self, Mage Hand, Minor Illusion\n- 3/day each: Charm Person, Detect Magic, Invisibility, Major Image, Suggestion\n- 1/day each: Dominate Person, Fly, Plane Shift, True Seeing",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The rakshasa makes two claw attacks.",
+        "plain": "The rakshasa makes two claw attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +7 to hit, reach 5 ft., one target. _Hit:_ 9 (2d6 + 2) slashing damage, and the target is cursed if it is a creature. The magical curse takes effect whenever the target takes a short or long rest, filling the target's thoughts with horrible images and dreams. The cursed target gains no benefit from finishing a short or long rest. The curse lasts until it is lifted by a Remove Curse spell or similar magic.",
+        "plain": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) slashing damage, and the target is cursed if it is a creature. The magical curse takes effect whenever the target takes a short or long rest, filling the target's thoughts with horrible images and dreams. The cursed target gains no benefit from finishing a short or long rest. The curse lasts until it is lifted by a Remove Curse spell or similar magic.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

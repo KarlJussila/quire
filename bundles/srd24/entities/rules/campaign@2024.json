@@ -1,0 +1,18 @@
+{
+  "id": "rule:campaign@2024",
+  "name": "Campaign",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A campaign is a series of adventures. _See also_ \"Adventure.\"",
+    "plain": "A campaign is a series of adventures. See also \"Adventure.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "feature:leveled-spell@2024",
+  "name": "Leveled Spell",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

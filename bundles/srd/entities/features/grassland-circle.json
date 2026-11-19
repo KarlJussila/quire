@@ -1,0 +1,12 @@
+{
+  "id": "feature:grassland-circle",
+  "name": "Grassland Circle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "| Druid Level   | Circle Spells                            |\n|---------------|------------------------------------------|\n| 3rd           | Invisibility, Pass without Trace |\n| 5th           | Daylight, Haste                  |\n| 7th           | Divination, Freedom of Movement  |\n| 9th           | Dream, Insect Plague             |",
+    "plain": "| Druid Level   | Circle Spells                            |\n|---------------|------------------------------------------|\n| 3rd           | Invisibility, Pass without Trace |\n| 5th           | Daylight, Haste                  |\n| 7th           | Divination, Freedom of Movement  |\n| 9th           | Dream, Insect Plague             |",
+    "wording": "srd"
+  }
+}

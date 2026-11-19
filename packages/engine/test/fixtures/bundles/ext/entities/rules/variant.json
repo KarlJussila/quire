@@ -1,0 +1,28 @@
+{
+ "id": "rule:variant",
+ "name": "Variant",
+ "source": {
+  "book": "core"
+ },
+ "optional": true,
+ "overrides": [
+  {
+   "target": "feature:a",
+   "set": {
+    "effects": {
+     "$append": [
+      {
+       "type": "defense",
+       "resist": [
+        "damage-type:poison"
+       ]
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "defines": [
+  "feature:variant-only"
+ ]
+}

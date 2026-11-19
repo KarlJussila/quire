@@ -1,0 +1,57 @@
+{
+  "id": "feature:obscure-cost-3d6@2024",
+  "name": "Obscure (Cost: 3d6)",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The target must succeed on a Dexterity saving throw, or it has the Blinded condition until the end of its next turn.",
+    "plain": "The target must succeed on a Dexterity saving throw, or it has the Blinded condition until the end of its next turn.",
+    "wording": "srd"
+  },
+  "values": {
+    "die-cost": 3
+  },
+  "activities": [
+    {
+      "key": "cunning-strike-obscure",
+      "standalone": false,
+      "outcomes": [
+        {
+          "then": {
+            "target": {
+              "who": "subject"
+            },
+            "delivery": {
+              "save": {
+                "ability": "ability:dex",
+                "dc": {
+                  "sum": [
+                    8,
+                    "modifiers.ability:dex",
+                    "proficiencyBonus"
+                  ]
+                }
+              }
+            },
+            "outcomes": [
+              {
+                "applyState": {
+                  "state": "condition:blinded",
+                  "ends": [
+                    {
+                      "event": "event:turn-end",
+                      "subject": "self",
+                      "next": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "feature:human/resourceful@2024",
+  "name": "Resourceful",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain Heroic Inspiration whenever you finish a Long Rest.",
+    "plain": "You gain Heroic Inspiration whenever you finish a Long Rest.",
+    "wording": "srd"
+  }
+}

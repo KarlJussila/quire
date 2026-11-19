@@ -1,0 +1,104 @@
+{
+  "id": "creature:steam-mephit",
+  "name": "Steam Mephit",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:elemental",
+  "alignment": "alignment:neutral-evil",
+  "ac": 10,
+  "hp": {
+    "average": 21,
+    "formula": "6d6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 12,
+    "ability:con": 10,
+    "ability:dex": 11,
+    "ability:int": 11,
+    "ability:str": 5,
+    "ability:wis": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 50,
+  "cr": 0.25,
+  "languages": [
+    {
+      "language": "language:aquan"
+    },
+    {
+      "language": "language:ignan"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Death Burst",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "When the mephit dies, it explodes in a cloud of steam. Each creature within 5 feet of the mephit must succeed on a DC 10 Dexterity saving throw or take 4 (1d8) fire damage.",
+        "plain": "When the mephit dies, it explodes in a cloud of steam. Each creature within 5 feet of the mephit must succeed on a DC 10 Dexterity saving throw or take 4 (1d8) fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Innate Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The mephit can innately cast Blur, requiring no material components. Its innate spellcasting ability is Charisma.",
+        "plain": "The mephit can innately cast Blur, requiring no material components. Its innate spellcasting ability is Charisma.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claws",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +2 to hit, reach 5 ft., one creature. _Hit:_ 2 (1d4) slashing damage plus 2 (1d4) fire damage.",
+        "plain": "Melee Weapon Attack: +2 to hit, reach 5 ft., one creature. Hit: 2 (1d4) slashing damage plus 2 (1d4) fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Steam Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The mephit exhales a 15 foot cone of scalding steam. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 4 (1d8) fire damage on a failed save, or half as much damage on a successful one.",
+        "plain": "The mephit exhales a 15 foot cone of scalding steam. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 4 (1d8) fire damage on a failed save, or half as much damage on a successful one.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

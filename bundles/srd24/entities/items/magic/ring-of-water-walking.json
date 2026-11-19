@@ -1,0 +1,14 @@
+{
+  "id": "item:ring-of-water-walking@2024",
+  "name": "Ring of Water Walking",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this ring, you cast Water Walk from it, targeting only yourself.",
+    "plain": "While wearing this ring, you cast Water Walk from it, targeting only yourself.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:uncommon"
+}

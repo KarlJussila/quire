@@ -1,0 +1,57 @@
+{
+  "id": "feature:barbarian/improved-brutal-strike-17@2024",
+  "name": "Level 17: Improved Brutal Strike",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The extra damage of your Brutal Strike increases to 2d10. In addition, you can use two different Brutal Strike effects whenever you use your Brutal Strike feature.",
+    "plain": "The extra damage of your Brutal Strike increases to 2d10. In addition, you can use two different Brutal Strike effects whenever you use your Brutal Strike feature.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "key": "brutal-strike-hit"
+          }
+        }
+      },
+      "set": {
+        "outcomes": {
+          "$where": {
+            "damage": true
+          },
+          "damage": {
+            "amount": "2d10"
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "key": "brutal-strike-hit"
+          }
+        }
+      },
+      "set": {
+        "outcomes": {
+          "$where": {
+            "choose": true
+          },
+          "choose": {
+            "count": 2
+          }
+        }
+      }
+    }
+  ]
+}

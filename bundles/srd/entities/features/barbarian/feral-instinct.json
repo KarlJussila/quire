@@ -1,0 +1,25 @@
+{
+  "id": "feature:barbarian/feral-instinct",
+  "name": "Feral Instinct",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "By 7th level, your instincts are so honed that you have advantage on initiative rolls.\n\nAdditionally, if you are surprised at the beginning of combat and aren't Incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.",
+    "plain": "By 7th level, your instincts are so honed that you have advantage on initiative rolls.\n\nAdditionally, if you are surprised at the beginning of combat and aren't Incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:initiative"
+        }
+      }
+    }
+  ]
+}

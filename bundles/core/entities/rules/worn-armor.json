@@ -1,0 +1,35 @@
+{
+  "id": "rule:worn-armor",
+  "name": "Worn Armor",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Armor a creature wears gives it a base Armor Class: the armor's own, which says what part the wearer's Dexterity plays."
+  },
+  "group": "group:character",
+  "appliesTo": {
+    "pool": "object",
+    "where": {
+      "match": {
+        "armor": true
+      }
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$base": "this.armor.ac"
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true
+        }
+      }
+    }
+  ]
+}

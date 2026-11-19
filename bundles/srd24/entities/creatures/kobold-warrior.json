@@ -1,0 +1,96 @@
+{
+  "id": "creature:kobold-warrior@2024",
+  "name": "Kobold Warrior",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:neutral",
+  "ac": 14,
+  "hp": {
+    "average": 7,
+    "formula": "3d6 - 3"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 8,
+    "ability:con": 9,
+    "ability:dex": 15,
+    "ability:int": 8,
+    "ability:str": 7,
+    "ability:wis": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 8,
+  "xp": 25,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Arctic",
+    "Coastal",
+    "Desert",
+    "Forest",
+    "Hill",
+    "Mountain",
+    "Swamp",
+    "Underdark",
+    "Urban"
+  ],
+  "treasure": [
+    "Armaments"
+  ],
+  "gear": [
+    "Daggers (3)"
+  ],
+  "cr": 0.125,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Pack Tactics",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The kobold has Advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+        "plain": "The kobold has Advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sunlight Sensitivity",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While in sunlight, the kobold has Disadvantage on ability checks and attack rolls.",
+        "plain": "While in sunlight, the kobold has Disadvantage on ability checks and attack rolls.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Dagger",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +4, reach 5 ft. or range 20/60 ft. _Hit:_ 4 (1d4 + 2) Piercing damage.",
+        "plain": "Melee or Ranged Attack Roll: +4, reach 5 ft. or range 20/60 ft. Hit: 4 (1d4 + 2) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

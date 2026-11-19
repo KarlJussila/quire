@@ -1,0 +1,28 @@
+{
+  "id": "feature:warlock/pact-boon",
+  "name": "Pact Boon",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 3rd level, your otherworldly patron bestows a gift upon you for your loyal service. You gain one of the following features of your choice.",
+    "plain": "At 3rd level, your otherworldly patron bestows a gift upon you for your loyal service. You gain one of the following features of your choice.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "pact-boon",
+        "name": "Pact Boon",
+        "from": [
+          {
+            "kind": "feature",
+            "where": {
+              "group": "group:pact-boon"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

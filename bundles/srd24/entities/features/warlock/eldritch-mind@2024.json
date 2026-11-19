@@ -1,0 +1,26 @@
+{
+  "id": "feature:warlock/eldritch-mind@2024",
+  "name": "Eldritch Mind",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have Advantage on Constitution saving throws that you make to maintain Concentration.",
+    "plain": "You have Advantage on Constitution saving throws that you make to maintain Concentration.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:concentration"
+        }
+      }
+    }
+  ]
+}

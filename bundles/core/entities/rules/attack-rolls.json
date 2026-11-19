@@ -1,0 +1,114 @@
+{
+  "id": "rule:attack-rolls",
+  "name": "Attack Rolls",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "An activity that makes an attack rolls a d20 against each target's Armor Class."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "emits": [
+    {
+      "event": "event:roll-made",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "attack": true
+            }
+          }
+        }
+      },
+      "at": "rolled",
+      "fields": {
+        "roll": "roll:attack",
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        }
+      }
+    },
+    {
+      "event": "event:roll-resolved",
+      "for": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "attack": true
+            }
+          }
+        }
+      },
+      "at": "resolved",
+      "fields": {
+        "roll": "roll:attack",
+        "attack": {
+          "settled": "attack"
+        },
+        "spell": {
+          "settled": "spell"
+        },
+        "slot": {
+          "settled": "slot"
+        },
+        "natural": {
+          "settled": "natural"
+        },
+        "total": {
+          "settled": "total"
+        },
+        "mode": {
+          "settled": "mode"
+        },
+        "success": {
+          "settled": "success"
+        },
+        "crit": {
+          "settled": "crit"
+        },
+        "margin": {
+          "settled": "margin"
+        }
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": "modifiers.{ability}"
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "ability": true
+        }
+      }
+    }
+  ]
+}

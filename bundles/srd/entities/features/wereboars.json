@@ -1,0 +1,11 @@
+{
+  "id": "feature:wereboars",
+  "name": "Wereboars",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

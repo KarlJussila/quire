@@ -1,0 +1,10 @@
+{
+  "id": "event:rest-finished",
+  "name": "Rest Finished",
+  "source": {
+    "book": "core"
+  },
+  "payload": [
+    "rest"
+  ]
+}

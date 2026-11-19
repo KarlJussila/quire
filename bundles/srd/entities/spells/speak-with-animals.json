@@ -1,0 +1,43 @@
+{
+  "id": "spell:speak-with-animals",
+  "name": "Speak with Animals",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the GM's discretion.",
+    "plain": "You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the GM's discretion.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:bard",
+    "class:druid",
+    "class:ranger"
+  ],
+  "ritual": true,
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": {
+        "amount": 10,
+        "unit": "minute"
+      },
+      "ritual": true
+    }
+  ]
+}

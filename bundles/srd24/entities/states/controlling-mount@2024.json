@@ -1,0 +1,57 @@
+{
+  "id": "state:controlling-mount@2024",
+  "name": "Controlling a Mount",
+  "source": {
+    "book": "core"
+  },
+  "sourceName": "your mount",
+  "ends": [
+    {
+      "event": "event:state-ended",
+      "match": {
+        "state": "state:mounted"
+      },
+      "subject": "self"
+    }
+  ],
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:actions"
+      ],
+      "to": "source",
+      "activity": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "match": {
+                "cost": {
+                  "resource": "action"
+                }
+              }
+            },
+            {
+              "not": {
+                "match": {
+                  "action": [
+                    "action:dash",
+                    "action:disengage",
+                    "action:dodge"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "initiative",
+      "name": "The mount's initiative changes to match yours when you mount it, and it moves as you direct it, even on that turn"
+    }
+  ]
+}

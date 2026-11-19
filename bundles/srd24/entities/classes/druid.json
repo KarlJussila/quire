@@ -1,0 +1,73 @@
+{
+  "id": "class:druid@2024",
+  "name": "Druid",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Druid, you gain the following class features when you reach the specified Druid levels.",
+    "plain": "As a Druid, you gain the following class features when you reach the specified Druid levels.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d8",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:wis",
+      "atLeast": 13
+    },
+    "features": [
+      "feature:druid/multiclass-proficiencies@2024"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:druid/druidic@2024",
+      "feature:druid/primal-order@2024",
+      "feature:druid/spellcasting@2024"
+    ],
+    "2": [
+      "feature:druid/wild-companion@2024",
+      "feature:druid/wild-shape@2024"
+    ],
+    "3": [
+      "feature:druid/druid-subclass@2024"
+    ],
+    "4": [
+      "feature:druid/ability-score-improvement@2024"
+    ],
+    "5": [
+      "feature:druid/wild-resurgence@2024"
+    ],
+    "7": [
+      "feature:druid/elemental-fury@2024"
+    ],
+    "8": [
+      "feature:druid/ability-score-improvement@2024"
+    ],
+    "12": [
+      "feature:druid/ability-score-improvement@2024"
+    ],
+    "15": [
+      "feature:druid/improved-elemental-fury@2024"
+    ],
+    "16": [
+      "feature:druid/ability-score-improvement@2024"
+    ],
+    "18": [
+      "feature:druid/beast-spells@2024"
+    ],
+    "19": [
+      "feature:druid/epic-boon@2024"
+    ],
+    "20": [
+      "feature:druid/archdruid@2024"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Druid Circle||Druid Subclass"
+  },
+  "firstClass": [
+    "feature:druid/proficiencies@2024"
+  ]
+}

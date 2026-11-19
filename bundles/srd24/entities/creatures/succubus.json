@@ -1,0 +1,138 @@
+{
+  "id": "creature:succubus@2024",
+  "name": "Succubus",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:neutral-evil",
+  "ac": 15,
+  "hp": {
+    "average": 71,
+    "formula": "13d8 + 13"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 20,
+    "ability:con": 13,
+    "ability:dex": 17,
+    "ability:int": 15,
+    "ability:str": 8,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:deception": 9,
+    "skill:insight": 5,
+    "skill:perception": 5,
+    "skill:persuasion": 9,
+    "skill:stealth": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 15,
+  "telepathy": 60,
+  "xp": 1100,
+  "proficiencyBonus": 2,
+  "initiative": 3,
+  "habitat": [
+    "Planar (Lower Planes)",
+    "Urban"
+  ],
+  "treasure": [
+    "Implements"
+  ],
+  "cr": 4,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    },
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:poison",
+        "damage-type:psychic"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Incubus Form",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "When the succubus finishes a Long Rest, it can shape-shift into an **Incubus**, using that stat block instead of this one.",
+        "plain": "When the succubus finishes a Long Rest, it can shape-shift into an Incubus, using that stat block instead of this one.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The succubus makes one Fiendish Touch attack and uses Charm or Draining Kiss.",
+        "plain": "The succubus makes one Fiendish Touch attack and uses Charm or Draining Kiss.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fiendish Touch",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 5 ft. _Hit:_ 16 (2d10 + 5) Psychic damage.",
+        "plain": "Melee Attack Roll: +7, reach 5 ft. Hit: 16 (2d10 + 5) Psychic damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Charm",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The succubus casts Dominate Person (level 8 version), requiring no spell components and using Charisma as the spellcasting ability (spell save DC 15).",
+        "plain": "The succubus casts Dominate Person (level 8 version), requiring no spell components and using Charisma as the spellcasting ability (spell save DC 15).",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Draining Kiss",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 15, one creature Charmed by the succubus within 5 feet. _Failure:_ 13 (3d8) Psychic damage. _Success:_ Half damage. _Failure or Success:_ The target's Hit Point maximum decreases by an amount equal to the damage taken.",
+        "plain": "Constitution Saving Throw: DC 15, one creature Charmed by the succubus within 5 feet. Failure: 13 (3d8) Psychic damage. Success: Half damage. Failure or Success: The target's Hit Point maximum decreases by an amount equal to the damage taken.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shape-Shift",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The succubus shape-shifts into a Medium or Small Humanoid, or it returns to its true form. Its game statistics are the same in each form, except its Fly Speed is available only in its true form. Any equipment it is wearing or carrying isn't transformed.",
+        "plain": "The succubus shape-shifts into a Medium or Small Humanoid, or it returns to its true form. Its game statistics are the same in each form, except its Fly Speed is available only in its true form. Any equipment it is wearing or carrying isn't transformed.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

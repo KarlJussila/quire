@@ -1,0 +1,68 @@
+{
+  "id": "item:manual-of-bodily-health@2024",
+  "name": "Manual of Bodily Health",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This book contains health and nutrition tips, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Constitution increases by 2, to a maximum of 30. The manual then loses its magic but regains it in a century.",
+    "plain": "This book contains health and nutrition tips, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Constitution increases by 2, to a maximum of 30. The manual then loses its magic but regains it in a century.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:very-rare",
+  "effects": [],
+  "activities": [
+    {
+      "key": "study",
+      "name": "Study and Practice",
+      "time": {
+        "amount": 48,
+        "unit": "hour"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "after": {
+              "amount": 100,
+              "unit": "year"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "change",
+                  "set": {
+                    "abilities": {
+                      "ability:con": {
+                        "$add": {
+                          "amount": 2,
+                          "upTo": 30
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "duration": "permanent"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "The 48 study hours cannot be tracked as accumulated within a six-day window."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "feature:warlock/fiend-patron/hurl-through-hell@2024",
+  "name": "Level 14: Hurl Through Hell",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Once per turn when you hit a creature with an attack roll, you can try to instantly transport the target through the Lower Planes. The target must succeed on a Charisma saving throw against your spell save DC, or the target disappears and hurtles through a nightmare landscape. The target takes 8d10 Psychic damage if it isn't a Fiend, and it has the Incapacitated condition until the end of your next turn, when it returns to the space it previously occupied or the nearest unoccupied space.\n\nOnce you use this feature, you can't use it again until you finish a Long Rest unless you expend a Pact Magic spell slot (no action required) to restore your use of it.",
+    "plain": "Once per turn when you hit a creature with an attack roll, you can try to instantly transport the target through the Lower Planes. The target must succeed on a Charisma saving throw against your spell save DC, or the target disappears and hurtles through a nightmare landscape. The target takes 8d10 Psychic damage if it isn't a Fiend, and it has the Incapacitated condition until the end of your next turn, when it returns to the space it previously occupied or the nearest unoccupied space.\n\nOnce you use this feature, you can't use it again until you finish a Long Rest unless you expend a Pact Magic spell slot (no action required) to restore your use of it.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "hurl-through-hell",
+      "name": "Hurl Through Hell",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true
+        }
+      },
+      "target": {
+        "who": "subject"
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:cha",
+          "dc": "spellcasting.class:warlock.dc"
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:incapacitated",
+            "ends": [
+              {
+                "event": "event:turn-end",
+                "subject": "source",
+                "next": true
+              }
+            ]
+          }
+        },
+        {
+          "prose": {
+            "text": "The target disappears into the Lower Planes. At the end of your next turn it returns to the space it left, or the nearest unoccupied space.",
+            "gap": {
+              "category": "move",
+              "name": "hurl through the lower planes"
+            }
+          }
+        },
+        {
+          "damage": {
+            "amount": "8d10",
+            "type": "damage-type:psychic"
+          },
+          "when": {
+            "not": {
+              "match": {
+                "creatureType": "creature-type:fiend"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

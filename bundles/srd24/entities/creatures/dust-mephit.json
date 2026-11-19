@@ -1,0 +1,116 @@
+{
+  "id": "creature:dust-mephit@2024",
+  "name": "Dust Mephit",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:elemental",
+  "alignment": "alignment:neutral-evil",
+  "ac": 12,
+  "hp": {
+    "average": 17,
+    "formula": "5d6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 10,
+    "ability:dex": 14,
+    "ability:int": 9,
+    "ability:str": 5,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:perception": 2,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 12,
+  "xp": 100,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Planar (Elemental Planes)"
+  ],
+  "cr": 0.5,
+  "languages": [
+    {
+      "text": "Primordial (Auran, Terran)"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "vulnerable": [
+        "damage-type:fire"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:exhaustion",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Death Burst",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The mephit explodes when it dies. _Dexterity Saving Throw:_ DC 10, each creature in a 5-foot Emanation originating from the mephit. _Failure:_ 5 (2d4) Bludgeoning damage. _Success:_ Half damage.",
+        "plain": "The mephit explodes when it dies. Dexterity Saving Throw: DC 10, each creature in a 5-foot Emanation originating from the mephit. Failure: 5 (2d4) Bludgeoning damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 4 (1d4 + 2) Slashing damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Blinding Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 10, each creature in a 15-foot Cone. _Failure:_ The target has the Blinded condition until the end of the mephit's next turn.",
+        "plain": "Dexterity Saving Throw: DC 10, each creature in a 15-foot Cone. Failure: The target has the Blinded condition until the end of the mephit's next turn.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sleep",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The mephit casts the Sleep spell, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 10).",
+        "plain": "The mephit casts the Sleep spell, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 10).",
+        "wording": "srd"
+      }
+    }
+  ]
+}

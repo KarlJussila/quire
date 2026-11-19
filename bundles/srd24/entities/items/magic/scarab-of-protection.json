@@ -1,0 +1,15 @@
+{
+  "id": "item:scarab-of-protection@2024",
+  "name": "Scarab of Protection",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This beetle-shaped medallion provides three benefits while it is on your person.\n\n_**Defense.**_ You gain a +1 bonus to Armor Class.\n\n_**Preservation.**_ The scarab has 12 charges. If you fail a saving throw against a Necromancy spell or a harmful effect originating from an Undead, you can take a Reaction to expend 1 charge and turn the failed save into a successful one. The scarab crumbles into powder and is destroyed when its last charge is expended.\n\n_**Spell Resistance.**_ You have Advantage on saving throws against spells.",
+    "plain": "This beetle-shaped medallion provides three benefits while it is on your person.\n\nDefense. You gain a +1 bonus to Armor Class.\n\nPreservation. The scarab has 12 charges. If you fail a saving throw against a Necromancy spell or a harmful effect originating from an Undead, you can take a Reaction to expend 1 charge and turn the failed save into a successful one. The scarab crumbles into powder and is destroyed when its last charge is expended.\n\nSpell Resistance. You have Advantage on saving throws against spells.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:legendary",
+  "attunement": true
+}

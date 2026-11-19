@@ -1,0 +1,43 @@
+{
+  "id": "spell:greater-invisibility@2024",
+  "name": "Greater Invisibility",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A creature you touch has the Invisible condition until the spell ends.",
+    "plain": "A creature you touch has the Invisible condition until the spell ends.",
+    "wording": "srd"
+  },
+  "level": 4,
+  "school": "spell-school:illusion",
+  "lists": [
+    "class:bard",
+    "class:sorcerer",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute",
+        "upTo": true
+      },
+      "concentration": true
+    }
+  ]
+}

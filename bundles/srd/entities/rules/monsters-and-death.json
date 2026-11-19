@@ -1,0 +1,47 @@
+{
+  "id": "rule:monsters-and-death",
+  "name": "Monsters and Death",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Most GMs have a monster die the instant it drops to 0 hit points, rather than having it fall Unconscious and make death saving throws.\n\nMighty villains and special nonplayer characters are common exceptions; the GM might have them fall Unconscious and follow the same rules as player characters.",
+    "plain": "Most GMs have a monster die the instant it drops to 0 hit points, rather than having it fall Unconscious and make death saving throws.\n\nMighty villains and special nonplayer characters are common exceptions; the GM might have them fall Unconscious and follow the same rules as player characters.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "becomes": {
+            "compare": "hp.current",
+            "atMost": 0
+          },
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "kill": {},
+            "to": "self",
+            "when": {
+              "prose": {
+                "text": "monster",
+                "gap": {
+                  "category": "test",
+                  "name": "monster"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

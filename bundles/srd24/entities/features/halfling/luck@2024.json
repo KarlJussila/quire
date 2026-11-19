@@ -1,0 +1,30 @@
+{
+  "id": "feature:halfling/luck@2024",
+  "name": "Luck",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll.",
+    "plain": "When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "die-mod",
+      "reroll": {
+        "below": 2,
+        "mustUse": true
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:d20-test",
+          "natural": 1
+        }
+      }
+    }
+  ],
+  "gaps": []
+}

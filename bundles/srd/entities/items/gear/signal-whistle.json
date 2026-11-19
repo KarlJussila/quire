@@ -1,0 +1,17 @@
+{
+  "id": "item:signal-whistle",
+  "name": "Signal Whistle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:cp"
+  },
+  "weight": 0.0
+}

@@ -1,0 +1,69 @@
+{
+  "id": "condition:blinded@2024",
+  "name": "Blinded",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you have the Blinded condition, you experience the following effects.\n\n_**Can't See.**_ You can't see and automatically fail any ability check that requires sight.\n\n_**Attacks Affected.**_ Attack rolls against you have Advantage, and your attack rolls have Disadvantage.",
+    "plain": "While you have the Blinded condition, you experience the following effects.\n\nCan't See. You can't see and automatically fail any ability check that requires sight.\n\nAttacks Affected. Attack rolls against you have Advantage, and your attack rolls have Disadvantage.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:see"
+      ]
+    },
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check"
+            }
+          },
+          {
+            "prose": {
+              "text": "requires sight",
+              "gap": {
+                "category": "test",
+                "name": "requires-sight"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any"
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "group:land-vehicle",
+  "name": "Land Vehicle",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:vehicle"
+}

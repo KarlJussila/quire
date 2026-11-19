@@ -1,0 +1,74 @@
+{
+  "id": "item:manual-of-gainful-exercise",
+  "name": "Manual of Gainful Exercise",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This book describes fitness exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Strength score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.",
+    "plain": "This book describes fitness exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Strength score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:very-rare",
+  "weight": 5,
+  "activities": [
+    {
+      "key": "study",
+      "name": "Study and Practice",
+      "time": {
+        "amount": 48,
+        "unit": "hour"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "after": {
+              "amount": 100,
+              "unit": "year"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "change",
+                  "set": {
+                    "abilities": {
+                      "ability:str": {
+                        "$add": 2
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "change",
+                  "set": {
+                    "abilityMaximums": {
+                      "ability:str": {
+                        "$add": 2
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "duration": "permanent"
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "The six-day limit on accumulated study time is not tracked."
+    }
+  ]
+}

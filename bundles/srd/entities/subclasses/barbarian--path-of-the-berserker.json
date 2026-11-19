@@ -1,0 +1,27 @@
+{
+  "id": "subclass:barbarian/path-of-the-berserker",
+  "name": "Path of the Berserker",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "For some barbarians, rage is a means to an end that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker's rage, you thrill in the chaos of battle, heedless of your own health or well-being.",
+    "plain": "For some barbarians, rage is a means to an end that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker's rage, you thrill in the chaos of battle, heedless of your own health or well-being.",
+    "wording": "srd"
+  },
+  "class": "class:barbarian",
+  "levels": {
+    "10": [
+      "feature:barbarian/path-of-the-berserker/intimidating-presence"
+    ],
+    "14": [
+      "feature:barbarian/path-of-the-berserker/retaliation"
+    ],
+    "3": [
+      "feature:barbarian/path-of-the-berserker/frenzy"
+    ],
+    "6": [
+      "feature:barbarian/path-of-the-berserker/mindless-rage"
+    ]
+  }
+}

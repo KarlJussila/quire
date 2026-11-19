@@ -1,0 +1,129 @@
+{
+  "id": "creature:incubus@2024",
+  "name": "Incubus",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:neutral-evil",
+  "ac": 15,
+  "hp": {
+    "average": 66,
+    "formula": "12d8 + 12"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 20,
+    "ability:con": 13,
+    "ability:dex": 17,
+    "ability:int": 15,
+    "ability:str": 8,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:deception": 9,
+    "skill:insight": 5,
+    "skill:perception": 5,
+    "skill:persuasion": 9,
+    "skill:stealth": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 15,
+  "telepathy": 60,
+  "xp": 1100,
+  "proficiencyBonus": 2,
+  "initiative": 3,
+  "habitat": [
+    "Planar (Lower Planes)",
+    "Urban"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 4,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    },
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:poison",
+        "damage-type:psychic"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Succubus Form",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "When the incubus finishes a Long Rest, it can shape-shift into a **Succubus**, using that stat block instead of this one. Any equipment it is wearing or carrying isn't transformed.",
+        "plain": "When the incubus finishes a Long Rest, it can shape-shift into a Succubus, using that stat block instead of this one. Any equipment it is wearing or carrying isn't transformed.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The incubus makes two Restless Touch attacks.",
+        "plain": "The incubus makes two Restless Touch attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Restless Touch",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 5 ft. _Hit:_ 15 (3d6 + 5) Psychic damage, and the target is cursed for 24 hours or until the incubus dies. Until the curse ends, the target gains no benefit from finishing Short Rests.",
+        "plain": "Melee Attack Roll: +7, reach 5 ft. Hit: 15 (3d6 + 5) Psychic damage, and the target is cursed for 24 hours or until the incubus dies. Until the curse ends, the target gains no benefit from finishing Short Rests.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The incubus casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 15):\n\n- **At Will:** Disguise Self, Etherealness\n- **1/Day Each:** Dream, Hypnotic Pattern",
+        "plain": "The incubus casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 15):\n\n- At Will: Disguise Self, Etherealness\n- 1/Day Each: Dream, Hypnotic Pattern",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Nightmare",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "_Wisdom Saving Throw:_ DC 15, one creature the incubus can see within 60 feet. _Failure:_ If the target has 20 Hit Points or fewer, it has the Unconscious condition for 1 hour, until it takes damage, or until a creature within 5 feet of it takes an action to wake it. Otherwise, the target takes 18 (4d8) Psychic damage.",
+        "plain": "Wisdom Saving Throw: DC 15, one creature the incubus can see within 60 feet. Failure: If the target has 20 Hit Points or fewer, it has the Unconscious condition for 1 hour, until it takes damage, or until a creature within 5 feet of it takes an action to wake it. Otherwise, the target takes 18 (4d8) Psychic damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

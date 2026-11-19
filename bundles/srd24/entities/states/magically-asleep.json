@@ -1,0 +1,11 @@
+{
+  "id": "state:magically-asleep",
+  "name": "Magically Asleep",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A creature put to sleep by a magical effect."
+  },
+  "isA": "condition:unconscious"
+}

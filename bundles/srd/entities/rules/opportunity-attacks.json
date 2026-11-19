@@ -1,0 +1,70 @@
+{
+  "id": "rule:opportunity-attacks",
+  "name": "Opportunity Attacks",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "In a fight, everyone is constantly watching for a chance to strike an enemy who is fleeing or passing by. Such a strike is called an opportunity attack.\n\nYou can make an opportunity attack when a hostile creature that you can see moves out of your reach. To make the opportunity attack, you use your reaction to make one melee attack against the provoking creature. The attack occurs right before the creature leaves your reach.\n\nYou can avoid provoking an opportunity attack by taking the Disengage action. You also don't provoke an opportunity attack when you teleport or when someone or something moves you without using your movement, action, or reaction. For example, you don't provoke an opportunity attack if an explosion hurls you out of a foe's reach or if gravity causes you to fall past an enemy.",
+    "plain": "In a fight, everyone is constantly watching for a chance to strike an enemy who is fleeing or passing by. Such a strike is called an opportunity attack.\n\nYou can make an opportunity attack when a hostile creature that you can see moves out of your reach. To make the opportunity attack, you use your reaction to make one melee attack against the provoking creature. The attack occurs right before the creature leaves your reach.\n\nYou can avoid provoking an opportunity attack by taking the Disengage action. You also don't provoke an opportunity attack when you teleport or when someone or something moves you without using your movement, action, or reaction. For example, you don't provoke an opportunity attack if an explosion hurls you out of a foe's reach or if gravity causes you to fall past an enemy.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "opportunity-attack",
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "trigger": {
+        "event": "event:leaves-reach",
+        "by": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "hostile": true
+              },
+              {
+                "perceived": "sight"
+              }
+            ]
+          }
+        },
+        "subject": "self"
+      },
+      "target": {
+        "who": "actor"
+      },
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "match": {
+                    "delivery": {
+                      "attack": {
+                        "range": [
+                          "melee",
+                          "melee-or-ranged"
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "times": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

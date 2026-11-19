@@ -1,0 +1,172 @@
+{
+  "id": "creature:aboleth@2024",
+  "name": "Aboleth",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:aberration",
+  "alignment": "alignment:lawful-evil",
+  "ac": 17,
+  "hp": {
+    "average": 150,
+    "formula": "20d10 + 40"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 18,
+    "ability:con": 15,
+    "ability:dex": 9,
+    "ability:int": 18,
+    "ability:str": 21,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:con": 6,
+    "ability:dex": 3,
+    "ability:int": 8,
+    "ability:wis": 6
+  },
+  "skills": {
+    "skill:history": 12,
+    "skill:perception": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 20,
+  "telepathy": 120,
+  "xp": 5900,
+  "proficiencyBonus": 4,
+  "initiative": 7,
+  "habitat": [
+    "Underdark",
+    "Underwater"
+  ],
+  "treasure": [
+    "Relics"
+  ],
+  "cr": 10,
+  "languages": [
+    {
+      "language": "language:deep-speech"
+    }
+  ],
+  "legendary": {
+    "actions": 3
+  },
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The aboleth can breathe air and water.",
+        "plain": "The aboleth can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Eldritch Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If destroyed, the aboleth gains a new body in 5d10 days, reviving with all its Hit Points in the Far Realm or another location chosen by the GM.",
+        "plain": "If destroyed, the aboleth gains a new body in 5d10 days, reviving with all its Hit Points in the Far Realm or another location chosen by the GM.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Legendary Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the aboleth fails a saving throw, it can choose to succeed instead.",
+        "plain": "If the aboleth fails a saving throw, it can choose to succeed instead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Mucus Cloud",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While underwater, the aboleth is surrounded by mucus. _Constitution Saving Throw:_ DC 14, each creature in a 5-foot Emanation originating from the aboleth at the end of the aboleth's turn. _Failure:_ The target is cursed. Until the curse ends, the target's skin becomes slimy, the target can breathe air and water, and it can't regain Hit Points unless it is underwater.\n\nWhile the cursed creature is outside a body of water, the creature takes 6 (1d12) Acid damage at the end of every 10 minutes unless moisture is applied to its skin before those minutes have passed.",
+        "plain": "While underwater, the aboleth is surrounded by mucus. Constitution Saving Throw: DC 14, each creature in a 5-foot Emanation originating from the aboleth at the end of the aboleth's turn. Failure: The target is cursed. Until the curse ends, the target's skin becomes slimy, the target can breathe air and water, and it can't regain Hit Points unless it is underwater.\n\nWhile the cursed creature is outside a body of water, the creature takes 6 (1d12) Acid damage at the end of every 10 minutes unless moisture is applied to its skin before those minutes have passed.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Probing Telepathy",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If a creature the aboleth can see communicates telepathically with the aboleth, the aboleth learns the creature's greatest desires.",
+        "plain": "If a creature the aboleth can see communicates telepathically with the aboleth, the aboleth learns the creature's greatest desires.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The aboleth makes two Tentacle attacks and uses either Consume Memories or Dominate Mind if available.",
+        "plain": "The aboleth makes two Tentacle attacks and uses either Consume Memories or Dominate Mind if available.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tentacle",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +9, reach 15 ft. _Hit:_ 12 (2d6 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of four tentacles.",
+        "plain": "Melee Attack Roll: +9, reach 15 ft. Hit: 12 (2d6 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of four tentacles.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Consume Memories",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Intelligence Saving Throw:_ DC 16, one creature within 30 feet that is Charmed or Grappled by the aboleth. _Failure:_ 10 (3d6) Psychic damage. _Success:_ Half damage. _Failure or Success:_ The aboleth gains the target's memories if the target is a Humanoid and is reduced to 0 Hit Points by this action.",
+        "plain": "Intelligence Saving Throw: DC 16, one creature within 30 feet that is Charmed or Grappled by the aboleth. Failure: 10 (3d6) Psychic damage. Success: Half damage. Failure or Success: The aboleth gains the target's memories if the target is a Humanoid and is reduced to 0 Hit Points by this action.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Dominate Mind",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Wisdom Saving Throw:_ DC 16, one creature the aboleth can see within 30 feet. _Failure:_ The target has the Charmed condition until the aboleth dies or is on a different plane of existence from the target. While Charmed, the target acts as an ally to the aboleth and is under its control while within 60 feet of it. In addition, the aboleth and the target can communicate telepathically with each other over any distance.\n\nThe target repeats the save whenever it takes damage as well as after every 24 hours it spends at least 1 mile away from the aboleth, ending the effect on itself on a success.",
+        "plain": "Wisdom Saving Throw: DC 16, one creature the aboleth can see within 30 feet. Failure: The target has the Charmed condition until the aboleth dies or is on a different plane of existence from the target. While Charmed, the target acts as an ally to the aboleth and is under its control while within 60 feet of it. In addition, the aboleth and the target can communicate telepathically with each other over any distance.\n\nThe target repeats the save whenever it takes damage as well as after every 24 hours it spends at least 1 mile away from the aboleth, ending the effect on itself on a success.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Lash",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "The aboleth makes one Tentacle attack.",
+        "plain": "The aboleth makes one Tentacle attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Psychic Drain",
+      "section": "stat-block-section:legendary-action",
+      "text": {
+        "formatted": "If the aboleth has at least one creature Charmed or Grappled, it uses Consume Memories and regains 5 (1d10) Hit Points.",
+        "plain": "If the aboleth has at least one creature Charmed or Grappled, it uses Consume Memories and regains 5 (1d10) Hit Points.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

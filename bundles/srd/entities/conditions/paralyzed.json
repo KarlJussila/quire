@@ -1,0 +1,71 @@
+{
+  "id": "condition:paralyzed",
+  "name": "Paralyzed",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- A Paralyzed creature is Incapacitated (see the condition) and can't move or speak.\n- The creature automatically fails Strength and Dexterity saving throws.\n- Attack rolls against the creature have advantage.\n- Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.",
+    "plain": "A Paralyzed creature is Incapacitated (see the condition) and can't move or speak.\nThe creature automatically fails Strength and Dexterity saving throws.\nAttack rolls against the creature have advantage.\nAny attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.",
+    "wording": "srd"
+  },
+  "implies": [
+    "condition:incapacitated"
+  ],
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:move",
+        "restriction:speak"
+      ]
+    },
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": [
+            "ability:str",
+            "ability:dex"
+          ]
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any"
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "forced-result",
+      "crit": true,
+      "when": {
+        "event": "event:roll-resolved",
+        "by": {
+          "pool": "any",
+          "where": {
+            "within": 5
+          }
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "state:warlock/investment-of-the-chain-master-damage-choice",
+  "name": "Investment of the Chain Master: Damage Choice",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "The familiar can replace bludgeoning, piercing, or slashing damage with necrotic or radiant damage."
+  },
+  "ends": [
+    {
+      "event": "event:state-ended",
+      "subject": "self",
+      "match": {
+        "state": "state:familiar"
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "dealsDamage": "damage-type:bludgeoning"
+        }
+      },
+      "set": {
+        "outcomes": {
+          "$where": {
+            "damage": {
+              "type": "damage-type:bludgeoning"
+            }
+          },
+          "damage": {
+            "type": {
+              "$replace": {
+                "choose": {
+                  "key": "familiar-damage-type",
+                  "name": "Damage Type",
+                  "by": "source",
+                  "from": [
+                    "damage-type:bludgeoning",
+                    "damage-type:necrotic",
+                    "damage-type:radiant"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "dealsDamage": "damage-type:piercing"
+        }
+      },
+      "set": {
+        "outcomes": {
+          "$where": {
+            "damage": {
+              "type": "damage-type:piercing"
+            }
+          },
+          "damage": {
+            "type": {
+              "$replace": {
+                "choose": {
+                  "key": "familiar-damage-type-piercing",
+                  "name": "Damage Type",
+                  "by": "source",
+                  "from": [
+                    "damage-type:piercing",
+                    "damage-type:necrotic",
+                    "damage-type:radiant"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "dealsDamage": "damage-type:slashing"
+        }
+      },
+      "set": {
+        "outcomes": {
+          "$where": {
+            "damage": {
+              "type": "damage-type:slashing"
+            }
+          },
+          "damage": {
+            "type": {
+              "$replace": {
+                "choose": {
+                  "key": "familiar-damage-type-slashing",
+                  "name": "Damage Type",
+                  "by": "source",
+                  "from": [
+                    "damage-type:slashing",
+                    "damage-type:necrotic",
+                    "damage-type:radiant"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

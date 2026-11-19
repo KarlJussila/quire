@@ -1,0 +1,115 @@
+{
+  "id": "creature:duergar",
+  "name": "Duergar",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:lawful-evil",
+  "ac": 16,
+  "acFrom": [
+    "scale mail, shield"
+  ],
+  "hp": {
+    "average": 26,
+    "formula": "4d8 + 8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 25
+    }
+  },
+  "abilities": {
+    "ability:cha": 9,
+    "ability:con": 14,
+    "ability:dex": 11,
+    "ability:int": 11,
+    "ability:str": 14,
+    "ability:wis": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 10,
+  "xp": 200,
+  "cr": 1,
+  "languages": [
+    {
+      "language": "language:dwarvish"
+    },
+    {
+      "language": "language:undercommon"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:poison"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Duergar Resilience",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being Charmed or Paralyzed.",
+        "plain": "The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being Charmed or Paralyzed.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sunlight Sensitivity",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+        "plain": "While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Enlarge",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available.",
+        "plain": "For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "War Pick",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 6 (1d8 + 2) piercing damage, or 11 (2d8 + 2) piercing damage while enlarged.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) piercing damage, or 11 (2d8 + 2) piercing damage while enlarged.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Javelin",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Weapon Attack:_ +4 to hit, reach 5 ft. or range 30/120 ft., one target. _Hit:_ 5 (1d6 + 2) piercing damage, or 9 (2d6 + 2) piercing damage while enlarged.",
+        "plain": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage, or 9 (2d6 + 2) piercing damage while enlarged.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Invisibility",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The duergar magically turns Invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.",
+        "plain": "The duergar magically turns Invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

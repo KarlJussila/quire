@@ -1,0 +1,15 @@
+{
+ "id": "rule:not-optional",
+ "name": "Not Optional",
+ "source": {
+  "book": "core"
+ },
+ "overrides": [
+  {
+   "target": "feature:a",
+   "set": {
+    "name": "Renamed"
+   }
+  }
+ ]
+}

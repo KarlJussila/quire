@@ -1,0 +1,106 @@
+{
+  "id": "feature:barbarian/path-of-the-berserker/frenzy",
+  "name": "Frenzy",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of Exhaustion (as described in appendix PH-A).",
+    "plain": "Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of Exhaustion (as described in appendix PH-A).",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "frenzy",
+      "name": "Frenzy",
+      "trigger": {
+        "event": "event:state-applied",
+        "subject": "self",
+        "match": {
+          "state": "state:raging"
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "activities": [
+                {
+                  "key": "frenzied-attack",
+                  "name": "Frenzied Attack",
+                  "when": {
+                    "turn": "self"
+                  },
+                  "cost": [
+                    {
+                      "resource": "bonus-action"
+                    }
+                  ],
+                  "outcomes": [
+                    {
+                      "runs": [
+                        {
+                          "activity": {
+                            "kind": "activity",
+                            "where": {
+                              "match": {
+                                "delivery": {
+                                  "attack": {
+                                    "range": [
+                                      "melee",
+                                      "melee-or-ranged"
+                                    ],
+                                    "via": "weapon"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "times": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "effects": [
+                {
+                  "type": "triggered",
+                  "on": [
+                    {
+                      "event": "event:state-ended",
+                      "subject": "self",
+                      "match": {
+                        "state": "state:raging"
+                      }
+                    }
+                  ],
+                  "step": {
+                    "outcomes": [
+                      {
+                        "applyState": {
+                          "state": "condition:exhaustion"
+                        },
+                        "to": "self"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "ends": [
+              {
+                "event": "event:state-ended",
+                "subject": "self",
+                "match": {
+                  "state": "state:raging"
+                }
+              }
+            ]
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

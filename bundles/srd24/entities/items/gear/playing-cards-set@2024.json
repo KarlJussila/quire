@@ -1,0 +1,17 @@
+{
+  "id": "item:playing-cards-set@2024",
+  "name": "Playing Cards Set",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:gaming-set",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:sp"
+  },
+  "weight": 0.0
+}

@@ -1,0 +1,53 @@
+{
+  "id": "feature:monk/unarmored-movement@2024",
+  "name": "Level 2: Unarmored Movement",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your speed increases by 10 feet while you aren't wearing armor or wielding a Shield. This bonus increases when you reach certain Monk levels, as shown in the Monk Features table.",
+    "plain": "Your speed increases by 10 feet while you aren't wearing armor or wielding a Shield. This bonus increases when you reach certain Monk levels, as shown in the Monk Features table.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "movement-mode:walk": {
+            "speed": {
+              "$add": {
+                "byLevel": {
+                  "2": 10,
+                  "6": 15,
+                  "10": 20,
+                  "14": 25,
+                  "18": 30
+                },
+                "of": "class:monk"
+              }
+            }
+          }
+        }
+      },
+      "when": {
+        "not": {
+          "any": [
+            {
+              "has": "group:armor",
+              "match": {
+                "worn": true
+              }
+            },
+            {
+              "has": "group:shield",
+              "match": {
+                "held": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

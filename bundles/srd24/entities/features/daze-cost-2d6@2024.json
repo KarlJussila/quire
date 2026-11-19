@@ -1,0 +1,171 @@
+{
+  "id": "feature:daze-cost-2d6@2024",
+  "name": "Daze (Cost: 2d6)",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The target must succeed on a Constitution saving throw, or on its next turn, it can do only one of the following: move or take an action or a Bonus Action.",
+    "plain": "The target must succeed on a Constitution saving throw, or on its next turn, it can do only one of the following: move or take an action or a Bonus Action.",
+    "wording": "srd"
+  },
+  "values": {
+    "die-cost": 2
+  },
+  "activities": [
+    {
+      "key": "cunning-strike-daze",
+      "standalone": false,
+      "outcomes": [
+        {
+          "then": {
+            "target": {
+              "who": "subject"
+            },
+            "delivery": {
+              "save": {
+                "ability": "ability:con",
+                "dc": {
+                  "sum": [
+                    8,
+                    "modifiers.ability:dex",
+                    "proficiencyBonus"
+                  ]
+                }
+              }
+            },
+            "outcomes": [
+              {
+                "applyState": {
+                  "state": {
+                    "effects": [
+                      {
+                        "type": "triggered",
+                        "on": {
+                          "event": "event:turn-start",
+                          "subject": "self",
+                          "next": true
+                        },
+                        "step": {
+                          "outcomes": [
+                            {
+                              "applyState": {
+                                "state": {
+                                  "effects": [
+                                    {
+                                      "type": "forbid",
+                                      "restriction": [
+                                        "restriction:actions"
+                                      ],
+                                      "when": {
+                                        "any": [
+                                          {
+                                            "happened": {
+                                              "event": "event:activity-used",
+                                              "by": "self",
+                                              "match": {
+                                                "spent": "bonus-action"
+                                              },
+                                              "since": "turn-start"
+                                            }
+                                          },
+                                          {
+                                            "happened": {
+                                              "event": "event:moved",
+                                              "by": "self",
+                                              "since": "turn-start"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "type": "forbid",
+                                      "restriction": [
+                                        "restriction:bonus-actions"
+                                      ],
+                                      "when": {
+                                        "any": [
+                                          {
+                                            "happened": {
+                                              "event": "event:activity-used",
+                                              "by": "self",
+                                              "match": {
+                                                "spent": "action"
+                                              },
+                                              "since": "turn-start"
+                                            }
+                                          },
+                                          {
+                                            "happened": {
+                                              "event": "event:moved",
+                                              "by": "self",
+                                              "since": "turn-start"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "type": "forbid",
+                                      "restriction": [
+                                        "restriction:move"
+                                      ],
+                                      "when": {
+                                        "any": [
+                                          {
+                                            "happened": {
+                                              "event": "event:activity-used",
+                                              "by": "self",
+                                              "match": {
+                                                "spent": "action"
+                                              },
+                                              "since": "turn-start"
+                                            }
+                                          },
+                                          {
+                                            "happened": {
+                                              "event": "event:activity-used",
+                                              "by": "self",
+                                              "match": {
+                                                "spent": "bonus-action"
+                                              },
+                                              "since": "turn-start"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "ends": [
+                                    {
+                                      "event": "event:turn-end",
+                                      "subject": "self"
+                                    }
+                                  ]
+                                }
+                              },
+                              "to": "self"
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "ends": [
+                      {
+                        "event": "event:turn-start",
+                        "subject": "self",
+                        "next": true
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

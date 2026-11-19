@@ -1,0 +1,58 @@
+{
+  "id": "feature:paladin/paladins-smite@2024",
+  "name": "Level 2: Paladin's Smite",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You always have the Divine Smite spell prepared. In addition, you can cast it without expending a spell slot, but you must finish a Long Rest before you can cast it in this way again.",
+    "plain": "You always have the Divine Smite spell prepared. In addition, you can cast it without expending a spell slot, but you must finish a Long Rest before you can cast it in this way again.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "paladins-smite",
+      "name": "Paladin's Smite",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 2
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Cast Divine Smite without expending a spell slot.",
+            "gap": {
+              "category": "spell",
+              "name": "Divine Smite without a slot"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:divine-smite"
+      ],
+      "how": "prepared"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "creature:awakened-tree",
+  "name": "Awakened Tree",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:plant",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 59,
+    "formula": "7d12 + 14"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 15,
+    "ability:dex": 6,
+    "ability:int": 10,
+    "ability:str": 19,
+    "ability:wis": 10
+  },
+  "passivePerception": 10,
+  "xp": 450,
+  "cr": 2,
+  "languages": [
+    {
+      "text": "one language known by its creator"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing"
+      ]
+    },
+    {
+      "type": "defense",
+      "vulnerable": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "False Appearance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the tree remains motionless, it is indistinguishable from a normal tree.",
+        "plain": "While the tree remains motionless, it is indistinguishable from a normal tree.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Slam",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 10 ft., one target. _Hit:_ 14 (3d6 + 4) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 10 ft., one target. Hit: 14 (3d6 + 4) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "item:potion-of-water-breathing",
+  "name": "Potion of Water Breathing",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can breathe underwater for 1 hour after drinking this potion. Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.",
+    "plain": "You can breathe underwater for 1 hour after drinking this potion. Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.",
+    "wording": "srd"
+  },
+  "group": "group:potion",
+  "rarity": "rarity:uncommon",
+  "weight": 0.5
+}

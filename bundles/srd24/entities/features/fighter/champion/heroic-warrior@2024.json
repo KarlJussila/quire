@@ -1,0 +1,35 @@
+{
+  "id": "feature:fighter/champion/heroic-warrior@2024",
+  "name": "Level 10: Heroic Warrior",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The thrill of battle drives you toward victory. During combat, you can give yourself Heroic Inspiration whenever you start your turn without it.",
+    "plain": "The thrill of battle drives you toward victory. During combat, you can give yourself Heroic Inspiration whenever you start your turn without it.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "heroic-warrior",
+      "name": "Heroic Warrior",
+      "trigger": {
+        "event": "event:turn-start",
+        "by": "self",
+        "when": {
+          "compare": "pools.heroic-inspiration.current",
+          "atMost": 0
+        }
+      },
+      "outcomes": [
+        {
+          "pool": {
+            "resource": "heroic-inspiration",
+            "add": 1
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "roll:death-save",
+  "name": "Death Saving Throw",
+  "source": {
+    "book": "core"
+  },
+  "isA": "roll:save"
+}

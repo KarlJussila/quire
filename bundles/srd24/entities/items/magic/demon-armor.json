@@ -1,0 +1,229 @@
+{
+  "id": "item:demon-armor@2024",
+  "name": "Demon Armor",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor's clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n\n_**Curse.**_ Once you don this cursed armor, you can't doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+    "plain": "While wearing this armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor's clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n\nCurse. Once you don this cursed armor, you can't doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:very-rare",
+  "attunement": true,
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Armor",
+      "from": [
+        {
+          "kind": "item",
+          "where": {
+            "group": [
+              "group:light-armor",
+              "group:medium-armor",
+              "group:heavy-armor"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true,
+          "attuned": true
+        }
+      }
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "language:abyssal"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true,
+          "attuned": true
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "attack": {
+                "via": "unarmed"
+              }
+            }
+          }
+        }
+      },
+      "set": {
+        "outcomes": {
+          "$where": {
+            "damage": true
+          },
+          "damage": {
+            "amount": {
+              "$replace": "1d8"
+            },
+            "type": {
+              "$replace": "damage-type:slashing"
+            }
+          }
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true,
+          "attuned": true
+        }
+      },
+      "variant": "demon-armor-claws"
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "via": "unarmed"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "worn": true,
+              "attuned": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage",
+              "attack": {
+                "via": "unarmed"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "worn": true,
+              "attuned": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "subject": {
+              "pool": "any",
+              "where": {
+                "match": {
+                  "tags": "creature-tag:demon"
+                }
+              }
+            },
+            "match": {
+              "roll": "roll:attack"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "worn": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "subject": {
+              "pool": "any",
+              "where": {
+                "match": {
+                  "tags": "creature-tag:demon"
+                }
+              }
+            },
+            "match": {
+              "roll": "roll:save"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "worn": true
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-state",
+      "name": "Donning the armor curses you so you can’t doff it unless you are targeted by a Remove Curse spell or similar magic."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "The book does not define which other magic is “similar magic” and ends this curse."
+    }
+  ]
+}

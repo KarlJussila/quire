@@ -1,0 +1,28 @@
+{
+  "id": "subclass:rogue/thief@2024",
+  "name": "Thief",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Hunt for Treasure as a Classic Adventurer_\n\nA mix of burglar, treasure hunter, and explorer, you are the epitome of an adventurer. In addition to improving your agility and stealth, you gain abilities useful for delving into ruins and getting maximum benefit from the magic items you find there.",
+    "plain": "Hunt for Treasure as a Classic Adventurer\n\nA mix of burglar, treasure hunter, and explorer, you are the epitome of an adventurer. In addition to improving your agility and stealth, you gain abilities useful for delving into ruins and getting maximum benefit from the magic items you find there.",
+    "wording": "srd"
+  },
+  "class": "class:rogue",
+  "levels": {
+    "13": [
+      "feature:rogue/thief/use-magic-device@2024"
+    ],
+    "17": [
+      "feature:rogue/thief/thiefs-reflexes@2024"
+    ],
+    "3": [
+      "feature:rogue/thief/fast-hands@2024",
+      "feature:rogue/thief/second-story-work@2024"
+    ],
+    "9": [
+      "feature:rogue/thief/supreme-sneak@2024"
+    ]
+  }
+}

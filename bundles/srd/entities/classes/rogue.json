@@ -1,0 +1,81 @@
+{
+  "id": "class:rogue",
+  "name": "Rogue",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a rogue, you have the following class features.",
+    "plain": "As a rogue, you have the following class features.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d8",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:dex",
+      "atLeast": 13
+    },
+    "features": [
+      "feature:rogue/multiclass-proficiencies"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:rogue/expertise",
+      "feature:rogue/sneak-attack",
+      "feature:rogue/thieves-cant"
+    ],
+    "10": [
+      "feature:ability-score-improvement"
+    ],
+    "11": [
+      "feature:rogue/reliable-talent"
+    ],
+    "12": [
+      "feature:ability-score-improvement"
+    ],
+    "14": [
+      "feature:rogue/blindsense"
+    ],
+    "15": [
+      "feature:rogue/slippery-mind"
+    ],
+    "16": [
+      "feature:ability-score-improvement"
+    ],
+    "18": [
+      "feature:rogue/elusive"
+    ],
+    "19": [
+      "feature:ability-score-improvement"
+    ],
+    "2": [
+      "feature:rogue/cunning-action"
+    ],
+    "20": [
+      "feature:rogue/stroke-of-luck"
+    ],
+    "3": [
+      "feature:rogue/roguish-archetype"
+    ],
+    "4": [
+      "feature:ability-score-improvement"
+    ],
+    "5": [
+      "feature:rogue/uncanny-dodge"
+    ],
+    "7": [
+      "feature:rogue/evasion"
+    ],
+    "8": [
+      "feature:ability-score-improvement"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Roguish Archetype"
+  },
+  "firstClass": [
+    "feature:rogue/proficiencies"
+  ]
+}

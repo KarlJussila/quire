@@ -1,0 +1,18 @@
+{
+  "id": "rule:the-next-dawn@2024",
+  "name": "\"The Next Dawn\"",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Magic items often have charges or properties that recharge at the next dawn or some other specified time. If such an item is on a world or plane of existence where the specified event doesn't occur, the GM determines when the item recharges.",
+    "plain": "Magic items often have charges or properties that recharge at the next dawn or some other specified time. If such an item is on a world or plane of existence where the specified event doesn't occur, the GM determines when the item recharges.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

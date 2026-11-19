@@ -1,0 +1,89 @@
+{
+  "id": "creature:scout@2024",
+  "name": "Scout",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:neutral",
+  "ac": 13,
+  "hp": {
+    "average": 16,
+    "formula": "3d8 + 3"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 12,
+    "ability:dex": 14,
+    "ability:int": 11,
+    "ability:str": 11,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:nature": 4,
+    "skill:perception": 5,
+    "skill:stealth": 6,
+    "skill:survival": 5
+  },
+  "passivePerception": 15,
+  "xp": 100,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Implements",
+    "Individual"
+  ],
+  "gear": [
+    "Leather Armor",
+    "Longbow",
+    "Shortsword"
+  ],
+  "cr": 0.5,
+  "languages": [
+    {
+      "text": "Common plus one other language"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The scout makes two attacks, using Shortsword and Longbow in any combination.",
+        "plain": "The scout makes two attacks, using Shortsword and Longbow in any combination.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shortsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 5 (1d6 + 2) Piercing damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Longbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +4, range 150/600 ft. _Hit:_ 6 (1d8 + 2) Piercing damage.",
+        "plain": "Ranged Attack Roll: +4, range 150/600 ft. Hit: 6 (1d8 + 2) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "feature:elf/elven-lineage/drow@2024",
+  "name": "Drow",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Level 1: The range of your Darkvision increases to 120 feet. You also know the Dancing Lights cantrip. Level 3: Faerie Fire. Level 5: Darkness.",
+    "wording": "srd"
+  },
+  "group": "group:elven-lineage",
+  "effects": [
+    {
+      "type": "sense",
+      "sense": "sense:darkvision",
+      "range": 120
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:dancing-lights"
+      ],
+      "how": "known",
+      "ability": {
+        "chosen": "spellcasting-ability",
+        "from": "feature:elf/elven-lineage@2024"
+      }
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.total",
+        "atLeast": 3
+      },
+      "spells": [
+        "spell:faerie-fire"
+      ],
+      "how": "prepared",
+      "ability": {
+        "chosen": "spellcasting-ability",
+        "from": "feature:elf/elven-lineage@2024"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    },
+    {
+      "type": "spell-access",
+      "when": {
+        "compare": "levels.total",
+        "atLeast": 5
+      },
+      "spells": [
+        "spell:darkness"
+      ],
+      "how": "prepared",
+      "ability": {
+        "chosen": "spellcasting-ability",
+        "from": "feature:elf/elven-lineage@2024"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "rule:stabilizing@2024",
+  "name": "Stabilizing a Character",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can take the Help action to try to stabilize a creature with 0 Hit Points, which requires a successful DC 10 Wisdom (Medicine) check.\n\nA Stable creature doesn't make Death Saving Throws even though it has 0 Hit Points, but it still has the Unconscious condition. If the creature takes damage, it stops being Stable and starts making Death Saving Throws again. A Stable creature that isn't healed regains 1 Hit Point after 1d4 hours.",
+    "plain": "You can take the Help action to try to stabilize a creature with 0 Hit Points, which requires a successful DC 10 Wisdom (Medicine) check.\n\nA Stable creature doesn't make Death Saving Throws even though it has 0 Hit Points, but it still has the Unconscious condition. If the creature takes damage, it stops being Stable and starts making Death Saving Throws again. A Stable creature that isn't healed regains 1 Hit Point after 1d4 hours.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "stabilize",
+      "action": "action:help",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "has": "condition:unconscious"
+              },
+              {
+                "compare": "hp.current",
+                "atMost": 0
+              }
+            ]
+          }
+        }
+      },
+      "delivery": {
+        "check": {
+          "ability": "ability:wis",
+          "skill": "skill:medicine",
+          "dc": 10,
+          "by": "self"
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "state:stable"
+          }
+        }
+      ]
+    }
+  ],
+  "defines": [
+    "state:stable"
+  ]
+}

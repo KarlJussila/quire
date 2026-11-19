@@ -1,0 +1,62 @@
+{
+  "id": "class:warlock",
+  "name": "Warlock",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a warlock, you gain the following class features.",
+    "plain": "As a warlock, you gain the following class features.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d8",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:cha",
+      "atLeast": 13
+    },
+    "features": [
+      "feature:warlock/multiclass-proficiencies"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:warlock/otherworldly-patron",
+      "feature:warlock/pact-magic"
+    ],
+    "11": [
+      "feature:warlock/mystic-arcanum"
+    ],
+    "12": [
+      "feature:ability-score-improvement"
+    ],
+    "16": [
+      "feature:ability-score-improvement"
+    ],
+    "19": [
+      "feature:ability-score-improvement"
+    ],
+    "2": [
+      "feature:warlock/eldritch-invocations"
+    ],
+    "20": [
+      "feature:warlock/eldritch-master"
+    ],
+    "3": [
+      "feature:warlock/pact-boon"
+    ],
+    "4": [
+      "feature:ability-score-improvement"
+    ],
+    "8": [
+      "feature:ability-score-improvement"
+    ]
+  },
+  "subclass": {
+    "level": 1,
+    "title": "Otherworldly Patron"
+  },
+  "firstClass": [
+    "feature:warlock/proficiencies"
+  ]
+}

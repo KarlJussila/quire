@@ -1,0 +1,8 @@
+{
+  "id": "rarity:very-rare",
+  "name": "Very Rare",
+  "source": {
+    "book": "core"
+  },
+  "order": 4
+}

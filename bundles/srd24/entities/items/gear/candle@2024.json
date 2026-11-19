@@ -1,0 +1,18 @@
+{
+  "id": "item:candle@2024",
+  "name": "Candle",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "For 1 hour, a lit Candle sheds Bright Light in a 5-foot radius and Dim Light for an additional 5 feet.",
+    "plain": "For 1 hour, a lit Candle sheds Bright Light in a 5-foot radius and Dim Light for an additional 5 feet.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:cp"
+  },
+  "weight": 0.0
+}

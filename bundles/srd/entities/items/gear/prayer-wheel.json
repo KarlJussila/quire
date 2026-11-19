@@ -1,0 +1,12 @@
+{
+  "id": "item:prayer-wheel",
+  "name": "Prayer Wheel",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "A cylinder inscribed with prayers, spun as an act of devotion.",
+    "wording": "original"
+  },
+  "group": "group:adventuring-gear"
+}

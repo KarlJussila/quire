@@ -1,0 +1,7 @@
+{
+  "id": "restriction:wear-armor",
+  "name": "Wear Armor",
+  "source": {
+    "book": "core"
+  }
+}

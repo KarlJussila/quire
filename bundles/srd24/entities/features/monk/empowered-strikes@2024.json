@@ -1,0 +1,33 @@
+{
+  "id": "feature:monk/empowered-strikes@2024",
+  "name": "Level 6: Empowered Strikes",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Whenever you deal damage with your Unarmed Strike, it can deal your choice of Force damage or its normal damage type.",
+    "plain": "Whenever you deal damage with your Unarmed Strike, it can deal your choice of Force damage or its normal damage type.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "rule:unarmed-strike",
+      "variant": "empowered-strikes-force",
+      "set": {
+        "activities": {
+          "damage": {
+            "outcomes": {
+              "$where": {
+                "damage": true
+              },
+              "damage": {
+                "type": "damage-type:force"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

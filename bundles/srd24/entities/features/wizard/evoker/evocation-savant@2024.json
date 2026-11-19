@@ -1,0 +1,135 @@
+{
+  "id": "feature:wizard/evoker/evocation-savant@2024",
+  "name": "Level 3: Evocation Savant",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Choose two Wizard spells from the Evocation school, each of which must be no higher than level 2, and add them to your spellbook for free.\n\nIn addition, whenever you gain access to a new level of spell slots in this class, you can add one Wizard spell from the Evocation school to your spellbook for free. The chosen spell must be of a level for which you have spell slots.",
+    "plain": "Choose two Wizard spells from the Evocation school, each of which must be no higher than level 2, and add them to your spellbook for free.\n\nIn addition, whenever you gain access to a new level of spell slots in this class, you can add one Wizard spell from the Evocation school to your spellbook for free. The chosen spell must be of a level for which you have spell slots.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:level-gained",
+        "subject": "self",
+        "match": {
+          "class": "class:wizard"
+        },
+        "when": {
+          "compare": {
+            "byLevel": {
+              "3": 2,
+              "4": 0,
+              "5": 1,
+              "6": 0,
+              "7": 1,
+              "8": 0,
+              "9": 1,
+              "10": 0,
+              "11": 1,
+              "12": 0,
+              "13": 1,
+              "14": 0,
+              "15": 1,
+              "16": 0,
+              "17": 1,
+              "18": 0
+            },
+            "of": "class:wizard"
+          },
+          "atLeast": 1
+        }
+      },
+      "step": {
+        "range": {
+          "touch": true
+        },
+        "target": {
+          "count": 1,
+          "who": {
+            "pool": "object",
+            "where": {
+              "is": "item:spellbook"
+            }
+          }
+        },
+        "outcomes": [
+          {
+            "pool": {
+              "resource": "spellbook",
+              "add": {
+                "byLevel": {
+                  "3": 2,
+                  "4": 0,
+                  "5": 1,
+                  "6": 0,
+                  "7": 1,
+                  "8": 0,
+                  "9": 1,
+                  "10": 0,
+                  "11": 1,
+                  "12": 0,
+                  "13": 1,
+                  "14": 0,
+                  "15": 1,
+                  "16": 0,
+                  "17": 1,
+                  "18": 0
+                },
+                "of": "class:wizard"
+              },
+              "store": {
+                "choose": {
+                  "key": "savant-spells",
+                  "name": "Savant Spells",
+                  "count": {
+                    "byLevel": {
+                      "3": 2,
+                      "4": 0,
+                      "5": 1,
+                      "6": 0,
+                      "7": 1,
+                      "8": 0,
+                      "9": 1,
+                      "10": 0,
+                      "11": 1,
+                      "12": 0,
+                      "13": 1,
+                      "14": 0,
+                      "15": 1,
+                      "16": 0,
+                      "17": 1,
+                      "18": 0
+                    },
+                    "of": "class:wizard"
+                  },
+                  "distinct": true,
+                  "from": [
+                    {
+                      "kind": "spell",
+                      "where": {
+                        "match": {
+                          "lists": "class:wizard",
+                          "school": "spell-school:evocation",
+                          "level": {
+                            "atLeast": 1,
+                            "atMost": "spellcasting.class:wizard.spellLevel"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "to": "target"
+          }
+        ]
+      }
+    }
+  ]
+}

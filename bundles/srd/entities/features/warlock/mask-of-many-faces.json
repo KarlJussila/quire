@@ -1,0 +1,24 @@
+{
+  "id": "feature:warlock/mask-of-many-faces",
+  "name": "Mask of Many Faces",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can cast Disguise Self at will, without expending a spell slot.",
+    "plain": "You can cast Disguise Self at will, without expending a spell slot.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:disguise-self"
+      ],
+      "how": "innate"
+    }
+  ],
+  "activities": [],
+  "gaps": []
+}

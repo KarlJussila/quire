@@ -1,0 +1,23 @@
+{
+  "id": "state:warlock/chains-of-carceri-used",
+  "name": "Chains of Carceri Used on This Creature",
+  "source": {
+    "book": "srd"
+  },
+  "sourceName": "invoker",
+  "text": {
+    "formatted": "_Prerequisite: 15th level, Pact of the Chain feature_\n\nYou can cast Hold Monster at will — targeting a celestial, fiend, or elemental — without expending a spell slot or material components. You must finish a long rest before you can use this invocation on the same creature again.",
+    "plain": "Prerequisite: 15th level, Pact of the Chain feature\n\nYou can cast Hold Monster at will — targeting a celestial, fiend, or elemental — without expending a spell slot or material components. You must finish a long rest before you can use this invocation on the same creature again.",
+    "wording": "srd"
+  },
+  "ends": [
+    {
+      "event": "event:rest-finished",
+      "match": {
+        "rest": "rest:long"
+      },
+      "subject": "source"
+    }
+  ],
+  "stacks": "separate"
+}

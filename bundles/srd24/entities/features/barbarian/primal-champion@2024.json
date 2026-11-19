@@ -1,0 +1,60 @@
+{
+  "id": "feature:barbarian/primal-champion@2024",
+  "name": "Level 20: Primal Champion",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You embody primal power. Your Strength and Constitution scores increase by 4, to a maximum of 25.",
+    "plain": "You embody primal power. Your Strength and Constitution scores increase by 4, to a maximum of 25.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:str": {
+            "$add": {
+              "amount": 4,
+              "upTo": 25
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilityMaximums": {
+          "ability:str": {
+            "$atLeast": 25
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:con": {
+            "$add": {
+              "amount": 4,
+              "upTo": 25
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilityMaximums": {
+          "ability:con": {
+            "$atLeast": 25
+          }
+        }
+      }
+    }
+  ]
+}

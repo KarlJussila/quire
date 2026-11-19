@@ -1,0 +1,10 @@
+{
+  "id": "sense:blindsight",
+  "name": "Blindsight",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

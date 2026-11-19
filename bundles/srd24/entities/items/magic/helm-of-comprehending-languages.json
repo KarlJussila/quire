@@ -1,0 +1,14 @@
+{
+  "id": "item:helm-of-comprehending-languages@2024",
+  "name": "Helm of Comprehending Languages",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this helm, you can cast Comprehend Languages from it.",
+    "plain": "While wearing this helm, you can cast Comprehend Languages from it.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon"
+}

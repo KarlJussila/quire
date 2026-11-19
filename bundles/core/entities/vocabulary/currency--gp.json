@@ -1,0 +1,12 @@
+{
+  "id": "currency:gp",
+  "name": "Gold Piece",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "cp": 100,
+  "symbol": "gp"
+}

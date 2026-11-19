@@ -1,0 +1,113 @@
+{
+  "id": "creature:ochre-jelly@2024",
+  "name": "Ochre Jelly",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:ooze",
+  "alignment": "alignment:unaligned",
+  "ac": 8,
+  "hp": {
+    "average": 52,
+    "formula": "7d10 + 14"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:climb": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 1,
+    "ability:con": 14,
+    "ability:dex": 6,
+    "ability:int": 2,
+    "ability:str": 15,
+    "ability:wis": 6
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    }
+  },
+  "passivePerception": 8,
+  "xp": 450,
+  "proficiencyBonus": 2,
+  "initiative": -2,
+  "habitat": [
+    "Underdark"
+  ],
+  "cr": 2,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:lightning",
+        "damage-type:slashing"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:acid"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:deafened",
+        "condition:exhaustion",
+        "condition:frightened",
+        "condition:grappled",
+        "condition:prone",
+        "condition:restrained"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Amorphous",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The jelly can move through a space as narrow as 1 inch without expending extra movement to do so.",
+        "plain": "The jelly can move through a space as narrow as 1 inch without expending extra movement to do so.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spider Climb",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The jelly can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+        "plain": "The jelly can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pseudopod",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 12 (3d6 + 2) Acid damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 12 (3d6 + 2) Acid damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Split",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "_Trigger:_ While the jelly is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. _Response:_ The jelly splits into two new **Ochre Jellies**. Each new jelly is one size smaller than the original jelly and acts on its Initiative. The original jelly's Hit Points are divided evenly between the new jellies (round down).",
+        "plain": "Trigger: While the jelly is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. Response: The jelly splits into two new Ochre Jellies. Each new jelly is one size smaller than the original jelly and acts on its Initiative. The original jelly's Hit Points are divided evenly between the new jellies (round down).",
+        "wording": "srd"
+      }
+    }
+  ]
+}

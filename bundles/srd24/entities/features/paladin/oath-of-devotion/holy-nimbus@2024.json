@@ -1,0 +1,82 @@
+{
+  "id": "feature:paladin/oath-of-devotion/holy-nimbus@2024",
+  "name": "Level 20: Holy Nimbus",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Bonus Action, you can imbue your Aura of Protection with holy power, granting the benefits below for 10 minutes or until you end them (no action required). Once you use this feature, you can't use it again until you finish a Long Rest. You can also restore your use of it by expending a level 5 spell slot (no action required).\n\n_**Holy Ward.**_ You have Advantage on any saving throw you are forced to make by a Fiend or an Undead.\n\n_**Radiant Damage.**_ Whenever an enemy starts its turn in the aura, that creature takes Radiant damage equal to your Charisma modifier plus your Proficiency Bonus.\n\n_**Sunlight.**_ The aura is filled with Bright Light that is sunlight.",
+    "plain": "As a Bonus Action, you can imbue your Aura of Protection with holy power, granting the benefits below for 10 minutes or until you end them (no action required). Once you use this feature, you can't use it again until you finish a Long Rest. You can also restore your use of it by expending a level 5 spell slot (no action required).\n\nHoly Ward. You have Advantage on any saving throw you are forced to make by a Fiend or an Undead.\n\nRadiant Damage. Whenever an enemy starts its turn in the aura, that creature takes Radiant damage equal to your Charisma modifier plus your Proficiency Bonus.\n\nSunlight. The aura is filled with Bright Light that is sunlight.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "holy-nimbus",
+      "name": "Holy Nimbus",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 20
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "state:paladin/oath-of-devotion/holy-nimbus@2024"
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "holy-nimbus-restore",
+      "name": "Holy Nimbus",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 20
+      },
+      "cost": [
+        {
+          "resource": {
+            "kind": "pool",
+            "where": {
+              "match": {
+                "group": "spell-slots",
+                "values": {
+                  "level": 5
+                }
+              }
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "pool": {
+            "resource": "holy-nimbus",
+            "add": 1
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

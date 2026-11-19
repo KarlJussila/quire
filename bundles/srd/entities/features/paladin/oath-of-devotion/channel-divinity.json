@@ -1,0 +1,16 @@
+{
+  "id": "feature:paladin/oath-of-devotion/channel-divinity",
+  "name": "Channel Divinity",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
+    "plain": "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
+    "wording": "srd"
+  },
+  "features": [
+    "feature:paladin/oath-of-devotion/channel-divinity-sacred-weapon",
+    "feature:paladin/oath-of-devotion/channel-divinity-turn-the-unholy"
+  ]
+}

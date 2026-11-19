@@ -1,0 +1,18 @@
+{
+  "id": "feature:rogue/thief/thiefs-reflexes@2024",
+  "name": "Level 17: Thief’s Reflexes",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You are adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal Initiative and your second turn at your Initiative minus 10.",
+    "plain": "You are adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal Initiative and your second turn at your Initiative minus 10.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Taking a second turn in the first combat round at initiative minus 10 is not modeled."
+    }
+  ]
+}

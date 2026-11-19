@@ -1,0 +1,18 @@
+{
+  "id": "item:rope-hempen-50-feet",
+  "name": "Rope, Hempen (50 feet)",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.",
+    "plain": "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:gp"
+  },
+  "weight": 10.0
+}

@@ -1,0 +1,145 @@
+{
+  "id": "table:travel-pace@2024",
+  "name": "Travel Pace",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "terrain",
+      "name": "Terrain"
+    },
+    {
+      "key": "maximum-pace",
+      "name": "Maximum Pace"
+    },
+    {
+      "key": "encounter-distance",
+      "name": "Encounter Distance"
+    },
+    {
+      "key": "foraging-dc",
+      "name": "Foraging DC"
+    },
+    {
+      "key": "navigation-dc",
+      "name": "Navigation DC"
+    },
+    {
+      "key": "search-dc",
+      "name": "Search DC"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "terrain": "Arctic",
+        "maximum-pace": "Fast\\*",
+        "encounter-distance": "6d6 × 10 feet",
+        "foraging-dc": "20",
+        "navigation-dc": "10",
+        "search-dc": "10"
+      }
+    },
+    {
+      "cells": {
+        "terrain": "Coastal",
+        "maximum-pace": "Normal",
+        "encounter-distance": "2d10 × 10 feet",
+        "foraging-dc": "10",
+        "navigation-dc": "5",
+        "search-dc": "15"
+      }
+    },
+    {
+      "cells": {
+        "terrain": "Desert",
+        "maximum-pace": "Normal",
+        "encounter-distance": "6d6 × 10 feet",
+        "foraging-dc": "20",
+        "navigation-dc": "10",
+        "search-dc": "10"
+      }
+    },
+    {
+      "cells": {
+        "terrain": "Forest",
+        "maximum-pace": "Normal",
+        "encounter-distance": "2d8 × 10 feet",
+        "foraging-dc": "10",
+        "navigation-dc": "15",
+        "search-dc": "15"
+      }
+    },
+    {
+      "cells": {
+        "terrain": "Grassland",
+        "maximum-pace": "Fast",
+        "encounter-distance": "6d6 × 10 feet",
+        "foraging-dc": "15",
+        "navigation-dc": "5",
+        "search-dc": "15"
+      }
+    },
+    {
+      "cells": {
+        "terrain": "Hill",
+        "maximum-pace": "Normal",
+        "encounter-distance": "2d10 × 10 feet",
+        "foraging-dc": "15",
+        "navigation-dc": "10",
+        "search-dc": "15"
+      }
+    },
+    {
+      "cells": {
+        "terrain": "Mountain",
+        "maximum-pace": "Slow",
+        "encounter-distance": "4d10 × 10 feet",
+        "foraging-dc": "20",
+        "navigation-dc": "15",
+        "search-dc": "20"
+      }
+    },
+    {
+      "cells": {
+        "terrain": "Swamp",
+        "maximum-pace": "Slow",
+        "encounter-distance": "2d8 × 10 feet",
+        "foraging-dc": "10",
+        "navigation-dc": "15",
+        "search-dc": "20"
+      }
+    },
+    {
+      "cells": {
+        "terrain": "Underdark",
+        "maximum-pace": "Normal",
+        "encounter-distance": "2d6 × 10 feet",
+        "foraging-dc": "20",
+        "navigation-dc": "10",
+        "search-dc": "20"
+      }
+    },
+    {
+      "cells": {
+        "terrain": "Urban",
+        "maximum-pace": "Normal",
+        "encounter-distance": "2d6 × 10 feet",
+        "foraging-dc": "20",
+        "navigation-dc": "15",
+        "search-dc": "15"
+      }
+    },
+    {
+      "cells": {
+        "terrain": "Waterborne",
+        "maximum-pace": "Special†",
+        "encounter-distance": "6d6 × 10 feet",
+        "foraging-dc": "15",
+        "navigation-dc": "10",
+        "search-dc": "15"
+      }
+    }
+  ]
+}

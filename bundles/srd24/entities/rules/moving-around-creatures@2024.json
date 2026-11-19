@@ -1,0 +1,66 @@
+{
+  "id": "rule:moving-around-creatures@2024",
+  "name": "Moving around Other Creatures",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "During your move, you can pass through the space of an ally, a creature that has the Incapacitated condition (see \"Rules Glossary\"), a Tiny creature, or a creature that is two sizes larger or smaller than you.\n\nAnother creature's space is Difficult Terrain for you unless that creature is Tiny or your ally.\n\nYou can't willingly end a move in a space occupied by another creature. If you somehow end a turn in a space with another creature, you have the Prone condition (see \"Rules Glossary\") unless you are Tiny or are of a larger size than the other creature.",
+    "plain": "During your move, you can pass through the space of an ally, a creature that has the Incapacitated condition (see \"Rules Glossary\"), a Tiny creature, or a creature that is two sizes larger or smaller than you.\n\nAnother creature's space is Difficult Terrain for you unless that creature is Tiny or your ally.\n\nYou can't willingly end a move in a space occupied by another creature. If you somehow end a turn in a space with another creature, you have the Prone condition (see \"Rules Glossary\") unless you are Tiny or are of a larger size than the other creature.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:turn-end",
+          "subject": "self",
+          "when": {
+            "prose": {
+              "text": "in another creatures space",
+              "gap": {
+                "category": "test",
+                "name": "in-another-creatures-space"
+              }
+            }
+          }
+        }
+      ],
+      "when": {
+        "not": {
+          "any": [
+            {
+              "match": {
+                "size": "size:tiny"
+              }
+            },
+            {
+              "prose": {
+                "text": "larger than that creature",
+                "gap": {
+                  "category": "test",
+                  "name": "larger-than-that-creature"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "applyState": {
+              "state": "condition:prone"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

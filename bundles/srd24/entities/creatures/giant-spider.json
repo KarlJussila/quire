@@ -1,0 +1,87 @@
+{
+  "id": "creature:giant-spider@2024",
+  "name": "Giant Spider",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 14,
+  "hp": {
+    "average": 26,
+    "formula": "4d10 + 4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:climb": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 4,
+    "ability:con": 12,
+    "ability:dex": 16,
+    "ability:int": 2,
+    "ability:str": 14,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:perception": 4,
+    "skill:stealth": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 200,
+  "proficiencyBonus": 2,
+  "initiative": 3,
+  "cr": 1,
+  "blocks": [
+    {
+      "name": "Spider Climb",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The spider can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+        "plain": "The spider can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Web Walker",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The spider ignores movement restrictions caused by webs, and it knows the location of any other creature in contact with the same web.",
+        "plain": "The spider ignores movement restrictions caused by webs, and it knows the location of any other creature in contact with the same web.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 7 (1d8 + 3) Piercing damage plus 7 (2d6) Poison damage.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage plus 7 (2d6) Poison damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Web",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 13, one creature the spider can see within 60 feet. _Failure:_ The target has the Restrained condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Poison and Psychic damage).",
+        "plain": "Dexterity Saving Throw: DC 13, one creature the spider can see within 60 feet. Failure: The target has the Restrained condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Poison and Psychic damage).",
+        "wording": "srd"
+      }
+    }
+  ]
+}

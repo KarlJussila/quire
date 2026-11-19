@@ -1,0 +1,71 @@
+{
+  "id": "feature:sorcerer/draconic-bloodline/dragon-wings",
+  "name": "Dragon Wings",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 14th level, you gain the ability to sprout a pair of dragon wings from your back, gaining a flying speed equal to your current speed. You can create these wings as a bonus action on your turn. They last until you dismiss them as a bonus action on your turn.\n\nYou can't manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them.",
+    "plain": "At 14th level, you gain the ability to sprout a pair of dragon wings from your back, gaining a flying speed equal to your current speed. You can create these wings as a bonus action on your turn. They last until you dismiss them as a bonus action on your turn.\n\nYou can't manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "dragon-wings",
+      "name": "Dragon Wings",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "sourceName": "Dragon Wings",
+              "effects": [
+                {
+                  "type": "speed",
+                  "mode": "movement-mode:fly",
+                  "speed": "speeds.movement-mode:walk.speed"
+                }
+              ]
+            },
+            "duration": "until-dispelled"
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "dismiss-dragon-wings",
+      "name": "Dismiss Dragon Wings",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "endState": {
+            "state": {
+              "kind": "state",
+              "where": {
+                "match": {
+                  "sourceName": "Dragon Wings"
+                }
+              }
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Armor must accommodate the wings, and manifesting them might destroy clothing."
+    }
+  ]
+}

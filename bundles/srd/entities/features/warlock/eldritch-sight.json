@@ -1,0 +1,22 @@
+{
+  "id": "feature:warlock/eldritch-sight",
+  "name": "Eldritch Sight",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can cast Detect Magic at will, without expending a spell slot.",
+    "plain": "You can cast Detect Magic at will, without expending a spell slot.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:detect-magic"
+      ],
+      "how": "innate"
+    }
+  ]
+}

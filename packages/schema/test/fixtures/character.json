@@ -1,0 +1,49 @@
+{
+  "format": 1,
+  "id": "4f9c2e1a-7b3d-4c5e-9f60-1a2b3c4d5e6f",
+  "name": "Ilsa",
+  "bundles": ["core", "srd24"],
+  "rules": {
+    "rule:experience-points": {"xp": 6500}
+  },
+  "abilities": {"ability:str": 8, "ability:dex": 15, "ability:con": 14, "ability:int": 15, "ability:wis": 10, "ability:cha": 12},
+  "species": {
+    "species": "species:elf@2024",
+    "chosen": {"feature:elf/elven-lineage@2024": {"lineage": "feature:elf/elven-lineage/high-elf@2024", "spellcasting-ability": "ability:int"}}
+  },
+  "background": {
+    "background": "background:sage@2024",
+    "chosen": {
+      "feature:sage/ability-scores@2024": {"ability-scores": {"ability:int": 2, "ability:con": 1}},
+      "feat:magic-initiate@2024": {"cantrips": ["spell:guidance", "spell:light"], "spell": "spell:bless", "spellcasting-ability": "ability:int"}
+    }
+  },
+  "firstClass": "class:wizard@2024",
+  "classes": {
+    "class:wizard@2024": [
+      {"hp": 6,
+       "chosen": {"feature:wizard/spellcasting@2024": {"cantrips": ["spell:fire-bolt", "spell:mage-hand", "spell:prestidigitation"]}}},
+      {"hp": 4},
+      {"hp": 4},
+      {"hp": 4,
+       "chosen": {
+         "feature:wizard/ability-score-improvement@2024": {"feat": "feat:ability-score-improvement@2024"},
+         "feat:ability-score-improvement@2024": {"ability": {"ability:int": 1, "ability:wis": 1}}
+       }}
+    ],
+    "class:fighter@2024": [
+      {"hp": 6,
+       "chosen": {"feature:fighter/fighting-style@2024": {"fighting-style": "feat:archery@2024"}}}
+    ]
+  },
+  "inventory": [
+    {"item": "item:armor-of-resistance@2024", "worn": true, "attuned": true,
+     "chosen": {"item:armor-of-resistance@2024": {"base": "item:studded-leather", "resistance": "damage-type:fire"}}},
+    {"item": "item:arrow@2024", "quantity": 18},
+    {"item": "item:bag-of-holding@2024", "contents": [{"item": "item:rope@2024", "quantity": 1}]}
+  ],
+  "currency": {"currency:gp": 112, "currency:sp": 4},
+  "hp": {"current": 23, "temp": 0},
+  "spent": {"hit-dice": 2, "spell-slot-1": 1, "arcane-recovery": 1},
+  "states": [{"state": "condition:poisoned"}, {"state": "condition:exhaustion@2024", "level": 1}]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "item:book",
+  "name": "Book",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook (described later in this section).",
+    "plain": "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook (described later in this section).",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 25,
+    "currency": "currency:gp"
+  },
+  "weight": 5.0
+}

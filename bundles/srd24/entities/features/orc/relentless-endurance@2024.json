@@ -1,0 +1,59 @@
+{
+  "id": "feature:orc/relentless-endurance@2024",
+  "name": "Relentless Endurance",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can't do so again until you finish a Long Rest.",
+    "plain": "When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can't do so again until you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "relentless-endurance",
+      "name": "Relentless Endurance",
+      "trigger": {
+        "event": "event:taking-damage",
+        "subject": "self",
+        "match": {
+          "remaining": 0
+        },
+        "when": {
+          "not": {
+            "compare": {
+              "event": "excess"
+            },
+            "atLeast": "hp.max"
+          }
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "intercept": {
+            "cancel": true
+          }
+        },
+        {
+          "setHp": 1,
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

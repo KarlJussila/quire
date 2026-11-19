@@ -1,0 +1,117 @@
+{
+  "id": "creature:young-brass-dragon",
+  "name": "Young Brass Dragon",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:chaotic-good",
+  "ac": 17,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 110,
+    "formula": "13d10 + 39"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:burrow": {
+      "speed": 20
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    }
+  },
+  "abilities": {
+    "ability:cha": 15,
+    "ability:con": 17,
+    "ability:dex": 10,
+    "ability:int": 12,
+    "ability:str": 19,
+    "ability:wis": 11
+  },
+  "saves": {
+    "ability:cha": 5,
+    "ability:con": 6,
+    "ability:dex": 3,
+    "ability:wis": 3
+  },
+  "skills": {
+    "skill:perception": 6,
+    "skill:persuasion": 5,
+    "skill:stealth": 3
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    },
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 16,
+  "xp": 2300,
+  "cr": 6,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes three attacks: one with its bite and two with its claws.",
+        "plain": "The dragon makes three attacks: one with its bite and two with its claws.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +7 to hit, reach 10 ft., one target. _Hit:_ 15 (2d10 + 4) piercing damage.",
+        "plain": "Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 15 (2d10 + 4) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +7 to hit, reach 5 ft., one target. _Hit:_ 11 (2d6 + 4) slashing damage.",
+        "plain": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Breath Weapons",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon uses one of the following breath weapons.\n\n- **Fire Breath.** The dragon exhales fire in a 40-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 42 (12d6) fire damage on a failed save, or half as much damage on a successful one.\n- **Sleep Breath.** The dragon exhales sleep gas in a 30-foot cone. Each creature in that area must succeed on a DC 14 Constitution saving throw or fall Unconscious for 5 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.",
+        "plain": "The dragon uses one of the following breath weapons.\n\n- Fire Breath. The dragon exhales fire in a 40-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 42 (12d6) fire damage on a failed save, or half as much damage on a successful one.\n- Sleep Breath. The dragon exhales sleep gas in a 30-foot cone. Each creature in that area must succeed on a DC 14 Constitution saving throw or fall Unconscious for 5 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

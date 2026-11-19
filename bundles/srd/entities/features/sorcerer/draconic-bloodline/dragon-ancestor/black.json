@@ -1,0 +1,15 @@
+{
+  "id": "feature:sorcerer/draconic-bloodline/dragon-ancestor/black",
+  "name": "Black",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Damage Type: Acid",
+    "wording": "srd"
+  },
+  "group": "group:dragon-ancestor",
+  "values": {
+    "damage-type": "damage-type:acid"
+  }
+}

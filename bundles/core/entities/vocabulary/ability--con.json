@@ -1,0 +1,12 @@
+{
+  "id": "ability:con",
+  "name": "Constitution",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "abbreviation": "Con",
+  "order": 3
+}

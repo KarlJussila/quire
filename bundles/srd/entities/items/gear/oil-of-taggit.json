@@ -1,0 +1,18 @@
+{
+  "id": "item:oil-of-taggit",
+  "name": "Oil of Taggit",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A creature subjected to this poison must succeed on a DC 13 Constitution saving throw or become Poisoned for 24 hours. The poisoned creature is Unconscious. The creature wakes up if it takes damage.",
+    "plain": "A creature subjected to this poison must succeed on a DC 13 Constitution saving throw or become Poisoned for 24 hours. The poisoned creature is Unconscious. The creature wakes up if it takes damage.",
+    "wording": "srd"
+  },
+  "group": "group:poison",
+  "cost": {
+    "amount": 400,
+    "currency": "currency:gp"
+  },
+  "weight": 0.5
+}

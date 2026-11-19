@@ -1,0 +1,84 @@
+{
+  "id": "item:bracers-of-archery",
+  "name": "Bracers of Archery",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing these bracers, you have proficiency with the longbow and shortbow, and you gain a +2 bonus to damage rolls on ranged attacks made with such weapons.",
+    "plain": "While wearing these bracers, you have proficiency with the longbow and shortbow, and you gain a +2 bonus to damage rolls on ranged attacks made with such weapons.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "weight": 0,
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "item:longbow",
+        "item:shortbow"
+      ],
+      "level": "proficient",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "any": [
+              {
+                "event": "event:roll-made",
+                "by": "self",
+                "match": {
+                  "attack": {
+                    "range": "ranged",
+                    "item": "item:longbow"
+                  }
+                }
+              },
+              {
+                "event": "event:roll-made",
+                "by": "self",
+                "match": {
+                  "attack": {
+                    "range": "ranged",
+                    "item": "item:shortbow"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

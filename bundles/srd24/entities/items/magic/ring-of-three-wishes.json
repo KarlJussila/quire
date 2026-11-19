@@ -1,0 +1,14 @@
+{
+  "id": "item:ring-of-three-wishes@2024",
+  "name": "Ring of Three Wishes",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While wearing this ring, you can expend 1 of its 3 charges to cast Wish from it. The ring becomes nonmagical when you use the last charge.",
+    "plain": "While wearing this ring, you can expend 1 of its 3 charges to cast Wish from it. The ring becomes nonmagical when you use the last charge.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:legendary"
+}

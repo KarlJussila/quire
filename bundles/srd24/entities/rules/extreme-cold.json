@@ -1,0 +1,68 @@
+{
+  "id": "rule:extreme-cold",
+  "name": "Extreme Cold",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When the temperature is 0 degrees Fahrenheit or lower, a creature exposed to the extreme cold must succeed on a DC 10 Constitution saving throw at the end of each hour or gain 1 Exhaustion level. Creatures that have Resistance or Immunity to Cold damage automatically succeed on the save.",
+    "plain": "When the temperature is 0 degrees Fahrenheit or lower, a creature exposed to the extreme cold must succeed on a DC 10 Constitution saving throw at the end of each hour or gain 1 Exhaustion level. Creatures that have Resistance or Immunity to Cold damage automatically succeed on the save.",
+    "wording": "srd"
+  },
+  "group": "group:adventure-rule",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:time-elapsed",
+        "every": {
+          "amount": 1,
+          "unit": "hour"
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "environment": "environment:extreme-cold"
+          },
+          {
+            "not": {
+              "defense": {
+                "resist": "damage-type:cold"
+              }
+            }
+          },
+          {
+            "not": {
+              "defense": {
+                "immune": "damage-type:cold"
+              }
+            }
+          }
+        ]
+      },
+      "step": {
+        "target": {
+          "who": "self"
+        },
+        "delivery": {
+          "save": {
+            "ability": "ability:con",
+            "dc": 10
+          }
+        },
+        "otherwise": [
+          {
+            "applyState": {
+              "state": "condition:exhaustion"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

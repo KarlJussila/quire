@@ -1,0 +1,28 @@
+{
+  "id": "subclass:wizard/school-of-evocation",
+  "name": "School of Evocation",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.",
+    "plain": "You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.",
+    "wording": "srd"
+  },
+  "class": "class:wizard",
+  "levels": {
+    "10": [
+      "feature:wizard/school-of-evocation/empowered-evocation"
+    ],
+    "14": [
+      "feature:wizard/school-of-evocation/overchannel"
+    ],
+    "2": [
+      "feature:wizard/school-of-evocation/evocation-savant",
+      "feature:wizard/school-of-evocation/sculpt-spells"
+    ],
+    "6": [
+      "feature:wizard/school-of-evocation/potent-cantrip"
+    ]
+  }
+}

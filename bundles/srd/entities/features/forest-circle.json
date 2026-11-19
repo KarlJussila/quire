@@ -1,0 +1,12 @@
+{
+  "id": "feature:forest-circle",
+  "name": "Forest Circle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "| Druid Level   | Circle Spells                            |\n|---------------|------------------------------------------|\n| 3rd           | Barkskin, Spider Climb           |\n| 5th           | Call Lightning, Plant Growth     |\n| 7th           | Divination, Freedom of Movement  |\n| 9th           | Commune with Nature, Tree Stride |",
+    "plain": "| Druid Level   | Circle Spells                            |\n|---------------|------------------------------------------|\n| 3rd           | Barkskin, Spider Climb           |\n| 5th           | Call Lightning, Plant Growth     |\n| 7th           | Divination, Freedom of Movement  |\n| 9th           | Commune with Nature, Tree Stride |",
+    "wording": "srd"
+  }
+}

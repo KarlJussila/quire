@@ -1,0 +1,11 @@
+{
+ "id": "ext",
+ "name": "Expansion",
+ "version": "1.0.0",
+ "releaseDate": "2020-11-17",
+ "requires": [
+  {
+   "bundle": "core"
+  }
+ ]
+}

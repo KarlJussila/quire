@@ -1,0 +1,139 @@
+{
+  "id": "table:food-drink-and-lodging",
+  "name": "Food, Drink, and Lodging",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "item",
+      "name": "Item"
+    },
+    {
+      "key": "cost",
+      "name": "Cost"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "item": "Ale, Gallon",
+        "cost": "2 sp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Ale, Mug",
+        "cost": "4 cp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Banquet (per person)",
+        "cost": "10 gp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Bread, loaf",
+        "cost": "2 cp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Cheese, hunk",
+        "cost": "1 sp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Inn Stay (per day), Squalid",
+        "cost": "7 cp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Inn Stay (per day), Poor",
+        "cost": "1 sp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Inn Stay (per day), Modest",
+        "cost": "5 sp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Inn Stay (per day), Comfortable",
+        "cost": "8 sp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Inn Stay (per day), Wealthy",
+        "cost": "2 gp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Inn Stay (per day), Aristocratic",
+        "cost": "4 gp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Meals (per day), Squalid",
+        "cost": "3 cp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Meals (per day), Poor",
+        "cost": "6 cp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Meals (per day), Modest",
+        "cost": "3 sp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Meals (per day), Comfortable",
+        "cost": "5 sp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Meals (per day), Wealthy",
+        "cost": "8 sp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Meals (per day), Aristocratic",
+        "cost": "2 gp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Meals (per day), Meat, chunk",
+        "cost": "3 sp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Wine, Common (pitcher)",
+        "cost": "2 sp"
+      }
+    },
+    {
+      "cells": {
+        "item": "Wine, Fine (bottle)",
+        "cost": "10 gp"
+      }
+    }
+  ]
+}

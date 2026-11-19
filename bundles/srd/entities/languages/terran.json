@@ -1,0 +1,13 @@
+{
+  "id": "language:terran",
+  "name": "Terran",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- **Languages** Auran, Terran",
+    "plain": "- Languages Auran, Terran",
+    "wording": "srd"
+  },
+  "speakers": "Earth elementals"
+}

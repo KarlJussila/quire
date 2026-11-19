@@ -1,0 +1,7 @@
+{
+  "id": "group:vehicle",
+  "name": "Vehicle",
+  "source": {
+    "book": "core"
+  }
+}

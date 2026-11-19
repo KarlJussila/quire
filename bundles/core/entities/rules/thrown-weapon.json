@@ -1,0 +1,52 @@
+{
+  "id": "rule:thrown-weapon",
+  "name": "Thrown",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A melee weapon with the Thrown property can also be thrown to make a ranged attack, with the same ability."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "object",
+    "where": {
+      "all": [
+        {
+          "group": "group:melee-weapon"
+        },
+        {
+          "match": {
+            "weapon": {
+              "properties": "weapon-property:thrown"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "attack": {
+                "item": "this"
+              }
+            }
+          }
+        }
+      },
+      "set": {
+        "delivery": {
+          "attack": {
+            "range": "melee-or-ranged"
+          }
+        }
+      }
+    }
+  ]
+}

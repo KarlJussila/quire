@@ -1,0 +1,17 @@
+{
+  "id": "item:whetstone",
+  "name": "Whetstone",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:cp"
+  },
+  "weight": 1.0
+}

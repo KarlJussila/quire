@@ -1,0 +1,96 @@
+{
+  "id": "feat:boon-of-fate@2024",
+  "name": "Boon of Fate",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain the following benefits.\n\n_**Ability Score Increase.**_ Increase one ability score of your choice by 1, to a maximum of 30.\n\n_**Improve Fate.**_ When you or another creature within 60 feet of you succeeds on or fails a D20 Test, you can roll 2d4 and apply the total rolled as a bonus or penalty to the d20 roll. Once you use this benefit, you can't use it again until you roll Initiative or finish a Short or Long Rest.",
+    "plain": "You gain the following benefits.\n\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\n\nImprove Fate. When you or another creature within 60 feet of you succeeds on or fails a D20 Test, you can roll 2d4 and apply the total rolled as a bonus or penalty to the d20 roll. Once you use this benefit, you can't use it again until you roll Initiative or finish a Short or Long Rest.",
+    "wording": "srd"
+  },
+  "group": "group:epic-boon",
+  "requires": {
+    "compare": "levels.total",
+    "atLeast": 19
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "$at": {
+            "choose": {
+              "key": "ability",
+              "name": "Ability Score Increase",
+              "from": [
+                {
+                  "kind": "ability"
+                }
+              ]
+            }
+          },
+          "$add": {
+            "amount": 1,
+            "upTo": 30
+          }
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "improve-fate",
+      "name": "Improve Fate",
+      "trigger": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any",
+          "where": {
+            "within": 60,
+            "of": "self"
+          }
+        },
+        "match": {
+          "roll": "roll:d20-test"
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:roll-made",
+              "by": "self",
+              "match": {
+                "roll": "roll:initiative"
+              }
+            },
+            "amount": "all"
+          },
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:short"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Roll 2d4 and apply the total as a bonus or penalty to the D20 Test roll.",
+            "gap": {
+              "category": "activity",
+              "name": "apply fate roll"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

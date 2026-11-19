@@ -1,0 +1,63 @@
+{
+  "id": "item:mithral-armor@2024",
+  "name": "Mithral Armor",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Mithral is a light, flexible metal. Armor made of this substance can be worn under normal clothes. If the armor normally imposes Disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn't.",
+    "plain": "Mithral is a light, flexible metal. Armor made of this substance can be worn under normal clothes. If the armor normally imposes Disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn't.",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:uncommon",
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Armor",
+      "from": [
+        {
+          "kind": "item",
+          "where": {
+            "all": [
+              {
+                "group": [
+                  "group:medium-armor",
+                  "group:heavy-armor"
+                ]
+              },
+              {
+                "not": {
+                  "is": "item:hide"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "this",
+      "set": {
+        "armor": {
+          "strength": {
+            "$delete": true
+          },
+          "stealthDisadvantage": {
+            "$delete": true
+          }
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "The schema has no equipment-concealment field for armor worn under normal clothes; the 2024 text applies this to armor made of mithral generally."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "item:blowgun",
+  "name": "Blowgun",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:martial-ranged-weapon",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 1.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:ammunition",
+      "weapon-property:loading"
+    ],
+    "damage": {
+      "amount": 1,
+      "type": "damage-type:piercing"
+    },
+    "range": {
+      "long": 100,
+      "normal": 25
+    }
+  }
+}

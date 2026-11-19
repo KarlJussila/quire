@@ -1,0 +1,77 @@
+{
+  "id": "creature:blink-dog",
+  "name": "Blink Dog",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fey",
+  "alignment": "alignment:lawful-good",
+  "ac": 13,
+  "hp": {
+    "average": 22,
+    "formula": "4d8 + 4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 12,
+    "ability:dex": 17,
+    "ability:int": 10,
+    "ability:str": 12,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:perception": 3,
+    "skill:stealth": 5
+  },
+  "passivePerception": 13,
+  "xp": 50,
+  "cr": 0.25,
+  "languages": [
+    {
+      "language": "language:blink-dog"
+    },
+    {
+      "language": "language:sylvan",
+      "understandsOnly": true
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Keen Hearing and Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The dog has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+        "plain": "The dog has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one target. _Hit:_ 4 (1d6 + 1) piercing damage.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Teleport",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dog magically teleports, along with any equipment it is wearing or carrying, up to 40 feet to an unoccupied space it can see. Before or after teleporting, the dog can make one bite attack.",
+        "plain": "The dog magically teleports, along with any equipment it is wearing or carrying, up to 40 feet to an unoccupied space it can see. Before or after teleporting, the dog can make one bite attack.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

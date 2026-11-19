@@ -1,0 +1,298 @@
+{
+  "id": "feature:warlock/pact-magic",
+  "name": "Pact Magic",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Your arcane research and the magic bestowed on you by your patron have given you facility with spells.",
+    "plain": "Your arcane research and the magic bestowed on you by your patron have given you facility with spells.",
+    "wording": "srd"
+  },
+  "group": "group:pact-magic-feature",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "class:warlock": {
+            "ability": "ability:cha",
+            "known": {
+              "$base": {
+                "byLevel": {
+                  "1": 2,
+                  "2": 3,
+                  "3": 4,
+                  "4": 5,
+                  "5": 6,
+                  "6": 7,
+                  "7": 8,
+                  "8": 9,
+                  "9": 10,
+                  "11": 11,
+                  "13": 12,
+                  "15": 13,
+                  "17": 14,
+                  "19": 15
+                },
+                "of": "class:warlock"
+              }
+            },
+            "cantrips": {
+              "$base": {
+                "byLevel": {
+                  "1": 2,
+                  "4": 3,
+                  "10": 4
+                },
+                "of": "class:warlock"
+              }
+            },
+            "spellLevel": {
+              "$base": {
+                "table": "table:pact-magic",
+                "column": "slot-level"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "cantrips",
+            "name": "Warlock Cantrips",
+            "count": "spellcasting.class:warlock.cantrips",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "level": 0,
+                    "lists": "class:warlock"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": "ability:cha"
+    },
+    {
+      "type": "resource",
+      "key": "pact-magic",
+      "group": "spell-slots",
+      "max": {
+        "table": "table:pact-magic",
+        "column": "slots"
+      },
+      "values": {
+        "level": {
+          "table": "table:pact-magic",
+          "column": "slot-level"
+        }
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:short"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "known",
+            "name": "Warlock Spells Known",
+            "count": "spellcasting.class:warlock.known",
+            "distinct": true,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:warlock",
+                    "level": {
+                      "atLeast": 1,
+                      "atMost": "spellcasting.class:warlock.spellLevel"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": "ability:cha"
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-spell",
+      "name": "Replace Known Spell",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self",
+        "match": {
+          "class": "class:warlock"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "what": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "level": {
+                        "atLeast": 1
+                      }
+                    }
+                  },
+                  {
+                    "grantedBy": "feature:warlock/pact-magic"
+                  }
+                ]
+              }
+            },
+            "with": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "lists": "class:warlock",
+                      "level": {
+                        "atLeast": 1
+                      }
+                    }
+                  },
+                  {
+                    "any": [
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:warlock",
+                              "atLeast": 1,
+                              "atMost": 2
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atMost": 1
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:warlock",
+                              "atLeast": 3,
+                              "atMost": 4
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atMost": 2
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:warlock",
+                              "atLeast": 5,
+                              "atMost": 6
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atMost": 3
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:warlock",
+                              "atLeast": 7,
+                              "atMost": 8
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atMost": 4
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:warlock",
+                              "atLeast": 9
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atMost": 5
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "spell-component",
+      "name": "The focus rule needs a way to identify spells cast as Warlock spells and waive only material parts with neither cost nor consumption."
+    }
+  ]
+}

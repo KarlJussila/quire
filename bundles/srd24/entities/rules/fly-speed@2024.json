@@ -1,0 +1,18 @@
+{
+  "id": "rule:fly-speed@2024",
+  "name": "Fly Speed",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Fly Speed can be used to travel through the air. While you have a Fly Speed, you can stay aloft until you land, fall, or die. _See also_ \"Flying\" and \"Speed.\"",
+    "plain": "A Fly Speed can be used to travel through the air. While you have a Fly Speed, you can stay aloft until you land, fall, or die. See also \"Flying\" and \"Speed.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

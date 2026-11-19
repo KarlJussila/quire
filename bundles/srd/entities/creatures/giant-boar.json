@@ -1,0 +1,67 @@
+{
+  "id": "creature:giant-boar",
+  "name": "Giant Boar",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 42,
+    "formula": "5d10 + 15"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 16,
+    "ability:dex": 10,
+    "ability:int": 2,
+    "ability:str": 17,
+    "ability:wis": 7
+  },
+  "passivePerception": 8,
+  "xp": 450,
+  "cr": 2,
+  "blocks": [
+    {
+      "name": "Charge",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the boar moves at least 20 feet straight toward a target and then hits it with a tusk attack on the same turn, the target takes an extra 7 (2d6) slashing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked Prone.",
+        "plain": "If the boar moves at least 20 feet straight toward a target and then hits it with a tusk attack on the same turn, the target takes an extra 7 (2d6) slashing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked Prone.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Relentless",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the boar takes 10 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.",
+        "plain": "If the boar takes 10 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tusk",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 10 (2d6 + 3) slashing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

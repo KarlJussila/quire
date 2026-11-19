@@ -1,0 +1,30 @@
+{
+  "id": "item:ring-of-resistance-thunder",
+  "name": "Ring of Resistance, Thunder",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have resistance to one damage type while wearing this ring. The gem in the ring indicates the type, which the GM chooses or determines randomly.\n\n|   d10 | Damage Type   | Gem        |\n|-------|---------------|------------|\n|     1 | Acid          | Pearl      |\n|     2 | Cold          | Tourmaline |\n|     3 | Fire          | Garnet     |\n|     4 | Force         | Sapphire   |\n|     5 | Lightning     | Citrine    |\n|     6 | Necrotic      | Jet        |\n|     7 | Poison        | Amethyst   |\n|     8 | Psychic       | Jade       |\n|     9 | Radiant       | Topaz      |\n|    10 | Thunder       | Spinel     |",
+    "plain": "You have resistance to one damage type while wearing this ring. The gem in the ring indicates the type, which the GM chooses or determines randomly.\n\n|   d10 | Damage Type   | Gem        |\n|-------|---------------|------------|\n|     1 | Acid          | Pearl      |\n|     2 | Cold          | Tourmaline |\n|     3 | Fire          | Garnet     |\n|     4 | Force         | Sapphire   |\n|     5 | Lightning     | Citrine    |\n|     6 | Necrotic      | Jet        |\n|     7 | Poison        | Amethyst   |\n|     8 | Psychic       | Jade       |\n|     9 | Radiant       | Topaz      |\n|    10 | Thunder       | Spinel     |",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:thunder"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ]
+}

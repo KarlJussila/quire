@@ -1,0 +1,18 @@
+{
+  "id": "rule:hit-points@2024",
+  "name": "Hit Points",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Hit Points (HP) are a measure of how difficult it is to kill or destroy a creature or an object. Damage reduces Hit Points, and healing restores them. You can't have more Hit Points than your Hit Point maximum, and you can't have less than 0. _See also_ \"Breaking Objects\" and \"Playing the Game\" (\"Damage and Healing\").",
+    "plain": "Hit Points (HP) are a measure of how difficult it is to kill or destroy a creature or an object. Damage reduces Hit Points, and healing restores them. You can't have more Hit Points than your Hit Point maximum, and you can't have less than 0. See also \"Breaking Objects\" and \"Playing the Game\" (\"Damage and Healing\").",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

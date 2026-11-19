@@ -1,0 +1,7 @@
+{
+  "id": "roll:damage",
+  "name": "Damage Roll",
+  "source": {
+    "book": "core"
+  }
+}

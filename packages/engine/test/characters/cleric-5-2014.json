@@ -1,0 +1,112 @@
+{
+  "format": 1,
+  "id": "c5d6e7f8-3333-4c44-8555-666677778888",
+  "name": "Sister Anwen",
+  "bundles": ["core",  "srd"],
+  "abilities": {
+    "ability:str": 10,
+    "ability:dex": 12,
+    "ability:con": 14,
+    "ability:int": 8,
+    "ability:wis": 15,
+    "ability:cha": 13
+  },
+  "species": {
+    "species": "species:human",
+    "chosen": {
+      "feature:human/languages": {
+        "language": "language:elvish"
+      }
+    }
+  },
+  "background": {
+    "background": "background:acolyte",
+    "chosen": {
+      "feature:acolyte/languages": {
+        "languages": [
+          "language:celestial",
+          "language:dwarvish"
+        ]
+      }
+    }
+  },
+  "firstClass": "class:cleric",
+  "classes": {
+    "class:cleric": [
+      {
+        "hp": 8,
+        "chosen": {
+          "feature:cleric/proficiencies": {
+            "skills": [
+              "skill:history",
+              "skill:medicine"
+            ]
+          },
+          "feature:cleric/spellcasting": {
+            "prepared": [
+              "spell:guiding-bolt",
+              "spell:healing-word",
+              "spell:sanctuary",
+              "spell:aid",
+              "spell:hold-person",
+              "spell:prayer-of-healing",
+              "spell:warding-bond",
+              "spell:spirit-guardians",
+              "spell:dispel-magic"
+            ],
+            "cantrips": [
+              "spell:guidance",
+              "spell:sacred-flame",
+              "spell:spare-the-dying",
+              "spell:light"
+            ]
+          },
+          "feature:cleric/divine-domain": {
+            "subclass": "subclass:cleric/life-domain"
+          }
+        }
+      },
+      {
+        "hp": 5
+      },
+      {
+        "hp": 5
+      },
+      {
+        "hp": 5,
+        "chosen": {
+          "feature:ability-score-improvement": {
+            "improvement": "feature:ability-score-improvement/ability-score-increase"
+          },
+          "feature:ability-score-improvement/ability-score-increase": {
+            "ability": [
+              "ability:wis",
+              "ability:wis"
+            ]
+          }
+        }
+      },
+      {
+        "hp": 5
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "item": "item:chain-mail",
+      "worn": true
+    },
+    {
+      "item": "item:shield",
+      "held": true
+    },
+    {
+      "item": "item:mace",
+      "held": true
+    }
+  ],
+  "hp": {
+    "current": 38,
+    "temp": 0
+  }
+}

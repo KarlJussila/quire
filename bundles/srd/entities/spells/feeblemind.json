@@ -1,0 +1,48 @@
+{
+  "id": "spell:feeblemind",
+  "name": "Feeblemind",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality. The target takes 4d6 psychic damage and must make an Intelligence saving throw.\n\nOn a failed save, the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.\n\nAt the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.\n\nThe spell can also be ended by Greater Restoration, Heal, or Wish.",
+    "plain": "You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality. The target takes 4d6 psychic damage and must make an Intelligence saving throw.\n\nOn a failed save, the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.\n\nAt the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.\n\nThe spell can also be ended by Greater Restoration, Heal, or Wish.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "spell-mechanics",
+      "name": "save-delivery-unknown"
+    }
+  ],
+  "level": 8,
+  "school": "spell-school:enchantment",
+  "lists": [
+    "class:bard",
+    "class:druid",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a handful of clay, crystal, glass, or mineral spheres"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 150
+      },
+      "duration": "instant"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "format": 1,
+  "id": "de30a923-e71e-48b7-90aa-e3795f9188ba",
+  "name": "Orin Vale",
+  "bundles": ["core",  "srd24"],
+  "chosen": {
+    "rule:languages@2024": {
+      "languages": [
+        "language:elvish",
+        "language:draconic"
+      ]
+    }
+  },
+  "abilities": {
+    "ability:str": 8,
+    "ability:dex": 14,
+    "ability:con": 13,
+    "ability:int": 15,
+    "ability:wis": 12,
+    "ability:cha": 10
+  },
+  "species": {
+    "species": "species:dragonborn@2024",
+    "chosen": {
+      "feature:dragonborn/draconic-ancestry@2024": {
+        "ancestry": "feature:dragonborn/draconic-ancestry/red@2024"
+      }
+    }
+  },
+  "background": {
+    "background": "background:sage@2024",
+    "chosen": {
+      "feature:sage/ability-scores@2024": {
+        "ability-scores": {
+          "ability:int": 2,
+          "ability:con": 1
+        }
+      },
+      "feat:magic-initiate@2024": {
+        "class": "class:wizard",
+        "cantrips": [
+          "spell:light",
+          "spell:mage-hand"
+        ],
+        "spellcasting-ability": "ability:int",
+        "spell": "spell:shield"
+      }
+    }
+  },
+  "firstClass": "class:wizard@2024",
+  "classes": {
+    "class:wizard@2024": [
+      {
+        "hp": 6,
+        "chosen": {
+          "feature:wizard/proficiencies@2024": {
+            "skills": [
+              "skill:investigation",
+              "skill:insight"
+            ]
+          },
+          "feature:wizard/spellcasting@2024": {
+            "cantrips": [
+              "spell:fire-bolt",
+              "spell:mage-hand",
+              "spell:prestidigitation",
+              "spell:ray-of-frost"
+            ],
+            "prepared": [
+              "spell:magic-missile@2024",
+              "spell:shield@2024",
+              "spell:mage-armor@2024",
+              "spell:detect-magic@2024",
+              "spell:misty-step@2024",
+              "spell:scorching-ray@2024",
+              "spell:web@2024",
+              "spell:fireball@2024",
+              "spell:counterspell@2024"
+            ]
+          }
+        }
+      },
+      {
+        "hp": 4,
+        "chosen": {
+          "feature:wizard/scholar@2024": {
+            "scholar-skill": "skill:arcana"
+          }
+        }
+      },
+      {
+        "hp": 4,
+        "chosen": {
+          "feature:wizard/wizard-subclass@2024": {
+            "subclass": "subclass:wizard/evoker@2024"
+          }
+        }
+      },
+      {
+        "hp": 4,
+        "chosen": {
+          "feature:wizard/ability-score-improvement@2024": {
+            "feat": "feat:ability-score-improvement@2024"
+          },
+          "feat:ability-score-improvement@2024": {
+            "ability": {
+              "ability:int": 2
+            }
+          }
+        }
+      },
+      {
+        "hp": 4
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "item": "item:dagger@2024",
+      "held": true
+    },
+    {
+      "item": "item:spellbook@2024",
+      "holds": {
+        "spellbook": [
+          "spell:magic-missile@2024",
+          "spell:shield@2024",
+          "spell:mage-armor@2024",
+          "spell:detect-magic@2024",
+          "spell:find-familiar@2024",
+          "spell:sleep@2024",
+          "spell:burning-hands@2024",
+          "spell:feather-fall@2024",
+          "spell:misty-step@2024",
+          "spell:scorching-ray@2024",
+          "spell:invisibility@2024",
+          "spell:web@2024",
+          "spell:fireball@2024",
+          "spell:counterspell@2024",
+          "spell:thunderwave@2024",
+          "spell:shatter@2024",
+          "spell:lightning-bolt@2024"
+        ]
+      }
+    }
+  ],
+  "hp": {
+    "current": 32,
+    "temp": 0
+  }
+}

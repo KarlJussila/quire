@@ -1,0 +1,89 @@
+{
+  "id": "feature:cleric/divine-order@2024",
+  "name": "Level 1: Divine Order",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have dedicated yourself to one of the following sacred roles of your choice.\n\n_**Protector.**_ Trained for battle, you gain proficiency with Martial weapons and training with Heavy armor.\n\n_**Thaumaturge.**_ You know one extra cantrip from the Cleric spell list. In addition, your mystical connection to the divine gives you a bonus to your Intelligence (Arcana or Religion) checks. The bonus equals your Wisdom modifier (minimum of +1).",
+    "plain": "You have dedicated yourself to one of the following sacred roles of your choice.\n\nProtector. Trained for battle, you gain proficiency with Martial weapons and training with Heavy armor.\n\nThaumaturge. You know one extra cantrip from the Cleric spell list. In addition, your mystical connection to the divine gives you a bonus to your Intelligence (Arcana or Religion) checks. The bonus equals your Wisdom modifier (minimum of +1).",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "choose": {
+        "key": "divine-order",
+        "name": "Divine Order",
+        "from": [
+          {
+            "name": "Protector",
+            "of": [
+              {
+                "type": "proficiency",
+                "in": [
+                  "group:martial-weapon",
+                  "group:heavy-armor"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Thaumaturge",
+            "of": [
+              {
+                "type": "spell-access",
+                "spells": [
+                  {
+                    "choose": {
+                      "key": "divine-order-cantrip",
+                      "name": "Cleric Cantrip",
+                      "from": [
+                        {
+                          "kind": "spell",
+                          "where": {
+                            "match": {
+                              "lists": "class:cleric",
+                              "level": 0
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "how": "known",
+                "counts": false
+              },
+              {
+                "type": "change",
+                "of": "event",
+                "set": {
+                  "total": {
+                    "$add": {
+                      "max": [
+                        1,
+                        "modifiers.ability:wis"
+                      ]
+                    }
+                  }
+                },
+                "when": {
+                  "event": "event:roll-made",
+                  "by": "self",
+                  "match": {
+                    "roll": "roll:check",
+                    "ability": "ability:int",
+                    "skill": [
+                      "skill:arcana",
+                      "skill:religion"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

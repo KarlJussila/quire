@@ -1,0 +1,71 @@
+{
+  "id": "creature:dire-wolf",
+  "name": "Dire Wolf",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 14,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 37,
+    "formula": "5d10 + 10"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 15,
+    "ability:dex": 15,
+    "ability:int": 3,
+    "ability:str": 17,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 3,
+    "skill:stealth": 4
+  },
+  "passivePerception": 13,
+  "xp": 200,
+  "cr": 1,
+  "blocks": [
+    {
+      "name": "Keen Hearing and Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+        "plain": "The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pack Tactics",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "plain": "The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked Prone.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked Prone.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

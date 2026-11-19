@@ -1,0 +1,10 @@
+{
+  "id": "movement-mode:burrow",
+  "name": "Burrowing",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

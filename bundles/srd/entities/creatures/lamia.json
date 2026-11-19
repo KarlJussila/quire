@@ -1,0 +1,103 @@
+{
+  "id": "creature:lamia",
+  "name": "Lamia",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 13,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 97,
+    "formula": "13d10 + 26"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 16,
+    "ability:con": 15,
+    "ability:dex": 13,
+    "ability:int": 14,
+    "ability:str": 16,
+    "ability:wis": 15
+  },
+  "skills": {
+    "skill:deception": 7,
+    "skill:insight": 4,
+    "skill:stealth": 3
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 12,
+  "xp": 1100,
+  "cr": 4,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    },
+    {
+      "language": "language:common"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Innate Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The lamia's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components.\n\n- At will: Disguise Self (any humanoid form), Major Image\n- 3/day each: Charm Person, Mirror Image, Scrying, Suggestion\n- 1/day: Geas",
+        "plain": "The lamia's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components.\n\n- At will: Disguise Self (any humanoid form), Major Image\n- 3/day each: Charm Person, Mirror Image, Scrying, Suggestion\n- 1/day: Geas",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The lamia makes two attacks: one with its claws and one with its dagger or Intoxicating Touch.",
+        "plain": "The lamia makes two attacks: one with its claws and one with its dagger or Intoxicating Touch.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claws",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 14 (2d10 + 3) slashing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 14 (2d10 + 3) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Dagger",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 5 (1d4 + 3) piercing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Intoxicating Touch",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "Melee Spell Attack:_ +5 to hit, reach 5 ft., one creature. _Hit:_ The target is magically cursed for 1 hour. Until the curse ends, the target has disadvantage on Wisdom saving throws and all ability checks.",
+        "plain": "Melee Spell Attack: +5 to hit, reach 5 ft., one creature. Hit:_ The target is magically cursed for 1 hour. Until the curse ends, the target has disadvantage on Wisdom saving throws and all ability checks.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

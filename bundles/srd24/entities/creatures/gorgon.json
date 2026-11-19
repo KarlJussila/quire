@@ -1,0 +1,91 @@
+{
+  "id": "creature:gorgon@2024",
+  "name": "Gorgon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:construct",
+  "alignment": "alignment:unaligned",
+  "ac": 19,
+  "hp": {
+    "average": 114,
+    "formula": "12d10 + 48"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 18,
+    "ability:dex": 11,
+    "ability:int": 2,
+    "ability:str": 20,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 17,
+  "xp": 1800,
+  "proficiencyBonus": 3,
+  "initiative": 0,
+  "habitat": [
+    "Forest",
+    "Grassland",
+    "Hill"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 5,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:exhaustion",
+        "condition:petrified"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Gore",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +8, reach 5 ft. _Hit:_ 18 (2d12 + 5) Piercing damage. If the target is a Large or smaller creature and the gorgon moved 20+ feet straight toward it immediately before the hit, the target has the Prone condition.",
+        "plain": "Melee Attack Roll: +8, reach 5 ft. Hit: 18 (2d12 + 5) Piercing damage. If the target is a Large or smaller creature and the gorgon moved 20+ feet straight toward it immediately before the hit, the target has the Prone condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Petrifying Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 15, each creature in a 30-foot Cone. _First Failure:_ The target has the Restrained condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. _Second Failure:_ The target has the Petrified condition instead of the Restrained condition.",
+        "plain": "Constitution Saving Throw: DC 15, each creature in a 30-foot Cone. First Failure: The target has the Restrained condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. Second Failure: The target has the Petrified condition instead of the Restrained condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Trample",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 16, one creature within 5 feet that has the Prone condition. _Failure:_ 16 (2d10 + 5) Bludgeoning damage. _Success:_ Half damage.",
+        "plain": "Dexterity Saving Throw: DC 16, one creature within 5 feet that has the Prone condition. Failure: 16 (2d10 + 5) Bludgeoning damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

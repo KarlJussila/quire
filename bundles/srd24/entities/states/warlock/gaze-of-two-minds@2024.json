@@ -1,0 +1,48 @@
+{
+  "id": "state:warlock/gaze-of-two-minds@2024",
+  "name": "Gaze of Two Minds",
+  "source": {
+    "book": "srd24"
+  },
+  "sourceName": "connected creature",
+  "text": {
+    "plain": "A connection that records the linked creature as its source."
+  },
+  "ends": [
+    {
+      "event": "event:turn-end",
+      "subject": "self",
+      "next": true
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "when": {
+        "within": 60,
+        "of": "source"
+      },
+      "of": {
+        "kind": "activity",
+        "where": {
+          "spell": {
+            "kind": "spell",
+            "where": {
+              "match": {
+                "level": {
+                  "atLeast": 0
+                }
+              }
+            }
+          }
+        }
+      },
+      "set": {
+        "origin": {
+          "$replace": "source"
+        }
+      },
+      "variant": "linked-space"
+    }
+  ]
+}

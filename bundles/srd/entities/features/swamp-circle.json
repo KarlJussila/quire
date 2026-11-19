@@ -1,0 +1,72 @@
+{
+  "id": "feature:swamp-circle",
+  "name": "Swamp Circle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "| Druid Level   | Circle Spells                                |\n|---------------|----------------------------------------------|\n| 3rd           | Acid Arrow, Darkness                 |\n| 5th           | Water Walk, Stinking Cloud           |\n| 7th           | Freedom of Movement, Locate Creature |\n| 9th           | Insect Plague, Scrying               |",
+    "plain": "| Druid Level   | Circle Spells                                |\n|---------------|----------------------------------------------|\n| 3rd           | Acid Arrow, Darkness                 |\n| 5th           | Water Walk, Stinking Cloud           |\n| 7th           | Freedom of Movement, Locate Creature |\n| 9th           | Insect Plague, Scrying               |",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:darkness",
+        "spell:acid-arrow"
+      ],
+      "how": "prepared",
+      "counts": false,
+      "countsAs": "class:druid",
+      "when": {
+        "compare": "levels.class:druid",
+        "atLeast": 3
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:water-walk",
+        "spell:stinking-cloud"
+      ],
+      "how": "prepared",
+      "counts": false,
+      "countsAs": "class:druid",
+      "when": {
+        "compare": "levels.class:druid",
+        "atLeast": 5
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:freedom-of-movement",
+        "spell:locate-creature"
+      ],
+      "how": "prepared",
+      "counts": false,
+      "countsAs": "class:druid",
+      "when": {
+        "compare": "levels.class:druid",
+        "atLeast": 7
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:insect-plague",
+        "spell:scrying"
+      ],
+      "how": "prepared",
+      "counts": false,
+      "countsAs": "class:druid",
+      "when": {
+        "compare": "levels.class:druid",
+        "atLeast": 9
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": []
+}

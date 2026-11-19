@@ -1,0 +1,37 @@
+{
+  "id": "rule:truesight@2024",
+  "name": "Truesight",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you have Truesight, your vision is enhanced within a specified range. Within that range, your vision pierces through the following:\n\n- **Darkness.** You can see in normal and magical Darkness.\n- **Invisibility.** You see creatures and objects that have the Invisible condition.\n- **Visual Illusions.** Visual illusions appear transparent to you, and you automatically succeed on saving throws against them.\n- **Transformations.** You discern the true form of any creature or object you see that has been transformed by magic.\n- **Ethereal Plane.** You see into the Ethereal Plane.",
+    "plain": "If you have Truesight, your vision is enhanced within a specified range. Within that range, your vision pierces through the following:\n\n- Darkness. You can see in normal and magical Darkness.\n- Invisibility. You see creatures and objects that have the Invisible condition.\n- Visual Illusions. Visual illusions appear transparent to you, and you automatically succeed on saving throws against them.\n- Transformations. You discern the true form of any creature or object you see that has been transformed by magic.\n- Ethereal Plane. You see into the Ethereal Plane.",
+    "wording": "srd"
+  },
+  "group": "group:exploration",
+  "appliesTo": {
+    "pool": "any",
+    "where": {
+      "match": {
+        "senses": {
+          "sense:truesight": true
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "type": "see",
+      "range": "senses.sense:truesight.range",
+      "darkness": "bright",
+      "magicalDarkness": true,
+      "invisible": true,
+      "illusions": true,
+      "transformations": true,
+      "planes": [
+        "plane:ethereal"
+      ]
+    }
+  ]
+}

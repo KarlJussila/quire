@@ -1,0 +1,61 @@
+{
+  "id": "feature:warlock/the-fiend/fiendish-resilience",
+  "name": "Fiendish Resilience",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 10th level, you can choose one damage type when you finish a short or long rest. You gain resistance to that damage type until you choose a different one with this feature. Damage from magical weapons or silver weapons ignores this resistance.",
+    "plain": "Starting at 10th level, you can choose one damage type when you finish a short or long rest. You gain resistance to that damage type until you choose a different one with this feature. Damage from magical weapons or silver weapons ignores this resistance.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        {
+          "choose": {
+            "key": "fiendish-resilience",
+            "name": "Damage Type",
+            "from": [
+              {
+                "kind": "damage-type"
+              }
+            ]
+          }
+        }
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical",
+                "damage-qualifier:silvered"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-fiendish-resilience",
+      "name": "Replace Damage Type",
+      "trigger": {
+        "event": "event:rest-finished",
+        "subject": "self"
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "fiendish-resilience"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "stat-block-section:info",
+  "name": "Info",
+  "source": {
+    "book": "core"
+  },
+  "order": 0
+}

@@ -1,0 +1,21 @@
+{
+  "id": "feature:sorcerer/quickened-spell",
+  "name": "Quickened Spell",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you cast a spell that has a casting time of 1 action, you can spend 2 sorcery points to change the casting time to 1 bonus action for this casting.",
+    "plain": "When you cast a spell that has a casting time of 1 action, you can spend 2 sorcery points to change the casting time to 1 bonus action for this casting.",
+    "wording": "srd"
+  },
+  "group": "group:metamagic",
+  "effects": [],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "For this casting, change an action casting time to a Bonus Action for 2 Sorcery Points while preserving other costs."
+    }
+  ]
+}

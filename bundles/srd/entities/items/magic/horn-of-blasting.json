@@ -1,0 +1,113 @@
+{
+  "id": "item:horn-of-blasting",
+  "name": "Horn of Blasting",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can use an action to speak the horn's command word and then blow the horn, which emits a thunderous blast in a 30-foot cone that is audible 600 feet away. Each creature in the cone must make a DC 15 Constitution saving throw. On a failed save, a creature takes 5d6 thunder damage and is Deafened for 1 minute. On a successful save, a creature takes half as much damage and isn't deafened. Creatures and objects made of glass or crystal have disadvantage on the saving throw and take 10d6 thunder damage instead of 5d6.\n\nEach use of the horn's magic has a 20 percent chance of causing the horn to explode. The explosion deals 10d6 fire damage to the blower and destroys the horn.",
+    "plain": "You can use an action to speak the horn's command word and then blow the horn, which emits a thunderous blast in a 30-foot cone that is audible 600 feet away. Each creature in the cone must make a DC 15 Constitution saving throw. On a failed save, a creature takes 5d6 thunder damage and is Deafened for 1 minute. On a successful save, a creature takes half as much damage and isn't deafened. Creatures and objects made of glass or crystal have disadvantage on the saving throw and take 10d6 thunder damage instead of 5d6.\n\nEach use of the horn's magic has a 20 percent chance of causing the horn to explode. The explosion deals 10d6 fire damage to the blower and destroys the horn.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare",
+  "weight": 0,
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:activity-used",
+        "by": "self",
+        "match": {
+          "activity": "blow-the-horn"
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "random": {
+              "dice": "1d20",
+              "results": [
+                {
+                  "range": [
+                    1,
+                    4
+                  ],
+                  "outcomes": [
+                    {
+                      "damage": {
+                        "amount": "10d6",
+                        "type": "damage-type:fire"
+                      },
+                      "to": "self"
+                    },
+                    {
+                      "destroy": {},
+                      "to": "this"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "blow-the-horn",
+      "name": "Blow the Horn",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "area": {
+        "shape": "area-shape:cone",
+        "size": 30,
+        "origin": "self",
+        "affects": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        }
+      },
+      "delivery": {
+        "save": {
+          "ability": "ability:con",
+          "dc": 15
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "5d6",
+            "type": "damage-type:thunder"
+          }
+        },
+        {
+          "applyState": {
+            "state": "condition:deafened",
+            "duration": {
+              "amount": 1,
+              "unit": "minute"
+            }
+          }
+        }
+      ],
+      "otherwise": "half"
+    }
+  ],
+  "gaps": [
+    {
+      "category": "test",
+      "name": "Nothing says what a creature or an object is made of, so the creatures and objects in the cone made of glass or crystal can't be picked out for their disadvantage and 10d6 thunder damage."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "The blast's 600-foot audible range has no sound-propagation operation."
+    }
+  ]
+}

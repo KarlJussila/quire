@@ -1,0 +1,13 @@
+{
+  "id": "item:figurine-of-wondrous-power-goat-of-travail",
+  "name": "Figurine of Wondrous Power, Goat of Travail",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "This ivory statuette is one of a set of three unique goats. The Goat of Travail becomes a Giant Goat for up to 3 hours. Once it has been used, it can't be used again until 30 days have passed.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare"
+}

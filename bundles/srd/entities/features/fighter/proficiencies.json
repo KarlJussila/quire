@@ -1,0 +1,57 @@
+{
+  "id": "feature:fighter/proficiencies",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Armor: All armor, shields\nWeapons: Simple weapons, martial weapons\nTools: None\nSaving Throws: Strength, Constitution\nSkills: Choose two skills from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:str",
+        "ability:con"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:armor",
+        "group:shield"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon",
+        "group:martial-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              "skill:acrobatics",
+              "skill:animal-handling",
+              "skill:athletics",
+              "skill:history",
+              "skill:insight",
+              "skill:intimidation",
+              "skill:perception",
+              "skill:survival"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

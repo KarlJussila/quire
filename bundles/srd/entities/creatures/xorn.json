@@ -1,0 +1,137 @@
+{
+  "id": "creature:xorn",
+  "name": "Xorn",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:elemental",
+  "alignment": "alignment:neutral",
+  "ac": 19,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 73,
+    "formula": "7d8 + 42"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:burrow": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 22,
+    "ability:dex": 10,
+    "ability:int": 11,
+    "ability:str": 17,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 6,
+    "skill:stealth": 3
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    },
+    "sense:tremorsense": {
+      "range": 60
+    }
+  },
+  "passivePerception": 16,
+  "xp": 1800,
+  "cr": 5,
+  "languages": [
+    {
+      "language": "language:terran"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:adamantine",
+                "damage-qualifier:magical"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Earth Glide",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The xorn can burrow through nonmagical, unworked earth and stone. While doing so, the xorn doesn't disturb the material it moves through.",
+        "plain": "The xorn can burrow through nonmagical, unworked earth and stone. While doing so, the xorn doesn't disturb the material it moves through.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Stone Camouflage",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The xorn has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.",
+        "plain": "The xorn has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Treasure Sense",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The xorn can pinpoint, by scent, the location of precious metals and stones, such as coins and gems, within 60 feet of it.",
+        "plain": "The xorn can pinpoint, by scent, the location of precious metals and stones, such as coins and gems, within 60 feet of it.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The xorn makes three claw attacks and one bite attack.",
+        "plain": "The xorn makes three claw attacks and one bite attack.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 6 (1d6 + 3) slashing damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 13 (3d6 + 3) piercing damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (3d6 + 3) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

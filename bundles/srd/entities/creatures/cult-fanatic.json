@@ -1,0 +1,86 @@
+{
+  "id": "creature:cult-fanatic",
+  "name": "Cult Fanatic",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any-non-good",
+  "ac": 13,
+  "acFrom": [
+    "leather armor"
+  ],
+  "hp": {
+    "average": 33,
+    "formula": "6d8 + 6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 14,
+    "ability:con": 12,
+    "ability:dex": 14,
+    "ability:int": 10,
+    "ability:str": 11,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:deception": 4,
+    "skill:persuasion": 4,
+    "skill:religion": 2
+  },
+  "passivePerception": 11,
+  "xp": 450,
+  "cr": 2,
+  "languages": [
+    {
+      "text": "any one language (usually Common)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Dark Devotion",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The fanatic has advantage on saving throws against being Charmed or Frightened.",
+        "plain": "The fanatic has advantage on saving throws against being Charmed or Frightened.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The fanatic is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). The fanatic has the following cleric spells prepared:\n\n- Cantrips (at will): Light, Sacred Flame, Thaumaturgy\n- 1st level (4 slots): Command, Inflict Wounds, Shield of Faith\n- 2nd level (3 slots): Hold Person, Spiritual Weapon",
+        "plain": "The fanatic is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). The fanatic has the following cleric spells prepared:\n\n- Cantrips (at will): Light, Sacred Flame, Thaumaturgy\n- 1st level (4 slots): Command, Inflict Wounds, Shield of Faith\n- 2nd level (3 slots): Hold Person, Spiritual Weapon",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The fanatic makes two melee attacks.",
+        "plain": "The fanatic makes two melee attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Dagger",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Weapon Attack:_ +4 to hit, reach 5 ft. or range 20/60 ft., one creature. _Hit_: 4 (1d4 + 2) piercing damage.",
+        "plain": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one creature. Hit: 4 (1d4 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

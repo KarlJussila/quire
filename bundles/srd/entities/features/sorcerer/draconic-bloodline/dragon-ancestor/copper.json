@@ -1,0 +1,15 @@
+{
+  "id": "feature:sorcerer/draconic-bloodline/dragon-ancestor/copper",
+  "name": "Copper",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Damage Type: Acid",
+    "wording": "srd"
+  },
+  "group": "group:dragon-ancestor",
+  "values": {
+    "damage-type": "damage-type:acid"
+  }
+}

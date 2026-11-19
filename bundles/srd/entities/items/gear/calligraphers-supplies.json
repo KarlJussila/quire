@@ -1,0 +1,18 @@
+{
+  "id": "item:calligraphers-supplies",
+  "name": "Calligrapher’s Supplies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Calligraphy treats writing as a delicate, beautiful art. Calligraphers produce text that is pleasing to the eye, using a style that is difficult to forge. Their supplies also give them some ability to examine scripts and determine if they are legitimate, since a calligrapher’s training involves long hours of studying writing and attempting to replicate its style and design.\n\n***Components.*** Calligrapher’s supplies include ink, a dozen sheets of parchment, and three quills.\n\n***Arcana.*** Although calligraphy is of little help in deciphering the content of magical writings, proficiency with these supplies can aid in identifying who wrote a script of a magical nature.\n\n***History.*** This tool proficiency can augment the benefit of successful checks made to analyze or investigate ancient writings, scrolls, or other texts, including runes etched in stone or messages in frescoes or other displays.\n\n***Decipher Treasure Map.*** This tool proficiency grants you expertise in examining maps. You can make an Intelligence check to determine a map’s age, whether a map includes any hidden messages, or similar facts.\n\n##### CALLIGRAPHER’S SUPPLIES\n\n| Activity | DC |\n|---|---|\n| Identify writer of nonmagical script | 10 |\n| Determine writer's state of mind | 15 |\n| Spot forged text | 15 |\n| Forge a signature | 20 |",
+    "plain": "Calligraphy treats writing as a delicate, beautiful art. Calligraphers produce text that is pleasing to the eye, using a style that is difficult to forge. Their supplies also give them some ability to examine scripts and determine if they are legitimate, since a calligrapher’s training involves long hours of studying writing and attempting to replicate its style and design.\n\nComponents. Calligrapher’s supplies include ink, a dozen sheets of parchment, and three quills.\n\nArcana. Although calligraphy is of little help in deciphering the content of magical writings, proficiency with these supplies can aid in identifying who wrote a script of a magical nature.\n\nHistory. This tool proficiency can augment the benefit of successful checks made to analyze or investigate ancient writings, scrolls, or other texts, including runes etched in stone or messages in frescoes or other displays.\n\nDecipher Treasure Map. This tool proficiency grants you expertise in examining maps. You can make an Intelligence check to determine a map’s age, whether a map includes any hidden messages, or similar facts.\n\nCALLIGRAPHER’S SUPPLIES\n\nActivity\tDC\n\nIdentify writer of nonmagical script\t10\n\nDetermine writer's state of mind\t15\n\nSpot forged text\t15\n\nForge a signature\t20",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 5.0
+}

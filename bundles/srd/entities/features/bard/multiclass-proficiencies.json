@@ -1,0 +1,54 @@
+{
+  "id": "feature:bard/multiclass-proficiencies",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Proficiencies Gained: Light armor, one skill of your choice, one musical instrument of your choice",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skill",
+            "name": "Skill Proficiency",
+            "from": [
+              {
+                "kind": "skill"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "instrument",
+            "name": "Musical Instrument",
+            "from": [
+              {
+                "kind": "item",
+                "where": {
+                  "group": "group:musical-instrument"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

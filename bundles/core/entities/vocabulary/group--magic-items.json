@@ -1,0 +1,7 @@
+{
+  "id": "group:magic-items",
+  "name": "Magic Items",
+  "source": {
+    "book": "core"
+  }
+}

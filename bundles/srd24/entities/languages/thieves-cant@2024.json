@@ -1,0 +1,13 @@
+{
+  "id": "language:thieves-cant@2024",
+  "name": "Thieves' Cant",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A rare language — secret, or derived from another plane of existence, and so less widespread in the worlds of the Material Plane.",
+    "plain": "A rare language — secret, or derived from another plane of existence, and so less widespread in the worlds of the Material Plane.",
+    "wording": "srd"
+  },
+  "group": "group:rare-language"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "item:crystal-ball-of-true-seeing",
+  "name": "Crystal Ball of True Seeing",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Wondrous Item, Legendary (Requires Attunement)_\n\nWhile touching this crystal orb, you can cast Scrying (save DC 17) with it. In addition, you have Truesight with a range of 120 feet centered on the spell's sensor.",
+    "plain": "Wondrous Item, Legendary (Requires Attunement)\n\nWhile touching this crystal orb, you can cast Scrying (save DC 17) with it. In addition, you have Truesight with a range of 120 feet centered on the spell's sensor.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:legendary",
+  "attunement": true,
+  "weight": 0.0
+}

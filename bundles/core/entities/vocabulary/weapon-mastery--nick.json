@@ -1,0 +1,18 @@
+{
+  "id": "weapon-mastery:nick",
+  "name": "Nick",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you make the extra attack of the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn.",
+    "plain": "When you make the extra attack of the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "The same Light-property extra attack must run inside the Attack action without consuming another attack or a Bonus Action, still only once per turn. Removing a cost alone does not place it inside that action, and forgo:attack wrongly replaces a normal attack."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "feature:rogue/thief/use-magic-device",
+  "name": "Use Magic Device",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "By 13th level, you have learned enough about the workings of magic that you can improvise the use of items even when they are not intended for you. You ignore all class, race, and level requirements on the use of magic items.",
+    "plain": "By 13th level, you have learned enough about the workings of magic that you can improvise the use of items even when they are not intended for you. You ignore all class, race, and level requirements on the use of magic items.",
+    "wording": "srd"
+  },
+  "effects": [],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Ignoring class, race, and level requirements for using magic items is not modeled."
+    }
+  ]
+}

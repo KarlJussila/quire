@@ -1,0 +1,17 @@
+{
+  "id": "item:basket",
+  "name": "Basket",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 4,
+    "currency": "currency:sp"
+  },
+  "weight": 2.0
+}

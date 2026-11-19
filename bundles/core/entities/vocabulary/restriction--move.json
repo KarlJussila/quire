@@ -1,0 +1,7 @@
+{
+  "id": "restriction:move",
+  "name": "Move",
+  "source": {
+    "book": "core"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "rule:weapon-attack",
+  "name": "Weapon Attack",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A weapon gives whoever carries it an attack with it: a melee attack that uses Strength and deals the weapon's damage, held in one hand. What kind of weapon it is and the properties it has change that attack."
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "object",
+    "where": {
+      "match": {
+        "weapon": true
+      }
+    }
+  },
+  "activities": [
+    {
+      "key": "attack",
+      "name": "Attack",
+      "standalone": false,
+      "delivery": {
+        "attack": {
+          "range": "melee",
+          "via": "weapon",
+          "ability": "ability:str",
+          "item": "this",
+          "hands": 1
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "this.weapon.damage.amount",
+            "type": {
+              "of": "weapon"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

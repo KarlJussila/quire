@@ -1,0 +1,123 @@
+{
+  "id": "feature:rogue/evasion@2024",
+  "name": "Level 7: Evasion",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can nimbly dodge out of the way of certain dangers. When you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail. You can't use this feature if you have the Incapacitated condition.",
+    "plain": "You can nimbly dodge out of the way of certain dangers. When you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail. You can't use this feature if you have the Incapacitated condition.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:taking-damage",
+        "subject": "self",
+        "when": {
+          "all": [
+            {
+              "event": "event:roll-resolved",
+              "by": "self",
+              "match": {
+                "roll": "roll:save",
+                "ability": "ability:dex",
+                "success": true
+              }
+            },
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "match": {
+                    "delivery": {
+                      "save": {
+                        "ability": "ability:dex"
+                      }
+                    },
+                    "otherwise": "half"
+                  }
+                }
+              }
+            },
+            {
+              "not": {
+                "has": "condition:incapacitated"
+              }
+            }
+          ]
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "intercept": {
+              "set": {
+                "$replace": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:taking-damage",
+        "subject": "self",
+        "when": {
+          "all": [
+            {
+              "event": "event:roll-resolved",
+              "by": "self",
+              "match": {
+                "roll": "roll:save",
+                "ability": "ability:dex",
+                "success": false
+              }
+            },
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "match": {
+                    "delivery": {
+                      "save": {
+                        "ability": "ability:dex"
+                      }
+                    },
+                    "otherwise": "half"
+                  }
+                }
+              }
+            },
+            {
+              "not": {
+                "has": "condition:incapacitated"
+              }
+            }
+          ]
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "intercept": {
+              "set": {
+                "$replace": {
+                  "divide": {
+                    "event": "amount"
+                  },
+                  "by": 2,
+                  "round": "down"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

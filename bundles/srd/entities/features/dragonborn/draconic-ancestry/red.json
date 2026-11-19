@@ -1,0 +1,18 @@
+{
+  "id": "feature:dragonborn/draconic-ancestry/red",
+  "name": "Red",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Damage Type: Fire\nBreath Weapon: 15 ft. cone (Dex. save)",
+    "wording": "srd"
+  },
+  "group": "group:draconic-ancestry",
+  "values": {
+    "damage-type": "damage-type:fire",
+    "breath-shape": "area-shape:cone",
+    "breath-size": 15,
+    "breath-save": "ability:dex"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "movement-mode:climb",
+  "name": "Climbing",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

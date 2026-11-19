@@ -1,0 +1,113 @@
+{
+  "id": "feature:warlock/pact-of-the-chain@2024",
+  "name": "Pact of the Chain",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You learn the Find Familiar spell and can cast it as a Magic action without expending a spell slot.\n\nWhen you cast the spell, you choose one of the normal forms for your familiar or one of the following special forms: **Imp, Pseudodragon, Quasit, Skeleton, Sphinx of Wonder, Sprite,** or **Venomous Snake** (see \"Monsters\" for the familiar's stat block).\n\nAdditionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its Reaction.",
+    "plain": "You learn the Find Familiar spell and can cast it as a Magic action without expending a spell slot.\n\nWhen you cast the spell, you choose one of the normal forms for your familiar or one of the following special forms: Imp, Pseudodragon, Quasit, Skeleton, Sphinx of Wonder, Sprite, or Venomous Snake (see \"Monsters\" for the familiar's stat block).\n\nAdditionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its Reaction.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:find-familiar"
+      ],
+      "how": "known",
+      "countsAs": "class:warlock"
+    }
+  ],
+  "activities": [
+    {
+      "key": "cast-find-familiar",
+      "name": "Cast Find Familiar without a Spell Slot",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "cast": {
+            "spell": "spell:find-familiar",
+            "slot": false,
+            "set": {
+              "activities": {
+                "cast": {
+                  "time": {
+                    "$delete": true
+                  },
+                  "ritual": {
+                    "$delete": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "familiar-attack",
+      "name": "Familiar Attack",
+      "trigger": {
+        "event": "event:activity-used",
+        "by": "self",
+        "match": {
+          "action": "action:attack"
+        }
+      },
+      "cost": [
+        {
+          "forgo": "attack"
+        }
+      ],
+      "outcomes": [
+        {
+          "grant": {
+            "activity": {
+              "kind": "activity",
+              "where": {
+                "match": {
+                  "delivery": {
+                    "attack": true
+                  }
+                }
+              }
+            },
+            "cost": [
+              {
+                "resource": "reaction"
+              }
+            ]
+          },
+          "to": {
+            "pool": "any",
+            "where": {
+              "has": "state:familiar",
+              "source": "self"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "The eligible familiar creatures’ printed attack entries must be typed as activities for the granted attack to reach them."
+    },
+    {
+      "category": "content-dependency",
+      "name": "The shared familiar state and Find Familiar content still need the spell’s ordinary communication, dismissal, resummoning, and touch-delivery rules. This invocation supplies the form and sourced relationship."
+    },
+    {
+      "category": "content-dependency",
+      "name": "Find Familiar must supply its one-familiar lifecycle and a typed form selector before the invocation can extend that selector with its eight special forms. Its normal 2024 forms are Beasts of CR 0, without a Tiny-only restriction."
+    }
+  ]
+}

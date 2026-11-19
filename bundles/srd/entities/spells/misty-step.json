@@ -1,0 +1,36 @@
+{
+  "id": "spell:misty-step",
+  "name": "Misty Step",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see.",
+    "plain": "Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:conjuration",
+  "lists": [
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

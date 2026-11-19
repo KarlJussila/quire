@@ -1,0 +1,30 @@
+{
+  "id": "state:casting",
+  "name": "Casting",
+  "source": {
+    "book": "core"
+  },
+  "concentration": true,
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:turn-start",
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "pool": {
+              "resource": "action",
+              "spend": 1
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

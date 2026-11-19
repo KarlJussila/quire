@@ -1,0 +1,46 @@
+{
+  "id": "feature:ranger/expertise@2024",
+  "name": "Level 9: Expertise",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Choose two of your skill proficiencies with which you lack Expertise. You gain Expertise in those skills.",
+    "plain": "Choose two of your skill proficiencies with which you lack Expertise. You gain Expertise in those skills.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "level": "expertise",
+      "in": [
+        {
+          "choose": {
+            "key": "expertise",
+            "name": "Expertise",
+            "count": 2,
+            "from": [
+              {
+                "kind": "skill",
+                "where": {
+                  "all": [
+                    {
+                      "proficient": "candidate",
+                      "level": "proficient"
+                    },
+                    {
+                      "not": {
+                        "proficient": "candidate",
+                        "level": "expertise"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "spell:prayer-of-healing@2024",
+  "name": "Prayer of Healing",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Up to five creatures of your choice who remain within range for the spell's entire casting gain the benefits of a Short Rest and also regain 2d8 Hit Points. A creature can't be affected by this spell again until that creature finishes a Long Rest.\n\n_**Using a Higher-Level Spell Slot.**_ The healing increases by 1d8 for each spell slot level above 2.",
+    "plain": "Up to five creatures of your choice who remain within range for the spell's entire casting gain the benefits of a Short Rest and also regain 2d8 Hit Points. A creature can't be affected by this spell again until that creature finishes a Long Rest.\n\nUsing a Higher-Level Spell Slot. The healing increases by 1d8 for each spell slot level above 2.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:cleric",
+    "class:paladin"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "time": {
+        "amount": 10,
+        "unit": "minute"
+      },
+      "range": {
+        "distance": 30
+      },
+      "duration": "instant"
+    }
+  ]
+}

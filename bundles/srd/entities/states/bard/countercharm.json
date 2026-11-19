@@ -1,0 +1,76 @@
+{
+  "id": "state:bard/countercharm",
+  "name": "Countercharm Performance",
+  "source": {
+    "book": "srd"
+  },
+  "effects": [
+    {
+      "type": "zone",
+      "zone": {
+        "area": {
+          "shape": "area-shape:emanation",
+          "size": 30
+        },
+        "anchor": "self",
+        "affects": {
+          "pool": "ally",
+          "includeSelf": true,
+          "where": {
+            "perceives": {
+              "sense": "hearing",
+              "of": "source"
+            }
+          }
+        },
+        "effects": [
+          {
+            "type": "roll-mod",
+            "mode": "advantage",
+            "when": {
+              "event": "event:roll-made",
+              "by": "self",
+              "match": {
+                "roll": "roll:save",
+                "against": {
+                  "condition": [
+                    "condition:charmed",
+                    "condition:frightened"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "ends": [
+    {
+      "event": "event:turn-end",
+      "subject": "self",
+      "next": true
+    },
+    {
+      "event": "event:state-applied",
+      "subject": "self",
+      "match": {
+        "state": "condition:incapacitated"
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "end-countercharm",
+      "name": "End Countercharm",
+      "outcomes": [
+        {
+          "endState": {
+            "state": "state:bard/countercharm"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "item:periapt-of-proof-against-poison@2024",
+  "name": "Periapt of Proof against Poison",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This delicate silver chain has a brilliant-cut black gem pendant. While you wear it, you have Immunity to the Poisoned condition and Poison damage.",
+    "plain": "This delicate silver chain has a brilliant-cut black gem pendant. While you wear it, you have Immunity to the Poisoned condition and Poison damage.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned",
+        "damage-type:poison"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ]
+}

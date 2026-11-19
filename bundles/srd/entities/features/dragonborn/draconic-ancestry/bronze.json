@@ -1,0 +1,19 @@
+{
+  "id": "feature:dragonborn/draconic-ancestry/bronze",
+  "name": "Bronze",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Damage Type: Lightning\nBreath Weapon: 5 by 30 ft. line (Dex. save)",
+    "wording": "srd"
+  },
+  "group": "group:draconic-ancestry",
+  "values": {
+    "damage-type": "damage-type:lightning",
+    "breath-shape": "area-shape:line",
+    "breath-size": 30,
+    "breath-width": 5,
+    "breath-save": "ability:dex"
+  }
+}

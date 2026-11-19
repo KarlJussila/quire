@@ -1,0 +1,68 @@
+{
+  "id": "feature:druid/circle-of-the-land/natures-ward@2024",
+  "name": "Level 10: Nature’s Ward",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You are immune to the Poisoned condition, and you have Resistance to a damage type associated with your current land choice in the Circle Spells feature, as shown in the table.\n\n| Land Type   | Resistance   |\n|-------------|--------------|\n| Arid        | Fire         |\n| Polar       | Cold         |\n| Temperate   | Lightning    |\n| Tropical    | Poison       |",
+    "plain": "You are immune to the Poisoned condition, and you have Resistance to a damage type associated with your current land choice in the Circle Spells feature, as shown in the table.\n\n| Land Type   | Resistance   |\n|-------------|--------------|\n| Arid        | Fire         |\n| Polar       | Cold         |\n| Temperate   | Lightning    |\n| Tropical    | Poison       |",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:fire"
+      ],
+      "when": {
+        "has": "feature:druid/circle-of-the-land/circle-of-the-land-spells",
+        "chosen": {
+          "land": "Arid"
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ],
+      "when": {
+        "has": "feature:druid/circle-of-the-land/circle-of-the-land-spells",
+        "chosen": {
+          "land": "Polar"
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:lightning"
+      ],
+      "when": {
+        "has": "feature:druid/circle-of-the-land/circle-of-the-land-spells",
+        "chosen": {
+          "land": "Temperate"
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:poison"
+      ],
+      "when": {
+        "has": "feature:druid/circle-of-the-land/circle-of-the-land-spells",
+        "chosen": {
+          "land": "Tropical"
+        }
+      }
+    }
+  ]
+}

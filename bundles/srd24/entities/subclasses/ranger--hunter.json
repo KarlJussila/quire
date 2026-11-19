@@ -1,0 +1,28 @@
+{
+  "id": "subclass:ranger/hunter@2024",
+  "name": "Hunter",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Protect Nature and People from Destruction_\n\nYou stalk prey in the wilds and elsewhere, using your abilities as a Hunter to protect nature and people everywhere from forces that would destroy them.",
+    "plain": "Protect Nature and People from Destruction\n\nYou stalk prey in the wilds and elsewhere, using your abilities as a Hunter to protect nature and people everywhere from forces that would destroy them.",
+    "wording": "srd"
+  },
+  "class": "class:ranger",
+  "levels": {
+    "11": [
+      "feature:ranger/hunter/superior-hunters-prey@2024"
+    ],
+    "15": [
+      "feature:ranger/hunter/superior-hunters-defense@2024"
+    ],
+    "3": [
+      "feature:ranger/hunter/hunters-lore@2024",
+      "feature:ranger/hunter/hunters-prey@2024"
+    ],
+    "7": [
+      "feature:ranger/hunter/defensive-tactics@2024"
+    ]
+  }
+}

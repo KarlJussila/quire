@@ -1,0 +1,12 @@
+{
+  "id": "currency:pp",
+  "name": "Platinum Piece",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "cp": 1000,
+  "symbol": "pp"
+}

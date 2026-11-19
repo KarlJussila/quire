@@ -1,0 +1,153 @@
+{
+  "id": "creature:chain-devil",
+  "name": "Chain Devil",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 16,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 85,
+    "formula": "10d8 + 40"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 14,
+    "ability:con": 18,
+    "ability:dex": 15,
+    "ability:int": 11,
+    "ability:str": 18,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:cha": 5,
+    "ability:con": 7,
+    "ability:wis": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 11,
+  "telepathy": 120,
+  "xp": 3900,
+  "cr": 8,
+  "languages": [
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ],
+      "when": {
+        "not": {
+          "event": "event:taking-damage",
+          "subject": "self",
+          "match": {
+            "against": {
+              "qualifier": [
+                "damage-qualifier:magical",
+                "damage-qualifier:silvered"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Devil's Sight",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "Magical darkness doesn't impede the devil's darkvision.",
+        "plain": "Magical darkness doesn't impede the devil's darkvision.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The devil has advantage on saving throws against spells and other magical effects.",
+        "plain": "The devil has advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The devil makes two attacks with its chains.",
+        "plain": "The devil makes two attacks with its chains.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Chain",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +8 to hit, reach 10 ft., one target. _Hit:_ 11 (2d6 + 4) slashing damage. The target is Grappled (escape DC 14) if the devil isn't already grappling a creature. Until this grapple ends, the target is Restrained and takes 7 (2d6) piercing damage at the start of each of its turns.",
+        "plain": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 11 (2d6 + 4) slashing damage. The target is Grappled (escape DC 14) if the devil isn't already grappling a creature. Until this grapple ends, the target is Restrained and takes 7 (2d6) piercing damage at the start of each of its turns.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Animate Chains",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "Up to four chains the devil can see within 60 feet of it magically sprout razor-edged barbs and animate under the devil's control, provided that the chains aren't being worn or carried.\n\nEach animated chain is an object with AC 20, 20 hit points, resistance to piercing damage, and immunity to psychic and thunder damage. When the devil uses Multiattack on its turn, it can use each animated chain to make one additional chain attack. An animated chain can grapple one creature of its own but can't make attacks while grappling. An animated chain reverts to its inanimate state if reduced to 0 hit points or if the devil is Incapacitated or dies.",
+        "plain": "Up to four chains the devil can see within 60 feet of it magically sprout razor-edged barbs and animate under the devil's control, provided that the chains aren't being worn or carried.\n\nEach animated chain is an object with AC 20, 20 hit points, resistance to piercing damage, and immunity to psychic and thunder damage. When the devil uses Multiattack on its turn, it can use each animated chain to make one additional chain attack. An animated chain can grapple one creature of its own but can't make attacks while grappling. An animated chain reverts to its inanimate state if reduced to 0 hit points or if the devil is Incapacitated or dies.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Unnerving Mask",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "When a creature the devil can see starts its turn within 30 feet of the devil, the devil can create the illusion that it looks like one of the creature's departed loved ones or bitter enemies. If the creature can see the devil, it must succeed on a DC 14 Wisdom saving throw or be Frightened until the end of its turn.",
+        "plain": "When a creature the devil can see starts its turn within 30 feet of the devil, the devil can create the illusion that it looks like one of the creature's departed loved ones or bitter enemies. If the creature can see the devil, it must succeed on a DC 14 Wisdom saving throw or be Frightened until the end of its turn.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

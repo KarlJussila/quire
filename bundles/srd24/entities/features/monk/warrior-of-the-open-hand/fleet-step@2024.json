@@ -1,0 +1,19 @@
+{
+  "id": "feature:monk/warrior-of-the-open-hand/fleet-step@2024",
+  "name": "Level 11: Fleet Step",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you take a Bonus Action other than Step of the Wind, you can also use Step of the Wind immediately after that Bonus Action.",
+    "plain": "When you take a Bonus Action other than Step of the Wind, you can also use Step of the Wind immediately after that Bonus Action.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Use Step of the Wind immediately after a different Bonus Action finishes, retaining any Focus Point cost."
+    }
+  ],
+  "activities": []
+}

@@ -1,0 +1,30 @@
+{
+  "id": "feature:monk/monastic-tradition",
+  "name": "Monastic Tradition",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you reach 3rd level, you commit yourself to a monastic tradition, such as the Way of the Open Hand. Your tradition grants you features at 3rd level and again at 6th, 11th, and 17th level.",
+    "plain": "When you reach 3rd level, you commit yourself to a monastic tradition, such as the Way of the Open Hand. Your tradition grants you features at 3rd level and again at 6th, 11th, and 17th level.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "subclass",
+        "name": "Monastic Tradition",
+        "from": [
+          {
+            "kind": "subclass",
+            "where": {
+              "match": {
+                "class": "class:monk"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

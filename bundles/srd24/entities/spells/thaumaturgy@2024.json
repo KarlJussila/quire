@@ -1,0 +1,39 @@
+{
+  "id": "spell:thaumaturgy@2024",
+  "name": "Thaumaturgy",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You manifest a minor wonder within range. You create one of the effects below within range. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time.\n\n_**Altered Eyes.**_ You alter the appearance of your eyes for 1 minute.\n\n_**Booming Voice.**_ Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on Charisma (Intimidation) checks.\n\n_**Fire Play.**_ You cause flames to flicker, brighten, dim, or change color for 1 minute.\n\n_**Invisible Hand.**_ You instantaneously cause an unlocked door or window to fly open or slam shut.\n\n_**Phantom Sound.**_ You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.\n\n_**Tremors.**_ You cause harmless tremors in the ground for 1 minute.",
+    "plain": "You manifest a minor wonder within range. You create one of the effects below within range. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time.\n\nAltered Eyes. You alter the appearance of your eyes for 1 minute.\n\nBooming Voice. Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on Charisma (Intimidation) checks.\n\nFire Play. You cause flames to flicker, brighten, dim, or change color for 1 minute.\n\nInvisible Hand. You instantaneously cause an unlocked door or window to fly open or slam shut.\n\nPhantom Sound. You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.\n\nTremors. You cause harmless tremors in the ground for 1 minute.",
+    "wording": "srd"
+  },
+  "level": 0,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:cleric"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "minute",
+        "upTo": true
+      }
+    }
+  ]
+}

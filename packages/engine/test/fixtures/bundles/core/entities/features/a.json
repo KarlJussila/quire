@@ -1,0 +1,27 @@
+{
+ "id": "feature:a",
+ "name": "A",
+ "source": {
+  "book": "core"
+ },
+ "effects": [
+  {
+   "type": "defense",
+   "resist": [
+    "damage-type:fire"
+   ]
+  }
+ ],
+ "activities": [
+  {
+   "key": "cast",
+   "outcomes": [
+    {
+     "cast": {
+      "spell": "spell:fire-bolt"
+     }
+    }
+   ]
+  }
+ ]
+}

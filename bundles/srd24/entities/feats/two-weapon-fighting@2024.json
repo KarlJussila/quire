@@ -1,0 +1,39 @@
+{
+  "id": "feat:two-weapon-fighting@2024",
+  "name": "Two-Weapon Fighting",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you make an extra attack as a result of using a weapon that has the Light property, you can add your ability modifier to the damage of that attack if you aren't already adding it to the damage.",
+    "plain": "When you make an extra attack as a result of using a weapon that has the Light property, you can add your ability modifier to the damage of that attack if you aren't already adding it to the damage.",
+    "wording": "srd"
+  },
+  "group": "group:fighting-style",
+  "requires": {
+    "has": "group:fighting-style-feature"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "rule",
+        "where": {
+          "is": "rule:two-weapon-fighting"
+        }
+      },
+      "set": {
+        "activities": {
+          "extra-attack": {
+            "effects": {
+              "$remove": {
+                "key": "omit-positive-ability"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "creature:shambling-mound@2024",
+  "name": "Shambling Mound",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:plant",
+  "alignment": "alignment:unaligned",
+  "ac": 15,
+  "hp": {
+    "average": 110,
+    "formula": "13d10 + 39"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:swim": {
+      "speed": 20
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 16,
+    "ability:dex": 8,
+    "ability:int": 5,
+    "ability:str": 18,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:stealth": 3
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 1800,
+  "proficiencyBonus": 3,
+  "initiative": -1,
+  "habitat": [
+    "Forest",
+    "Swamp"
+  ],
+  "cr": 5,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:lightning"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold",
+        "damage-type:fire"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:deafened",
+        "condition:exhaustion"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Lightning Absorption",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "Whenever the shambling mound is subjected to Lightning damage, it regains a number of Hit Points equal to the Lightning damage dealt.",
+        "plain": "Whenever the shambling mound is subjected to Lightning damage, it regains a number of Hit Points equal to the Lightning damage dealt.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The shambling mound makes three Charged Tendril attacks. It can replace one attack with a use of Engulf.",
+        "plain": "The shambling mound makes three Charged Tendril attacks. It can replace one attack with a use of Engulf.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Charged Tendril",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 10 ft. _Hit:_ 7 (1d6 + 4) Bludgeoning damage plus 5 (2d4) Lightning damage. If the target is a Medium or smaller creature, the shambling mound pulls the target 5 feet straight toward itself.",
+        "plain": "Melee Attack Roll: +7, reach 10 ft. Hit: 7 (1d6 + 4) Bludgeoning damage plus 5 (2d4) Lightning damage. If the target is a Medium or smaller creature, the shambling mound pulls the target 5 feet straight toward itself.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Engulf",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Strength Saving Throw:_ DC 15, one Medium or smaller creature within 5 feet. _Failure:_ The target is pulled into the shambling mound's space and has the Grappled condition (escape DC 14). Until the grapple ends, the target has the Blinded and Restrained conditions, and it takes 10 (3d6) Lightning damage at the start of each of its turns. When the shambling mound moves, the Grappled target moves with it, costing it no extra movement. The shambling mound can have only one creature Grappled by this action at a time.",
+        "plain": "Strength Saving Throw: DC 15, one Medium or smaller creature within 5 feet. Failure: The target is pulled into the shambling mound's space and has the Grappled condition (escape DC 14). Until the grapple ends, the target has the Blinded and Restrained conditions, and it takes 10 (3d6) Lightning damage at the start of each of its turns. When the shambling mound moves, the Grappled target moves with it, costing it no extra movement. The shambling mound can have only one creature Grappled by this action at a time.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

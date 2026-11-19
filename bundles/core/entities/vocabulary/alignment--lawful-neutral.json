@@ -1,0 +1,11 @@
+{
+  "id": "alignment:lawful-neutral",
+  "name": "Lawful Neutral",
+  "source": {
+    "book": "core"
+  },
+  "components": [
+    "alignment:lawful",
+    "alignment:neutral"
+  ]
+}

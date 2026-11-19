@@ -1,0 +1,20 @@
+{
+  "id": "feature:criminal/skill-proficiencies@2024",
+  "name": "Skill Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Skill Proficiencies: Sleight of Hand and Stealth",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "skill:sleight-of-hand",
+        "skill:stealth"
+      ]
+    }
+  ]
+}

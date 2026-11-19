@@ -1,0 +1,112 @@
+{
+  "id": "rule:improvised-weapons@2024",
+  "name": "Improvised Weapons",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "An improvised weapon is an object wielded as a makeshift weapon, such as broken glass, a table leg, or a frying pan. A Simple or Martial weapon also counts as an improvised weapon if it's wielded in a way contrary to its design; if you use a Ranged weapon to make a melee attack or throw a Melee weapon that lacks the Thrown property, the weapon counts as an improvised weapon. An improvised weapon follows the rules below.\n\n_**Proficiency.**_ Don't add your Proficiency Bonus to attack rolls with an improvised weapon.\n\n_**Damage.**_ On a hit, the weapon deals 1d4 damage of a type the GM thinks is appropriate for the object.\n\n_**Range.**_ If you throw the weapon, it has a normal range of 20 feet and a long range of 60 feet.\n\n_**Weapon Equivalents.**_ If an improvised weapon resembles a Simple or Martial weapon, the GM may say it functions as that weapon and uses that weapon's rules. For example, the GM could treat a table leg as a Club.",
+    "plain": "An improvised weapon is an object wielded as a makeshift weapon, such as broken glass, a table leg, or a frying pan. A Simple or Martial weapon also counts as an improvised weapon if it's wielded in a way contrary to its design; if you use a Ranged weapon to make a melee attack or throw a Melee weapon that lacks the Thrown property, the weapon counts as an improvised weapon. An improvised weapon follows the rules below.\n\n_Proficiency._ Don't add your Proficiency Bonus to attack rolls with an improvised weapon.\n\n_Damage._ On a hit, the weapon deals 1d4 damage of a type the GM thinks is appropriate for the object.\n\n_Range._ If you throw the weapon, it has a normal range of 20 feet and a long range of 60 feet.\n\n_Weapon Equivalents._ If an improvised weapon resembles a Simple or Martial weapon, the GM may say it functions as that weapon and uses that weapon's rules. For example, the GM could treat a table leg as a Club.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "melee",
+      "name": "Improvised Weapon: Melee",
+      "standalone": false,
+      "delivery": {
+        "attack": {
+          "range": "melee",
+          "via": "weapon",
+          "ability": "ability:str",
+          "item": "group:improvised-weapon"
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "1d4",
+            "type": {
+              "choose": {
+                "key": "damage-type",
+                "name": "Damage type",
+                "from": [
+                  {
+                    "kind": "damage-type"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "thrown",
+      "name": "Improvised Weapon: Thrown",
+      "standalone": false,
+      "range": {
+        "distance": 20,
+        "long": 60
+      },
+      "delivery": {
+        "attack": {
+          "range": "ranged",
+          "via": "weapon",
+          "ability": "ability:dex",
+          "item": "group:improvised-weapon"
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "1d4",
+            "type": {
+              "choose": {
+                "key": "damage-type",
+                "name": "Damage type",
+                "from": [
+                  {
+                    "kind": "damage-type"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": "proficiencyBonus"
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "item": "group:improvised-weapon"
+              }
+            }
+          },
+          {
+            "proficient": "group:improvised-weapon"
+          }
+        ]
+      }
+    }
+  ]
+}

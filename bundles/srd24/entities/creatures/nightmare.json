@@ -1,0 +1,102 @@
+{
+  "id": "creature:nightmare@2024",
+  "name": "Nightmare",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:neutral-evil",
+  "ac": 13,
+  "hp": {
+    "average": 68,
+    "formula": "8d10 + 24"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 60
+    },
+    "movement-mode:fly": {
+      "speed": 90,
+      "hover": true
+    }
+  },
+  "abilities": {
+    "ability:cha": 15,
+    "ability:con": 16,
+    "ability:dex": 15,
+    "ability:int": 10,
+    "ability:str": 18,
+    "ability:wis": 13
+  },
+  "passivePerception": 11,
+  "xp": 700,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Planar (Lower Planes)"
+  ],
+  "cr": 3,
+  "languages": [
+    {
+      "language": "language:abyssal",
+      "understandsOnly": true
+    },
+    {
+      "language": "language:common"
+    },
+    {
+      "text": "and Infernal but can't speak"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Confer Fire Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The nightmare can grant Resistance to Fire damage to a rider while it is on the nightmare.",
+        "plain": "The nightmare can grant Resistance to Fire damage to a rider while it is on the nightmare.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Illumination",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The nightmare sheds Bright Light in a 10 foot radius and Dim Light for an additional 10 feet.",
+        "plain": "The nightmare sheds Bright Light in a 10 foot radius and Dim Light for an additional 10 feet.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hooves",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 5 ft. _Hit:_ 13 (2d8 + 4) Bludgeoning damage plus 10 (3d6) Fire damage.",
+        "plain": "Melee Attack Roll: +6, reach 5 ft. Hit: 13 (2d8 + 4) Bludgeoning damage plus 10 (3d6) Fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ethereal Stride",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The nightmare and up to three willing creatures within 5 feet of it teleport to the Ethereal Plane from the Material Plane or vice versa.",
+        "plain": "The nightmare and up to three willing creatures within 5 feet of it teleport to the Ethereal Plane from the Material Plane or vice versa.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

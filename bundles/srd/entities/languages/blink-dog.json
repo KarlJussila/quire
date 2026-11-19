@@ -1,0 +1,12 @@
+{
+  "id": "language:blink-dog",
+  "name": "Blink Dog",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- **Languages** Blink Dog, understands Sylvan but can't speak it",
+    "plain": "- Languages Blink Dog, understands Sylvan but can't speak it",
+    "wording": "srd"
+  }
+}

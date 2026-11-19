@@ -1,0 +1,26 @@
+{
+  "id": "item:padded",
+  "name": "Padded",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Padded armor consists of quilted layers of cloth and batting.",
+    "plain": "Padded armor consists of quilted layers of cloth and batting.",
+    "wording": "srd"
+  },
+  "group": "group:light-armor",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:gp"
+  },
+  "weight": 8.0,
+  "armor": {
+    "ac": {
+      "sum": [
+        11,
+        "modifiers.ability:dex"
+      ]
+    }
+  }
+}

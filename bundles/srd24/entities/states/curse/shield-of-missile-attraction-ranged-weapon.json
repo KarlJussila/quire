@@ -1,0 +1,56 @@
+{
+  "id": "state:curse/shield-of-missile-attraction-ranged-weapon",
+  "name": "Curse of Missile Attraction (Ranged Weapons)",
+  "source": {
+    "book": "srd24"
+  },
+  "isA": "state:curse",
+  "persists": true,
+  "text": {
+    "formatted": "_Armor (Shield), Rare (Requires Attunement)_\n\nWhile holding this Shield, you have Resistance to damage from attacks made with Ranged weapons.\n\n_**Curse.**_ This Shield is cursed. Attuning to it curses you until you are targeted by a Remove Curse spell or similar magic. Removing the Shield fails to end the curse on you. Whenever an attack with a Ranged weapon targets a creature within 10 feet of you, the curse causes you to become the target instead.",
+    "plain": "Armor (Shield), Rare (Requires Attunement)\n\nWhile holding this Shield, you have Resistance to damage from attacks made with Ranged weapons.\n\nCurse. This Shield is cursed. Attuning to it curses you until you are targeted by a Remove Curse spell or similar magic. Removing the Shield fails to end the curse on you. Whenever an attack with a Ranged weapon targets a creature within 10 feet of you, the curse causes you to become the target instead.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any"
+        },
+        "subject": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "kind": "creature"
+              },
+              {
+                "within": 10,
+                "of": "self"
+              }
+            ]
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "group:ranged-weapon",
+            "via": "weapon"
+          }
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "intercept": {
+              "redirect": "self"
+            },
+            "to": "subject"
+          }
+        ]
+      }
+    }
+  ]
+}

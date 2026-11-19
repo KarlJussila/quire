@@ -1,0 +1,116 @@
+{
+  "id": "feat:grappler",
+  "name": "Grappler",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You've developed the skills necessary to hold your own in close-quarters grappling. You gain the following benefits:\n\n- You have advantage on attack rolls against a creature you are grappling.\n- You can use your action to try to pin a creature Grappled by you. To do so, make another grapple check. If you succeed, you and the creature are both Restrained until the grapple ends.",
+    "plain": "You've developed the skills necessary to hold your own in close-quarters grappling. You gain the following benefits:\n\n- You have advantage on attack rolls against a creature you are grappling.\n- You can use your action to try to pin a creature Grappled by you. To do so, make another grapple check. If you succeed, you and the creature are both Restrained until the grapple ends.",
+    "wording": "srd"
+  },
+  "requires": {
+    "compare": "abilities.ability:str",
+    "atLeast": 13
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack"
+            }
+          },
+          {
+            "creature": "target",
+            "where": {
+              "has": "condition:grappled",
+              "source": "self"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "pin",
+      "name": "Pin",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any",
+          "where": {
+            "has": "condition:grappled",
+            "source": "self"
+          }
+        }
+      },
+      "delivery": {
+        "contest": {
+          "self": {
+            "ability": "ability:str",
+            "skill": "skill:athletics"
+          },
+          "target": {
+            "choose": {
+              "key": "check",
+              "name": "Which Check",
+              "from": [
+                {
+                  "ability": "ability:str",
+                  "skill": "skill:athletics"
+                },
+                {
+                  "ability": "ability:dex",
+                  "skill": "skill:acrobatics"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:restrained",
+            "ends": [
+              {
+                "event": "event:state-ended",
+                "subject": "target",
+                "match": {
+                  "state": "condition:grappled"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "applyState": {
+            "state": "condition:restrained",
+            "ends": [
+              {
+                "event": "event:state-ended",
+                "subject": "target",
+                "match": {
+                  "state": "condition:grappled"
+                }
+              }
+            ]
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

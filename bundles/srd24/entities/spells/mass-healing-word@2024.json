@@ -1,0 +1,35 @@
+{
+  "id": "spell:mass-healing-word@2024",
+  "name": "Mass Healing Word",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Up to six creatures of your choice that you can see within range regain Hit Points equal to 2d4 plus your spellcasting ability modifier.\n\n_**Using a Higher-Level Spell Slot.**_ The healing increases by 1d4 for each spell slot level above 3.",
+    "plain": "Up to six creatures of your choice that you can see within range regain Hit Points equal to 2d4 plus your spellcasting ability modifier.\n\nUsing a Higher-Level Spell Slot. The healing increases by 1d4 for each spell slot level above 3.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:bard",
+    "class:cleric"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

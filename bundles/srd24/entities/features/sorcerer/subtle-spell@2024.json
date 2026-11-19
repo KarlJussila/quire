@@ -1,0 +1,21 @@
+{
+  "id": "feature:sorcerer/subtle-spell@2024",
+  "name": "Subtle Spell",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Cost: 1 Sorcery Point_\n\nWhen you cast a spell, you can spend 1 Sorcery Point to cast it without any Verbal, Somatic, or Material components, except Material components that are consumed by the spell or that have a cost specified in the spell.",
+    "plain": "Cost: 1 Sorcery Point\n\nWhen you cast a spell, you can spend 1 Sorcery Point to cast it without any Verbal, Somatic, or Material components, except Material components that are consumed by the spell or that have a cost specified in the spell.",
+    "wording": "srd"
+  },
+  "group": "group:metamagic",
+  "effects": [],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "For this casting, remove Verbal, Somatic, and unconsumed, unpriced Material components while retaining consumed or priced Material components."
+    }
+  ]
+}

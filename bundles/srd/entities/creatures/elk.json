@@ -1,0 +1,64 @@
+{
+  "id": "creature:elk",
+  "name": "Elk",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 10,
+  "hp": {
+    "average": 13,
+    "formula": "2d10 + 2"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 12,
+    "ability:dex": 10,
+    "ability:int": 2,
+    "ability:str": 16,
+    "ability:wis": 10
+  },
+  "passivePerception": 10,
+  "xp": 50,
+  "cr": 0.25,
+  "blocks": [
+    {
+      "name": "Charge",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the elk moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked Prone.",
+        "plain": "If the elk moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked Prone.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ram",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 6 (1d6 + 3) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hooves",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one Prone creature. _Hit:_ 8 (2d4 + 3) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one Prone creature. Hit: 8 (2d4 + 3) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

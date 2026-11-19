@@ -1,0 +1,19 @@
+{
+  "id": "species:elf/high-elf",
+  "name": "High Elf",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type is more common and more friendly, and often encountered among humans and other races.\n\n_**Ability Score Increase.**_ Your Intelligence score increases by 1.\n\n_**Elf Weapon Training.**_ You have proficiency with the longsword, shortsword, shortbow, and longbow.\n\n_**Cantrip.**_ You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.\n\n_**Extra Language.**_ You can speak, read, and write one extra language of your choice.",
+    "plain": "As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type is more common and more friendly, and often encountered among humans and other races.\n\nAbility Score Increase. Your Intelligence score increases by 1.\n\nElf Weapon Training. You have proficiency with the longsword, shortsword, shortbow, and longbow.\n\nCantrip. You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.\n\nExtra Language. You can speak, read, and write one extra language of your choice.",
+    "wording": "srd"
+  },
+  "parent": "species:elf",
+  "features": [
+    "feature:elf/high-elf/ability-score-increase",
+    "feature:elf/elf-weapon-training",
+    "feature:elf/high-elf/cantrip",
+    "feature:elf/high-elf/extra-language"
+  ]
+}

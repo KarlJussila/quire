@@ -1,0 +1,15 @@
+{
+  "id": "language:undercommon",
+  "name": "Undercommon",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "An exotic language, typically spoken by underworld traders, written in the Elvish script.",
+    "plain": "An exotic language, typically spoken by underworld traders, written in the Elvish script.",
+    "wording": "original"
+  },
+  "group": "group:exotic-language",
+  "script": "Elvish",
+  "speakers": "Underworld traders"
+}

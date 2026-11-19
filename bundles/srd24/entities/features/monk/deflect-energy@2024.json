@@ -1,0 +1,41 @@
+{
+  "id": "feature:monk/deflect-energy@2024",
+  "name": "Level 13: Deflect Energy",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can now use your Deflect Attacks feature against attacks that deal any damage type, not just Bludgeoning, Piercing, or Slashing.",
+    "plain": "You can now use your Deflect Attacks feature against attacks that deal any damage type, not just Bludgeoning, Piercing, or Slashing.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "feature",
+        "where": {
+          "match": {
+            "name": "Level 3: Deflect Attacks"
+          }
+        }
+      },
+      "set": {
+        "activities": {
+          "$where": {
+            "key": "deflect-attacks"
+          },
+          "trigger": {
+            "when": {
+              "$replace": {
+                "dealsDamage": true
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": []
+}

@@ -1,0 +1,31 @@
+{
+  "id": "feature:elf/keen-senses@2024",
+  "name": "Keen Senses",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have proficiency in the Insight, Perception, or Survival skill.",
+    "plain": "You have proficiency in the Insight, Perception, or Survival skill.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skill",
+            "name": "Skill Proficiency",
+            "from": [
+              "skill:insight",
+              "skill:perception",
+              "skill:survival"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

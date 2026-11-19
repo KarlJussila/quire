@@ -1,0 +1,38 @@
+{
+  "id": "spell:fire-storm@2024",
+  "name": "Fire Storm",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A storm of fire appears within range. The area of the storm consists of up to ten 10-foot Cubes, which you arrange as you like. Each Cube must be contiguous with at least one other Cube. Each creature in the area makes a Dexterity saving throw, taking 7d10 Fire damage on a failed save or half as much damage on a successful one.\n\nFlammable objects in the area that aren't being worn or carried start burning.",
+    "plain": "A storm of fire appears within range. The area of the storm consists of up to ten 10-foot Cubes, which you arrange as you like. Each Cube must be contiguous with at least one other Cube. Each creature in the area makes a Dexterity saving throw, taking 7d10 Fire damage on a failed save or half as much damage on a successful one.\n\nFlammable objects in the area that aren't being worn or carried start burning.",
+    "wording": "srd"
+  },
+  "level": 7,
+  "school": "spell-school:evocation",
+  "lists": [
+    "class:cleric",
+    "class:druid",
+    "class:sorcerer"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 150
+      },
+      "duration": "instant"
+    }
+  ]
+}

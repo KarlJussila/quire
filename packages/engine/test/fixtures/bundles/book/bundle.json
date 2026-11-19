@@ -1,0 +1,14 @@
+{
+ "id": "book",
+ "name": "Book",
+ "version": "1.0.0",
+ "releaseDate": "2014-08-19",
+ "requires": [
+  {
+   "bundle": "core"
+  },
+  {
+   "bundle": "srd-copy"
+  }
+ ]
+}

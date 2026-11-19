@@ -1,0 +1,61 @@
+{
+  "id": "table:services",
+  "name": "Services",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "service",
+      "name": "Service"
+    },
+    {
+      "key": "pay",
+      "name": "Pay"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "service": "Coach cab, Between towns",
+        "pay": "3 cp per mile"
+      }
+    },
+    {
+      "cells": {
+        "service": "Coach cab, Within a city",
+        "pay": "1 cp"
+      }
+    },
+    {
+      "cells": {
+        "service": "Hireling, Skilled",
+        "pay": "2 gp per day"
+      }
+    },
+    {
+      "cells": {
+        "service": "Hireling, Untrained",
+        "pay": "2 sp per day"
+      }
+    },
+    {
+      "cells": {
+        "service": "Messenger",
+        "pay": "2 cp per mile"
+      }
+    },
+    {
+      "cells": {
+        "service": "Road or gate toll",
+        "pay": "1 cp"
+      }
+    },
+    {
+      "cells": {
+        "service": "Ship's passage",
+        "pay": "1 sp per mile"
+      }
+    }
+  ]
+}

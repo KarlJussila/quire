@@ -1,0 +1,17 @@
+{
+  "id": "item:stabling-per-day",
+  "name": "Stabling (per day)",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:sp"
+  },
+  "weight": 0.0
+}

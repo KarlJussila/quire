@@ -1,0 +1,44 @@
+{
+  "id": "spell:speak-with-animals@2024",
+  "name": "Speak with Animals",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "For the duration, you can comprehend and verbally communicate with Beasts, and you can use any of the Influence action's skill options with them.\n\nMost Beasts have little to say about topics that don't pertain to survival or companionship, but at minimum, a Beast can give you information about nearby locations and monsters, including whatever it has perceived within the past day.",
+    "plain": "For the duration, you can comprehend and verbally communicate with Beasts, and you can use any of the Influence action's skill options with them.\n\nMost Beasts have little to say about topics that don't pertain to survival or companionship, but at minimum, a Beast can give you information about nearby locations and monsters, including whatever it has perceived within the past day.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:bard",
+    "class:druid",
+    "class:ranger",
+    "class:warlock"
+  ],
+  "ritual": true,
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "self": true
+      },
+      "duration": {
+        "amount": 10,
+        "unit": "minute"
+      },
+      "ritual": true
+    }
+  ]
+}

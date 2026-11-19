@@ -1,0 +1,8 @@
+{
+  "id": "group:heavy-armor",
+  "name": "Heavy Armor",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:armor"
+}

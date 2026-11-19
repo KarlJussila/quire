@@ -1,0 +1,45 @@
+{
+  "id": "spell:gentle-repose",
+  "name": "Gentle Repose",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.\n\nThe spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as Raise Dead.",
+    "plain": "You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.\n\nThe spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as Raise Dead.",
+    "wording": "srd"
+  },
+  "level": 2,
+  "school": "spell-school:necromancy",
+  "lists": [
+    "class:cleric",
+    "class:wizard"
+  ],
+  "ritual": true,
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a pinch of salt and one copper piece placed on each of the corpse’s eyes, which must remain there for the duration"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 10,
+        "unit": "day"
+      },
+      "ritual": true
+    }
+  ]
+}

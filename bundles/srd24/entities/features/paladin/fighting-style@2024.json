@@ -1,0 +1,30 @@
+{
+  "id": "feature:paladin/fighting-style@2024",
+  "name": "Level 2: Fighting Style",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain a Fighting Style feat of your choice (see \"Feats\" for feats). Instead of choosing one of those feats, you can choose the option below.\n\n_**Blessed Warrior.**_ You learn two Cleric cantrips of your choice (see the Cleric class's section for a list of Cleric spells). Guidance and Sacred Flame are recommended. The chosen cantrips count as Paladin spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a Paladin level, you can replace one of these cantrips with another Cleric cantrip.",
+    "plain": "You gain a Fighting Style feat of your choice (see \"Feats\" for feats). Instead of choosing one of those feats, you can choose the option below.\n\nBlessed Warrior. You learn two Cleric cantrips of your choice (see the Cleric class's section for a list of Cleric spells). Guidance and Sacred Flame are recommended. The chosen cantrips count as Paladin spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a Paladin level, you can replace one of these cantrips with another Cleric cantrip.",
+    "wording": "srd"
+  },
+  "group": "group:fighting-style-feature",
+  "features": [
+    {
+      "choose": {
+        "key": "fighting-style",
+        "name": "Fighting Style",
+        "from": [
+          {
+            "kind": "feat",
+            "where": {
+              "group": "group:fighting-style"
+            }
+          },
+          "feat:blessed-warrior@2024"
+        ]
+      }
+    }
+  ]
+}

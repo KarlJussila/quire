@@ -1,0 +1,40 @@
+{
+  "id": "feature:warlock/fiendish-vigor",
+  "name": "Fiendish Vigor",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You can cast False Life on yourself at will as a 1st-level spell, without expending a spell slot or material components.",
+    "plain": "You can cast False Life on yourself at will as a 1st-level spell, without expending a spell slot or material components.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:false-life"
+      ],
+      "how": "innate",
+      "castAt": 1,
+      "set": {
+        "components": {
+          "material": {
+            "$delete": true
+          }
+        },
+        "activities": {
+          "cast": {
+            "target": {
+              "$replace": {
+                "who": "self",
+                "count": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

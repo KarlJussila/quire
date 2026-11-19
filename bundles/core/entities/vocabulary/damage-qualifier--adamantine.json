@@ -1,0 +1,10 @@
+{
+  "id": "damage-qualifier:adamantine",
+  "name": "Adamantine",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

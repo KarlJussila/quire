@@ -1,0 +1,8 @@
+{
+  "id": "roll:check",
+  "name": "Ability Check",
+  "source": {
+    "book": "core"
+  },
+  "isA": "roll:d20-test"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rule:immunity@2024",
+  "name": "Immunity",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you have Immunity to a damage type or a condition, it doesn't affect you in any way.",
+    "plain": "If you have Immunity to a damage type or a condition, it doesn't affect you in any way.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

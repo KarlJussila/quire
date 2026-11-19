@@ -1,0 +1,126 @@
+{
+  "id": "creature:young-green-dragon@2024",
+  "name": "Young Green Dragon",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:dragon",
+  "alignment": "alignment:lawful-evil",
+  "ac": 18,
+  "hp": {
+    "average": 136,
+    "formula": "16d10 + 48"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 80
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 15,
+    "ability:con": 17,
+    "ability:dex": 12,
+    "ability:int": 16,
+    "ability:str": 19,
+    "ability:wis": 13
+  },
+  "saves": {
+    "ability:dex": 4,
+    "ability:wis": 4
+  },
+  "skills": {
+    "skill:deception": 5,
+    "skill:perception": 7,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    },
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 17,
+  "xp": 3900,
+  "proficiencyBonus": 3,
+  "initiative": 4,
+  "habitat": [
+    "Forest"
+  ],
+  "treasure": [
+    "Arcana"
+  ],
+  "cr": 8,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:draconic"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Amphibious",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The dragon can breathe air and water.",
+        "plain": "The dragon can breathe air and water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The dragon makes three Rend attacks.",
+        "plain": "The dragon makes three Rend attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 10 ft. _Hit:_ 11 (2d6 + 4) Slashing damage plus 7 (2d6) Poison damage.",
+        "plain": "Melee Attack Roll: +7, reach 10 ft. Hit: 11 (2d6 + 4) Slashing damage plus 7 (2d6) Poison damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Poison Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 14, each creature in a 30-foot Cone. _Failure:_ 42 (12d6) Poison damage. _Success:_ Half damage.",
+        "plain": "Constitution Saving Throw: DC 14, each creature in a 30-foot Cone. Failure: 42 (12d6) Poison damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "id": "feature:sorcerer/extended-spell",
+  "name": "Extended Spell",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you cast a spell that has a duration of 1 minute or longer, you can spend 1 sorcery point to double its duration, to a maximum duration of 24 hours.",
+    "plain": "When you cast a spell that has a duration of 1 minute or longer, you can spend 1 sorcery point to double its duration, to a maximum duration of 24 hours.",
+    "wording": "srd"
+  },
+  "group": "group:metamagic",
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "round",
+                  "amount": {
+                    "atLeast": 10,
+                    "atMost": 7200
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$multiply": 2
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "round",
+                  "amount": {
+                    "atLeast": 7201,
+                    "atMost": 14400
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$replace": 14400
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "minute",
+                  "amount": {
+                    "atLeast": 1,
+                    "atMost": 720
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$multiply": 2
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "minute",
+                  "amount": {
+                    "atLeast": 721,
+                    "atMost": 1440
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$replace": 1440
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "hour",
+                  "amount": {
+                    "atLeast": 1,
+                    "atMost": 12
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$multiply": 2
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "hour",
+                  "amount": {
+                    "atLeast": 13,
+                    "atMost": 24
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$replace": 24
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "day",
+                  "amount": {
+                    "atLeast": 1,
+                    "atMost": 1
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$replace": 1
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    }
+  ],
+  "activities": [],
+  "gaps": []
+}

@@ -1,0 +1,70 @@
+{
+  "id": "feature:ranger/deft-explorer@2024",
+  "name": "Level 2: Deft Explorer",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Thanks to your travels, you gain the following benefits.\n\n_**Expertise.**_ Choose one of your skill proficiencies with which you lack Expertise. You gain Expertise in that skill.\n\n_**Languages.**_ You know two languages of your choice from the language tables in \"Character Creation.\"",
+    "plain": "Thanks to your travels, you gain the following benefits.\n\nExpertise. Choose one of your skill proficiencies with which you lack Expertise. You gain Expertise in that skill.\n\nLanguages. You know two languages of your choice from the language tables in \"Character Creation.\"",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "level": "expertise",
+      "in": [
+        {
+          "choose": {
+            "key": "expertise",
+            "name": "Expertise",
+            "count": 1,
+            "from": [
+              {
+                "kind": "skill",
+                "where": {
+                  "all": [
+                    {
+                      "proficient": "candidate",
+                      "level": "proficient"
+                    },
+                    {
+                      "not": {
+                        "proficient": "candidate",
+                        "level": "expertise"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "proficiency",
+      "level": "proficient",
+      "in": [
+        {
+          "choose": {
+            "key": "languages",
+            "name": "Languages",
+            "count": 2,
+            "from": [
+              {
+                "kind": "language",
+                "where": {
+                  "group": [
+                    "group:standard-language",
+                    "group:rare-language"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

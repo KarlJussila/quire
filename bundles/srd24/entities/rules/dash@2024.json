@@ -1,0 +1,74 @@
+{
+  "id": "rule:dash@2024",
+  "name": "Dash",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you take the Dash action, you gain extra movement for the current turn. The increase equals your Speed after applying any modifiers. With a Speed of 30 feet, for example, you can move up to 60 feet on your turn if you Dash. If your Speed of 30 feet is reduced to 15 feet, you can move up to 30 feet this turn if you Dash.\n\nIf you have a special speed, such as a Fly Speed or Swim Speed, you can use that speed instead of your Speed when you take this action. You choose which speed to use each time you take it. _See also_ \"Speed.\"",
+    "plain": "When you take the Dash action, you gain extra movement for the current turn. The increase equals your Speed after applying any modifiers. With a Speed of 30 feet, for example, you can move up to 60 feet on your turn if you Dash. If your Speed of 30 feet is reduced to 15 feet, you can move up to 30 feet this turn if you Dash.\n\nIf you have a special speed, such as a Fly Speed or Swim Speed, you can use that speed instead of your Speed when you take this action. You choose which speed to use each time you take it. _See also_ \"Speed.\"",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "dash",
+      "action": "action:dash",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "record",
+                  "pick": {
+                    "choose": {
+                      "key": "speed",
+                      "name": "Speed",
+                      "from": [
+                        {
+                          "kind": "movement-mode",
+                          "where": {
+                            "compare": "self.speeds.{speed}.speed",
+                            "atLeast": 0
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "change",
+                  "set": {
+                    "pools": {
+                      "movement": {
+                        "max": {
+                          "$add": "speeds.{speed}.speed"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "ends": [
+              {
+                "event": "event:turn-end",
+                "subject": "self"
+              }
+            ]
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

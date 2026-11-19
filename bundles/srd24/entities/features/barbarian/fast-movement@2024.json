@@ -1,0 +1,34 @@
+{
+  "id": "feature:barbarian/fast-movement@2024",
+  "name": "Level 5: Fast Movement",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your speed increases by 10 feet while you aren't wearing Heavy armor.",
+    "plain": "Your speed increases by 10 feet while you aren't wearing Heavy armor.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "movement-mode:walk": {
+            "speed": {
+              "$add": 10
+            }
+          }
+        }
+      },
+      "when": {
+        "not": {
+          "has": "group:heavy-armor",
+          "match": {
+            "worn": true
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "language:auran",
+  "name": "Auran",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- **Languages** Auran",
+    "plain": "- Languages Auran",
+    "wording": "srd"
+  },
+  "speakers": "Air elementals"
+}

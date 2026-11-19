@@ -1,0 +1,388 @@
+{
+  "id": "feature:sorcerer/extended-spell@2024",
+  "name": "Extended Spell",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Cost: 1 Sorcery Point_\n\nWhen you cast a spell that has a duration of 1 minute or longer, you can spend 1 Sorcery Point to double its duration to a maximum duration of 24 hours.\n\nIf the affected spell requires Concentration, you have Advantage on any saving throw you make to maintain that Concentration.",
+    "plain": "Cost: 1 Sorcery Point\n\nWhen you cast a spell that has a duration of 1 minute or longer, you can spend 1 Sorcery Point to double its duration to a maximum duration of 24 hours.\n\nIf the affected spell requires Concentration, you have Advantage on any saving throw you make to maintain that Concentration.",
+    "wording": "srd"
+  },
+  "group": "group:metamagic",
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "round",
+                  "amount": {
+                    "atLeast": 10,
+                    "atMost": 7200
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$multiply": 2
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "round",
+                  "amount": {
+                    "atLeast": 7201,
+                    "atMost": 14400
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$replace": 14400
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "minute",
+                  "amount": {
+                    "atLeast": 1,
+                    "atMost": 720
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$multiply": 2
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "minute",
+                  "amount": {
+                    "atLeast": 721,
+                    "atMost": 1440
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$replace": 1440
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "hour",
+                  "amount": {
+                    "atLeast": 1,
+                    "atMost": 12
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$multiply": 2
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "hour",
+                  "amount": {
+                    "atLeast": 13,
+                    "atMost": 24
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$replace": 24
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "duration": {
+                  "unit": "day",
+                  "amount": {
+                    "atLeast": 1,
+                    "atMost": 1
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "duration": {
+          "amount": {
+            "$replace": 1
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "extended-spell"
+    },
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:activity-used",
+        "by": "self",
+        "match": {
+          "spell": {
+            "kind": "spell",
+            "where": {
+              "match": {
+                "activities": {
+                  "key": "cast",
+                  "concentration": true
+                }
+              }
+            }
+          }
+        },
+        "when": {
+          "activity": "extended-spell"
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "applyState": {
+              "state": {
+                "effects": [
+                  {
+                    "type": "roll-mod",
+                    "mode": "advantage",
+                    "when": {
+                      "event": "event:roll-made",
+                      "by": "self",
+                      "match": {
+                        "roll": "roll:concentration"
+                      }
+                    }
+                  }
+                ],
+                "ends": [
+                  {
+                    "event": "event:state-ended",
+                    "subject": "self",
+                    "match": {
+                      "state": "state:concentrating"
+                    }
+                  }
+                ]
+              }
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": []
+}

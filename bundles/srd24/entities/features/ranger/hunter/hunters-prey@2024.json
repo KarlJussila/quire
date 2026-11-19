@@ -1,0 +1,222 @@
+{
+  "id": "feature:ranger/hunter/hunters-prey@2024",
+  "name": "Level 3: Hunter's Prey",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain one of the following feature options of your choice. Whenever you finish a Short or Long Rest, you can replace the chosen option with the other one.\n\n_**Colossus Slayer.**_ Your tenacity can wear down even the most resilient foes. When you hit a creature with a weapon, the weapon deals an extra 1d8 damage to the target if it's missing any of its Hit Points. You can deal this extra damage only once per turn.\n\n_**Horde Breaker.**_ Once on each of your turns when you make an attack with a weapon, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target, that is within the weapon's range, and that you haven't attacked this turn.",
+    "plain": "You gain one of the following feature options of your choice. Whenever you finish a Short or Long Rest, you can replace the chosen option with the other one.\n\nColossus Slayer. Your tenacity can wear down even the most resilient foes. When you hit a creature with a weapon, the weapon deals an extra 1d8 damage to the target if it's missing any of its Hit Points. You can deal this extra damage only once per turn.\n\nHorde Breaker. Once on each of your turns when you make an attack with a weapon, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target, that is within the weapon's range, and that you haven't attacked this turn.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "activities": [
+    {
+      "key": "colossus-slayer",
+      "name": "Colossus Slayer",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "via": "weapon"
+          }
+        },
+        "when": {
+          "creature": "subject",
+          "where": {
+            "not": {
+              "compare": "hp.current",
+              "atLeast": "hp.max"
+            }
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": "1d8",
+            "type": {
+              "of": "attack"
+            }
+          },
+          "to": "subject"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": {
+                "pool": "any"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "when": {
+        "has": "this",
+        "chosen": {
+          "hunters-prey": "feature:colossus-slayer"
+        }
+      }
+    },
+    {
+      "key": "horde-breaker",
+      "name": "Horde Breaker",
+      "trigger": {
+        "event": "event:roll-made",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "kind": "creature"
+          }
+        },
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "via": "weapon"
+          }
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "target": {
+        "who": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "kind": "creature"
+              },
+              {
+                "not": {
+                  "is": "subject"
+                }
+              },
+              {
+                "within": 5,
+                "of": "subject"
+              },
+              {
+                "not": {
+                  "happened": {
+                    "event": "event:roll-made",
+                    "by": "self",
+                    "subject": "target",
+                    "match": {
+                      "roll": "roll:attack"
+                    },
+                    "since": "turn-start"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "count": 1,
+        "select": "chosen"
+      },
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "match": {
+                    "delivery": {
+                      "attack": {
+                        "via": "weapon",
+                        "item": {
+                          "kind": "item",
+                          "where": {
+                            "event": "event:roll-made",
+                            "by": "self",
+                            "match": {
+                              "attack": {
+                                "item": "candidate"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "chosen": {
+              "hunters-prey": "feature:horde-breaker"
+            }
+          },
+          {
+            "turn": "self"
+          }
+        ]
+      }
+    },
+    {
+      "key": "replace-hunters-prey",
+      "name": "Replace Hunter’s Prey",
+      "trigger": {
+        "event": "event:rest-finished",
+        "subject": "self",
+        "match": {
+          "rest": "rest:short"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "hunters-prey"
+          }
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "record",
+      "pick": {
+        "choose": {
+          "key": "hunters-prey",
+          "name": "Hunter’s Prey",
+          "from": [
+            "feature:colossus-slayer",
+            "feature:horde-breaker"
+          ]
+        }
+      }
+    }
+  ]
+}

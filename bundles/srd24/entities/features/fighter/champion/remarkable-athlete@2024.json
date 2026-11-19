@@ -1,0 +1,69 @@
+{
+  "id": "feature:fighter/champion/remarkable-athlete@2024",
+  "name": "Level 3: Remarkable Athlete",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Thanks to your athleticism, you have Advantage on Initiative rolls and Strength (Athletics) checks.\n\nIn addition, immediately after you score a Critical Hit, you can move up to half your Speed without provoking Opportunity Attacks.",
+    "plain": "Thanks to your athleticism, you have Advantage on Initiative rolls and Strength (Athletics) checks.\n\nIn addition, immediately after you score a Critical Hit, you can move up to half your Speed without provoking Opportunity Attacks.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:initiative"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:check",
+          "ability": "ability:str",
+          "skill": "skill:athletics"
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "remarkable-athlete-movement",
+      "name": "Remarkable Athlete",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "crit": true
+        }
+      },
+      "outcomes": [
+        {
+          "move": {
+            "kind": "move",
+            "distance": {
+              "divide": {
+                "speed": "in-use",
+                "of": "self"
+              },
+              "by": 2,
+              "round": "down"
+            },
+            "provokes": false
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

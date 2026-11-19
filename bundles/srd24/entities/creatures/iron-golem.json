@@ -1,0 +1,139 @@
+{
+  "id": "creature:iron-golem@2024",
+  "name": "Iron Golem",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:construct",
+  "alignment": "alignment:unaligned",
+  "ac": 20,
+  "hp": {
+    "average": 252,
+    "formula": "24d10 + 120"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 1,
+    "ability:con": 20,
+    "ability:dex": 9,
+    "ability:int": 3,
+    "ability:str": 24,
+    "ability:wis": 11
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 10,
+  "xp": 15000,
+  "proficiencyBonus": 5,
+  "initiative": 9,
+  "habitat": [
+    "Any"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 16,
+  "languages": [
+    {
+      "text": "Understands Common plus two other languages but can't speak"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison",
+        "damage-type:psychic"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:exhaustion",
+        "condition:frightened",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Fire Absorption",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "Whenever the golem is subjected to Fire damage, it regains a number of Hit Points equal to the Fire damage dealt.",
+        "plain": "Whenever the golem is subjected to Fire damage, it regains a number of Hit Points equal to the Fire damage dealt.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Immutable Form",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The golem can't shape-shift.",
+        "plain": "The golem can't shape-shift.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The golem has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The golem has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The golem makes two attacks, using Bladed Arm or Fiery Bolt in any combination.",
+        "plain": "The golem makes two attacks, using Bladed Arm or Fiery Bolt in any combination.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bladed Arm",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +12, reach 10 ft. _Hit:_ 20 (3d8 + 7) Slashing damage plus 10 (3d6) Fire damage.",
+        "plain": "Melee Attack Roll: +12, reach 10 ft. Hit: 20 (3d8 + 7) Slashing damage plus 10 (3d6) Fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Fiery Bolt",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +10, range 120 ft. _Hit:_ 36 (8d8) Fire damage.",
+        "plain": "Ranged Attack Roll: +10, range 120 ft. Hit: 36 (8d8) Fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Poison Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 18, each creature in a 60-foot Cone. _Failure:_ 55 (10d10) Poison damage. _Success:_ Half damage.",
+        "plain": "Constitution Saving Throw: DC 18, each creature in a 60-foot Cone. Failure: 55 (10d10) Poison damage. Success: Half damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

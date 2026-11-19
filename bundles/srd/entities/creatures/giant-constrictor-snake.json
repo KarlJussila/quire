@@ -1,0 +1,66 @@
+{
+  "id": "creature:giant-constrictor-snake",
+  "name": "Giant Constrictor Snake",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "hp": {
+    "average": 60,
+    "formula": "8d12 + 8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:swim": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 3,
+    "ability:con": 12,
+    "ability:dex": 14,
+    "ability:int": 1,
+    "ability:str": 19,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 2
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    }
+  },
+  "passivePerception": 12,
+  "xp": 450,
+  "cr": 2,
+  "blocks": [
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 10 ft., one creature. _Hit:_ 11 (2d6 + 4) piercing damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 10 ft., one creature. Hit: 11 (2d6 + 4) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Constrict",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one creature. _Hit:_ 13 (2d8 + 4) bludgeoning damage, and the target is Grappled (escape DC 16). Until this grapple ends, the creature is Restrained, and the snake can't constrict another target.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 13 (2d8 + 4) bludgeoning damage, and the target is Grappled (escape DC 16). Until this grapple ends, the creature is Restrained, and the snake can't constrict another target.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

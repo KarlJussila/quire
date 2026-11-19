@@ -1,0 +1,24 @@
+{
+  "id": "species:orc@2024",
+  "name": "Orc",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As an Orc, you have these special traits.\n\n_**Adrenaline Rush.**_ You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus.\n\nYou can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Short or Long Rest.\n\n_**Darkvision.**_ You have Darkvision with a range of 120 feet.\n\n_**Relentless Endurance.**_ When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can't do so again until you finish a Long Rest.",
+    "plain": "As an Orc, you have these special traits.\n\nAdrenaline Rush. You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus.\n\nYou can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Short or Long Rest.\n\nDarkvision. You have Darkvision with a range of 120 feet.\n\nRelentless Endurance. When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can't do so again until you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "features": [
+    "feature:orc/darkvision@2024",
+    "feature:orc/adrenaline-rush@2024",
+    "feature:orc/relentless-endurance@2024"
+  ],
+  "creatureType": "creature-type:humanoid",
+  "size": "size:medium",
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "item:midnight-tears",
+  "name": "Midnight Tears",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A creature that ingests this poison suffers no effect until the stroke of midnight. If the poison has not been neutralized before then, the creature must succeed on a DC 17 Constitution saving throw, taking 31 (9d6) poison damage on a failed save, or half as much damage on a successful one.",
+    "plain": "A creature that ingests this poison suffers no effect until the stroke of midnight. If the poison has not been neutralized before then, the creature must succeed on a DC 17 Constitution saving throw, taking 31 (9d6) poison damage on a failed save, or half as much damage on a successful one.",
+    "wording": "srd"
+  },
+  "group": "group:poison",
+  "cost": {
+    "amount": 1500,
+    "currency": "currency:gp"
+  },
+  "weight": 0.5
+}

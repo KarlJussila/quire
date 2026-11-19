@@ -1,0 +1,72 @@
+{
+  "id": "table:spellcasting@2024",
+  "name": "Spellcasting",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "spell-level",
+      "name": "Spell Level"
+    },
+    {
+      "key": "availability",
+      "name": "Availability"
+    },
+    {
+      "key": "cost",
+      "name": "Cost"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "spell-level": "Cantrip",
+        "availability": "Village, town, or city",
+        "cost": "30 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "1",
+        "availability": "Village, town, or city",
+        "cost": "50 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "2",
+        "availability": "Village, town, or city",
+        "cost": "200 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "3",
+        "availability": "Town or city only",
+        "cost": "300 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "4-5",
+        "availability": "Town or city only",
+        "cost": "2,000 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "6-8",
+        "availability": "City only",
+        "cost": "20,000 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "9",
+        "availability": "City only",
+        "cost": "100,000 GP"
+      }
+    }
+  ]
+}

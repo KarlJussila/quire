@@ -1,0 +1,61 @@
+{
+  "id": "feature:cleric/life-domain/disciple-of-life@2024",
+  "name": "Level 3: Disciple of Life",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When a spell you cast with a spell slot restores Hit Points to a creature, that creature regains additional Hit Points on the turn you cast the spell. The additional Hit Points equal 2 plus the spell slot's level.",
+    "plain": "When a spell you cast with a spell slot restores Hit Points to a creature, that creature regains additional Hit Points on the turn you cast the spell. The additional Hit Points equal 2 plus the spell slot's level.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "test",
+      "name": "Apply the extra healing only on the turn this spell was cast; this condition remains prose."
+    }
+  ],
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:healed",
+        "by": "self",
+        "match": {
+          "slot": {
+            "atLeast": 1
+          }
+        },
+        "subject": {
+          "pool": "any"
+        },
+        "when": {
+          "prose": {
+            "text": "This healing occurs on the turn you cast this spell.",
+            "gap": {
+              "category": "test",
+              "name": "Correlate this healing with the turn of its own casting."
+            }
+          }
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "heal": {
+              "amount": {
+                "sum": [
+                  2,
+                  {
+                    "slotLevel": true
+                  }
+                ]
+              }
+            },
+            "to": "subject"
+          }
+        ]
+      }
+    }
+  ]
+}

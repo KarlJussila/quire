@@ -1,0 +1,11 @@
+{
+  "id": "feature:kobolds",
+  "name": "Kobolds",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

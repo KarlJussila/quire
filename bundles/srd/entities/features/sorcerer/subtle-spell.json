@@ -1,0 +1,63 @@
+{
+  "id": "feature:sorcerer/subtle-spell",
+  "name": "Subtle Spell",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you cast a spell, you can spend 1 sorcery point to cast it without any somatic or verbal components.",
+    "plain": "When you cast a spell, you can spend 1 sorcery point to cast it without any somatic or verbal components.",
+    "wording": "srd"
+  },
+  "group": "group:metamagic",
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "spell",
+        "where": {
+          "any": [
+            {
+              "match": {
+                "components": {
+                  "verbal": true
+                }
+              }
+            },
+            {
+              "match": {
+                "components": {
+                  "somatic": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      "variant": "subtle-spell",
+      "set": {
+        "components": {
+          "verbal": {
+            "$delete": true
+          },
+          "somatic": {
+            "$delete": true
+          }
+        },
+        "activities": {
+          "cast": {
+            "cost": {
+              "$append": [
+                {
+                  "resource": "sorcery-points"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": []
+}

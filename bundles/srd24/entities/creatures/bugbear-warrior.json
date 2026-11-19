@@ -1,0 +1,97 @@
+{
+  "id": "creature:bugbear-warrior@2024",
+  "name": "Bugbear Warrior",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fey",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 14,
+  "hp": {
+    "average": 33,
+    "formula": "6d8 + 6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 9,
+    "ability:con": 13,
+    "ability:dex": 14,
+    "ability:int": 8,
+    "ability:str": 15,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:stealth": 6,
+    "skill:survival": 2
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 200,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Forest",
+    "Grassland",
+    "Planar (Feywild)",
+    "Underdark"
+  ],
+  "treasure": [
+    "Armaments",
+    "Individual"
+  ],
+  "gear": [
+    "Hide Armor",
+    "Light Hammers (3)"
+  ],
+  "cr": 1,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:goblin"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Abduct",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The bugbear needn't spend extra movement to move a creature it is grappling.",
+        "plain": "The bugbear needn't spend extra movement to move a creature it is grappling.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Grab",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 10 ft. _Hit:_ 9 (2d6 + 2) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 12).",
+        "plain": "Melee Attack Roll: +4, reach 10 ft. Hit: 9 (2d6 + 2) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 12).",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Light Hammer",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Attack Roll:_ +4 (with Advantage if the target is Grappled by the bugbear), reach 10 ft. or range 20/60 ft. _Hit:_ 9 (3d4 + 2) Bludgeoning damage.",
+        "plain": "Melee or Ranged Attack Roll: +4 (with Advantage if the target is Grappled by the bugbear), reach 10 ft. or range 20/60 ft. Hit: 9 (3d4 + 2) Bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

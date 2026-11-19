@@ -1,0 +1,71 @@
+{
+  "id": "feature:protection",
+  "name": "Protection",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield.",
+    "plain": "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield.",
+    "wording": "srd"
+  },
+  "group": "group:fighting-style",
+  "availableTo": [
+    "class:fighter",
+    "class:paladin"
+  ],
+  "gaps": [],
+  "activities": [
+    {
+      "key": "protection",
+      "name": "Protection",
+      "trigger": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any",
+          "where": {
+            "perceived": "sight",
+            "by": "self"
+          }
+        },
+        "subject": {
+          "pool": "any",
+          "where": {
+            "all": [
+              {
+                "not": {
+                  "is": "self"
+                }
+              },
+              {
+                "within": 5,
+                "of": "self"
+              }
+            ]
+          }
+        },
+        "match": {
+          "roll": "roll:attack"
+        }
+      },
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "when": {
+        "has": "group:shield",
+        "match": {
+          "held": true
+        }
+      },
+      "outcomes": [
+        {
+          "intercept": {
+            "mode": "disadvantage"
+          }
+        }
+      ]
+    }
+  ]
+}

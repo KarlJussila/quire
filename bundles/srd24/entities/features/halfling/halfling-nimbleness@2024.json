@@ -1,0 +1,12 @@
+{
+  "id": "feature:halfling/halfling-nimbleness@2024",
+  "name": "Halfling Nimbleness",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can move through the space of any creature that is a size larger than you, but you can't stop in the same space.",
+    "plain": "You can move through the space of any creature that is a size larger than you, but you can't stop in the same space.",
+    "wording": "srd"
+  }
+}

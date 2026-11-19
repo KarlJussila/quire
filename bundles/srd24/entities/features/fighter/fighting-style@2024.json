@@ -1,0 +1,49 @@
+{
+  "id": "feature:fighter/fighting-style@2024",
+  "name": "Level 1: Fighting Style",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have honed your martial prowess and gain a Fighting Style feat of your choice (see \"Feats\"). Defense is recommended.\n\nWhenever you gain a Fighter level, you can replace the feat you chose with a different Fighting Style feat.",
+    "plain": "You have honed your martial prowess and gain a Fighting Style feat of your choice (see \"Feats\"). Defense is recommended.\n\nWhenever you gain a Fighter level, you can replace the feat you chose with a different Fighting Style feat.",
+    "wording": "srd"
+  },
+  "group": "group:fighting-style-feature",
+  "features": [
+    {
+      "choose": {
+        "key": "fighting-style",
+        "name": "Fighting Style",
+        "from": [
+          {
+            "kind": "feat",
+            "where": {
+              "group": "group:fighting-style"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-fighting-style",
+      "name": "Replace Fighting Style",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self",
+        "match": {
+          "class": "class:fighter"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "fighting-style"
+          }
+        }
+      ]
+    }
+  ]
+}

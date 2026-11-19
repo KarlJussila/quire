@@ -1,0 +1,141 @@
+{
+  "id": "creature:horned-devil@2024",
+  "name": "Horned Devil",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 18,
+  "hp": {
+    "average": 199,
+    "formula": "19d10 + 95"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 18,
+    "ability:con": 21,
+    "ability:dex": 17,
+    "ability:int": 12,
+    "ability:str": 22,
+    "ability:wis": 16
+  },
+  "saves": {
+    "ability:cha": 8,
+    "ability:dex": 7,
+    "ability:str": 10,
+    "ability:wis": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 150,
+      "note": "unimpeded by magical Darkness"
+    }
+  },
+  "passivePerception": 13,
+  "telepathy": 120,
+  "xp": 7200,
+  "proficiencyBonus": 4,
+  "initiative": 7,
+  "habitat": [
+    "Planar (Nine Hells)"
+  ],
+  "treasure": [
+    "Relics"
+  ],
+  "cr": 11,
+  "languages": [
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Diabolical Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+        "plain": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The devil has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The devil has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The devil makes three attacks, using Searing Fork or Hurl Flame in any combination. It can replace one attack with a use of Infernal Tail.",
+        "plain": "The devil makes three attacks, using Searing Fork or Hurl Flame in any combination. It can replace one attack with a use of Infernal Tail.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Searing Fork",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +10, reach 10 ft. _Hit:_  15 (2d8 + 6) Piercing damage plus 9 (2d8) Fire damage.",
+        "plain": "Melee Attack Roll: +10, reach 10 ft. Hit:  15 (2d8 + 6) Piercing damage plus 9 (2d8) Fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hurl Flame",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +8, range 150 ft. _Hit:_ 26 (5d8 + 4) Fire damage. If the target is a flammable object that isn't being worn or carried, it starts burning.",
+        "plain": "Ranged Attack Roll: +8, range 150 ft. Hit: 26 (5d8 + 4) Fire damage. If the target is a flammable object that isn't being worn or carried, it starts burning.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Infernal Tail",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Dexterity Saving Throw:_ DC 17, one creature the devil can see within 10 feet. _Failure:_ 10 (1d8 + 6) Necrotic damage, and the target receives an infernal wound if it doesn't have one. While wounded, the target loses 10 (3d6) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a DC 17 Wisdom (Medicine) check.",
+        "plain": "Dexterity Saving Throw: DC 17, one creature the devil can see within 10 feet. Failure: 10 (1d8 + 6) Necrotic damage, and the target receives an infernal wound if it doesn't have one. While wounded, the target loses 10 (3d6) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a DC 17 Wisdom (Medicine) check.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "spell:mass-healing-word",
+  "name": "Mass Healing Word",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.\n\n_**At Higher Levels.**_ When you cast this spell using a spell slot of 4th level or higher, the healing increases by 1d4 for each slot level above 3rd.",
+    "plain": "As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.\n\nAt Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the healing increases by 1d4 for each slot level above 3rd.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:evocation",
+  "lists": [
+    "class:cleric"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

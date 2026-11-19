@@ -1,0 +1,104 @@
+{
+  "id": "creature:stone-giant",
+  "name": "Stone Giant",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:giant",
+  "alignment": "alignment:neutral",
+  "ac": 17,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 126,
+    "formula": "11d12 + 55"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 9,
+    "ability:con": 20,
+    "ability:dex": 15,
+    "ability:int": 10,
+    "ability:str": 23,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:con": 8,
+    "ability:dex": 5,
+    "ability:wis": 4
+  },
+  "skills": {
+    "skill:athletics": 12,
+    "skill:perception": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 2900,
+  "cr": 7,
+  "languages": [
+    {
+      "language": "language:giant"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Stone Camouflage",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The giant has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.",
+        "plain": "The giant has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The giant makes two greatclub attacks.",
+        "plain": "The giant makes two greatclub attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Greatclub",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +9 to hit, reach 15 ft., one target. _Hit:_ 19 (3d8 + 6) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +9 to hit, reach 15 ft., one target. Hit: 19 (3d8 + 6) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rock",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +9 to hit, range 60/240 ft., one target. _Hit:_ 28 (4d10 + 6) bludgeoning damage. If the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked Prone.",
+        "plain": "Ranged Weapon Attack: +9 to hit, range 60/240 ft., one target. Hit: 28 (4d10 + 6) bludgeoning damage. If the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked Prone.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rock Catching",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "If a rock or similar object is hurled at the giant, the giant can, with a successful DC 10 Dexterity saving throw, catch the missile and take no bludgeoning damage from it.",
+        "plain": "If a rock or similar object is hurled at the giant, the giant can, with a successful DC 10 Dexterity saving throw, catch the missile and take no bludgeoning damage from it.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "item:goggles-of-night",
+  "name": "Goggles of Night",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing these dark lenses, you have darkvision out to a range of 60 feet. If you already have darkvision, wearing the goggles increases its range by 60 feet.",
+    "plain": "While wearing these dark lenses, you have darkvision out to a range of 60 feet. If you already have darkvision, wearing the goggles increases its range by 60 feet.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "weight": 0,
+  "effects": [
+    {
+      "type": "sense",
+      "sense": "sense:darkvision",
+      "range": 60,
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "worn": true
+            }
+          },
+          {
+            "not": {
+              "match": {
+                "senses": {
+                  "sense:darkvision": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

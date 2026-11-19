@@ -1,0 +1,46 @@
+{
+  "id": "condition:frightened@2024",
+  "name": "Frightened",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you have the Frightened condition, you experience the following effects.\n\n_**Ability Checks and Attacks Affected.**_ You have Disadvantage on ability checks and attack rolls while the source of fear is within line of sight.\n\n_**Can't Approach.**_ You can't willingly move closer to the source of fear.",
+    "plain": "While you have the Frightened condition, you experience the following effects.\n\nAbility Checks and Attacks Affected. You have Disadvantage on ability checks and attack rolls while the source of fear is within line of sight.\n\nCan't Approach. You can't willingly move closer to the source of fear.",
+    "wording": "srd"
+  },
+  "sourceName": "the source of the fear",
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": [
+                "roll:check",
+                "roll:attack"
+              ]
+            }
+          },
+          {
+            "perceives": {
+              "sense": "sight",
+              "of": "source"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:approach"
+      ],
+      "target": "source"
+    }
+  ]
+}

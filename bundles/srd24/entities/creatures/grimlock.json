@@ -1,0 +1,67 @@
+{
+  "id": "creature:grimlock@2024",
+  "name": "Grimlock",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:aberration",
+  "alignment": "alignment:neutral-evil",
+  "ac": 11,
+  "hp": {
+    "average": 11,
+    "formula": "2d8 + 2"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:climb": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 6,
+    "ability:con": 12,
+    "ability:dex": 12,
+    "ability:int": 9,
+    "ability:str": 16,
+    "ability:wis": 8
+  },
+  "skills": {
+    "skill:athletics": 5,
+    "skill:perception": 3,
+    "skill:stealth": 5
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30
+    }
+  },
+  "passivePerception": 13,
+  "xp": 50,
+  "proficiencyBonus": 2,
+  "initiative": 1,
+  "habitat": [
+    "Underdark"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 0.25,
+  "blocks": [
+    {
+      "name": "Bone Cudgel",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5, reach 5 ft. _Hit:_ 6 (1d6 + 3) Bludgeoning damage plus 2 (1d4) Psychic damage.",
+        "plain": "Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Bludgeoning damage plus 2 (1d4) Psychic damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

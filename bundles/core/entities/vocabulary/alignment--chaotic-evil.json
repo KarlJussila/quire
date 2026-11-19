@@ -1,0 +1,11 @@
+{
+  "id": "alignment:chaotic-evil",
+  "name": "Chaotic Evil",
+  "source": {
+    "book": "core"
+  },
+  "components": [
+    "alignment:chaotic",
+    "alignment:evil"
+  ]
+}

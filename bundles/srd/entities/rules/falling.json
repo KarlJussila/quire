@@ -1,0 +1,67 @@
+{
+  "id": "rule:falling",
+  "name": "Falling",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A fall from a great height is one of the most common hazards facing an adventurer. At the end of a fall, a creature takes 1d6 bludgeoning damage for every 10 feet it fell, to a maximum of 20d6. The creature lands Prone, unless it avoids taking damage from the fall.",
+    "plain": "A fall from a great height is one of the most common hazards facing an adventurer. At the end of a fall, a creature takes 1d6 bludgeoning damage for every 10 feet it fell, to a maximum of 20d6. The creature lands Prone, unless it avoids taking damage from the fall.",
+    "wording": "srd"
+  },
+  "group": "group:exploration",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:fell",
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "key": "fall-damage",
+            "damage": {
+              "amount": {
+                "dice": {
+                  "count": {
+                    "min": [
+                      20,
+                      {
+                        "divide": {
+                          "event": "distance"
+                        },
+                        "by": 10,
+                        "round": "down"
+                      }
+                    ]
+                  },
+                  "die": 6
+                }
+              },
+              "type": "damage-type:bludgeoning"
+            },
+            "to": "self"
+          },
+          {
+            "applyState": {
+              "state": "condition:prone"
+            },
+            "to": "self",
+            "when": {
+              "compare": {
+                "result": "fall-damage"
+              },
+              "atLeast": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "language:sahuagin",
+  "name": "Sahuagin",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- **Languages** Sahuagin",
+    "plain": "- Languages Sahuagin",
+    "wording": "srd"
+  }
+}

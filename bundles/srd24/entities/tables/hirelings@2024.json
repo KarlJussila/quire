@@ -1,0 +1,37 @@
+{
+  "id": "table:hirelings@2024",
+  "name": "Hirelings",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "service",
+      "name": "Service"
+    },
+    {
+      "key": "cost",
+      "name": "Cost"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "service": "Skilled hireling",
+        "cost": "2 GP per day"
+      }
+    },
+    {
+      "cells": {
+        "service": "Untrained hireling",
+        "cost": "2 SP per day"
+      }
+    },
+    {
+      "cells": {
+        "service": "Messenger",
+        "cost": "2 CP per mile"
+      }
+    }
+  ]
+}

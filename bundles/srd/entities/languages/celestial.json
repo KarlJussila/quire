@@ -1,0 +1,15 @@
+{
+  "id": "language:celestial",
+  "name": "Celestial",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "An exotic language, typically spoken by celestials, written in the Celestial script.",
+    "plain": "An exotic language, typically spoken by celestials, written in the Celestial script.",
+    "wording": "original"
+  },
+  "group": "group:exotic-language",
+  "script": "Celestial",
+  "speakers": "Celestials"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "spell:circle-of-death@2024",
+  "name": "Circle of Death",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Negative energy ripples out in a 60-foot-radius Sphere from a point you choose within range. Each creature in that area makes a Constitution saving throw, taking 8d8 Necrotic damage on a failed save or half as much damage on a successful one.\n\n_**Using a Higher-Level Spell Slot.**_ The damage increases by 2d8 for each spell slot level above 6.",
+    "plain": "Negative energy ripples out in a 60-foot-radius Sphere from a point you choose within range. Each creature in that area makes a Constitution saving throw, taking 8d8 Necrotic damage on a failed save or half as much damage on a successful one.\n\nUsing a Higher-Level Spell Slot. The damage increases by 2d8 for each spell slot level above 6.",
+    "wording": "srd"
+  },
+  "level": 6,
+  "school": "spell-school:necromancy",
+  "lists": [
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "the powder of a crushed black pearl worth 500+ GP",
+      "parts": [
+        {
+          "worth": {
+            "amount": 500,
+            "currency": "currency:gp"
+          }
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 150
+      },
+      "duration": "instant"
+    }
+  ]
+}

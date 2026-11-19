@@ -1,0 +1,26 @@
+{
+  "id": "species:gnome",
+  "name": "Gnome",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "## Gnome Traits\n\nYour gnome character has certain characteristics in common with all other gnomes.\n\n_**Ability Score Increase.**_ Your Intelligence score increases by 2.\n\n_**Age.**_ Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.\n\n_**Alignment.**_ Gnomes are most often good. Those who tend toward law are sages, engineers, researchers, scholars, investigators, or inventors. Those who tend toward chaos are minstrels, tricksters, wanderers, or fanciful jewelers. Gnomes are good-hearted, and even the tricksters among them are more playful than vicious.\n\n_**Size.**_ Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.\n\n_**Speed.**_ Your base walking speed is 25 feet.\n\n_**Darkvision.**_ Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.\n\n_**Gnome Cunning.**_ You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.\n\n_**Languages.**_ You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.",
+    "plain": "## Gnome Traits\n\nYour gnome character has certain characteristics in common with all other gnomes.\n\nAbility Score Increase. Your Intelligence score increases by 2.\n\nAge. Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.\n\nAlignment. Gnomes are most often good. Those who tend toward law are sages, engineers, researchers, scholars, investigators, or inventors. Those who tend toward chaos are minstrels, tricksters, wanderers, or fanciful jewelers. Gnomes are good-hearted, and even the tricksters among them are more playful than vicious.\n\nSize. Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.\n\nSpeed. Your base walking speed is 25 feet.\n\nDarkvision. Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.\n\nGnome Cunning. You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.\n\nLanguages. You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.",
+    "wording": "srd"
+  },
+  "subspeciesRequired": true,
+  "features": [
+    "feature:gnome/ability-score-increase",
+    "feature:gnome/darkvision",
+    "feature:gnome/gnome-subrace",
+    "feature:gnome/gnome-cunning",
+    "feature:gnome/languages"
+  ],
+  "size": "size:small",
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 25
+    }
+  }
+}

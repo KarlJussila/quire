@@ -1,0 +1,28 @@
+{
+  "id": "subclass:sorcerer/draconic-sorcery@2024",
+  "name": "Draconic Sorcery",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Breathe the Magic of Dragons_\n\nYour innate magic comes from the gift of a dragon. Perhaps an ancient dragon facing death bequeathed some of its magical power to you or your ancestor. You might have absorbed magic from a site infused with dragons' power. Or perhaps you handled a treasure taken from a dragon's hoard that was steeped in draconic power. Or you might have a dragon for an ancestor.",
+    "plain": "Breathe the Magic of Dragons\n\nYour innate magic comes from the gift of a dragon. Perhaps an ancient dragon facing death bequeathed some of its magical power to you or your ancestor. You might have absorbed magic from a site infused with dragons' power. Or perhaps you handled a treasure taken from a dragon's hoard that was steeped in draconic power. Or you might have a dragon for an ancestor.",
+    "wording": "srd"
+  },
+  "class": "class:sorcerer",
+  "levels": {
+    "14": [
+      "feature:sorcerer/draconic-sorcery/dragon-wings@2024"
+    ],
+    "18": [
+      "feature:sorcerer/draconic-sorcery/dragon-companion@2024"
+    ],
+    "3": [
+      "feature:sorcerer/draconic-sorcery/draconic-resilience@2024",
+      "feature:sorcerer/draconic-sorcery/draconic-spells@2024"
+    ],
+    "6": [
+      "feature:sorcerer/draconic-sorcery/elemental-affinity@2024"
+    ]
+  }
+}

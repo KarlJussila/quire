@@ -1,0 +1,20 @@
+{
+  "id": "feature:rogue/slippery-mind",
+  "name": "Slippery Mind",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "By 15th level, you have acquired greater mental strength. You gain proficiency in Wisdom saving throws.",
+    "plain": "By 15th level, you have acquired greater mental strength. You gain proficiency in Wisdom saving throws.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:wis"
+      ]
+    }
+  ]
+}

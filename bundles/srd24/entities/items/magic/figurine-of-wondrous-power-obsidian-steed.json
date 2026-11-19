@@ -1,0 +1,13 @@
+{
+  "id": "item:figurine-of-wondrous-power-obsidian-steed@2024",
+  "name": "Figurine of Wondrous Power, Obsidian Steed",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "A Figurine of Wondrous Power is a pocket-sized statuette that becomes its specified living creature when thrown to the ground with a Magic action. This polished obsidian horse can become a Nightmare for up to 24 hours. Once it has been used, it can't be used again until 5 days have passed, and each use carries the figurine's printed 10 percent disobedience risk.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:very-rare"
+}

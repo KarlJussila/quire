@@ -1,0 +1,58 @@
+{
+  "id": "rule:languages@2024",
+  "name": "Choose Languages",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your character knows at least three languages: Common plus two languages you roll or choose from the table. Knowledge of a language means your character can communicate in it, read it, and write it. Your class and other features might also give you languages.\n\nThe table lists languages that are widespread in the setting. Every player character knows Common. The other standard languages originated with the first members of the most prominent species in the setting and have since spread widely.\n\n| 1d12   | Language             |\n|--------|----------------------|\n| —      | Common               |\n| 1      | Common Sign Language |\n| 2      | Draconic             |\n| 3-4    | Dwarvish             |\n| 5-6    | Elvish               |\n| 7      | Giant                |\n| 8      | Gnomish              |\n| 9      | Goblin               |\n| 10-11  | Halfling             |\n| 12     | Orc                  |\n\nRare languages are either secret or derived from other planes of existence and thus less widespread in the worlds of the Material Plane. Some features let a character learn a rare language. These include:\n\n- Abyssal\n- Celestial\n- Deep Speech\n- Druidic\n- Infernal\n- Primordial\n- Sylvan\n- Thieves' Cant\n- Undercommon\n\nPrimordial includes the Aquan, Auran, Ignan, and Terran dialects. Creatures that know one of these dialects can communicate with those that know a different one.",
+    "plain": "Your character knows at least three languages: Common plus two languages you roll or choose from the table. Knowledge of a language means your character can communicate in it, read it, and write it. Your class and other features might also give you languages.\n\nThe table lists languages that are widespread in the setting. Every player character knows Common. The other standard languages originated with the first members of the most prominent species in the setting and have since spread widely.\n\n1d12\tLanguage\n\n—\tCommon\n\n1\tCommon Sign Language\n\n2\tDraconic\n\n3-4\tDwarvish\n\n5-6\tElvish\n\n7\tGiant\n\n8\tGnomish\n\n9\tGoblin\n\n10-11\tHalfling\n\n12\tOrc\n\nRare languages are either secret or derived from other planes of existence and thus less widespread in the worlds of the Material Plane. Some features let a character learn a rare language. These include:\n\nAbyssal\nCelestial\nDeep Speech\nDruidic\nInfernal\nPrimordial\nSylvan\nThieves' Cant\nUndercommon\n\nPrimordial includes the Aquan, Auran, Ignan, and Terran dialects. Creatures that know one of these dialects can communicate with those that know a different one.",
+    "wording": "srd"
+  },
+  "group": "group:character-creation",
+  "appliesTo": {
+    "pool": "any",
+    "where": {
+      "compare": "levels.total",
+      "atLeast": 1
+    }
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "language:common"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "languages",
+            "name": "Languages",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              {
+                "kind": "language",
+                "where": {
+                  "all": [
+                    {
+                      "group": "group:standard-language"
+                    },
+                    {
+                      "not": {
+                        "is": "language:common"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

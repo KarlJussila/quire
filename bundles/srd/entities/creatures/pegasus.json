@@ -1,0 +1,72 @@
+{
+  "id": "creature:pegasus",
+  "name": "Pegasus",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:celestial",
+  "alignment": "alignment:chaotic-good",
+  "ac": 12,
+  "hp": {
+    "average": 59,
+    "formula": "7d10 + 21"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 60
+    },
+    "movement-mode:fly": {
+      "speed": 90
+    }
+  },
+  "abilities": {
+    "ability:cha": 13,
+    "ability:con": 16,
+    "ability:dex": 15,
+    "ability:int": 10,
+    "ability:str": 18,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:cha": 3,
+    "ability:dex": 4,
+    "ability:wis": 4
+  },
+  "skills": {
+    "skill:perception": 6
+  },
+  "passivePerception": 16,
+  "xp": 450,
+  "cr": 2,
+  "languages": [
+    {
+      "language": "language:celestial",
+      "understandsOnly": true
+    },
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:elvish"
+    },
+    {
+      "text": "and Sylvan but can't speak"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Hooves",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 11 (2d6 + 4) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

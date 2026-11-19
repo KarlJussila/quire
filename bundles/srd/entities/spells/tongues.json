@@ -1,0 +1,45 @@
+{
+  "id": "spell:tongues",
+  "name": "Tongues",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This spell grants the creature you touch the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says.",
+    "plain": "This spell grants the creature you touch the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:divination",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:sorcerer",
+    "class:warlock",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "material": {
+      "text": "a small clay model of a ziggurat"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour"
+      }
+    }
+  ]
+}

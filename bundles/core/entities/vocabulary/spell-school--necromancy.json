@@ -1,0 +1,10 @@
+{
+  "id": "spell-school:necromancy",
+  "name": "Necromancy",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

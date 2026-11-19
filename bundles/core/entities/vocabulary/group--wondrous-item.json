@@ -1,0 +1,7 @@
+{
+  "id": "group:wondrous-item",
+  "name": "Wondrous Item",
+  "source": {
+    "book": "core"
+  }
+}

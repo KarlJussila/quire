@@ -1,0 +1,52 @@
+{
+  "id": "item:explorers-pack",
+  "name": "Explorer’s Pack",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it.",
+    "plain": "Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 10.0,
+  "contents": [
+    {
+      "item": "item:backpack",
+      "quantity": 1
+    },
+    {
+      "item": "item:bedroll",
+      "quantity": 1
+    },
+    {
+      "item": "item:mess-kit",
+      "quantity": 1
+    },
+    {
+      "item": "item:tinderbox",
+      "quantity": 1
+    },
+    {
+      "item": "item:torch",
+      "quantity": 10
+    },
+    {
+      "item": "item:rations-1-day",
+      "quantity": 10
+    },
+    {
+      "item": "item:waterskin",
+      "quantity": 1
+    },
+    {
+      "item": "item:rope-hempen-50-feet",
+      "quantity": 1
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "feature:sorcerer/draconic-sorcery/dragon-companion@2024",
+  "name": "Level 18: Dragon Companion",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can cast Summon Dragon without a Material component. You can also cast it once without a spell slot, and you regain the ability to cast it in this way when you finish a Long Rest.\n\nWhenever you start casting the spell, you can modify it so that it doesn't require Concentration. If you do so, the spell's duration becomes 1 minute for that casting.",
+    "plain": "You can cast Summon Dragon without a Material component. You can also cast it once without a spell slot, and you regain the ability to cast it in this way when you finish a Long Rest.\n\nWhenever you start casting the spell, you can modify it so that it doesn't require Concentration. If you do so, the spell's duration becomes 1 minute for that casting.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:summon-dragon"
+      ],
+      "how": "prepared",
+      "counts": false,
+      "set": {
+        "components": {
+          "material": {
+            "$delete": true
+          }
+        }
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:summon-dragon"
+      ],
+      "how": "innate",
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "set": {
+        "components": {
+          "material": {
+            "$delete": true
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "spell": "spell:summon-dragon"
+        }
+      },
+      "set": {
+        "duration": {
+          "$replace": {
+            "amount": 1,
+            "unit": "minute"
+          }
+        },
+        "concentration": {
+          "$delete": true
+        }
+      }
+    }
+  ]
+}

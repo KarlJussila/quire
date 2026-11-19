@@ -1,0 +1,70 @@
+{
+  "id": "feature:paladin/oath-of-devotion/smite-of-protection@2024",
+  "name": "Level 15: Smite of Protection",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your magical smite now radiates protective energy. Whenever you cast Divine Smite, you and your allies have Half Cover while in your Aura of Protection. The aura has this benefit until the start of your next turn.",
+    "plain": "Your magical smite now radiates protective energy. Whenever you cast Divine Smite, you and your allies have Half Cover while in your Aura of Protection. The aura has this benefit until the start of your next turn.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:activity-used",
+        "by": "self",
+        "match": {
+          "spell": "spell:divine-smite"
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "applyState": {
+              "state": {
+                "effects": [
+                  {
+                    "type": "zone",
+                    "zone": {
+                      "anchor": "self",
+                      "area": {
+                        "shape": "area-shape:emanation",
+                        "size": {
+                          "byLevel": {
+                            "6": 10,
+                            "18": 30
+                          },
+                          "of": "class:paladin"
+                        }
+                      },
+                      "affects": {
+                        "pool": "ally",
+                        "includeSelf": true
+                      },
+                      "cover": "half"
+                    },
+                    "when": {
+                      "not": {
+                        "has": "condition:incapacitated"
+                      }
+                    }
+                  }
+                ]
+              },
+              "ends": [
+                {
+                  "event": "event:turn-start",
+                  "subject": "self",
+                  "next": true
+                }
+              ]
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

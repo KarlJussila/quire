@@ -1,0 +1,18 @@
+{
+  "id": "rule:strong-wind@2024",
+  "name": "Strong Wind",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Strong wind imposes Disadvantage on ranged attack rolls with weapons. It also extinguishes open flames and disperses fog. A flying creature in a strong wind must land at the end of its turn or fall.\n\nA strong wind in a desert can create a sandstorm that imposes Disadvantage on Wisdom (Perception) checks.",
+    "plain": "Strong wind imposes Disadvantage on ranged attack rolls with weapons. It also extinguishes open flames and disperses fog. A flying creature in a strong wind must land at the end of its turn or fall.\n\nA strong wind in a desert can create a sandstorm that imposes Disadvantage on Wisdom (Perception) checks.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

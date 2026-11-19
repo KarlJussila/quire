@@ -1,0 +1,11 @@
+{
+  "id": "feature:half-elves",
+  "name": "Half-Elves",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "rest:short",
+  "name": "Short Rest",
+  "source": {
+    "book": "core"
+  }
+}

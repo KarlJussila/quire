@@ -1,0 +1,74 @@
+{
+  "id": "creature:worg",
+  "name": "Worg",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:neutral-evil",
+  "ac": 13,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 26,
+    "formula": "4d10 + 4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 8,
+    "ability:con": 13,
+    "ability:dex": 13,
+    "ability:int": 7,
+    "ability:str": 16,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:perception": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 100,
+  "cr": 0.5,
+  "languages": [
+    {
+      "language": "language:goblin"
+    },
+    {
+      "language": "language:worg"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Keen Hearing and Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The worg has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+        "plain": "The worg has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked Prone.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked Prone.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

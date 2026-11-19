@@ -1,0 +1,44 @@
+{
+  "id": "spell:animal-friendship@2024",
+  "name": "Animal Friendship",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Target a Beast that you can see within range. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. If you or one of your allies deals damage to the target, the spells ends.\n\n_**Using a Higher-Level Spell Slot.**_ You can target one additional Beast for each spell slot level above 1.",
+    "plain": "Target a Beast that you can see within range. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. If you or one of your allies deals damage to the target, the spells ends.\n\nUsing a Higher-Level Spell Slot. You can target one additional Beast for each spell slot level above 1.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:enchantment",
+  "lists": [
+    "class:bard",
+    "class:druid",
+    "class:ranger"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a morsel of food"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "duration": {
+        "amount": 24,
+        "unit": "hour"
+      }
+    }
+  ]
+}

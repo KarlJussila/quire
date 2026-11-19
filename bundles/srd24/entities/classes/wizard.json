@@ -1,0 +1,63 @@
+{
+  "id": "class:wizard@2024",
+  "name": "Wizard",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "As a Wizard, you gain the following class features when you reach the specified Wizard levels.",
+    "plain": "As a Wizard, you gain the following class features when you reach the specified Wizard levels.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d6",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:int",
+      "atLeast": 13
+    }
+  },
+  "levels": {
+    "1": [
+      "feature:wizard/arcane-recovery@2024",
+      "feature:wizard/ritual-adept@2024",
+      "feature:wizard/spellcasting@2024"
+    ],
+    "2": [
+      "feature:wizard/scholar@2024"
+    ],
+    "3": [
+      "feature:wizard/wizard-subclass@2024"
+    ],
+    "4": [
+      "feature:wizard/ability-score-improvement@2024"
+    ],
+    "5": [
+      "feature:wizard/memorize-spell@2024"
+    ],
+    "8": [
+      "feature:wizard/ability-score-improvement@2024"
+    ],
+    "12": [
+      "feature:wizard/ability-score-improvement@2024"
+    ],
+    "16": [
+      "feature:wizard/ability-score-improvement@2024"
+    ],
+    "18": [
+      "feature:wizard/spell-mastery@2024"
+    ],
+    "19": [
+      "feature:wizard/epic-boon@2024"
+    ],
+    "20": [
+      "feature:wizard/signature-spells@2024"
+    ]
+  },
+  "subclass": {
+    "level": 3,
+    "title": "Arcane Tradition||Wizard Subclass"
+  },
+  "firstClass": [
+    "feature:wizard/proficiencies@2024"
+  ]
+}

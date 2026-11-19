@@ -1,0 +1,98 @@
+{
+  "id": "creature:swarm-of-piranhas@2024",
+  "name": "Swarm of Piranhas",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "swarm": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "hp": {
+    "average": 28,
+    "formula": "8d8 - 8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 5
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 2,
+    "ability:con": 9,
+    "ability:dex": 16,
+    "ability:int": 1,
+    "ability:str": 13,
+    "ability:wis": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 8,
+  "xp": 200,
+  "proficiencyBonus": 2,
+  "initiative": 3,
+  "cr": 1,
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened",
+        "condition:grappled",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:prone",
+        "condition:restrained",
+        "condition:stunned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Swarm",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny piranha. The swarm can't regain Hit Points or gain Temporary Hit Points.",
+        "plain": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny piranha. The swarm can't regain Hit Points or gain Temporary Hit Points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Water Breathing",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The swarm can breathe only underwater.",
+        "plain": "The swarm can breathe only underwater.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bites",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +5 (with Advantage if the target doesn't have all its Hit Points), reach 5 ft. _Hit:_ 8 (2d4 + 3) Piercing damage, or 5 (1d4 + 3) Piercing damage if the swarm is Bloodied.",
+        "plain": "Melee Attack Roll: +5 (with Advantage if the target doesn't have all its Hit Points), reach 5 ft. Hit: 8 (2d4 + 3) Piercing damage, or 5 (1d4 + 3) Piercing damage if the swarm is Bloodied.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

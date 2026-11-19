@@ -1,0 +1,34 @@
+{
+  "id": "feature:warlock/eldritch-spear",
+  "name": "Eldritch Spear",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite:_ Eldritch Blast _cantrip_\n\nWhen you cast Eldritch Blast, its range is 300 feet.",
+    "plain": "Prerequisite: Eldritch Blast cantrip\n\nWhen you cast Eldritch Blast, its range is 300 feet.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "has": "spell:eldritch-blast"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "spell": "spell:eldritch-blast"
+        }
+      },
+      "set": {
+        "range": {
+          "distance": {
+            "$replace": 300
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "alignment:neutral-evil",
+  "name": "Neutral Evil",
+  "source": {
+    "book": "core"
+  },
+  "components": [
+    "alignment:neutral",
+    "alignment:evil"
+  ]
+}

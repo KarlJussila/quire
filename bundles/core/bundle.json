@@ -1,0 +1,7 @@
+{
+  "id": "core",
+  "name": "Core rules",
+  "version": "0.1.0",
+  "kind": "official",
+  "license": "CC-BY-4.0"
+}

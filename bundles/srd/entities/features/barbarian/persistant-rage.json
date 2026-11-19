@@ -1,0 +1,29 @@
+{
+  "id": "feature:barbarian/persistant-rage",
+  "name": "Persistent Rage",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 15th level, your rage is so fierce that it ends early only if you fall Unconscious or if you choose to end it.",
+    "plain": "Beginning at 15th level, your rage is so fierce that it ends early only if you fall Unconscious or if you choose to end it.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "of": "state:raging",
+      "set": {
+        "ends": {
+          "$remove": {
+            "event": "event:turn-end"
+          }
+        }
+      },
+      "when": {
+        "compare": "levels.class:barbarian",
+        "atLeast": 15
+      }
+    }
+  ]
+}

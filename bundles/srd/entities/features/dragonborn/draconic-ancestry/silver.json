@@ -1,0 +1,18 @@
+{
+  "id": "feature:dragonborn/draconic-ancestry/silver",
+  "name": "Silver",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Damage Type: Cold\nBreath Weapon: 15 ft. cone (Con. save)",
+    "wording": "srd"
+  },
+  "group": "group:draconic-ancestry",
+  "values": {
+    "damage-type": "damage-type:cold",
+    "breath-shape": "area-shape:cone",
+    "breath-size": 15,
+    "breath-save": "ability:con"
+  }
+}

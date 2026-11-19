@@ -1,0 +1,49 @@
+{
+  "id": "table:food-and-drink@2024",
+  "name": "Food and Drink",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "item",
+      "name": "Item"
+    },
+    {
+      "key": "cost",
+      "name": "Cost"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "item": "Ale (mug)",
+        "cost": "4 CP"
+      }
+    },
+    {
+      "cells": {
+        "item": "Bread (loaf)",
+        "cost": "2 CP"
+      }
+    },
+    {
+      "cells": {
+        "item": "Cheese (wedge)",
+        "cost": "1 SP"
+      }
+    },
+    {
+      "cells": {
+        "item": "Common Wine (bottle)",
+        "cost": "2 SP"
+      }
+    },
+    {
+      "cells": {
+        "item": "Fine Wine (bottle)",
+        "cost": "10 GP"
+      }
+    }
+  ]
+}

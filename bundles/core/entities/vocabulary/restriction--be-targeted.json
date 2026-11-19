@@ -1,0 +1,7 @@
+{
+  "id": "restriction:be-targeted",
+  "name": "Be Targeted Directly",
+  "source": {
+    "book": "core"
+  }
+}

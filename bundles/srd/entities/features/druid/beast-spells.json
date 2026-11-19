@@ -1,0 +1,84 @@
+{
+  "id": "feature:druid/beast-spells",
+  "name": "Beast Spells",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components.",
+    "plain": "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "waive",
+      "restriction": [
+        "restriction:cast-spells"
+      ],
+      "when": {
+        "has": "state:wild-shape"
+      }
+    },
+    {
+      "type": "suppress",
+      "rule": [
+        "rule:components"
+      ],
+      "effects": [
+        "verbal",
+        "somatic"
+      ],
+      "when": {
+        "has": "state:wild-shape"
+      }
+    },
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:cast-spells"
+      ],
+      "activity": {
+        "kind": "activity",
+        "where": {
+          "not": {
+            "spell": {
+              "kind": "spell",
+              "where": {
+                "match": {
+                  "lists": "class:druid"
+                }
+              }
+            }
+          }
+        }
+      },
+      "when": {
+        "has": "state:wild-shape"
+      }
+    },
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:cast-spells"
+      ],
+      "activity": {
+        "kind": "activity",
+        "where": {
+          "spell": {
+            "kind": "spell",
+            "where": {
+              "match": {
+                "components": {
+                  "material": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "when": {
+        "has": "state:wild-shape"
+      }
+    }
+  ]
+}

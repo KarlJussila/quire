@@ -1,0 +1,60 @@
+{
+  "id": "creature:mule@2024",
+  "name": "Mule",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 10,
+  "hp": {
+    "average": 11,
+    "formula": "2d8 + 2"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 13,
+    "ability:dex": 10,
+    "ability:int": 2,
+    "ability:str": 14,
+    "ability:wis": 10
+  },
+  "saves": {
+    "ability:str": 4
+  },
+  "passivePerception": 10,
+  "xp": 25,
+  "proficiencyBonus": 2,
+  "initiative": 0,
+  "cr": 0.125,
+  "blocks": [
+    {
+      "name": "Beast of Burden",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The mule counts as one size larger for the purpose of determining its carrying capacity.",
+        "plain": "The mule counts as one size larger for the purpose of determining its carrying capacity.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hooves",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 4 (1d4 + 2) Bludgeoning damage.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

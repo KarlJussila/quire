@@ -1,0 +1,36 @@
+{
+  "id": "feature:half-elf/languages",
+  "name": "Languages",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Languages. You can speak, read, and write Common, Elvish, and one extra language of your choice.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "language:common",
+        "language:elvish"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "language",
+            "name": "Languages",
+            "from": [
+              {
+                "kind": "language"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

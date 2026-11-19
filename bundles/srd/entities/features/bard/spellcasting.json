@@ -1,0 +1,442 @@
+{
+  "id": "feature:bard/spellcasting",
+  "name": "Spellcasting",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music.\n\nYour spells are part of your vast repertoire, magic that you can tune to different situations.",
+    "plain": "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music.\n\nYour spells are part of your vast repertoire, magic that you can tune to different situations.",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting-feature",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "class:bard": {
+            "ability": "ability:cha",
+            "slots": "table:full-caster",
+            "known": {
+              "$base": {
+                "byLevel": {
+                  "1": 4,
+                  "2": 5,
+                  "3": 6,
+                  "4": 7,
+                  "5": 8,
+                  "6": 9,
+                  "7": 10,
+                  "8": 11,
+                  "9": 12,
+                  "10": 14,
+                  "11": 15,
+                  "12": 15,
+                  "13": 16,
+                  "14": 18,
+                  "15": 19,
+                  "16": 19,
+                  "17": 20,
+                  "18": 22,
+                  "19": 22,
+                  "20": 22
+                },
+                "of": "class:bard"
+              }
+            },
+            "cantrips": {
+              "$base": {
+                "byLevel": {
+                  "1": 2,
+                  "2": 2,
+                  "3": 2,
+                  "4": 3,
+                  "5": 3,
+                  "6": 3,
+                  "7": 3,
+                  "8": 3,
+                  "9": 3,
+                  "10": 4,
+                  "11": 4,
+                  "12": 4,
+                  "13": 4,
+                  "14": 4,
+                  "15": 4,
+                  "16": 4,
+                  "17": 4,
+                  "18": 4,
+                  "19": 4,
+                  "20": 4
+                },
+                "of": "class:bard"
+              }
+            },
+            "casterLevel": {
+              "$base": "levels.class:bard"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "cantrips",
+            "name": "Bard Cantrips",
+            "count": "spellcasting.class:bard.cantrips",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "level": 0,
+                    "lists": "class:bard"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": "ability:cha"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "spell": {
+            "kind": "spell",
+            "where": {
+              "all": [
+                {
+                  "match": {
+                    "ritual": true
+                  }
+                },
+                {
+                  "any": [
+                    {
+                      "match": {
+                        "lists": "class:bard"
+                      }
+                    },
+                    {
+                      "grantedBy": "feature:bard/magical-secrets"
+                    },
+                    {
+                      "grantedBy": "feature:bard/college-of-lore/additional-magical-secrets"
+                    }
+                  ]
+                },
+                {
+                  "creature": "self",
+                  "where": {
+                    "has": "candidate"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "set": {
+        "time": {
+          "$add": {
+            "amount": 10,
+            "unit": "minute"
+          }
+        },
+        "cost": {
+          "$remove": {
+            "resource": "spell-slots"
+          }
+        }
+      },
+      "variant": "ritual"
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "known",
+            "name": "Bard Spells Known",
+            "count": "spellcasting.class:bard.known",
+            "distinct": true,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:bard",
+                    "level": {
+                      "atLeast": 1,
+                      "atMost": "spellcasting.class:bard.spellLevel"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": "ability:cha"
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-spell",
+      "name": "Replace Known Spell",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self",
+        "match": {
+          "class": "class:bard"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "what": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "level": {
+                        "atLeast": 1
+                      }
+                    }
+                  },
+                  {
+                    "any": [
+                      {
+                        "grantedBy": "feature:bard/spellcasting"
+                      },
+                      {
+                        "grantedBy": "feature:bard/magical-secrets"
+                      },
+                      {
+                        "grantedBy": "feature:bard/college-of-lore/additional-magical-secrets"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "with": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "lists": "class:bard",
+                      "level": {
+                        "atLeast": 1
+                      }
+                    }
+                  },
+                  {
+                    "any": [
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 1,
+                              "atMost": 2
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 1
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 3,
+                              "atMost": 4
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 2
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 5,
+                              "atMost": 6
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 3
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 7,
+                              "atMost": 8
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 4
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 9,
+                              "atMost": 10
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 5
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 11,
+                              "atMost": 12
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 6
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 13,
+                              "atMost": 14
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 7
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 15,
+                              "atMost": 16
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 8
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:bard",
+                              "atLeast": 17
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 9
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "spellcasting",
+      "name": "The allowed focus is tied to the Bard casting source, but its exact scope on a cast that can have multiple sources is unresolved."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "feature:paladin/oath-of-devotion/aura-of-devotion@2024",
+  "name": "Level 7: Aura of Devotion",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You and your allies have Immunity to the Charmed condition while in your Aura of Protection. If a Charmed ally enters the aura, that condition has no effect on that ally while there.",
+    "plain": "You and your allies have Immunity to the Charmed condition while in your Aura of Protection. If a Charmed ally enters the aura, that condition has no effect on that ally while there.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "zone",
+      "zone": {
+        "anchor": "self",
+        "area": {
+          "shape": "area-shape:emanation",
+          "size": {
+            "byLevel": {
+              "6": 10,
+              "18": 30
+            },
+            "of": "class:paladin"
+          }
+        },
+        "affects": {
+          "pool": "ally",
+          "includeSelf": true
+        },
+        "effects": [
+          {
+            "type": "defense",
+            "immune": [
+              "condition:charmed"
+            ]
+          }
+        ]
+      },
+      "when": {
+        "not": {
+          "has": "condition:incapacitated"
+        }
+      }
+    }
+  ]
+}

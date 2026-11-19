@@ -1,0 +1,8 @@
+{
+  "id": "group:air-vehicle",
+  "name": "Air Vehicle",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:vehicle"
+}

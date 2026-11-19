@@ -1,0 +1,12 @@
+{
+  "id": "feature:elf/fey-ancestry",
+  "name": "Fey Ancestry",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have advantage on saving throws against being Charmed, and magic can't put you to sleep.",
+    "plain": "You have advantage on saving throws against being Charmed, and magic can't put you to sleep.",
+    "wording": "srd"
+  }
+}

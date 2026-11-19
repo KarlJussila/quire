@@ -1,0 +1,38 @@
+{
+  "id": "rule:hide",
+  "name": "Hide",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain certain benefits, as described in the \"Unseen Attackers and Targets\" section.",
+    "plain": "When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain certain benefits, as described in the \"Unseen Attackers and Targets\" section.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "hide",
+      "action": "action:hide",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Make a Dexterity (Stealth) check to hide; see Unseen Attackers and Targets.",
+            "gap": {
+              "category": "hiding",
+              "name": "2014 hiding: Stealth against each observer, with no condition"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

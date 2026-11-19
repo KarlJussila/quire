@@ -1,0 +1,77 @@
+{
+  "id": "creature:giant-shark@2024",
+  "name": "Giant Shark",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 13,
+  "hp": {
+    "average": 92,
+    "formula": "8d12 + 40"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 5
+    },
+    "movement-mode:swim": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 21,
+    "ability:dex": 11,
+    "ability:int": 1,
+    "ability:str": 23,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 3
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    }
+  },
+  "passivePerception": 13,
+  "xp": 1800,
+  "proficiencyBonus": 3,
+  "initiative": 3,
+  "cr": 5,
+  "blocks": [
+    {
+      "name": "Water Breathing",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The shark can breathe only underwater.",
+        "plain": "The shark can breathe only underwater.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The shark makes two Bite attacks.",
+        "plain": "The shark makes two Bite attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +9 (with Advantage if the target doesn't have all its Hit Points), reach 5 ft. _Hit:_ 22 (3d10 + 6) Piercing damage.",
+        "plain": "Melee Attack Roll: +9 (with Advantage if the target doesn't have all its Hit Points), reach 5 ft. Hit: 22 (3d10 + 6) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

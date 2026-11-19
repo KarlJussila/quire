@@ -1,0 +1,107 @@
+{
+  "id": "feature:cleric/greater-divine-intervention@2024",
+  "name": "Level 20: Greater Divine Intervention",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can call on even more powerful divine intervention. When you use your Divine Intervention feature, you can choose Wish when you select a spell. If you do so, you can't use Divine Intervention again until you finish 2d4 Long Rests.",
+    "plain": "You can call on even more powerful divine intervention. When you use your Divine Intervention feature, you can choose Wish when you select a spell. If you do so, you can't use Divine Intervention again until you finish 2d4 Long Rests.",
+    "wording": "srd"
+  },
+  "gaps": [],
+  "effects": [
+    {
+      "type": "resource",
+      "key": "divine-intervention-rests",
+      "max": 8,
+      "start": 0,
+      "recover": []
+    },
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:rest-finished",
+        "subject": "self",
+        "match": {
+          "rest": "rest:long"
+        },
+        "when": {
+          "compare": "pools.divine-intervention-rests.current",
+          "atLeast": 1
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "pool": {
+              "spend": 1,
+              "resource": "divine-intervention-rests"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    },
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:actions"
+      ],
+      "activity": "feature:cleric/divine-intervention",
+      "when": {
+        "compare": "pools.divine-intervention-rests.current",
+        "atLeast": 1
+      }
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "feature:cleric/divine-intervention"
+            },
+            {
+              "match": {
+                "key": "divine-intervention"
+              }
+            }
+          ]
+        }
+      },
+      "variant": "greater-divine-intervention-wish",
+      "set": {
+        "uses": {
+          "$delete": true
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "divine-intervention"
+            }
+          ]
+        },
+        "outcomes": {
+          "$replace": [
+            {
+              "cast": {
+                "spell": "spell:wish",
+                "slot": false,
+                "castAt": 9
+              }
+            },
+            {
+              "pool": {
+                "add": "2d4",
+                "resource": "divine-intervention-rests"
+              },
+              "to": "self"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "item:entertainers-pack",
+  "name": "Entertainer’s Pack",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Includes a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, a waterskin, and a disguise kit.",
+    "plain": "Includes a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, a waterskin, and a disguise kit.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 40,
+    "currency": "currency:gp"
+  },
+  "weight": 10.0,
+  "contents": [
+    {
+      "item": "item:backpack",
+      "quantity": 1
+    },
+    {
+      "item": "item:bedroll",
+      "quantity": 1
+    },
+    {
+      "item": "item:clothes-costume",
+      "quantity": 2
+    },
+    {
+      "item": "item:candle",
+      "quantity": 5
+    },
+    {
+      "item": "item:rations-1-day",
+      "quantity": 5
+    },
+    {
+      "item": "item:waterskin",
+      "quantity": 1
+    },
+    {
+      "item": "item:disguise-kit",
+      "quantity": 1
+    }
+  ]
+}

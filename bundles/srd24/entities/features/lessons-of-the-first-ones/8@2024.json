@@ -1,0 +1,42 @@
+{
+  "id": "feature:lessons-of-the-first-ones/8@2024",
+  "name": "Lessons of the First Ones",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 2+ Warlock_\n\nYou have received knowledge from an elder entity of the multiverse, allowing you to gain one Origin feat of your choice (see \"Feats\").\n\n_**Repeatable.**_ You can gain this invocation more than once. Each time you do so, choose a different Origin feat.",
+    "plain": "Prerequisite: Level 2+ Warlock\n\nYou have received knowledge from an elder entity of the multiverse, allowing you to gain one Origin feat of your choice (see \"Feats\").\n\nRepeatable. You can gain this invocation more than once. Each time you do so, choose a different Origin feat.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 2
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "origin-feat",
+        "name": "Origin Feat",
+        "from": [
+          {
+            "kind": "feat",
+            "where": {
+              "group": "group:origin"
+            }
+          }
+        ],
+        "where": {
+          "not": {
+            "has": "candidate"
+          }
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "activities": [],
+  "gaps": [],
+  "repeatable": true
+}

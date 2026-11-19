@@ -1,0 +1,10 @@
+{
+  "id": "group:rare-language@2024",
+  "name": "Rare Language",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A language the 2024 rules list as rare."
+  }
+}

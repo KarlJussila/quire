@@ -1,0 +1,44 @@
+{
+  "id": "feature:elf/elven-lineage@2024",
+  "name": "Elven Lineage",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You are part of a lineage that grants you supernatural abilities. Choose a lineage from the table. You gain the level 1 benefit of that lineage.",
+    "plain": "You are part of a lineage that grants you supernatural abilities. Choose a lineage from the table. You gain the level 1 benefit of that lineage.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "lineage",
+        "name": "Elven Lineage",
+        "from": [
+          {
+            "kind": "feature",
+            "where": {
+              "group": "group:elven-lineage"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "record",
+      "pick": {
+        "choose": {
+          "key": "spellcasting-ability",
+          "name": "Spellcasting ability",
+          "from": [
+            "ability:int",
+            "ability:wis",
+            "ability:cha"
+          ]
+        }
+      }
+    }
+  ]
+}

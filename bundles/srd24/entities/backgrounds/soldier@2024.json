@@ -1,0 +1,18 @@
+{
+  "id": "background:soldier@2024",
+  "name": "Soldier",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "- **Ability Scores:** Strength, Dexterity, Constitution\n- **Feat:** Savage Attacker (see \"Feats\")\n- **Skill Proficiencies:** Athletics and Intimidation\n- **Tool Proficiency:** _Choose one kind of Gaming Set_ (see \"Equipment\")\n- **Equipment:** _Choose A or B:_ (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Healer's Kit, Quiver, Traveler's Clothes, 14 GP; or (B) 50 GP",
+    "plain": "- Ability Scores: Strength, Dexterity, Constitution\n- Feat: Savage Attacker (see \"Feats\")\n- Skill Proficiencies: Athletics and Intimidation\n- Tool Proficiency: Choose one kind of Gaming Set (see \"Equipment\")\n- Equipment: Choose A or B: (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Healer's Kit, Quiver, Traveler's Clothes, 14 GP; or (B) 50 GP",
+    "wording": "srd"
+  },
+  "features": [
+    "feature:soldier/ability-scores@2024",
+    "feat:savage-attacker@2024",
+    "feature:soldier/skill-proficiencies@2024",
+    "feature:soldier/tool-proficiencies@2024"
+  ]
+}

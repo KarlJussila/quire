@@ -1,0 +1,7 @@
+{
+  "id": "group:shield",
+  "name": "Shield",
+  "source": {
+    "book": "core"
+  }
+}

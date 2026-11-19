@@ -1,0 +1,102 @@
+{
+  "id": "weapon-mastery:topple",
+  "name": "Topple",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and your Proficiency Bonus). On a failed save, the creature has the Prone condition.",
+    "plain": "If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and your Proficiency Bonus). On a failed save, the creature has the Prone condition.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "item": {
+              "kind": "item",
+              "where": {
+                "match": {
+                  "weapon": {
+                    "mastery": "weapon-mastery:topple"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "when": {
+          "compare": "masteries.{attack.item}",
+          "equals": true
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "runs": [
+              {
+                "activity": "topple"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "topple",
+      "standalone": false,
+      "outcomes": [
+        {
+          "choose": {
+            "key": "topple",
+            "name": "Topple the Target",
+            "optional": true,
+            "from": [
+              {
+                "then": {
+                  "target": {
+                    "who": "target"
+                  },
+                  "delivery": {
+                    "save": {
+                      "ability": "ability:con",
+                      "dc": {
+                        "sum": [
+                          8,
+                          "modifiers.{ability}",
+                          "proficiencyBonus"
+                        ]
+                      }
+                    }
+                  },
+                  "outcomes": [
+                    {
+                      "applyState": {
+                        "state": "condition:prone"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "when": {
+        "creature": "target",
+        "where": {
+          "kind": "creature"
+        }
+      }
+    }
+  ],
+  "gaps": []
+}

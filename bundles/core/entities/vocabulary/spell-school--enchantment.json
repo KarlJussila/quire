@@ -1,0 +1,10 @@
+{
+  "id": "spell-school:enchantment",
+  "name": "Enchantment",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

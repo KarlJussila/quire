@@ -1,0 +1,14 @@
+{
+  "id": "event:item-equipped",
+  "name": "Item Equipped",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "The subject dons armor or a shield, puts on a worn item, or draws or picks up an item to hold it. The trigger's item says which."
+  },
+  "payload": [
+    "item"
+  ],
+  "emittedBy": "engine"
+}

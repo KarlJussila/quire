@@ -1,0 +1,15 @@
+{
+  "id": "feature:sorcerer/draconic-bloodline/dragon-ancestor/green",
+  "name": "Green",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Damage Type: Poison",
+    "wording": "srd"
+  },
+  "group": "group:dragon-ancestor",
+  "values": {
+    "damage-type": "damage-type:poison"
+  }
+}

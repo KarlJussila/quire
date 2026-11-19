@@ -1,0 +1,101 @@
+{
+  "id": "item:ammunition-of-slaying@2024",
+  "name": "Ammunition of Slaying",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "This magic ammunition is meant to slay creatures of a particular type, which the GM chooses or determines randomly by rolling on the table below. If a creature of that type takes damage from the ammunition, the creature makes a DC 17 Constitution saving throw, taking an extra 6d10 Force damage on a failed save or half as much extra damage on a successful one.\n\nAfter dealing its extra damage to a creature, the ammunition becomes nonmagical.\n\n| 1d100   | Creature Type   |\n|---------|-----------------|\n| 01-10   | Aberrations     |\n| 11-15   | Beasts          |\n| 16-20   | Celestials      |\n| 21-25   | Constructs      |\n| 26-35   | Dragons         |\n| 36-45   | Elementals      |\n| 46-50   | Humanoids       |\n| 51-60   | Fey             |\n| 61-70   | Fiends          |\n| 71-75   | Giants          |\n| 76-80   | Monstrosities   |\n| 81-85   | Oozes           |\n| 86-90   | Plants          |\n| 91-00   | Undead          |",
+    "plain": "This magic ammunition is meant to slay creatures of a particular type, which the GM chooses or determines randomly by rolling on the table below. If a creature of that type takes damage from the ammunition, the creature makes a DC 17 Constitution saving throw, taking an extra 6d10 Force damage on a failed save or half as much extra damage on a successful one.\n\nAfter dealing its extra damage to a creature, the ammunition becomes nonmagical.\n\n| 1d100   | Creature Type   |\n|---------|-----------------|\n| 01-10   | Aberrations     |\n| 11-15   | Beasts          |\n| 16-20   | Celestials      |\n| 21-25   | Constructs      |\n| 26-35   | Dragons         |\n| 36-45   | Elementals      |\n| 46-50   | Humanoids       |\n| 51-60   | Fey             |\n| 61-70   | Fiends          |\n| 71-75   | Giants          |\n| 76-80   | Monstrosities   |\n| 81-85   | Oozes           |\n| 86-90   | Plants          |\n| 91-00   | Undead          |",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:very-rare",
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Ammunition",
+      "from": [
+        {
+          "kind": "item",
+          "where": {
+            "group": "group:ammunition"
+          }
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "record",
+      "pick": {
+        "choose": {
+          "key": "type",
+          "name": "Creature Type",
+          "from": [
+            "creature-type:aberration",
+            "creature-type:beast",
+            "creature-type:celestial",
+            "creature-type:construct",
+            "creature-type:dragon",
+            "creature-type:elemental",
+            "creature-type:fey",
+            "creature-type:fiend",
+            "creature-type:giant",
+            "creature-type:humanoid",
+            "creature-type:monstrosity",
+            "creature-type:ooze",
+            "creature-type:plant",
+            "creature-type:undead"
+          ]
+        }
+      }
+    },
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:damaged",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "match": {
+              "creatureType": {
+                "chosen": "type"
+              }
+            }
+          }
+        },
+        "match": {
+          "attack": {
+            "item": "this"
+          }
+        }
+      },
+      "step": {
+        "delivery": {
+          "save": {
+            "ability": "ability:con",
+            "dc": 17
+          }
+        },
+        "outcomes": [
+          {
+            "damage": {
+              "amount": "6d10",
+              "type": "damage-type:force"
+            },
+            "to": "subject"
+          }
+        ],
+        "otherwise": "half"
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "table",
+      "name": "The printed 1d100 table that can determine the creature type randomly has no entity and is not encoded."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "spell:inflict-wounds@2024",
+  "name": "Inflict Wounds",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A creature you touch makes a Constitution saving throw, taking 2d10 Necrotic damage on a failed save or half as much damage on a successful one.\n\n_**Using a Higher-Level Spell Slot.**_ The damage increases by 1d10 for each spell slot level above 1.",
+    "plain": "A creature you touch makes a Constitution saving throw, taking 2d10 Necrotic damage on a failed save or half as much damage on a successful one.\n\nUsing a Higher-Level Spell Slot. The damage increases by 1d10 for each spell slot level above 1.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "spell-mechanics",
+      "name": "save-delivery-unknown"
+    }
+  ],
+  "level": 1,
+  "school": "spell-school:necromancy",
+  "lists": [
+    "class:cleric"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "feature:elf/elf-weapon-training",
+  "name": "Elf Weapon Training",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have proficiency with the longsword, shortsword, shortbow, and longbow.",
+    "plain": "You have proficiency with the longsword, shortsword, shortbow, and longbow.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "item:longsword",
+        "item:shortsword",
+        "item:shortbow",
+        "item:longbow"
+      ]
+    }
+  ],
+  "gaps": []
+}

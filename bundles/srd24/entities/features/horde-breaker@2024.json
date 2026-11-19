@@ -1,0 +1,12 @@
+{
+  "id": "feature:horde-breaker@2024",
+  "name": "Horde Breaker",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Once on each of your turns when you make an attack with a weapon, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target, that is within the weapon's range, and that you haven't attacked this turn.",
+    "plain": "Once on each of your turns when you make an attack with a weapon, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target, that is within the weapon's range, and that you haven't attacked this turn.",
+    "wording": "srd"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "damage-type:radiant",
+  "name": "Radiant",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

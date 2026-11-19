@@ -1,0 +1,24 @@
+{
+  "id": "feature:dragonborn/draconic-resistance@2024",
+  "name": "Draconic Resistance",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have Resistance to the damage type determined by your Draconic Ancestry trait.",
+    "plain": "You have Resistance to the damage type determined by your Draconic Ancestry trait.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        {
+          "chosen": "ancestry",
+          "value": "damage-type",
+          "from": "feature:dragonborn/draconic-ancestry"
+        }
+      ]
+    }
+  ]
+}

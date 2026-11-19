@@ -1,0 +1,137 @@
+{
+  "id": "feat:magic-initiate@2024",
+  "name": "Magic Initiate",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain the following benefits.\n\n_**Two Cantrips.**_ You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat's spells (choose when you select this feat).\n\n_**Level 1 Spell.**_ Choose a level 1 spell from the same list you selected for this feat's cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.\n\n_**Spell Change.**_ Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.\n\n_**Repeatable.**_ You can take this feat more than once, but you must choose a different spell list each time.",
+    "plain": "You gain the following benefits.\n\nTwo Cantrips. You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat's spells (choose when you select this feat).\n\nLevel 1 Spell. Choose a level 1 spell from the same list you selected for this feat's cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.\n\nSpell Change. Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.\n\nRepeatable. You can take this feat more than once, but you must choose a different spell list each time.",
+    "wording": "srd"
+  },
+  "repeatable": true,
+  "group": "group:origin",
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "cantrips",
+            "name": "Two Cantrips",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": {
+                      "choose": {
+                        "key": "class",
+                        "name": "Spell List",
+                        "from": [
+                          "class:cleric",
+                          "class:druid",
+                          "class:wizard"
+                        ]
+                      }
+                    },
+                    "level": 0
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": {
+        "choose": {
+          "key": "spellcasting-ability",
+          "name": "Spellcasting ability",
+          "from": [
+            "ability:int",
+            "ability:wis",
+            "ability:cha"
+          ]
+        }
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "spell",
+            "name": "Level 1 Spell",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": {
+                      "chosen": "class"
+                    },
+                    "level": 1
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "prepared",
+      "ability": {
+        "chosen": "spellcasting-ability"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-cantrips",
+      "name": "Replace Two Cantrips",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self"
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "cantrips"
+          }
+        }
+      ]
+    },
+    {
+      "key": "replace-spell",
+      "name": "Replace Level 1 Spell",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self"
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "spell"
+          }
+        }
+      ]
+    }
+  ]
+}

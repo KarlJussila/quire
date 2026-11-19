@@ -1,0 +1,12 @@
+{
+  "id": "feature:coast-circle",
+  "name": "Coast Circle",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "| Druid Level   | Circle Spells                              |\n|---------------|--------------------------------------------|\n| 3rd           | Mirror Image, Misty Step           |\n| 5th           | Water Breathing, Water Walk        |\n| 7th           | Control Water, Freedom of Movement |\n| 9th           | Conjure Elemental, Scrying         |",
+    "plain": "| Druid Level   | Circle Spells                              |\n|---------------|--------------------------------------------|\n| 3rd           | Mirror Image, Misty Step           |\n| 5th           | Water Breathing, Water Walk        |\n| 7th           | Control Water, Freedom of Movement |\n| 9th           | Conjure Elemental, Scrying         |",
+    "wording": "srd"
+  }
+}

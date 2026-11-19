@@ -1,0 +1,24 @@
+{
+  "id": "item:midnight-tears@2024",
+  "name": "Midnight Tears",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 1,500 GP\n\n_Ingested Poison_\n\nA creature that ingests Midnight Tears suffers no effect until the stroke of midnight. Any effect that ends the Poisoned condition neutralizes this poison. If the poison hasn't been neutralized before midnight, the creature makes a DC 17 Constitution saving throw, taking 31 (9d6) Poison damage on a failed save or half as much damage on a successful one.",
+    "plain": "Cost: 1,500 GP\n\nIngested Poison\n\nA creature that ingests Midnight Tears suffers no effect until the stroke of midnight. Any effect that ends the Poisoned condition neutralizes this poison. If the poison hasn't been neutralized before midnight, the creature makes a DC 17 Constitution saving throw, taking 31 (9d6) Poison damage on a failed save or half as much damage on a successful one.",
+    "wording": "srd"
+  },
+  "group": "group:poison",
+  "cost": {
+    "amount": 1500,
+    "currency": "currency:gp"
+  },
+  "weight": 0.5,
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "Poison exposure and its timed effects are retained in the SRD text."
+    }
+  ]
+}

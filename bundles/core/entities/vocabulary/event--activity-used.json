@@ -1,0 +1,18 @@
+{
+  "id": "event:activity-used",
+  "name": "Activity Used",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A creature (by) uses an activity, once its costs are paid; subject is each target. `activity` is the activity, `action` the action it is, `spell` and `slot` the spell cast and its slot level, `spent` the pools its costs spent, `attack` what an attack is made with."
+  },
+  "payload": [
+    "activity",
+    "action",
+    "spell",
+    "slot",
+    "spent",
+    "attack"
+  ]
+}

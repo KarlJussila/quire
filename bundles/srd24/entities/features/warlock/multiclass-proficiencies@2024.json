@@ -1,0 +1,19 @@
+{
+  "id": "feature:warlock/multiclass-proficiencies@2024",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Gain the following traits from the Core Warlock Traits table: Hit Point Die and training with Light armor.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor"
+      ]
+    }
+  ]
+}

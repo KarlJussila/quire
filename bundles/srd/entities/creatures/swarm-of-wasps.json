@@ -1,0 +1,91 @@
+{
+  "id": "creature:swarm-of-wasps",
+  "name": "Swarm of Wasps",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Different kinds of insects can gather in swarms, and each swarm has the special characteristics described below.\n\n_**Swarm of Beetles.**_ A swarm of beetles gains a burrowing speed of 5 feet.\n\n_**Swarm of Centipedes.**_ A creature reduced to 0 hit points by a swarm of centipedes is stable but Poisoned for 1 hour, even after regaining hit points, and Paralyzed while poisoned in this way.\n\n_**Swarm of Spiders.**_ A swarm of spiders has the following additional traits.\n\n_**Spider Climb.**_ The swarm can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.\n\n_**Web Sense.**_ While in contact with a web, the swarm knows the exact location of any other creature in contact with the same web.\n\n_**Web Walker.**_ The swarm ignores movement restrictions caused by webbing.\n\n_**Swarm of Wasps.**_ A swarm of wasps has a walking speed of 5 feet, a flying speed of 30 feet, and no climbing speed.",
+    "plain": "Different kinds of insects can gather in swarms, and each swarm has the special characteristics described below.\n\nSwarm of Beetles. A swarm of beetles gains a burrowing speed of 5 feet.\n\nSwarm of Centipedes. A creature reduced to 0 hit points by a swarm of centipedes is stable but Poisoned for 1 hour, even after regaining hit points, and Paralyzed while poisoned in this way.\n\nSwarm of Spiders. A swarm of spiders has the following additional traits.\n\nSpider Climb. The swarm can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.\n\nWeb Sense. While in contact with a web, the swarm knows the exact location of any other creature in contact with the same web.\n\nWeb Walker. The swarm ignores movement restrictions caused by webbing.\n\nSwarm of Wasps. A swarm of wasps has a walking speed of 5 feet, a flying speed of 30 feet, and no climbing speed.",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "swarm": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 22,
+    "formula": "5d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 5
+    },
+    "movement-mode:fly": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 1,
+    "ability:con": 10,
+    "ability:dex": 13,
+    "ability:int": 1,
+    "ability:str": 3,
+    "ability:wis": 7
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 10
+    }
+  },
+  "passivePerception": 8,
+  "xp": 100,
+  "cr": 0.5,
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened",
+        "condition:grappled",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:prone",
+        "condition:restrained",
+        "condition:stunned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Swarm",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.",
+        "plain": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bites",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 0 ft., one target in the swarm's space. _Hit:_ 10 (4d4) piercing damage, or 5 (2d4) piercing damage if the swarm has half of its hit points or fewer.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 0 ft., one target in the swarm's space. Hit: 10 (4d4) piercing damage, or 5 (2d4) piercing damage if the swarm has half of its hit points or fewer.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

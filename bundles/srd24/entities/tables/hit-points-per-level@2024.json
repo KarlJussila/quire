@@ -1,0 +1,43 @@
+{
+  "id": "table:hit-points-per-level@2024",
+  "name": "Hit Points per Level",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "class",
+      "name": "Class"
+    },
+    {
+      "key": "hit-points-per-level",
+      "name": "Hit Points per Level"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "class": "Barbarian",
+        "hit-points-per-level": "7 + Con. modifier"
+      }
+    },
+    {
+      "cells": {
+        "class": "Fighter, Paladin, or Ranger",
+        "hit-points-per-level": "6 + Con. modifier"
+      }
+    },
+    {
+      "cells": {
+        "class": "Bard, Cleric, Druid, Monk, Rogue, or Warlock",
+        "hit-points-per-level": "5 + Con. modifier"
+      }
+    },
+    {
+      "cells": {
+        "class": "Sorcerer or Wizard",
+        "hit-points-per-level": "4 + Con. modifier"
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "feature:rogue/multiclass-proficiencies@2024",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Gain the following traits from the Core Rogue Traits table: Hit Point Die, proficiency in one skill of your choice from the Rogue's skill list, proficiency with Thieves' Tools, and training with Light armor.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "item:thieves-tools"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skill",
+            "name": "Skill Proficiency",
+            "from": [
+              "skill:acrobatics",
+              "skill:athletics",
+              "skill:deception",
+              "skill:insight",
+              "skill:intimidation",
+              "skill:investigation",
+              "skill:perception",
+              "skill:persuasion",
+              "skill:sleight-of-hand",
+              "skill:stealth"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

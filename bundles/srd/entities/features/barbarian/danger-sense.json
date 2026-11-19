@@ -1,0 +1,52 @@
+{
+  "id": "feature:barbarian/danger-sense",
+  "name": "Danger Sense",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger.\n\nYou have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be Blinded, Deafened, or Incapacitated.",
+    "plain": "At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger.\n\nYou have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be Blinded, Deafened, or Incapacitated.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:save",
+              "ability": "ability:dex"
+            }
+          },
+          {
+            "creature": "source",
+            "where": {
+              "perceived": "sight",
+              "by": "self"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "has": "condition:blinded"
+                },
+                {
+                  "has": "condition:deafened"
+                },
+                {
+                  "has": "condition:incapacitated"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "feature:aberrations",
+  "name": "Aberrations",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "are utterly alien beings. Many of them have innate magical abilities drawn from the creature's alien mind rather than the mystical forces of the world. The quintessential aberrations are aboleths, beholders, mind flayers, and slaadi.",
+    "plain": "are utterly alien beings. Many of them have innate magical abilities drawn from the creature's alien mind rather than the mystical forces of the world. The quintessential aberrations are aboleths, beholders, mind flayers, and slaadi.",
+    "wording": "srd"
+  }
+}

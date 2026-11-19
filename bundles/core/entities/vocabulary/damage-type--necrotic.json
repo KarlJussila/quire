@@ -1,0 +1,10 @@
+{
+  "id": "damage-type:necrotic",
+  "name": "Necrotic",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

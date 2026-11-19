@@ -1,0 +1,45 @@
+{
+  "id": "spell:longstrider@2024",
+  "name": "Longstrider",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You touch a creature. The target's Speed increases by 10 feet until the spell ends.\n\n_**Using a Higher-Level Spell Slot.**_ You can target one additional creature for each spell slot level above 1.",
+    "plain": "You touch a creature. The target's Speed increases by 10 feet until the spell ends.\n\nUsing a Higher-Level Spell Slot. You can target one additional creature for each spell slot level above 1.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:transmutation",
+  "lists": [
+    "class:bard",
+    "class:druid",
+    "class:ranger",
+    "class:wizard"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "a pinch of dirt"
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": {
+        "amount": 1,
+        "unit": "hour"
+      }
+    }
+  ]
+}

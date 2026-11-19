@@ -1,0 +1,87 @@
+{
+  "id": "creature:ogre-zombie",
+  "name": "Ogre Zombie",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:neutral-evil",
+  "ac": 8,
+  "hp": {
+    "average": 85,
+    "formula": "9d10 + 36"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 18,
+    "ability:dex": 6,
+    "ability:int": 3,
+    "ability:str": 19,
+    "ability:wis": 6
+  },
+  "saves": {
+    "ability:wis": 0
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 8,
+  "xp": 450,
+  "cr": 2,
+  "languages": [
+    {
+      "language": "language:common",
+      "understandsOnly": true
+    },
+    {
+      "language": "language:giant",
+      "understandsOnly": true
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Undead Fortitude",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.",
+        "plain": "If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Morningstar",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 13 (2d8 + 4) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

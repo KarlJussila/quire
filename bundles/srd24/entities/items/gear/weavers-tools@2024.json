@@ -1,0 +1,18 @@
+{
+  "id": "item:weavers-tools@2024",
+  "name": "Weaver’s Tools",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "- **Cost:** 1 GP\n- **Ability:** Dexterity\n- **Weight:** 5 lb.\n- **Utilize:** Mend a tear in clothing (DC 10), or sew a Tiny design (DC 10)\n- **Craft:** Padded Armor, Basket, Bedroll, Blanket, Fine Clothes, Net, Robe, Rope, Sack, String, Tent, Traveler's Clothes",
+    "plain": "- Cost: 1 GP\n- Ability: Dexterity\n- Weight: 5 lb.\n- Utilize: Mend a tear in clothing (DC 10), or sew a Tiny design (DC 10)\n- Craft: Padded Armor, Basket, Bedroll, Blanket, Fine Clothes, Net, Robe, Rope, Sack, String, Tent, Traveler's Clothes",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:gp"
+  },
+  "weight": 5.0
+}

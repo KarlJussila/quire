@@ -1,0 +1,101 @@
+{
+  "id": "condition:prone@2024",
+  "name": "Prone",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you have the Prone condition, you experience the following effects.\n\n_**Restricted Movement.**_ Your only movement options are to crawl or to spend an amount of movement equal to half your Speed (round down) to right yourself and thereby end the condition. If your Speed is 0, you can't right yourself.\n\n_**Attacks Affected.**_ You have Disadvantage on attack rolls. An attack roll against you has Advantage if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage.",
+    "plain": "While you have the Prone condition, you experience the following effects.\n\nRestricted Movement. Your only movement options are to crawl or to spend an amount of movement equal to half your Speed (round down) to right yourself and thereby end the condition. If your Speed is 0, you can't right yourself.\n\nAttacks Affected. You have Disadvantage on attack rolls. An attack roll against you has Advantage if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any",
+          "where": {
+            "within": 5
+          }
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any",
+          "where": {
+            "not": {
+              "within": 5
+            }
+          }
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "movementCosts": {
+          "movement-mode:walk": {
+            "$add": 1
+          }
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "stand-up",
+      "when": {
+        "match": {
+          "speeds": {
+            "movement-mode:walk": true
+          }
+        }
+      },
+      "cost": [
+        {
+          "resource": "movement",
+          "amount": {
+            "divide": "speeds.movement-mode:walk.speed",
+            "by": 2,
+            "round": "down"
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "endState": {
+            "state": "condition:prone"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

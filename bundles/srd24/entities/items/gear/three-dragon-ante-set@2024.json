@@ -1,0 +1,18 @@
+{
+  "id": "item:three-dragon-ante-set@2024",
+  "name": "Three-Dragon Ante Set",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "- **Cost:** Varies\n- **Ability:** Wisdom\n- **Weight:** —\n- **Utilize:** Discern whether someone is cheating (DC 10), or win the game (DC 20)\n- **Variants:** Dice (1 SP), dragonchess (1 GP), playing cards (5 SP), three-dragon ante (1 GP)",
+    "plain": "- Cost: Varies\n- Ability: Wisdom\n- Weight: —\n- Utilize: Discern whether someone is cheating (DC 10), or win the game (DC 20)\n- Variants: Dice (1 SP), dragonchess (1 GP), playing cards (5 SP), three-dragon ante (1 GP)",
+    "wording": "srd"
+  },
+  "group": "group:gaming-set",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:sp"
+  },
+  "weight": 0.0
+}

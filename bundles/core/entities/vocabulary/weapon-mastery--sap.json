@@ -1,0 +1,102 @@
+{
+  "id": "weapon-mastery:sap",
+  "name": "Sap",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.",
+    "plain": "If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true,
+          "attack": {
+            "item": {
+              "kind": "item",
+              "where": {
+                "match": {
+                  "weapon": {
+                    "mastery": "weapon-mastery:sap"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "when": {
+          "compare": "masteries.{attack.item}",
+          "equals": true
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "runs": [
+              {
+                "activity": "sap"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "sap",
+      "standalone": false,
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "roll-mod",
+                  "mode": "disadvantage",
+                  "when": {
+                    "event": "event:roll-made",
+                    "by": "self",
+                    "match": {
+                      "roll": "roll:attack"
+                    }
+                  }
+                }
+              ],
+              "ends": [
+                {
+                  "event": "event:roll-made",
+                  "by": "self",
+                  "match": {
+                    "roll": "roll:attack"
+                  }
+                },
+                {
+                  "event": "event:turn-start",
+                  "subject": "source"
+                }
+              ],
+              "stacks": "separate"
+            },
+            "source": "self"
+          },
+          "to": "target"
+        }
+      ],
+      "when": {
+        "creature": "target",
+        "where": {
+          "kind": "creature"
+        }
+      }
+    }
+  ],
+  "gaps": []
+}

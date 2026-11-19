@@ -1,0 +1,17 @@
+{
+  "id": "item:lyre@2024",
+  "name": "Lyre",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:musical-instrument",
+  "cost": {
+    "amount": 30,
+    "currency": "currency:gp"
+  },
+  "weight": 2.0
+}

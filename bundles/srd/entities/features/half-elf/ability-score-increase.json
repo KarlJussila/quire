@@ -1,0 +1,50 @@
+{
+  "id": "feature:half-elf/ability-score-increase",
+  "name": "Ability Score Increase",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Ability Score Increase. Your Charisma score increases by 2, and two other ability scores of your choice increase by 1.",
+    "plain": "Ability Score Increase. Your Charisma score increases by 2, and two other ability scores of your choice increase by 1.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:cha": {
+            "$add": 2
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "$at": {
+            "choose": {
+              "key": "ability",
+              "name": "Ability Score Increase",
+              "count": 2,
+              "distinct": true,
+              "from": [
+                {
+                  "kind": "ability",
+                  "where": {
+                    "not": {
+                      "is": "ability:cha"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "$add": 1
+        }
+      }
+    }
+  ]
+}

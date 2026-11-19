@@ -1,0 +1,7 @@
+{
+  "id": "restriction:regain-hit-points",
+  "name": "Regain Hit Points",
+  "source": {
+    "book": "core"
+  }
+}

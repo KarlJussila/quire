@@ -1,0 +1,21 @@
+{
+  "id": "item:chain-mail@2024",
+  "name": "Chain Mail",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:heavy-armor",
+  "cost": {
+    "amount": 75,
+    "currency": "currency:gp"
+  },
+  "weight": 55.0,
+  "armor": {
+    "ac": 16,
+    "strength": 13
+  }
+}

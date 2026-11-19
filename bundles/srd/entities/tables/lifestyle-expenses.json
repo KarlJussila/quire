@@ -1,0 +1,61 @@
+{
+  "id": "table:lifestyle-expenses",
+  "name": "Lifestyle Expenses",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "lifestyle",
+      "name": "Lifestyle"
+    },
+    {
+      "key": "price-day",
+      "name": "Price/Day"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "lifestyle": "Wretched",
+        "price-day": "—"
+      }
+    },
+    {
+      "cells": {
+        "lifestyle": "Squalid",
+        "price-day": "1 sp"
+      }
+    },
+    {
+      "cells": {
+        "lifestyle": "Poor",
+        "price-day": "2 sp"
+      }
+    },
+    {
+      "cells": {
+        "lifestyle": "Modest",
+        "price-day": "1 gp"
+      }
+    },
+    {
+      "cells": {
+        "lifestyle": "Comfortable",
+        "price-day": "2 gp"
+      }
+    },
+    {
+      "cells": {
+        "lifestyle": "Wealthy",
+        "price-day": "4 gp"
+      }
+    },
+    {
+      "cells": {
+        "lifestyle": "Aristocratic",
+        "price-day": "10 gp minimum"
+      }
+    }
+  ]
+}

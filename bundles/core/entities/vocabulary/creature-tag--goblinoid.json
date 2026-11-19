@@ -1,0 +1,7 @@
+{
+  "id": "creature-tag:goblinoid",
+  "name": "Goblinoid",
+  "source": {
+    "book": "core"
+  }
+}

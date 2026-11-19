@@ -1,0 +1,68 @@
+{
+  "id": "item:burglars-pack@2024",
+  "name": "Burglar's Pack",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Burglar's Pack contains the following items: Backpack, Ball Bearings, Bell, 10 Candles, Crowbar, Hooded Lantern, 7 flasks of Oil, 5 days of Rations, Rope, Tinderbox, and Waterskin.",
+    "plain": "A Burglar's Pack contains the following items: Backpack, Ball Bearings, Bell, 10 Candles, Crowbar, Hooded Lantern, 7 flasks of Oil, 5 days of Rations, Rope, Tinderbox, and Waterskin.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 16,
+    "currency": "currency:gp"
+  },
+  "weight": 42.0,
+  "contents": [
+    {
+      "item": "item:backpack",
+      "quantity": 1
+    },
+    {
+      "item": "item:ball-bearings",
+      "quantity": 1
+    },
+    {
+      "item": "item:string",
+      "quantity": 1
+    },
+    {
+      "item": "item:bell",
+      "quantity": 1
+    },
+    {
+      "item": "item:candle",
+      "quantity": 10
+    },
+    {
+      "item": "item:crowbar",
+      "quantity": 1
+    },
+    {
+      "item": "item:lantern-hooded",
+      "quantity": 1
+    },
+    {
+      "item": "item:oil",
+      "quantity": 7
+    },
+    {
+      "item": "item:rations",
+      "quantity": 5
+    },
+    {
+      "item": "item:rope",
+      "quantity": 1
+    },
+    {
+      "item": "item:tinderbox",
+      "quantity": 1
+    },
+    {
+      "item": "item:waterskin",
+      "quantity": 1
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rule:tools@2024",
+  "name": "Tools",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A tool helps you make specialized ability checks, craft certain items, or both. A tool's description includes the tool's cost and weight, as well as the following entries:\n\n- **Ability.** This entry lists the ability to use when making an ability check with the tool.\n- **Utilize.** This entry lists things you can do with the tool when you take the Utilize action. You can do one of those things each time you take the action. This entry also provides the DC for the action.\n- **Craft.** This entry lists what, if anything, you can craft with the tool. For crafting rules, see \"Crafting Nonmagical Items,\" \"Brewing Potions of Healing,\" and \"Scribing Spell Scrolls\" later in \"Equipment.\"\n- **Variants.** This entry appears if the tool has variants, which are listed. Each requires a separate proficiency.\n\n## Tool Proficiency\n\nIf you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too.\n\nYour features might give you proficiency with a tool. A monster has proficiency with any tool in its stat block.\n\n## Artisan's Tools\n\nArtisan's Tools are each focused on crafting items and pursuing a trade. Each of these tools requires a separate proficiency.",
+    "plain": "A tool helps you make specialized ability checks, craft certain items, or both. A tool's description includes the tool's cost and weight, as well as the following entries:\n\n- Ability. This entry lists the ability to use when making an ability check with the tool.\n- Utilize. This entry lists things you can do with the tool when you take the Utilize action. You can do one of those things each time you take the action. This entry also provides the DC for the action.\n- Craft. This entry lists what, if anything, you can craft with the tool. For crafting rules, see \"Crafting Nonmagical Items,\" \"Brewing Potions of Healing,\" and \"Scribing Spell Scrolls\" later in \"Equipment.\"\n- Variants. This entry appears if the tool has variants, which are listed. Each requires a separate proficiency.\n\n## Tool Proficiency\n\nIf you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too.\n\nYour features might give you proficiency with a tool. A monster has proficiency with any tool in its stat block.\n\n## Artisan's Tools\n\nArtisan's Tools are each focused on crafting items and pursuing a trade. Each of these tools requires a separate proficiency.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

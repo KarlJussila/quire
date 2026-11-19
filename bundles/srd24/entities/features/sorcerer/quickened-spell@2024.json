@@ -1,0 +1,21 @@
+{
+  "id": "feature:sorcerer/quickened-spell@2024",
+  "name": "Quickened Spell",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Cost: 2 Sorcery Points_\n\nWhen you cast a spell that has a casting time of an action, you can spend 2 Sorcery Points to change the casting time to a Bonus Action for this casting. You can't modify a spell in this way if you've already cast a level 1+ spell on the current turn, nor can you cast a level 1+ spell on this turn after modifying a spell in this way.",
+    "plain": "Cost: 2 Sorcery Points\n\nWhen you cast a spell that has a casting time of an action, you can spend 2 Sorcery Points to change the casting time to a Bonus Action for this casting. You can't modify a spell in this way if you've already cast a level 1+ spell on the current turn, nor can you cast a level 1+ spell on this turn after modifying a spell in this way.",
+    "wording": "srd"
+  },
+  "group": "group:metamagic",
+  "effects": [],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "For this casting, change an action casting time to a Bonus Action for 2 Sorcery Points while preserving other costs and eligibility; prohibit it after a level 1+ spell this turn and prohibit a later level 1+ spell."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "item:armor-of-resistance@2024",
+  "name": "Armor of Resistance",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have Resistance to one type of damage while you wear this armor. The GM chooses the type or determines it randomly by rolling on the table.\n\n|   1d10 | Damage Type   |\n|--------|---------------|\n|      1 | Acid          |\n|      2 | Cold          |\n|      3 | Fire          |\n|      4 | Force         |\n|      5 | Lightning     |\n|      6 | Necrotic      |\n|      7 | Poison        |\n|      8 | Psychic       |\n|      9 | Radiant       |\n|     10 | Thunder       |",
+    "plain": "You have Resistance to one type of damage while you wear this armor. The GM chooses the type or determines it randomly by rolling on the table.\n\n|   1d10 | Damage Type   |\n|--------|---------------|\n|      1 | Acid          |\n|      2 | Cold          |\n|      3 | Fire          |\n|      4 | Force         |\n|      5 | Lightning     |\n|      6 | Necrotic      |\n|      7 | Poison        |\n|      8 | Psychic       |\n|      9 | Radiant       |\n|     10 | Thunder       |",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        {
+          "choose": {
+            "key": "resistance",
+            "name": "Damage Type",
+            "from": [
+              "damage-type:acid",
+              "damage-type:cold",
+              "damage-type:fire",
+              "damage-type:force",
+              "damage-type:lightning",
+              "damage-type:necrotic",
+              "damage-type:poison",
+              "damage-type:psychic",
+              "damage-type:radiant",
+              "damage-type:thunder"
+            ]
+          }
+        }
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "worn": true
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": [],
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Armor",
+      "from": [
+        {
+          "kind": "item",
+          "where": {
+            "group": [
+              "group:light-armor",
+              "group:medium-armor",
+              "group:heavy-armor"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

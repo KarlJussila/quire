@@ -1,0 +1,52 @@
+{
+  "id": "rule:knocking-out",
+  "name": "Knocking a Creature Out",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Sometimes an attacker wants to incapacitate a foe, rather than deal a killing blow. When an attacker reduces a creature to 0 hit points with a melee attack, the attacker can knock the creature out. The attacker can make this choice the instant the damage is dealt. The creature falls Unconscious and is stable.",
+    "plain": "Sometimes an attacker wants to incapacitate a foe, rather than deal a killing blow. When an attacker reduces a creature to 0 hit points with a melee attack, the attacker can knock the creature out. The attacker can make this choice the instant the damage is dealt. The creature falls Unconscious and is stable.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "knock-out",
+      "trigger": {
+        "event": "event:damaged",
+        "by": "self",
+        "match": {
+          "remaining": 0,
+          "attack": {
+            "range": "melee"
+          }
+        }
+      },
+      "target": {
+        "who": "subject"
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "condition:unconscious"
+          }
+        },
+        {
+          "applyState": {
+            "state": "state:stable"
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "death",
+      "name": "Replaces dying: the creature is knocked out instead"
+    }
+  ]
+}

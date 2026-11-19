@@ -1,0 +1,120 @@
+{
+  "id": "creature:specter@2024",
+  "name": "Specter",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:undead",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 12,
+  "hp": {
+    "average": 22,
+    "formula": "5d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:fly": {
+      "speed": 50,
+      "hover": true
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 11,
+    "ability:dex": 14,
+    "ability:int": 10,
+    "ability:str": 1,
+    "ability:wis": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 10,
+  "xp": 200,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "habitat": [
+    "Underdark",
+    "Urban"
+  ],
+  "cr": 1,
+  "languages": [
+    {
+      "text": "Understands Common plus one other language but can't speak"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:necrotic",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:acid",
+        "damage-type:bludgeoning",
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:lightning",
+        "damage-type:piercing",
+        "damage-type:slashing",
+        "damage-type:thunder"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:exhaustion",
+        "condition:grappled",
+        "condition:paralyzed",
+        "condition:petrified",
+        "condition:poisoned",
+        "condition:prone",
+        "condition:restrained",
+        "condition:unconscious"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Incorporeal Movement",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The specter can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.",
+        "plain": "The specter can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sunlight Sensitivity",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While in sunlight, the specter has Disadvantage on ability checks and attack rolls.",
+        "plain": "While in sunlight, the specter has Disadvantage on ability checks and attack rolls.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Life Drain",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +4, reach 5 ft. _Hit:_ 7 (2d6) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken.",
+        "plain": "Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d6) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

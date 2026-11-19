@@ -1,0 +1,58 @@
+{
+  "id": "condition:invisible",
+  "name": "Invisible",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- An Invisible creature is impossible to see without the aid of magic or a special sense. For the purpose of hiding, the creature is heavily obscured. The creature's location can be detected by any noise it makes or any tracks it leaves.\n- Attack rolls against the creature have disadvantage, and the creature's attack rolls have advantage.",
+    "plain": "An Invisible creature is impossible to see without the aid of magic or a special sense. For the purpose of hiding, the creature is heavily obscured. The creature's location can be detected by any noise it makes or any tracks it leaves.\nAttack rolls against the creature have disadvantage, and the creature's attack rolls have advantage.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any",
+          "where": {
+            "not": {
+              "perceives": {
+                "sense": "sight",
+                "of": "self"
+              }
+            }
+          }
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "not": {
+              "perceives": {
+                "sense": "sight",
+                "of": "self"
+              }
+            }
+          }
+        },
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    }
+  ]
+}

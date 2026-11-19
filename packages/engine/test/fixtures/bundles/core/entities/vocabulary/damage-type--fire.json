@@ -1,0 +1,7 @@
+{
+ "id": "damage-type:fire",
+ "name": "Fire",
+ "source": {
+  "book": "core"
+ }
+}

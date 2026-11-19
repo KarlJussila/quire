@@ -1,0 +1,11 @@
+{
+  "id": "hit-die:d12",
+  "name": "d12 Hit Die",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "sides": 12
+}

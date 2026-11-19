@@ -1,0 +1,83 @@
+{
+  "id": "feature:ranger/natural-explorer",
+  "name": "Natural Explorer",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.\n\nWhile traveling for an hour or more in your favored terrain, you gain the following benefits:\n\n- Difficult terrain doesn't slow your group's travel.\n- Your group can't become lost except by magical means.\n- Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.\n- If you are traveling alone, you can move stealthily at a normal pace.\n- When you forage, you find twice as much food as you normally would.\n- While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.\n\nYou choose additional favored terrain types at 6th and 10th level.",
+    "plain": "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.\n\nWhile traveling for an hour or more in your favored terrain, you gain the following benefits:\n\n- Difficult terrain doesn't slow your group's travel.\n- Your group can't become lost except by magical means.\n- Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.\n- If you are traveling alone, you can move stealthily at a normal pace.\n- When you forage, you find twice as much food as you normally would.\n- While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.\n\nYou choose additional favored terrain types at 6th and 10th level.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "The hour-long favored-terrain travel benefits, doubled foraging yield, and additional tracking information are not encoded."
+    }
+  ],
+  "effects": [
+    {
+      "type": "record",
+      "pick": {
+        "choose": {
+          "key": "favored-terrain",
+          "name": "Favored Terrain",
+          "count": {
+            "byLevel": {
+              "1": 1,
+              "6": 2,
+              "10": 3
+            },
+            "of": "class:ranger"
+          },
+          "distinct": true,
+          "from": [
+            "feature:favored-terrain/arctic",
+            "feature:favored-terrain/coast",
+            "feature:favored-terrain/desert",
+            "feature:favored-terrain/forest",
+            "feature:favored-terrain/grassland",
+            "feature:favored-terrain/mountain",
+            "feature:favored-terrain/swamp"
+          ]
+        }
+      }
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "kind": "skill",
+          "where": {
+            "proficient": "candidate"
+          }
+        }
+      ],
+      "level": "expertise",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check",
+              "ability": [
+                "ability:int",
+                "ability:wis"
+              ]
+            }
+          },
+          {
+            "prose": {
+              "text": "The check is related to one of your favored terrains.",
+              "gap": {
+                "category": "test",
+                "name": "check-related-to-favored-terrain"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

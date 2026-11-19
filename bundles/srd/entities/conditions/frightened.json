@@ -1,0 +1,46 @@
+{
+  "id": "condition:frightened",
+  "name": "Frightened",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- A Frightened creature has disadvantage on ability checks and attack rolls while the source of its fear is within line of sight.\n- The creature can't willingly move closer to the source of its fear.",
+    "plain": "A Frightened creature has disadvantage on ability checks and attack rolls while the source of its fear is within line of sight.\nThe creature can't willingly move closer to the source of its fear.",
+    "wording": "srd"
+  },
+  "sourceName": "the source of the fear",
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": [
+                "roll:check",
+                "roll:attack"
+              ]
+            }
+          },
+          {
+            "perceives": {
+              "sense": "sight",
+              "of": "source"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:approach"
+      ],
+      "target": "source"
+    }
+  ]
+}

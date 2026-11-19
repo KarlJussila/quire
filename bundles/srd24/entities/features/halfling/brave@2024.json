@@ -1,0 +1,28 @@
+{
+  "id": "feature:halfling/brave@2024",
+  "name": "Brave",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You have Advantage on saving throws you make to avoid or end the Frightened condition.",
+    "plain": "You have Advantage on saving throws you make to avoid or end the Frightened condition.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "against": {
+            "condition": "condition:frightened"
+          }
+        }
+      }
+    }
+  ]
+}

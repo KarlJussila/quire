@@ -1,0 +1,340 @@
+{
+  "id": "feature:monk/martial-arts",
+  "name": "Martial Arts",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "At 1st level, your practice of martial arts gives you mastery of combat styles that use unarmed strikes and monk weapons, which are shortswords and any simple melee weapons that don't have the twohanded or heavy property.\n\nYou gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield:\n\n- You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.\n- You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.\n- When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn.\n\nCertain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon.",
+    "plain": "At 1st level, your practice of martial arts gives you mastery of combat styles that use unarmed strikes and monk weapons, which are shortswords and any simple melee weapons that don't have the twohanded or heavy property.\n\nYou gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield:\n\n- You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.\n- You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.\n- When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn.\n\nCertain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "martial-arts-strike",
+      "name": "Martial Arts",
+      "trigger": {
+        "event": "event:activity-used",
+        "by": "self",
+        "match": {
+          "action": "action:attack"
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "not": {
+              "has": "group:armor",
+              "match": {
+                "worn": true
+              }
+            }
+          },
+          {
+            "not": {
+              "has": "group:shield",
+              "match": {
+                "held": true
+              }
+            }
+          }
+        ]
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "match": {
+                    "delivery": {
+                      "attack": {
+                        "via": "unarmed"
+                      }
+                    }
+                  }
+                }
+              },
+              "times": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "resource",
+      "key": "martial-arts",
+      "max": 1,
+      "die": {
+        "byLevel": {
+          "1": "d4",
+          "5": "d6",
+          "11": "d8",
+          "17": "d10"
+        },
+        "of": "class:monk"
+      },
+      "recover": []
+    },
+    {
+      "type": "ability-substitute",
+      "for": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": [
+                "roll:attack",
+                "roll:damage"
+              ],
+              "attack": {
+                "via": "unarmed"
+              }
+            }
+          },
+          {
+            "all": [
+              {
+                "not": {
+                  "has": "group:armor",
+                  "match": {
+                    "worn": true
+                  }
+                }
+              },
+              {
+                "not": {
+                  "has": "group:shield",
+                  "match": {
+                    "held": true
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "use": "ability:dex"
+    },
+    {
+      "type": "ability-substitute",
+      "for": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": [
+                "roll:attack",
+                "roll:damage"
+              ],
+              "attack": {
+                "via": "weapon",
+                "item": {
+                  "kind": "item",
+                  "where": {
+                    "any": [
+                      {
+                        "is": "item:shortsword"
+                      },
+                      {
+                        "all": [
+                          {
+                            "group": "group:simple-melee-weapon"
+                          },
+                          {
+                            "not": {
+                              "match": {
+                                "weapon": {
+                                  "properties": [
+                                    "weapon-property:two-handed",
+                                    "weapon-property:heavy"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "all": [
+              {
+                "not": {
+                  "has": "group:armor",
+                  "match": {
+                    "worn": true
+                  }
+                }
+              },
+              {
+                "not": {
+                  "has": "group:shield",
+                  "match": {
+                    "held": true
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "use": "ability:dex"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "attack": {
+                "via": "unarmed"
+              }
+            }
+          }
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "not": {
+              "has": "group:armor",
+              "match": {
+                "worn": true
+              }
+            }
+          },
+          {
+            "not": {
+              "has": "group:shield",
+              "match": {
+                "held": true
+              }
+            }
+          }
+        ]
+      },
+      "set": {
+        "outcomes": {
+          "$where": {
+            "damage": true
+          },
+          "damage": {
+            "amount": {
+              "$replace": {
+                "dice": {
+                  "count": 1,
+                  "die": "pools.martial-arts.die"
+                }
+              }
+            }
+          }
+        }
+      },
+      "variant": "martial-arts"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "attack": {
+                "via": "weapon",
+                "item": {
+                  "kind": "item",
+                  "where": {
+                    "any": [
+                      {
+                        "is": "item:shortsword"
+                      },
+                      {
+                        "all": [
+                          {
+                            "group": "group:simple-melee-weapon"
+                          },
+                          {
+                            "not": {
+                              "match": {
+                                "weapon": {
+                                  "properties": [
+                                    "weapon-property:two-handed",
+                                    "weapon-property:heavy"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "not": {
+              "has": "group:armor",
+              "match": {
+                "worn": true
+              }
+            }
+          },
+          {
+            "not": {
+              "has": "group:shield",
+              "match": {
+                "held": true
+              }
+            }
+          }
+        ]
+      },
+      "set": {
+        "outcomes": {
+          "$where": {
+            "damage": true
+          },
+          "damage": {
+            "amount": {
+              "$replace": {
+                "dice": {
+                  "count": 1,
+                  "die": "pools.martial-arts.die"
+                }
+              }
+            }
+          }
+        }
+      },
+      "variant": "martial-arts"
+    }
+  ],
+  "gaps": [
+    {
+      "category": "feature",
+      "name": "The benefits need the monk to be unarmed or wielding only Monk weapons; only the armor and Shield part is tested."
+    }
+  ]
+}

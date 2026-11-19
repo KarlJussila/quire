@@ -1,0 +1,11 @@
+{
+  "id": "skill:intimidation",
+  "name": "Intimidation",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  },
+  "ability": "ability:cha"
+}

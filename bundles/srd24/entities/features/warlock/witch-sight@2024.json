@@ -1,0 +1,26 @@
+{
+  "id": "feature:warlock/witch-sight@2024",
+  "name": "Witch Sight",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 15+ Warlock_\n\nYou have Truesight with a range of 30 feet.",
+    "plain": "Prerequisite: Level 15+ Warlock\n\nYou have Truesight with a range of 30 feet.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "effects": [
+    {
+      "type": "sense",
+      "sense": "sense:truesight",
+      "range": 30
+    }
+  ],
+  "activities": [],
+  "gaps": [],
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 15
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "roll:attack",
+  "name": "Attack Roll",
+  "source": {
+    "book": "core"
+  },
+  "isA": "roll:d20-test"
+}

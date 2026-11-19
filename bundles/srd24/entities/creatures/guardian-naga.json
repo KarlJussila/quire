@@ -1,0 +1,140 @@
+{
+  "id": "creature:guardian-naga@2024",
+  "name": "Guardian Naga",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:celestial",
+  "alignment": "alignment:lawful-good",
+  "ac": 18,
+  "hp": {
+    "average": 136,
+    "formula": "16d10 + 48"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:climb": {
+      "speed": 40
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 18,
+    "ability:con": 16,
+    "ability:dex": 18,
+    "ability:int": 16,
+    "ability:str": 19,
+    "ability:wis": 19
+  },
+  "saves": {
+    "ability:cha": 8,
+    "ability:con": 7,
+    "ability:dex": 8,
+    "ability:int": 7,
+    "ability:wis": 8
+  },
+  "skills": {
+    "skill:arcana": 11,
+    "skill:history": 11,
+    "skill:religion": 11
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 5900,
+  "proficiencyBonus": 4,
+  "initiative": 4,
+  "habitat": [
+    "Desert",
+    "Forest",
+    "Planar (Upper Planes)"
+  ],
+  "treasure": [
+    "Relics"
+  ],
+  "cr": 10,
+  "languages": [
+    {
+      "language": "language:celestial"
+    },
+    {
+      "language": "language:common"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:paralyzed",
+        "condition:poisoned",
+        "condition:restrained"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Celestial Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the naga dies, it returns to life in 1d6 days and regains all its Hit Points unless Dispel Evil and Good is cast on its remains.",
+        "plain": "If the naga dies, it returns to life in 1d6 days and regains all its Hit Points unless Dispel Evil and Good is cast on its remains.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The naga makes two Bite attacks. It can replace any attack with a use of Poisonous Spittle.",
+        "plain": "The naga makes two Bite attacks. It can replace any attack with a use of Poisonous Spittle.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +8, reach 10 ft. _Hit:_ 17 (2d12 + 4) Piercing damage plus 22 (4d10) Poison damage.",
+        "plain": "Melee Attack Roll: +8, reach 10 ft. Hit: 17 (2d12 + 4) Piercing damage plus 22 (4d10) Poison damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Poisonous Spittle",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ DC 16, one creature the naga can see within 60 feet. _Failure:_ 31 (7d8) Poison damage, and the target has the Blinded condition until the start of the naga's next turn. _Success:_ Half damage only.",
+        "plain": "Constitution Saving Throw: DC 16, one creature the naga can see within 60 feet. Failure: 31 (7d8) Poison damage, and the target has the Blinded condition until the start of the naga's next turn. Success: Half damage only.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The naga casts one of the following spells, requiring no Somatic or Material components and using Wisdom as the spellcasting ability (spell save DC 16):\n\n- **At Will:** Thaumaturgy\n- **1/Day Each:** Clairvoyance, Cure Wounds (level 6 version), Flame Strike (level 6 version), Geas, True Seeing",
+        "plain": "The naga casts one of the following spells, requiring no Somatic or Material components and using Wisdom as the spellcasting ability (spell save DC 16):\n\n- At Will: Thaumaturgy\n- 1/Day Each: Clairvoyance, Cure Wounds (level 6 version), Flame Strike (level 6 version), Geas, True Seeing",
+        "wording": "srd"
+      }
+    }
+  ]
+}

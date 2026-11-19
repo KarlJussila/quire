@@ -1,0 +1,18 @@
+{
+  "id": "rule:attitude@2024",
+  "name": "Attitude",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A monster has a starting attitude toward a player character: Friendly, Hostile, or Indifferent. _See also_ \"Friendly,\" \"Hostile,\" \"Indifferent,\" and \"Influence.\"",
+    "plain": "A monster has a starting attitude toward a player character: Friendly, Hostile, or Indifferent. See also \"Friendly,\" \"Hostile,\" \"Indifferent,\" and \"Influence.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

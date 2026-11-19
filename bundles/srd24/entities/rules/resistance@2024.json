@@ -1,0 +1,18 @@
+{
+  "id": "rule:resistance@2024",
+  "name": "Resistance",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "If you have Resistance to a damage type, damage of that type is halved against you (round down). Resistance is applied only once to an instance of damage. _See also_ \"Playing the Game\" (\"Damage and Healing\").",
+    "plain": "If you have Resistance to a damage type, damage of that type is halved against you (round down). Resistance is applied only once to an instance of damage. See also \"Playing the Game\" (\"Damage and Healing\").",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "item:light-hammer",
+  "name": "Light Hammer",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:simple-melee-weapon",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:gp"
+  },
+  "weight": 2.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:light",
+      "weapon-property:thrown"
+    ],
+    "damage": {
+      "amount": "1d4",
+      "type": "damage-type:bludgeoning"
+    },
+    "range": {
+      "long": 60,
+      "normal": 20
+    }
+  }
+}

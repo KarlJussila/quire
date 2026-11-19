@@ -1,0 +1,160 @@
+{
+  "id": "creature:giant-insect@2024",
+  "name": "Giant Insect",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Large Beast, Unaligned_\n\n- **AC** 11 + the spell's level\n- **HP** 30 + 10 for each spell level above 4\n- **Speed** 40 ft., Climb 40 ft., Fly 40 ft. (Wasp only)\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| **Score**        |     17 |     13 |     15 |      4 |     14 |      3 |\n| **Modifier**     |     +3 |     +1 |     +2 |     -3 |     +2 |     -4 |\n| **Saving Throw** |     +3 |     +1 |     +2 |     -3 |     +2 |     -4 |\n\n- **Senses** Darkvision 60 ft.; Passive Perception 12\n- **Languages** Understands the languages you know\n- **CR** None (XP 0; PB equals your Proficiency Bonus)\n\n### Traits\n\n_**Spider Climb.**_ The insect can climb difficult surfaces, including along ceilings, without needing to make an ability check.\n\n### Actions\n\n_**Multiattack.**_ The insect makes a number of attacks equal to half this spell's level (round down).\n\n_**Poison Jab.**_ _Melee Attack Roll:_ Bonus equals your spell attack modifier, reach 10 ft. _Hit:_ 1d6 + 3 plus the spell's level Piercing damage plus 1d4 Poison damage.\n\n_**Web Bolt (Spider Only).**_ _Ranged Attack Roll:_ Bonus equals your spell attack modifier, range 60 ft. _Hit:_ 1d10 + 3 plus the spell's level Bludgeoning damage, and the target's Speed is reduced to 0 until the start of the insect's next turn.\n\n### Bonus Actions\n\n_**Venomous Spew (Centipede Only).**_ _Constitution Saving Throw:_ Your spell save DC, one creature the insect can see within 10 feet. _Failure:_ The target has the Poisoned condition until the start of the insect's next turn.",
+    "plain": "Large Beast, Unaligned\n\n- AC 11 + the spell's level\n- HP 30 + 10 for each spell level above 4\n- Speed 40 ft., Climb 40 ft., Fly 40 ft. (Wasp only)\n\n|                  |   Str. |   Dex. |   Con. |   Int. |   Wis. |   Cha. |\n|------------------|--------|--------|--------|--------|--------|--------|\n| Score        |     17 |     13 |     15 |      4 |     14 |      3 |\n| Modifier     |     +3 |     +1 |     +2 |     -3 |     +2 |     -4 |\n| Saving Throw |     +3 |     +1 |     +2 |     -3 |     +2 |     -4 |\n\n- Senses Darkvision 60 ft.; Passive Perception 12\n- Languages Understands the languages you know\n- CR None (XP 0; PB equals your Proficiency Bonus)\n\n### Traits\n\nSpider Climb. The insect can climb difficult surfaces, including along ceilings, without needing to make an ability check.\n\n### Actions\n\nMultiattack. The insect makes a number of attacks equal to half this spell's level (round down).\n\nPoison Jab. Melee Attack Roll: Bonus equals your spell attack modifier, reach 10 ft. Hit: 1d6 + 3 plus the spell's level Piercing damage plus 1d4 Poison damage.\n\nWeb Bolt (Spider Only). Ranged Attack Roll: Bonus equals your spell attack modifier, range 60 ft. Hit: 1d10 + 3 plus the spell's level Bludgeoning damage, and the target's Speed is reduced to 0 until the start of the insect's next turn.\n\n### Bonus Actions\n\nVenomous Spew (Centipede Only). Constitution Saving Throw: Your spell save DC, one creature the insect can see within 10 feet. Failure: The target has the Poisoned condition until the start of the insect's next turn.",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": {
+    "prose": {
+      "text": "11 + the spell's level",
+      "gap": {
+        "category": "value",
+        "name": "This value depends on the summoner, spell slot, or chosen form."
+      }
+    }
+  },
+  "hp": {
+    "average": {
+      "prose": {
+        "text": "30 + 10 for each spell level above 4",
+        "gap": {
+          "category": "value",
+          "name": "This value depends on the summoner, spell slot, or chosen form."
+        }
+      }
+    }
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:climb": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": {
+        "prose": {
+          "text": "Fly 40 ft. (Wasp only)",
+          "gap": {
+            "category": "value",
+            "name": "This value depends on the summoner, spell slot, or chosen form."
+          }
+        }
+      }
+    }
+  },
+  "abilities": {
+    "ability:str": 17,
+    "ability:dex": 13,
+    "ability:con": 15,
+    "ability:int": 4,
+    "ability:wis": 14,
+    "ability:cha": 3
+  },
+  "passivePerception": 12,
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "languages": [
+    {
+      "text": "Understands the languages you know"
+    }
+  ],
+  "xp": 0,
+  "proficiencyBonus": {
+    "prose": {
+      "text": "None (XP 0; PB equals your Proficiency Bonus)",
+      "gap": {
+        "category": "value",
+        "name": "This value depends on the summoner, spell slot, or chosen form."
+      }
+    }
+  },
+  "blocks": [
+    {
+      "name": "Spider Climb",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The insect can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+        "plain": "The insect can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-trait",
+          "name": "The printed Spider Climb rule is retained as text."
+        }
+      ]
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The insect makes a number of attacks equal to half this spell's level (round down).",
+        "plain": "The insect makes a number of attacks equal to half this spell's level (round down).",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-action",
+          "name": "The printed Multiattack rule is retained as text."
+        }
+      ]
+    },
+    {
+      "name": "Poison Jab",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ Bonus equals your spell attack modifier, reach 10 ft. _Hit:_ 1d6 + 3 plus the spell's level Piercing damage plus 1d4 Poison damage.",
+        "plain": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 10 ft. Hit: 1d6 + 3 plus the spell's level Piercing damage plus 1d4 Poison damage.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-action",
+          "name": "The printed Poison Jab rule is retained as text."
+        }
+      ]
+    },
+    {
+      "name": "Web Bolt (Spider Only)",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ Bonus equals your spell attack modifier, range 60 ft. _Hit:_ 1d10 + 3 plus the spell's level Bludgeoning damage, and the target's Speed is reduced to 0 until the start of the insect's next turn.",
+        "plain": "Ranged Attack Roll: Bonus equals your spell attack modifier, range 60 ft. Hit: 1d10 + 3 plus the spell's level Bludgeoning damage, and the target's Speed is reduced to 0 until the start of the insect's next turn.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-action",
+          "name": "The printed Web Bolt (Spider Only) rule is retained as text."
+        }
+      ]
+    },
+    {
+      "name": "Venomous Spew (Centipede Only)",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "_Constitution Saving Throw:_ Your spell save DC, one creature the insect can see within 10 feet. _Failure:_ The target has the Poisoned condition until the start of the insect's next turn.",
+        "plain": "Constitution Saving Throw: Your spell save DC, one creature the insect can see within 10 feet. Failure: The target has the Poisoned condition until the start of the insect's next turn.",
+        "wording": "srd"
+      },
+      "gaps": [
+        {
+          "category": "creature-bonus-action",
+          "name": "The printed Venomous Spew (Centipede Only) rule is retained as text."
+        }
+      ]
+    }
+  ]
+}

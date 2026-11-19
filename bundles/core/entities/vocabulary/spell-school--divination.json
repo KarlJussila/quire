@@ -1,0 +1,10 @@
+{
+  "id": "spell-school:divination",
+  "name": "Divination",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

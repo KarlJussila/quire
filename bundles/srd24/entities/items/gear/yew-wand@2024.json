@@ -1,0 +1,18 @@
+{
+  "id": "item:yew-wand@2024",
+  "name": "Yew Wand",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** Varies\n\nA Druidic Focus takes one of the forms in the table and is carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use such an object as a Spellcasting Focus.\n\n| Focus                              | Weight   | Cost   |\n|------------------------------------|----------|--------|\n| Sprig of mistletoe                 | —        | 1 GP   |\n| Wooden staff (also a Quarterstaff) | 4 lb.    | 5 GP   |\n| Yew wand                           | 1 lb.    | 10 GP  |",
+    "plain": "Cost: Varies\n\nA Druidic Focus takes one of the forms in the table and is carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use such an object as a Spellcasting Focus.\n\n| Focus                              | Weight   | Cost   |\n|------------------------------------|----------|--------|\n| Sprig of mistletoe                 | —        | 1 GP   |\n| Wooden staff (also a Quarterstaff) | 4 lb.    | 5 GP   |\n| Yew wand                           | 1 lb.    | 10 GP  |",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 10,
+    "currency": "currency:gp"
+  },
+  "weight": 1.0
+}

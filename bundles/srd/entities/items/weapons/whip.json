@@ -1,0 +1,27 @@
+{
+  "id": "item:whip",
+  "name": "Whip",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:martial-melee-weapon",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:gp"
+  },
+  "weight": 3.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:finesse",
+      "weapon-property:reach"
+    ],
+    "damage": {
+      "amount": "1d4",
+      "type": "damage-type:slashing"
+    }
+  }
+}

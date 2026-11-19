@@ -1,0 +1,18 @@
+{
+  "id": "feature:rogue/thief/supreme-sneak@2024",
+  "name": "Level 9: Supreme Sneak",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain the following Cunning Strike option.\n\n_**Stealth Attack (Cost: 1d6).**_ If you have the Hide action's Invisible condition, this attack doesn't end that condition on you if you end the turn behind Three-Quarters Cover or Total Cover.",
+    "plain": "You gain the following Cunning Strike option.\n\nStealth Attack (Cost: 1d6). If you have the Hide action's Invisible condition, this attack doesn't end that condition on you if you end the turn behind Three-Quarters Cover or Total Cover.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Stealth Attack must preserve Hide through this attack, selected when Sneak Attack damage is dealt, and end that preserved condition at turn end unless behind Three-Quarters or Total Cover."
+    }
+  ]
+}

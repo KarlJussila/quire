@@ -1,0 +1,20 @@
+{
+  "id": "feature:paladin/divine-health",
+  "name": "Divine Health",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "By 3rd level, the divine magic flowing through you makes you immune to disease.",
+    "plain": "By 3rd level, the divine magic flowing through you makes you immune to disease.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "source-type:disease"
+      ]
+    }
+  ]
+}

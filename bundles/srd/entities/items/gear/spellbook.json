@@ -1,0 +1,25 @@
+{
+  "id": "item:spellbook",
+  "name": "Spellbook",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Essential for wizards, a spellbook is a leather-bound tome with 100 blank vellum pages suitable for recording spells.",
+    "plain": "Essential for wizards, a spellbook is a leather-bound tome with 100 blank vellum pages suitable for recording spells.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 50,
+    "currency": "currency:gp"
+  },
+  "weight": 3.0,
+  "effects": [
+    {
+      "type": "resource",
+      "key": "spellbook",
+      "recover": []
+    }
+  ]
+}

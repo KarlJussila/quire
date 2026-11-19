@@ -1,0 +1,92 @@
+{
+  "id": "creature:gorgon",
+  "name": "Gorgon",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:unaligned",
+  "ac": 19,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 114,
+    "formula": "12d10 + 48"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 18,
+    "ability:dex": 11,
+    "ability:int": 2,
+    "ability:str": 20,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 4
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 1800,
+  "cr": 5,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:petrified"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Trampling Charge",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the gorgon moves at least 20 feet straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 16 Strength saving throw or be knocked Prone. If the target is prone, the gorgon can make one attack with its hooves against it as a bonus action.",
+        "plain": "If the gorgon moves at least 20 feet straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 16 Strength saving throw or be knocked Prone. If the target is prone, the gorgon can make one attack with its hooves against it as a bonus action.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Gore",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +8 to hit, reach 5 ft., one target. _Hit:_ 18 (2d12 + 5) piercing damage.",
+        "plain": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 18 (2d12 + 5) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hooves",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +8 to hit, reach 5 ft., one target. _Hit:_ 16 (2d10 + 5) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 16 (2d10 + 5) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Petrifying Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The gorgon exhales petrifying gas in a 30-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw. On a failed save, a target begins to turn to stone and is Restrained. The restrained target must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is Petrified until freed by the Greater Restoration spell or other magic.",
+        "plain": "The gorgon exhales petrifying gas in a 30-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw. On a failed save, a target begins to turn to stone and is Restrained. The restrained target must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is Petrified until freed by the Greater Restoration spell or other magic.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

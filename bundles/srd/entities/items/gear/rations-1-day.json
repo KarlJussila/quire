@@ -1,0 +1,18 @@
+{
+  "id": "item:rations-1-day",
+  "name": "Rations (1 day)",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.",
+    "plain": "Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:sp"
+  },
+  "weight": 2.0
+}

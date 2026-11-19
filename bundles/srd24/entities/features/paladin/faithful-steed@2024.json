@@ -1,0 +1,58 @@
+{
+  "id": "feature:paladin/faithful-steed@2024",
+  "name": "Level 5: Faithful Steed",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You can call on the aid of an otherworldly steed. You always have the Find Steed spell prepared.\n\nYou can also cast the spell once without expending a spell slot, and you regain the ability to do so when you finish a Long Rest.",
+    "plain": "You can call on the aid of an otherworldly steed. You always have the Find Steed spell prepared.\n\nYou can also cast the spell once without expending a spell slot, and you regain the ability to do so when you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "find-steed",
+      "name": "Faithful Steed",
+      "when": {
+        "compare": "levels.class:paladin",
+        "atLeast": 5
+      },
+      "time": {
+        "amount": 10,
+        "unit": "minute"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "cast": {
+            "spell": "spell:find-steed",
+            "slot": false
+          }
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:find-steed"
+      ],
+      "how": "prepared"
+    }
+  ]
+}

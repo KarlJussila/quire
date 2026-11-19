@@ -1,0 +1,31 @@
+{
+  "id": "item:scimitar@2024",
+  "name": "Scimitar",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": [
+    "group:martial-melee-weapon",
+    "group:sword"
+  ],
+  "cost": {
+    "amount": 25,
+    "currency": "currency:gp"
+  },
+  "weight": 3.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:finesse",
+      "weapon-property:light"
+    ],
+    "damage": {
+      "amount": "1d6",
+      "type": "damage-type:slashing"
+    },
+    "mastery": "weapon-mastery:nick"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "creature:fire-giant@2024",
+  "name": "Fire Giant",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:giant",
+  "alignment": "alignment:lawful-evil",
+  "ac": 18,
+  "hp": {
+    "average": 162,
+    "formula": "13d12 + 78"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 13,
+    "ability:con": 23,
+    "ability:dex": 9,
+    "ability:int": 10,
+    "ability:str": 25,
+    "ability:wis": 14
+  },
+  "saves": {
+    "ability:cha": 5,
+    "ability:con": 10,
+    "ability:dex": 3
+  },
+  "skills": {
+    "skill:athletics": 11,
+    "skill:perception": 6
+  },
+  "passivePerception": 16,
+  "xp": 5000,
+  "proficiencyBonus": 4,
+  "initiative": 3,
+  "habitat": [
+    "Mountain",
+    "Underdark"
+  ],
+  "treasure": [
+    "Armaments"
+  ],
+  "cr": 9,
+  "languages": [
+    {
+      "language": "language:giant"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The giant makes two attacks, using Flame Sword or Hammer Throw in any combination.",
+        "plain": "The giant makes two attacks, using Flame Sword or Hammer Throw in any combination.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Flame Sword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +11, reach 10 ft. _Hit:_ 21 (4d6 + 7) Slashing damage plus 10 (3d6) Fire damage.",
+        "plain": "Melee Attack Roll: +11, reach 10 ft. Hit: 21 (4d6 + 7) Slashing damage plus 10 (3d6) Fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hammer Throw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +11, range 60/240 ft. _Hit:_ 23 (3d10 + 7) Bludgeoning damage plus 4 (1d8) Fire damage, and the target is pushed up to 15 feet straight away from the giant and has Disadvantage on the next attack roll it makes before the end of its next turn.",
+        "plain": "Ranged Attack Roll: +11, range 60/240 ft. Hit: 23 (3d10 + 7) Bludgeoning damage plus 4 (1d8) Fire damage, and the target is pushed up to 15 feet straight away from the giant and has Disadvantage on the next attack roll it makes before the end of its next turn.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "group:travel",
+  "name": "Travel",
+  "source": {
+    "book": "core"
+  }
+}

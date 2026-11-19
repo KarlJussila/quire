@@ -1,0 +1,151 @@
+{
+  "id": "feature:druid/wild-shape@2024",
+  "name": "Level 2: Wild Shape",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The power of nature allows you to assume the form of an animal. As a Bonus Action, you shape-shift into a Beast form that you have learned for this feature (see \"Known Forms\" below). You stay in that form for a number of hours equal to half your Druid level or until you use Wild Shape again, have the Incapacitated condition, or die. You can also leave the form early as a Bonus Action.\n\n_**Number of Uses.**_ You can use Wild Shape twice. You regain one expended use when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest.\n\nYou gain additional uses when you reach certain Druid levels, as shown in the Wild Shape column of the Druid Features table.\n\n_**Known Forms.**_ You know four Beast forms for this feature, chosen from among Beast stat blocks that have a maximum Challenge Rating of 1/4 and that lack a Fly Speed (see \"Animals\" in \"Monsters\" for stat block options). The **Rat, Riding Horse, Spider**, and **Wolf** are recommended. Whenever you finish a Long Rest, you can replace one of your known forms with another eligible form.\n\nWhen you reach certain Druid levels, your number of known forms and the maximum Challenge Rating for those forms increases, as shown in the table. In addition, starting at level 8, you can adopt a form that has a Fly Speed.\n\nWhen choosing known forms, you may look in other sources for eligible Beasts if the Game Master permits you to do so.\n\n|   Druid Level |   Known Forms | Max CR   | Fly Speed   |\n|---------------|---------------|----------|-------------|\n|             2 |             4 | 1/4      | No          |\n|             4 |             6 | 1/2      | No          |\n|             8 |             8 | 1        | Yes         |\n\n_**Rules While Shape-Shifted.**_ While in a form, you retain your personality, memories, and ability to speak, and the following rules apply:\n\n- **Temporary Hit Points.** When you assume a Wild Shape form, you gain a number of Temporary Hit Points equal to your Druid level.\n- **Game Statistics.** Your game statistics are replaced by the Beast's stat block, but you retain your creature type; Hit Points; Hit Point Dice; Intelligence, Wisdom, and Charisma scores; class features; languages; and feats. You also retain your skill and saving throw proficiencies and use your Proficiency Bonus for them, in addition to gaining the proficiencies of the creature. If a skill or saving throw modifier in the Beast's stat block is higher than yours, use the one in the stat block.\n- **No Spellcasting.** You can't cast spells, but shapeshifting doesn't break your Concentration or otherwise interfere with a spell you've already cast.\n- **Objects.** Your ability to handle objects is determined by the form's limbs rather than your own. In addition, you choose whether your equipment falls in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the GM decides whether it's practical for the new form to wear a piece of equipment based on the creature's size and shape. Your equipment doesn't change size or shape to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge with the form. Equipment that merges with the form has no effect while you're in that form.",
+    "plain": "The power of nature allows you to assume the form of an animal. As a Bonus Action, you shape-shift into a Beast form that you have learned for this feature (see \"Known Forms\" below). You stay in that form for a number of hours equal to half your Druid level or until you use Wild Shape again, have the Incapacitated condition, or die. You can also leave the form early as a Bonus Action.\n\nNumber of Uses. You can use Wild Shape twice. You regain one expended use when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest.\n\nYou gain additional uses when you reach certain Druid levels, as shown in the Wild Shape column of the Druid Features table.\n\nKnown Forms. You know four Beast forms for this feature, chosen from among Beast stat blocks that have a maximum Challenge Rating of 1/4 and that lack a Fly Speed (see \"Animals\" in \"Monsters\" for stat block options). The Rat, Riding Horse, Spider, and Wolf are recommended. Whenever you finish a Long Rest, you can replace one of your known forms with another eligible form.\n\nWhen you reach certain Druid levels, your number of known forms and the maximum Challenge Rating for those forms increases, as shown in the table. In addition, starting at level 8, you can adopt a form that has a Fly Speed.\n\nWhen choosing known forms, you may look in other sources for eligible Beasts if the Game Master permits you to do so.\n\n|   Druid Level |   Known Forms | Max CR   | Fly Speed   |\n|---------------|---------------|----------|-------------|\n|             2 |             4 | 1/4      | No          |\n|             4 |             6 | 1/2      | No          |\n|             8 |             8 | 1        | Yes         |\n\nRules While Shape-Shifted. While in a form, you retain your personality, memories, and ability to speak, and the following rules apply:\n\n- Temporary Hit Points. When you assume a Wild Shape form, you gain a number of Temporary Hit Points equal to your Druid level.\n- Game Statistics. Your game statistics are replaced by the Beast's stat block, but you retain your creature type; Hit Points; Hit Point Dice; Intelligence, Wisdom, and Charisma scores; class features; languages; and feats. You also retain your skill and saving throw proficiencies and use your Proficiency Bonus for them, in addition to gaining the proficiencies of the creature. If a skill or saving throw modifier in the Beast's stat block is higher than yours, use the one in the stat block.\n- No Spellcasting. You can't cast spells, but shapeshifting doesn't break your Concentration or otherwise interfere with a spell you've already cast.\n- Objects. Your ability to handle objects is determined by the form's limbs rather than your own. In addition, you choose whether your equipment falls in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the GM decides whether it's practical for the new form to wear a piece of equipment based on the creature's size and shape. Your equipment doesn't change size or shape to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge with the form. Equipment that merges with the form has no effect while you're in that form.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "wild-shape",
+      "name": "Wild Shape",
+      "when": {
+        "compare": "levels.class:druid",
+        "atLeast": 2
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "wild-shape"
+        }
+      ],
+      "outcomes": [
+        {
+          "applyState": {
+            "state": "state:wild-shape@2024"
+          },
+          "to": "self"
+        }
+      ]
+    },
+    {
+      "key": "replace-form",
+      "name": "Replace a Known Form",
+      "trigger": {
+        "event": "event:rest-finished",
+        "match": {
+          "rest": "rest:long"
+        },
+        "subject": "self"
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "known-forms"
+          }
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "resource",
+      "key": "wild-shape",
+      "max": {
+        "byLevel": {
+          "2": 2,
+          "6": 3,
+          "17": 4
+        },
+        "of": "class:druid"
+      },
+      "recover": [
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:short"
+            },
+            "subject": "self"
+          },
+          "amount": 1
+        },
+        {
+          "on": {
+            "event": "event:rest-finished",
+            "match": {
+              "rest": "rest:long"
+            },
+            "subject": "self"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "type": "record",
+      "pick": {
+        "choose": {
+          "key": "known-forms",
+          "name": "Known Forms",
+          "count": {
+            "byLevel": {
+              "2": 4,
+              "4": 6,
+              "8": 8
+            },
+            "of": "class:druid"
+          },
+          "distinct": true,
+          "from": [
+            {
+              "kind": "creature",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "creatureType": "creature-type:beast",
+                      "cr": {
+                        "atMost": {
+                          "byLevel": {
+                            "2": 0.25,
+                            "4": 0.5,
+                            "8": 1
+                          },
+                          "of": "class:druid"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "any": [
+                      {
+                        "compare": "levels.class:druid",
+                        "atLeast": 8
+                      },
+                      {
+                        "not": {
+                          "match": {
+                            "speeds": {
+                              "movement-mode:fly": true
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

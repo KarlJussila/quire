@@ -1,0 +1,258 @@
+{
+  "id": "feature:wizard/spellcasting",
+  "name": "Spellcasting",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power.",
+    "plain": "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power.",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting-feature",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "class:wizard": {
+            "ability": "ability:int",
+            "slots": "table:full-caster",
+            "prepared": {
+              "$base": {
+                "max": [
+                  1,
+                  {
+                    "sum": [
+                      "modifiers.ability:int",
+                      "levels.class:wizard"
+                    ]
+                  }
+                ]
+              }
+            },
+            "cantrips": {
+              "$base": {
+                "byLevel": {
+                  "1": 3,
+                  "4": 4,
+                  "10": 5
+                },
+                "of": "class:wizard"
+              }
+            },
+            "casterLevel": {
+              "$base": "levels.class:wizard"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "cantrips",
+            "name": "Wizard Cantrips",
+            "count": "spellcasting.class:wizard.cantrips",
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "level": 0,
+                    "lists": "class:wizard"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": "ability:int"
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "prepared",
+            "name": "Prepared Wizard Spells",
+            "count": "spellcasting.class:wizard.prepared",
+            "distinct": true,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "stored": "spellbook"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "prepared",
+      "ability": "ability:int"
+    }
+  ],
+  "activities": [
+    {
+      "key": "add-spells",
+      "name": "Add Spells to the Book",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self",
+        "match": {
+          "class": "class:wizard"
+        }
+      },
+      "range": {
+        "touch": true
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "object",
+          "where": {
+            "is": "item:spellbook"
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "pool": {
+            "resource": "spellbook",
+            "add": {
+              "if": {
+                "compare": "levels.class:wizard",
+                "atMost": 1
+              },
+              "then": 6,
+              "else": 2
+            },
+            "store": {
+              "choose": {
+                "key": "new-spells",
+                "name": "Spells to Add",
+                "count": {
+                  "if": {
+                    "compare": "levels.class:wizard",
+                    "atMost": 1
+                  },
+                  "then": 6,
+                  "else": 2
+                },
+                "distinct": true,
+                "from": [
+                  {
+                    "kind": "spell",
+                    "where": {
+                      "match": {
+                        "lists": "class:wizard",
+                        "level": {
+                          "atLeast": 1,
+                          "atMost": "spellcasting.class:wizard.spellLevel"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "to": "target"
+        }
+      ]
+    },
+    {
+      "key": "copy-spell",
+      "name": "Copy a Spell into the Book",
+      "time": {
+        "amount": {
+          "times": {
+            "choose": {
+              "key": "copy-level",
+              "name": "Copied Spell Level",
+              "from": [
+                {
+                  "atLeast": 1,
+                  "atMost": "spellcasting.class:wizard.spellLevel"
+                }
+              ]
+            }
+          },
+          "by": 2
+        },
+        "unit": "hour"
+      },
+      "range": {
+        "touch": true
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "object",
+          "where": {
+            "is": "item:spellbook"
+          }
+        }
+      },
+      "cost": [
+        {
+          "currency": {
+            "times": {
+              "chosen": "copy-level"
+            },
+            "by": 50
+          },
+          "unit": "currency:gp"
+        }
+      ],
+      "outcomes": [
+        {
+          "key": "copied-spell",
+          "pool": {
+            "resource": "spellbook",
+            "add": 1,
+            "store": {
+              "choose": {
+                "key": "copy-spell",
+                "name": "Found Wizard Spell",
+                "from": [
+                  {
+                    "kind": "spell",
+                    "where": {
+                      "match": {
+                        "lists": "class:wizard",
+                        "level": {
+                          "chosen": "copy-level"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "to": "target"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "spell-component",
+      "name": "The focus rule needs a way to identify spells cast as Wizard spells and waive only material parts with neither cost nor consumption."
+    },
+    {
+      "category": "spellcasting",
+      "name": "Initial and level-gained spellbook picks, preparation, and ritual casting still need one chosen physical book’s stored entries; the existing spellbook and prepared keys are retained."
+    },
+    {
+      "category": "spellcasting",
+      "name": "Copying from an existing book or prepared spells to a replacement book costs 1 hour and 10 GP per spell level; source-book entry selection and book replacement remain unencoded."
+    }
+  ]
+}

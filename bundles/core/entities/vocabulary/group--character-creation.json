@@ -1,0 +1,7 @@
+{
+  "id": "group:character-creation",
+  "name": "Character Creation",
+  "source": {
+    "book": "core"
+  }
+}

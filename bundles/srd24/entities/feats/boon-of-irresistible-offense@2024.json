@@ -1,0 +1,76 @@
+{
+  "id": "feat:boon-of-irresistible-offense@2024",
+  "name": "Boon of Irresistible Offense",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain the following benefits.\n\n_**Ability Score Increase.**_ Increase your Strength or Dexterity score by 1, to a maximum of 30.\n\n_**Overcome Defenses.**_ The Bludgeoning, Piercing, and Slashing damage you deal always ignores Resistance.\n\n_**Overwhelming Strike.**_ When you roll a 20 on the d20 for an attack roll, you can deal extra damage to the target equal to the ability score increased by this feat. The extra damage's type is the same as the attack's type.",
+    "plain": "You gain the following benefits.\n\nAbility Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 30.\n\nOvercome Defenses. The Bludgeoning, Piercing, and Slashing damage you deal always ignores Resistance.\n\nOverwhelming Strike. When you roll a 20 on the d20 for an attack roll, you can deal extra damage to the target equal to the ability score increased by this feat. The extra damage's type is the same as the attack's type.",
+    "wording": "srd"
+  },
+  "group": "group:epic-boon",
+  "requires": {
+    "compare": "levels.total",
+    "atLeast": 19
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "$at": {
+            "choose": {
+              "key": "ability",
+              "name": "Ability Score Increase",
+              "from": [
+                "ability:str",
+                "ability:dex"
+              ]
+            }
+          },
+          "$add": {
+            "amount": 1,
+            "upTo": 30
+          }
+        }
+      }
+    },
+    {
+      "type": "bypass",
+      "resistance": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing",
+        "damage-type:slashing"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "key": "overwhelming-strike",
+      "name": "Overwhelming Strike",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "natural": 20
+        }
+      },
+      "target": {
+        "who": "subject"
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "You can deal extra damage to the target equal to the ability score increased by this feat, of the same type as the attack.",
+            "gap": {
+              "category": "activity",
+              "name": "overwhelming strike damage"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

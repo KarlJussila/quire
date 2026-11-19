@@ -1,0 +1,28 @@
+{
+  "id": "feature:dragonborn/draconic-ancestry@2024",
+  "name": "Draconic Ancestry",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Your lineage stems from a dragon progenitor. Choose the kind of dragon from the table. Your choice affects your Breath Weapon and Damage Resistance traits as well as your appearance.",
+    "plain": "Your lineage stems from a dragon progenitor. Choose the kind of dragon from the table. Your choice affects your Breath Weapon and Damage Resistance traits as well as your appearance.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "ancestry",
+        "name": "Draconic Ancestry",
+        "from": [
+          {
+            "kind": "feature",
+            "where": {
+              "group": "group:draconic-ancestry"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

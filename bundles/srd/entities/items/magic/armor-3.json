@@ -1,0 +1,44 @@
+{
+  "id": "item:armor-3",
+  "name": "Armor, +3",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You have a bonus to AC while wearing this armor. The bonus is determined by its rarity.",
+    "plain": "You have a bonus to AC while wearing this armor. The bonus is determined by its rarity.",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:legendary",
+  "base": {
+    "choose": {
+      "key": "base",
+      "name": "Armor",
+      "from": [
+        {
+          "kind": "item",
+          "where": {
+            "group": "group:armor"
+          }
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 3
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true
+        }
+      }
+    }
+  ]
+}

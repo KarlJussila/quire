@@ -1,0 +1,151 @@
+{
+  "id": "creature:nalfeshnee@2024",
+  "name": "Nalfeshnee",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 18,
+  "hp": {
+    "average": 184,
+    "formula": "16d10 + 96"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:fly": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 15,
+    "ability:con": 22,
+    "ability:dex": 10,
+    "ability:int": 19,
+    "ability:str": 21,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:cha": 7,
+    "ability:con": 11,
+    "ability:int": 9,
+    "ability:wis": 6
+  },
+  "senses": {
+    "sense:truesight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 11,
+  "telepathy": 120,
+  "xp": 10000,
+  "proficiencyBonus": 5,
+  "initiative": 5,
+  "habitat": [
+    "Planar (Abyss)"
+  ],
+  "treasure": [
+    "Relics"
+  ],
+  "cr": 13,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold",
+        "damage-type:fire",
+        "damage-type:lightning"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:frightened",
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Demonic Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the nalfeshnee dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.",
+        "plain": "If the nalfeshnee dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The nalfeshnee has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The nalfeshnee has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The nalfeshnee makes three Rend attacks.",
+        "plain": "The nalfeshnee makes three Rend attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +10, reach 10 ft. _Hit:_ 16 (2d10 + 5) Slashing damage plus 11 (2d10) Force damage.",
+        "plain": "Melee Attack Roll: +10, reach 10 ft. Hit: 16 (2d10 + 5) Slashing damage plus 11 (2d10) Force damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Teleport",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The nalfeshnee teleports up to 120 feet to an unoccupied space it can see.",
+        "plain": "The nalfeshnee teleports up to 120 feet to an unoccupied space it can see.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Horror Nimbus",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "_Wisdom Saving Throw:_ DC 15, each creature in a 15-foot Emanation originating from the nalfeshnee. _Failure:_ 28 (8d6) Psychic damage, and the target has the Frightened condition for 1 minute, until it takes damage, or until it ends its turn with the nalfeshnee out of line of sight. _Success:_ The target is immune to this nalfeshnee's Horror Nimbus for 24 hours.",
+        "plain": "Wisdom Saving Throw: DC 15, each creature in a 15-foot Emanation originating from the nalfeshnee. Failure: 28 (8d6) Psychic damage, and the target has the Frightened condition for 1 minute, until it takes damage, or until it ends its turn with the nalfeshnee out of line of sight. Success: The target is immune to this nalfeshnee's Horror Nimbus for 24 hours.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pursuit",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "_Trigger:_ Another creature the nalfeshnee can see ends its move within 120 feet of the nalfeshnee. _Response:_ The nalfeshnee uses Teleport, but its destination space must be within 10 feet of the triggering creature.",
+        "plain": "Trigger: Another creature the nalfeshnee can see ends its move within 120 feet of the nalfeshnee. Response: The nalfeshnee uses Teleport, but its destination space must be within 10 feet of the triggering creature.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

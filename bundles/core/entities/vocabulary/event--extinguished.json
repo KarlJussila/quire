@@ -1,0 +1,11 @@
+{
+  "id": "event:extinguished",
+  "name": "Extinguished",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "A fire on the subject is doused, submerged, or smothered."
+  },
+  "emittedBy": "engine"
+}

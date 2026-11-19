@@ -1,0 +1,147 @@
+{
+  "id": "rule:help@2024",
+  "name": "Help",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you take the Help action, you do one of the following.\n\n_**Assist an Ability Check.**_ Choose one of your skill or tool proficiencies and one ally who is near enough for you to assist verbally or physically when they make an ability check. That ally has Advantage on the next ability check they make with the chosen skill or tool. This benefit expires if the ally doesn't use it before the start of your next turn. The GM has final say on whether your assistance is possible.\n\n_**Assist an Attack Roll.**_ You momentarily distract an enemy within 5 feet of you, giving Advantage to the next attack roll by one of your allies against that enemy. This benefit expires at the start of your next turn.",
+    "plain": "When you take the Help action, you do one of the following.\n\n_Assist an Ability Check._ Choose one of your skill or tool proficiencies and one ally who is near enough for you to assist verbally or physically when they make an ability check. That ally has Advantage on the next ability check they make with the chosen skill or tool. This benefit expires if the ally doesn't use it before the start of your next turn. The GM has final say on whether your assistance is possible.\n\n_Assist an Attack Roll._ You momentarily distract an enemy within 5 feet of you, giving Advantage to the next attack roll by one of your allies against that enemy. This benefit expires at the start of your next turn.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "help-check",
+      "action": "action:help",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "ally"
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "roll-mod",
+                  "mode": "advantage",
+                  "when": {
+                    "event": "event:roll-made",
+                    "by": "self",
+                    "match": {
+                      "roll": "roll:check",
+                      "skill": {
+                        "choose": {
+                          "key": "proficiency",
+                          "name": "Skill",
+                          "from": [
+                            {
+                              "kind": "skill",
+                              "where": {
+                                "proficient": "candidate"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "ends": [
+              {
+                "event": "event:roll-made",
+                "by": "self",
+                "match": {
+                  "roll": "roll:check"
+                }
+              },
+              {
+                "event": "event:turn-start",
+                "subject": "source"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "key": "help-attack",
+      "action": "action:help",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "enemy",
+          "where": {
+            "within": 5
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "applyState": {
+            "state": {
+              "effects": [
+                {
+                  "type": "roll-mod",
+                  "mode": "advantage",
+                  "when": {
+                    "event": "event:roll-made",
+                    "by": {
+                      "pool": "ally",
+                      "of": "source"
+                    },
+                    "subject": "self",
+                    "match": {
+                      "roll": "roll:attack"
+                    }
+                  }
+                }
+              ]
+            },
+            "ends": [
+              {
+                "event": "event:roll-made",
+                "by": {
+                  "pool": "ally",
+                  "of": "source"
+                },
+                "subject": "self",
+                "match": {
+                  "roll": "roll:attack"
+                }
+              },
+              {
+                "event": "event:turn-start",
+                "subject": "source"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "help",
+      "name": "The advantage applies only to checks with the chosen skill or tool; tools are not offered yet"
+    }
+  ]
+}

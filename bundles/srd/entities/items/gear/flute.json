@@ -1,0 +1,17 @@
+{
+  "id": "item:flute",
+  "name": "Flute",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:wind-instrument",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:gp"
+  },
+  "weight": 1.0
+}

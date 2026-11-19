@@ -1,0 +1,47 @@
+{
+  "id": "feature:sorcerer/seeking-spell@2024",
+  "name": "Seeking Spell",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Cost: 1 Sorcery Point_\n\nIf you make an attack roll for a spell and miss, you can spend 1 Sorcery Point to reroll the d20, and you must use the new roll.\n\nYou can use Seeking Spell even if you've already used a different Metamagic option during the casting of the spell.",
+    "plain": "Cost: 1 Sorcery Point\n\nIf you make an attack roll for a spell and miss, you can spend 1 Sorcery Point to reroll the d20, and you must use the new roll.\n\nYou can use Seeking Spell even if you've already used a different Metamagic option during the casting of the spell.",
+    "wording": "srd"
+  },
+  "group": "group:metamagic",
+  "effects": [],
+  "activities": [
+    {
+      "key": "seeking-spell",
+      "name": "Seeking Spell",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": false
+        },
+        "when": {
+          "spell": {
+            "kind": "spell"
+          }
+        }
+      },
+      "cost": [
+        {
+          "resource": "sorcery-points",
+          "amount": 1
+        }
+      ],
+      "outcomes": [
+        {
+          "intercept": {
+            "reroll": true
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,35 @@
+{
+  "id": "spell:hellish-rebuke@2024",
+  "name": "Hellish Rebuke",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The creature that damaged you is momentarily surrounded by green flames. It makes a Dexterity saving throw, taking 2d10 Fire damage on a failed save or half as much damage on a successful one.\n\n_**Using a Higher-Level Spell Slot.**_ The damage increases by 1d10 for each spell slot level above 1.",
+    "plain": "The creature that damaged you is momentarily surrounded by green flames. It makes a Dexterity saving throw, taking 2d10 Fire damage on a failed save or half as much damage on a successful one.\n\nUsing a Higher-Level Spell Slot. The damage increases by 1d10 for each spell slot level above 1.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:evocation",
+  "lists": [
+    "class:warlock"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

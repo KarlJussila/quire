@@ -1,0 +1,116 @@
+{
+  "id": "item:mace-of-disruption",
+  "name": "Mace of Disruption",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you hit a fiend or an undead with this magic weapon, that creature takes an extra 2d6 radiant damage. If the target has 25 hit points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature becomes Frightened of you until the end of your next turn.\n\nWhile you hold this weapon, it sheds bright light in a 20-foot radius and dim light for an additional 20 feet.",
+    "plain": "When you hit a fiend or an undead with this magic weapon, that creature takes an extra 2d6 radiant damage. If the target has 25 hit points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature becomes Frightened of you until the end of your next turn.\n\nWhile you hold this weapon, it sheds bright light in a 20-foot radius and dim light for an additional 20 feet.",
+    "wording": "srd"
+  },
+  "group": "group:weapon",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "triggered",
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true
+        }
+      },
+      "on": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "match": {
+          "roll": "roll:attack",
+          "attack": {
+            "item": "this"
+          },
+          "success": true
+        },
+        "subject": {
+          "pool": "any",
+          "where": {
+            "match": {
+              "creatureType": [
+                "creature-type:fiend",
+                "creature-type:undead"
+              ]
+            }
+          }
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "damage": {
+              "amount": "2d6",
+              "type": "damage-type:radiant"
+            },
+            "to": "subject"
+          },
+          {
+            "then": {
+              "target": {
+                "who": "subject"
+              },
+              "delivery": {
+                "save": {
+                  "ability": "ability:wis",
+                  "dc": 15
+                }
+              },
+              "outcomes": [
+                {
+                  "kill": {},
+                  "to": "subject"
+                }
+              ],
+              "otherwise": [
+                {
+                  "applyState": {
+                    "state": "condition:frightened",
+                    "source": "self",
+                    "ends": [
+                      {
+                        "event": "event:turn-end",
+                        "subject": "source",
+                        "next": true
+                      }
+                    ]
+                  },
+                  "to": "subject"
+                }
+              ]
+            },
+            "when": {
+              "creature": "subject",
+              "where": {
+                "compare": "hp.current",
+                "atMost": 25
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "light",
+      "bright": 20,
+      "dim": 20,
+      "when": {
+        "has": "this",
+        "match": {
+          "attuned": true,
+          "held": true
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": [],
+  "base": "item:mace"
+}

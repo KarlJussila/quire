@@ -1,0 +1,70 @@
+{
+  "id": "state:mounted@2024",
+  "name": "Mounted",
+  "source": {
+    "book": "core"
+  },
+  "sourceName": "your mount",
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:forced-move",
+          "subject": "source"
+        },
+        {
+          "event": "event:state-applied",
+          "match": {
+            "state": "condition:prone"
+          },
+          "subject": "self"
+        },
+        {
+          "event": "event:state-applied",
+          "match": {
+            "state": "condition:prone"
+          },
+          "subject": "source"
+        }
+      ],
+      "step": {
+        "target": {
+          "who": "self"
+        },
+        "delivery": {
+          "save": {
+            "ability": "ability:dex",
+            "dc": 10,
+            "by": "self"
+          }
+        },
+        "otherwise": [
+          {
+            "move": {
+              "kind": "move",
+              "where": {
+                "within": 5,
+                "of": "source"
+              },
+              "provokes": false
+            },
+            "to": "self"
+          },
+          {
+            "applyState": {
+              "state": "condition:prone"
+            },
+            "to": "self"
+          },
+          {
+            "endState": {
+              "state": "state:mounted"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

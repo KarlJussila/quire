@@ -1,0 +1,18 @@
+{
+  "id": "item:cobblers-tools@2024",
+  "name": "Cobbler’s Tools",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "- **Cost:** 5 GP\n- **Ability:** Dexterity\n- **Weight:** 5 lb.\n- **Utilize:** Modify footwear to give Advantage on the wearer's next Dexterity (Acrobatics) check (DC 10)\n- **Craft:** Climber's Kit",
+    "plain": "- Cost: 5 GP\n- Ability: Dexterity\n- Weight: 5 lb.\n- Utilize: Modify footwear to give Advantage on the wearer's next Dexterity (Acrobatics) check (DC 10)\n- Craft: Climber's Kit",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:gp"
+  },
+  "weight": 5.0
+}

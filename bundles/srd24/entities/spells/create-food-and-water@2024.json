@@ -1,0 +1,37 @@
+{
+  "id": "spell:create-food-and-water@2024",
+  "name": "Create Food and Water",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You create 45 pounds of food and 30 gallons of fresh water on the ground or in containers within range — both useful in fending off the hazards of malnutrition and dehydration. The food is bland but nourishing and looks like a food of your choice, and the water is clean. The food spoils after 24 hours if uneaten.",
+    "plain": "You create 45 pounds of food and 30 gallons of fresh water on the ground or in containers within range — both useful in fending off the hazards of malnutrition and dehydration. The food is bland but nourishing and looks like a food of your choice, and the water is clean. The food spoils after 24 hours if uneaten.",
+    "wording": "srd"
+  },
+  "level": 3,
+  "school": "spell-school:conjuration",
+  "lists": [
+    "class:cleric",
+    "class:paladin"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:magic",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "distance": 30
+      },
+      "duration": "instant"
+    }
+  ]
+}

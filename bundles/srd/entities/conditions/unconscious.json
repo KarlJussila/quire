@@ -1,0 +1,101 @@
+{
+  "id": "condition:unconscious",
+  "name": "Unconscious",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- An Unconscious creature is Incapacitated (see the condition), can't move or speak, and is unaware of its surroundings.\n- The creature drops whatever it's holding and falls Prone.\n- The creature automatically fails Strength and Dexterity saving throws.\n- Attack rolls against the creature have advantage.\n- Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.",
+    "plain": "An Unconscious creature is Incapacitated (see the condition), can't move or speak, and is unaware of its surroundings.\nThe creature drops whatever it's holding and falls Prone.\nThe creature automatically fails Strength and Dexterity saving throws.\nAttack rolls against the creature have advantage.\nAny attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.",
+    "wording": "srd"
+  },
+  "implies": [
+    "condition:incapacitated"
+  ],
+  "effects": [
+    {
+      "type": "forbid",
+      "restriction": [
+        "restriction:move",
+        "restriction:speak",
+        "restriction:see",
+        "restriction:hear"
+      ]
+    },
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": [
+            "ability:str",
+            "ability:dex"
+          ]
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any"
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    },
+    {
+      "type": "forced-result",
+      "crit": true,
+      "when": {
+        "event": "event:roll-resolved",
+        "by": {
+          "pool": "any",
+          "where": {
+            "within": 5
+          }
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack",
+          "success": true
+        }
+      }
+    },
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:state-applied",
+          "subject": "self",
+          "match": {
+            "state": "condition:unconscious"
+          }
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "applyState": {
+              "state": "condition:prone"
+            },
+            "to": "self"
+          },
+          {
+            "drop": {
+              "item": "held"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "creature:killer-whale@2024",
+  "name": "Killer Whale",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "hp": {
+    "average": 90,
+    "formula": "12d12 + 12"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 5
+    },
+    "movement-mode:swim": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 13,
+    "ability:dex": 14,
+    "ability:int": 3,
+    "ability:str": 19,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 3,
+    "skill:stealth": 4
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 120
+    }
+  },
+  "passivePerception": 13,
+  "xp": 700,
+  "proficiencyBonus": 2,
+  "initiative": 2,
+  "cr": 3,
+  "blocks": [
+    {
+      "name": "Hold Breath",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The whale can hold its breath for 30 minutes.",
+        "plain": "The whale can hold its breath for 30 minutes.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 5 ft. _Hit:_ 21 (5d6 + 4) Piercing damage.",
+        "plain": "Melee Attack Roll: +6, reach 5 ft. Hit: 21 (5d6 + 4) Piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

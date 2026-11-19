@@ -1,0 +1,7 @@
+{
+  "id": "weapon-property:two-handed",
+  "name": "Two Handed",
+  "source": {
+    "book": "core"
+  }
+}

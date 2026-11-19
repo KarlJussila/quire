@@ -1,0 +1,15 @@
+{
+  "id": "item:ring-of-feather-falling@2024",
+  "name": "Ring of Feather Falling",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you fall while wearing this ring, you descend 60 feet per round and take no damage from falling.",
+    "plain": "When you fall while wearing this ring, you descend 60 feet per round and take no damage from falling.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:rare",
+  "attunement": true
+}

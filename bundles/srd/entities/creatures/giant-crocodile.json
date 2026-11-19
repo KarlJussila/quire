@@ -1,0 +1,82 @@
+{
+  "id": "creature:giant-crocodile",
+  "name": "Giant Crocodile",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 14,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 85,
+    "formula": "9d12 + 27"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:swim": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 17,
+    "ability:dex": 9,
+    "ability:int": 2,
+    "ability:str": 21,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:stealth": 5
+  },
+  "passivePerception": 10,
+  "xp": 1800,
+  "cr": 5,
+  "blocks": [
+    {
+      "name": "Hold Breath",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The crocodile can hold its breath for 30 minutes.",
+        "plain": "The crocodile can hold its breath for 30 minutes.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The crocodile makes two attacks: one with its bite and one with its tail.",
+        "plain": "The crocodile makes two attacks: one with its bite and one with its tail.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +8 to hit, reach 5 ft., one target. _Hit:_ 21 (3d10 + 5) piercing damage, and the target is Grappled (escape DC 16). Until this grapple ends, the target is Restrained, and the crocodile can't bite another target.",
+        "plain": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 21 (3d10 + 5) piercing damage, and the target is Grappled (escape DC 16). Until this grapple ends, the target is Restrained, and the crocodile can't bite another target.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +8 to hit, reach 10 ft., one target not Grappled by the crocodile. _Hit:_ 14 (2d8 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 16 Strength saving throw or be knocked Prone.",
+        "plain": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target not Grappled by the crocodile. Hit: 14 (2d8 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 16 Strength saving throw or be knocked Prone.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

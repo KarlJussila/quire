@@ -1,0 +1,28 @@
+{
+  "id": "condition:poisoned@2024",
+  "name": "Poisoned",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you have the Poisoned condition, you experience the following effect.\n\n_**Ability Checks and Attacks Affected.**_ You have Disadvantage on attack rolls and ability checks.",
+    "plain": "While you have the Poisoned condition, you experience the following effect.\n\nAbility Checks and Attacks Affected. You have Disadvantage on attack rolls and ability checks.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": [
+            "roll:attack",
+            "roll:check"
+          ]
+        }
+      }
+    }
+  ]
+}

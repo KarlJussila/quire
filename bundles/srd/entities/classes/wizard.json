@@ -1,0 +1,56 @@
+{
+  "id": "class:wizard",
+  "name": "Wizard",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a wizard, you gain the following class features.",
+    "plain": "As a wizard, you gain the following class features.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d6",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:int",
+      "atLeast": 13
+    }
+  },
+  "levels": {
+    "1": [
+      "feature:wizard/arcane-recovery",
+      "feature:wizard/spellcasting"
+    ],
+    "12": [
+      "feature:ability-score-improvement"
+    ],
+    "16": [
+      "feature:ability-score-improvement"
+    ],
+    "18": [
+      "feature:wizard/spell-mastery"
+    ],
+    "19": [
+      "feature:ability-score-improvement"
+    ],
+    "2": [
+      "feature:wizard/arcane-tradition"
+    ],
+    "20": [
+      "feature:wizard/signature-spells"
+    ],
+    "4": [
+      "feature:ability-score-improvement"
+    ],
+    "8": [
+      "feature:ability-score-improvement"
+    ]
+  },
+  "subclass": {
+    "level": 2,
+    "title": "Arcane Tradition"
+  },
+  "firstClass": [
+    "feature:wizard/proficiencies"
+  ]
+}

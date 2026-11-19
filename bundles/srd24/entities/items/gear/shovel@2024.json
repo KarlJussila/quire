@@ -1,0 +1,18 @@
+{
+  "id": "item:shovel@2024",
+  "name": "Shovel",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 2 GP\n\nWorking for 1 hour, you can use a Shovel to dig a hole that is 5 feet on each side in soil or similar material.",
+    "plain": "Cost: 2 GP\n\nWorking for 1 hour, you can use a Shovel to dig a hole that is 5 feet on each side in soil or similar material.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:gp"
+  },
+  "weight": 5.0
+}

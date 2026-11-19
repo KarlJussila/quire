@@ -1,0 +1,108 @@
+{
+  "id": "creature:winter-wolf",
+  "name": "Winter Wolf",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:neutral-evil",
+  "ac": 13,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 75,
+    "formula": "10d10 + 20"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 50
+    }
+  },
+  "abilities": {
+    "ability:cha": 8,
+    "ability:con": 14,
+    "ability:dex": 13,
+    "ability:int": 7,
+    "ability:str": 18,
+    "ability:wis": 12
+  },
+  "skills": {
+    "skill:perception": 5,
+    "skill:stealth": 3
+  },
+  "passivePerception": 15,
+  "xp": 700,
+  "cr": 3,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:giant"
+    },
+    {
+      "language": "language:winter-wolf"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:cold"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Keen Hearing and Smell",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+        "plain": "The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pack Tactics",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "plain": "The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Snow Camouflage",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The wolf has advantage on Dexterity (Stealth) checks made to hide in snowy terrain.",
+        "plain": "The wolf has advantage on Dexterity (Stealth) checks made to hide in snowy terrain.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +6 to hit, reach 5 ft., one target. _Hit:_ 11 (2d6 + 4) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked Prone.",
+        "plain": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked Prone.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Cold Breath",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The wolf exhales a blast of freezing wind in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one.",
+        "plain": "The wolf exhales a blast of freezing wind in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

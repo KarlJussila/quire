@@ -1,0 +1,54 @@
+{
+  "id": "feature:monk/flurry-of-blows",
+  "name": "Flurry of Blows",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action.",
+    "plain": "Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "flurry-of-blows",
+      "name": "Flurry of Blows",
+      "trigger": {
+        "event": "event:activity-used",
+        "by": "self",
+        "match": {
+          "action": "action:attack"
+        }
+      },
+      "cost": [
+        {
+          "resource": "bonus-action"
+        },
+        {
+          "resource": "ki"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "match": {
+                    "delivery": {
+                      "attack": {
+                        "via": "unarmed"
+                      }
+                    }
+                  }
+                }
+              },
+              "times": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

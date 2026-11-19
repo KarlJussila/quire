@@ -1,0 +1,22 @@
+{
+  "id": "feature:druid/timeless-body",
+  "name": "Timeless Body",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.",
+    "plain": "Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "age": {
+          "$multiply": 0.1
+        }
+      }
+    }
+  ]
+}

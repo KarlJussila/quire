@@ -1,0 +1,112 @@
+{
+  "id": "feature:sorcerer/twinned-spell",
+  "name": "Twinned Spell",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you cast a spell that targets only one creature and doesn't have a range of self, you can spend a number of sorcery points equal to the spell's level to target a second creature in range with the same spell (1 sorcery point if the spell is a cantrip).\n\nTo be eligible, a spell must be incapable of targeting more than one creature at the spell's current level. For example, Magic Missile and Scorching Ray aren't eligible, but Ray of Frost is.",
+    "plain": "When you cast a spell that targets only one creature and doesn't have a range of self, you can spend a number of sorcery points equal to the spell's level to target a second creature in range with the same spell (1 sorcery point if the spell is a cantrip).\n\nTo be eligible, a spell must be incapable of targeting more than one creature at the spell's current level. For example, Magic Missile and Scorching Ray aren't eligible, but Ray of Frost is.",
+    "wording": "srd"
+  },
+  "group": "group:metamagic",
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "range": true
+              }
+            },
+            {
+              "not": {
+                "match": {
+                  "range": {
+                    "self": true
+                  }
+                }
+              }
+            },
+            {
+              "match": {
+                "target": {
+                  "who": {
+                    "where": {
+                      "kind": "creature"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "match": {
+                "target": {
+                  "count": 1
+                }
+              }
+            },
+            {
+              "not": {
+                "match": {
+                  "target": {
+                    "also": true
+                  }
+                }
+              }
+            },
+            {
+              "not": {
+                "match": {
+                  "area": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "target": {
+          "count": {
+            "$add": 1
+          },
+          "distinct": true
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": {
+                "max": [
+                  1,
+                  {
+                    "slotLevel": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "variant": "twinned-spell"
+    }
+  ],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "spell-mechanics",
+      "name": "Determine whether a spell with slot-scaled target count can target more than one creature at its current cast level."
+    }
+  ]
+}

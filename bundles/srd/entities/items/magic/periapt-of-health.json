@@ -1,0 +1,41 @@
+{
+  "id": "item:periapt-of-health",
+  "name": "Periapt of Health",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You are immune to contracting any disease while you wear this pendant. If you are already infected with a disease, the effects of the disease are suppressed you while you wear the pendant.",
+    "plain": "You are immune to contracting any disease while you wear this pendant. If you are already infected with a disease, the effects of the disease are suppressed you while you wear the pendant.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "weight": 0,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "source-type:disease"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true
+        }
+      }
+    },
+    {
+      "type": "suppress",
+      "sourceType": [
+        "source-type:disease"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "feature:dragonborn/ability-score-increase",
+  "name": "Ability Score Increase",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Ability Score Increase. Your Strength score increases by 2, and your Charisma score increases by 1.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:str": {
+            "$add": 2
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "abilities": {
+          "ability:cha": {
+            "$add": 1
+          }
+        }
+      }
+    }
+  ]
+}

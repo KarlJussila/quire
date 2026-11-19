@@ -1,0 +1,105 @@
+{
+  "id": "creature:troll@2024",
+  "name": "Troll",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:giant",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 15,
+  "hp": {
+    "average": 94,
+    "formula": "9d10 + 45"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 7,
+    "ability:con": 20,
+    "ability:dex": 13,
+    "ability:int": 7,
+    "ability:str": 18,
+    "ability:wis": 9
+  },
+  "skills": {
+    "skill:perception": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 15,
+  "xp": 1800,
+  "proficiencyBonus": 3,
+  "initiative": 1,
+  "habitat": [
+    "Arctic",
+    "Forest",
+    "Hill",
+    "Mountain",
+    "Swamp",
+    "Underdark"
+  ],
+  "cr": 5,
+  "languages": [
+    {
+      "language": "language:giant"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Loathsome Limbs",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the troll ends any turn Bloodied and took 15+ Slashing damage during that turn, one of the troll's limbs is severed, falls into the troll's space, and becomes a **Troll Limb**. The limb acts immediately after the troll's turn. The troll has 1 Exhaustion level for each missing limb, and it grows replacement limbs the next time it regains Hit Points.",
+        "plain": "If the troll ends any turn Bloodied and took 15+ Slashing damage during that turn, one of the troll's limbs is severed, falls into the troll's space, and becomes a Troll Limb. The limb acts immediately after the troll's turn. The troll has 1 Exhaustion level for each missing limb, and it grows replacement limbs the next time it regains Hit Points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Regeneration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The troll regains 15 Hit Points at the start of each of its turns. If the troll takes Acid or Fire damage, this trait doesn't function on the troll's next turn. The troll dies only if it starts its turn with 0 Hit Points and doesn't regenerate.",
+        "plain": "The troll regains 15 Hit Points at the start of each of its turns. If the troll takes Acid or Fire damage, this trait doesn't function on the troll's next turn. The troll dies only if it starts its turn with 0 Hit Points and doesn't regenerate.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The troll makes three Rend attacks.",
+        "plain": "The troll makes three Rend attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rend",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 10 ft. _Hit:_ 11 (2d6 + 4) Slashing damage.",
+        "plain": "Melee Attack Roll: +7, reach 10 ft. Hit: 11 (2d6 + 4) Slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Charge",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The troll moves up to half its Speed straight toward an enemy it can see.",
+        "plain": "The troll moves up to half its Speed straight toward an enemy it can see.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

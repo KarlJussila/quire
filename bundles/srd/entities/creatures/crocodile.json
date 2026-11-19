@@ -1,0 +1,64 @@
+{
+  "id": "creature:crocodile",
+  "name": "Crocodile",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 19,
+    "formula": "3d10 + 3"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 20
+    },
+    "movement-mode:swim": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 13,
+    "ability:dex": 10,
+    "ability:int": 2,
+    "ability:str": 15,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:stealth": 2
+  },
+  "passivePerception": 10,
+  "xp": 100,
+  "cr": 0.5,
+  "blocks": [
+    {
+      "name": "Hold Breath",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The crocodile can hold its breath for 15 minutes.",
+        "plain": "The crocodile can hold its breath for 15 minutes.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one creature. _Hit:_ 7 (1d10 + 2) piercing damage, and the target is Grappled (escape DC 12). Until this grapple ends, the target is Restrained, and the crocodile can't bite another target.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 7 (1d10 + 2) piercing damage, and the target is Grappled (escape DC 12). Until this grapple ends, the target is Restrained, and the crocodile can't bite another target.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

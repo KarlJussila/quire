@@ -1,0 +1,8 @@
+{
+  "id": "group:ranged-weapon",
+  "name": "Ranged Weapon",
+  "source": {
+    "book": "core"
+  },
+  "isA": "group:weapon"
+}

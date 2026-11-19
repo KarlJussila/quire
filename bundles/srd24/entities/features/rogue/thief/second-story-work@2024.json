@@ -1,0 +1,27 @@
+{
+  "id": "feature:rogue/thief/second-story-work@2024",
+  "name": "Level 3: Second-Story Work",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You've trained to get into especially hard-to-reach places, granting you these benefits.\n\n_**Climber.**_ You gain a Climb Speed equal to your Speed.\n\n_**Jumper.**_ You can determine your jump distance using your Dexterity rather than your Strength.",
+    "plain": "You've trained to get into especially hard-to-reach places, granting you these benefits.\n\nClimber. You gain a Climb Speed equal to your Speed.\n\nJumper. You can determine your jump distance using your Dexterity rather than your Strength.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "speed",
+      "mode": "movement-mode:climb",
+      "speed": "speeds.movement-mode:walk.speed"
+    },
+    {
+      "type": "change",
+      "set": {
+        "jump": {
+          "$replace": "abilities.ability:dex"
+        }
+      }
+    }
+  ]
+}

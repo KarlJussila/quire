@@ -1,0 +1,18 @@
+{
+  "id": "rule:condition@2024",
+  "name": "Condition",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A condition is a temporary game state. The definition of a condition says how it affects its recipient, and various rules define how to end a condition. This glossary defines these conditions:\n\n- Blinded\n- Charmed\n- Deafened\n- Exhaustion\n- Frightened\n- Grappled\n- Incapacitated\n- Invisible\n- Paralyzed\n- Petrified\n- Poisoned\n- Prone\n- Restrained\n- Stunned\n- Unconscious\n\nA condition doesn't stack with itself; a recipient either has a condition or doesn't. The Exhaustion condition is an exception to that rule.",
+    "plain": "A condition is a temporary game state. The definition of a condition says how it affects its recipient, and various rules define how to end a condition. This glossary defines these conditions:\n\n- Blinded\n- Charmed\n- Deafened\n- Exhaustion\n- Frightened\n- Grappled\n- Incapacitated\n- Invisible\n- Paralyzed\n- Petrified\n- Poisoned\n- Prone\n- Restrained\n- Stunned\n- Unconscious\n\nA condition doesn't stack with itself; a recipient either has a condition or doesn't. The Exhaustion condition is an exception to that rule.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

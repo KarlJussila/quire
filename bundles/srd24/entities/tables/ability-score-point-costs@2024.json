@@ -1,0 +1,67 @@
+{
+  "id": "table:ability-score-point-costs@2024",
+  "name": "Ability Score Point Costs",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "score",
+      "name": "Score"
+    },
+    {
+      "key": "cost",
+      "name": "Cost"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "score": "8",
+        "cost": "0"
+      }
+    },
+    {
+      "cells": {
+        "score": "9",
+        "cost": "1"
+      }
+    },
+    {
+      "cells": {
+        "score": "10",
+        "cost": "2"
+      }
+    },
+    {
+      "cells": {
+        "score": "11",
+        "cost": "3"
+      }
+    },
+    {
+      "cells": {
+        "score": "12",
+        "cost": "4"
+      }
+    },
+    {
+      "cells": {
+        "score": "13",
+        "cost": "5"
+      }
+    },
+    {
+      "cells": {
+        "score": "14",
+        "cost": "7"
+      }
+    },
+    {
+      "cells": {
+        "score": "15",
+        "cost": "9"
+      }
+    }
+  ]
+}

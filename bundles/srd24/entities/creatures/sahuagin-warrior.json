@@ -1,0 +1,125 @@
+{
+  "id": "creature:sahuagin-warrior@2024",
+  "name": "Sahuagin Warrior",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 12,
+  "hp": {
+    "average": 22,
+    "formula": "4d8 + 4"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:swim": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 9,
+    "ability:con": 12,
+    "ability:dex": 11,
+    "ability:int": 12,
+    "ability:str": 13,
+    "ability:wis": 13
+  },
+  "skills": {
+    "skill:perception": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 15,
+  "xp": 100,
+  "proficiencyBonus": 2,
+  "initiative": 0,
+  "habitat": [
+    "Coastal",
+    "Underwater"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 0.5,
+  "languages": [
+    {
+      "language": "language:sahuagin"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:acid",
+        "damage-type:cold"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Blood Frenzy",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sahuagin has Advantage on attack rolls against any creature that doesn't have all its Hit Points.",
+        "plain": "The sahuagin has Advantage on attack rolls against any creature that doesn't have all its Hit Points.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Limited Amphibiousness",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sahuagin can breathe air and water, but it must be submerged at least once every 4 hours to avoid suffocating outside water.",
+        "plain": "The sahuagin can breathe air and water, but it must be submerged at least once every 4 hours to avoid suffocating outside water.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shark Telepathy",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The sahuagin can magically control sharks within 120 feet of itself, using a special telepathy.",
+        "plain": "The sahuagin can magically control sharks within 120 feet of itself, using a special telepathy.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The sahuagin makes two Claw attacks.",
+        "plain": "The sahuagin makes two Claw attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claw",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +3, reach 5 ft. _Hit:_ 4 (1d6 + 1) Slashing damage.",
+        "plain": "Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Aquatic Charge",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The sahuagin swims up to its Swim Speed straight toward an enemy it can see.",
+        "plain": "The sahuagin swims up to its Swim Speed straight toward an enemy it can see.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

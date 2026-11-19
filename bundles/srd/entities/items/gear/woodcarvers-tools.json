@@ -1,0 +1,18 @@
+{
+  "id": "item:woodcarvers-tools",
+  "name": "Woodcarver’s Tools",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Woodcarver’s tools allow you to craft intricate objects from wood, such as wooden tokens or arrows.\n\n***Components.*** Woodcarver’s tools consist of a knife, a gouge, and a small saw.\n\n***Arcana, History.*** Your expertise lends you additional insight when you examine wooden objects, such as figurines or arrows.\n\n***Nature.*** Your knowledge of wooden objects gives you some added insight when you examine trees.\n\n***Repair.*** As part of a short rest, you can repair a single damaged wooden object.\n\n***Craft Arrows.*** As part of a short rest, you can craft up to five arrows. As part of a long rest, you can craft up to twenty. You must have enough wood on hand to produce them.\n\n##### WOODCARVER’S TOOLS\n\n| Activity | DC |\n|---|---|\n| Craft a small wooden figurine | 10 |\n| Carve an intricate pattern in wood | 15 |",
+    "plain": "Woodcarver’s tools allow you to craft intricate objects from wood, such as wooden tokens or arrows.\n\nComponents. Woodcarver’s tools consist of a knife, a gouge, and a small saw.\n\nArcana, History. Your expertise lends you additional insight when you examine wooden objects, such as figurines or arrows.\n\nNature. Your knowledge of wooden objects gives you some added insight when you examine trees.\n\nRepair. As part of a short rest, you can repair a single damaged wooden object.\n\nCraft Arrows. As part of a short rest, you can craft up to five arrows. As part of a long rest, you can craft up to twenty. You must have enough wood on hand to produce them.\n\nWOODCARVER’S TOOLS\n\nActivity\tDC\nCraft a small wooden figurine\t10\nCarve an intricate pattern in wood\t15",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 1,
+    "currency": "currency:gp"
+  },
+  "weight": 5.0
+}

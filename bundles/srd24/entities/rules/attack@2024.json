@@ -1,0 +1,70 @@
+{
+  "id": "rule:attack@2024",
+  "name": "Attack",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you take the Attack action, you can make one attack roll with a weapon or an Unarmed Strike.\n\n_**Equipping and Unequipping Weapons.**_ You can either equip or unequip one weapon when you make an attack as part of this action. You do so either before or after the attack. If you equip a weapon before an attack, you don't need to use it for that attack. Equipping a weapon includes drawing it from a sheath or picking it up. Unequipping a weapon includes sheathing, stowing, or dropping it.\n\n_**Moving between Attacks.**_ If you move on your turn and have a feature, such as Extra Attack, that gives you more than one attack as part of the Attack action, you can use some or all of that movement to move between those attacks.",
+    "plain": "When you take the Attack action, you can make one attack roll with a weapon or an Unarmed Strike.\n\n_Equipping and Unequipping Weapons._ You can either equip or unequip one weapon when you make an attack as part of this action. You do so either before or after the attack. If you equip a weapon before an attack, you don't need to use it for that attack. Equipping a weapon includes drawing it from a sheath or picking it up. Unequipping a weapon includes sheathing, stowing, or dropping it.\n\n_Moving between Attacks._ If you move on your turn and have a feature, such as Extra Attack, that gives you more than one attack as part of the Attack action, you can use some or all of that movement to move between those attacks.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "attack",
+      "action": "action:attack",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": {
+                "kind": "activity",
+                "where": {
+                  "any": [
+                    {
+                      "match": {
+                        "delivery": {
+                          "attack": {
+                            "via": "weapon"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "match": {
+                        "delivery": {
+                          "attack": {
+                            "via": "unarmed"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "activity": "rule:unarmed-strike"
+                    }
+                  ]
+                }
+              },
+              "times": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "attack-action",
+      "name": "Equip or unequip one weapon with each attack"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "group:sword",
+  "name": "Sword",
+  "source": {
+    "book": "core"
+  },
+  "isA": [
+    "group:melee-weapon"
+  ],
+  "text": {
+    "plain": "Weapons that count as swords for items made from \"any sword\": greatsword, longsword, rapier, scimitar, shortsword, and swords from other books."
+  }
+}

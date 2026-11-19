@@ -1,0 +1,102 @@
+{
+  "id": "creature:stone-giant@2024",
+  "name": "Stone Giant",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:giant",
+  "alignment": "alignment:neutral",
+  "ac": 17,
+  "hp": {
+    "average": 126,
+    "formula": "11d12 + 55"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 9,
+    "ability:con": 20,
+    "ability:dex": 15,
+    "ability:int": 10,
+    "ability:str": 23,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:con": 8,
+    "ability:dex": 5,
+    "ability:wis": 4
+  },
+  "skills": {
+    "skill:athletics": 12,
+    "skill:perception": 4,
+    "skill:stealth": 5
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 14,
+  "xp": 2900,
+  "proficiencyBonus": 3,
+  "initiative": 5,
+  "habitat": [
+    "Mountain",
+    "Underdark"
+  ],
+  "treasure": [
+    "Armaments"
+  ],
+  "cr": 7,
+  "languages": [
+    {
+      "language": "language:giant"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The giant makes two attacks, using Stone Club or Boulder in any combination.",
+        "plain": "The giant makes two attacks, using Stone Club or Boulder in any combination.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Stone Club",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +9, reach 15 ft. _Hit:_ 22 (3d10 + 6) Bludgeoning damage.",
+        "plain": "Melee Attack Roll: +9, reach 15 ft. Hit: 22 (3d10 + 6) Bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Boulder",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +9, range 60/240 ft. _Hit:_ 15 (2d8 + 6) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition.",
+        "plain": "Ranged Attack Roll: +9, range 60/240 ft. Hit: 15 (2d8 + 6) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Deflect Missile",
+      "section": "stat-block-section:reaction",
+      "text": {
+        "formatted": "_Trigger:_ The giant is hit by a ranged attack roll and takes Bludgeoning, Piercing, or Slashing damage from it. _Response:_ The giant reduces the damage it takes from the attack by 11 (1d10 + 6), and if that damage is reduced to 0, the giant can redirect some of the attack's force. _Dexterity Saving Throw:_ DC 17, one creature the giant can see within 60 feet. _Failure:_ 11 (1d10 + 6) Force damage.",
+        "plain": "Trigger: The giant is hit by a ranged attack roll and takes Bludgeoning, Piercing, or Slashing damage from it. Response: The giant reduces the damage it takes from the attack by 11 (1d10 + 6), and if that damage is reduced to 0, the giant can redirect some of the attack's force. Dexterity Saving Throw: DC 17, one creature the giant can see within 60 feet. Failure: 11 (1d10 + 6) Force damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

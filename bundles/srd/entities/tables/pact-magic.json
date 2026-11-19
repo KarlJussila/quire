@@ -1,0 +1,80 @@
+{
+  "id": "table:pact-magic",
+  "name": "Pact Magic Slots",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Warlock Pact Magic: slot count and the single slot level. Short-rest recharge; does not combine with the multiclass slot table.",
+    "wording": "original"
+  },
+  "axis": "class-level",
+  "columns": [
+    {
+      "key": "slots",
+      "name": "Slots"
+    },
+    {
+      "key": "slot-level",
+      "name": "Slot Level"
+    }
+  ],
+  "rows": [
+    {
+      "level": 1,
+      "cells": {
+        "slots": 1,
+        "slot-level": 1
+      }
+    },
+    {
+      "level": 2,
+      "cells": {
+        "slots": 2,
+        "slot-level": 1
+      }
+    },
+    {
+      "level": 3,
+      "cells": {
+        "slots": 2,
+        "slot-level": 2
+      }
+    },
+    {
+      "level": 5,
+      "cells": {
+        "slots": 2,
+        "slot-level": 3
+      }
+    },
+    {
+      "level": 7,
+      "cells": {
+        "slots": 2,
+        "slot-level": 4
+      }
+    },
+    {
+      "level": 9,
+      "cells": {
+        "slots": 2,
+        "slot-level": 5
+      }
+    },
+    {
+      "level": 11,
+      "cells": {
+        "slots": 3,
+        "slot-level": 5
+      }
+    },
+    {
+      "level": 17,
+      "cells": {
+        "slots": 4,
+        "slot-level": 5
+      }
+    }
+  ]
+}

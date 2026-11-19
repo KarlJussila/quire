@@ -1,0 +1,155 @@
+{
+  "id": "creature:barbed-devil@2024",
+  "name": "Barbed Devil",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fiend",
+  "alignment": "alignment:lawful-evil",
+  "ac": 15,
+  "hp": {
+    "average": 110,
+    "formula": "13d8 + 52"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:climb": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 14,
+    "ability:con": 18,
+    "ability:dex": 17,
+    "ability:int": 12,
+    "ability:str": 16,
+    "ability:wis": 14
+  },
+  "saves": {
+    "ability:cha": 5,
+    "ability:con": 7,
+    "ability:str": 6,
+    "ability:wis": 5
+  },
+  "skills": {
+    "skill:deception": 5,
+    "skill:insight": 5,
+    "skill:perception": 8
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120,
+      "note": "unimpeded by magical Darkness"
+    }
+  },
+  "passivePerception": 18,
+  "telepathy": 120,
+  "xp": 1800,
+  "proficiencyBonus": 3,
+  "initiative": 3,
+  "habitat": [
+    "Planar (Nine Hells)"
+  ],
+  "treasure": [
+    "Any"
+  ],
+  "cr": 5,
+  "languages": [
+    {
+      "language": "language:infernal"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:cold"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Barbed Hide",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "At the start of each of its turns, the devil deals 5 (1d10) Piercing damage to any creature it is grappling or any creature grappling it.",
+        "plain": "At the start of each of its turns, the devil deals 5 (1d10) Piercing damage to any creature it is grappling or any creature grappling it.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Diabolical Restoration",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+        "plain": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The devil has Advantage on saving throws against spells and other magical effects.",
+        "plain": "The devil has Advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The devil makes one Claws attack and one Tail attack, or it makes two Hurl Flame attacks.",
+        "plain": "The devil makes one Claws attack and one Tail attack, or it makes two Hurl Flame attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Claws",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 5 ft. _Hit:_ 10 (2d6 + 3) Piercing damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 13) from both claws.",
+        "plain": "Melee Attack Roll: +6, reach 5 ft. Hit: 10 (2d6 + 3) Piercing damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 13) from both claws.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Tail",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 10 ft. _Hit:_ 14 (2d10 + 3) Slashing damage.",
+        "plain": "Melee Attack Roll: +6, reach 10 ft. Hit: 14 (2d10 + 3) Slashing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hurl Flame",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +5, range 150 ft. _Hit:_ 17 (5d6) Fire damage. If the target is a flammable object that isn't being worn or carried, it starts burning.",
+        "plain": "Ranged Attack Roll: +5, range 150 ft. Hit: 17 (5d6) Fire damage. If the target is a flammable object that isn't being worn or carried, it starts burning.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

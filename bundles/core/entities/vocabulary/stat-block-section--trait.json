@@ -1,0 +1,8 @@
+{
+  "id": "stat-block-section:trait",
+  "name": "Trait",
+  "source": {
+    "book": "core"
+  },
+  "order": 1
+}

@@ -1,0 +1,31 @@
+{
+  "id": "item:scale-mail",
+  "name": "Scale Mail",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "This armor consists of a coat and leggings (and perhaps a separate skirt) of leather covered with overlapping pieces of metal, much like the scales of a fish. The suit includes gauntlets.",
+    "plain": "This armor consists of a coat and leggings (and perhaps a separate skirt) of leather covered with overlapping pieces of metal, much like the scales of a fish. The suit includes gauntlets.",
+    "wording": "srd"
+  },
+  "group": "group:medium-armor",
+  "cost": {
+    "amount": 50,
+    "currency": "currency:gp"
+  },
+  "weight": 45.0,
+  "armor": {
+    "ac": {
+      "sum": [
+        14,
+        {
+          "min": [
+            2,
+            "modifiers.ability:dex"
+          ]
+        }
+      ]
+    }
+  }
+}

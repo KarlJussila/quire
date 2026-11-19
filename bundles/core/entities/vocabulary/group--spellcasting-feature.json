@@ -1,0 +1,7 @@
+{
+  "id": "group:spellcasting-feature",
+  "name": "Spellcasting Feature",
+  "source": {
+    "book": "core"
+  }
+}

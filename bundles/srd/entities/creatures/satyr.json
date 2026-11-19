@@ -1,0 +1,92 @@
+{
+  "id": "creature:satyr",
+  "name": "Satyr",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:fey",
+  "alignment": "alignment:chaotic-neutral",
+  "ac": 14,
+  "acFrom": [
+    "leather armor"
+  ],
+  "hp": {
+    "average": 31,
+    "formula": "7d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 14,
+    "ability:con": 11,
+    "ability:dex": 16,
+    "ability:int": 12,
+    "ability:str": 12,
+    "ability:wis": 10
+  },
+  "skills": {
+    "skill:perception": 2,
+    "skill:performance": 6,
+    "skill:stealth": 5
+  },
+  "passivePerception": 12,
+  "xp": 100,
+  "cr": 0.5,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:elvish"
+    },
+    {
+      "language": "language:sylvan"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Magic Resistance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The satyr has advantage on saving throws against spells and other magical effects.",
+        "plain": "The satyr has advantage on saving throws against spells and other magical effects.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Ram",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one target. _Hit:_ 6 (2d4 + 1) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 6 (2d4 + 1) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shortsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 6 (1d6 + 3) piercing damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shortbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +5 to hit, range 80/320 ft., one target. _Hit:_ 6 (1d6 + 3) piercing damage.",
+        "plain": "Ranged Weapon Attack: +5 to hit, range 80/320 ft., one target. Hit: 6 (1d6 + 3) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

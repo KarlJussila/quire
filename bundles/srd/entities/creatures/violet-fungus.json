@@ -1,0 +1,80 @@
+{
+  "id": "creature:violet-fungus",
+  "name": "Violet Fungus",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:plant",
+  "alignment": "alignment:unaligned",
+  "ac": 5,
+  "hp": {
+    "average": 18,
+    "formula": "4d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 5
+    }
+  },
+  "abilities": {
+    "ability:cha": 1,
+    "ability:con": 10,
+    "ability:dex": 1,
+    "ability:int": 1,
+    "ability:str": 3,
+    "ability:wis": 3
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 30,
+      "blindBeyond": true
+    }
+  },
+  "passivePerception": 6,
+  "xp": 50,
+  "cr": 0.25,
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:blinded",
+        "condition:deafened",
+        "condition:frightened"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "False Appearance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the violet fungus remains motionless, it is indistinguishable from an ordinary fungus.",
+        "plain": "While the violet fungus remains motionless, it is indistinguishable from an ordinary fungus.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The fungus makes 1d4 Rotting Touch attacks.",
+        "plain": "The fungus makes 1d4 Rotting Touch attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rotting Touch",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +2 to hit, reach 10 ft., one creature. _Hit:_ 4 (1d8) necrotic damage.",
+        "plain": "Melee Weapon Attack: +2 to hit, reach 10 ft., one creature. Hit: 4 (1d8) necrotic damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

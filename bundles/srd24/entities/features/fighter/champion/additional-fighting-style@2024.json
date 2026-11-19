@@ -1,0 +1,28 @@
+{
+  "id": "feature:fighter/champion/additional-fighting-style@2024",
+  "name": "Level 7: Additional Fighting Style",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You gain another Fighting Style feat of your choice.",
+    "plain": "You gain another Fighting Style feat of your choice.",
+    "wording": "srd"
+  },
+  "features": [
+    {
+      "choose": {
+        "key": "fighting-style",
+        "name": "Fighting Style Feat",
+        "from": [
+          {
+            "kind": "feat",
+            "where": {
+              "has": "group:fighting-style"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

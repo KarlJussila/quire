@@ -1,0 +1,18 @@
+{
+  "id": "item:reliquary@2024",
+  "name": "Reliquary",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** Varies\n\nA Holy Symbol takes one of the forms in the table and is bejeweled or painted to channel divine magic. A Cleric or Paladin can use a Holy Symbol as a Spellcasting Focus.\n\nThe table indicates whether a Holy Symbol needs to be held, worn, or borne on fabric (such as a tabard or banner) or a Shield.\n\n| Symbol                               | Weight   | Cost   |\n|--------------------------------------|----------|--------|\n| Amulet (worn or held)                | 1 lb.    | 5 GP   |\n| Emblem (borne on fabric or a Shield) | —        | 5 GP   |\n| Reliquary (held)                     | 2 lb.    | 5 GP   |",
+    "plain": "Cost: Varies\n\nA Holy Symbol takes one of the forms in the table and is bejeweled or painted to channel divine magic. A Cleric or Paladin can use a Holy Symbol as a Spellcasting Focus.\n\nThe table indicates whether a Holy Symbol needs to be held, worn, or borne on fabric (such as a tabard or banner) or a Shield.\n\n| Symbol                               | Weight   | Cost   |\n|--------------------------------------|----------|--------|\n| Amulet (worn or held)                | 1 lb.    | 5 GP   |\n| Emblem (borne on fabric or a Shield) | —        | 5 GP   |\n| Reliquary (held)                     | 2 lb.    | 5 GP   |",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:gp"
+  },
+  "weight": 2.0
+}

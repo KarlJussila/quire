@@ -1,0 +1,64 @@
+{
+  "id": "creature:acolyte",
+  "name": "Acolyte",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any",
+  "ac": 10,
+  "hp": {
+    "average": 9,
+    "formula": "2d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 10,
+    "ability:dex": 10,
+    "ability:int": 10,
+    "ability:str": 10,
+    "ability:wis": 14
+  },
+  "skills": {
+    "skill:medicine": 4,
+    "skill:religion": 2
+  },
+  "passivePerception": 12,
+  "xp": 50,
+  "cr": 0.25,
+  "languages": [
+    {
+      "text": "any one language (usually Common)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The acolyte has following cleric spells prepared:\n\n- Cantrips (at will): Light, Sacred Flame, Thaumaturgy\n- 1st level (3 slots): Bless, Cure Wounds, Sanctuary",
+        "plain": "The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The acolyte has following cleric spells prepared:\n\n- Cantrips (at will): Light, Sacred Flame, Thaumaturgy\n- 1st level (3 slots): Bless, Cure Wounds, Sanctuary",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Club",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +2 to hit, reach 5 ft., one target. _Hit:_ 2 (1d4) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

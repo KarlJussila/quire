@@ -1,0 +1,239 @@
+{
+  "id": "feature:ranger/spellcasting",
+  "name": "Spellcasting",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does.",
+    "plain": "By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does.",
+    "wording": "srd"
+  },
+  "group": "group:spellcasting-feature",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "spellcasting": {
+          "class:ranger": {
+            "ability": "ability:wis",
+            "slots": "table:half-caster",
+            "known": {
+              "$base": {
+                "byLevel": {
+                  "2": 2,
+                  "3": 3,
+                  "5": 4,
+                  "7": 5,
+                  "9": 6,
+                  "11": 7,
+                  "13": 8,
+                  "15": 9,
+                  "17": 10,
+                  "19": 11
+                },
+                "of": "class:ranger"
+              }
+            },
+            "casterLevel": {
+              "$base": {
+                "divide": "levels.class:ranger",
+                "by": 2,
+                "round": "down"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "known",
+            "name": "Ranger Spells Known",
+            "count": "spellcasting.class:ranger.known",
+            "distinct": true,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": "class:ranger",
+                    "level": {
+                      "atLeast": 1,
+                      "atMost": "spellcasting.class:ranger.spellLevel"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "known",
+      "ability": "ability:wis"
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-spell",
+      "name": "Replace Known Spell",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self",
+        "match": {
+          "class": "class:ranger"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "what": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "level": {
+                        "atLeast": 1
+                      }
+                    }
+                  },
+                  {
+                    "grantedBy": "feature:ranger/spellcasting"
+                  }
+                ]
+              }
+            },
+            "with": {
+              "kind": "spell",
+              "where": {
+                "all": [
+                  {
+                    "match": {
+                      "lists": "class:ranger",
+                      "level": {
+                        "atLeast": 1
+                      }
+                    }
+                  },
+                  {
+                    "any": [
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:ranger",
+                              "atLeast": 2,
+                              "atMost": 4
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 1
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:ranger",
+                              "atLeast": 5,
+                              "atMost": 8
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 2
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:ranger",
+                              "atLeast": 9,
+                              "atMost": 12
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 3
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:ranger",
+                              "atLeast": 13,
+                              "atMost": 16
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 4
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "creature": "self",
+                            "where": {
+                              "compare": "levels.class:ranger",
+                              "atLeast": 17
+                            }
+                          },
+                          {
+                            "match": {
+                              "level": {
+                                "atLeast": 1,
+                                "atMost": 5
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "spellcasting",
+      "name": "The allowed focus is tied to this Ranger casting source, but its exact scope on a cast that can have multiple sources is unresolved."
+    }
+  ]
+}

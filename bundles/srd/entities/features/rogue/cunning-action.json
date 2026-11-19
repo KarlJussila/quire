@@ -1,0 +1,71 @@
+{
+  "id": "feature:rogue/cunning-action",
+  "name": "Cunning Action",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat. This action can be used only to take the Dash, Disengage, or Hide action.",
+    "plain": "Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat. This action can be used only to take the Dash, Disengage, or Hide action.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "cunning-action-dash",
+      "name": "Cunning Action",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": "rule:dash",
+              "times": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cunning-action-disengage",
+      "name": "Cunning Action",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": "rule:disengage",
+              "times": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cunning-action-hide",
+      "name": "Cunning Action",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "outcomes": [
+        {
+          "runs": [
+            {
+              "activity": "rule:hide",
+              "times": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

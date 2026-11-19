@@ -1,0 +1,60 @@
+{
+  "id": "feature:fighter/proficiencies@2024",
+  "name": "Proficiencies",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Saving Throw Proficiencies: Strength and Constitution\nSkill Proficiencies: Choose 2: Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion, Perception, or Survival\nWeapon Proficiencies: Simple and Martial weapons\nArmor Training: Light, Medium, and Heavy armor and Shields",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "ability:str",
+        "ability:con"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor",
+        "group:medium-armor",
+        "group:heavy-armor",
+        "group:shield"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:simple-weapon",
+        "group:martial-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skills",
+            "name": "Skill Proficiencies",
+            "count": 2,
+            "distinct": true,
+            "from": [
+              "skill:acrobatics",
+              "skill:animal-handling",
+              "skill:athletics",
+              "skill:history",
+              "skill:insight",
+              "skill:intimidation",
+              "skill:perception",
+              "skill:persuasion",
+              "skill:survival"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "feature:rogue/sneak-attack@2024",
+  "name": "Level 1: Sneak Attack",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack roll if you have Advantage on the roll and the attack uses a Finesse or a Ranged weapon. The extra damage's type is the same as the weapon's type.\n\nYou don't need Advantage on the attack roll if at least one of your allies is within 5 feet of the target, the ally doesn't have the Incapacitated condition, and you don't have Disadvantage on the attack roll.\n\nThe extra damage increases as you gain Rogue levels, as shown in the Sneak Attack column of the Rogue Features table.",
+    "plain": "You know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack roll if you have Advantage on the roll and the attack uses a Finesse or a Ranged weapon. The extra damage's type is the same as the weapon's type.\n\nYou don't need Advantage on the attack roll if at least one of your allies is within 5 feet of the target, the ally doesn't have the Incapacitated condition, and you don't have Disadvantage on the attack roll.\n\nThe extra damage increases as you gain Rogue levels, as shown in the Sneak Attack column of the Rogue Features table.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "sneak-attack",
+      "name": "Sneak Attack",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any"
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true
+        },
+        "when": {
+          "all": [
+            {
+              "any": [
+                {
+                  "event": "event:roll-resolved",
+                  "match": {
+                    "mode": "advantage"
+                  }
+                },
+                {
+                  "all": [
+                    {
+                      "not": {
+                        "event": "event:roll-resolved",
+                        "match": {
+                          "mode": "disadvantage"
+                        }
+                      }
+                    },
+                    {
+                      "creature": "subject",
+                      "where": {
+                        "within": 5,
+                        "of": {
+                          "pool": "ally",
+                          "of": "self",
+                          "where": {
+                            "not": {
+                              "has": "condition:incapacitated"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "any": [
+                {
+                  "event": "event:roll-resolved",
+                  "match": {
+                    "attack": {
+                      "via": "weapon",
+                      "item": {
+                        "kind": "item",
+                        "where": {
+                          "match": {
+                            "weapon": {
+                              "properties": "weapon-property:finesse"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "event": "event:roll-resolved",
+                  "match": {
+                    "attack": {
+                      "via": "weapon",
+                      "range": "ranged"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": {
+                "pool": "any"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": {
+              "dice": {
+                "count": {
+                  "divide": "levels.class:rogue",
+                  "by": 2,
+                  "round": "up"
+                },
+                "die": 6
+              }
+            },
+            "type": {
+              "of": "weapon"
+            }
+          },
+          "to": "subject"
+        }
+      ]
+    }
+  ]
+}

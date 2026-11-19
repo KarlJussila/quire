@@ -1,0 +1,21 @@
+{
+  "id": "feature:bard/jack-of-all-trades",
+  "name": "Jack of All Trades",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 2nd level, you can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus.",
+    "plain": "Starting at 2nd level, you can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "level": "half",
+      "in": [
+        "group:ability-checks"
+      ]
+    }
+  ]
+}

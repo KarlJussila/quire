@@ -1,0 +1,57 @@
+{
+  "id": "feature:goliath/stones-endurance-stone-giant@2024",
+  "name": "Stone’s Endurance (Stone Giant)",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total.",
+    "plain": "When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "stones-endurance",
+      "name": "Stone's Endurance",
+      "trigger": {
+        "event": "event:damaged",
+        "subject": "self"
+      },
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "outcomes": [
+        {
+          "intercept": {
+            "set": {
+              "$subtract": {
+                "sum": [
+                  "1d12",
+                  "modifiers.ability:con"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "uses": {
+        "max": "proficiencyBonus",
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "subject": "self",
+              "match": {
+                "rest": "rest:long"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,18 @@
+{
+  "id": "item:pot-iron@2024",
+  "name": "Pot, Iron",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 2 GP\n\nAn Iron Pot holds up to 1 gallon.",
+    "plain": "Cost: 2 GP\n\nAn Iron Pot holds up to 1 gallon.",
+    "wording": "srd"
+  },
+  "group": "group:adventuring-gear",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:gp"
+  },
+  "weight": 10.0
+}

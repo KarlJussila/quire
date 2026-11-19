@@ -1,0 +1,187 @@
+{
+  "id": "feature:warlock/investment-of-the-chain-master@2024",
+  "name": "Investment of the Chain Master",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 5+ Warlock, Pact of the Chain Invocation_\n\nWhen you cast Find Familiar, you infuse the summoned familiar with a measure of your eldritch power, granting the creature the following benefits.\n\n_**Aerial or Aquatic.**_ The familiar gains either a Fly Speed or a Swim Speed (your choice) of 40 feet.\n\n_**Quick Attack.**_ As a Bonus Action, you can command the familiar to take the Attack action.\n\n_**Necrotic or Radiant Damage.**_ Whenever the familiar deals Bludgeoning, Piercing, or Slashing damage, you can make it deal Necrotic or Radiant damage instead.\n\n_**Your Save DC.**_ If the familiar forces a creature to make a saving throw, it uses your spell save DC.\n\n_**Resistance.**_ When the familiar takes damage, you can take a Reaction to grant it Resistance against that damage.",
+    "plain": "Prerequisite: Level 5+ Warlock, Pact of the Chain Invocation\n\nWhen you cast Find Familiar, you infuse the summoned familiar with a measure of your eldritch power, granting the creature the following benefits.\n\nAerial or Aquatic. The familiar gains either a Fly Speed or a Swim Speed (your choice) of 40 feet.\n\nQuick Attack. As a Bonus Action, you can command the familiar to take the Attack action.\n\nNecrotic or Radiant Damage. Whenever the familiar deals Bludgeoning, Piercing, or Slashing damage, you can make it deal Necrotic or Radiant damage instead.\n\nYour Save DC. If the familiar forces a creature to make a saving throw, it uses your spell save DC.\n\nResistance. When the familiar takes damage, you can take a Reaction to grant it Resistance against that damage.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "all": [
+      {
+        "compare": "levels.class:warlock",
+        "atLeast": 5
+      },
+      {
+        "has": "feature:warlock/pact-of-the-chain"
+      }
+    ]
+  },
+  "effects": [],
+  "activities": [
+    {
+      "key": "infuse-familiar",
+      "name": "Infuse Familiar",
+      "trigger": {
+        "event": "event:activity-used",
+        "by": "self",
+        "match": {
+          "spell": "spell:find-familiar"
+        }
+      },
+      "target": {
+        "count": 1,
+        "select": "chosen",
+        "who": {
+          "pool": "ally",
+          "chosen": true,
+          "where": {
+            "has": "state:familiar",
+            "source": "self"
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "endState": {
+            "state": "state:warlock/investment-of-the-chain-master-fly"
+          },
+          "to": "target"
+        },
+        {
+          "endState": {
+            "state": "state:warlock/investment-of-the-chain-master-swim"
+          },
+          "to": "target"
+        },
+        {
+          "applyState": {
+            "state": {
+              "choose": {
+                "key": "familiar-speed",
+                "name": "Familiar Speed",
+                "from": [
+                  "state:warlock/investment-of-the-chain-master-fly",
+                  "state:warlock/investment-of-the-chain-master-swim"
+                ]
+              }
+            }
+          },
+          "to": "target"
+        },
+        {
+          "applyState": {
+            "state": "state:warlock/investment-of-the-chain-master-damage-choice"
+          },
+          "to": "target"
+        }
+      ]
+    },
+    {
+      "key": "command-familiar",
+      "name": "Command Familiar",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "target": {
+        "count": 1,
+        "select": "chosen",
+        "who": {
+          "pool": "ally",
+          "chosen": true,
+          "where": {
+            "any": [
+              {
+                "has": "state:warlock/investment-of-the-chain-master-fly",
+                "source": "self"
+              },
+              {
+                "has": "state:warlock/investment-of-the-chain-master-swim",
+                "source": "self"
+              }
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "grant": {
+            "activity": {
+              "kind": "activity",
+              "where": {
+                "match": {
+                  "action": "action:attack"
+                }
+              }
+            },
+            "cost": [
+              {
+                "resource": "action"
+              }
+            ]
+          },
+          "to": "target"
+        }
+      ]
+    },
+    {
+      "key": "familiar-resistance",
+      "name": "Familiar Resistance",
+      "trigger": {
+        "event": "event:damaged",
+        "subject": {
+          "pool": "ally",
+          "where": {
+            "has": "state:familiar",
+            "source": "self"
+          }
+        }
+      },
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Grant your familiar resistance against the triggering damage.",
+            "gap": {
+              "category": "feature-mechanics",
+              "name": "Apply resistance to the specific pending damage instance before its amount is finalized."
+            }
+          },
+          "to": "subject"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "category": "feature-mechanics",
+      "name": "Find Familiar must mark and expose the summoned familiar with state:familiar, sourced to its caster."
+    },
+    {
+      "category": "content-dependency",
+      "name": "Find Familiar must provide typed save-delivery activities on its familiar forms for the caster spell-save-DC patch to reach them."
+    },
+    {
+      "category": "feature-mechanics",
+      "name": "Apply resistance to the specific pending damage instance before its amount is finalized."
+    },
+    {
+      "category": "content-dependency",
+      "name": "Find Familiar must provide typed attack activities with bludgeoning, piercing, or slashing damage outcomes for the optional Necrotic-or-Radiant damage patch to reach them."
+    },
+    {
+      "category": "content-dependency",
+      "name": "The familiar patches reach direct save deliveries and direct physical-damage outcomes. Nested rider saves and damage need matching patches as those creature activities are transcribed."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "feature:barbarian/path-of-the-berserker/mindless-rage",
+  "name": "Mindless Rage",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 6th level, you can't be Charmed or Frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage.",
+    "plain": "Beginning at 6th level, you can't be Charmed or Frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "condition:charmed",
+        "condition:frightened"
+      ],
+      "when": {
+        "has": "state:raging"
+      }
+    },
+    {
+      "type": "suppress",
+      "state": [
+        "condition:charmed",
+        "condition:frightened"
+      ],
+      "when": {
+        "has": "state:raging"
+      }
+    }
+  ]
+}

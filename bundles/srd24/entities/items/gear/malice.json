@@ -1,0 +1,18 @@
+{
+  "id": "item:malice",
+  "name": "Malice",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 250 GP\n\n_Inhaled Poison_\n\nA creature subjected to Malice must succeed on a DC 15 Constitution saving throw or have the Poisoned condition for 1 hour. The creature also has the Blinded condition while Poisoned in this way.",
+    "plain": "Cost: 250 GP\n\nInhaled Poison\n\nA creature subjected to Malice must succeed on a DC 15 Constitution saving throw or have the Poisoned condition for 1 hour. The creature also has the Blinded condition while Poisoned in this way.",
+    "wording": "srd"
+  },
+  "group": "group:poison",
+  "cost": {
+    "amount": 250,
+    "currency": "currency:gp"
+  },
+  "weight": 0.5
+}

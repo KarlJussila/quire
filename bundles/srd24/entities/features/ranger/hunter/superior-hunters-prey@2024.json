@@ -1,0 +1,95 @@
+{
+  "id": "feature:ranger/hunter/superior-hunters-prey@2024",
+  "name": "Level 11: Superior Hunter's Prey",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Once per turn when you deal damage to a creature marked by your Hunter's Mark, you can also deal that spell's extra damage to a different creature that you can see within 30 feet of the first creature.",
+    "plain": "Once per turn when you deal damage to a creature marked by your Hunter's Mark, you can also deal that spell's extra damage to a different creature that you can see within 30 feet of the first creature.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "superior-hunters-prey",
+      "name": "Superior Hunter’s Prey",
+      "when": {
+        "compare": "levels.class:ranger",
+        "atLeast": 11
+      },
+      "trigger": {
+        "event": "event:damaged",
+        "by": "self",
+        "subject": {
+          "pool": "any"
+        },
+        "when": {
+          "creature": "subject",
+          "where": {
+            "prose": {
+              "text": "marked by hunters mark",
+              "gap": {
+                "category": "test",
+                "name": "marked-by-hunters-mark"
+              }
+            }
+          }
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": {
+                "pool": "any"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "target": {
+        "count": 1,
+        "who": {
+          "pool": "any",
+          "chosen": true,
+          "where": {
+            "all": [
+              {
+                "not": {
+                  "is": "subject"
+                }
+              },
+              {
+                "within": 30,
+                "of": "subject"
+              },
+              {
+                "perceives": {
+                  "sense": "sight",
+                  "of": "self"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": {
+              "dice": {
+                "count": 1,
+                "die": "huntersMark.damageDie"
+              }
+            },
+            "type": "damage-type:force"
+          },
+          "to": "target"
+        }
+      ]
+    }
+  ]
+}

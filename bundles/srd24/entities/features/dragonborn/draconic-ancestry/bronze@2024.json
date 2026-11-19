@@ -1,0 +1,15 @@
+{
+  "id": "feature:dragonborn/draconic-ancestry/bronze@2024",
+  "name": "Bronze",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Damage Type: Lightning",
+    "wording": "srd"
+  },
+  "group": "group:draconic-ancestry",
+  "values": {
+    "damage-type": "damage-type:lightning"
+  }
+}

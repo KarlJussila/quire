@@ -1,0 +1,93 @@
+{
+  "id": "table:time-and-cost@2024",
+  "name": "Time and Cost",
+  "source": {
+    "book": "srd24"
+  },
+  "columns": [
+    {
+      "key": "spell-level",
+      "name": "Spell Level"
+    },
+    {
+      "key": "time",
+      "name": "Time"
+    },
+    {
+      "key": "cost",
+      "name": "Cost"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "spell-level": "Cantrip",
+        "time": "1 day",
+        "cost": "15 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "1",
+        "time": "1 day",
+        "cost": "25 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "2",
+        "time": "3 days",
+        "cost": "100 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "3",
+        "time": "5 days",
+        "cost": "150 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "4",
+        "time": "10 days",
+        "cost": "1,000 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "5",
+        "time": "25 days",
+        "cost": "1,500 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "6",
+        "time": "40 days",
+        "cost": "10,000 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "7",
+        "time": "50 days",
+        "cost": "12,500 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "8",
+        "time": "60 days",
+        "cost": "15,000 GP"
+      }
+    },
+    {
+      "cells": {
+        "spell-level": "9",
+        "time": "120 days",
+        "cost": "50,000 GP"
+      }
+    }
+  ]
+}

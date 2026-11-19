@@ -1,0 +1,15 @@
+{
+  "id": "feature:sorcerer/draconic-bloodline/dragon-ancestor/red",
+  "name": "Red",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Damage Type: Fire",
+    "wording": "srd"
+  },
+  "group": "group:dragon-ancestor",
+  "values": {
+    "damage-type": "damage-type:fire"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": "table:sentient-magic-items/alignment",
+  "name": "Alignment",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "alignment",
+      "name": "Alignment"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "alignment": "Lawful good"
+      },
+      "range": [
+        1,
+        15
+      ]
+    },
+    {
+      "cells": {
+        "alignment": "Neutral good"
+      },
+      "range": [
+        16,
+        35
+      ]
+    },
+    {
+      "cells": {
+        "alignment": "Chaotic good"
+      },
+      "range": [
+        36,
+        50
+      ]
+    },
+    {
+      "cells": {
+        "alignment": "Lawful neutral"
+      },
+      "range": [
+        51,
+        63
+      ]
+    },
+    {
+      "cells": {
+        "alignment": "Neutral"
+      },
+      "range": [
+        64,
+        73
+      ]
+    },
+    {
+      "cells": {
+        "alignment": "Chaotic neutral"
+      },
+      "range": [
+        74,
+        85
+      ]
+    },
+    {
+      "cells": {
+        "alignment": "Lawful evil"
+      },
+      "range": [
+        86,
+        89
+      ]
+    },
+    {
+      "cells": {
+        "alignment": "Neutral evil"
+      },
+      "range": [
+        90,
+        96
+      ]
+    },
+    {
+      "cells": {
+        "alignment": "Chaotic evil"
+      },
+      "range": [
+        97,
+        100
+      ]
+    }
+  ],
+  "dice": "d100"
+}

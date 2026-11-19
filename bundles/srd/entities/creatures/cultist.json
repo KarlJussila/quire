@@ -1,0 +1,67 @@
+{
+  "id": "creature:cultist",
+  "name": "Cultist",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any-non-good",
+  "ac": 12,
+  "acFrom": [
+    "leather armor"
+  ],
+  "hp": {
+    "average": 9,
+    "formula": "2d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 10,
+    "ability:dex": 12,
+    "ability:int": 10,
+    "ability:str": 11,
+    "ability:wis": 11
+  },
+  "skills": {
+    "skill:deception": 2,
+    "skill:religion": 2
+  },
+  "passivePerception": 10,
+  "xp": 25,
+  "cr": 0.125,
+  "languages": [
+    {
+      "text": "any one language (usually Common)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Dark Devotion",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The cultist has advantage on saving throws against being Charmed or Frightened.",
+        "plain": "The cultist has advantage on saving throws against being Charmed or Frightened.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Scimitar",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +3 to hit, reach 5 ft., one creature. _Hit:_ 4 (1d6 + 1) slashing damage.",
+        "plain": "Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 4 (1d6 + 1) slashing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

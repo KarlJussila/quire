@@ -1,0 +1,31 @@
+{
+  "id": "feature:bard/college-of-lore/bonus-proficiencies",
+  "name": "Bonus Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice.",
+    "plain": "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skill",
+            "name": "Skill Proficiency",
+            "count": 3,
+            "from": [
+              {
+                "kind": "skill"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

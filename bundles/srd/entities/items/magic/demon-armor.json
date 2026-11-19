@@ -1,0 +1,309 @@
+{
+  "id": "item:demon-armor",
+  "name": "Demon Armor",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing this armor, you gain a +1 bonus to AC, and you can understand and speak Abyssal. In addition, the armor's clawed gauntlets turn unarmed strikes with your hands into magic weapons that deal slashing damage, with a +1 bonus to attack rolls and damage rolls and a damage die of 1d8.\n\n_**Curse.**_ Once you don this cursed armor, you can't doff it unless you are targeted by the Remove Curse spell or similar magic. While wearing the armor, you have disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+    "plain": "While wearing this armor, you gain a +1 bonus to AC, and you can understand and speak Abyssal. In addition, the armor's clawed gauntlets turn unarmed strikes with your hands into magic weapons that deal slashing damage, with a +1 bonus to attack rolls and damage rolls and a damage die of 1d8.\n\nCurse. Once you don this cursed armor, you can't doff it unless you are targeted by the Remove Curse spell or similar magic. While wearing the armor, you have disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:very-rare",
+  "attunement": true,
+  "base": "item:plate",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true,
+          "attuned": true
+        }
+      }
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "language:abyssal"
+      ],
+      "when": {
+        "has": "this",
+        "match": {
+          "worn": true,
+          "attuned": true
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "match": {
+            "delivery": {
+              "attack": {
+                "via": "unarmed"
+              }
+            }
+          }
+        }
+      },
+      "set": {
+        "outcomes": {
+          "$where": {
+            "damage": true
+          },
+          "damage": {
+            "amount": {
+              "$replace": "1d8"
+            },
+            "type": {
+              "$replace": "damage-type:slashing"
+            }
+          }
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "worn": true,
+              "attuned": true
+            }
+          },
+          {
+            "prose": {
+              "text": "the unarmed strike is made with your hands",
+              "gap": {
+                "category": "test",
+                "name": "an unarmed strike made with the hands"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:attack",
+              "attack": {
+                "via": "unarmed"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "worn": true,
+              "attuned": true
+            }
+          },
+          {
+            "prose": {
+              "text": "the unarmed strike is made with your hands",
+              "gap": {
+                "category": "test",
+                "name": "an unarmed strike made with the hands"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:damage",
+              "attack": {
+                "via": "unarmed"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "worn": true,
+              "attuned": true
+            }
+          },
+          {
+            "prose": {
+              "text": "the unarmed strike is made with your hands",
+              "gap": {
+                "category": "test",
+                "name": "an unarmed strike made with the hands"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "counts-as",
+      "qualifier": "damage-qualifier:magical",
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": [
+                "roll:attack",
+                "roll:damage"
+              ],
+              "attack": {
+                "via": "unarmed"
+              }
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "worn": true,
+              "attuned": true
+            }
+          },
+          {
+            "prose": {
+              "text": "the unarmed strike is made with your hands",
+              "gap": {
+                "category": "test",
+                "name": "an unarmed strike made with the hands"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "worn": true
+            }
+          },
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "subject": {
+              "pool": "any",
+              "where": {
+                "match": {
+                  "tags": "creature-tag:demon"
+                }
+              }
+            },
+            "match": {
+              "roll": "roll:attack"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "worn": true
+            }
+          },
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "subject": {
+              "pool": "any",
+              "where": {
+                "match": {
+                  "tags": "creature-tag:demon"
+                }
+              }
+            },
+            "match": {
+              "roll": "roll:save"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:item-equipped",
+        "subject": "self",
+        "match": {
+          "item": "this"
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "applyState": {
+              "state": "state:curse",
+              "source": "this",
+              "duration": "permanent"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "While cursed, the armor can’t be doffed, and no restriction names doffing a worn item."
+    },
+    {
+      "category": "item-mechanics",
+      "name": "The book does not define which other magic is “similar magic” and ends this curse."
+    },
+    {
+      "category": "effect-model",
+      "name": "The clawed gauntlets make the unarmed strikes weapons themselves, and counts-as has no purpose for an attack counting as a weapon."
+    },
+    {
+      "category": "language",
+      "name": "The armor grants understanding and speaking Abyssal only, and a proficiency in a language has no speak or read split."
+    }
+  ]
+}

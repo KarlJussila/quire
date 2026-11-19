@@ -1,0 +1,15 @@
+{
+  "id": "item:potion-of-mind-reading",
+  "name": "Potion of Mind Reading",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you drink this potion, you gain the effect of the Detect Thoughts spell (save DC 13). The potion's dense, purple liquid has an ovoid cloud of pink floating in it.",
+    "plain": "When you drink this potion, you gain the effect of the Detect Thoughts spell (save DC 13). The potion's dense, purple liquid has an ovoid cloud of pink floating in it.",
+    "wording": "srd"
+  },
+  "group": "group:potion",
+  "rarity": "rarity:rare",
+  "weight": 0.5
+}

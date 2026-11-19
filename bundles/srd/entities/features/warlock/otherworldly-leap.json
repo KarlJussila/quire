@@ -1,0 +1,46 @@
+{
+  "id": "feature:warlock/otherworldly-leap",
+  "name": "Otherworldly Leap",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "_Prerequisite: 9th level_\n\nYou can cast Jump on yourself at will, without expending a spell slot or material components.",
+    "plain": "Prerequisite: 9th level\n\nYou can cast Jump on yourself at will, without expending a spell slot or material components.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 9
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        "spell:jump"
+      ],
+      "how": "innate",
+      "countsAs": "class:warlock",
+      "set": {
+        "activities": {
+          "cast": {
+            "target": {
+              "$replace": {
+                "who": "self",
+                "count": 1
+              }
+            }
+          }
+        },
+        "components": {
+          "material": {
+            "$delete": true
+          }
+        }
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "feature:sorcerer/twinned-spell@2024",
+  "name": "Twinned Spell",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Cost: 1 Sorcery Point_\n\nWhen you cast a spell, such as Charm Person, that can be cast with a higher-level spell slot to target an additional creature, you can spend 1 Sorcery Point to increase the spell's effective level by 1.",
+    "plain": "Cost: 1 Sorcery Point\n\nWhen you cast a spell, such as Charm Person, that can be cast with a higher-level spell slot to target an additional creature, you can spend 1 Sorcery Point to increase the spell's effective level by 1.",
+    "wording": "srd"
+  },
+  "group": "group:metamagic",
+  "effects": [],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "spell-mechanics",
+      "name": "Spend 1 Sorcery Point to increase a qualifying spell’s effective level by 1 for this casting."
+    }
+  ]
+}

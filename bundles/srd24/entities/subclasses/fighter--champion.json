@@ -1,0 +1,31 @@
+{
+  "id": "subclass:fighter/champion@2024",
+  "name": "Champion",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Pursue Physical Excellence in Combat_\n\nA Champion focuses on the development of martial prowess in a relentless pursuit of victory. Champions combine rigorous training with physical excellence to deal devastating blows, withstand peril, and garner glory. Whether in athletic contests or bloody battle, Champions strive for the crown of the victor.",
+    "plain": "Pursue Physical Excellence in Combat\n\nA Champion focuses on the development of martial prowess in a relentless pursuit of victory. Champions combine rigorous training with physical excellence to deal devastating blows, withstand peril, and garner glory. Whether in athletic contests or bloody battle, Champions strive for the crown of the victor.",
+    "wording": "srd"
+  },
+  "class": "class:fighter",
+  "levels": {
+    "10": [
+      "feature:fighter/champion/heroic-warrior@2024"
+    ],
+    "15": [
+      "feature:fighter/champion/superior-critical@2024"
+    ],
+    "18": [
+      "feature:fighter/champion/survivor@2024"
+    ],
+    "3": [
+      "feature:fighter/champion/improved-critical@2024",
+      "feature:fighter/champion/remarkable-athlete@2024"
+    ],
+    "7": [
+      "feature:fighter/champion/additional-fighting-style@2024"
+    ]
+  }
+}

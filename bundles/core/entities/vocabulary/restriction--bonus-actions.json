@@ -1,0 +1,7 @@
+{
+  "id": "restriction:bonus-actions",
+  "name": "Take Bonus Actions",
+  "source": {
+    "book": "core"
+  }
+}

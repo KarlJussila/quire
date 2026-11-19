@@ -1,0 +1,52 @@
+{
+  "id": "feature:sorcerer/sorcerous-restoration@2024",
+  "name": "Level 5: Sorcerous Restoration",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When you finish a Short Rest, you can regain expended Sorcery Points, but no more than a number equal to half your Sorcerer level (round down). Once you use this feature, you can't do so again until you finish a Long Rest.",
+    "plain": "When you finish a Short Rest, you can regain expended Sorcery Points, but no more than a number equal to half your Sorcerer level (round down). Once you use this feature, you can't do so again until you finish a Long Rest.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "sorcerous-restoration",
+      "name": "Sorcerous Restoration",
+      "trigger": {
+        "event": "event:rest-finished",
+        "match": {
+          "rest": "rest:short"
+        },
+        "subject": "self"
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Regain expended sorcery points, up to a number equal to half your Sorcerer level, rounded down.",
+            "gap": {
+              "category": "resource",
+              "name": "regain sorcery points"
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

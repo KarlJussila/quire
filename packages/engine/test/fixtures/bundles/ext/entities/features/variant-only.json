@@ -1,0 +1,10 @@
+{
+ "id": "feature:variant-only",
+ "name": "Variant Only",
+ "source": {
+  "book": "core"
+ },
+ "text": {
+  "plain": "Exists only while the variant is on."
+ }
+}

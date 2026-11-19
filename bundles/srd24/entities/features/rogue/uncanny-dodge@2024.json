@@ -1,0 +1,52 @@
+{
+  "id": "feature:rogue/uncanny-dodge@2024",
+  "name": "Level 5: Uncanny Dodge",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "When an attacker that you can see hits you with an attack roll, you can take a Reaction to halve the attack's damage against you (round down).",
+    "plain": "When an attacker that you can see hits you with an attack roll, you can take a Reaction to halve the attack's damage against you (round down).",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "uncanny-dodge",
+      "name": "Uncanny Dodge",
+      "trigger": {
+        "event": "event:taking-damage",
+        "by": {
+          "pool": "any",
+          "where": {
+            "perceived": "sight",
+            "by": "self"
+          }
+        },
+        "subject": "self",
+        "match": {
+          "attack": true
+        }
+      },
+      "cost": [
+        {
+          "resource": "reaction"
+        }
+      ],
+      "outcomes": [
+        {
+          "intercept": {
+            "set": {
+              "$subtract": {
+                "divide": {
+                  "event": "amount"
+                },
+                "by": 2,
+                "round": "up"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

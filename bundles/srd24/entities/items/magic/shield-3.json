@@ -1,0 +1,31 @@
+{
+  "id": "item:shield-3",
+  "name": "Shield, +3",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While holding this Shield, you have a bonus to Armor Class determined by the Shield's rarity, in addition to the Shield's normal bonus to AC.",
+    "plain": "While holding this Shield, you have a bonus to Armor Class determined by the Shield's rarity, in addition to the Shield's normal bonus to AC.",
+    "wording": "srd"
+  },
+  "group": "group:armor",
+  "rarity": "rarity:very-rare",
+  "base": "item:shield",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 3
+        }
+      },
+      "when": {
+        "has": "this",
+        "match": {
+          "held": true
+        }
+      }
+    }
+  ]
+}

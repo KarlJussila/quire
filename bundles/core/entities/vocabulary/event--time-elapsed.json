@@ -1,0 +1,8 @@
+{
+  "id": "event:time-elapsed",
+  "name": "Time Elapsed",
+  "source": {
+    "book": "core"
+  },
+  "emittedBy": "engine"
+}

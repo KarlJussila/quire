@@ -1,0 +1,70 @@
+{
+  "id": "creature:blood-hawk",
+  "name": "Blood Hawk",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:small",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "hp": {
+    "average": 7,
+    "formula": "2d6"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 10
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 5,
+    "ability:con": 10,
+    "ability:dex": 14,
+    "ability:int": 3,
+    "ability:str": 6,
+    "ability:wis": 14
+  },
+  "skills": {
+    "skill:perception": 4
+  },
+  "passivePerception": 14,
+  "xp": 25,
+  "cr": 0.125,
+  "blocks": [
+    {
+      "name": "Keen Sight",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hawk has advantage on Wisdom (Perception) checks that rely on sight.",
+        "plain": "The hawk has advantage on Wisdom (Perception) checks that rely on sight.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Pack Tactics",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The hawk has advantage on an attack roll against a creature if at least one of the hawk's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "plain": "The hawk has advantage on an attack roll against a creature if at least one of the hawk's allies is within 5 feet of the creature and the ally isn't Incapacitated.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Beak",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 4 (1d4 + 2) piercing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "item:navigators-tools",
+  "name": "Navigator’s Tools",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Proficiency with navigator's tools helps you determine a true course based on observing the stars. It also grants you insight into charts and maps while developing your sense of direction.\n\n***Components.*** Navigator’s tools include a sextant, a compass, calipers, a ruler, parchment, ink, and a quill.\n\n***Survival.*** Knowledge of navigator’s tools helps you avoid becoming lost and also grants you insight into the most likely location for roads and settlements.\n\n***Sighting.*** By taking careful measurements, you can determine your position on a nautical chart and the time of day.\n\n##### NAVIGATOR’S TOOLS\n\n| Activity | DC |\n|---|---|\n| Plot a course | 10 |\n| Discover your position on a nautical chart | 15 |",
+    "plain": "Proficiency with navigator's tools helps you determine a true course based on observing the stars. It also grants you insight into charts and maps while developing your sense of direction.\n\nComponents. Navigator’s tools include a sextant, a compass, calipers, a ruler, parchment, ink, and a quill.\n\nSurvival. Knowledge of navigator’s tools helps you avoid becoming lost and also grants you insight into the most likely location for roads and settlements.\n\nSighting. By taking careful measurements, you can determine your position on a nautical chart and the time of day.\n\nNAVIGATOR’S TOOLS\n\nActivity\tDC\n\nPlot a course\t10\n\nDiscover your position on a nautical chart\t15",
+    "wording": "srd"
+  },
+  "group": "group:tools",
+  "cost": {
+    "amount": 25,
+    "currency": "currency:gp"
+  },
+  "weight": 2.0
+}

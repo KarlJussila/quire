@@ -1,0 +1,68 @@
+{
+  "id": "creature:druid",
+  "name": "Druid",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any",
+  "ac": 11,
+  "acFrom": [
+    "16 with barkskin"
+  ],
+  "hp": {
+    "average": 27,
+    "formula": "5d8 + 5"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 13,
+    "ability:dex": 12,
+    "ability:int": 12,
+    "ability:str": 10,
+    "ability:wis": 15
+  },
+  "skills": {
+    "skill:medicine": 4,
+    "skill:nature": 3,
+    "skill:perception": 4
+  },
+  "passivePerception": 14,
+  "xp": 450,
+  "cr": 2,
+  "languages": [
+    {
+      "text": "Druidic plus any two languages"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It has the following druid spells prepared:\n\n- Cantrips (at will): Druidcraft, Produce Flame, Shillelagh\n- 1st level (4 slots): Entangle, Longstrider, Speak with Animals, Thunderwave\n- 2nd level (3 slots): Animal Messenger, Barkskin",
+        "plain": "The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It has the following druid spells prepared:\n\n- Cantrips (at will): Druidcraft, Produce Flame, Shillelagh\n- 1st level (4 slots): Entangle, Longstrider, Speak with Animals, Thunderwave\n- 2nd level (3 slots): Animal Messenger, Barkskin",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Quarterstaff",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +2 to hit (+4 to hit with Shillelagh), reach 5 ft., one target. _Hit:_ 3 (1d6) bludgeoning damage, 4 (1d8) bludgeoning damage if wielded with two hands, or 6 (1d8 + 2) bludgeoning damage with Shillelagh.",
+        "plain": "Melee Weapon Attack: +2 to hit (+4 to hit with Shillelagh), reach 5 ft., one target. Hit: 3 (1d6) bludgeoning damage, 4 (1d8) bludgeoning damage if wielded with two hands, or 6 (1d8 + 2) bludgeoning damage with Shillelagh.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "group:art-object",
+  "name": "Art Object",
+  "source": {
+    "book": "core"
+  }
+}

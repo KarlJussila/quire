@@ -1,0 +1,129 @@
+{
+  "id": "creature:drider@2024",
+  "name": "Drider",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 19,
+  "hp": {
+    "average": 123,
+    "formula": "13d10 + 52"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    },
+    "movement-mode:climb": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 12,
+    "ability:con": 18,
+    "ability:dex": 19,
+    "ability:int": 13,
+    "ability:str": 16,
+    "ability:wis": 16
+  },
+  "skills": {
+    "skill:perception": 6,
+    "skill:stealth": 10
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 16,
+  "xp": 2300,
+  "proficiencyBonus": 3,
+  "initiative": 4,
+  "habitat": [
+    "Forest",
+    "Underdark"
+  ],
+  "treasure": [
+    "Armaments"
+  ],
+  "cr": 6,
+  "languages": [
+    {
+      "language": "language:elvish"
+    },
+    {
+      "language": "language:undercommon"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Spider Climb",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The drider can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+        "plain": "The drider can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sunlight Sensitivity",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While in sunlight, the drider has Disadvantage on ability checks and attack rolls.",
+        "plain": "While in sunlight, the drider has Disadvantage on ability checks and attack rolls.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Web Walker",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The drider ignores movement restrictions caused by webs, and the drider knows the location of any other creature in contact with the same web.",
+        "plain": "The drider ignores movement restrictions caused by webs, and the drider knows the location of any other creature in contact with the same web.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The drider makes three attacks, using Foreleg or Poison Burst in any combination.",
+        "plain": "The drider makes three attacks, using Foreleg or Poison Burst in any combination.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Foreleg",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +7, reach 10 ft. _Hit:_ 13 (2d8 + 4) Piercing damage.",
+        "plain": "Melee Attack Roll: +7, reach 10 ft. Hit: 13 (2d8 + 4) Piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Poison Burst",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Attack Roll:_ +6, range 120 ft. _Hit:_ 13 (3d6 + 3) Poison damage.",
+        "plain": "Ranged Attack Roll: +6, range 120 ft. Hit: 13 (3d6 + 3) Poison damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Magic of the Spider Queen",
+      "section": "stat-block-section:bonus-action",
+      "text": {
+        "formatted": "The drider casts Darkness, Faerie Fire, or Web, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 14).",
+        "plain": "The drider casts Darkness, Faerie Fire, or Web, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 14).",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "creature:azer",
+  "name": "Azer",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:elemental",
+  "alignment": "alignment:lawful-neutral",
+  "ac": 17,
+  "acFrom": [
+    "natural armor, shield"
+  ],
+  "hp": {
+    "average": 39,
+    "formula": "6d8 + 12"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 10,
+    "ability:con": 15,
+    "ability:dex": 12,
+    "ability:int": 12,
+    "ability:str": 17,
+    "ability:wis": 13
+  },
+  "saves": {
+    "ability:con": 4
+  },
+  "passivePerception": 11,
+  "xp": 450,
+  "cr": 2,
+  "languages": [
+    {
+      "language": "language:ignan"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire",
+        "damage-type:poison"
+      ]
+    },
+    {
+      "type": "defense",
+      "immune": [
+        "condition:poisoned"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Heated Body",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "A creature that touches the azer or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage.",
+        "plain": "A creature that touches the azer or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Heated Weapons",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "When the azer hits with a metal melee weapon, it deals an extra 3 (1d6) fire damage (included in the attack).",
+        "plain": "When the azer hits with a metal melee weapon, it deals an extra 3 (1d6) fire damage (included in the attack).",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Illumination",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The azer sheds bright light in a 10-foot radius and dim light for an additional 10 feet.",
+        "plain": "The azer sheds bright light in a 10-foot radius and dim light for an additional 10 feet.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Warhammer",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +5 to hit, reach 5 ft., one target. _Hit:_ 7 (1d8 + 3) bludgeoning damage, or 8 (1d10 + 3) bludgeoning damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.",
+        "plain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage, or 8 (1d10 + 3) bludgeoning damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

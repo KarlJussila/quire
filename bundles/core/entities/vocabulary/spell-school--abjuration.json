@@ -1,0 +1,10 @@
+{
+  "id": "spell-school:abjuration",
+  "name": "Abjuration",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": ""
+  }
+}

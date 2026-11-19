@@ -1,0 +1,139 @@
+{
+  "id": "table:the-egyptian-pantheon",
+  "name": "The Egyptian Pantheon",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "deity",
+      "name": "Deity"
+    },
+    {
+      "key": "alignment",
+      "name": "Alignment"
+    },
+    {
+      "key": "suggested-domains",
+      "name": "Suggested Domains"
+    },
+    {
+      "key": "symbol",
+      "name": "Symbol"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "deity": "Re-Horakhty, god of the sun, ruler of the gods",
+        "alignment": "LG",
+        "suggested-domains": "Life, Light",
+        "symbol": "Solar disk encircled by serpent"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Anubis, god of judgment and death",
+        "alignment": "LN",
+        "suggested-domains": "Death",
+        "symbol": "Black jackal"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Apep, god of evil, fire, and serpents",
+        "alignment": "NE",
+        "suggested-domains": "Trickery",
+        "symbol": "Flaming snake"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Bast, goddess of cats and vengeance",
+        "alignment": "CG",
+        "suggested-domains": "War",
+        "symbol": "Cat"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Bes, god of luck and music",
+        "alignment": "CN",
+        "suggested-domains": "Trickery",
+        "symbol": "Image of the misshapen deity"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Hathor, goddess of love, music, and motherhood",
+        "alignment": "NG",
+        "suggested-domains": "Life, Light",
+        "symbol": "Horned cow's head with lunar disk"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Imhotep, god of crafts and medicine",
+        "alignment": "NG",
+        "suggested-domains": "Knowledge",
+        "symbol": "Step pyramid"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Isis, goddess of fertility and magic",
+        "alignment": "NG",
+        "suggested-domains": "Knowledge, Life",
+        "symbol": "Ankh and star"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Nephthys, goddess of death and grief",
+        "alignment": "CG",
+        "suggested-domains": "Death",
+        "symbol": "Horns around a lunar disk"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Osiris, god of nature and the underworld",
+        "alignment": "LG",
+        "suggested-domains": "Life, Nature",
+        "symbol": "Crook and flail"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Ptah, god of crafts, knowledge, and secrets",
+        "alignment": "LN",
+        "suggested-domains": "Knowledge",
+        "symbol": "Bull"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Set, god of darkness and desert storms",
+        "alignment": "CE",
+        "suggested-domains": "Death, Tempest, Trickery",
+        "symbol": "Coiled cobra"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Sobek, god of water and crocodiles",
+        "alignment": "LE",
+        "suggested-domains": "Nature, Tempest",
+        "symbol": "Crocodile head with horns and plumes"
+      }
+    },
+    {
+      "cells": {
+        "deity": "Thoth, god of knowledge and wisdom",
+        "alignment": "N",
+        "suggested-domains": "Knowledge",
+        "symbol": "Ibis"
+      }
+    }
+  ]
+}

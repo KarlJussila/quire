@@ -1,0 +1,10 @@
+{
+ "id": "feature:pins-2014",
+ "name": "pins-2014",
+ "source": {
+  "book": "edition-user"
+ },
+ "requires": {
+  "has": "feature:thing@2014"
+ }
+}

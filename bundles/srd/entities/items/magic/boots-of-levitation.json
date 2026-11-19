@@ -1,0 +1,16 @@
+{
+  "id": "item:boots-of-levitation",
+  "name": "Boots of Levitation",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While you wear these boots, you can use an action to cast the Levitate spell on yourself at will.",
+    "plain": "While you wear these boots, you can use an action to cast the Levitate spell on yourself at will.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:rare",
+  "attunement": true,
+  "weight": 0.0
+}

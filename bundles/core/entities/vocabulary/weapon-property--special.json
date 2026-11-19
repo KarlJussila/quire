@@ -1,0 +1,7 @@
+{
+  "id": "weapon-property:special",
+  "name": "Special",
+  "source": {
+    "book": "core"
+  }
+}

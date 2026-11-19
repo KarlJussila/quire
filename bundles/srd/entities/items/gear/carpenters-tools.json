@@ -1,0 +1,18 @@
+{
+  "id": "item:carpenters-tools",
+  "name": "Carpenter’s Tools",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Skill at carpentry enables a character to construct wooden structures. A carpenter can build a house, a shack, a wooden cabinet, or similar items.\n\n***Components.*** Carpenter’s tools include a saw, a hammer, nails, a hatchet, a square, a ruler, an adze, a plane, and a chisel.\n\n***History.*** This tool proficiency aids you in identifying the use and the origin of wooden buildings and other large wooden objects.\n\n***Investigation.*** You gain additional insight when inspecting areas within wooden structures, because you know tricks of construction that can conceal areas from discovery.\n\n***Perception.*** You can spot irregularities in wooden walls or floors, making it easier to find trap doors and secret passages.\n\n***Stealth.*** You can quickly assess the weak spots in a wooden floor, making it easier to avoid the places that creek and groan when they’re stepped on.\n\n***Fortify.*** With 1 minute of work and raw materials, you can make a door or window harder to force open. Increase the DC needed to open it by 5.\n\n***Temporary Shelter.*** As part of a long rest, you can construct a lean-to or a similar shelter to keep your group dry and in the shade for the duration of the rest. Because it was fashioned quickly from whatever wood was available, the shelter collapses 1d3 days after being assembled.\n\n##### CARPENTER’S TOOLS\n\n| Activity | DC |\n|---|---|\n| Build a simple wooden structure | 10 |\n| Design a complex wooden structure | 15 |\n| Find a weak point in a wooden wall | 15 |\n| Pry apart a door | 20 |",
+    "plain": "Skill at carpentry enables a character to construct wooden structures. A carpenter can build a house, a shack, a wooden cabinet, or similar items.\n\nComponents. Carpenter’s tools include a saw, a hammer, nails, a hatchet, a square, a ruler, an adze, a plane, and a chisel.\n\nHistory. This tool proficiency aids you in identifying the use and the origin of wooden buildings and other large wooden objects.\n\nInvestigation. You gain additional insight when inspecting areas within wooden structures, because you know tricks of construction that can conceal areas from discovery.\n\nPerception. You can spot irregularities in wooden walls or floors, making it easier to find trap doors and secret passages.\n\nStealth. You can quickly assess the weak spots in a wooden floor, making it easier to avoid the places that creek and groan when they’re stepped on.\n\nFortify. With 1 minute of work and raw materials, you can make a door or window harder to force open. Increase the DC needed to open it by 5.\n\nTemporary Shelter. As part of a long rest, you can construct a lean-to or a similar shelter to keep your group dry and in the shade for the duration of the rest. Because it was fashioned quickly from whatever wood was available, the shelter collapses 1d3 days after being assembled.\n\nCARPENTER’S TOOLS\n\nActivity\tDC\n\nBuild a simple wooden structure\t10\n\nDesign a complex wooden structure\t15\n\nFind a weak point in a wooden wall\t15\n\nPry apart a door\t20",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 8,
+    "currency": "currency:gp"
+  },
+  "weight": 6.0
+}

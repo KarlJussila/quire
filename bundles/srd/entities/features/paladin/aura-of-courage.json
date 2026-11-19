@@ -1,0 +1,53 @@
+{
+  "id": "feature:paladin/aura-of-courage",
+  "name": "Aura of Courage",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 10th level, you and friendly creatures within 10 feet of you can't be Frightened while you are conscious.\n\nAt 18th level, the range of this aura increases to 30 feet.",
+    "plain": "Starting at 10th level, you and friendly creatures within 10 feet of you can't be Frightened while you are conscious.\n\nAt 18th level, the range of this aura increases to 30 feet.",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "aura",
+      "name": "nearby allies' immunity to being frightened while the paladin is conscious"
+    }
+  ],
+  "effects": [
+    {
+      "type": "zone",
+      "when": {
+        "not": {
+          "has": "condition:incapacitated"
+        }
+      },
+      "zone": {
+        "anchor": "self",
+        "area": {
+          "shape": "area-shape:emanation",
+          "size": {
+            "byLevel": {
+              "10": 10,
+              "18": 30
+            },
+            "of": "class:paladin"
+          }
+        },
+        "affects": {
+          "pool": "ally",
+          "includeSelf": true
+        },
+        "effects": [
+          {
+            "type": "defense",
+            "immune": [
+              "condition:frightened"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

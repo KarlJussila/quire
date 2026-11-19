@@ -1,0 +1,32 @@
+{
+  "id": "item:hand-crossbow",
+  "name": "Hand Crossbow",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:martial-ranged-weapon",
+  "cost": {
+    "amount": 75,
+    "currency": "currency:gp"
+  },
+  "weight": 3.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:ammunition",
+      "weapon-property:light",
+      "weapon-property:loading"
+    ],
+    "damage": {
+      "amount": "1d6",
+      "type": "damage-type:piercing"
+    },
+    "range": {
+      "long": 120,
+      "normal": 30
+    }
+  }
+}

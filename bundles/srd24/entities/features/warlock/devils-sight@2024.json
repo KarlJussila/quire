@@ -1,0 +1,26 @@
+{
+  "id": "feature:warlock/devils-sight@2024",
+  "name": "Devil’s Sight",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Prerequisite: Level 2+ Warlock_\n\nYou can see normally in Dim Light and Darkness both magical and nonmagical — within 120 feet of yourself.",
+    "plain": "Prerequisite: Level 2+ Warlock\n\nYou can see normally in Dim Light and Darkness both magical and nonmagical — within 120 feet of yourself.",
+    "wording": "srd"
+  },
+  "group": "group:eldritch-invocation",
+  "requires": {
+    "compare": "levels.class:warlock",
+    "atLeast": 2
+  },
+  "effects": [
+    {
+      "type": "see",
+      "range": 120,
+      "dim": "bright",
+      "darkness": "bright",
+      "magicalDarkness": true
+    }
+  ]
+}

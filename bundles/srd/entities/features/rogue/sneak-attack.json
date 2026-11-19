@@ -1,0 +1,144 @@
+{
+  "id": "feature:rogue/sneak-attack",
+  "name": "Sneak Attack",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 1st level, you know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon.\n\nYou don't need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn't Incapacitated, and you don't have disadvantage on the attack roll.\n\nThe amount of the extra damage increases as you gain levels in this class, as shown in the Sneak Attack column of the Rogue table.",
+    "plain": "Beginning at 1st level, you know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon.\n\nYou don't need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn't Incapacitated, and you don't have disadvantage on the attack roll.\n\nThe amount of the extra damage increases as you gain levels in this class, as shown in the Sneak Attack column of the Rogue table.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "sneak-attack",
+      "name": "Sneak Attack",
+      "trigger": {
+        "event": "event:roll-resolved",
+        "by": "self",
+        "subject": {
+          "pool": "any"
+        },
+        "match": {
+          "roll": "roll:attack",
+          "success": true
+        },
+        "when": {
+          "all": [
+            {
+              "any": [
+                {
+                  "event": "event:roll-resolved",
+                  "match": {
+                    "mode": "advantage"
+                  }
+                },
+                {
+                  "all": [
+                    {
+                      "not": {
+                        "event": "event:roll-resolved",
+                        "match": {
+                          "mode": "disadvantage"
+                        }
+                      }
+                    },
+                    {
+                      "creature": "subject",
+                      "where": {
+                        "within": 5,
+                        "of": {
+                          "pool": "enemy",
+                          "of": "subject",
+                          "where": {
+                            "all": [
+                              {
+                                "not": {
+                                  "is": "self"
+                                }
+                              },
+                              {
+                                "not": {
+                                  "has": "condition:incapacitated"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "any": [
+                {
+                  "event": "event:roll-resolved",
+                  "match": {
+                    "attack": {
+                      "via": "weapon",
+                      "item": {
+                        "kind": "item",
+                        "where": {
+                          "match": {
+                            "weapon": {
+                              "properties": "weapon-property:finesse"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "event": "event:roll-resolved",
+                  "match": {
+                    "attack": {
+                      "via": "weapon",
+                      "range": "ranged"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:turn-start",
+              "subject": {
+                "pool": "any"
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "damage": {
+            "amount": {
+              "dice": {
+                "count": {
+                  "divide": "levels.class:rogue",
+                  "by": 2,
+                  "round": "up"
+                },
+                "die": 6
+              }
+            },
+            "type": {
+              "of": "attack"
+            }
+          },
+          "to": "subject"
+        }
+      ]
+    }
+  ]
+}

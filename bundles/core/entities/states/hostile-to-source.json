@@ -1,0 +1,8 @@
+{
+  "id": "state:hostile-to-source",
+  "name": "Hostile to Source",
+  "source": {
+    "book": "core"
+  },
+  "sourceName": "the creature you are hostile to"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "rule:long-rest@2024",
+  "name": "Long Rest",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A Long Rest is a period of extended downtime — at least 8 hours — available to any creature. During a Long Rest, you sleep for at least 6 hours and perform no more than 2 hours of light activity, such as reading, talking, eating, or standing watch.\n\nDuring sleep, you have the Unconscious condition. After you finish a Long Rest, you must wait at least 16 hours before starting another one.\n\n_**Benefits of the Rest.**_ To start a Long Rest, you must have at least 1 Hit Point. When you finish the rest, you gain the following benefits:\n\n- **Regain All HP.** You regain all lost Hit Points and all spent Hit Point Dice. If your Hit Point maximum was reduced, it returns to normal.\n- **Ability Scores Restored.** If any of your ability scores were reduced, they return to normal.\n- **Exhaustion Reduced.** If you have the Exhaustion condition, its level decreases by 1.\n- **Special Feature.** Some features are recharged by a Long Rest. If you have such a feature, it recharges in the way specified in its description.\n\n_**Interrupting the Rest.**_ A Long Rest is stopped by the following interruptions:\n\n- Rolling Initiative\n- Casting a spell other than a cantrip\n- Taking any damage\n- 1 hour of walking or other physical exertion\n\nIf you rested at least 1 hour before the interruption, you gain the benefits of a Short Rest. _See also_ \"Short Rest.\"\n\nYou can resume a Long Rest immediately after an interruption. If you do so, the rest requires 1 additional hour per interruption to finish.",
+    "plain": "A Long Rest is a period of extended downtime — at least 8 hours — available to any creature. During a Long Rest, you sleep for at least 6 hours and perform no more than 2 hours of light activity, such as reading, talking, eating, or standing watch.\n\nDuring sleep, you have the Unconscious condition. After you finish a Long Rest, you must wait at least 16 hours before starting another one.\n\n_Benefits of the Rest._ To start a Long Rest, you must have at least 1 Hit Point. When you finish the rest, you gain the following benefits:\n\n- Regain All HP. You regain all lost Hit Points and all spent Hit Point Dice. If your Hit Point maximum was reduced, it returns to normal.\n- Ability Scores Restored. If any of your ability scores were reduced, they return to normal.\n- Exhaustion Reduced. If you have the Exhaustion condition, its level decreases by 1.\n- Special Feature. Some features are recharged by a Long Rest. If you have such a feature, it recharges in the way specified in its description.\n\n_Interrupting the Rest._ A Long Rest is stopped by the following interruptions:\n\n- Rolling Initiative\n- Casting a spell other than a cantrip\n- Taking any damage\n- 1 hour of walking or other physical exertion\n\nIf you rested at least 1 hour before the interruption, you gain the benefits of a Short Rest. _See also_ \"Short Rest.\"\n\nYou can resume a Long Rest immediately after an interruption. If you do so, the rest requires 1 additional hour per interruption to finish.",
+    "wording": "srd"
+  },
+  "group": "group:adventure",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": [
+        {
+          "event": "event:rest-finished",
+          "match": {
+            "rest": "rest:long"
+          },
+          "subject": "self"
+        }
+      ],
+      "step": {
+        "outcomes": [
+          {
+            "endState": {
+              "state": {
+                "kind": "state",
+                "where": {
+                  "lowers": [
+                    "hp.max",
+                    "abilities.ability:str",
+                    "abilities.ability:dex",
+                    "abilities.ability:con",
+                    "abilities.ability:int",
+                    "abilities.ability:wis",
+                    "abilities.ability:cha"
+                  ]
+                }
+              }
+            },
+            "to": "self"
+          },
+          {
+            "setHp": "hp.max",
+            "to": "self"
+          },
+          {
+            "pool": {
+              "resource": "hit-dice",
+              "add": "levels.total"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "take",
+      "name": "Take a Long Rest",
+      "time": {
+        "amount": 8,
+        "unit": "hour"
+      },
+      "emits": [
+        {
+          "event": "event:rest-finished",
+          "at": "finished",
+          "subject": "self",
+          "fields": {
+            "rest": "rest:long"
+          }
+        }
+      ]
+    }
+  ]
+}

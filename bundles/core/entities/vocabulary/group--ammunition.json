@@ -1,0 +1,10 @@
+{
+  "id": "group:ammunition",
+  "name": "Ammunition",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Arrows, bolts, bullets, needles, and other ammunition a weapon with the Ammunition property fires."
+  }
+}

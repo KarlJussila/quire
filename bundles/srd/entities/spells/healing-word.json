@@ -1,0 +1,36 @@
+{
+  "id": "spell:healing-word",
+  "name": "Healing Word",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.\n\n_**At Higher Levels.**_ When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.",
+    "plain": "A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.\n\nAt Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.",
+    "wording": "srd"
+  },
+  "level": 1,
+  "school": "spell-school:evocation",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:druid"
+  ],
+  "components": {
+    "verbal": true
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "cost": [
+        {
+          "resource": "bonus-action"
+        }
+      ],
+      "range": {
+        "distance": 60
+      },
+      "duration": "instant"
+    }
+  ]
+}

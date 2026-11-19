@@ -1,0 +1,40 @@
+{
+  "id": "feature:monk/stillness-of-mind",
+  "name": "Stillness of Mind",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be Charmed or Frightened.",
+    "plain": "Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be Charmed or Frightened.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "stillness-of-mind",
+      "name": "Stillness of Mind",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "endState": {
+            "state": {
+              "choose": {
+                "key": "condition",
+                "name": "Condition",
+                "from": [
+                  "condition:charmed",
+                  "condition:frightened"
+                ]
+              }
+            }
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ]
+}

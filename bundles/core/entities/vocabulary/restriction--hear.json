@@ -1,0 +1,7 @@
+{
+  "id": "restriction:hear",
+  "name": "Hear",
+  "source": {
+    "book": "core"
+  }
+}

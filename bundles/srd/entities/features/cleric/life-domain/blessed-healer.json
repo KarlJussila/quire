@@ -1,0 +1,85 @@
+{
+  "id": "feature:cleric/life-domain/blessed-healer",
+  "name": "Blessed Healer",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level.",
+    "plain": "Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:healed",
+        "by": "self",
+        "subject": {
+          "pool": "any",
+          "where": {
+            "not": {
+              "is": "self"
+            }
+          }
+        },
+        "when": {
+          "all": [
+            {
+              "spell": {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "level": {
+                      "atLeast": 1
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "event": "event:activity-used",
+              "by": "self",
+              "match": {
+                "spell": true
+              }
+            }
+          ]
+        }
+      },
+      "step": {
+        "outcomes": [
+          {
+            "heal": {
+              "amount": {
+                "sum": [
+                  2,
+                  {
+                    "slotLevel": true
+                  }
+                ]
+              }
+            },
+            "to": "self"
+          }
+        ]
+      },
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:activity-used",
+              "by": "self",
+              "match": {
+                "spell": true
+              }
+            },
+            "amount": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": []
+}

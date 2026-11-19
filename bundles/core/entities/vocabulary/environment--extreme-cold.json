@@ -1,0 +1,10 @@
+{
+  "id": "environment:extreme-cold",
+  "name": "Extreme Cold",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "An exposed creature is in this environment when the temperature is 0 degrees Fahrenheit or lower."
+  }
+}

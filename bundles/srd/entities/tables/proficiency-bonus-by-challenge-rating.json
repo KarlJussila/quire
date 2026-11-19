@@ -1,0 +1,223 @@
+{
+  "id": "table:proficiency-bonus-by-challenge-rating",
+  "name": "Proficiency Bonus by Challenge Rating",
+  "source": {
+    "book": "srd"
+  },
+  "columns": [
+    {
+      "key": "challenge",
+      "name": "Challenge"
+    },
+    {
+      "key": "proficiency-bonus",
+      "name": "Proficiency Bonus"
+    }
+  ],
+  "rows": [
+    {
+      "cells": {
+        "challenge": "0",
+        "proficiency-bonus": "+2"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "1/8",
+        "proficiency-bonus": "+2"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "1/4",
+        "proficiency-bonus": "+2"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "1/2",
+        "proficiency-bonus": "+2"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "1",
+        "proficiency-bonus": "+2"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "2",
+        "proficiency-bonus": "+2"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "3",
+        "proficiency-bonus": "+2"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "4",
+        "proficiency-bonus": "+2"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "5",
+        "proficiency-bonus": "+3"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "6",
+        "proficiency-bonus": "+3"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "7",
+        "proficiency-bonus": "+3"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "8",
+        "proficiency-bonus": "+3"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "9",
+        "proficiency-bonus": "+4"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "10",
+        "proficiency-bonus": "+4"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "11",
+        "proficiency-bonus": "+4"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "12",
+        "proficiency-bonus": "+4"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "13",
+        "proficiency-bonus": "+5"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "14",
+        "proficiency-bonus": "+5"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "15",
+        "proficiency-bonus": "+5"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "16",
+        "proficiency-bonus": "+5"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "17",
+        "proficiency-bonus": "+6"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "18",
+        "proficiency-bonus": "+6"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "19",
+        "proficiency-bonus": "+6"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "20",
+        "proficiency-bonus": "+6"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "21",
+        "proficiency-bonus": "+7"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "22",
+        "proficiency-bonus": "+7"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "23",
+        "proficiency-bonus": "+7"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "24",
+        "proficiency-bonus": "+7"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "25",
+        "proficiency-bonus": "+8"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "26",
+        "proficiency-bonus": "+8"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "27",
+        "proficiency-bonus": "+8"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "28",
+        "proficiency-bonus": "+8"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "29",
+        "proficiency-bonus": "+9"
+      }
+    },
+    {
+      "cells": {
+        "challenge": "30",
+        "proficiency-bonus": "+9"
+      }
+    }
+  ]
+}

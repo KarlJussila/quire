@@ -1,0 +1,123 @@
+{
+  "id": "creature:treant",
+  "name": "Treant",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:huge",
+  "creatureType": "creature-type:plant",
+  "alignment": "alignment:chaotic-good",
+  "ac": 16,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 138,
+    "formula": "12d12 + 60"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 12,
+    "ability:con": 21,
+    "ability:dex": 8,
+    "ability:int": 12,
+    "ability:str": 23,
+    "ability:wis": 16
+  },
+  "passivePerception": 13,
+  "xp": 5000,
+  "cr": 9,
+  "languages": [
+    {
+      "language": "language:common"
+    },
+    {
+      "language": "language:druidic"
+    },
+    {
+      "language": "language:elvish"
+    },
+    {
+      "language": "language:sylvan"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "resist": [
+        "damage-type:bludgeoning",
+        "damage-type:piercing"
+      ]
+    },
+    {
+      "type": "defense",
+      "vulnerable": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "False Appearance",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "While the treant remains motionless, it is indistinguishable from a normal tree.",
+        "plain": "While the treant remains motionless, it is indistinguishable from a normal tree.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Siege Monster",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The treant deals double damage to objects and structures.",
+        "plain": "The treant deals double damage to objects and structures.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The treant makes two slam attacks.",
+        "plain": "The treant makes two slam attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Slam",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +10 to hit, reach 5 ft., one target. _Hit:_ 16 (3d6 + 6) bludgeoning damage.",
+        "plain": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 16 (3d6 + 6) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Rock",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +10 to hit, range 60/180 ft., one target. _Hit:_ 28 (4d10 + 6) bludgeoning damage.",
+        "plain": "Ranged Weapon Attack: +10 to hit, range 60/180 ft., one target. Hit: 28 (4d10 + 6) bludgeoning damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Animate Trees",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option. An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible.",
+        "plain": "The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option. An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

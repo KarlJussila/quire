@@ -1,0 +1,60 @@
+{
+  "id": "item:ring-of-regeneration",
+  "name": "Ring of Regeneration",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing this ring, you regain 1d6 hit points every 10 minutes, provided that you have at least 1 hit point. If you lose a body part, the ring causes the missing part to regrow and return to full functionality after 1d6 + 1 days if you have at least 1 hit point the whole time.",
+    "plain": "While wearing this ring, you regain 1d6 hit points every 10 minutes, provided that you have at least 1 hit point. If you lose a body part, the ring causes the missing part to regrow and return to full functionality after 1d6 + 1 days if you have at least 1 hit point the whole time.",
+    "wording": "srd"
+  },
+  "group": "group:ring",
+  "rarity": "rarity:very-rare",
+  "attunement": true,
+  "effects": [
+    {
+      "type": "triggered",
+      "on": {
+        "event": "event:time-elapsed",
+        "subject": "self",
+        "every": {
+          "amount": 10,
+          "unit": "minute"
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "compare": "hp.current",
+            "atLeast": 1
+          }
+        ]
+      },
+      "step": {
+        "outcomes": [
+          {
+            "heal": {
+              "amount": "1d6"
+            },
+            "to": "self"
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [],
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "SCHEMA LIMIT: The item has no operation to regrow a lost body part and no condition that tracks having at least 1 Hit Point throughout 1d6 + 1 days."
+    }
+  ]
+}

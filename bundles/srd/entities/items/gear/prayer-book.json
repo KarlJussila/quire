@@ -1,0 +1,12 @@
+{
+  "id": "item:prayer-book",
+  "name": "Prayer Book",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "A book of prayers and devotions to a deity.",
+    "wording": "original"
+  },
+  "group": "group:adventuring-gear"
+}

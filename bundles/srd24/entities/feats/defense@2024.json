@@ -1,0 +1,48 @@
+{
+  "id": "feat:defense@2024",
+  "name": "Defense",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you're wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class.",
+    "plain": "While you're wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class.",
+    "wording": "srd"
+  },
+  "group": "group:fighting-style",
+  "requires": {
+    "has": "group:fighting-style-feature"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 1
+        }
+      },
+      "when": {
+        "any": [
+          {
+            "has": "group:light-armor",
+            "match": {
+              "worn": true
+            }
+          },
+          {
+            "has": "group:medium-armor",
+            "match": {
+              "worn": true
+            }
+          },
+          {
+            "has": "group:heavy-armor",
+            "match": {
+              "worn": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

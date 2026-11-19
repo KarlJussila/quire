@@ -1,0 +1,101 @@
+{
+  "id": "feature:sorcerer/distant-spell",
+  "name": "Distant Spell",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you cast a spell that has a range of 5 feet or greater, you can spend 1 sorcery point to double the range of the spell.\n\nWhen you cast a spell that has a range of touch, you can spend 1 sorcery point to make the range of the spell 30 feet.",
+    "plain": "When you cast a spell that has a range of 5 feet or greater, you can spend 1 sorcery point to double the range of the spell.\n\nWhen you cast a spell that has a range of touch, you can spend 1 sorcery point to make the range of the spell 30 feet.",
+    "wording": "srd"
+  },
+  "group": "group:metamagic",
+  "effects": [
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "range": {
+                  "distance": {
+                    "atLeast": 5
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "range": {
+          "distance": {
+            "$multiply": 2
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "distant-range"
+    },
+    {
+      "type": "change",
+      "of": {
+        "kind": "activity",
+        "where": {
+          "all": [
+            {
+              "activity": "cast"
+            },
+            {
+              "spell": {
+                "kind": "spell"
+              }
+            },
+            {
+              "match": {
+                "range": {
+                  "touch": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      "set": {
+        "range": {
+          "$replace": {
+            "distance": 30
+          }
+        },
+        "cost": {
+          "$append": [
+            {
+              "resource": "sorcery-points",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      "variant": "distant-touch"
+    }
+  ],
+  "activities": [],
+  "gaps": []
+}

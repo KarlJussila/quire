@@ -1,0 +1,127 @@
+{
+  "id": "condition:grappled",
+  "name": "Grappled",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "- A Grappled creature's speed becomes 0, and it can't benefit from any bonus to its speed.\n- The condition ends if the grappler is Incapacitated (see the condition).\n- The condition also ends if an effect removes the Grappled creature from the reach of the grappler or grappling effect, such as when a creature is hurled away by the _thunderwave_ spell.",
+    "plain": "A Grappled creature's speed becomes 0, and it can't benefit from any bonus to its speed.\nThe condition ends if the grappler is Incapacitated (see the condition).\nThe condition also ends if an effect removes the Grappled creature from the reach of the grappler or grappling effect, such as when a creature is hurled away by the thunderwave spell.",
+    "wording": "srd"
+  },
+  "sourceName": "the grappler",
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "$where": true,
+          "speed": {
+            "$replace": 0
+          }
+        }
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "$where": true,
+          "speed": {
+            "$multiply": 0.5
+          }
+        }
+      },
+      "to": "source",
+      "when": {
+        "all": [
+          {
+            "prose": {
+              "text": "dragging",
+              "gap": {
+                "category": "test",
+                "name": "dragging"
+              }
+            }
+          },
+          {
+            "not": {
+              "match": {
+                "size": {
+                  "atMost": {
+                    "of": "source",
+                    "steps": -2
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "key": "escape",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "target": {
+        "who": "source"
+      },
+      "delivery": {
+        "contest": {
+          "self": {
+            "choose": {
+              "key": "check",
+              "name": "Which Check",
+              "from": [
+                {
+                  "ability": "ability:str",
+                  "skill": "skill:athletics"
+                },
+                {
+                  "ability": "ability:dex",
+                  "skill": "skill:acrobatics"
+                }
+              ]
+            }
+          },
+          "target": {
+            "ability": "ability:str",
+            "skill": "skill:athletics"
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "endState": {
+            "state": "condition:grappled"
+          },
+          "to": "self"
+        }
+      ]
+    }
+  ],
+  "ends": [
+    {
+      "event": "event:state-applied",
+      "match": {
+        "state": "condition:incapacitated"
+      },
+      "subject": "source"
+    },
+    {
+      "event": "event:moved",
+      "subject": "self",
+      "when": {
+        "not": {
+          "within": "source.reach",
+          "of": "source"
+        }
+      }
+    }
+  ]
+}

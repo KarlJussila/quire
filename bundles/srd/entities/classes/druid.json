@@ -1,0 +1,61 @@
+{
+  "id": "class:druid",
+  "name": "Druid",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a druid, you gain the following class features.",
+    "plain": "As a druid, you gain the following class features.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d8",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:wis",
+      "atLeast": 13
+    },
+    "features": [
+      "feature:druid/multiclass-proficiencies"
+    ]
+  },
+  "levels": {
+    "1": [
+      "feature:druid/druidic",
+      "feature:druid/spellcasting"
+    ],
+    "12": [
+      "feature:ability-score-improvement"
+    ],
+    "16": [
+      "feature:ability-score-improvement"
+    ],
+    "18": [
+      "feature:druid/beast-spells",
+      "feature:druid/timeless-body"
+    ],
+    "19": [
+      "feature:ability-score-improvement"
+    ],
+    "2": [
+      "feature:druid/druid-circle",
+      "feature:druid/wild-shape"
+    ],
+    "20": [
+      "feature:druid/archdruid"
+    ],
+    "4": [
+      "feature:ability-score-improvement"
+    ],
+    "8": [
+      "feature:ability-score-improvement"
+    ]
+  },
+  "subclass": {
+    "level": 2,
+    "title": "Druid Circle"
+  },
+  "firstClass": [
+    "feature:druid/proficiencies"
+  ]
+}

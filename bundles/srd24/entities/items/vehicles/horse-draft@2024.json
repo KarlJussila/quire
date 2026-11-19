@@ -1,0 +1,17 @@
+{
+  "id": "item:horse-draft@2024",
+  "name": "Horse, Draft",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:vehicle",
+  "cost": {
+    "amount": 50,
+    "currency": "currency:gp"
+  },
+  "weight": 0.0
+}

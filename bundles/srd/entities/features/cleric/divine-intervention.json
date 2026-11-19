@@ -1,0 +1,49 @@
+{
+  "id": "feature:cleric/divine-intervention",
+  "name": "Divine Intervention",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Beginning at 10th level, you can call on your deity to intervene on your behalf when your need is great.\n\nImploring your deity's aid requires you to use your action. Describe the assistance you seek, and roll percentile dice. If you roll a number equal to or lower than your cleric level, your deity intervenes. The GM chooses the nature of the intervention; the effect of any cleric spell or cleric domain spell would be appropriate.\n\nIf your deity intervenes, you can't use this feature again for 7 days. Otherwise, you can use it again after you finish a long rest.\n\nAt 20th level, your call for intervention succeeds automatically, no roll required.",
+    "plain": "Beginning at 10th level, you can call on your deity to intervene on your behalf when your need is great.\n\nImploring your deity's aid requires you to use your action. Describe the assistance you seek, and roll percentile dice. If you roll a number equal to or lower than your cleric level, your deity intervenes. The GM chooses the nature of the intervention; the effect of any cleric spell or cleric domain spell would be appropriate.\n\nIf your deity intervenes, you can't use this feature again for 7 days. Otherwise, you can use it again after you finish a long rest.\n\nAt 20th level, your call for intervention succeeds automatically, no roll required.",
+    "wording": "srd"
+  },
+  "activities": [
+    {
+      "key": "divine-intervention",
+      "name": "Divine Intervention",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "uses": {
+        "max": 1,
+        "recover": [
+          {
+            "on": {
+              "event": "event:rest-finished",
+              "match": {
+                "rest": "rest:long"
+              },
+              "subject": "self"
+            },
+            "amount": "all"
+          }
+        ]
+      },
+      "outcomes": [
+        {
+          "prose": {
+            "text": "Roll percentile dice. If the result is equal to or lower than your cleric level, your deity intervenes: the DM chooses the effect, and you can't use this again for 7 days. At 20th level, the intervention succeeds with no roll.",
+            "gap": {
+              "category": "activity",
+              "name": "call on your deity"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

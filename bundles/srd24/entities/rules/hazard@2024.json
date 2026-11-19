@@ -1,0 +1,18 @@
+{
+  "id": "rule:hazard@2024",
+  "name": "Hazard",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "A hazard is an environmental danger. _See also_ \"Burning,\" \"Dehydration,\" \"Falling,\" \"Malnutrition,\" and \"Suffocation.\"",
+    "plain": "A hazard is an environmental danger. See also \"Burning,\" \"Dehydration,\" \"Falling,\" \"Malnutrition,\" and \"Suffocation.\"",
+    "wording": "srd"
+  },
+  "gaps": [
+    {
+      "category": "rule-text",
+      "name": "This reference rule is retained as text; its procedures are not encoded here."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "class:sorcerer",
+  "name": "Sorcerer",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "As a sorcerer, you gain the following class features.",
+    "plain": "As a sorcerer, you gain the following class features.",
+    "wording": "srd"
+  },
+  "hitDie": "hit-die:d6",
+  "multiclass": {
+    "requires": {
+      "compare": "abilities.ability:cha",
+      "atLeast": 13
+    }
+  },
+  "levels": {
+    "1": [
+      "feature:sorcerer/sorcerous-origin",
+      "feature:sorcerer/spellcasting"
+    ],
+    "12": [
+      "feature:ability-score-improvement"
+    ],
+    "16": [
+      "feature:ability-score-improvement"
+    ],
+    "19": [
+      "feature:ability-score-improvement"
+    ],
+    "2": [
+      "feature:sorcerer/font-of-magic"
+    ],
+    "20": [
+      "feature:sorcerer/sorcerous-restoration"
+    ],
+    "3": [
+      "feature:sorcerer/metamagic"
+    ],
+    "4": [
+      "feature:ability-score-improvement"
+    ],
+    "8": [
+      "feature:ability-score-improvement"
+    ]
+  },
+  "subclass": {
+    "level": 1,
+    "title": "Sorcerous Origin"
+  },
+  "firstClass": [
+    "feature:sorcerer/proficiencies"
+  ]
+}

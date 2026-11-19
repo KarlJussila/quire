@@ -1,0 +1,71 @@
+{
+  "id": "creature:mage",
+  "name": "Mage",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any",
+  "ac": 12,
+  "acFrom": [
+    "15 with mage armor"
+  ],
+  "hp": {
+    "average": 40,
+    "formula": "9d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 11,
+    "ability:con": 11,
+    "ability:dex": 14,
+    "ability:int": 17,
+    "ability:str": 9,
+    "ability:wis": 12
+  },
+  "saves": {
+    "ability:int": 6,
+    "ability:wis": 4
+  },
+  "skills": {
+    "skill:arcana": 6,
+    "skill:history": 6
+  },
+  "passivePerception": 11,
+  "xp": 2300,
+  "cr": 6,
+  "languages": [
+    {
+      "text": "any four languages"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The mage has the following wizard spells prepared:\n\n- Cantrips (at will): Fire Bolt, Light, Mage Hand, Prestidigitation\n- 1st level (4 slots): Detect Magic, Mage Armor, Magic Missile, Shield\n- 2nd level (3 slots): Misty Step, Suggestion\n- 3rd level (3 slots): Counterspell, Fireball, Fly\n- 4th level (3 slots): Greater Invisibility, Ice Storm\n- 5th level (1 slot): Cone of Cold",
+        "plain": "The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The mage has the following wizard spells prepared:\n\n- Cantrips (at will): Fire Bolt, Light, Mage Hand, Prestidigitation\n- 1st level (4 slots): Detect Magic, Mage Armor, Magic Missile, Shield\n- 2nd level (3 slots): Misty Step, Suggestion\n- 3rd level (3 slots): Counterspell, Fireball, Fly\n- 4th level (3 slots): Greater Invisibility, Ice Storm\n- 5th level (1 slot): Cone of Cold",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Dagger",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee or Ranged Weapon Attack:_ +5 to hit, reach 5 ft. or range 20/60 ft., one target. _Hit:_ 4 (1d4 + 2) piercing damage.",
+        "plain": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "item:rod-of-resurrection@2024",
+  "name": "Rod of Resurrection",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "The rod has 5 charges. While you hold it, you can cast one of the following spells from it: Heal (expends 1 charge) or Resurrection (expends 5 charges).\n\nThe rod regains 1 expended charge daily at dawn. If you expend the last charge, roll 1d20. On a 1, the rod disappears in a harmless burst of radiance.",
+    "plain": "The rod has 5 charges. While you hold it, you can cast one of the following spells from it: Heal (expends 1 charge) or Resurrection (expends 5 charges).\n\nThe rod regains 1 expended charge daily at dawn. If you expend the last charge, roll 1d20. On a 1, the rod disappears in a harmless burst of radiance.",
+    "wording": "srd"
+  },
+  "group": "group:rod",
+  "rarity": "rarity:legendary",
+  "attunement": true
+}

@@ -1,0 +1,17 @@
+{
+  "id": "item:sled@2024",
+  "name": "Sled",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:vehicle",
+  "cost": {
+    "amount": 20,
+    "currency": "currency:gp"
+  },
+  "weight": 300.0
+}

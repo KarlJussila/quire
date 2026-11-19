@@ -1,0 +1,7 @@
+{
+  "id": "restriction:see",
+  "name": "See",
+  "source": {
+    "book": "core"
+  }
+}

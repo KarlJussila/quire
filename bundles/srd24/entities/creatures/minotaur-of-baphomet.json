@@ -1,0 +1,77 @@
+{
+  "id": "creature:minotaur-of-baphomet@2024",
+  "name": "Minotaur of Baphomet",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:monstrosity",
+  "alignment": "alignment:chaotic-evil",
+  "ac": 14,
+  "hp": {
+    "average": 85,
+    "formula": "10d10 + 30"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    }
+  },
+  "abilities": {
+    "ability:cha": 9,
+    "ability:con": 16,
+    "ability:dex": 11,
+    "ability:int": 6,
+    "ability:str": 18,
+    "ability:wis": 16
+  },
+  "skills": {
+    "skill:perception": 7,
+    "skill:survival": 7
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 60
+    }
+  },
+  "passivePerception": 17,
+  "xp": 700,
+  "proficiencyBonus": 2,
+  "initiative": 0,
+  "habitat": [
+    "Underdark"
+  ],
+  "treasure": [
+    "Armaments"
+  ],
+  "cr": 3,
+  "languages": [
+    {
+      "language": "language:abyssal"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Abyssal Glaive",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 10 ft. _Hit:_ 10 (1d12 + 4) Slashing damage plus 10 (3d6) Necrotic damage.",
+        "plain": "Melee Attack Roll: +6, reach 10 ft. Hit: 10 (1d12 + 4) Slashing damage plus 10 (3d6) Necrotic damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Gore",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Attack Roll:_ +6, reach 5 ft. _Hit:_ 18 (4d6 + 4) Piercing damage. If the target is a Large or smaller creature and the minotaur moved 10+ feet straight toward it immediately before the hit, the target takes an extra 10 (3d6) Piercing damage and has the Prone condition.",
+        "plain": "Melee Attack Roll: +6, reach 5 ft. Hit: 18 (4d6 + 4) Piercing damage. If the target is a Large or smaller creature and the minotaur moved 10+ feet straight toward it immediately before the hit, the target takes an extra 10 (3d6) Piercing damage and has the Prone condition.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

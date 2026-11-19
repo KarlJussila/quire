@@ -1,0 +1,96 @@
+{
+  "id": "creature:spy",
+  "name": "Spy",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:medium",
+  "creatureType": "creature-type:humanoid",
+  "alignment": "alignment:any",
+  "ac": 12,
+  "hp": {
+    "average": 27,
+    "formula": "6d8"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 16,
+    "ability:con": 10,
+    "ability:dex": 15,
+    "ability:int": 12,
+    "ability:str": 10,
+    "ability:wis": 14
+  },
+  "skills": {
+    "skill:deception": 5,
+    "skill:insight": 4,
+    "skill:investigation": 5,
+    "skill:perception": 6,
+    "skill:persuasion": 5,
+    "skill:sleight-of-hand": 4,
+    "skill:stealth": 4
+  },
+  "passivePerception": 16,
+  "xp": 200,
+  "cr": 1,
+  "languages": [
+    {
+      "text": "any two languages"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Cunning Action",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "On each of its turns, the spy can use a bonus action to take the Dash, Disengage, or Hide action.",
+        "plain": "On each of its turns, the spy can use a bonus action to take the Dash, Disengage, or Hide action.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Sneak Attack (1/Turn)",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The spy deals an extra 7 (2d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the spy that isn't Incapacitated and the spy doesn't have disadvantage on the attack roll.",
+        "plain": "The spy deals an extra 7 (2d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the spy that isn't Incapacitated and the spy doesn't have disadvantage on the attack roll.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The spy makes two melee attacks.",
+        "plain": "The spy makes two melee attacks.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Shortsword",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +4 to hit, reach 5 ft., one target. _Hit:_ 5 (1d6 + 2) piercing damage.",
+        "plain": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hand Crossbow",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Ranged Weapon Attack:_ +4 to hit, range 30/120 ft., one target. _Hit:_ 5 (1d6 + 2) piercing damage.",
+        "plain": "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

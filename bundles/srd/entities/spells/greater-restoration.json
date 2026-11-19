@@ -1,0 +1,50 @@
+{
+  "id": "spell:greater-restoration",
+  "name": "Greater Restoration",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "You imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target's Exhaustion level by one, or end one of the following effects on the target:\n\n- One effect that Charmed or Petrified the target\n- One curse, including the target's attunement to a cursed magic item\n- Any reduction to one of the target's ability scores\n- One effect reducing the target's hit point maximum",
+    "plain": "You imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target's Exhaustion level by one, or end one of the following effects on the target:\n\n- One effect that Charmed or Petrified the target\n- One curse, including the target's attunement to a cursed magic item\n- Any reduction to one of the target's ability scores\n- One effect reducing the target's hit point maximum",
+    "wording": "srd"
+  },
+  "level": 5,
+  "school": "spell-school:abjuration",
+  "lists": [
+    "class:bard",
+    "class:cleric",
+    "class:druid"
+  ],
+  "components": {
+    "verbal": true,
+    "somatic": true,
+    "material": {
+      "text": "diamond dust worth 100 gp, which the spell consumes",
+      "parts": [
+        {
+          "worth": {
+            "amount": 100,
+            "currency": "currency:gp"
+          },
+          "consumed": true
+        }
+      ]
+    }
+  },
+  "activities": [
+    {
+      "key": "cast",
+      "action": "action:cast-a-spell",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "range": {
+        "touch": true
+      },
+      "duration": "instant"
+    }
+  ]
+}

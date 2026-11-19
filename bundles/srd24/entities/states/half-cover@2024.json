@@ -1,0 +1,34 @@
+{
+  "id": "state:half-cover@2024",
+  "name": "Half Cover",
+  "source": {
+    "book": "core"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "ac": {
+          "$add": 2
+        }
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 2
+        }
+      },
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": "ability:dex"
+        }
+      }
+    }
+  ]
+}

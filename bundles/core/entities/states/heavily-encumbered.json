@@ -1,0 +1,40 @@
+{
+  "id": "state:heavily-encumbered",
+  "name": "Heavily Encumbered",
+  "source": {
+    "book": "core"
+  },
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "speeds": {
+          "$where": true,
+          "speed": {
+            "$add": -20
+          }
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "disadvantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": [
+            "roll:check",
+            "roll:attack",
+            "roll:save"
+          ],
+          "ability": [
+            "ability:str",
+            "ability:dex",
+            "ability:con"
+          ]
+        }
+      }
+    }
+  ]
+}

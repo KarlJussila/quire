@@ -1,0 +1,24 @@
+{
+  "id": "item:truth-serum@2024",
+  "name": "Truth Serum",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** 150 GP\n\n_Ingested Poison_\n\nA creature subjected to Truth Serum must succeed on a DC 11 Constitution saving throw or have the Poisoned condition for 1 hour. The Poisoned creature can't knowingly communicate a lie.",
+    "plain": "Cost: 150 GP\n\nIngested Poison\n\nA creature subjected to Truth Serum must succeed on a DC 11 Constitution saving throw or have the Poisoned condition for 1 hour. The Poisoned creature can't knowingly communicate a lie.",
+    "wording": "srd"
+  },
+  "group": "group:poison",
+  "cost": {
+    "amount": 150,
+    "currency": "currency:gp"
+  },
+  "weight": 0.5,
+  "gaps": [
+    {
+      "category": "item-mechanics",
+      "name": "Poison exposure and its timed effects are retained in the SRD text."
+    }
+  ]
+}

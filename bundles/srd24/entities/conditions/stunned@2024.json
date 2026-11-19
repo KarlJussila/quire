@@ -1,0 +1,46 @@
+{
+  "id": "condition:stunned@2024",
+  "name": "Stunned",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "While you have the Stunned condition, you experience the following effects.\n\n_**Incapacitated.**_ You have the Incapacitated condition.\n\n_**Saving Throws Affected.**_ You automatically fail Strength and Dexterity saving throws.\n\n_**Attacks Affected.**_ Attack rolls against you have Advantage.",
+    "plain": "While you have the Stunned condition, you experience the following effects.\n\nIncapacitated. You have the Incapacitated condition.\n\nSaving Throws Affected. You automatically fail Strength and Dexterity saving throws.\n\nAttacks Affected. Attack rolls against you have Advantage.",
+    "wording": "srd"
+  },
+  "implies": [
+    "condition:incapacitated"
+  ],
+  "effects": [
+    {
+      "type": "forced-result",
+      "success": false,
+      "when": {
+        "event": "event:roll-made",
+        "by": "self",
+        "match": {
+          "roll": "roll:save",
+          "ability": [
+            "ability:str",
+            "ability:dex"
+          ]
+        }
+      }
+    },
+    {
+      "type": "roll-mod",
+      "mode": "advantage",
+      "when": {
+        "event": "event:roll-made",
+        "by": {
+          "pool": "any"
+        },
+        "subject": "self",
+        "match": {
+          "roll": "roll:attack"
+        }
+      }
+    }
+  ]
+}

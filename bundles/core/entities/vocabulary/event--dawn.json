@@ -1,0 +1,11 @@
+{
+  "id": "event:dawn",
+  "name": "Dawn",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "Dawn each day. Magic items that regain charges \"daily at dawn\" recover on it. No clock is kept yet: the event fires when the table says dawn has come."
+  },
+  "emittedBy": "engine"
+}

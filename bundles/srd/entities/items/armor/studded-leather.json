@@ -1,0 +1,26 @@
+{
+  "id": "item:studded-leather",
+  "name": "Studded Leather",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "Made from tough but flexible leather, studded leather is reinforced with close-set rivets or spikes.",
+    "plain": "Made from tough but flexible leather, studded leather is reinforced with close-set rivets or spikes.",
+    "wording": "srd"
+  },
+  "group": "group:light-armor",
+  "cost": {
+    "amount": 45,
+    "currency": "currency:gp"
+  },
+  "weight": 13.0,
+  "armor": {
+    "ac": {
+      "sum": [
+        12,
+        "modifiers.ability:dex"
+      ]
+    }
+  }
+}

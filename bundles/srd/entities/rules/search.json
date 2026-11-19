@@ -1,0 +1,34 @@
+{
+  "id": "rule:search",
+  "name": "Search",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the GM might have you make a Wisdom (Perception) check or an Intelligence (Investigation) check.",
+    "plain": "When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the GM might have you make a Wisdom (Perception) check or an Intelligence (Investigation) check.",
+    "wording": "srd"
+  },
+  "group": "group:combat",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "activities": [
+    {
+      "key": "search",
+      "action": "action:search",
+      "cost": [
+        {
+          "resource": "action"
+        }
+      ],
+      "outcomes": [
+        {
+          "prose": {
+            "text": "The DM might call for a Wisdom (Perception) or Intelligence (Investigation) check."
+          }
+        }
+      ]
+    }
+  ]
+}

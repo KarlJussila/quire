@@ -1,0 +1,18 @@
+{
+  "id": "item:tinkers-tools@2024",
+  "name": "Tinker’s Tools",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "- **Cost:** 50 GP\n- **Ability:** Dexterity\n- **Weight:** 10 lb.\n- **Utilize:** Assemble a Tiny item composed of scrap, which falls apart in 1 minute (DC 20)\n- **Craft:** Musket, Pistol, Bell, Bullseye Lantern, Flask, Hooded Lantern, Hunting Trap, Lock, Manacles, Mirror, Shovel, Signal Whistle, Tinderbox",
+    "plain": "- Cost: 50 GP\n- Ability: Dexterity\n- Weight: 10 lb.\n- Utilize: Assemble a Tiny item composed of scrap, which falls apart in 1 minute (DC 20)\n- Craft: Musket, Pistol, Bell, Bullseye Lantern, Flask, Hooded Lantern, Hunting Trap, Lock, Manacles, Mirror, Shovel, Signal Whistle, Tinderbox",
+    "wording": "srd"
+  },
+  "group": "group:artisan-tools",
+  "cost": {
+    "amount": 50,
+    "currency": "currency:gp"
+  },
+  "weight": 10.0
+}

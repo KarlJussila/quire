@@ -1,0 +1,17 @@
+{
+  "id": "item:herbalism-kit@2024",
+  "name": "Herbalism Kit",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:tools",
+  "cost": {
+    "amount": 5,
+    "currency": "currency:gp"
+  },
+  "weight": 3.0
+}

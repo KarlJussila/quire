@@ -1,0 +1,11 @@
+{
+  "id": "event:day-ended",
+  "name": "Day Ended",
+  "source": {
+    "book": "core"
+  },
+  "text": {
+    "plain": "The end of a day. Rules read what the subject ate and drank that day as traits: ate-full-ration, ate-less-than-half-food, ate-nothing-today, drank-half-water, drank-less-than-half-water."
+  },
+  "emittedBy": "engine"
+}

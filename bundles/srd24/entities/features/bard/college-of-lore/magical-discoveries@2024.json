@@ -1,0 +1,61 @@
+{
+  "id": "feature:bard/college-of-lore/magical-discoveries@2024",
+  "name": "Level 6: Magical Discoveries",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You learn two spells of your choice. These spells can come from the Cleric, Druid, or Wizard spell list or any combination thereof (see a class's section for its spell list). A spell you choose must be a cantrip or a spell for which you have spell slots, as shown in the Bard Features table.\n\nYou always have the chosen spells prepared, and whenever you gain a Bard level, you can replace one of the spells with another spell that meets these requirements.",
+    "plain": "You learn two spells of your choice. These spells can come from the Cleric, Druid, or Wizard spell list or any combination thereof (see a class's section for its spell list). A spell you choose must be a cantrip or a spell for which you have spell slots, as shown in the Bard Features table.\n\nYou always have the chosen spells prepared, and whenever you gain a Bard level, you can replace one of the spells with another spell that meets these requirements.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "spell-access",
+      "spells": [
+        {
+          "choose": {
+            "key": "magical-discoveries",
+            "name": "Magical Discoveries",
+            "count": 2,
+            "from": [
+              {
+                "kind": "spell",
+                "where": {
+                  "match": {
+                    "lists": [
+                      "class:cleric",
+                      "class:druid",
+                      "class:wizard"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "how": "prepared"
+    }
+  ],
+  "activities": [
+    {
+      "key": "replace-magical-discoveries",
+      "name": "Replace Magical Discoveries",
+      "trigger": {
+        "event": "event:level-gained",
+        "subject": "self",
+        "match": {
+          "class": "class:bard"
+        }
+      },
+      "outcomes": [
+        {
+          "replace": {
+            "choice": "magical-discoveries"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+ "id": "feature:parts",
+ "name": "parts",
+ "source": {
+  "book": "edition-user"
+ },
+ "features": [
+  "feature:only-2024"
+ ]
+}

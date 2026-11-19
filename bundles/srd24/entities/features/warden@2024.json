@@ -1,0 +1,27 @@
+{
+  "id": "feature:warden@2024",
+  "name": "Warden",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "Trained for battle, you gain proficiency with Martial weapons and training with Medium armor.",
+    "plain": "Trained for battle, you gain proficiency with Martial weapons and training with Medium armor.",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:martial-weapon"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        "group:medium-armor"
+      ]
+    }
+  ],
+  "gaps": []
+}

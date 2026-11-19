@@ -1,0 +1,21 @@
+{
+  "id": "item:needle@2024",
+  "name": "Needle",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "**Cost:** Varies\n\nAmmunition is required by a weapon that has the Ammunition property. A weapon's description specifies the type of ammunition used by the weapon. The table lists the different types and the amount you get when you buy them. The table also lists the item that is typically used to store each type; storage must be bought separately.\n\n| Type             |   Amount | Storage   | Weight    | Cost   |\n|------------------|----------|-----------|-----------|--------|\n| Arrows           |       20 | Quiver    | 1 lb.     | 1 GP   |\n| Bolts            |       20 | Case      | 1 1/2 lb. | 1 GP   |\n| Bullets, Firearm |       10 | Pouch     | 2 lb.     | 3 GP   |\n| Bullets, Sling   |       20 | Pouch     | 1 1/2 lb. | 4 CP   |\n| Needles          |       50 | Pouch     | 1 lb.     | 1 GP   |",
+    "plain": "Cost: Varies\n\nAmmunition is required by a weapon that has the Ammunition property. A weapon's description specifies the type of ammunition used by the weapon. The table lists the different types and the amount you get when you buy them. The table also lists the item that is typically used to store each type; storage must be bought separately.\n\n| Type             |   Amount | Storage   | Weight    | Cost   |\n|------------------|----------|-----------|-----------|--------|\n| Arrows           |       20 | Quiver    | 1 lb.     | 1 GP   |\n| Bolts            |       20 | Case      | 1 1/2 lb. | 1 GP   |\n| Bullets, Firearm |       10 | Pouch     | 2 lb.     | 3 GP   |\n| Bullets, Sling   |       20 | Pouch     | 1 1/2 lb. | 4 CP   |\n| Needles          |       50 | Pouch     | 1 lb.     | 1 GP   |",
+    "wording": "srd"
+  },
+  "group": [
+    "group:adventuring-gear",
+    "group:ammunition"
+  ],
+  "cost": {
+    "amount": 2,
+    "currency": "currency:cp"
+  },
+  "weight": 0.02
+}

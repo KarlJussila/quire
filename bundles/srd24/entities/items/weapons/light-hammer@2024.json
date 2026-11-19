@@ -1,0 +1,32 @@
+{
+  "id": "item:light-hammer@2024",
+  "name": "Light Hammer",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "group": "group:simple-melee-weapon",
+  "cost": {
+    "amount": 2,
+    "currency": "currency:gp"
+  },
+  "weight": 2.0,
+  "weapon": {
+    "properties": [
+      "weapon-property:light",
+      "weapon-property:thrown"
+    ],
+    "damage": {
+      "amount": "1d4",
+      "type": "damage-type:bludgeoning"
+    },
+    "mastery": "weapon-mastery:nick",
+    "range": {
+      "long": 60,
+      "normal": 20
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "feature:stand-against-the-tide",
+  "name": "Stand Against the Tide",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice.",
+    "plain": "When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice.",
+    "wording": "srd"
+  }
+}

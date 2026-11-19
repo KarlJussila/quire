@@ -1,0 +1,116 @@
+{
+  "id": "item:gloves-of-swimming-and-climbing",
+  "name": "Gloves of Swimming and Climbing",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "formatted": "While wearing these gloves, climbing and swimming don't cost you extra movement, and you gain a +5 bonus to Strength (Athletics) checks made to climb or swim.",
+    "plain": "While wearing these gloves, climbing and swimming don't cost you extra movement, and you gain a +5 bonus to Strength (Athletics) checks made to climb or swim.",
+    "wording": "srd"
+  },
+  "group": "group:wondrous-item",
+  "rarity": "rarity:uncommon",
+  "attunement": true,
+  "weight": 0,
+  "effects": [
+    {
+      "type": "change",
+      "set": {
+        "movementCosts": {
+          "movement-mode:climb": {
+            "$add": -1
+          }
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "not": {
+              "match": {
+                "speeds": {
+                  "movement-mode:climb": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "set": {
+        "movementCosts": {
+          "movement-mode:swim": {
+            "$add": -1
+          }
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "not": {
+              "match": {
+                "speeds": {
+                  "movement-mode:swim": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "change",
+      "of": "event",
+      "set": {
+        "total": {
+          "$add": 5
+        }
+      },
+      "when": {
+        "all": [
+          {
+            "event": "event:roll-made",
+            "by": "self",
+            "match": {
+              "roll": "roll:check",
+              "ability": "ability:str",
+              "skill": "skill:athletics"
+            }
+          },
+          {
+            "has": "this",
+            "match": {
+              "attuned": true,
+              "worn": true
+            }
+          },
+          {
+            "prose": {
+              "text": "climbing or swimming check",
+              "gap": {
+                "category": "test",
+                "name": "climbing-or-swimming-check"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

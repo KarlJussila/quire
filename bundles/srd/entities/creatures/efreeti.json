@@ -1,0 +1,111 @@
+{
+  "id": "creature:efreeti",
+  "name": "Efreeti",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:large",
+  "creatureType": "creature-type:elemental",
+  "alignment": "alignment:lawful-evil",
+  "ac": 17,
+  "acFrom": [
+    "natural armor"
+  ],
+  "hp": {
+    "average": 200,
+    "formula": "16d10 + 112"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 40
+    },
+    "movement-mode:fly": {
+      "speed": 60
+    }
+  },
+  "abilities": {
+    "ability:cha": 16,
+    "ability:con": 24,
+    "ability:dex": 12,
+    "ability:int": 16,
+    "ability:str": 22,
+    "ability:wis": 15
+  },
+  "saves": {
+    "ability:cha": 7,
+    "ability:int": 7,
+    "ability:wis": 6
+  },
+  "senses": {
+    "sense:darkvision": {
+      "range": 120
+    }
+  },
+  "passivePerception": 12,
+  "xp": 7200,
+  "cr": 11,
+  "languages": [
+    {
+      "language": "language:ignan"
+    }
+  ],
+  "effects": [
+    {
+      "type": "defense",
+      "immune": [
+        "damage-type:fire"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Elemental Demise",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "If the efreeti dies, its body disintegrates in a flash of fire and puff of smoke, leaving behind only equipment the efreeti was wearing or carrying.",
+        "plain": "If the efreeti dies, its body disintegrates in a flash of fire and puff of smoke, leaving behind only equipment the efreeti was wearing or carrying.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Innate Spellcasting",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The efreeti's innate spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\n\n- At will: Detect Magic\n- 3/day: Enlarge/Reduce, Tongues\n- 1/day each: Conjure Elemental (fire elemental only), Gaseous Form, Invisibility, Major Image, Plane Shift, Wall of Fire",
+        "plain": "The efreeti's innate spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\n\n- At will: Detect Magic\n- 3/day: Enlarge/Reduce, Tongues\n- 1/day each: Conjure Elemental (fire elemental only), Gaseous Form, Invisibility, Major Image, Plane Shift, Wall of Fire",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Multiattack",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "The efreeti makes two scimitar attacks or uses its Hurl Flame twice.",
+        "plain": "The efreeti makes two scimitar attacks or uses its Hurl Flame twice.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Scimitar",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +10 to hit, reach 5 ft., one target. _Hit:_ 13 (2d6 + 6) slashing damage plus 7 (2d6) fire damage.",
+        "plain": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage plus 7 (2d6) fire damage.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Hurl Flame",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "Ranged Spell Attack:_ +7 to hit, range 120 ft., one target. _Hit:_ 17 (5d6) fire damage.",
+        "plain": "Ranged Spell Attack: +7 to hit, range 120 ft., one target. Hit:_ 17 (5d6) fire damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

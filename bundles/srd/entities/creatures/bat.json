@@ -1,0 +1,72 @@
+{
+  "id": "creature:bat",
+  "name": "Bat",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "",
+    "wording": "srd"
+  },
+  "size": "size:tiny",
+  "creatureType": "creature-type:beast",
+  "alignment": "alignment:unaligned",
+  "ac": 12,
+  "hp": {
+    "average": 1,
+    "formula": "1d4 - 1"
+  },
+  "speeds": {
+    "movement-mode:walk": {
+      "speed": 5
+    },
+    "movement-mode:fly": {
+      "speed": 30
+    }
+  },
+  "abilities": {
+    "ability:cha": 4,
+    "ability:con": 8,
+    "ability:dex": 15,
+    "ability:int": 2,
+    "ability:str": 2,
+    "ability:wis": 12
+  },
+  "senses": {
+    "sense:blindsight": {
+      "range": 60
+    }
+  },
+  "passivePerception": 11,
+  "xp": 10,
+  "cr": 0,
+  "blocks": [
+    {
+      "name": "Echolocation",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The bat can't use its blindsight while Deafened.",
+        "plain": "The bat can't use its blindsight while Deafened.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Keen Hearing",
+      "section": "stat-block-section:trait",
+      "text": {
+        "formatted": "The bat has advantage on Wisdom (Perception) checks that rely on hearing.",
+        "plain": "The bat has advantage on Wisdom (Perception) checks that rely on hearing.",
+        "wording": "srd"
+      }
+    },
+    {
+      "name": "Bite",
+      "section": "stat-block-section:action",
+      "text": {
+        "formatted": "_Melee Weapon Attack:_ +0 to hit, reach 5 ft., one creature. _Hit:_ 1 piercing damage.",
+        "plain": "Melee Weapon Attack: +0 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
+        "wording": "srd"
+      }
+    }
+  ]
+}

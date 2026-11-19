@@ -1,0 +1,44 @@
+{
+  "id": "feature:rogue/multiclass-proficiencies",
+  "name": "Multiclass Proficiencies",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Proficiencies Gained: Light armor, one skill from the class's skill list, thieves' tools",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "group:light-armor",
+        "item:thieves-tools"
+      ]
+    },
+    {
+      "type": "proficiency",
+      "in": [
+        {
+          "choose": {
+            "key": "skill",
+            "name": "Skill Proficiency",
+            "from": [
+              "skill:acrobatics",
+              "skill:athletics",
+              "skill:deception",
+              "skill:insight",
+              "skill:intimidation",
+              "skill:investigation",
+              "skill:perception",
+              "skill:performance",
+              "skill:persuasion",
+              "skill:sleight-of-hand",
+              "skill:stealth"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

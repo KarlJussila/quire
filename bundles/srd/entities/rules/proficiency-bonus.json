@@ -1,0 +1,18 @@
+{
+  "id": "rule:proficiency-bonus",
+  "name": "Proficiency Bonus",
+  "source": {
+    "book": "srd"
+  },
+  "text": {
+    "plain": "Characters have a proficiency bonus determined by level. Monsters also have this bonus, which is incorporated in their stat blocks. The bonus is used in the rules on ability checks, saving throws, and attack rolls.\n\nYour proficiency bonus can't be added to a single die roll or other number more than once. For example, if two different rules say you can add your proficiency bonus to a Wisdom saving throw, you nevertheless add the bonus only once when you make the save.\n\nYour proficiency bonus is always based on your total character level, as shown in the Character Advancement table, not your level in a particular class. For example, if you are a fighter 3/rogue 2, you have the proficiency bonus of a 5th-level character, which is +3."
+  },
+  "group": "group:character",
+  "appliesTo": {
+    "pool": "any"
+  },
+  "effects": [
+    {"type": "change",
+     "set": {"proficiencyBonus": {"$base": {"byLevel": {"1": 2, "5": 3, "9": 4, "13": 5, "17": 6}}}}}
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "subclass:monk/warrior-of-the-open-hand@2024",
+  "name": "Warrior of the Open Hand",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "_Master Unarmed Combat Techniques_\n\nWarriors of the Open Hand are masters of unarmed combat. They learn techniques to push and trip their opponents and manipulate their own energy to protect themselves from harm.",
+    "plain": "Master Unarmed Combat Techniques\n\nWarriors of the Open Hand are masters of unarmed combat. They learn techniques to push and trip their opponents and manipulate their own energy to protect themselves from harm.",
+    "wording": "srd"
+  },
+  "class": "class:monk",
+  "levels": {
+    "11": [
+      "feature:monk/warrior-of-the-open-hand/fleet-step@2024"
+    ],
+    "17": [
+      "feature:monk/warrior-of-the-open-hand/quivering-palm@2024"
+    ],
+    "3": [
+      "feature:monk/warrior-of-the-open-hand/open-hand-technique@2024"
+    ],
+    "6": [
+      "feature:monk/warrior-of-the-open-hand/wholeness-of-body@2024"
+    ]
+  }
+}

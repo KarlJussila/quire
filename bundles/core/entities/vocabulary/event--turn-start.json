@@ -1,0 +1,8 @@
+{
+  "id": "event:turn-start",
+  "name": "Turn Start",
+  "source": {
+    "book": "core"
+  },
+  "emittedBy": "engine"
+}

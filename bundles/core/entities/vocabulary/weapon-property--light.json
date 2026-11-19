@@ -1,0 +1,7 @@
+{
+  "id": "weapon-property:light",
+  "name": "Light",
+  "source": {
+    "book": "core"
+  }
+}

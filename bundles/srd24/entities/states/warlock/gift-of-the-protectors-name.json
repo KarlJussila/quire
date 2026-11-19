@@ -1,0 +1,11 @@
+{
+  "id": "state:warlock/gift-of-the-protectors-name",
+  "name": "Gift of the Protectors Name",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "plain": "Marks a creature whose name is written on the Gift of the Protectors page belonging to the state source."
+  },
+  "stacks": "separate"
+}

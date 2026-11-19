@@ -1,0 +1,36 @@
+{
+  "id": "feature:rogue/thieves-cant@2024",
+  "name": "Level 1: Thieves’ Cant",
+  "source": {
+    "book": "srd24"
+  },
+  "text": {
+    "formatted": "You picked up various languages in the communities where you plied your roguish talents. You know Thieves' Cant and one other language of your choice, which you choose from the language tables in \"Character Creation.\"",
+    "plain": "You picked up various languages in the communities where you plied your roguish talents. You know Thieves' Cant and one other language of your choice, which you choose from the language tables in \"Character Creation.\"",
+    "wording": "srd"
+  },
+  "effects": [
+    {
+      "type": "proficiency",
+      "in": [
+        "language:thieves-cant",
+        {
+          "choose": {
+            "key": "other-language",
+            "name": "Other Language",
+            "from": [
+              {
+                "kind": "language",
+                "where": {
+                  "not": {
+                    "is": "language:thieves-cant"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
